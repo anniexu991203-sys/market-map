@@ -8,9 +8,12 @@ on:
   workflow_dispatch: # 支持手动触发
   push:
     branches: [ main ]
+    paths-ignore:
+      - 'data/**'
+      - 'public/**'
 
 permissions:
-  contents: read
+  contents: write  # 改为 write，允许 commit 新数据回仓库
   pages: write
   id-token: write
 
@@ -23,6 +26,9 @@ jobs:
     steps:
       - name: 检出代码
         uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
 
       - name: 安装 Python
         uses: actions/setup-python@v5
@@ -33,11 +39,33 @@ jobs:
         run: |
           pip install requests beautifulsoup4 lxml
 
-      - name: 抓取今日数据（中英双语）
+      - name: 配置 Git
+        run: |
+          git config user.name "Market Map Bot"
+          git config user.email "actions@github.com"
+
+      - name: 抓取今日数据（中英双语，多源聚合）
         env:
           LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
         run: |
-          python scripts/update_daily.py --date $(date -u -d "+8 hours" +%Y-%m-%d) || echo "抓取失败，保留旧数据"
+          python scripts/update_daily.py --date $(date -u -d "+8 hours" +%Y-%m-%d)
+          echo "=== 抓取完成，检查数据文件 ==="
+          ls -la data/ || true
+          cat data/$(date -u -d "+8 hours" +%Y-%m-%d).json | python3 -c "import json,sys; d=json.load(sys.stdin); print(f'事件:{len(d.get(\"events\",[]))} 统计:{len(d.get(\"stats\",[]))} 因果链:{len(d.get(\"chains\",[]))} 数据源:{d.get(\"source\",\"\")}')" 2>/dev/null || echo "数据文件检查失败"
+
+      - name: 提交新数据到仓库
+        run: |
+          git add data/
+          if git diff --cached --quiet; then
+            echo "无新数据需要提交"
+          else
+            git commit -m "data: 更新 $(date -u -d '+8 hours' +%Y-%m-%d) 市场地图数据
+
+            由 GitHub Actions 自动生成
+            数据源: 多源RSS聚合 (CNBC/MarketWatch/Investing.com + 华尔街见闻)"
+            git push
+            echo "✅ 新数据已提交到仓库"
+          fi
 
       - name: 构建静态网站
         run: |

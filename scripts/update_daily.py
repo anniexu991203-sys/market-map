@@ -1,21 +1,29 @@
 #!/usr/bin/env python3
 """
-每日市场地图 - 自动更新脚本 (完整版)
+每日市场地图 - 自动更新脚本 (完整版 v2)
 
 数据流：
-  华尔街见闻 API → 原始快讯 → LLM 三层漏斗筛选 → 中英双语结构化 JSON → 网站自动展示
+  多源RSS抓取 → 原始快讯 → 三层漏斗筛选 → LLM结构化/规则兜底 → 中英双语JSON → 网站自动展示
+
+数据源（按优先级）：
+  1. CNBC Top News RSS        (英文, 30条)
+  2. CNBC World News RSS       (英文, 30条)
+  3. CNBC Economy RSS          (英文, 30条)
+  4. MarketWatch Top Stories   (英文, 10条)
+  5. Investing.com News RSS    (英文, 10条)
+  6. 华尔街见闻 API            (中文, 可能403)
+  7. 华尔街见闻 RSS            (中文, 可能404)
+  8. 华尔街见闻 页面           (中文, SPA可能无数据)
 
 使用方法：
   python3 update_daily.py                        # 抓取今天的数据
   python3 update_daily.py --date 2026-11-17      # 指定日期
   python3 update_daily.py --dry-run              # 只抓取不保存（测试用）
-  python3 update_daily.py --source rss           # 用 RSS 源而非 API
-
-crontab（每半小时自动执行）：
-  0,30 * * * * cd /path/to/market-map-site && python3 scripts/update_daily.py >> logs/update.log 2>&1
+  python3 update_daily.py --source rss           # 只用RSS源
+  python3 update_daily.py --source cnbc          # 只用CNBC
 
 环境变量：
-  LLM_API_KEY    - LLM API 密钥（用于三层漏斗筛选，可选，无则用规则筛选）
+  LLM_API_KEY    - LLM API 密钥（用于结构化，可选，无则用规则筛选）
   LLM_API_BASE   - LLM API 地址（默认使用公开API）
   LLM_MODEL      - LLM 模型名称（默认 gpt-4o）
 """
@@ -30,6 +38,7 @@ import hashlib
 import requests
 from datetime import datetime, date, timedelta
 from bs4 import BeautifulSoup
+from email.utils import parsedate_to_datetime
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_DIR = os.path.join(BASE_DIR, "data")
@@ -41,13 +50,55 @@ os.makedirs(LOG_DIR, exist_ok=True)
 WEEKDAYS = ["星期一", "星期二", "星期三", "星期四", "星期五", "星期六", "星期日"]
 WEEKDAYS_EN = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 
-# 华尔街见闻 API 端点
+# ============================================================
+# 数据源配置
+# ============================================================
+
+# RSS 数据源（全部已验证可用）
+RSS_SOURCES = [
+    {
+        "name": "CNBC Top News",
+        "url": "https://www.cnbc.com/id/100003114/device/rss/rss.html",
+        "lang": "en",
+        "weight": 3,  # 高权重
+    },
+    {
+        "name": "CNBC World News",
+        "url": "https://www.cnbc.com/id/100727362/device/rss/rss.html",
+        "lang": "en",
+        "weight": 2,
+    },
+    {
+        "name": "CNBC Economy",
+        "url": "https://www.cnbc.com/id/20910258/device/rss/rss.html",
+        "lang": "en",
+        "weight": 2,
+    },
+    {
+        "name": "MarketWatch Top Stories",
+        "url": "https://feeds.content.dowjones.io/public/rss/mw_topstories",
+        "lang": "en",
+        "weight": 2,
+    },
+    {
+        "name": "Investing.com News",
+        "url": "https://www.investing.com/rss/news_1.rss",
+        "lang": "en",
+        "weight": 1,
+    },
+]
+
+# 华尔街见闻（保留尝试，可能恢复）
 WSCN_API = "https://api.wallstreetcn.com/apiv1/content/lives?channel=global-channel&limit=200"
 WSCN_RSS = "https://wallstreetcn.com/rss"
 WSCN_PAGE = "https://wallstreetcn.com/live/global"
 
-# 市场关键词（用于第一层漏斗过滤）
-MARKET_KEYWORDS = [
+# ============================================================
+# 关键词配置（中英双语）
+# ============================================================
+
+# 市场关键词（用于第一层漏斗过滤）— 中文
+MARKET_KEYWORDS_ZH = [
     # 价格变动
     "涨", "跌", "涨超", "跌超", "大涨", "大跌", "飙升", "暴跌", "新高", "新低",
     "涨幅", "跌幅", "上涨", "下跌", "收涨", "收跌", "累涨", "累跌",
@@ -70,10 +121,68 @@ MARKET_KEYWORDS = [
     "统计局", "国务院", "证监会",
 ]
 
-# 噪声关键词（过滤掉无关内容）
+# 市场关键词 — 英文
+MARKET_KEYWORDS_EN = [
+    # Price action
+    "surge", "soar", "rally", "jump", "rise", "gain", "climb", "rally",
+    "plunge", "slump", "tumble", "drop", "fall", "decline", "sink", "slide",
+    "surge", "spike", "dive", "crash", "correction", "selloff",
+    "record high", "record low", "new high", "new low", "all-time high",
+    # Asset classes
+    "stock", "stocks", "equity", "equities", "share", "shares",
+    "Nasdaq", "S&P", "Dow", "Russell", "NYSE",
+    "dollar", "yen", "euro", "pound", "sterling", "yuan", "currency", "currencies", "FX",
+    "Treasury", "Treasuries", "yield", "bond", "bonds", "10-year", "2-year",
+    "oil", "crude", "Brent", "WTI", "gold", "silver", "copper",
+    "Bitcoin", "Ethereum", "crypto", "cryptocurrency",
+    "A-shares", "HK stocks", "Hang Seng",
+    # Macro
+    "Fed", "Federal Reserve", "rate hike", "rate cut", "interest rate",
+    "PPI", "CPI", "PMI", "nonfarm", "payrolls", "jobs report",
+    "inflation", "GDP", "deficit", "fiscal", "treasury",
+    "central bank", "Bank of Japan", "BOJ", "ECB", "PBOC",
+    " Powell", "Warsh", "Yellen",
+    # Industry / Companies
+    "Nvidia", "Apple", "Tesla", "Microsoft", "Google", "Alphabet",
+    "Amazon", "Meta", "Facebook",
+    "semiconductor", "chip", "chips", "AI", "artificial intelligence",
+    "data center", "SpaceX", "OpenAI", "Anthropic",
+    "biotech", "pharma", "drug",
+    # Energy
+    "OPEC", "OPEC+", "energy", "oil price",
+    # Market terms
+    "earnings", "revenue", "guidance", "IPO", "SPAC",
+    "merger", "acquisition", "M&A",
+    "bullish", "bearish", "volatility", "VIX",
+    "safe haven", "risk-off", "risk-on", "flight to safety",
+    "recession", "soft landing", "hard landing",
+    "valuation", "bubble", "correction",
+]
+
+# 合并关键词列表（兼容旧代码）
+MARKET_KEYWORDS = MARKET_KEYWORDS_ZH + MARKET_KEYWORDS_EN
+
+# 噪声关键词（过滤掉无关内容）— 中英双语
 NOISE_KEYWORDS = [
     "广告", "推广", "赞助", "活动", "报名", "直播预约",
     "课程", "会员", "订阅", "下载APP",
+    # 英文噪声
+    "subscribe", "newsletter", "sign up", "download app",
+    "advertisement", "sponsored", "promoted",
+]
+
+# 突发/高重要性关键词 — 命中这些的不受条数限制
+BREAKING_KEYWORDS_ZH = [
+    "紧急", "突发", "重磅", "暴跌", "飙升", "熔断", "崩盘",
+    "加息", "降息", "非农", "CPI", "PPI", "GDP",
+    "美联储", "主席", "声明", "决议",
+]
+BREAKING_KEYWORDS_EN = [
+    "breaking", "urgent", "just in", "alert",
+    "crash", "plunge", "surge", "spike", "circuit breaker",
+    "rate hike", "rate cut", "nonfarm", "payrolls",
+    "Fed Chair", "Powell says", "Warsh says",
+    "emergency", "crisis", "historic",
 ]
 
 # ============================================================
@@ -134,16 +243,86 @@ def log(msg):
 # 第一层：数据抓取
 # ============================================================
 
+def fetch_via_rss_source(source):
+    """通过 RSS 抓取单个数据源"""
+    headers = {
+        "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+        "Accept": "application/rss+xml, application/xml, text/xml, */*",
+    }
+    try:
+        log(f"[RSS] 正在请求: {source['name']} ({source['url']})")
+        resp = requests.get(source["url"], headers=headers, timeout=20)
+        resp.raise_for_status()
+        soup = BeautifulSoup(resp.content, "xml")
+        items = soup.find_all("item")
+        log(f"[RSS] {source['name']}: 获取 {len(items)} 条")
+        headlines = []
+        for item in items:
+            title = item.find("title")
+            desc = item.find("description")
+            pub = item.find("pubDate")
+            link = item.find("link")
+
+            # 合并标题和描述
+            text = ""
+            if title:
+                text += title.get_text(strip=True)
+            if desc:
+                desc_text = desc.get_text(strip=True)
+                if desc_text and desc_text != text:
+                    # 清理HTML标签
+                    if "<" in desc_text:
+                        desc_text = BeautifulSoup(desc_text, "html.parser").get_text(strip=True)
+                    text += " | " + desc_text[:200]
+
+            # 解析时间
+            time_str = ""
+            timestamp = 0
+            if pub:
+                time_str = pub.get_text(strip=True)
+                try:
+                    dt = parsedate_to_datetime(time_str)
+                    timestamp = int(dt.timestamp())
+                    time_str = dt.strftime("%H:%M")
+                except Exception:
+                    pass
+
+            if text and len(text) > 5:
+                headlines.append({
+                    "text": text.strip(),
+                    "time": time_str,
+                    "timestamp": timestamp,
+                    "source": source["name"],
+                    "lang": source["lang"],
+                    "weight": source.get("weight", 1),
+                })
+        return headlines
+    except Exception as e:
+        log(f"[RSS] {source['name']} 抓取失败: {e}")
+        return []
+
+
+def fetch_all_rss():
+    """抓取所有 RSS 数据源"""
+    all_headlines = []
+    for source in RSS_SOURCES:
+        headlines = fetch_via_rss_source(source)
+        all_headlines.extend(headlines)
+        time.sleep(0.5)  # 礼貌等待
+    log(f"[RSS] 所有源合计: {len(all_headlines)} 条快讯")
+    return all_headlines
+
+
 def fetch_via_api():
-    """通过华尔街见闻 API 抓取快讯"""
+    """通过华尔街见闻 API 抓取快讯（可能403，保留尝试）"""
     headers = {
         "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
         "Accept": "application/json",
         "Referer": "https://wallstreetcn.com/live/global",
     }
     try:
-        log(f"[API] 正在请求: {WSCN_API}")
-        resp = requests.get(WSCN_API, headers=headers, timeout=30)
+        log(f"[API] 正在请求华尔街见闻 API: {WSCN_API}")
+        resp = requests.get(WSCN_API, headers=headers, timeout=15)
         resp.raise_for_status()
         data = resp.json()
         items = data.get("data", {}).get("items", [])
@@ -151,7 +330,6 @@ def fetch_via_api():
         headlines = []
         for item in items:
             text = item.get("content_text", "") or item.get("content", "")
-            # 清理 HTML 标签
             if "<" in text:
                 text = BeautifulSoup(text, "html.parser").get_text(strip=True)
             create_time = item.get("created_at", 0)
@@ -163,25 +341,28 @@ def fetch_via_api():
                 "text": text.strip(),
                 "time": dt.strftime("%H:%M"),
                 "timestamp": create_time,
+                "source": "华尔街见闻API",
+                "lang": "zh",
+                "weight": 3,
             })
         return headlines
     except Exception as e:
-        log(f"[API] 抓取失败: {e}")
+        log(f"[API] 华尔街见闻API抓取失败: {e}")
         return []
 
 
-def fetch_via_rss():
-    """通过 RSS 抓取华尔街见闻快讯"""
+def fetch_via_wscn_rss():
+    """通过华尔街见闻 RSS 抓取（可能404，保留尝试）"""
     headers = {
         "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36",
     }
     try:
-        log(f"[RSS] 正在请求: {WSCN_RSS}")
-        resp = requests.get(WSCN_RSS, headers=headers, timeout=30)
+        log(f"[RSS] 正在请求华尔街见闻 RSS: {WSCN_RSS}")
+        resp = requests.get(WSCN_RSS, headers=headers, timeout=15)
         resp.raise_for_status()
         soup = BeautifulSoup(resp.content, "xml")
         items = soup.find_all("item")
-        log(f"[RSS] 获取 {len(items)} 条快讯")
+        log(f"[RSS] 华尔街见闻: 获取 {len(items)} 条快讯")
         headlines = []
         for item in items:
             title = item.find("title")
@@ -199,15 +380,18 @@ def fetch_via_rss():
                 "text": text.strip(),
                 "time": time_str,
                 "timestamp": 0,
+                "source": "华尔街见闻RSS",
+                "lang": "zh",
+                "weight": 3,
             })
         return headlines
     except Exception as e:
-        log(f"[RSS] 抓取失败: {e}")
+        log(f"[RSS] 华尔街见闻RSS抓取失败: {e}")
         return []
 
 
 def fetch_via_page():
-    """通过直接抓取网页获取快讯（兜底方案）"""
+    """通过直接抓取华尔街见闻网页获取快讯（SPA，可能无数据，保留尝试）"""
     headers = {
         "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
         "Accept": "text/html,application/xhtml+xml",
@@ -215,8 +399,8 @@ def fetch_via_page():
         "Referer": "https://wallstreetcn.com/",
     }
     try:
-        log(f"[PAGE] 正在请求: {WSCN_PAGE}")
-        resp = requests.get(WSCN_PAGE, headers=headers, timeout=30)
+        log(f"[PAGE] 正在请求华尔街见闻页面: {WSCN_PAGE}")
+        resp = requests.get(WSCN_PAGE, headers=headers, timeout=15)
         resp.raise_for_status()
 
         text = resp.text
@@ -240,6 +424,9 @@ def fetch_via_page():
                                 "text": clean,
                                 "time": "",
                                 "timestamp": 0,
+                                "source": "华尔街见闻页面",
+                                "lang": "zh",
+                                "weight": 3,
                             })
                 if headlines:
                     break
@@ -259,55 +446,90 @@ def fetch_via_page():
                     for item in items:
                         t = item.get_text(strip=True)
                         if t and len(t) > 10:
-                            headlines.append({"text": t, "time": "", "timestamp": 0})
+                            headlines.append({
+                                "text": t, "time": "", "timestamp": 0,
+                                "source": "华尔街见闻页面", "lang": "zh", "weight": 3,
+                            })
                     break
 
-        log(f"[PAGE] 共提取 {len(headlines)} 条快讯")
+        log(f"[PAGE] 华尔街见闻共提取 {len(headlines)} 条快讯")
         return headlines
     except Exception as e:
-        log(f"[PAGE] 抓取失败: {e}")
+        log(f"[PAGE] 华尔街见闻页面抓取失败: {e}")
         return []
 
 
 def fetch_headlines(source="auto"):
-    """抓取快讯（自动尝试多种方式）"""
+    """
+    抓取快讯（多源聚合）
+    优先尝试国际RSS源（已验证可用），同时尝试华尔街见闻（可能恢复）
+    """
     if source == "api":
         return fetch_via_api()
     elif source == "rss":
-        return fetch_via_rss()
+        return fetch_all_rss()
     elif source == "page":
         return fetch_via_page()
+    elif source == "cnbc":
+        # 只用CNBC源
+        cnbc_sources = [s for s in RSS_SOURCES if "CNBC" in s["name"]]
+        all_h = []
+        for s in cnbc_sources:
+            all_h.extend(fetch_via_rss_source(s))
+        return all_h
     else:
-        # auto: 依次尝试 API → RSS → 页面
-        for fetch_fn in [fetch_via_api, fetch_via_rss, fetch_via_page]:
-            headlines = fetch_fn()
-            if headlines:
-                return headlines
+        # auto: 先抓国际RSS（可靠），再尝试华尔街见闻（可能失败）
+        all_headlines = fetch_all_rss()
+
+        # 尝试华尔街见闻（增加中文内容）
+        for fetch_fn in [fetch_via_api, fetch_via_wscn_rss, fetch_via_page]:
+            wscn_headlines = fetch_fn()
+            if wscn_headlines:
+                all_headlines.extend(wscn_headlines)
+                break
             time.sleep(1)
-        log("所有抓取方式均失败")
-        return []
+
+        if not all_headlines:
+            log("❌ 所有抓取方式均失败")
+        else:
+            # 多源去重（不同源可能有相同新闻）
+            seen_texts = set()
+            deduped = []
+            for h in all_headlines:
+                # 用文本前80字符的hash做跨源去重
+                text_hash = hashlib.md5(h["text"][:80].lower().encode()).hexdigest()
+                if text_hash not in seen_texts:
+                    seen_texts.add(text_hash)
+                    deduped.append(h)
+            log(f"多源聚合去重: {len(all_headlines)} → {len(deduped)} 条")
+            all_headlines = deduped
+
+        return all_headlines
 
 
 # ============================================================
-# 第二层：三层漏斗筛选
+# 第二层：三层漏斗筛选（动态阈值，无硬编码上限）
 # ============================================================
 
 def funnel_filter(headlines):
     """
-    三层漏斗筛选
-    第一层：与价格变动/新信息/宏观/资产相关的条目
+    三层漏斗筛选（v2: 动态阈值，重要新闻不受条数限制）
+    第一层：与价格变动/新信息/宏观/资产相关的条目（中英关键词）
     第二层：去重去噪
-    第三层：保留最重要的10-15条
+    第三层：按重要性打分排序，保留所有高分条目（不再固定40条上限）
+            突发重要新闻不受上限限制
     """
     # === 第一层：关键词过滤 ===
     filtered = []
     for h in headlines:
         text = h["text"]
+        text_lower = text.lower()
         # 跳过噪声内容
-        if any(kw in text for kw in NOISE_KEYWORDS):
+        if any(kw in text_lower for kw in [n.lower() for n in NOISE_KEYWORDS]):
             continue
-        # 必须包含至少一个市场关键词
-        if any(kw in text for kw in MARKET_KEYWORDS):
+        # 必须包含至少一个市场关键词（中英都检查）
+        if any(kw in text for kw in MARKET_KEYWORDS_ZH) or \
+           any(kw in text_lower for kw in MARKET_KEYWORDS_EN):
             filtered.append(h)
 
     log(f"第一层过滤: {len(headlines)} → {len(filtered)} 条")
@@ -324,33 +546,71 @@ def funnel_filter(headlines):
 
     log(f"第二层去重: {len(filtered)} → {len(deduped)} 条")
 
-    # === 第三层：保留最重要的条目（优先含价格变动数据） ===
+    # === 第三层：按重要性打分排序（动态保留） ===
     def importance_score(h):
-        """打分：含具体数字、涨跌幅、多关键词的条目得分更高"""
+        """打分：含具体数字、涨跌幅、多关键词、突发新闻的条目得分更高"""
         text = h["text"]
+        text_lower = text.lower()
         score = 0
+
         # 含具体数字 +5
         if re.search(r'\d+\.?\d*%?', text):
             score += 5
-        # 含涨跌关键词 +3
-        price_words = sum(1 for kw in ["涨", "跌", "新高", "新低", "飙升", "暴跌"] if kw in text)
-        score += price_words * 3
+
+        # 含涨跌关键词 +3（中文）
+        price_words_zh = sum(1 for kw in ["涨", "跌", "新高", "新低", "飙升", "暴跌"] if kw in text)
+        score += price_words_zh * 3
+
+        # 含涨跌关键词 +3（英文）
+        price_words_en = sum(1 for kw in [
+            "surge", "soar", "rally", "jump", "plunge", "slump",
+            "tumble", "drop", "fall", "crash", "spike", "dive",
+            "record high", "record low", "new high", "new low",
+            "surge", "selloff", "correction"
+        ] if kw in text_lower)
+        score += price_words_en * 3
+
         # 含多个市场关键词 +2 each
-        market_count = sum(1 for kw in MARKET_KEYWORDS if kw in text)
+        market_count = sum(1 for kw in MARKET_KEYWORDS_ZH if kw in text)
+        market_count += sum(1 for kw in MARKET_KEYWORDS_EN if kw in text_lower)
         score += market_count * 2
+
+        # 突发/高重要性关键词 +10
+        breaking_zh = sum(1 for kw in BREAKING_KEYWORDS_ZH if kw in text)
+        breaking_en = sum(1 for kw in BREAKING_KEYWORDS_EN if kw in text_lower)
+        score += (breaking_zh + breaking_en) * 10
+
         # 长文本可能信息更丰富
         if len(text) > 50:
             score += 3
         if len(text) > 100:
             score += 2
+        if len(text) > 200:
+            score += 1  # 超长文本边际递减
+
+        # 数据源权重加成
+        score += h.get("weight", 1)
+
         return score
 
     scored = [(h, importance_score(h)) for h in deduped]
     scored.sort(key=lambda x: x[1], reverse=True)
 
-    # 保留前 40 条供 LLM 进一步筛选
-    top_headlines = [h for h, s in scored[:40]]
-    log(f"第三层排序: 保留前 {len(top_headlines)} 条高分快讯")
+    # 动态保留：保留所有得分 >= 阈值的条目，不再固定上限
+    # 阈值 = 平均得分的 60%
+    if scored:
+        avg_score = sum(s for _, s in scored) / len(scored)
+        threshold = avg_score * 0.6
+        top_headlines = [h for h, s in scored if s >= threshold]
+        # 至少保留15条（如果有的话），最多80条（防止LLM token爆炸）
+        if len(top_headlines) < 15 and len(scored) >= 15:
+            top_headlines = [h for h, s in scored[:15]]
+        elif len(top_headlines) > 80:
+            top_headlines = [h for h, s in scored[:80]]
+    else:
+        top_headlines = []
+
+    log(f"第三层排序: 保留 {len(top_headlines)} 条高分快讯 (动态阈值)")
 
     return top_headlines
 
@@ -361,7 +621,7 @@ def funnel_filter(headlines):
 
 LLM_PROMPT = """You are a professional financial market analyst. Extract information from the following flash news headlines and generate a daily market map in BOTH Chinese and English.
 
-Flash news headlines:
+Flash news headlines (from multiple sources, may be in English or Chinese):
 {headlines}
 
 Output strictly in the following JSON format (output JSON only, no other text):
@@ -425,15 +685,16 @@ Output strictly in the following JSON format (output JSON only, no other text):
 }}
 
 Requirements:
-1. stats: keep 5-8 most important market data points
-2. events: keep 8-12 core headlines
-3. chains: extract 5-8 causal chains, sorted by importance
-4. verifications: generate 3-5 watchlist items
+1. stats: extract ALL important market data points (no fixed limit — include every significant number: index moves, commodity prices, currency rates, crypto, yields, etc.)
+2. events: include ALL significant market events — do NOT cap at a fixed number. If there are many important developments, include them all. Prioritize by importance but don't exclude important news just to fit a limit.
+3. chains: extract causal chains for every significant market narrative (aim for completeness, not a fixed count)
+4. verifications: generate watchlist items for key uncertainties
 5. Use <br> for line breaks in node text
 6. CRITICAL: Every *_en field MUST be in pure English with NO Chinese characters whatsoever
 7. CRITICAL: Every Chinese field MUST have a corresponding *_en English field
 8. English must use proper financial terminology (e.g., "re-rating" not "haircut", "rate hike" not "interest increase")
-9. Output strictly valid JSON"""
+9. For English-language news headlines, the Chinese fields should be proper translations (not transliterations)
+10. Output strictly valid JSON"""
 
 
 def llm_structure(headlines):
@@ -443,7 +704,7 @@ def llm_structure(headlines):
 
     # 格式化快讯列表
     headline_text = "\n".join(
-        f"[{i+1}] ({h.get('time','')}) {h['text']}"
+        f"[{i+1}] ({h.get('time','')}) [{h.get('source','')}] {h['text']}"
         for i, h in enumerate(headlines)
     )
 
@@ -605,38 +866,50 @@ def rule_based_structure(headlines):
     """
     无 LLM 时的规则兜底方案：
     从快讯中提取关键信息，生成基础中英双语结构化数据
+    v2: 去掉硬编码上限，按重要性动态保留
     """
     events = []
     seen_topics = set()
 
     for h in headlines:
         text = h["text"]
+        text_lower = text.lower()
         if len(text) < 15:
             continue
 
-        # 判断方向
+        # 判断方向（中文+英文）
         dir = "neutral"
-        if any(kw in text for kw in ["涨", "升", "高", "增", "涨超"]):
-            if any(kw in text for kw in ["跌", "降", "低", "减", "跌超"]):
-                dir = "split"
-            else:
-                dir = "up"
-        elif any(kw in text for kw in ["跌", "降", "低", "减", "跌超", "暴跌"]):
+        up_zh = any(kw in text for kw in ["涨", "升", "高", "增", "涨超"])
+        down_zh = any(kw in text for kw in ["跌", "降", "低", "减", "跌超", "暴跌"])
+        up_en = any(kw in text_lower for kw in ["surge", "soar", "rally", "jump", "rise", "gain", "climb", "record high", "new high"])
+        down_en = any(kw in text_lower for kw in ["plunge", "slump", "tumble", "drop", "fall", "decline", "sink", "slide", "crash", "selloff", "record low", "new low"])
+
+        if (up_zh or up_en) and (down_zh or down_en):
+            dir = "split"
+        elif up_zh or up_en:
+            dir = "up"
+        elif down_zh or down_en:
             dir = "down"
 
-        # 判断标签
+        # 判断标签（中文+英文）
         tags = []
-        if any(kw in text for kw in ["AI", "芯片", "英伟达", "半导体", "人工智能", "OpenAI", "数据中心"]):
+        if any(kw in text for kw in ["AI", "芯片", "英伟达", "半导体", "人工智能", "OpenAI", "数据中心"]) or \
+           any(kw in text_lower for kw in ["ai ", "artificial intelligence", "nvidia", "chip", "semiconductor", "openai", "data center", "anthropic"]):
             tags.append({"type": "ai", "text": "AI", "text_en": "AI"})
-        if any(kw in text for kw in ["美联储", "央行", "加息", "降息", "利率", "PPI", "CPI", "通胀"]):
+        if any(kw in text for kw in ["美联储", "央行", "加息", "降息", "利率", "PPI", "CPI", "通胀"]) or \
+           any(kw in text_lower for kw in ["fed", "federal reserve", "rate hike", "rate cut", "interest rate", "inflation", "cpi", "ppi", "powell", "warsh"]):
             tags.append({"type": "fed", "text": "央行", "text_en": "Central Bank"})
-        if any(kw in text for kw in ["原油", "油价", "布油", "OPEC", "能源"]):
+        if any(kw in text for kw in ["原油", "油价", "布油", "OPEC", "能源"]) or \
+           any(kw in text_lower for kw in ["oil", "crude", "brent", "wti", "opec", "energy"]):
             tags.append({"type": "energy", "text": "能源", "text_en": "Energy"})
-        if any(kw in text for kw in ["中国", "A股", "社零", "工业增加值", "地产", "统计局", "创业板", "港股"]):
+        if any(kw in text for kw in ["中国", "A股", "社零", "工业增加值", "地产", "统计局", "创业板", "港股"]) or \
+           any(kw in text_lower for kw in ["china", "a-shares", "chinese", "beijing", "shanghai", "yuan", "hang seng"]):
             tags.append({"type": "china", "text": "中国", "text_en": "China"})
-        if any(kw in text for kw in ["生物科技", "创新药", "医药", "临床"]):
+        if any(kw in text for kw in ["生物科技", "创新药", "医药", "临床"]) or \
+           any(kw in text_lower for kw in ["biotech", "pharma", "drug", "clinical", "fda"]):
             tags.append({"type": "bio", "text": "生物科技", "text_en": "Biotech"})
-        if any(kw in text for kw in ["赤字", "财政", "国债", "发债"]):
+        if any(kw in text for kw in ["赤字", "财政", "国债", "发债"]) or \
+           any(kw in text_lower for kw in ["deficit", "fiscal", "treasury", "debt", "bond"]):
             tags.append({"type": "macro", "text": "财政", "text_en": "Fiscal"})
         if not tags:
             tags.append({"type": "macro", "text": "宏观", "text_en": "Macro"})
@@ -644,11 +917,18 @@ def rule_based_structure(headlines):
         # 提取数字
         numbers = re.findall(r'(\d+\.?\d*%?)', text)
         # 简化事件描述
-        event_text = text[:150] + ("..." if len(text) > 150 else "")
-        event_en = translate_text(event_text)
+        event_text = text[:200] + ("..." if len(text) > 200 else "")
+        # 如果原文是英文，event_en直接用原文；如果有中文，用规则翻译
+        chinese_re = re.compile(r'[\u4e00-\u9fff]')
+        if chinese_re.search(event_text):
+            event_en = translate_text(event_text)
+        else:
+            # 英文原文，中文需要标记（规则兜底无法翻译英文→中文）
+            event_en = event_text  # 英文原样保留
+            event_text = event_text  # 也保留原文（LLM不可用时的妥协）
 
-        # 简单去重
-        topic = text[:30]
+        # 简单去重（用前40字符）
+        topic = text[:40].lower()
         if topic in seen_topics:
             continue
         seen_topics.add(topic)
@@ -664,7 +944,9 @@ def rule_based_structure(headlines):
             "logic_en": "",
         })
 
-        if len(events) >= 10:
+        # 不再硬编码上限 —— 保留所有有意义的条目
+        # 但设置一个安全上限防止极端情况
+        if len(events) >= 50:
             break
 
     # 提取关键数字做 stats
@@ -672,37 +954,54 @@ def rule_based_structure(headlines):
     stat_seen = set()
     for h in headlines:
         text = h["text"]
-        patterns = [
+        # 中文模式
+        patterns_zh = [
             r'([\u4e00-\u9fa5\w]{2,10})[，,]?\s*(?:涨|跌|升|降)([\d.]+%)',
             r'([\u4e00-\u9fa5\w]{2,10}).*?创.*?(?:新高|新低)',
         ]
-        for pattern in patterns:
-            m = re.search(pattern, text)
+        # 英文模式
+        patterns_en = [
+            r'(Nasdaq|S&P|Dow|Nvidia|Apple|Tesla|Microsoft|Google|Amazon|Meta|oil|gold|Bitcoin|dollar|yen|euro|Treasury|yield)\s*(?:surge[sd]?|plunge[sd]?|rall(?:y|ies|ied)|drop[sd]?|fall[s]?|rose|fell|jump[sd]?|sink[s]?|slide[sd]?|decline[sd]?|gain[sd]?|climb[sd]?)?\s*(?:to)?\s*(?:\$)?([\d.]+%?)',
+            r'([\d.]+%?)\s*(?:surge|plunge|rally|drop|fall|gain|decline)',
+        ]
+        for pattern in patterns_zh + patterns_en:
+            m = re.search(pattern, text, re.IGNORECASE)
             if m:
-                label = m.group(1)[:15]
-                if label in stat_seen:
+                label = m.group(1)[:20] if m.lastindex >= 1 else text[:20]
+                if label.lower() in stat_seen:
                     continue
-                stat_seen.add(label)
+                stat_seen.add(label.lower())
 
                 value = ""
-                change = text[:40]
+                change = text[:60]
                 dir = "up"
-                if "跌" in text or "降" in text:
+                text_lower = text.lower()
+                if any(kw in text for kw in ["跌", "降"]) or \
+                   any(kw in text_lower for kw in ["plunge", "slump", "tumble", "drop", "fall", "decline", "sink", "slide", "crash", "selloff"]):
                     dir = "down"
-                if m.lastindex >= 2:
+                if any(kw in text for kw in ["涨", "升"]) or \
+                   any(kw in text_lower for kw in ["surge", "soar", "rally", "jump", "rise", "gain", "climb"]):
+                    dir = "up"
+                if m.lastindex and m.lastindex >= 2:
                     value = m.group(2)
 
+                chinese_re = re.compile(r'[\u4e00-\u9fff]')
+                if chinese_re.search(label):
+                    label_en = translate_text(label)
+                else:
+                    label_en = label
+
                 stats.append({
-                    "label": label,
-                    "label_en": translate_text(label),
+                    "label": label if chinese_re.search(label) else label,
+                    "label_en": label_en,
                     "value": value or ("新高" if dir == "up" else "新低"),
                     "change": change,
-                    "change_en": translate_text(change),
+                    "change_en": translate_text(change) if chinese_re.search(change) else change,
                     "dir": dir,
                 })
-                if len(stats) >= 6:
+                if len(stats) >= 12:
                     break
-        if len(stats) >= 6:
+        if len(stats) >= 12:
             break
 
     log(f"[规则] 结构化完成: {len(events)} 条事件, {len(stats)} 条统计")
@@ -728,9 +1027,9 @@ def generate_data_file(target_date=None, source="auto", dry_run=False):
     weekday = WEEKDAYS[weekday_idx]
     weekday_en = WEEKDAYS_EN[weekday_idx]
 
-    log(f"{'='*50}")
+    log(f"{'='*60}")
     log(f"开始生成 {target_date} ({weekday} / {weekday_en}) 的市场地图数据")
-    log(f"{'='*50}")
+    log(f"{'='*60}")
 
     # Step 1: 抓取
     headlines = fetch_headlines(source)
@@ -767,13 +1066,16 @@ def generate_data_file(target_date=None, source="auto", dry_run=False):
         log("[校验] ✅ 双语数据完整，无问题")
 
     # Step 5: 组装最终数据
+    # 列出所有数据源
+    sources_used = list(set(h.get("source", "unknown") for h in headlines))
     data = {
         "date": target_date,
         "weekday": weekday,
         "weekday_en": weekday_en,
         "crawl_time": f"约{datetime.now().strftime('%H:%M')}（北京时间）",
-        "source": "wallstreetcn.com/live/global",
-        "filter_result": f"{len(structured.get('events',[]))}条核心要闻 / {len(structured.get('chains',[]))}条因果链",
+        "source": " / ".join(sources_used[:5]),
+        "sources_detail": sources_used,
+        "filter_result": f"{len(structured.get('events',[]))}条核心要闻 / {len(structured.get('chains',[]))}条因果链 / {len(headlines)}条原始抓取",
         "stats": structured.get("stats", []),
         "events": structured.get("events", []),
         "chains": structured.get("chains", []),
@@ -782,7 +1084,7 @@ def generate_data_file(target_date=None, source="auto", dry_run=False):
 
     if dry_run:
         log(f"[DRY-RUN] 不保存文件，数据预览:")
-        print(json.dumps(data, ensure_ascii=False, indent=2)[:1000])
+        print(json.dumps(data, ensure_ascii=False, indent=2)[:2000])
         return True
 
     # Step 6: 保存
@@ -800,8 +1102,8 @@ def main():
     parser = argparse.ArgumentParser(description="每日市场地图自动更新（中英双语）")
     parser.add_argument("--date", type=str, default=None, help="指定日期 (YYYY-MM-DD)")
     parser.add_argument("--source", type=str, default="auto",
-                        choices=["auto", "api", "rss", "page"],
-                        help="数据源: auto/api/rss/page")
+                        choices=["auto", "api", "rss", "page", "cnbc"],
+                        help="数据源: auto/rss/api/page/cnbc")
     parser.add_argument("--dry-run", action="store_true", help="只抓取不保存")
     args = parser.parse_args()
 
