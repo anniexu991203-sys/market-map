@@ -546,8 +546,8 @@ def render_events(events):
     for ev in events:
         tags_html = ""
         for tag in ev.get("tags", []):
-            tag_en = translate_tag(tag["text"])
-            tags_html += f'<span class="tag tag-{tag["type"]}"><span data-lang="zh">{tag["text"]}</span><span data-lang="en">{tag_en}</span></span>'
+            tag_en = tag.get("text_en") or translate_tag(tag.get("text", ""))
+            tags_html += f'<span class="tag tag-{tag["type"]}"><span data-lang="zh">{tag.get("text", "")}</span><span data-lang="en">{tag_en}</span></span>'
 
         dir = ev.get("dir", "neutral")
         dir_class = f"dir-{dir}"
@@ -604,19 +604,21 @@ def render_verifications(verifications):
     """渲染待验证清单，中英文双语"""
     html = ""
     for v in verifications:
+        vars_zh = v.get("vars", [])
+        vars_en = v.get("vars_en", [])
         vars_html = ""
-        for var in v.get("vars", []):
-            var_en = var if var.startswith("http") else var  # 变量项保持原文
-            vars_html += f"<li>{var}</li>\n"
+        for i, var in enumerate(vars_zh):
+            var_en = vars_en[i] if i < len(vars_en) else var
+            vars_html += f"<li><span data-lang=\"zh\">{var}</span><span data-lang=\"en\">{var_en}</span></li>\n"
 
-        title_en = v.get("title_en", v["title"])
+        title_en = v.get("title_en", v.get("title", ""))
         analogy_title_en = v.get("analogy_title_en", v.get("analogy_title", ""))
         analogy_text_en = v.get("analogy_text_en", v.get("analogy_text", ""))
         lesson_en = v.get("lesson_en", v.get("lesson", ""))
         diff_en = v.get("diff_en", v.get("diff", ""))
 
         html += f'''<div class="verify-card">
-      <div class="verify-title"><span data-lang="zh">{v["title"]}</span><span data-lang="en">{title_en}</span></div>
+      <div class="verify-title"><span data-lang="zh">{v.get("title","")}</span><span data-lang="en">{title_en}</span></div>
       <ul class="verify-list">{vars_html}</ul>
       <div class="analogy"><strong><span data-lang="zh">📖 历史类比：</span><span data-lang="en">📖 Historical Analogy: </span></strong><span data-lang="zh">{v.get("analogy_title","")} — {v.get("analogy_text","")}</span><span data-lang="en">{analogy_title_en} — {analogy_text_en}</span></div>
       <div class="lesson">💡 <strong><span data-lang="zh">教训：</span><span data-lang="en">Lesson: </span></strong><span data-lang="zh">{v.get("lesson","")}</span><span data-lang="en">{lesson_en}</span></div>
@@ -741,6 +743,64 @@ def build_rss(dates, all_data):
 </rss>"""
 
 
+def validate_i18n(data, date_str):
+    """
+    校验数据的中英双语完整性。
+    返回问题列表（空列表表示无问题）。
+    """
+    import re
+    issues = []
+    chinese_re = re.compile(r'[\u4e00-\u9fff]')
+
+    # 需要成对出现的字段
+    field_pairs = [
+        ("label", "label_en"), ("change", "change_en"),
+        ("event", "event_en"), ("assets", "assets_en"), ("logic", "logic_en"),
+        ("title", "title_en"),
+        ("term", "term_en"), ("explain", "explain_en"),
+        ("text", "text_en"),
+        ("analogy_title", "analogy_title_en"), ("analogy_text", "analogy_text_en"),
+        ("lesson", "lesson_en"), ("diff", "diff_en"),
+    ]
+
+    def check_item(item, context):
+        for zh_field, en_field in field_pairs:
+            if zh_field in item:
+                # 检查英文字段是否存在
+                if en_field not in item or not item.get(en_field):
+                    issues.append(f"{context}: missing {en_field}")
+                # 检查英文字段中是否有中文字符
+                elif item.get(en_field) and chinese_re.search(str(item[en_field])):
+                    issues.append(f"{context}: {en_field} contains Chinese characters")
+
+    # 检查 stats
+    for i, s in enumerate(data.get("stats", [])):
+        check_item(s, f"[{date_str}] stats[{i}]")
+
+    # 检查 events
+    for i, e in enumerate(data.get("events", [])):
+        check_item(e, f"[{date_str}] events[{i}]")
+        for j, tag in enumerate(e.get("tags", [])):
+            if "text" in tag and ("text_en" not in tag or not tag.get("text_en")):
+                issues.append(f"[{date_str}] events[{i}].tags[{j}]: missing text_en")
+
+    # 检查 chains
+    for i, c in enumerate(data.get("chains", [])):
+        check_item(c, f"[{date_str}] chains[{i}]")
+        for j, node in enumerate(c.get("nodes", [])):
+            check_item(node, f"[{date_str}] chains[{i}].nodes[{j}]")
+        for j, jargon in enumerate(c.get("jargon", [])):
+            check_item(jargon, f"[{date_str}] chains[{i}].jargon[{j}]")
+
+    # 检查 verifications
+    for i, v in enumerate(data.get("verifications", [])):
+        check_item(v, f"[{date_str}] verifications[{i}]")
+        if "vars" in v and ("vars_en" not in v or len(v.get("vars_en", [])) != len(v["vars"])):
+            issues.append(f"[{date_str}] verifications[{i}]: vars_en missing or count mismatch")
+
+    return issues
+
+
 def build_all():
     """构建所有静态文件到 public/ 目录"""
     # 清空输出目录
@@ -767,6 +827,23 @@ def build_all():
         return
 
     print(f"找到 {len(dates)} 期数据: {dates}")
+
+    # === 双语校验 ===
+    total_issues = 0
+    for d, data in all_data.items():
+        issues = validate_i18n(data, d)
+        if issues:
+            total_issues += len(issues)
+            print(f"\n⚠️ [{d}] 双语校验发现 {len(issues)} 个问题:")
+            for issue in issues[:10]:
+                print(f"  - {issue}")
+            if len(issues) > 10:
+                print(f"  ... 还有 {len(issues) - 10} 个问题")
+    if total_issues == 0:
+        print("✅ 双语校验通过：所有英文字段完整且无中文混入")
+    else:
+        print(f"\n⚠️ 共发现 {total_issues} 个双语问题（详见上方）")
+        print("   构建将继续，但请修复这些问题以确保英文版本质量")
 
     # 1. 构建首页（最新一期）
     latest_date = dates[0]

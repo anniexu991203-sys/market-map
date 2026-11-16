@@ -4,19 +4,70 @@
   "crawl_time": "~12:36 (UTC+8)",
   "source": "wallstreetcn.com/live/global",
   "filter_result": "10 key headlines / 7 causal chains",
-
   "stats": [
-    { "label": "Nvidia (weekly)", "label_en": "Nvidia (weekly)", "value": "-13%", "change": "Worst weekly drop in 1.5yr", "change_en": "Worst weekly drop in 1.5 years", "dir": "down" },
-    { "label": "Brent Crude (2wk)", "label_en": "Brent Crude (2-week)", "value": "-19%", "change": "Biggest 2-week drop in 6yr", "change_en": "Largest 2-week decline in 6 years", "dir": "down" },
-    { "label": "2Y UST yield (wk)", "label_en": "2Y UST Yield (weekly)", "value": "+33bp", "change": "Biggest weekly rise in 2yr", "change_en": "Largest weekly increase in 2 years", "dir": "up" },
-    { "label": "Dollar Index", "label_en": "Dollar Index", "value": "19mo high", "change": "JPY breaks 160", "change_en": "JPY breaks below 160", "dir": "up" },
-    { "label": "COMEX Gold (wk)", "label_en": "COMEX Gold (weekly)", "value": "-4.55%", "change": "Biggest weekly drop in 6mo", "change_en": "Largest weekly decline in 6 months", "dir": "down" },
-    { "label": "ChiNext", "label_en": "ChiNext", "value": "-3.32%", "change": "Growth stocks lead decline", "change_en": "Growth stocks lead the decline", "dir": "down" }
+    {
+      "label": "Nvidia (weekly)",
+      "label_en": "Nvidia (weekly)",
+      "value": "-13%",
+      "change": "Worst weekly drop in 1.5yr",
+      "change_en": "Worst weekly drop in 1.5 years",
+      "dir": "down"
+    },
+    {
+      "label": "Brent Crude (2wk)",
+      "label_en": "Brent Crude (2-week)",
+      "value": "-19%",
+      "change": "Biggest 2-week drop in 6yr",
+      "change_en": "Largest 2-week decline in 6 years",
+      "dir": "down"
+    },
+    {
+      "label": "2Y UST yield (wk)",
+      "label_en": "2Y UST Yield (weekly)",
+      "value": "+33bp",
+      "change": "Biggest weekly rise in 2yr",
+      "change_en": "Largest weekly increase in 2 years",
+      "dir": "up"
+    },
+    {
+      "label": "Dollar Index",
+      "label_en": "Dollar Index",
+      "value": "19mo high",
+      "change": "JPY breaks 160",
+      "change_en": "JPY breaks below 160",
+      "dir": "up"
+    },
+    {
+      "label": "COMEX Gold (wk)",
+      "label_en": "COMEX Gold (weekly)",
+      "value": "-4.55%",
+      "change": "Biggest weekly drop in 6mo",
+      "change_en": "Largest weekly decline in 6 months",
+      "dir": "down"
+    },
+    {
+      "label": "ChiNext",
+      "label_en": "ChiNext",
+      "value": "-3.32%",
+      "change": "Growth stocks lead decline",
+      "change_en": "Growth stocks lead the decline",
+      "dir": "down"
+    }
   ],
-
   "events": [
     {
-      "tags": [{ "type": "ai", "text": "AI" }, { "type": "fed", "text": "政策" }],
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        },
+        {
+          "type": "fed",
+          "text": "政策",
+          "text_en": "Policy"
+        }
+      ],
       "event": "英伟达黄仁勋去职风波持续发酵；汇丰将英伟达评级下调至\"持有\"，目标价从$365→$170；文艺复兴科技Q3已砍仓99.7%",
       "event_en": "Nvidia CEO Jensen Huang's departure saga continues; HSBC downgrades Nvidia to Hold, cuts target price from $365 to $170; Renaissance Technologies slashed its Q3 position by 99.7%",
       "assets": "英伟达、AMD、半导体板块、台湾加权指数、Arm",
@@ -26,7 +77,18 @@
       "logic_en": "CEO uncertainty → AI capex confidence shaken → chip stock de-rating → Taiwan market spillover (-5%); Huang's allies push for reinstatement, creating a tug-of-war between bulls and bears"
     },
     {
-      "tags": [{ "type": "ai", "text": "AI" }, { "type": "fed", "text": "政策" }],
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        },
+        {
+          "type": "fed",
+          "text": "政策",
+          "text_en": "Policy"
+        }
+      ],
       "event": "特朗普政府将英伟达、亚马逊、微软、OpenAI、Anthropic等20+企业列入AI\"国家领军企业\"名单，获芯片出口快速审批",
       "event_en": "The Trump administration designates 20+ companies (Nvidia, Amazon, Microsoft, OpenAI, Anthropic, etc.) as AI 'National Champion' enterprises, granting them fast-track chip export approval",
       "assets": "AI芯片出口链、上榜企业、中美科技博弈",
@@ -36,7 +98,13 @@
       "logic_en": "Designated companies gain export facilitation → boosts overseas revenue; but this conflicts with Huang's stance against chip backdoors → creates a contradiction between policy and personnel"
     },
     {
-      "tags": [{ "type": "fed", "text": "央行" }],
+      "tags": [
+        {
+          "type": "fed",
+          "text": "央行",
+          "text_en": "Central Bank"
+        }
+      ],
       "event": "美联储半年度金融稳定报告：资产估值压力持续高位，AI资产价格与投资扩张或放大波动；芝加哥/波士顿联储主席同日警告通胀扩散",
       "event_en": "Fed semi-annual Financial Stability Report: asset valuation pressures remain persistently elevated; AI asset prices and investment expansion could amplify volatility; Chicago and Boston Fed presidents warned on the same day about broadening inflation",
       "assets": "美股估值、AI概念股、美债收益率",
@@ -46,7 +114,13 @@
       "logic_en": "Official AI bubble warning → risk appetite contracts → rate hike expectations rise (December +25bp highly likely, +50bp at 15% probability) → tech stocks under pressure"
     },
     {
-      "tags": [{ "type": "fed", "text": "央行" }],
+      "tags": [
+        {
+          "type": "fed",
+          "text": "央行",
+          "text_en": "Central Bank"
+        }
+      ],
       "event": "美国10月PPI同比6.5%（2022年11月以来最高），环比0.3%低于预期；财长贝森特称不应因能源冲击加息，与古尔斯比交锋",
       "event_en": "US October PPI YoY +6.5% (highest since November 2022), MoM +0.3% below expectations; Treasury Secretary Bessent argues against rate hikes due to energy shocks, publicly disagrees with Fed's Goolsbee",
       "assets": "美债、美元、加息预期",
@@ -56,7 +130,13 @@
       "logic_en": "PPI below expectations → Treasury yields dip in the short term; but YoY still at a record high → rate hike expectations remain unshaken; public disagreement between the Treasury and Fed officials adds uncertainty"
     },
     {
-      "tags": [{ "type": "energy", "text": "能源" }],
+      "tags": [
+        {
+          "type": "energy",
+          "text": "能源",
+          "text_en": "Energy"
+        }
+      ],
       "event": "布油两周跌近19%创六年多最大同期跌幅；高盛预测2027年石油\"大量过剩\"；IEA称四季度全球石油转向供应过剩",
       "event_en": "Brent crude falls nearly 19% over two weeks, the largest two-week decline in over six years; Goldman Sachs forecasts a 'massive surplus' in oil for 2027; IEA says the global oil market shifts to surplus in Q4",
       "assets": "原油、能源股、黄金（避险需求减弱）",
@@ -66,7 +146,13 @@
       "logic_en": "Middle East regains Asian market share + surplus expectations → oil prices continue to decline → inflation's energy component falls → but gold also weakens (rising real rates pressure gold)"
     },
     {
-      "tags": [{ "type": "fed", "text": "流动性" }],
+      "tags": [
+        {
+          "type": "fed",
+          "text": "流动性",
+          "text_en": "Liquidity"
+        }
+      ],
       "event": "2年期美债收益率全周升33bp创两年最大周升幅；美元指数19个月新高；日元两个多月来首次跌破160；比特币一度跌破6.8万",
       "event_en": "2-year UST yield rose 33bp over the week, the largest weekly increase in two years; Dollar Index hit a 19-month high; JPY broke below 160 for the first time in over two months; Bitcoin briefly dropped below $68,000",
       "assets": "美债、美元、日元、新兴市场货币、比特币",
@@ -76,7 +162,13 @@
       "logic_en": "Rate hike expectations surge → UST selloff → USD strengthens → JPY and EM currencies pressured; strong USD tightens global liquidity → risk assets sidelined (BofA's Hartnett)"
     },
     {
-      "tags": [{ "type": "china", "text": "中国" }],
+      "tags": [
+        {
+          "type": "china",
+          "text": "中国",
+          "text_en": "China"
+        }
+      ],
       "event": "中国10月工业增加值同比放缓至4.8%、社零增0.4%（剔除汽车+2.5%）、地产开发投资同比-21.6%、固定资产投资-8.1%",
       "event_en": "China's October industrial output YoY slows to 4.8%, retail sales +0.4% (+2.5% ex-autos), real estate development investment -21.6% YoY, fixed asset investment -8.1%",
       "assets": "A股、港股、人民币、大宗商品需求",
@@ -86,7 +178,13 @@
       "logic_en": "Domestic demand weaker than expected + persistent property drag → ChiNext -3.32% as growth stocks lead the decline → bank stocks hit new highs (defensive rotation); however, IT services +20.5% indicates structural divergence"
     },
     {
-      "tags": [{ "type": "bio", "text": "生物科技" }],
+      "tags": [
+        {
+          "type": "bio",
+          "text": "生物科技",
+          "text_en": "Biotech"
+        }
+      ],
       "event": "康方生物盘中大跌逾20%：依沃西美国首次上市申请未获批；恒生生物科技指数-2.5%",
       "event_en": "Akeso plunges over 20% intraday: ivonescimab's first US marketing application not approved; Hang Seng Biotech Index -2.5%",
       "assets": "康方生物、港股生物科技、创新药ETF",
@@ -96,7 +194,13 @@
       "logic_en": "Single drug overseas setback → market questions the internationalization path of innovative drugs → sector sentiment contagion → broad biotech valuation derating"
     },
     {
-      "tags": [{ "type": "macro", "text": "财政" }],
+      "tags": [
+        {
+          "type": "macro",
+          "text": "财政",
+          "text_en": "Fiscal"
+        }
+      ],
       "event": "美国10月财政赤字4040亿创同期新高；过去12个月利息支出1.4万亿，占税收28.2%创历史新高",
       "event_en": "US October fiscal deficit reaches $404 billion, a record high for the period; trailing 12-month interest expense $1.4 trillion, accounting for 28.2% of tax revenue — an all-time high",
       "assets": "美债信用、长期国债收益率、黄金（对冲财政风险）",
@@ -106,7 +210,13 @@
       "logic_en": "Deficit + rigid interest spending → increased bond issuance demand → long-term UST supply pressure → but currently absorbed by strong auctions (Bessent emphasizes robust demand)"
     },
     {
-      "tags": [{ "type": "ai", "text": "科技" }],
+      "tags": [
+        {
+          "type": "ai",
+          "text": "科技",
+          "text_en": "Tech"
+        }
+      ],
       "event": "SpaceX-特斯拉合并谈判提速，最快12月宣布；星舰首次\"双回收\"测试（助推器失败、飞船回收待验证）；特斯拉开放Cybercab购买$29990",
       "event_en": "SpaceX-Tesla merger talks accelerate, announcement as early as December; Starship's first 'dual recovery' test (booster failed, spacecraft recovery pending verification); Tesla opens Cybercab pre-orders at $29,990",
       "assets": "特斯拉、SpaceX估值、自动驾驶概念",
@@ -116,24 +226,63 @@
       "logic_en": "Merger expectations + full reusability milestone → Tesla +1.9% intraday → if completed, would be the largest merger in history → reshapes the valuation framework for AI, space, and mobility"
     }
   ],
-
   "chains": [
     {
       "title": "① 英伟达CEO危机 → AI硬件估值重估链",
       "title_en": "1. Nvidia CEO Crisis → AI Hardware Re-rating Chain",
       "status": "unverified",
       "nodes": [
-        { "text": "黄仁勋去职<br>CEO不确定性", "text_en": "Huang departure<br>CEO uncertainty", "type": "trigger" },
-        { "text": "5000亿AI融资<br>平台搁置", "text_en": "$500B AI financing<br>platform stalled", "type": "normal" },
-        { "text": "汇丰下调评级<br>$365→$170", "text_en": "HSBC downgrade<br>$365 → $170", "type": "normal" },
-        { "text": "文艺复兴等<br>机构砍仓99.7%", "text_en": "Renaissance & others<br>cut 99.7%", "type": "normal" },
-        { "text": "英伟达周跌13%<br>台股-5%、AMD-9%", "text_en": "Nvidia -13% weekly<br>Taiwan -5%, AMD -9%", "type": "result-down" }
+        {
+          "text": "黄仁勋去职<br>CEO不确定性",
+          "text_en": "Huang departure<br>CEO uncertainty",
+          "type": "trigger"
+        },
+        {
+          "text": "5000亿AI融资<br>平台搁置",
+          "text_en": "$500B AI financing<br>platform stalled",
+          "type": "normal"
+        },
+        {
+          "text": "汇丰下调评级<br>$365→$170",
+          "text_en": "HSBC downgrade<br>$365 → $170",
+          "type": "normal"
+        },
+        {
+          "text": "文艺复兴等<br>机构砍仓99.7%",
+          "text_en": "Renaissance & others<br>cut 99.7%",
+          "type": "normal"
+        },
+        {
+          "text": "英伟达周跌13%<br>台股-5%、AMD-9%",
+          "text_en": "Nvidia -13% weekly<br>Taiwan -5%, AMD -9%",
+          "type": "result-down"
+        }
       ],
       "jargon": [
-        { "term": "CEO不确定性", "term_en": "CEO Uncertainty", "explain": "市场不知道下一任掌门是谁、会不会改变AI芯片战略方向，所以先卖出避险。", "explain_en": "The market doesn't know who the next leader will be or whether the AI chip strategy will change, so investors sell first to hedge risk." },
-        { "term": "5000亿AI融资平台", "term_en": "$500B AI Financing Platform", "explain": "英伟达联合多家私募帮客户买GPU算力的\"分期付款\"方案，黄仁勋走了，兜底担保没人签了。", "explain_en": "Nvidia partnered with private equity firms to help clients purchase GPU computing power on an 'installment plan.' With Huang gone, no one is left to sign the guarantee." },
-        { "term": "剩余价值支持协议（兜底比例）", "term_en": "Residual Value Support (Guarantee Ratio)", "explain": "客户用完GPU后英伟达承诺回购多少比例。英伟达只兜25%，博通兜72.5%，客户觉得英伟达不够大方。", "explain_en": "Nvidia promises to buy back a percentage of used GPUs after clients are done. Nvidia only guarantees 25%, while Broadcom guarantees 72.5% — clients find Nvidia less generous." },
-        { "term": "13F文件", "term_en": "13F Filing", "explain": "美国机构每季度公布持仓，文艺复兴在丑闻爆发前就已清仓，说明\"聪明钱\"提前嗅到风险。", "explain_en": "US institutions report their holdings quarterly. Renaissance had already liquidated its position before the scandal broke, suggesting 'smart money' sensed the risk early." }
+        {
+          "term": "CEO不确定性",
+          "term_en": "CEO Uncertainty",
+          "explain": "市场不知道下一任掌门是谁、会不会改变AI芯片战略方向，所以先卖出避险。",
+          "explain_en": "The market doesn't know who the next leader will be or whether the AI chip strategy will change, so investors sell first to hedge risk."
+        },
+        {
+          "term": "5000亿AI融资平台",
+          "term_en": "$500B AI Financing Platform",
+          "explain": "英伟达联合多家私募帮客户买GPU算力的\"分期付款\"方案，黄仁勋走了，兜底担保没人签了。",
+          "explain_en": "Nvidia partnered with private equity firms to help clients purchase GPU computing power on an 'installment plan.' With Huang gone, no one is left to sign the guarantee."
+        },
+        {
+          "term": "剩余价值支持协议（兜底比例）",
+          "term_en": "Residual Value Support (Guarantee Ratio)",
+          "explain": "客户用完GPU后英伟达承诺回购多少比例。英伟达只兜25%，博通兜72.5%，客户觉得英伟达不够大方。",
+          "explain_en": "Nvidia promises to buy back a percentage of used GPUs after clients are done. Nvidia only guarantees 25%, while Broadcom guarantees 72.5% — clients find Nvidia less generous."
+        },
+        {
+          "term": "13F文件",
+          "term_en": "13F Filing",
+          "explain": "美国机构每季度公布持仓，文艺复兴在丑闻爆发前就已清仓，说明\"聪明钱\"提前嗅到风险。",
+          "explain_en": "US institutions report their holdings quarterly. Renaissance had already liquidated its position before the scandal broke, suggesting 'smart money' sensed the risk early."
+        }
       ]
     },
     {
@@ -141,17 +290,57 @@
       "title_en": "2. Fed Rate Hike Expectations Surge → Strong USD Hits Global Liquidity",
       "status": "consensus",
       "nodes": [
-        { "text": "PPI同比6.5%<br>四年新高", "text_en": "PPI YoY 6.5%<br>4-year high", "type": "trigger" },
-        { "text": "联储官员<br>警告通胀扩散", "text_en": "Fed officials<br>warn of broadening inflation", "type": "normal" },
-        { "text": "12月加息预期<br>+25bp概率高", "text_en": "Dec rate hike expectation<br>+25bp highly likely", "type": "normal" },
-        { "text": "2年期美债<br>周升33bp", "text_en": "2Y UST yield<br>+33bp weekly", "type": "normal" },
-        { "text": "美元19个月新高<br>日元破160", "text_en": "USD 19-month high<br>JPY breaks 160", "type": "result-up" }
+        {
+          "text": "PPI同比6.5%<br>四年新高",
+          "text_en": "PPI YoY 6.5%<br>4-year high",
+          "type": "trigger"
+        },
+        {
+          "text": "联储官员<br>警告通胀扩散",
+          "text_en": "Fed officials<br>warn of broadening inflation",
+          "type": "normal"
+        },
+        {
+          "text": "12月加息预期<br>+25bp概率高",
+          "text_en": "Dec rate hike expectation<br>+25bp highly likely",
+          "type": "normal"
+        },
+        {
+          "text": "2年期美债<br>周升33bp",
+          "text_en": "2Y UST yield<br>+33bp weekly",
+          "type": "normal"
+        },
+        {
+          "text": "美元19个月新高<br>日元破160",
+          "text_en": "USD 19-month high<br>JPY breaks 160",
+          "type": "result-up"
+        }
       ],
       "jargon": [
-        { "term": "PPI（生产者价格指数）", "term_en": "PPI (Producer Price Index)", "explain": "工厂出厂价格涨多少，是CPI的\"上游预告片\"。PPI涨意味着几个月后消费者物价可能跟着涨。", "explain_en": "Measures how much factory gate prices have risen — the 'upstream preview' of CPI. Rising PPI suggests consumer prices may follow in the coming months." },
-        { "term": "通胀扩散", "term_en": "Inflation Broadening", "explain": "以前只有油价涨，现在服务业、医疗、住房都在涨，说明通胀不是单一原因而是全面蔓延，更难治。", "explain_en": "Previously only oil prices were rising; now services, healthcare, and housing are all increasing — inflation has become broad-based and harder to contain." },
-        { "term": "2年期美债收益率", "term_en": "2-Year UST Yield", "explain": "最敏感反映\"未来1-2年利率预期\"的指标。它暴涨说明市场认为美联储还要加息。", "explain_en": "The most sensitive indicator of 'rate expectations for the next 1-2 years.' A surge signals that markets believe the Fed will hike further." },
-        { "term": "实际利差", "term_en": "Real Rate Differential", "explain": "两国利率差减去通胀差。日本央行高田创提到市场开始看实际利差，意味着即使日本加息，如果美国通胀更高，日元照样跌。", "explain_en": "Interest rate differential between two countries minus their inflation differential. BOJ's Takata noted that markets are now looking at real spreads — even if Japan hikes rates, higher US inflation means JPY still falls." }
+        {
+          "term": "PPI（生产者价格指数）",
+          "term_en": "PPI (Producer Price Index)",
+          "explain": "工厂出厂价格涨多少，是CPI的\"上游预告片\"。PPI涨意味着几个月后消费者物价可能跟着涨。",
+          "explain_en": "Measures how much factory gate prices have risen — the 'upstream preview' of CPI. Rising PPI suggests consumer prices may follow in the coming months."
+        },
+        {
+          "term": "通胀扩散",
+          "term_en": "Inflation Broadening",
+          "explain": "以前只有油价涨，现在服务业、医疗、住房都在涨，说明通胀不是单一原因而是全面蔓延，更难治。",
+          "explain_en": "Previously only oil prices were rising; now services, healthcare, and housing are all increasing — inflation has become broad-based and harder to contain."
+        },
+        {
+          "term": "2年期美债收益率",
+          "term_en": "2-Year UST Yield",
+          "explain": "最敏感反映\"未来1-2年利率预期\"的指标。它暴涨说明市场认为美联储还要加息。",
+          "explain_en": "The most sensitive indicator of 'rate expectations for the next 1-2 years.' A surge signals that markets believe the Fed will hike further."
+        },
+        {
+          "term": "实际利差",
+          "term_en": "Real Rate Differential",
+          "explain": "两国利率差减去通胀差。日本央行高田创提到市场开始看实际利差，意味着即使日本加息，如果美国通胀更高，日元照样跌。",
+          "explain_en": "Interest rate differential between two countries minus their inflation differential. BOJ's Takata noted that markets are now looking at real spreads — even if Japan hikes rates, higher US inflation means JPY still falls."
+        }
       ]
     },
     {
@@ -159,15 +348,46 @@
       "title_en": "3. Middle East Surplus Expectation → Oil Crash → Gold Unanchored",
       "status": "consensus",
       "nodes": [
-        { "text": "中东原油夺回<br>亚洲市场", "text_en": "Middle East oil regains<br>Asian market", "type": "trigger" },
-        { "text": "IEA：四季度<br>供应过剩", "text_en": "IEA: Q4<br>supply surplus", "type": "normal" },
-        { "text": "高盛预测2027<br>大量过剩", "text_en": "Goldman: 2027<br>massive surplus", "type": "normal" },
-        { "text": "布油两周-19%<br>黄金周跌4.55%", "text_en": "Brent -19% in 2 wks<br>Gold -4.55% weekly", "type": "result-down" }
+        {
+          "text": "中东原油夺回<br>亚洲市场",
+          "text_en": "Middle East oil regains<br>Asian market",
+          "type": "trigger"
+        },
+        {
+          "text": "IEA：四季度<br>供应过剩",
+          "text_en": "IEA: Q4<br>supply surplus",
+          "type": "normal"
+        },
+        {
+          "text": "高盛预测2027<br>大量过剩",
+          "text_en": "Goldman: 2027<br>massive surplus",
+          "type": "normal"
+        },
+        {
+          "text": "布油两周-19%<br>黄金周跌4.55%",
+          "text_en": "Brent -19% in 2 wks<br>Gold -4.55% weekly",
+          "type": "result-down"
+        }
       ],
       "jargon": [
-        { "term": "供应过剩", "term_en": "Supply Surplus", "explain": "产油量超过消费量，多余石油只能存进油罐，价格自然下跌。", "explain_en": "Production exceeds consumption; excess oil must go into storage, naturally pushing prices down." },
-        { "term": "官方售价（OSP）", "term_en": "Official Selling Price (OSP)", "explain": "沙特等产油国每月公布给不同地区的原油报价。下调至六年低位=主动降价抢客户。", "explain_en": "Saudi Arabia and other producers publish monthly oil prices for different regions. Cutting to a six-year low means proactively slashing prices to win customers." },
-        { "term": "实际利率", "term_en": "Real Interest Rate", "explain": "名义利率减通胀预期。油价跌→通胀预期降→实际利率反而升→持有黄金的机会成本增加→金价跌。这就是为什么油价跌黄金也跌。", "explain_en": "Nominal interest rate minus inflation expectations. Oil falls → inflation expectations drop → real rates rise → the opportunity cost of holding gold increases → gold falls. This is why oil and gold can decline together." }
+        {
+          "term": "供应过剩",
+          "term_en": "Supply Surplus",
+          "explain": "产油量超过消费量，多余石油只能存进油罐，价格自然下跌。",
+          "explain_en": "Production exceeds consumption; excess oil must go into storage, naturally pushing prices down."
+        },
+        {
+          "term": "官方售价（OSP）",
+          "term_en": "Official Selling Price (OSP)",
+          "explain": "沙特等产油国每月公布给不同地区的原油报价。下调至六年低位=主动降价抢客户。",
+          "explain_en": "Saudi Arabia and other producers publish monthly oil prices for different regions. Cutting to a six-year low means proactively slashing prices to win customers."
+        },
+        {
+          "term": "实际利率",
+          "term_en": "Real Interest Rate",
+          "explain": "名义利率减通胀预期。油价跌→通胀预期降→实际利率反而升→持有黄金的机会成本增加→金价跌。这就是为什么油价跌黄金也跌。",
+          "explain_en": "Nominal interest rate minus inflation expectations. Oil falls → inflation expectations drop → real rates rise → the opportunity cost of holding gold increases → gold falls. This is why oil and gold can decline together."
+        }
       ]
     },
     {
@@ -175,15 +395,46 @@
       "title_en": "4. Fed Flags AI Valuation Bubble → Tech Risk Appetite Contracts",
       "status": "consensus",
       "nodes": [
-        { "text": "金融稳定报告<br>点名AI估值", "text_en": "Financial Stability<br>Report flags AI valuations", "type": "trigger" },
-        { "text": "\"超级智能预期\"<br>推高股价", "text_en": "'Superintelligence<br>expectations' drive prices up", "type": "normal" },
-        { "text": "AI投资扩张<br>或放大波动", "text_en": "AI investment expansion<br>may amplify volatility", "type": "normal" },
-        { "text": "芯片指数-3%<br>纳指反弹失利", "text_en": "Chip index -3%<br>Nasdaq rebound stalls", "type": "result-down" }
+        {
+          "text": "金融稳定报告<br>点名AI估值",
+          "text_en": "Financial Stability<br>Report flags AI valuations",
+          "type": "trigger"
+        },
+        {
+          "text": "\"超级智能预期\"<br>推高股价",
+          "text_en": "'Superintelligence<br>expectations' drive prices up",
+          "type": "normal"
+        },
+        {
+          "text": "AI投资扩张<br>或放大波动",
+          "text_en": "AI investment expansion<br>may amplify volatility",
+          "type": "normal"
+        },
+        {
+          "text": "芯片指数-3%<br>纳指反弹失利",
+          "text_en": "Chip index -3%<br>Nasdaq rebound stalls",
+          "type": "result-down"
+        }
       ],
       "jargon": [
-        { "term": "金融稳定报告", "term_en": "Financial Stability Report", "explain": "美联储每半年发布一次，专门找金融系统的\"隐患\"。这次把AI资产估值列为\"持续高位脆弱性\"，等于官方说\"你们炒太高了\"。", "explain_en": "Published semi-annually by the Fed to identify financial system 'vulnerabilities.' This edition flagged AI asset valuations as 'persistently elevated fragility' — the official way of saying 'prices are too high.'" },
-        { "term": "超级智能预期", "term_en": "Superintelligence Expectation", "explain": "市场认为AI很快会达到或超越人类智能水平，所以提前给AI公司天价估值。美联储认为这个预期可能过度乐观。", "explain_en": "Markets believe AI will soon reach or surpass human intelligence, so they pre-assign sky-high valuations to AI companies. The Fed considers this expectation potentially over-optimistic." },
-        { "term": "放大波动", "term_en": "Amplify Volatility", "explain": "AI公司投入巨资买芯片建数据中心，如果收入不及预期，资本开支变成沉没成本，股价跌幅会比普通公司更大。", "explain_en": "AI companies invest heavily in chips and data centers. If revenue falls short, capital expenditure becomes sunk cost, causing steeper stock declines than typical companies." }
+        {
+          "term": "金融稳定报告",
+          "term_en": "Financial Stability Report",
+          "explain": "美联储每半年发布一次，专门找金融系统的\"隐患\"。这次把AI资产估值列为\"持续高位脆弱性\"，等于官方说\"你们炒太高了\"。",
+          "explain_en": "Published semi-annually by the Fed to identify financial system 'vulnerabilities.' This edition flagged AI asset valuations as 'persistently elevated fragility' — the official way of saying 'prices are too high.'"
+        },
+        {
+          "term": "超级智能预期",
+          "term_en": "Superintelligence Expectation",
+          "explain": "市场认为AI很快会达到或超越人类智能水平，所以提前给AI公司天价估值。美联储认为这个预期可能过度乐观。",
+          "explain_en": "Markets believe AI will soon reach or surpass human intelligence, so they pre-assign sky-high valuations to AI companies. The Fed considers this expectation potentially over-optimistic."
+        },
+        {
+          "term": "放大波动",
+          "term_en": "Amplify Volatility",
+          "explain": "AI公司投入巨资买芯片建数据中心，如果收入不及预期，资本开支变成沉没成本，股价跌幅会比普通公司更大。",
+          "explain_en": "AI companies invest heavily in chips and data centers. If revenue falls short, capital expenditure becomes sunk cost, causing steeper stock declines than typical companies."
+        }
       ]
     },
     {
@@ -191,16 +442,52 @@
       "title_en": "5. China Oct Data Weak → A-share Growth Selloff → Defensive Rotation",
       "status": "consensus",
       "nodes": [
-        { "text": "工业增加值<br>放缓至4.8%", "text_en": "Industrial output<br>slows to 4.8%", "type": "trigger" },
-        { "text": "社零仅+0.4%<br>地产投资-21.6%", "text_en": "Retail sales only +0.4%<br>Property investment -21.6%", "type": "normal" },
-        { "text": "成长股杀估值<br>创业板-3.32%", "text_en": "Growth stock selloff<br>ChiNext -3.32%", "type": "normal" },
-        { "text": "银行股创新高<br>恒指+0.8%（分化）", "text_en": "Bank stocks hit new highs<br>HSI +0.8% (divergence)", "type": "result-up" }
+        {
+          "text": "工业增加值<br>放缓至4.8%",
+          "text_en": "Industrial output<br>slows to 4.8%",
+          "type": "trigger"
+        },
+        {
+          "text": "社零仅+0.4%<br>地产投资-21.6%",
+          "text_en": "Retail sales only +0.4%<br>Property investment -21.6%",
+          "type": "normal"
+        },
+        {
+          "text": "成长股杀估值<br>创业板-3.32%",
+          "text_en": "Growth stock selloff<br>ChiNext -3.32%",
+          "type": "normal"
+        },
+        {
+          "text": "银行股创新高<br>恒指+0.8%（分化）",
+          "text_en": "Bank stocks hit new highs<br>HSI +0.8% (divergence)",
+          "type": "result-up"
+        }
       ],
       "jargon": [
-        { "term": "社零（社会消费品零售总额）", "term_en": "Retail Sales (Total Consumer Goods)", "explain": "老百姓花了多少钱买东西。+0.4%几乎零增长，剔除汽车后+2.5%说明汽车拖累严重。", "explain_en": "How much consumers spent on goods. +0.4% is near-zero growth; excluding autos, +2.5% indicates that the auto sector was a significant drag." },
-        { "term": "错月因素", "term_en": "Calendar Effect", "explain": "国家统计局解释，今年10月工作日比去年同期少，数据看起来差部分是\"日历效应\"不是真差。", "explain_en": "The National Bureau of Statistics explains that October had fewer working days than the same period last year — the data looks worse partly due to a 'calendar effect' rather than genuine weakness." },
-        { "term": "防御切换", "term_en": "Defensive Rotation", "explain": "经济弱时资金从高风险成长股（科技、新能源）流向低风险高股息股（银行、公用事业），叫\"防御\"。", "explain_en": "When the economy weakens, capital flows from high-risk growth stocks (tech, new energy) to low-risk high-dividend stocks (banks, utilities) — this is called 'defensive rotation.'" },
-        { "term": "M2与M1剪刀差", "term_en": "M2-M1 Scissor Gap", "explain": "M2是全部存款，M1是活期存款。差收窄说明活钱开始动起来，经济活跃度边际改善的微弱信号。", "explain_en": "M2 is total deposits; M1 is demand deposits. A narrowing gap suggests that active money is starting to circulate — a faint signal of marginal improvement in economic activity." }
+        {
+          "term": "社零（社会消费品零售总额）",
+          "term_en": "Retail Sales (Total Consumer Goods)",
+          "explain": "老百姓花了多少钱买东西。+0.4%几乎零增长，剔除汽车后+2.5%说明汽车拖累严重。",
+          "explain_en": "How much consumers spent on goods. +0.4% is near-zero growth; excluding autos, +2.5% indicates that the auto sector was a significant drag."
+        },
+        {
+          "term": "错月因素",
+          "term_en": "Calendar Effect",
+          "explain": "国家统计局解释，今年10月工作日比去年同期少，数据看起来差部分是\"日历效应\"不是真差。",
+          "explain_en": "The National Bureau of Statistics explains that October had fewer working days than the same period last year — the data looks worse partly due to a 'calendar effect' rather than genuine weakness."
+        },
+        {
+          "term": "防御切换",
+          "term_en": "Defensive Rotation",
+          "explain": "经济弱时资金从高风险成长股（科技、新能源）流向低风险高股息股（银行、公用事业），叫\"防御\"。",
+          "explain_en": "When the economy weakens, capital flows from high-risk growth stocks (tech, new energy) to low-risk high-dividend stocks (banks, utilities) — this is called 'defensive rotation.'"
+        },
+        {
+          "term": "M2与M1剪刀差",
+          "term_en": "M2-M1 Scissor Gap",
+          "explain": "M2是全部存款，M1是活期存款。差收窄说明活钱开始动起来，经济活跃度边际改善的微弱信号。",
+          "explain_en": "M2 is total deposits; M1 is demand deposits. A narrowing gap suggests that active money is starting to circulate — a faint signal of marginal improvement in economic activity."
+        }
       ]
     },
     {
@@ -208,15 +495,46 @@
       "title_en": "6. Trump AI 'National Champion' List → Export Control Route Battle",
       "status": "unverified",
       "nodes": [
-        { "text": "20+企业列入<br>AI领军名单", "text_en": "20+ companies added to<br>AI champion list", "type": "trigger" },
-        { "text": "获芯片出口<br>快速审批", "text_en": "Fast-track<br>chip export approval", "type": "normal" },
-        { "text": "与黄仁勋反对<br>芯片后门冲突", "text_en": "Conflicts with Huang's<br>anti-backdoor stance", "type": "normal" },
-        { "text": "AI管制路线<br>不确定性上升", "text_en": "AI control policy<br>uncertainty rises", "type": "result-down" }
+        {
+          "text": "20+企业列入<br>AI领军名单",
+          "text_en": "20+ companies added to<br>AI champion list",
+          "type": "trigger"
+        },
+        {
+          "text": "获芯片出口<br>快速审批",
+          "text_en": "Fast-track<br>chip export approval",
+          "type": "normal"
+        },
+        {
+          "text": "与黄仁勋反对<br>芯片后门冲突",
+          "text_en": "Conflicts with Huang's<br>anti-backdoor stance",
+          "type": "normal"
+        },
+        {
+          "text": "AI管制路线<br>不确定性上升",
+          "text_en": "AI control policy<br>uncertainty rises",
+          "type": "result-down"
+        }
       ],
       "jargon": [
-        { "term": "国家领军企业", "term_en": "National Champion Enterprise", "explain": "特朗普政府认证的\"信得过\"AI公司，卖芯片给海外客户时走绿色通道不用慢慢审批。", "explain_en": "The Trump administration certifies 'trusted' AI companies — they get a green channel for overseas chip sales without going through slow approval processes." },
-        { "term": "芯片后门/追踪功能", "term_en": "Chip Backdoor/Tracking", "explain": "在芯片里装\"定位追踪\"，卖出去后能监控谁在用、用来干嘛。黄仁勋反对，Anthropic支持，这是路线之争的核心。", "explain_en": "Installing 'location tracking' in chips — after sale, it allows monitoring who is using them and for what purpose. Huang opposes this; Anthropic supports it — this is the core of the policy battle." },
-        { "term": "鲁比奥 vs Anthropic", "term_en": "Rubio vs Anthropic", "explain": "鲁比奥涉嫌把CIA报告改写后泄露给媒体推动黄仁勋下台；Anthropic被指向记者提供爆料。两者都在推动更严格的芯片管制。", "explain_en": "Rubio allegedly rewrote a CIA report and leaked it to the media to push Huang out; Anthropic was accused of providing tips to journalists. Both are pushing for stricter chip controls." }
+        {
+          "term": "国家领军企业",
+          "term_en": "National Champion Enterprise",
+          "explain": "特朗普政府认证的\"信得过\"AI公司，卖芯片给海外客户时走绿色通道不用慢慢审批。",
+          "explain_en": "The Trump administration certifies 'trusted' AI companies — they get a green channel for overseas chip sales without going through slow approval processes."
+        },
+        {
+          "term": "芯片后门/追踪功能",
+          "term_en": "Chip Backdoor/Tracking",
+          "explain": "在芯片里装\"定位追踪\"，卖出去后能监控谁在用、用来干嘛。黄仁勋反对，Anthropic支持，这是路线之争的核心。",
+          "explain_en": "Installing 'location tracking' in chips — after sale, it allows monitoring who is using them and for what purpose. Huang opposes this; Anthropic supports it — this is the core of the policy battle."
+        },
+        {
+          "term": "鲁比奥 vs Anthropic",
+          "term_en": "Rubio vs Anthropic",
+          "explain": "鲁比奥涉嫌把CIA报告改写后泄露给媒体推动黄仁勋下台；Anthropic被指向记者提供爆料。两者都在推动更严格的芯片管制。",
+          "explain_en": "Rubio allegedly rewrote a CIA report and leaked it to the media to push Huang out; Anthropic was accused of providing tips to journalists. Both are pushing for stricter chip controls."
+        }
       ]
     },
     {
@@ -224,20 +542,55 @@
       "title_en": "7. SpaceX-Tesla Merger + Starship Reuse → Valuation Paradigm Shift",
       "status": "unverified",
       "nodes": [
-        { "text": "合并谈判提速<br>最快12月宣布", "text_en": "Merger talks accelerate<br>announcement as early as Dec", "type": "trigger" },
-        { "text": "星舰\"双回收\"<br>飞船回收待验证", "text_en": "Starship 'dual recovery'<br>spacecraft pending", "type": "normal" },
-        { "text": "完全复用<br>压低入轨成本", "text_en": "Full reusability<br>lowers orbit cost", "type": "normal" },
-        { "text": "特斯拉+1.9%<br>SpaceX万亿估值", "text_en": "Tesla +1.9%<br>SpaceX $1T valuation", "type": "result-up" }
+        {
+          "text": "合并谈判提速<br>最快12月宣布",
+          "text_en": "Merger talks accelerate<br>announcement as early as Dec",
+          "type": "trigger"
+        },
+        {
+          "text": "星舰\"双回收\"<br>飞船回收待验证",
+          "text_en": "Starship 'dual recovery'<br>spacecraft pending",
+          "type": "normal"
+        },
+        {
+          "text": "完全复用<br>压低入轨成本",
+          "text_en": "Full reusability<br>lowers orbit cost",
+          "type": "normal"
+        },
+        {
+          "text": "特斯拉+1.9%<br>SpaceX万亿估值",
+          "text_en": "Tesla +1.9%<br>SpaceX $1T valuation",
+          "type": "result-up"
+        }
       ],
       "jargon": [
-        { "term": "双回收", "term_en": "Dual Recovery", "explain": "火箭发射后，助推器（下半截）和飞船（上半截）都要回收重复使用。这次助推器爆炸了，飞船回收待验证。", "explain_en": "After launch, both the booster (lower stage) and the spacecraft (upper stage) must be recovered and reused. This time the booster exploded; spacecraft recovery is pending verification." },
-        { "term": "筷子夹飞船", "term_en": "Chopstick Catch", "explain": "用发射塔的机械臂像筷子一样夹住降落中的火箭/飞船，不用着陆腿，节省重量和成本。", "explain_en": "Using the launch tower's mechanical arms to catch the descending rocket/spacecraft like chopsticks — no landing legs needed, saving weight and cost." },
-        { "term": "完全复用", "term_en": "Full Reusability", "explain": "火箭每一部分都能回收再用，就像飞机一样。一旦实现，发射成本可能降低90%以上，是SpaceX万亿估值的核心逻辑。", "explain_en": "Every part of the rocket is recovered and reused, much like an airplane. Once achieved, launch costs could drop by over 90% — the core logic behind SpaceX's trillion-dollar valuation." },
-        { "term": "世纪合并", "term_en": "Merger of the Century", "explain": "SpaceX（未上市）和特斯拉（上市）合并，将是人类历史上最大并购案，意味着太空资产可借特斯拉上市公司通道变现。", "explain_en": "A merger between SpaceX (private) and Tesla (public) would be the largest in history — space assets could be monetized through Tesla's public listing channel." }
+        {
+          "term": "双回收",
+          "term_en": "Dual Recovery",
+          "explain": "火箭发射后，助推器（下半截）和飞船（上半截）都要回收重复使用。这次助推器爆炸了，飞船回收待验证。",
+          "explain_en": "After launch, both the booster (lower stage) and the spacecraft (upper stage) must be recovered and reused. This time the booster exploded; spacecraft recovery is pending verification."
+        },
+        {
+          "term": "筷子夹飞船",
+          "term_en": "Chopstick Catch",
+          "explain": "用发射塔的机械臂像筷子一样夹住降落中的火箭/飞船，不用着陆腿，节省重量和成本。",
+          "explain_en": "Using the launch tower's mechanical arms to catch the descending rocket/spacecraft like chopsticks — no landing legs needed, saving weight and cost."
+        },
+        {
+          "term": "完全复用",
+          "term_en": "Full Reusability",
+          "explain": "火箭每一部分都能回收再用，就像飞机一样。一旦实现，发射成本可能降低90%以上，是SpaceX万亿估值的核心逻辑。",
+          "explain_en": "Every part of the rocket is recovered and reused, much like an airplane. Once achieved, launch costs could drop by over 90% — the core logic behind SpaceX's trillion-dollar valuation."
+        },
+        {
+          "term": "世纪合并",
+          "term_en": "Merger of the Century",
+          "explain": "SpaceX（未上市）和特斯拉（上市）合并，将是人类历史上最大并购案，意味着太空资产可借特斯拉上市公司通道变现。",
+          "explain_en": "A merger between SpaceX (private) and Tesla (public) would be the largest in history — space assets could be monetized through Tesla's public listing channel."
+        }
       ]
     }
   ],
-
   "verifications": [
     {
       "title": "① 英伟达CEO危机是否会演变为AI capex\"急刹车\"？",
@@ -255,7 +608,13 @@
       "lesson": "教训：当\"卖铲人\"自身出现领导危机，往往标志着整个capex周期见顶。",
       "lesson_en": "Lesson: When the 'shovel seller' itself has a leadership crisis, it often marks the peak of the entire capex cycle.",
       "diff": "关键区别：当年思科没有5000亿融资平台这种\"兜底机制\"，且AI需求有实际收入支撑（非纯预期），崩塌速度可能更慢但修复也可能更快。",
-      "diff_en": "Key difference: Cisco had no $500B financing 'safety net,' and AI demand is supported by real revenue (not pure expectations). The collapse may be slower, but the recovery could also be faster."
+      "diff_en": "Key difference: Cisco had no $500B financing 'safety net,' and AI demand is supported by real revenue (not pure expectations). The collapse may be slower, but the recovery could also be faster.",
+      "vars_en": [
+        "Whether Jensen Huang is formally reinstated (watch for mention during Trump Asia trip this week)",
+        "Whether the first transaction of the $500B AI financing platform closes in January",
+        "Whether Microsoft/Meta/Amazon Q4 capex guidance is revised down",
+        "Nvidia next-quarter data center revenue QoQ growth rate"
+      ]
     },
     {
       "title": "② 强美元是否会引爆新兴市场/日元危机？",
@@ -273,7 +632,13 @@
       "lesson": "教训：美元指数突破105并持续3个月以上，新兴市场几乎必然出事。",
       "lesson_en": "Lesson: When Dollar Index exceeds 105 for 3+ months, EM crises are almost inevitable.",
       "diff": "关键区别：当前日本外储充裕（1.2万亿美元），且日元贬值部分是日本央行默许的（利于出口），与1997年被动贬值不同。但日元破160后日本企业进口成本压力可能倒逼央行急转。",
-      "diff_en": "Key difference: Japan has ample foreign reserves ($1.2 trillion), and JPY depreciation is partly tolerated by the BOJ (as it benefits exports), unlike the passive devaluation of 1997. However, once JPY breaks above 160, rising import costs may force the BOJ to make a sharp policy pivot."
+      "diff_en": "Key difference: Japan has ample foreign reserves ($1.2 trillion), and JPY depreciation is partly tolerated by the BOJ (as it benefits exports), unlike the passive devaluation of 1997. However, once JPY breaks above 160, rising import costs may force the BOJ to make a sharp policy pivot.",
+      "vars_en": [
+        "Whether USD/JPY holds above 160 (BOJ intervention threshold)",
+        "Whether BOJ hikes rates in an emergency December meeting (Takata hinted at flexible response)",
+        "Whether 10Y UST yield breaks above 5.2% and sustains",
+        "Whether EM USD bond CDS spreads widen"
+      ]
     },
     {
       "title": "③ 油价暴跌是\"通胀退烧药\"还是\"衰退信号\"？",
@@ -291,7 +656,13 @@
       "lesson": "教训：油价大跌可以是好事（降通胀），但如果是因为需求塌方导致的，那就是衰退信号而非红利。",
       "lesson_en": "Lesson: Oil price drops can be good (lower inflation), but if caused by demand collapse, it's a recession signal not a dividend.",
       "diff": "关键区别：本次油价跌的主因是中东供应恢复而非需求崩塌，且高盛明确预测\"过剩\"而非\"需求萎缩\"，更接近2014年供给侧冲击。但若叠加AI capex放缓→就业走弱，可能演变为需求端问题。",
-      "diff_en": "Key difference: This oil price decline is primarily driven by Middle East supply recovery rather than demand collapse. Goldman Sachs explicitly forecasts a 'surplus' rather than 'demand contraction' — more similar to the 2014 supply-side shock. However, if combined with an AI capex slowdown leading to job market weakness, it could evolve into a demand-side issue."
+      "diff_en": "Key difference: This oil price decline is primarily driven by Middle East supply recovery rather than demand collapse. Goldman Sachs explicitly forecasts a 'surplus' rather than 'demand contraction' — more similar to the 2014 supply-side shock. However, if combined with an AI capex slowdown leading to job market weakness, it could evolve into a demand-side issue.",
+      "vars_en": [
+        "Whether OPEC+ calls an emergency meeting to discuss production cuts",
+        "Whether US shale rig count starts declining (breakeven around $65-70)",
+        "US October CPI energy component MoM change",
+        "Whether Goldman/IEA monthly reports further downgrade 2027 demand forecasts"
+      ]
     },
     {
       "title": "④ 中国经济数据偏弱是\"错月扰动\"还是\"趋势性放缓\"？",
@@ -309,7 +680,13 @@
       "lesson": "教训：当官方用\"技术性因素\"解释数据走弱时，至少有一半概率是趋势性问题而非暂时扰动。",
       "lesson_en": "Lesson: When officials use 'technical factors' to explain weak data, there's at least a 50% chance it's structural, not temporary.",
       "diff": "关键区别：当前信息服务业+20.5%、装备制造业出口+12.5%，结构亮点比2015年明显。但地产投资-21.6%的拖累力度也远超2015年，政策对冲力度需要更大。",
-      "diff_en": "Key difference: IT services grew +20.5% and equipment manufacturing exports +12.5% — structural bright spots are more evident than in 2015. However, the drag from property investment at -21.6% far exceeds 2015 levels, requiring even greater policy stimulus to offset."
+      "diff_en": "Key difference: IT services grew +20.5% and equipment manufacturing exports +12.5% — structural bright spots are more evident than in 2015. However, the drag from property investment at -21.6% far exceeds 2015 levels, requiring even greater policy stimulus to offset.",
+      "vars_en": [
+        "Whether November industrial output rebounds (validating calendar effect explanation)",
+        "Whether property sales area stabilizes MoM (policy effectiveness verification)",
+        "Whether auto retail sales component recovers (trade-in program effect)",
+        "Whether PBOC launches new structural monetary policy tools"
+      ]
     },
     {
       "title": "⑤ SpaceX-特斯拉合并是否真的会在12月落地？",
@@ -327,7 +704,13 @@
       "lesson": "教训：在估值高点宣布的\"世纪合并\"，往往成为泡沫顶部标志而非价值创造起点。",
       "lesson_en": "Lesson: 'Century mergers' announced at valuation peaks often mark bubble tops, not value creation starts.",
       "diff": "关键区别：AOL-时代华纳是纯股票互换、无实体协同；SpaceX-特斯拉有真实技术协同（自动驾驶+卫星通信+能源），且星舰复用若成功有实质成本优势。但监管阻力远大于当年。",
-      "diff_en": "Key difference: The AOL-Time Warner merger was a pure stock swap with no operational synergy; SpaceX and Tesla have genuine technological synergy (autonomous driving, satellite communications, and energy), and if Starship reusability is proven, there is a real cost advantage. However, regulatory hurdles are far greater than back then."
+      "diff_en": "Key difference: The AOL-Time Warner merger was a pure stock swap with no operational synergy; SpaceX and Tesla have genuine technological synergy (autonomous driving, satellite communications, and energy), and if Starship reusability is proven, there is a real cost advantage. However, regulatory hurdles are far greater than back then.",
+      "vars_en": [
+        "Whether SEC raises antitrust concerns over the cross-industry merger",
+        "Whether Tesla holds a shareholder vote",
+        "SpaceX latest funding round valuation",
+        "Whether Starship spacecraft recovery succeeds (full reusability feasibility verification)"
+      ]
     }
   ]
 }

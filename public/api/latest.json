@@ -59,11 +59,13 @@
       "tags": [
         {
           "type": "ai",
-          "text": "AI"
+          "text": "AI",
+          "text_en": "AI"
         },
         {
           "type": "fed",
-          "text": "政策"
+          "text": "政策",
+          "text_en": "Policy"
         }
       ],
       "event": "英伟达黄仁勋去职风波持续发酵；汇丰将英伟达评级下调至\"持有\"，目标价从$365→$170；文艺复兴科技Q3已砍仓99.7%",
@@ -78,11 +80,13 @@
       "tags": [
         {
           "type": "ai",
-          "text": "AI"
+          "text": "AI",
+          "text_en": "AI"
         },
         {
           "type": "fed",
-          "text": "政策"
+          "text": "政策",
+          "text_en": "Policy"
         }
       ],
       "event": "特朗普政府将英伟达、亚马逊、微软、OpenAI、Anthropic等20+企业列入AI\"国家领军企业\"名单，获芯片出口快速审批",
@@ -97,7 +101,8 @@
       "tags": [
         {
           "type": "fed",
-          "text": "央行"
+          "text": "央行",
+          "text_en": "Central Bank"
         }
       ],
       "event": "美联储半年度金融稳定报告：资产估值压力持续高位，AI资产价格与投资扩张或放大波动；芝加哥/波士顿联储主席同日警告通胀扩散",
@@ -112,7 +117,8 @@
       "tags": [
         {
           "type": "fed",
-          "text": "央行"
+          "text": "央行",
+          "text_en": "Central Bank"
         }
       ],
       "event": "美国10月PPI同比6.5%（2022年11月以来最高），环比0.3%低于预期；财长贝森特称不应因能源冲击加息，与古尔斯比交锋",
@@ -127,7 +133,8 @@
       "tags": [
         {
           "type": "energy",
-          "text": "能源"
+          "text": "能源",
+          "text_en": "Energy"
         }
       ],
       "event": "布油两周跌近19%创六年多最大同期跌幅；高盛预测2027年石油\"大量过剩\"；IEA称四季度全球石油转向供应过剩",
@@ -142,7 +149,8 @@
       "tags": [
         {
           "type": "fed",
-          "text": "流动性"
+          "text": "流动性",
+          "text_en": "Liquidity"
         }
       ],
       "event": "2年期美债收益率全周升33bp创两年最大周升幅；美元指数19个月新高；日元两个多月来首次跌破160；比特币一度跌破6.8万",
@@ -157,7 +165,8 @@
       "tags": [
         {
           "type": "china",
-          "text": "中国"
+          "text": "中国",
+          "text_en": "China"
         }
       ],
       "event": "中国10月工业增加值同比放缓至4.8%、社零增0.4%（剔除汽车+2.5%）、地产开发投资同比-21.6%、固定资产投资-8.1%",
@@ -172,7 +181,8 @@
       "tags": [
         {
           "type": "bio",
-          "text": "生物科技"
+          "text": "生物科技",
+          "text_en": "Biotech"
         }
       ],
       "event": "康方生物盘中大跌逾20%：依沃西美国首次上市申请未获批；恒生生物科技指数-2.5%",
@@ -187,7 +197,8 @@
       "tags": [
         {
           "type": "macro",
-          "text": "财政"
+          "text": "财政",
+          "text_en": "Fiscal"
         }
       ],
       "event": "美国10月财政赤字4040亿创同期新高；过去12个月利息支出1.4万亿，占税收28.2%创历史新高",
@@ -202,7 +213,8 @@
       "tags": [
         {
           "type": "ai",
-          "text": "科技"
+          "text": "科技",
+          "text_en": "Tech"
         }
       ],
       "event": "SpaceX-特斯拉合并谈判提速，最快12月宣布；星舰首次\"双回收\"测试（助推器失败、飞船回收待验证）；特斯拉开放Cybercab购买$29990",
@@ -596,7 +608,13 @@
       "lesson": "教训：当\"卖铲人\"自身出现领导危机，往往标志着整个capex周期见顶。",
       "lesson_en": "Lesson: When the 'shovel seller' itself has a leadership crisis, it often marks the peak of the entire capex cycle.",
       "diff": "关键区别：当年思科没有5000亿融资平台这种\"兜底机制\"，且AI需求有实际收入支撑（非纯预期），崩塌速度可能更慢但修复也可能更快。",
-      "diff_en": "Key difference: Cisco had no $500B financing 'safety net,' and AI demand is supported by real revenue (not pure expectations). The collapse may be slower, but the recovery could also be faster."
+      "diff_en": "Key difference: Cisco had no $500B financing 'safety net,' and AI demand is supported by real revenue (not pure expectations). The collapse may be slower, but the recovery could also be faster.",
+      "vars_en": [
+        "Whether Jensen Huang is formally reinstated (watch for mention during Trump Asia trip this week)",
+        "Whether the first transaction of the $500B AI financing platform closes in January",
+        "Whether Microsoft/Meta/Amazon Q4 capex guidance is revised down",
+        "Nvidia next-quarter data center revenue QoQ growth rate"
+      ]
     },
     {
       "title": "② 强美元是否会引爆新兴市场/日元危机？",
@@ -614,7 +632,13 @@
       "lesson": "教训：美元指数突破105并持续3个月以上，新兴市场几乎必然出事。",
       "lesson_en": "Lesson: When Dollar Index exceeds 105 for 3+ months, EM crises are almost inevitable.",
       "diff": "关键区别：当前日本外储充裕（1.2万亿美元），且日元贬值部分是日本央行默许的（利于出口），与1997年被动贬值不同。但日元破160后日本企业进口成本压力可能倒逼央行急转。",
-      "diff_en": "Key difference: Japan has ample foreign reserves ($1.2 trillion), and JPY depreciation is partly tolerated by the BOJ (as it benefits exports), unlike the passive devaluation of 1997. However, once JPY breaks above 160, rising import costs may force the BOJ to make a sharp policy pivot."
+      "diff_en": "Key difference: Japan has ample foreign reserves ($1.2 trillion), and JPY depreciation is partly tolerated by the BOJ (as it benefits exports), unlike the passive devaluation of 1997. However, once JPY breaks above 160, rising import costs may force the BOJ to make a sharp policy pivot.",
+      "vars_en": [
+        "Whether USD/JPY holds above 160 (BOJ intervention threshold)",
+        "Whether BOJ hikes rates in an emergency December meeting (Takata hinted at flexible response)",
+        "Whether 10Y UST yield breaks above 5.2% and sustains",
+        "Whether EM USD bond CDS spreads widen"
+      ]
     },
     {
       "title": "③ 油价暴跌是\"通胀退烧药\"还是\"衰退信号\"？",
@@ -632,7 +656,13 @@
       "lesson": "教训：油价大跌可以是好事（降通胀），但如果是因为需求塌方导致的，那就是衰退信号而非红利。",
       "lesson_en": "Lesson: Oil price drops can be good (lower inflation), but if caused by demand collapse, it's a recession signal not a dividend.",
       "diff": "关键区别：本次油价跌的主因是中东供应恢复而非需求崩塌，且高盛明确预测\"过剩\"而非\"需求萎缩\"，更接近2014年供给侧冲击。但若叠加AI capex放缓→就业走弱，可能演变为需求端问题。",
-      "diff_en": "Key difference: This oil price decline is primarily driven by Middle East supply recovery rather than demand collapse. Goldman Sachs explicitly forecasts a 'surplus' rather than 'demand contraction' — more similar to the 2014 supply-side shock. However, if combined with an AI capex slowdown leading to job market weakness, it could evolve into a demand-side issue."
+      "diff_en": "Key difference: This oil price decline is primarily driven by Middle East supply recovery rather than demand collapse. Goldman Sachs explicitly forecasts a 'surplus' rather than 'demand contraction' — more similar to the 2014 supply-side shock. However, if combined with an AI capex slowdown leading to job market weakness, it could evolve into a demand-side issue.",
+      "vars_en": [
+        "Whether OPEC+ calls an emergency meeting to discuss production cuts",
+        "Whether US shale rig count starts declining (breakeven around $65-70)",
+        "US October CPI energy component MoM change",
+        "Whether Goldman/IEA monthly reports further downgrade 2027 demand forecasts"
+      ]
     },
     {
       "title": "④ 中国经济数据偏弱是\"错月扰动\"还是\"趋势性放缓\"？",
@@ -650,7 +680,13 @@
       "lesson": "教训：当官方用\"技术性因素\"解释数据走弱时，至少有一半概率是趋势性问题而非暂时扰动。",
       "lesson_en": "Lesson: When officials use 'technical factors' to explain weak data, there's at least a 50% chance it's structural, not temporary.",
       "diff": "关键区别：当前信息服务业+20.5%、装备制造业出口+12.5%，结构亮点比2015年明显。但地产投资-21.6%的拖累力度也远超2015年，政策对冲力度需要更大。",
-      "diff_en": "Key difference: IT services grew +20.5% and equipment manufacturing exports +12.5% — structural bright spots are more evident than in 2015. However, the drag from property investment at -21.6% far exceeds 2015 levels, requiring even greater policy stimulus to offset."
+      "diff_en": "Key difference: IT services grew +20.5% and equipment manufacturing exports +12.5% — structural bright spots are more evident than in 2015. However, the drag from property investment at -21.6% far exceeds 2015 levels, requiring even greater policy stimulus to offset.",
+      "vars_en": [
+        "Whether November industrial output rebounds (validating calendar effect explanation)",
+        "Whether property sales area stabilizes MoM (policy effectiveness verification)",
+        "Whether auto retail sales component recovers (trade-in program effect)",
+        "Whether PBOC launches new structural monetary policy tools"
+      ]
     },
     {
       "title": "⑤ SpaceX-特斯拉合并是否真的会在12月落地？",
@@ -668,7 +704,13 @@
       "lesson": "教训：在估值高点宣布的\"世纪合并\"，往往成为泡沫顶部标志而非价值创造起点。",
       "lesson_en": "Lesson: 'Century mergers' announced at valuation peaks often mark bubble tops, not value creation starts.",
       "diff": "关键区别：AOL-时代华纳是纯股票互换、无实体协同；SpaceX-特斯拉有真实技术协同（自动驾驶+卫星通信+能源），且星舰复用若成功有实质成本优势。但监管阻力远大于当年。",
-      "diff_en": "Key difference: The AOL-Time Warner merger was a pure stock swap with no operational synergy; SpaceX and Tesla have genuine technological synergy (autonomous driving, satellite communications, and energy), and if Starship reusability is proven, there is a real cost advantage. However, regulatory hurdles are far greater than back then."
+      "diff_en": "Key difference: The AOL-Time Warner merger was a pure stock swap with no operational synergy; SpaceX and Tesla have genuine technological synergy (autonomous driving, satellite communications, and energy), and if Starship reusability is proven, there is a real cost advantage. However, regulatory hurdles are far greater than back then.",
+      "vars_en": [
+        "Whether SEC raises antitrust concerns over the cross-industry merger",
+        "Whether Tesla holds a shareholder vote",
+        "SpaceX latest funding round valuation",
+        "Whether Starship spacecraft recovery succeeds (full reusability feasibility verification)"
+      ]
     }
   ]
 }

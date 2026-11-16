@@ -33,7 +33,7 @@ jobs:
         run: |
           pip install requests beautifulsoup4 lxml
 
-      - name: 抓取今日数据
+      - name: 抓取今日数据（中英双语）
         env:
           LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
         run: |
@@ -42,6 +42,71 @@ jobs:
       - name: 构建静态网站
         run: |
           python scripts/build_static.py
+
+      - name: 双语质量校验
+        run: |
+          echo "=== 双语质量校验 ==="
+          python -c "
+          import json, glob, re, sys
+
+          chinese_re = re.compile(r'[\u4e00-\u9fff]')
+          field_pairs = [
+              ('label', 'label_en'), ('change', 'change_en'),
+              ('event', 'event_en'), ('assets', 'assets_en'), ('logic', 'logic_en'),
+              ('title', 'title_en'),
+              ('term', 'term_en'), ('explain', 'explain_en'),
+              ('text', 'text_en'),
+              ('analogy_title', 'analogy_title_en'), ('analogy_text', 'analogy_text_en'),
+              ('lesson', 'lesson_en'), ('diff', 'diff_en'),
+          ]
+
+          total_issues = 0
+          for f in sorted(glob.glob('data/*.json'), reverse=True):
+              with open(f, 'r', encoding='utf-8') as fp:
+                  data = json.load(fp)
+              date_str = data.get('date', f)
+              issues = []
+
+              def check_item(item, context):
+                  for zh_field, en_field in field_pairs:
+                      if zh_field in item:
+                          if en_field not in item or not item.get(en_field):
+                              issues.append(f'{context}: missing {en_field}')
+                          elif item.get(en_field) and chinese_re.search(str(item[en_field])):
+                              issues.append(f'{context}: {en_field} contains Chinese characters')
+
+              for i, s in enumerate(data.get('stats', [])):
+                  check_item(s, f'[{date_str}] stats[{i}]')
+              for i, e in enumerate(data.get('events', [])):
+                  check_item(e, f'[{date_str}] events[{i}]')
+                  for j, tag in enumerate(e.get('tags', [])):
+                      if 'text' in tag and ('text_en' not in tag or not tag.get('text_en')):
+                          issues.append(f'[{date_str}] events[{i}].tags[{j}]: missing text_en')
+              for i, c in enumerate(data.get('chains', [])):
+                  check_item(c, f'[{date_str}] chains[{i}]')
+                  for j, node in enumerate(c.get('nodes', [])):
+                      check_item(node, f'[{date_str}] chains[{i}].nodes[{j}]')
+                  for j, jargon in enumerate(c.get('jargon', [])):
+                      check_item(jargon, f'[{date_str}] chains[{i}].jargon[{j}]')
+              for i, v in enumerate(data.get('verifications', [])):
+                  check_item(v, f'[{date_str}] verifications[{i}]')
+                  if 'vars' in v and ('vars_en' not in v or len(v.get('vars_en', [])) != len(v['vars'])):
+                      issues.append(f'[{date_str}] verifications[{i}]: vars_en missing or count mismatch')
+
+              if issues:
+                  total_issues += len(issues)
+                  print(f'\n⚠️ [{date_str}] {len(issues)} issues:')
+                  for issue in issues[:5]:
+                      print(f'  - {issue}')
+                  if len(issues) > 5:
+                      print(f'  ... and {len(issues) - 5} more')
+
+          if total_issues == 0:
+              print('\n✅ 双语校验通过：所有英文字段完整且无中文混入')
+          else:
+              print(f'\n⚠️ 共发现 {total_issues} 个双语问题')
+              print('构建继续进行，但英文版本可能存在质量问题')
+          "
 
       - name: 上传产物
         uses: actions/upload-pages-artifact@v3

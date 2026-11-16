@@ -3,7 +3,7 @@
 每日市场地图 - 自动更新脚本 (完整版)
 
 数据流：
-  华尔街见闻 API → 原始快讯 → LLM 三层漏斗筛选 → 结构化 JSON → 网站自动展示
+  华尔街见闻 API → 原始快讯 → LLM 三层漏斗筛选 → 中英双语结构化 JSON → 网站自动展示
 
 使用方法：
   python3 update_daily.py                        # 抓取今天的数据
@@ -11,12 +11,13 @@
   python3 update_daily.py --dry-run              # 只抓取不保存（测试用）
   python3 update_daily.py --source rss           # 用 RSS 源而非 API
 
-crontab（每个交易日13:00自动执行）：
-  0 13 * * 1-5 cd /path/to/market-map-site && python3 scripts/update_daily.py >> logs/update.log 2>&1
+crontab（每半小时自动执行）：
+  0,30 * * * * cd /path/to/market-map-site && python3 scripts/update_daily.py >> logs/update.log 2>&1
 
 环境变量：
   LLM_API_KEY    - LLM API 密钥（用于三层漏斗筛选，可选，无则用规则筛选）
   LLM_API_BASE   - LLM API 地址（默认使用公开API）
+  LLM_MODEL      - LLM 模型名称（默认 gpt-4o）
 """
 
 import json
@@ -38,6 +39,7 @@ os.makedirs(DATA_DIR, exist_ok=True)
 os.makedirs(LOG_DIR, exist_ok=True)
 
 WEEKDAYS = ["星期一", "星期二", "星期三", "星期四", "星期五", "星期六", "星期日"]
+WEEKDAYS_EN = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 
 # 华尔街见闻 API 端点
 WSCN_API = "https://api.wallstreetcn.com/apiv1/content/lives?channel=global-channel&limit=200"
@@ -73,6 +75,53 @@ NOISE_KEYWORDS = [
     "广告", "推广", "赞助", "活动", "报名", "直播预约",
     "课程", "会员", "订阅", "下载APP",
 ]
+
+# ============================================================
+# 中英双语翻译辅助
+# ============================================================
+
+# 常见金融术语中英对照表（用于规则兜底方案的自动翻译）
+FINANCIAL_GLOSSARY = {
+    # 宏观
+    "美联储": "the Fed", "加息": "rate hike", "降息": "rate cut",
+    "通胀": "inflation", "通胀扩散": "broadening inflation",
+    "收益率": "yield", "美债": "US Treasuries", "国债": "government bonds",
+    "美元指数": "Dollar Index", "日元": "JPY", "人民币": "CNY",
+    "工业增加值": "industrial output", "社零": "retail sales",
+    "固定资产投资": "fixed asset investment", "地产投资": "property investment",
+    "财政赤字": "fiscal deficit", "PPI": "PPI", "CPI": "CPI",
+    # 资产
+    "英伟达": "Nvidia", "特斯拉": "Tesla", "苹果": "Apple",
+    "微软": "Microsoft", "亚马逊": "Amazon", "谷歌": "Google",
+    "半导体": "semiconductors", "芯片": "chips",
+    "原油": "crude oil", "布油": "Brent crude", "黄金": "gold",
+    "比特币": "Bitcoin", "创业板": "ChiNext", "港股": "HK stocks",
+    "A股": "A-shares", "纳指": "Nasdaq", "标普": "S&P",
+    # 方向
+    "新高": "new high", "新低": "new low",
+    "飙升": "surge", "暴跌": "plunge", "大涨": "rally", "大跌": "selloff",
+    # 其他
+    "SpaceX": "SpaceX", "OpenAI": "OpenAI", "生物科技": "biotech",
+    "创新药": "innovative drugs", "防御切换": "defensive rotation",
+    "估值重估": "re-rating", "估值泡沫": "valuation bubble",
+    "风险偏好": "risk appetite", "流动性": "liquidity",
+    "实际利率": "real interest rate", "供应过剩": "supply surplus",
+}
+
+
+def translate_text(text):
+    """
+    基础规则翻译：用术语词典做简单替换。
+    仅用于规则兜底方案，质量不如 LLM 翻译。
+    """
+    if not text:
+        return ""
+    result = text
+    # 按词长度降序替换，避免短词覆盖长词
+    sorted_terms = sorted(FINANCIAL_GLOSSARY.items(), key=lambda x: len(x[0]), reverse=True)
+    for zh, en in sorted_terms:
+        result = result.replace(zh, en)
+    return result
 
 
 def log(msg):
@@ -170,8 +219,6 @@ def fetch_via_page():
         resp = requests.get(WSCN_PAGE, headers=headers, timeout=30)
         resp.raise_for_status()
 
-        # 华尔街见闻是 SPA，数据通过 JSON 注入
-        # 尝试从页面中提取内嵌的 JSON 数据
         text = resp.text
         headlines = []
 
@@ -309,63 +356,88 @@ def funnel_filter(headlines):
 
 
 # ============================================================
-# 第三层：LLM 结构化（可选，需要 API key）
+# 第三层：LLM 结构化（双语输出，需要 API key）
 # ============================================================
 
-LLM_PROMPT = """你是一个金融市场分析师。请从以下快讯中提取信息，生成每日市场地图。
+LLM_PROMPT = """You are a professional financial market analyst. Extract information from the following flash news headlines and generate a daily market map in BOTH Chinese and English.
 
-快讯列表：
+Flash news headlines:
 {headlines}
 
-请按以下JSON格式输出（严格输出JSON，不要其他文字）：
+Output strictly in the following JSON format (output JSON only, no other text):
 {{
   "stats": [
-    {{"label": "资产名称（含时间范围）", "value": "变动数值", "change": "一句话说明", "dir": "up或down"}}
+    {{
+      "label": "资产名称（含时间范围，中文）",
+      "label_en": "Asset name (with time range, English)",
+      "value": "变动数值",
+      "change": "一句话说明（中文）",
+      "change_en": "One-sentence description (English)",
+      "dir": "up or down"
+    }}
   ],
   "events": [
     {{
-      "tags": [{{"type": "ai/fed/energy/china/bio/macro", "text": "标签文字"}}],
-      "event": "事件描述（一句话说清楚发生了什么）",
-      "assets": "影响的资产（逗号分隔）",
+      "tags": [{{"type": "ai/fed/energy/china/bio/macro", "text": "标签（中文）", "text_en": "Tag (English)"}}],
+      "event": "事件描述（中文，一句话说清楚发生了什么）",
+      "event_en": "Event description (English, one clear sentence)",
+      "assets": "影响的资产（中文，逗号分隔）",
+      "assets_en": "Affected assets (English, comma-separated)",
       "dir": "up/down/neutral/split",
-      "logic": "传导逻辑（A→B→C 格式）"
+      "logic": "传导逻辑（中文，A→B→C 格式）",
+      "logic_en": "Transmission logic (English, A→B→C format)"
     }}
   ],
   "chains": [
     {{
-      "title": "因果链标题（① 编号 + 简述）",
-      "status": "consensus或unverified",
+      "title": "因果链标题（中文，① 编号 + 简述）",
+      "title_en": "Causal chain title (English, numbered)",
+      "status": "consensus or unverified",
       "nodes": [
-        {{"text": "节点描述<br>第二行", "type": "trigger/normal/result-up/result-down"}}
+        {{"text": "节点描述（中文）<br>第二行", "text_en": "Node description (English)<br>line 2", "type": "trigger/normal/result-up/result-down"}}
       ],
       "jargon": [
-        {{"term": "术语名称", "explain": "白话解释"}}
+        {{
+          "term": "术语名称（中文）",
+          "term_en": "Term (English)",
+          "explain": "白话解释（中文）",
+          "explain_en": "Plain-language explanation (English)"
+        }}
       ]
     }}
   ],
   "verifications": [
     {{
-      "title": "待验证问题",
-      "vars": ["需盯变量1", "需盯变量2", "需盯变量3", "需盯变量4"],
-      "analogy_title": "历史类比标题",
-      "analogy_text": "历史类比描述",
-      "lesson": "教训（红字）",
-      "diff": "关键区别（绿字）"
+      "title": "待验证问题（中文）",
+      "title_en": "Question to verify (English)",
+      "vars": ["需盯变量1（中文）", "需盯变量2（中文）", "需盯变量3（中文）", "需盯变量4（中文）"],
+      "vars_en": ["Variable to watch 1 (English)", "Variable to watch 2 (English)", "Variable to watch 3 (English)", "Variable to watch 4 (English)"],
+      "analogy_title": "历史类比标题（中文）",
+      "analogy_title_en": "Historical analogy title (English)",
+      "analogy_text": "历史类比描述（中文）",
+      "analogy_text_en": "Historical analogy description (English)",
+      "lesson": "教训（中文）",
+      "lesson_en": "Lesson (English)",
+      "diff": "关键区别（中文）",
+      "diff_en": "Key difference (English)"
     }}
   ]
 }}
 
-要求：
-1. stats 保留 5-8 个最重要的市场数据
-2. events 保留 8-12 条核心要闻
-3. chains 提取 5-8 条因果链，按重要性排序
-4. verifications 生成 3-5 条待验证问题
-5. 节点text中用 <br> 换行
-6. 严格输出合法 JSON"""
+Requirements:
+1. stats: keep 5-8 most important market data points
+2. events: keep 8-12 core headlines
+3. chains: extract 5-8 causal chains, sorted by importance
+4. verifications: generate 3-5 watchlist items
+5. Use <br> for line breaks in node text
+6. CRITICAL: Every *_en field MUST be in pure English with NO Chinese characters whatsoever
+7. CRITICAL: Every Chinese field MUST have a corresponding *_en English field
+8. English must use proper financial terminology (e.g., "re-rating" not "haircut", "rate hike" not "interest increase")
+9. Output strictly valid JSON"""
 
 
 def llm_structure(headlines):
-    """用 LLM 对筛选后的快讯进行结构化"""
+    """用 LLM 对筛选后的快讯进行中英双语结构化"""
     api_key = os.environ.get("LLM_API_KEY", "")
     api_base = os.environ.get("LLM_API_BASE", "https://api.openai.com/v1")
 
@@ -402,19 +474,138 @@ def llm_structure(headlines):
         content = result["choices"][0]["message"]["content"]
         structured = json.loads(content)
         log(f"[LLM] 结构化完成: {len(structured.get('events',[]))} 条事件, {len(structured.get('chains',[]))} 条因果链")
+
+        # 验证双语完整性
+        issues = validate_bilingual(structured)
+        if issues:
+            log(f"[LLM] ⚠️ 双语校验发现 {len(issues)} 个问题:")
+            for issue in issues[:5]:
+                log(f"  - {issue}")
+            # 尝试修复缺失的英文字段
+            structured = auto_fill_english(structured)
+            log("[LLM] 已自动补充缺失的英文字段")
+
         return structured
     except Exception as e:
         log(f"[LLM] 请求失败: {e}")
         return None
 
 
+def validate_bilingual(data):
+    """
+    校验数据中每个中文字段是否有对应的英文字段。
+    返回问题列表（空列表表示无问题）。
+    """
+    issues = []
+    chinese_re = re.compile(r'[\u4e00-\u9fff]')
+
+    # 需要成对出现的字段
+    field_pairs = [
+        ("label", "label_en"), ("change", "change_en"),
+        ("event", "event_en"), ("assets", "assets_en"), ("logic", "logic_en"),
+        ("title", "title_en"),
+        ("term", "term_en"), ("explain", "explain_en"),
+        ("text", "text_en"),
+        ("analogy_title", "analogy_title_en"), ("analogy_text", "analogy_text_en"),
+        ("lesson", "lesson_en"), ("diff", "diff_en"),
+    ]
+
+    def check_item(item, context):
+        for zh_field, en_field in field_pairs:
+            if zh_field in item:
+                # 检查英文字段是否存在
+                if en_field not in item or not item[en_field]:
+                    issues.append(f"{context}: 缺少 {en_field}")
+                # 检查英文字段中是否有中文字符
+                elif en_field in item and item[en_field] and chinese_re.search(item[en_field]):
+                    issues.append(f"{context}: {en_field} 中包含中文字符")
+
+    # 检查 stats
+    for i, s in enumerate(data.get("stats", [])):
+        check_item(s, f"stats[{i}]")
+
+    # 检查 events
+    for i, e in enumerate(data.get("events", [])):
+        check_item(e, f"events[{i}]")
+        # 检查 tags
+        for j, tag in enumerate(e.get("tags", [])):
+            if "text" in tag and ("text_en" not in tag or not tag["text_en"]):
+                issues.append(f"events[{i}].tags[{j}]: 缺少 text_en")
+
+    # 检查 chains
+    for i, c in enumerate(data.get("chains", [])):
+        check_item(c, f"chains[{i}]")
+        for j, node in enumerate(c.get("nodes", [])):
+            check_item(node, f"chains[{i}].nodes[{j}]")
+        for j, jargon in enumerate(c.get("jargon", [])):
+            check_item(jargon, f"chains[{i}].jargon[{j}]")
+
+    # 检查 verifications
+    for i, v in enumerate(data.get("verifications", [])):
+        check_item(v, f"verifications[{i}]")
+        # 检查 vars_en
+        if "vars" in v and ("vars_en" not in v or len(v.get("vars_en", [])) != len(v["vars"])):
+            issues.append(f"verifications[{i}]: vars_en 缺失或数量不匹配")
+
+    return issues
+
+
+def auto_fill_english(data):
+    """
+    自动补充缺失的英文字段（使用规则翻译）。
+    质量不如 LLM 翻译，但保证不会缺失。
+    """
+    chinese_re = re.compile(r'[\u4e00-\u9fff]')
+    field_pairs = [
+        ("label", "label_en"), ("change", "change_en"),
+        ("event", "event_en"), ("assets", "assets_en"), ("logic", "logic_en"),
+        ("title", "title_en"),
+        ("term", "term_en"), ("explain", "explain_en"),
+        ("text", "text_en"),
+        ("analogy_title", "analogy_title_en"), ("analogy_text", "analogy_text_en"),
+        ("lesson", "lesson_en"), ("diff", "diff_en"),
+    ]
+
+    def fill_item(item):
+        for zh_field, en_field in field_pairs:
+            if zh_field in item:
+                if en_field not in item or not item[en_field]:
+                    # 用规则翻译补充
+                    item[en_field] = translate_text(item[zh_field])
+                elif chinese_re.search(item[en_field]):
+                    # 英文字段中有中文，用规则翻译覆盖
+                    item[en_field] = translate_text(item[en_field])
+
+    for s in data.get("stats", []):
+        fill_item(s)
+
+    for e in data.get("events", []):
+        fill_item(e)
+        for tag in e.get("tags", []):
+            if "text" in tag and ("text_en" not in tag or not tag["text_en"]):
+                tag["text_en"] = translate_text(tag["text"])
+
+    for c in data.get("chains", []):
+        fill_item(c)
+        for node in c.get("nodes", []):
+            fill_item(node)
+        for jargon in c.get("jargon", []):
+            fill_item(jargon)
+
+    for v in data.get("verifications", []):
+        fill_item(v)
+        if "vars" in v:
+            if "vars_en" not in v or len(v.get("vars_en", [])) != len(v["vars"]):
+                v["vars_en"] = [translate_text(var) for var in v["vars"]]
+
+    return data
+
+
 def rule_based_structure(headlines):
     """
     无 LLM 时的规则兜底方案：
-    从快讯中提取关键信息，生成基础结构化数据
+    从快讯中提取关键信息，生成基础中英双语结构化数据
     """
-    import re
-
     events = []
     seen_topics = set()
 
@@ -436,26 +627,27 @@ def rule_based_structure(headlines):
         # 判断标签
         tags = []
         if any(kw in text for kw in ["AI", "芯片", "英伟达", "半导体", "人工智能", "OpenAI", "数据中心"]):
-            tags.append({"type": "ai", "text": "AI"})
+            tags.append({"type": "ai", "text": "AI", "text_en": "AI"})
         if any(kw in text for kw in ["美联储", "央行", "加息", "降息", "利率", "PPI", "CPI", "通胀"]):
-            tags.append({"type": "fed", "text": "央行"})
+            tags.append({"type": "fed", "text": "央行", "text_en": "Central Bank"})
         if any(kw in text for kw in ["原油", "油价", "布油", "OPEC", "能源"]):
-            tags.append({"type": "energy", "text": "能源"})
+            tags.append({"type": "energy", "text": "能源", "text_en": "Energy"})
         if any(kw in text for kw in ["中国", "A股", "社零", "工业增加值", "地产", "统计局", "创业板", "港股"]):
-            tags.append({"type": "china", "text": "中国"})
+            tags.append({"type": "china", "text": "中国", "text_en": "China"})
         if any(kw in text for kw in ["生物科技", "创新药", "医药", "临床"]):
-            tags.append({"type": "bio", "text": "生物科技"})
+            tags.append({"type": "bio", "text": "生物科技", "text_en": "Biotech"})
         if any(kw in text for kw in ["赤字", "财政", "国债", "发债"]):
-            tags.append({"type": "macro", "text": "财政"})
+            tags.append({"type": "macro", "text": "财政", "text_en": "Fiscal"})
         if not tags:
-            tags.append({"type": "macro", "text": "宏观"})
+            tags.append({"type": "macro", "text": "宏观", "text_en": "Macro"})
 
         # 提取数字
         numbers = re.findall(r'(\d+\.?\d*%?)', text)
-        # 简化事件描述（取前120字符）
+        # 简化事件描述
         event_text = text[:150] + ("..." if len(text) > 150 else "")
+        event_en = translate_text(event_text)
 
-        # 简单去重：用前30字符做topic hash
+        # 简单去重
         topic = text[:30]
         if topic in seen_topics:
             continue
@@ -464,9 +656,12 @@ def rule_based_structure(headlines):
         events.append({
             "tags": tags,
             "event": event_text,
+            "event_en": event_en,
             "assets": "",
+            "assets_en": "",
             "dir": dir,
             "logic": "",
+            "logic_en": "",
         })
 
         if len(events) >= 10:
@@ -477,7 +672,6 @@ def rule_based_structure(headlines):
     stat_seen = set()
     for h in headlines:
         text = h["text"]
-        # 找 "XX涨/跌XX%" 或 "XX新高/新低" 等模式
         patterns = [
             r'([\u4e00-\u9fa5\w]{2,10})[，,]?\s*(?:涨|跌|升|降)([\d.]+%)',
             r'([\u4e00-\u9fa5\w]{2,10}).*?创.*?(?:新高|新低)',
@@ -500,8 +694,10 @@ def rule_based_structure(headlines):
 
                 stats.append({
                     "label": label,
+                    "label_en": translate_text(label),
                     "value": value or ("新高" if dir == "up" else "新低"),
                     "change": change,
+                    "change_en": translate_text(change),
                     "dir": dir,
                 })
                 if len(stats) >= 6:
@@ -524,15 +720,16 @@ def rule_based_structure(headlines):
 # ============================================================
 
 def generate_data_file(target_date=None, source="auto", dry_run=False):
-    """生成指定日期的数据文件"""
+    """生成指定日期的数据文件（中英双语）"""
     if target_date is None:
         target_date = date.today().isoformat()
 
     weekday_idx = datetime.strptime(target_date, "%Y-%m-%d").weekday()
     weekday = WEEKDAYS[weekday_idx]
+    weekday_en = WEEKDAYS_EN[weekday_idx]
 
     log(f"{'='*50}")
-    log(f"开始生成 {target_date} ({weekday}) 的市场地图数据")
+    log(f"开始生成 {target_date} ({weekday} / {weekday_en}) 的市场地图数据")
     log(f"{'='*50}")
 
     # Step 1: 抓取
@@ -553,10 +750,27 @@ def generate_data_file(target_date=None, source="auto", dry_run=False):
         log("LLM 不可用，使用规则兜底方案")
         structured = rule_based_structure(filtered)
 
-    # Step 4: 组装最终数据
+    # Step 4: 最终双语校验（确保万无一失）
+    issues = validate_bilingual(structured)
+    if issues:
+        log(f"[校验] ⚠️ 发现 {len(issues)} 个双语问题，自动修复...")
+        structured = auto_fill_english(structured)
+        # 再次校验
+        remaining = validate_bilingual(structured)
+        if remaining:
+            log(f"[校验] 仍有 {len(remaining)} 个问题无法自动修复:")
+            for r in remaining[:5]:
+                log(f"  - {r}")
+        else:
+            log("[校验] ✅ 所有问题已修复")
+    else:
+        log("[校验] ✅ 双语数据完整，无问题")
+
+    # Step 5: 组装最终数据
     data = {
         "date": target_date,
         "weekday": weekday,
+        "weekday_en": weekday_en,
         "crawl_time": f"约{datetime.now().strftime('%H:%M')}（北京时间）",
         "source": "wallstreetcn.com/live/global",
         "filter_result": f"{len(structured.get('events',[]))}条核心要闻 / {len(structured.get('chains',[]))}条因果链",
@@ -571,7 +785,7 @@ def generate_data_file(target_date=None, source="auto", dry_run=False):
         print(json.dumps(data, ensure_ascii=False, indent=2)[:1000])
         return True
 
-    # Step 5: 保存
+    # Step 6: 保存
     filepath = os.path.join(DATA_DIR, f"{target_date}.json")
     with open(filepath, "w", encoding="utf-8") as f:
         json.dump(data, f, ensure_ascii=False, indent=2)
@@ -583,7 +797,7 @@ def generate_data_file(target_date=None, source="auto", dry_run=False):
 
 
 def main():
-    parser = argparse.ArgumentParser(description="每日市场地图自动更新")
+    parser = argparse.ArgumentParser(description="每日市场地图自动更新（中英双语）")
     parser.add_argument("--date", type=str, default=None, help="指定日期 (YYYY-MM-DD)")
     parser.add_argument("--source", type=str, default="auto",
                         choices=["auto", "api", "rss", "page"],
