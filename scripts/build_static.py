@@ -394,10 +394,10 @@ HTML_TEMPLATE = '''<!DOCTYPE html>
     <div class="topbar-date">{{ date }} <span data-lang="zh">{{ weekday_zh }}</span><span data-lang="en">{{ weekday_en }}</span></div>
   </div>
   <div class="topbar-nav">
-    <a href="/"><span data-lang="zh">今日</span><span data-lang="en">Today</span></a>
-    <a href="/history.html"><span data-lang="zh">历史归档</span><span data-lang="en">Archive</span></a>
-    <a href="/rss.xml">RSS</a>
-    <a href="/api/latest.json">JSON API</a>
+    <a href="{{ base }}index.html"><span data-lang="zh">今日</span><span data-lang="en">Today</span></a>
+    <a href="{{ base }}history.html"><span data-lang="zh">历史归档</span><span data-lang="en">Archive</span></a>
+    <a href="{{ base }}rss.xml">RSS</a>
+    <a href="{{ base }}api/latest.json">JSON API</a>
     <button class="lang-toggle" onclick="toggleLang()">EN</button>
     <button class="icon-btn" onclick="toggleTheme()">🌙/☀️</button>
   </div>
@@ -625,8 +625,10 @@ def render_verifications(verifications):
     return html
 
 
-def build_page(data):
-    """渲染单日数据为 HTML（双语）"""
+def build_page(data, base=""):
+    """渲染单日数据为 HTML（双语）
+    base: 相对路径前缀，首页为 ""，子目录页面为 "../"
+    """
     tpl = HTML_TEMPLATE
     weekday_zh = data.get("weekday", "")
     weekday_en = translate_weekday(weekday_zh)
@@ -644,6 +646,7 @@ def build_page(data):
         "{{ events_html }}": render_events(data.get("events", [])),
         "{{ chains_html }}": render_chains(data.get("chains", [])),
         "{{ verifications_html }}": render_verifications(data.get("verifications", [])),
+        "{{ base }}": base,
     }
     for k, v in replacements.items():
         tpl = tpl.replace(k, v)
@@ -654,7 +657,7 @@ def build_history(dates):
     """构建历史归档页（双语）"""
     items = ""
     for d in dates:
-        items += f'<li><a href="/date/{d}.html">📅 {d}</a></li>\n'
+        items += f'<li><a href="date/{d}.html">📅 {d}</a></li>\n'
 
     return f'''<!DOCTYPE html>
 <html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -677,7 +680,7 @@ def build_history(dates):
   .lang-toggle {{ background:var(--card); border:1px solid var(--border); border-radius:6px; padding:5px 12px; cursor:pointer; font-size:13px; font-weight:600; color:var(--accent); }}
 </style></head><body class="lang-zh"><div class="container">
 <div class="nav">
-  <a href="/"><span data-lang="zh">← 返回今日</span><span data-lang="en">← Back to Today</span></a>
+  <a href="index.html"><span data-lang="zh">← 返回今日</span><span data-lang="en">← Back to Today</span></a>
   <button class="lang-toggle" onclick="toggleLang()">EN</button>
 </div>
 <h1><span data-lang="zh">📅 历史归档</span><span data-lang="en">📅 Archive</span></h1>
@@ -768,14 +771,14 @@ def build_all():
     # 1. 构建首页（最新一期）
     latest_date = dates[0]
     latest_data = all_data[latest_date]
-    index_html = build_page(latest_data)
+    index_html = build_page(latest_data, base="")
     with open(os.path.join(OUTPUT_DIR, "index.html"), "w", encoding="utf-8") as f:
         f.write(index_html)
     print(f"✅ 首页 → index.html ({latest_date})")
 
-    # 2. 构建每日页面
+    # 2. 构建每日页面（子目录，需要 ../ 前缀）
     for d, data in all_data.items():
-        page_html = build_page(data)
+        page_html = build_page(data, base="../")
         with open(os.path.join(OUTPUT_DIR, "date", f"{d}.html"), "w", encoding="utf-8") as f:
             f.write(page_html)
         print(f"✅ 日期页 → date/{d}.html")
