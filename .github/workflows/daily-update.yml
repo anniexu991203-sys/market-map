@@ -1,0 +1,42 @@
+name: 每日市场地图 - 自动抓取并部署
+
+on:
+  schedule:
+    # 每周一到周五 UTC 05:00 = 北京时间 13:00
+    - cron: '0 5 * * 1-5'
+  workflow_dispatch: # 支持手动触发
+
+jobs:
+  update-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+
+      - name: 安装 Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: 安装依赖
+        run: |
+          pip install requests beautifulsoup4 lxml
+
+      - name: 抓取今日数据
+        env:
+          LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
+        run: |
+          python scripts/update_daily.py --date $(date -u -d "+8 hours" +%Y-%m-%d) || echo "抓取失败，保留旧数据"
+
+      - name: 构建静态网站
+        run: |
+          python scripts/build_static.py
+
+      - name: 部署到 Cloudflare Pages
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: market-map
+          directory: public
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}

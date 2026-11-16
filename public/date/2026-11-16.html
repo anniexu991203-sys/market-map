@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日市场地图 · 2026-11-16</title>
+<meta name="description" content="华尔街见闻要闻三层漏斗筛选 → 四列表 → 因果链 → 待验证">
+<style>
+  :root {
+    --bg: #0a0e17;
+    --card: #131826;
+    --card-2: #1a2030;
+    --border: #2a3344;
+    --text: #e8ecf1;
+    --text-dim: #8b95a7;
+    --accent: #d4af37;
+    --accent-2: #4a9eff;
+    --green: #26a69a;
+    --red: #ef5350;
+    --orange: #ff9800;
+    --purple: #ab47bc;
+  }
+
+  [data-theme="light"] {
+    --bg: #f5f7fa;
+    --card: #ffffff;
+    --card-2: #eef1f5;
+    --border: #dde3ed;
+    --text: #1a2030;
+    --text-dim: #5a6478;
+    --accent: #b8860b;
+    --accent-2: #2563eb;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Segoe UI", Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    transition: background 0.3s, color 0.3s;
+  }
+
+  .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+
+  /* Top bar */
+  .topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 20px;
+    background: var(--card);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    flex-wrap: wrap;
+  }
+  .topbar-left { display: flex; align-items: center; gap: 14px; }
+  .topbar-logo { font-size: 22px; font-weight: 700; color: var(--accent); }
+  .topbar-date { color: var(--text-dim); font-size: 14px; }
+  .topbar-nav { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+  .topbar-nav a {
+    color: var(--text-dim);
+    text-decoration: none;
+    font-size: 13px;
+    padding: 5px 12px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    transition: all 0.2s;
+  }
+  .topbar-nav a:hover { color: var(--accent); border-color: var(--accent); }
+  .theme-toggle {
+    background: var(--card-2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 5px 12px;
+    cursor: pointer;
+    font-size: 14px;
+    color: var(--text);
+    transition: all 0.2s;
+  }
+  .theme-toggle:hover { border-color: var(--accent); }
+
+  /* Stats */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+    margin: 20px 0;
+  }
+  .stat-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px;
+    text-align: center;
+  }
+  .stat-card .stat-label { font-size: 12px; color: var(--text-dim); margin-bottom: 6px; }
+  .stat-card .stat-value { font-size: 28px; font-weight: 700; }
+  .stat-card .stat-change { font-size: 11px; color: var(--text-dim); margin-top: 4px; }
+  .stat-up { color: var(--red); }
+  .stat-down { color: var(--green); }
+  .stat-neutral { color: var(--text-dim); }
+
+  /* Section */
+  .section { margin: 30px 0; }
+  .section-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+
+  /* Event card */
+  .event-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 12px;
+  }
+  .event-tags { display: flex; gap: 8px; margin-bottom: 10px; flex-wrap: wrap; }
+  .tag {
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 600;
+  }
+  .tag-ai { background: rgba(74,158,255,0.15); color: var(--accent-2); }
+  .tag-fed { background: rgba(212,175,55,0.15); color: var(--accent); }
+  .tag-energy { background: rgba(255,152,0,0.15); color: var(--orange); }
+  .tag-china { background: rgba(239,83,80,0.15); color: var(--red); }
+  .tag-bio { background: rgba(171,71,188,0.15); color: var(--purple); }
+  .tag-macro { background: rgba(38,166,154,0.15); color: var(--green); }
+
+  .event-text { font-size: 15px; margin-bottom: 10px; }
+  .event-assets { font-size: 13px; color: var(--text-dim); margin-bottom: 8px; }
+  .event-assets strong { color: var(--accent-2); }
+  .event-logic {
+    font-size: 13px;
+    color: var(--text-dim);
+    padding: 10px;
+    background: var(--card-2);
+    border-radius: 6px;
+    border-left: 3px solid var(--accent);
+  }
+  .dir-arrow { font-size: 18px; font-weight: 700; }
+  .dir-up { color: var(--red); }
+  .dir-down { color: var(--green); }
+  .dir-split { color: var(--orange); }
+  .dir-neutral { color: var(--text-dim); }
+
+  /* Chain */
+  .chain-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 16px;
+  }
+  .chain-title { font-size: 16px; font-weight: 700; margin-bottom: 14px; }
+  .chain-status {
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-left: 8px;
+    vertical-align: middle;
+  }
+  .status-consensus { background: rgba(38,166,154,0.15); color: var(--green); }
+  .status-unverified { background: rgba(255,152,0,0.15); color: var(--orange); }
+
+  .flow-nodes {
+    display: flex;
+    align-items: stretch;
+    gap: 4px;
+    flex-wrap: wrap;
+    margin-bottom: 14px;
+  }
+  .flow-node {
+    flex: 1;
+    min-width: 120px;
+    background: var(--card-2);
+    border-radius: 8px;
+    padding: 12px 8px;
+    text-align: center;
+    font-size: 12px;
+    position: relative;
+  }
+  .flow-node.trigger { border: 2px solid var(--accent); }
+  .flow-node.result-down { border: 2px solid var(--green); }
+  .flow-node.result-up { border: 2px solid var(--red); }
+  .flow-arrow {
+    display: flex;
+    align-items: center;
+    color: var(--text-dim);
+    font-size: 18px;
+  }
+
+  .jargon-list { margin-top: 10px; }
+  .jargon-item {
+    font-size: 13px;
+    margin-bottom: 8px;
+    padding: 8px 12px;
+    background: var(--card-2);
+    border-radius: 6px;
+  }
+  .jargon-term { color: var(--accent); font-weight: 600; }
+  .jargon-explain { color: var(--text-dim); }
+
+  /* Verify */
+  .verify-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 16px;
+  }
+  .verify-title { font-size: 15px; font-weight: 700; margin-bottom: 12px; }
+  .verify-list { list-style: none; margin-bottom: 12px; }
+  .verify-list li {
+    font-size: 13px;
+    color: var(--text-dim);
+    margin-bottom: 6px;
+    padding-left: 20px;
+    position: relative;
+  }
+  .verify-list li::before {
+    content: "☐";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+  }
+  .analogy {
+    font-size: 13px;
+    padding: 10px 12px;
+    background: var(--card-2);
+    border-radius: 6px;
+    border-left: 3px solid var(--purple);
+    margin-bottom: 8px;
+  }
+  .analogy strong { color: var(--purple); }
+  .lesson {
+    font-size: 13px;
+    color: var(--accent);
+    padding: 8px 12px;
+    background: rgba(212,175,55,0.08);
+    border-radius: 6px;
+    margin-bottom: 8px;
+  }
+  .diff {
+    font-size: 12px;
+    color: var(--text-dim);
+    padding: 8px 12px;
+    background: var(--card-2);
+    border-radius: 6px;
+  }
+
+  /* Share */
+  .share-bar {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+  }
+  .share-btn {
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 13px;
+    cursor: pointer;
+    border: 1px solid var(--border);
+    background: var(--card);
+    color: var(--text);
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+  .share-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+  /* Footer */
+  footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    color: var(--text-dim);
+    font-size: 12px;
+  }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .container { padding: 12px; }
+    .topbar { padding: 12px; }
+    .topbar-logo { font-size: 18px; }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .stat-card .stat-value { font-size: 22px; }
+    .flow-nodes { flex-direction: column; }
+    .flow-arrow { transform: rotate(90deg); justify-content: center; }
+    .event-card, .chain-card, .verify-card { padding: 14px; }
+    .section-title { font-size: 17px; }
+  }
+</style>
+</head>
+<body data-theme="dark">
+
+<div class="topbar">
+  <div class="topbar-left">
+    <div class="topbar-logo">📊 Macro Market Map</div>
+    <div class="topbar-date">2026-11-16 星期一</div>
+  </div>
+  <div class="topbar-nav">
+    <a href="/">今日</a>
+    <a href="/history.html">历史归档</a>
+    <a href="/rss.xml">RSS订阅</a>
+    <a href="/api/latest.json">JSON API</a>
+    <button class="theme-toggle" onclick="toggleTheme()">🌙/☀️</button>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="share-bar">
+    <a class="share-btn" href="https://twitter.com/intent/tweet?text=每日市场地图 2026-11-16" target="_blank">🐦 Twitter</a>
+    <a class="share-btn" href="https://service.weibo.com/share/share.php?title=每日市场地图 2026-11-16" target="_blank">📷 微博</a>
+    <button class="share-btn" onclick="copyLink()">🔗 复制链接</button>
+  </div>
+
+  <!-- Stats -->
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="stat-label">英伟达（上周累跌）</div>
+      <div class="stat-value stat-down">-13%</div>
+      <div class="stat-change">创一年半最大周跌</div>
+    </div>
+<div class="stat-card">
+      <div class="stat-label">布伦特原油（两周跌幅）</div>
+      <div class="stat-value stat-down">-19%</div>
+      <div class="stat-change">六年多最大同期跌幅</div>
+    </div>
+<div class="stat-card">
+      <div class="stat-label">2年期美债收益率（周升幅）</div>
+      <div class="stat-value stat-up">+33bp</div>
+      <div class="stat-change">两年最大周升幅</div>
+    </div>
+<div class="stat-card">
+      <div class="stat-label">美元指数</div>
+      <div class="stat-value stat-up">19个月新高</div>
+      <div class="stat-change">日元破160</div>
+    </div>
+<div class="stat-card">
+      <div class="stat-label">COMEX黄金（周跌）</div>
+      <div class="stat-value stat-down">-4.55%</div>
+      <div class="stat-change">半年最大周跌</div>
+    </div>
+<div class="stat-card">
+      <div class="stat-label">创业板指</div>
+      <div class="stat-value stat-down">-3.32%</div>
+      <div class="stat-change">成长股先塌</div>
+    </div>
+
+  </div>
+
+  <!-- Events -->
+  <div class="section">
+    <div class="section-title">📌 核心要闻（10条）</div>
+    <div class="event-card">
+      <div class="event-tags"><span class="tag tag-ai">AI</span><span class="tag tag-fed">政策</span></div>
+      <div class="event-text"><span class="dir-arrow dir-down">📉</span> 英伟达黄仁勋去职风波持续发酵；汇丰将英伟达评级下调至"持有"，目标价从$365→$170；文艺复兴科技Q3已砍仓99.7%</div>
+      <div class="event-assets"><strong>影响资产：</strong>英伟达、AMD、半导体板块、台湾加权指数、Arm</div>
+      <div class="event-logic">CEO不确定性→AI capex信心动摇→芯片股估值重估→台股传导（-5%）；黄仁勋盟友推动复职形成多空博弈</div>
+    </div>
+<div class="event-card">
+      <div class="event-tags"><span class="tag tag-ai">AI</span><span class="tag tag-fed">政策</span></div>
+      <div class="event-text"><span class="dir-arrow dir-split">⚖️</span> 特朗普政府将英伟达、亚马逊、微软、OpenAI、Anthropic等20+企业列入AI"国家领军企业"名单，获芯片出口快速审批</div>
+      <div class="event-assets"><strong>影响资产：</strong>AI芯片出口链、上榜企业、中美科技博弈</div>
+      <div class="event-logic">名单内企业获出口便利→利好上榜公司海外收入；但与黄仁勋反对芯片后门的立场冲突→政策与人事矛盾并存</div>
+    </div>
+<div class="event-card">
+      <div class="event-tags"><span class="tag tag-fed">央行</span></div>
+      <div class="event-text"><span class="dir-arrow dir-down">📉</span> 美联储半年度金融稳定报告：资产估值压力持续高位，AI资产价格与投资扩张或放大波动；芝加哥/波士顿联储主席同日警告通胀扩散</div>
+      <div class="event-assets"><strong>影响资产：</strong>美股估值、AI概念股、美债收益率</div>
+      <div class="event-logic">官方点名AI估值泡沫→市场风险偏好收缩→加息预期升温（12月+25bp概率高，+50bp概率15%）→科技股承压</div>
+    </div>
+<div class="event-card">
+      <div class="event-tags"><span class="tag tag-fed">央行</span></div>
+      <div class="event-text"><span class="dir-arrow dir-split">⚖️</span> 美国10月PPI同比6.5%（2022年11月以来最高），环比0.3%低于预期；财长贝森特称不应因能源冲击加息，与古尔斯比交锋</div>
+      <div class="event-assets"><strong>影响资产：</strong>美债、美元、加息预期</div>
+      <div class="event-logic">PPI低于预期→美债收益率短线回落；但同比仍创新高→加息预期未根本动摇；财长与联储官员公开分歧增加不确定性</div>
+    </div>
+<div class="event-card">
+      <div class="event-tags"><span class="tag tag-energy">能源</span></div>
+      <div class="event-text"><span class="dir-arrow dir-down">📉</span> 布油两周跌近19%创六年多最大同期跌幅；高盛预测2027年石油"大量过剩"；IEA称四季度全球石油转向供应过剩</div>
+      <div class="event-assets"><strong>影响资产：</strong>原油、能源股、黄金（避险需求减弱）</div>
+      <div class="event-logic">中东原油夺回亚洲市场+供应过剩预期→油价持续下行→通胀能源分项回落→但金价同步走弱（实际利率上行压制）</div>
+    </div>
+<div class="event-card">
+      <div class="event-tags"><span class="tag tag-fed">流动性</span></div>
+      <div class="event-text"><span class="dir-arrow dir-split">⚖️</span> 2年期美债收益率全周升33bp创两年最大周升幅；美元指数19个月新高；日元两个多月来首次跌破160；比特币一度跌破6.8万</div>
+      <div class="event-assets"><strong>影响资产：</strong>美债、美元、日元、新兴市场货币、比特币</div>
+      <div class="event-logic">加息预期飙升→美债抛售→美元走强→日元/新兴货币承压；强美元冲击全球流动性→风险资产暂难入场（美银Hartnett）</div>
+    </div>
+<div class="event-card">
+      <div class="event-tags"><span class="tag tag-china">中国</span></div>
+      <div class="event-text"><span class="dir-arrow dir-down">📉</span> 中国10月工业增加值同比放缓至4.8%、社零增0.4%（剔除汽车+2.5%）、地产开发投资同比-21.6%、固定资产投资-8.1%</div>
+      <div class="event-assets"><strong>影响资产：</strong>A股、港股、人民币、大宗商品需求</div>
+      <div class="event-logic">内需弱于预期+地产持续拖累→创业板-3.32%成长股先塌→银行股逆势新高（防御切换）；但信息服务业+20.5%显示结构分化</div>
+    </div>
+<div class="event-card">
+      <div class="event-tags"><span class="tag tag-bio">生物科技</span></div>
+      <div class="event-text"><span class="dir-arrow dir-down">📉</span> 康方生物盘中大跌逾20%：依沃西美国首次上市申请未获批；恒生生物科技指数-2.5%</div>
+      <div class="event-assets"><strong>影响资产：</strong>康方生物、港股生物科技、创新药ETF</div>
+      <div class="event-logic">单品出海受阻→市场质疑创新药国际化路径→板块情绪传染→生物科技整体杀估值</div>
+    </div>
+<div class="event-card">
+      <div class="event-tags"><span class="tag tag-macro">财政</span></div>
+      <div class="event-text"><span class="dir-arrow dir-neutral">➡️</span> 美国10月财政赤字4040亿创同期新高；过去12个月利息支出1.4万亿，占税收28.2%创历史新高</div>
+      <div class="event-assets"><strong>影响资产：</strong>美债信用、长期国债收益率、黄金（对冲财政风险）</div>
+      <div class="event-logic">赤字+利息刚性支出→发债需求上升→长期美债供给压力→但目前被强劲拍卖消化（贝森特强调买盘旺盛）</div>
+    </div>
+<div class="event-card">
+      <div class="event-tags"><span class="tag tag-ai">科技</span></div>
+      <div class="event-text"><span class="dir-arrow dir-up">📈</span> SpaceX-特斯拉合并谈判提速，最快12月宣布；星舰首次"双回收"测试（助推器失败、飞船回收待验证）；特斯拉开放Cybercab购买$29990</div>
+      <div class="event-assets"><strong>影响资产：</strong>特斯拉、SpaceX估值、自动驾驶概念</div>
+      <div class="event-logic">合并预期+完全复用里程碑→特斯拉盘中涨1.9%→若落地为史上最大并购→重塑AI+太空+出行估值框架</div>
+    </div>
+
+  </div>
+
+  <!-- Chains -->
+  <div class="section">
+    <div class="section-title">🔗 因果链逐条拆解（7条）</div>
+    <div class="chain-card">
+      <div class="chain-title">① 英伟达CEO危机 → AI硬件估值重估链 <span class="chain-status status-unverified">待验证</span></div>
+      <div class="flow-nodes"><div class="flow-node trigger">黄仁勋去职<br>CEO不确定性</div><div class="flow-arrow">→</div><div class="flow-node normal">5000亿AI融资<br>平台搁置</div><div class="flow-arrow">→</div><div class="flow-node normal">汇丰下调评级<br>$365→$170</div><div class="flow-arrow">→</div><div class="flow-node normal">文艺复兴等<br>机构砍仓99.7%</div><div class="flow-arrow">→</div><div class="flow-node result-down">英伟达周跌13%<br>台股-5%、AMD-9%</div></div>
+      <div class="jargon-list"><div class="jargon-item"><span class="jargon-term">CEO不确定性</span>：<span class="jargon-explain">市场不知道下一任掌门是谁、会不会改变AI芯片战略方向，所以先卖出避险。</span></div>
+<div class="jargon-item"><span class="jargon-term">5000亿AI融资平台</span>：<span class="jargon-explain">英伟达联合多家私募帮客户买GPU算力的"分期付款"方案，黄仁勋走了，兜底担保没人签了。</span></div>
+<div class="jargon-item"><span class="jargon-term">剩余价值支持协议（兜底比例）</span>：<span class="jargon-explain">客户用完GPU后英伟达承诺回购多少比例。英伟达只兜25%，博通兜72.5%，客户觉得英伟达不够大方。</span></div>
+<div class="jargon-item"><span class="jargon-term">13F文件</span>：<span class="jargon-explain">美国机构每季度公布持仓，文艺复兴在丑闻爆发前就已清仓，说明"聪明钱"提前嗅到风险。</span></div>
+</div>
+    </div>
+<div class="chain-card">
+      <div class="chain-title">② 美联储加息预期飙升 → 强美元冲击全球流动性链 <span class="chain-status status-consensus">市场共识</span></div>
+      <div class="flow-nodes"><div class="flow-node trigger">PPI同比6.5%<br>四年新高</div><div class="flow-arrow">→</div><div class="flow-node normal">联储官员<br>警告通胀扩散</div><div class="flow-arrow">→</div><div class="flow-node normal">12月加息预期<br>+25bp概率高</div><div class="flow-arrow">→</div><div class="flow-node normal">2年期美债<br>周升33bp</div><div class="flow-arrow">→</div><div class="flow-node result-up">美元19个月新高<br>日元破160</div></div>
+      <div class="jargon-list"><div class="jargon-item"><span class="jargon-term">PPI（生产者价格指数）</span>：<span class="jargon-explain">工厂出厂价格涨多少，是CPI的"上游预告片"。PPI涨意味着几个月后消费者物价可能跟着涨。</span></div>
+<div class="jargon-item"><span class="jargon-term">通胀扩散</span>：<span class="jargon-explain">以前只有油价涨，现在服务业、医疗、住房都在涨，说明通胀不是单一原因而是全面蔓延，更难治。</span></div>
+<div class="jargon-item"><span class="jargon-term">2年期美债收益率</span>：<span class="jargon-explain">最敏感反映"未来1-2年利率预期"的指标。它暴涨说明市场认为美联储还要加息。</span></div>
+<div class="jargon-item"><span class="jargon-term">实际利差</span>：<span class="jargon-explain">两国利率差减去通胀差。日本央行高田创提到市场开始看实际利差，意味着即使日本加息，如果美国通胀更高，日元照样跌。</span></div>
+</div>
+    </div>
+<div class="chain-card">
+      <div class="chain-title">③ 中东供应过剩预期 → 原油崩跌 → 黄金失锚链 <span class="chain-status status-consensus">市场共识</span></div>
+      <div class="flow-nodes"><div class="flow-node trigger">中东原油夺回<br>亚洲市场</div><div class="flow-arrow">→</div><div class="flow-node normal">IEA：四季度<br>供应过剩</div><div class="flow-arrow">→</div><div class="flow-node normal">高盛预测2027<br>大量过剩</div><div class="flow-arrow">→</div><div class="flow-node result-down">布油两周-19%<br>黄金周跌4.55%</div></div>
+      <div class="jargon-list"><div class="jargon-item"><span class="jargon-term">供应过剩</span>：<span class="jargon-explain">产油量超过消费量，多余石油只能存进油罐，价格自然下跌。</span></div>
+<div class="jargon-item"><span class="jargon-term">官方售价（OSP）</span>：<span class="jargon-explain">沙特等产油国每月公布给不同地区的原油报价。下调至六年低位=主动降价抢客户。</span></div>
+<div class="jargon-item"><span class="jargon-term">实际利率</span>：<span class="jargon-explain">名义利率减通胀预期。油价跌→通胀预期降→实际利率反而升→持有黄金的机会成本增加→金价跌。这就是为什么油价跌黄金也跌。</span></div>
+</div>
+    </div>
+<div class="chain-card">
+      <div class="chain-title">④ 美联储点名AI估值泡沫 → 科技股风险偏好收缩链 <span class="chain-status status-consensus">市场共识</span></div>
+      <div class="flow-nodes"><div class="flow-node trigger">金融稳定报告<br>点名AI估值</div><div class="flow-arrow">→</div><div class="flow-node normal">"超级智能预期"<br>推高股价</div><div class="flow-arrow">→</div><div class="flow-node normal">AI投资扩张<br>或放大波动</div><div class="flow-arrow">→</div><div class="flow-node result-down">芯片指数-3%<br>纳指反弹失利</div></div>
+      <div class="jargon-list"><div class="jargon-item"><span class="jargon-term">金融稳定报告</span>：<span class="jargon-explain">美联储每半年发布一次，专门找金融系统的"隐患"。这次把AI资产估值列为"持续高位脆弱性"，等于官方说"你们炒太高了"。</span></div>
+<div class="jargon-item"><span class="jargon-term">超级智能预期</span>：<span class="jargon-explain">市场认为AI很快会达到或超越人类智能水平，所以提前给AI公司天价估值。美联储认为这个预期可能过度乐观。</span></div>
+<div class="jargon-item"><span class="jargon-term">放大波动</span>：<span class="jargon-explain">AI公司投入巨资买芯片建数据中心，如果收入不及预期，资本开支变成沉没成本，股价跌幅会比普通公司更大。</span></div>
+</div>
+    </div>
+<div class="chain-card">
+      <div class="chain-title">⑤ 中国10月数据偏弱 → A股成长股杀跌 → 防御切换链 <span class="chain-status status-consensus">市场共识</span></div>
+      <div class="flow-nodes"><div class="flow-node trigger">工业增加值<br>放缓至4.8%</div><div class="flow-arrow">→</div><div class="flow-node normal">社零仅+0.4%<br>地产投资-21.6%</div><div class="flow-arrow">→</div><div class="flow-node normal">成长股杀估值<br>创业板-3.32%</div><div class="flow-arrow">→</div><div class="flow-node result-up">银行股创新高<br>恒指+0.8%（分化）</div></div>
+      <div class="jargon-list"><div class="jargon-item"><span class="jargon-term">社零（社会消费品零售总额）</span>：<span class="jargon-explain">老百姓花了多少钱买东西。+0.4%几乎零增长，剔除汽车后+2.5%说明汽车拖累严重。</span></div>
+<div class="jargon-item"><span class="jargon-term">错月因素</span>：<span class="jargon-explain">国家统计局解释，今年10月工作日比去年同期少，数据看起来差部分是"日历效应"不是真差。</span></div>
+<div class="jargon-item"><span class="jargon-term">防御切换</span>：<span class="jargon-explain">经济弱时资金从高风险成长股（科技、新能源）流向低风险高股息股（银行、公用事业），叫"防御"。</span></div>
+<div class="jargon-item"><span class="jargon-term">M2与M1剪刀差</span>：<span class="jargon-explain">M2是全部存款，M1是活期存款。差收窄说明活钱开始动起来，经济活跃度边际改善的微弱信号。</span></div>
+</div>
+    </div>
+<div class="chain-card">
+      <div class="chain-title">⑥ 特朗普AI"国家领军企业"名单 → 出口管制路线之争链 <span class="chain-status status-unverified">待验证</span></div>
+      <div class="flow-nodes"><div class="flow-node trigger">20+企业列入<br>AI领军名单</div><div class="flow-arrow">→</div><div class="flow-node normal">获芯片出口<br>快速审批</div><div class="flow-arrow">→</div><div class="flow-node normal">与黄仁勋反对<br>芯片后门冲突</div><div class="flow-arrow">→</div><div class="flow-node result-down">AI管制路线<br>不确定性上升</div></div>
+      <div class="jargon-list"><div class="jargon-item"><span class="jargon-term">国家领军企业</span>：<span class="jargon-explain">特朗普政府认证的"信得过"AI公司，卖芯片给海外客户时走绿色通道不用慢慢审批。</span></div>
+<div class="jargon-item"><span class="jargon-term">芯片后门/追踪功能</span>：<span class="jargon-explain">在芯片里装"定位追踪"，卖出去后能监控谁在用、用来干嘛。黄仁勋反对，Anthropic支持，这是路线之争的核心。</span></div>
+<div class="jargon-item"><span class="jargon-term">鲁比奥 vs Anthropic</span>：<span class="jargon-explain">鲁比奥涉嫌把CIA报告改写后泄露给媒体推动黄仁勋下台；Anthropic被指向记者提供爆料。两者都在推动更严格的芯片管制。</span></div>
+</div>
+    </div>
+<div class="chain-card">
+      <div class="chain-title">⑦ SpaceX-特斯拉合并 + 星舰复用 → 估值范式重塑链 <span class="chain-status status-unverified">待验证</span></div>
+      <div class="flow-nodes"><div class="flow-node trigger">合并谈判提速<br>最快12月宣布</div><div class="flow-arrow">→</div><div class="flow-node normal">星舰"双回收"<br>飞船回收待验证</div><div class="flow-arrow">→</div><div class="flow-node normal">完全复用<br>压低入轨成本</div><div class="flow-arrow">→</div><div class="flow-node result-up">特斯拉+1.9%<br>SpaceX万亿估值</div></div>
+      <div class="jargon-list"><div class="jargon-item"><span class="jargon-term">双回收</span>：<span class="jargon-explain">火箭发射后，助推器（下半截）和飞船（上半截）都要回收重复使用。这次助推器爆炸了，飞船回收待验证。</span></div>
+<div class="jargon-item"><span class="jargon-term">筷子夹飞船</span>：<span class="jargon-explain">用发射塔的机械臂像筷子一样夹住降落中的火箭/飞船，不用着陆腿，节省重量和成本。</span></div>
+<div class="jargon-item"><span class="jargon-term">完全复用</span>：<span class="jargon-explain">火箭每一部分都能回收再用，就像飞机一样。一旦实现，发射成本可能降低90%以上，是SpaceX万亿估值的核心逻辑。</span></div>
+<div class="jargon-item"><span class="jargon-term">世纪合并</span>：<span class="jargon-explain">SpaceX（未上市）和特斯拉（上市）合并，将是人类历史上最大并购案，意味着太空资产可借特斯拉上市公司通道变现。</span></div>
+</div>
+    </div>
+
+  </div>
+
+  <!-- Verifications -->
+  <div class="section">
+    <div class="section-title">🔍 待验证清单（5条）</div>
+    <div class="verify-card">
+      <div class="verify-title">① 英伟达CEO危机是否会演变为AI capex"急刹车"？</div>
+      <ul class="verify-list"><li>黄仁勋是否正式复职（关注本周特朗普亚洲行是否提及）</li>
+<li>5000亿AI融资平台首笔交易是否在明年1月落地</li>
+<li>微软/Meta/亚马逊Q4资本开支指引是否下调</li>
+<li>英伟达下季财报数据中心收入环比增速</li>
+</ul>
+      <div class="analogy"><strong>📖 历史类比：</strong>2000年思科CEO Chambers-era估值崩塌 — 互联网泡沫时思科是"卖铲人"，capex周期逆转后股价跌去80%。</div>
+      <div class="lesson">💡 <strong>教训：</strong>教训：当"卖铲人"自身出现领导危机，往往标志着整个capex周期见顶。</div>
+      <div class="diff">⚡ <strong>关键区别：</strong>关键区别：当年思科没有5000亿融资平台这种"兜底机制"，且AI需求有实际收入支撑（非纯预期），崩塌速度可能更慢但修复也可能更快。</div>
+    </div>
+<div class="verify-card">
+      <div class="verify-title">② 强美元是否会引爆新兴市场/日元危机？</div>
+      <ul class="verify-list"><li>美元/日元能否站稳160上方（日本央行干预阈值）</li>
+<li>日本央行12月是否紧急加息（高田创已暗示灵活应对）</li>
+<li>美债10年期收益率是否突破5.2%并持续</li>
+<li>新兴市场美元债CDS利差是否走阔</li>
+</ul>
+      <div class="analogy"><strong>📖 历史类比：</strong>1997年亚洲金融危机 / 2022年英镑-日元崩跌 — 强美元+美债收益率飙升→资本回流美国→新兴市场货币崩塌。</div>
+      <div class="lesson">💡 <strong>教训：</strong>教训：美元指数突破105并持续3个月以上，新兴市场几乎必然出事。</div>
+      <div class="diff">⚡ <strong>关键区别：</strong>关键区别：当前日本外储充裕（1.2万亿美元），且日元贬值部分是日本央行默许的（利于出口），与1997年被动贬值不同。但日元破160后日本企业进口成本压力可能倒逼央行急转。</div>
+    </div>
+<div class="verify-card">
+      <div class="verify-title">③ 油价暴跌是"通胀退烧药"还是"衰退信号"？</div>
+      <ul class="verify-list"><li>OPEC+是否紧急召开会议讨论减产</li>
+<li>美国页岩油钻机数是否开始下降（盈亏平衡线约$65-70）</li>
+<li>美国10月CPI能源分项环比变化</li>
+<li>高盛/IEA月报是否进一步下调2027需求预测</li>
+</ul>
+      <div class="analogy"><strong>📖 历史类比：</strong>2014-2015年油价从$100崩至$30 — 沙特拒绝减产抢市场份额，油价腰斩，一度被视为"消费者红利"，但实际是全球需求放缓的前兆。</div>
+      <div class="lesson">💡 <strong>教训：</strong>教训：油价大跌可以是好事（降通胀），但如果是因为需求塌方导致的，那就是衰退信号而非红利。</div>
+      <div class="diff">⚡ <strong>关键区别：</strong>关键区别：本次油价跌的主因是中东供应恢复而非需求崩塌，且高盛明确预测"过剩"而非"需求萎缩"，更接近2014年供给侧冲击。但若叠加AI capex放缓→就业走弱，可能演变为需求端问题。</div>
+    </div>
+<div class="verify-card">
+      <div class="verify-title">④ 中国经济数据偏弱是"错月扰动"还是"趋势性放缓"？</div>
+      <ul class="verify-list"><li>11月工业增加值是否反弹（验证"错月"解释）</li>
+<li>房地产销售面积环比是否企稳（政策效果验证）</li>
+<li>社零中汽车分项是否回升（以旧换新效果）</li>
+<li>央行是否推出新的结构性货币政策工具</li>
+</ul>
+      <div class="analogy"><strong>📖 历史类比：</strong>2015年中国经济数据"骤降" — 当年7月数据突然走弱，官方解释为"基数效应/季节因素"，但实际是经济进入L型下行通道的开始。</div>
+      <div class="lesson">💡 <strong>教训：</strong>教训：当官方用"技术性因素"解释数据走弱时，至少有一半概率是趋势性问题而非暂时扰动。</div>
+      <div class="diff">⚡ <strong>关键区别：</strong>关键区别：当前信息服务业+20.5%、装备制造业出口+12.5%，结构亮点比2015年明显。但地产投资-21.6%的拖累力度也远超2015年，政策对冲力度需要更大。</div>
+    </div>
+<div class="verify-card">
+      <div class="verify-title">⑤ SpaceX-特斯拉合并是否真的会在12月落地？</div>
+      <ul class="verify-list"><li>SEC是否对跨界合并提出反垄断审查</li>
+<li>特斯拉股东大会是否召开投票</li>
+<li>SpaceX最新一轮融资估值</li>
+<li>星舰飞船回收是否成功（完全复用可行性验证）</li>
+</ul>
+      <div class="analogy"><strong>📖 历史类比：</strong>2000年时代华纳-美国在线（AOL）合并 — 号称"世纪合并"，互联网泡沫巅峰产物，合并后市值蒸发超80%。</div>
+      <div class="lesson">💡 <strong>教训：</strong>教训：在估值高点宣布的"世纪合并"，往往成为泡沫顶部标志而非价值创造起点。</div>
+      <div class="diff">⚡ <strong>关键区别：</strong>关键区别：AOL-时代华纳是纯股票互换、无实体协同；SpaceX-特斯拉有真实技术协同（自动驾驶+卫星通信+能源），且星舰复用若成功有实质成本优势。但监管阻力远大于当年。</div>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>📊 本市场地图基于华尔街见闻快讯（wallstreetcn.com/live/global）2026-11-16 约12:36（北京时间）抓取内容生成</p>
+    <p>三层漏斗：① 价格变动/新信息/宏观/资产相关 → ② 去重去噪 → ③ 保留10条核心，7条因果链，5条待验证</p>
+    <p style="margin-top:8px; color: var(--text-dim);">⚠️ 仅供研究参考，不构成投资建议</p>
+    <p style="margin-top:8px;">🤖 自动更新：GitHub Actions 每日13:00(UTC+8)自动抓取 → 构建 → 部署</p>
+  </footer>
+</div>
+
+<script>
+// Theme toggle
+function toggleTheme() {
+  var body = document.body;
+  var current = body.getAttribute('data-theme');
+  var next = current === 'dark' ? 'light' : 'dark';
+  body.setAttribute('data-theme', next);
+  localStorage.setItem('theme', next);
+}
+(function() {
+  var saved = localStorage.getItem('theme');
+  if (saved) document.body.setAttribute('data-theme', saved);
+})();
+
+// Copy link
+function copyLink() {
+  navigator.clipboard.writeText(window.location.href).then(function() {
+    alert('链接已复制！');
+  });
+}
+
+// Auto refresh every 5 minutes
+setTimeout(function() { location.reload(); }, 5 * 60 * 1000);
+</script>
+</body>
+</html>
