@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>历史归档 · 市场地图</title>
+<title>历史归档 · Archive · 市场地图</title>
 <style>
   :root { --bg:#0a0e17; --card:#131826; --border:#2a3344; --text:#e8ecf1; --text-dim:#8b95a7; --accent:#d4af37; }
   * { margin:0; padding:0; box-sizing:border-box; }
@@ -13,9 +13,36 @@
   li { margin-bottom:10px; font-size:16px; }
   li a:hover { color:var(--accent); }
   .nav a { color:var(--accent); margin-right:14px; }
-</style></head><body><div class="container">
-<div class="nav"><a href="/">← 返回今日</a></div>
-<h1>📅 历史归档</h1>
+  [data-lang="en"] { display:none; }
+  body.lang-en [data-lang="zh"] { display:none; }
+  body.lang-en [data-lang="en"] { display:inline; }
+  .lang-toggle { background:var(--card); border:1px solid var(--border); border-radius:6px; padding:5px 12px; cursor:pointer; font-size:13px; font-weight:600; color:var(--accent); }
+</style></head><body class="lang-zh"><div class="container">
+<div class="nav">
+  <a href="/"><span data-lang="zh">← 返回今日</span><span data-lang="en">← Back to Today</span></a>
+  <button class="lang-toggle" onclick="toggleLang()">EN</button>
+</div>
+<h1><span data-lang="zh">📅 历史归档</span><span data-lang="en">📅 Archive</span></h1>
 <div class="card"><ul><li><a href="/date/2026-11-16.html">📅 2026-11-16</a></li>
 </ul></div>
+<script>
+function toggleLang() {
+  var b = document.body;
+  if (b.className.indexOf('lang-en') >= 0) {
+    b.className = b.className.replace('lang-en','lang-zh');
+    document.querySelector('.lang-toggle').textContent = 'EN';
+    localStorage.setItem('lang','zh');
+  } else {
+    b.className = b.className.replace('lang-zh','lang-en');
+    document.querySelector('.lang-toggle').textContent = '中';
+    localStorage.setItem('lang','en');
+  }
+}
+(function() {
+  if (localStorage.getItem('lang') === 'en') {
+    document.body.className = 'lang-en';
+    document.querySelector('.lang-toggle').textContent = '中';
+  }
+})();
+</script>
 </div></body></html>

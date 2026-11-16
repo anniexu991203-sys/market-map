@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>每日市场地图 · 2026-11-16</title>
+<title>每日市场地图 · Daily Market Map · 2026-11-16</title>
 <meta name="description" content="华尔街见闻要闻三层漏斗筛选 → 四列表 → 因果链 → 待验证">
 <style>
   :root {
@@ -71,7 +71,7 @@
     transition: all 0.2s;
   }
   .topbar-nav a:hover { color: var(--accent); border-color: var(--accent); }
-  .theme-toggle {
+  .icon-btn {
     background: var(--card-2);
     border: 1px solid var(--border);
     border-radius: 6px;
@@ -81,7 +81,21 @@
     color: var(--text);
     transition: all 0.2s;
   }
-  .theme-toggle:hover { border-color: var(--accent); }
+  .icon-btn:hover { border-color: var(--accent); }
+  .lang-toggle {
+    background: var(--card-2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 5px 12px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--accent);
+    transition: all 0.2s;
+    min-width: 56px;
+    text-align: center;
+  }
+  .lang-toggle:hover { border-color: var(--accent); background: rgba(212,175,55,0.1); }
 
   /* Stats */
   .stats-grid {
@@ -229,7 +243,7 @@
     position: relative;
   }
   .verify-list li::before {
-    content: "☐";
+    content: "\2610";
     position: absolute;
     left: 0;
     color: var(--accent);
@@ -289,6 +303,12 @@
     font-size: 12px;
   }
 
+  /* i18n: hide non-active language by default */
+  [data-lang="en"] { display: none; }
+  body.lang-en [data-lang="zh"] { display: none; }
+  body.lang-en [data-lang="en"] { display: inline; }
+  body.lang-en [data-lang="en"][style*="block"] { display: block; }
+
   /* Responsive */
   @media (max-width: 768px) {
     .container { padding: 12px; }
@@ -303,192 +323,243 @@
   }
 </style>
 </head>
-<body data-theme="dark">
+<body data-theme="dark" class="lang-zh">
 
 <div class="topbar">
   <div class="topbar-left">
     <div class="topbar-logo">📊 Macro Market Map</div>
-    <div class="topbar-date">2026-11-16 星期一</div>
+    <div class="topbar-date">2026-11-16 <span data-lang="zh">星期一</span><span data-lang="en">Monday</span></div>
   </div>
   <div class="topbar-nav">
-    <a href="/">今日</a>
-    <a href="/history.html">历史归档</a>
-    <a href="/rss.xml">RSS订阅</a>
+    <a href="/"><span data-lang="zh">今日</span><span data-lang="en">Today</span></a>
+    <a href="/history.html"><span data-lang="zh">历史归档</span><span data-lang="en">Archive</span></a>
+    <a href="/rss.xml">RSS</a>
     <a href="/api/latest.json">JSON API</a>
-    <button class="theme-toggle" onclick="toggleTheme()">🌙/☀️</button>
+    <button class="lang-toggle" onclick="toggleLang()">EN</button>
+    <button class="icon-btn" onclick="toggleTheme()">🌙/☀️</button>
   </div>
 </div>
 
 <div class="container">
 
   <div class="share-bar">
-    <a class="share-btn" href="https://twitter.com/intent/tweet?text=每日市场地图 2026-11-16" target="_blank">🐦 Twitter</a>
-    <a class="share-btn" href="https://service.weibo.com/share/share.php?title=每日市场地图 2026-11-16" target="_blank">📷 微博</a>
-    <button class="share-btn" onclick="copyLink()">🔗 复制链接</button>
+    <a class="share-btn" href="https://twitter.com/intent/tweet?text=Daily%20Market%20Map%202026-11-16" target="_blank">🐦 Twitter</a>
+    <a class="share-btn" href="https://service.weibo.com/share/share.php?title=每日市场地图 2026-11-16" target="_blank"><span data-lang="zh">📷 微博</span><span data-lang="en">📷 Weibo</span></a>
+    <button class="share-btn" onclick="copyLink()"><span data-lang="zh">🔗 复制链接</span><span data-lang="en">🔗 Copy Link</span></button>
   </div>
 
   <!-- Stats -->
   <div class="stats-grid">
     <div class="stat-card">
-      <div class="stat-label">英伟达（上周累跌）</div>
+      <div class="stat-label"><span data-lang="zh">Nvidia (weekly)</span><span data-lang="en">Nvidia (weekly)</span></div>
       <div class="stat-value stat-down">-13%</div>
-      <div class="stat-change">创一年半最大周跌</div>
+      <div class="stat-change"><span data-lang="zh">Worst weekly drop in 1.5yr</span><span data-lang="en">Worst weekly drop in 1.5yr</span></div>
     </div>
 <div class="stat-card">
-      <div class="stat-label">布伦特原油（两周跌幅）</div>
+      <div class="stat-label"><span data-lang="zh">Brent Crude (2wk)</span><span data-lang="en">Brent Crude (2wk)</span></div>
       <div class="stat-value stat-down">-19%</div>
-      <div class="stat-change">六年多最大同期跌幅</div>
+      <div class="stat-change"><span data-lang="zh">Biggest 2-week drop in 6yr</span><span data-lang="en">Biggest 2-week drop in 6yr</span></div>
     </div>
 <div class="stat-card">
-      <div class="stat-label">2年期美债收益率（周升幅）</div>
+      <div class="stat-label"><span data-lang="zh">2Y UST yield (wk)</span><span data-lang="en">2Y UST yield (wk)</span></div>
       <div class="stat-value stat-up">+33bp</div>
-      <div class="stat-change">两年最大周升幅</div>
+      <div class="stat-change"><span data-lang="zh">Biggest weekly rise in 2yr</span><span data-lang="en">Biggest weekly rise in 2yr</span></div>
     </div>
 <div class="stat-card">
-      <div class="stat-label">美元指数</div>
-      <div class="stat-value stat-up">19个月新高</div>
-      <div class="stat-change">日元破160</div>
+      <div class="stat-label"><span data-lang="zh">Dollar Index</span><span data-lang="en">Dollar Index</span></div>
+      <div class="stat-value stat-up">19mo high</div>
+      <div class="stat-change"><span data-lang="zh">JPY breaks 160</span><span data-lang="en">JPY breaks 160</span></div>
     </div>
 <div class="stat-card">
-      <div class="stat-label">COMEX黄金（周跌）</div>
+      <div class="stat-label"><span data-lang="zh">COMEX Gold (wk)</span><span data-lang="en">COMEX Gold (wk)</span></div>
       <div class="stat-value stat-down">-4.55%</div>
-      <div class="stat-change">半年最大周跌</div>
+      <div class="stat-change"><span data-lang="zh">Biggest weekly drop in 6mo</span><span data-lang="en">Biggest weekly drop in 6mo</span></div>
     </div>
 <div class="stat-card">
-      <div class="stat-label">创业板指</div>
+      <div class="stat-label"><span data-lang="zh">ChiNext</span><span data-lang="en">ChiNext</span></div>
       <div class="stat-value stat-down">-3.32%</div>
-      <div class="stat-change">成长股先塌</div>
+      <div class="stat-change"><span data-lang="zh">Growth stocks lead decline</span><span data-lang="en">Growth stocks lead decline</span></div>
     </div>
 
   </div>
 
   <!-- Events -->
   <div class="section">
-    <div class="section-title">📌 核心要闻（10条）</div>
+    <div class="section-title"><span data-lang="zh">📌 核心要闻（10条）</span><span data-lang="en">📌 Key Headlines (10)</span></div>
     <div class="event-card">
-      <div class="event-tags"><span class="tag tag-ai">AI</span><span class="tag tag-fed">政策</span></div>
-      <div class="event-text"><span class="dir-arrow dir-down">📉</span> 英伟达黄仁勋去职风波持续发酵；汇丰将英伟达评级下调至"持有"，目标价从$365→$170；文艺复兴科技Q3已砍仓99.7%</div>
-      <div class="event-assets"><strong>影响资产：</strong>英伟达、AMD、半导体板块、台湾加权指数、Arm</div>
-      <div class="event-logic">CEO不确定性→AI capex信心动摇→芯片股估值重估→台股传导（-5%）；黄仁勋盟友推动复职形成多空博弈</div>
+      <div class="event-tags"><span class="tag tag-ai"><span data-lang="zh">AI</span><span data-lang="en">AI</span></span><span class="tag tag-fed"><span data-lang="zh">政策</span><span data-lang="en">Policy</span></span></div>
+      <div class="event-text"><span class="dir-arrow dir-down">📉</span> <span data-lang="zh">英伟达黄仁勋去职风波持续发酵；汇丰将英伟达评级下调至"持有"，目标价从$365→$170；文艺复兴科技Q3已砍仓99.7%</span><span data-lang="en">Nvidia CEO Jensen Huang departure saga continues; HSBC downgrades to Hold, target $365→$170; Renaissance Tech slashed 99.7% in Q3</span></div>
+      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh">英伟达、AMD、半导体板块、台湾加权指数、Arm</span><span data-lang="en">Nvidia, AMD, semiconductors, Taiwan Weighted Index, Arm</span></div>
+      <div class="event-logic"><span data-lang="zh">CEO不确定性→AI capex信心动摇→芯片股估值重估→台股传导（-5%）；黄仁勋盟友推动复职形成多空博弈</span><span data-lang="en">CEO uncertainty → AI capex confidence shaken → chip stock revaluation → Taiwan spillover (-5%); allies push for reinstatement</span></div>
     </div>
 <div class="event-card">
-      <div class="event-tags"><span class="tag tag-ai">AI</span><span class="tag tag-fed">政策</span></div>
-      <div class="event-text"><span class="dir-arrow dir-split">⚖️</span> 特朗普政府将英伟达、亚马逊、微软、OpenAI、Anthropic等20+企业列入AI"国家领军企业"名单，获芯片出口快速审批</div>
-      <div class="event-assets"><strong>影响资产：</strong>AI芯片出口链、上榜企业、中美科技博弈</div>
-      <div class="event-logic">名单内企业获出口便利→利好上榜公司海外收入；但与黄仁勋反对芯片后门的立场冲突→政策与人事矛盾并存</div>
+      <div class="event-tags"><span class="tag tag-ai"><span data-lang="zh">AI</span><span data-lang="en">AI</span></span><span class="tag tag-fed"><span data-lang="zh">政策</span><span data-lang="en">Policy</span></span></div>
+      <div class="event-text"><span class="dir-arrow dir-split">⚖️</span> <span data-lang="zh">特朗普政府将英伟达、亚马逊、微软、OpenAI、Anthropic等20+企业列入AI"国家领军企业"名单，获芯片出口快速审批</span><span data-lang="en">Trump admin designates 20+ companies (Nvidia, Amazon, MSFT, OpenAI, Anthropic) as AI 'National Champion' enterprises with fast-track chip export approval</span></div>
+      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh">AI芯片出口链、上榜企业、中美科技博弈</span><span data-lang="en">AI chip export chain, listed companies, US-China tech</span></div>
+      <div class="event-logic"><span data-lang="zh">名单内企业获出口便利→利好上榜公司海外收入；但与黄仁勋反对芯片后门的立场冲突→政策与人事矛盾并存</span><span data-lang="en">Listed companies get export facilitation → boosts overseas revenue; but conflicts with Huang's anti-backdoor stance → policy vs personnel contradiction</span></div>
     </div>
 <div class="event-card">
-      <div class="event-tags"><span class="tag tag-fed">央行</span></div>
-      <div class="event-text"><span class="dir-arrow dir-down">📉</span> 美联储半年度金融稳定报告：资产估值压力持续高位，AI资产价格与投资扩张或放大波动；芝加哥/波士顿联储主席同日警告通胀扩散</div>
-      <div class="event-assets"><strong>影响资产：</strong>美股估值、AI概念股、美债收益率</div>
-      <div class="event-logic">官方点名AI估值泡沫→市场风险偏好收缩→加息预期升温（12月+25bp概率高，+50bp概率15%）→科技股承压</div>
+      <div class="event-tags"><span class="tag tag-fed"><span data-lang="zh">央行</span><span data-lang="en">Central Bank</span></span></div>
+      <div class="event-text"><span class="dir-arrow dir-down">📉</span> <span data-lang="zh">美联储半年度金融稳定报告：资产估值压力持续高位，AI资产价格与投资扩张或放大波动；芝加哥/波士顿联储主席同日警告通胀扩散</span><span data-lang="en">Fed semi-annual Financial Stability Report: asset valuation pressure remains elevated, AI asset prices and investment expansion may amplify volatility; Chicago/Boston Fed presidents warn of inflation spread</span></div>
+      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh">美股估值、AI概念股、美债收益率</span><span data-lang="en">US equity valuations, AI stocks, UST yields</span></div>
+      <div class="event-logic"><span data-lang="zh">官方点名AI估值泡沫→市场风险偏好收缩→加息预期升温（12月+25bp概率高，+50bp概率15%）→科技股承压</span><span data-lang="en">Official AI bubble warning → risk appetite contracts → rate hike expectations rise (Dec +25bp likely, +50bp 15%) → tech pressure</span></div>
     </div>
 <div class="event-card">
-      <div class="event-tags"><span class="tag tag-fed">央行</span></div>
-      <div class="event-text"><span class="dir-arrow dir-split">⚖️</span> 美国10月PPI同比6.5%（2022年11月以来最高），环比0.3%低于预期；财长贝森特称不应因能源冲击加息，与古尔斯比交锋</div>
-      <div class="event-assets"><strong>影响资产：</strong>美债、美元、加息预期</div>
-      <div class="event-logic">PPI低于预期→美债收益率短线回落；但同比仍创新高→加息预期未根本动摇；财长与联储官员公开分歧增加不确定性</div>
+      <div class="event-tags"><span class="tag tag-fed"><span data-lang="zh">央行</span><span data-lang="en">Central Bank</span></span></div>
+      <div class="event-text"><span class="dir-arrow dir-split">⚖️</span> <span data-lang="zh">美国10月PPI同比6.5%（2022年11月以来最高），环比0.3%低于预期；财长贝森特称不应因能源冲击加息，与古尔斯比交锋</span><span data-lang="en">US Oct PPI YoY 6.5% (highest since Nov 2022), MoM 0.3% below expectations; Treasury Sec Bessent says no rate hike for energy shock, spars with Goolsbee</span></div>
+      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh">美债、美元、加息预期</span><span data-lang="en">US Treasuries, USD, rate hike expectations</span></div>
+      <div class="event-logic"><span data-lang="zh">PPI低于预期→美债收益率短线回落；但同比仍创新高→加息预期未根本动摇；财长与联储官员公开分歧增加不确定性</span><span data-lang="en">PPI below expectations → yields dip short-term; but YoY still record high → hike expectations unshaken; Treasury vs Fed public disagreement adds uncertainty</span></div>
     </div>
 <div class="event-card">
-      <div class="event-tags"><span class="tag tag-energy">能源</span></div>
-      <div class="event-text"><span class="dir-arrow dir-down">📉</span> 布油两周跌近19%创六年多最大同期跌幅；高盛预测2027年石油"大量过剩"；IEA称四季度全球石油转向供应过剩</div>
-      <div class="event-assets"><strong>影响资产：</strong>原油、能源股、黄金（避险需求减弱）</div>
-      <div class="event-logic">中东原油夺回亚洲市场+供应过剩预期→油价持续下行→通胀能源分项回落→但金价同步走弱（实际利率上行压制）</div>
+      <div class="event-tags"><span class="tag tag-energy"><span data-lang="zh">能源</span><span data-lang="en">Energy</span></span></div>
+      <div class="event-text"><span class="dir-arrow dir-down">📉</span> <span data-lang="zh">布油两周跌近19%创六年多最大同期跌幅；高盛预测2027年石油"大量过剩"；IEA称四季度全球石油转向供应过剩</span><span data-lang="en">Brent falls ~19% in 2 weeks, biggest 2-week drop in 6+ years; Goldman forecasts oil 'massive surplus' in 2027; IEA says Q4 global oil shifts to surplus</span></div>
+      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh">原油、能源股、黄金（避险需求减弱）</span><span data-lang="en">Crude oil, energy stocks, gold (safe-haven demand weakens)</span></div>
+      <div class="event-logic"><span data-lang="zh">中东原油夺回亚洲市场+供应过剩预期→油价持续下行→通胀能源分项回落→但金价同步走弱（实际利率上行压制）</span><span data-lang="en">Middle East regains Asian market + surplus expectations → oil持续下降 → inflation energy component falls → but gold also weakens (real rates rising)</span></div>
     </div>
 <div class="event-card">
-      <div class="event-tags"><span class="tag tag-fed">流动性</span></div>
-      <div class="event-text"><span class="dir-arrow dir-split">⚖️</span> 2年期美债收益率全周升33bp创两年最大周升幅；美元指数19个月新高；日元两个多月来首次跌破160；比特币一度跌破6.8万</div>
-      <div class="event-assets"><strong>影响资产：</strong>美债、美元、日元、新兴市场货币、比特币</div>
-      <div class="event-logic">加息预期飙升→美债抛售→美元走强→日元/新兴货币承压；强美元冲击全球流动性→风险资产暂难入场（美银Hartnett）</div>
+      <div class="event-tags"><span class="tag tag-fed"><span data-lang="zh">流动性</span><span data-lang="en">Liquidity</span></span></div>
+      <div class="event-text"><span class="dir-arrow dir-split">⚖️</span> <span data-lang="zh">2年期美债收益率全周升33bp创两年最大周升幅；美元指数19个月新高；日元两个多月来首次跌破160；比特币一度跌破6.8万</span><span data-lang="en">2Y UST yield rises 33bp weekly, biggest in 2 years; Dollar Index 19-month high; JPY breaks 160 for first time in 2+ months; Bitcoin briefly below $68K</span></div>
+      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh">美债、美元、日元、新兴市场货币、比特币</span><span data-lang="en">UST, USD, JPY, EM currencies, Bitcoin</span></div>
+      <div class="event-logic"><span data-lang="zh">加息预期飙升→美债抛售→美元走强→日元/新兴货币承压；强美元冲击全球流动性→风险资产暂难入场（美银Hartnett）</span><span data-lang="en">Hike expectations surge → UST selloff → USD strengthens → JPY/EM currencies pressured; strong USD hits global liquidity → risk assets sidelined (BofA Hartnett)</span></div>
     </div>
 <div class="event-card">
-      <div class="event-tags"><span class="tag tag-china">中国</span></div>
-      <div class="event-text"><span class="dir-arrow dir-down">📉</span> 中国10月工业增加值同比放缓至4.8%、社零增0.4%（剔除汽车+2.5%）、地产开发投资同比-21.6%、固定资产投资-8.1%</div>
-      <div class="event-assets"><strong>影响资产：</strong>A股、港股、人民币、大宗商品需求</div>
-      <div class="event-logic">内需弱于预期+地产持续拖累→创业板-3.32%成长股先塌→银行股逆势新高（防御切换）；但信息服务业+20.5%显示结构分化</div>
+      <div class="event-tags"><span class="tag tag-china"><span data-lang="zh">中国</span><span data-lang="en">China</span></span></div>
+      <div class="event-text"><span class="dir-arrow dir-down">📉</span> <span data-lang="zh">中国10月工业增加值同比放缓至4.8%、社零增0.4%（剔除汽车+2.5%）、地产开发投资同比-21.6%、固定资产投资-8.1%</span><span data-lang="en">China Oct industrial output YoY slows to 4.8%, retail sales +0.4% (ex-auto +2.5%), real estate investment -21.6%, fixed asset investment -8.1%</span></div>
+      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh">A股、港股、人民币、大宗商品需求</span><span data-lang="en">A-shares, HK stocks, CNY, commodity demand</span></div>
+      <div class="event-logic"><span data-lang="zh">内需弱于预期+地产持续拖累→创业板-3.32%成长股先塌→银行股逆势新高（防御切换）；但信息服务业+20.5%显示结构分化</span><span data-lang="en">Weak domestic demand + property drag → ChiNext -3.32% growth stocks collapse → bank stocks hit new highs (defensive rotation); but IT services +20.5% shows structural divergence</span></div>
     </div>
 <div class="event-card">
-      <div class="event-tags"><span class="tag tag-bio">生物科技</span></div>
-      <div class="event-text"><span class="dir-arrow dir-down">📉</span> 康方生物盘中大跌逾20%：依沃西美国首次上市申请未获批；恒生生物科技指数-2.5%</div>
-      <div class="event-assets"><strong>影响资产：</strong>康方生物、港股生物科技、创新药ETF</div>
-      <div class="event-logic">单品出海受阻→市场质疑创新药国际化路径→板块情绪传染→生物科技整体杀估值</div>
+      <div class="event-tags"><span class="tag tag-bio"><span data-lang="zh">生物科技</span><span data-lang="en">Biotech</span></span></div>
+      <div class="event-text"><span class="dir-arrow dir-down">📉</span> <span data-lang="zh">康方生物盘中大跌逾20%：依沃西美国首次上市申请未获批；恒生生物科技指数-2.5%</span><span data-lang="en">Akeso plunges 20%+ intraday: ivonescimab US first marketing application not approved; Hang Seng Biotech Index -2.5%</span></div>
+      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh">康方生物、港股生物科技、创新药ETF</span><span data-lang="en">Akeso, HK biotech, innovative drug ETFs</span></div>
+      <div class="event-logic"><span data-lang="zh">单品出海受阻→市场质疑创新药国际化路径→板块情绪传染→生物科技整体杀估值</span><span data-lang="en">Single drug overseas setback → market questions innovative drug internationalization path → sector sentiment contagion → biotech valuation haircut</span></div>
     </div>
 <div class="event-card">
-      <div class="event-tags"><span class="tag tag-macro">财政</span></div>
-      <div class="event-text"><span class="dir-arrow dir-neutral">➡️</span> 美国10月财政赤字4040亿创同期新高；过去12个月利息支出1.4万亿，占税收28.2%创历史新高</div>
-      <div class="event-assets"><strong>影响资产：</strong>美债信用、长期国债收益率、黄金（对冲财政风险）</div>
-      <div class="event-logic">赤字+利息刚性支出→发债需求上升→长期美债供给压力→但目前被强劲拍卖消化（贝森特强调买盘旺盛）</div>
+      <div class="event-tags"><span class="tag tag-macro"><span data-lang="zh">财政</span><span data-lang="en">Fiscal</span></span></div>
+      <div class="event-text"><span class="dir-arrow dir-neutral">➡️</span> <span data-lang="zh">美国10月财政赤字4040亿创同期新高；过去12个月利息支出1.4万亿，占税收28.2%创历史新高</span><span data-lang="en">US Oct fiscal deficit $404B record high for period; trailing 12-month interest expense $1.4T, 28.2% of tax revenue - all-time high</span></div>
+      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh">美债信用、长期国债收益率、黄金（对冲财政风险）</span><span data-lang="en">UST credit, long-term yields, gold (hedge fiscal risk)</span></div>
+      <div class="event-logic"><span data-lang="zh">赤字+利息刚性支出→发债需求上升→长期美债供给压力→但目前被强劲拍卖消化（贝森特强调买盘旺盛）</span><span data-lang="en">Deficit + rigid interest spending → bond issuance demand rises → long-term UST supply pressure → but currently absorbed by strong auctions (Bessent emphasizes robust demand)</span></div>
     </div>
 <div class="event-card">
-      <div class="event-tags"><span class="tag tag-ai">科技</span></div>
-      <div class="event-text"><span class="dir-arrow dir-up">📈</span> SpaceX-特斯拉合并谈判提速，最快12月宣布；星舰首次"双回收"测试（助推器失败、飞船回收待验证）；特斯拉开放Cybercab购买$29990</div>
-      <div class="event-assets"><strong>影响资产：</strong>特斯拉、SpaceX估值、自动驾驶概念</div>
-      <div class="event-logic">合并预期+完全复用里程碑→特斯拉盘中涨1.9%→若落地为史上最大并购→重塑AI+太空+出行估值框架</div>
+      <div class="event-tags"><span class="tag tag-ai"><span data-lang="zh">科技</span><span data-lang="en">Tech</span></span></div>
+      <div class="event-text"><span class="dir-arrow dir-up">📈</span> <span data-lang="zh">SpaceX-特斯拉合并谈判提速，最快12月宣布；星舰首次"双回收"测试（助推器失败、飞船回收待验证）；特斯拉开放Cybercab购买$29990</span><span data-lang="en">SpaceX-Tesla merger talks accelerate, announcement as early as Dec; Starship first 'dual recovery' test (booster failed, spacecraft recovery pending); Tesla opens Cybercab orders at $29,990</span></div>
+      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh">特斯拉、SpaceX估值、自动驾驶概念</span><span data-lang="en">Tesla, SpaceX valuation, autonomous driving concept</span></div>
+      <div class="event-logic"><span data-lang="zh">合并预期+完全复用里程碑→特斯拉盘中涨1.9%→若落地为史上最大并购→重塑AI+太空+出行估值框架</span><span data-lang="en">Merger expectation + full reuse milestone → Tesla +1.9% intraday → if completed, largest merger in history → reshapes AI+space+mobility valuation framework</span></div>
     </div>
 
   </div>
 
   <!-- Chains -->
   <div class="section">
-    <div class="section-title">🔗 因果链逐条拆解（7条）</div>
+    <div class="section-title"><span data-lang="zh">🔗 因果链逐条拆解（7条）</span><span data-lang="en">🔗 Causal Chain Breakdown (7)</span></div>
     <div class="chain-card">
-      <div class="chain-title">① 英伟达CEO危机 → AI硬件估值重估链 <span class="chain-status status-unverified">待验证</span></div>
-      <div class="flow-nodes"><div class="flow-node trigger">黄仁勋去职<br>CEO不确定性</div><div class="flow-arrow">→</div><div class="flow-node normal">5000亿AI融资<br>平台搁置</div><div class="flow-arrow">→</div><div class="flow-node normal">汇丰下调评级<br>$365→$170</div><div class="flow-arrow">→</div><div class="flow-node normal">文艺复兴等<br>机构砍仓99.7%</div><div class="flow-arrow">→</div><div class="flow-node result-down">英伟达周跌13%<br>台股-5%、AMD-9%</div></div>
-      <div class="jargon-list"><div class="jargon-item"><span class="jargon-term">CEO不确定性</span>：<span class="jargon-explain">市场不知道下一任掌门是谁、会不会改变AI芯片战略方向，所以先卖出避险。</span></div>
-<div class="jargon-item"><span class="jargon-term">5000亿AI融资平台</span>：<span class="jargon-explain">英伟达联合多家私募帮客户买GPU算力的"分期付款"方案，黄仁勋走了，兜底担保没人签了。</span></div>
-<div class="jargon-item"><span class="jargon-term">剩余价值支持协议（兜底比例）</span>：<span class="jargon-explain">客户用完GPU后英伟达承诺回购多少比例。英伟达只兜25%，博通兜72.5%，客户觉得英伟达不够大方。</span></div>
-<div class="jargon-item"><span class="jargon-term">13F文件</span>：<span class="jargon-explain">美国机构每季度公布持仓，文艺复兴在丑闻爆发前就已清仓，说明"聪明钱"提前嗅到风险。</span></div>
+      <div class="chain-title"><span data-lang="zh">① 英伟达CEO危机 → AI硬件估值重估链</span><span data-lang="en">1. Nvidia CEO Crisis → AI Hardware Revaluation Chain</span> <span class="chain-status status-unverified"><span data-lang="zh">待验证</span><span data-lang="en">Unverified</span></span></div>
+      <div class="flow-nodes"><div class="flow-node trigger"><span data-lang="zh">黄仁勋去职<br>CEO不确定性</span><span data-lang="en">Huang departure<br>CEO uncertainty</span></div><div class="flow-arrow">→</div><div class="flow-node normal"><span data-lang="zh">5000亿AI融资<br>平台搁置</span><span data-lang="en">$500B AI financing<br>platform stalled</span></div><div class="flow-arrow">→</div><div class="flow-node normal"><span data-lang="zh">汇丰下调评级<br>$365→$170</span><span data-lang="en">HSBC downgrade<br>$365→$170</span></div><div class="flow-arrow">→</div><div class="flow-node normal"><span data-lang="zh">文艺复兴等<br>机构砍仓99.7%</span><span data-lang="en">Renaissance etc<br>cut 99.7%</span></div><div class="flow-arrow">→</div><div class="flow-node result-down"><span data-lang="zh">英伟达周跌13%<br>台股-5%、AMD-9%</span><span data-lang="en">Nvidia -13% weekly<br>Taiwan -5%, AMD -9%</span></div></div>
+      <div class="jargon-list"><div class="jargon-item">
+        <span class="jargon-term"><span data-lang="zh">CEO不确定性</span><span data-lang="en">CEO Uncertainty</span></span>：<span data-lang="zh">市场不知道下一任掌门是谁、会不会改变AI芯片战略方向，所以先卖出避险。</span><span data-lang="en">Market doesn't know who the next leader is or whether AI chip strategy changes, so sells first.</span>
+      </div>
+<div class="jargon-item">
+        <span class="jargon-term"><span data-lang="zh">5000亿AI融资平台</span><span data-lang="en">$500B AI Financing Platform</span></span>：<span data-lang="zh">英伟达联合多家私募帮客户买GPU算力的"分期付款"方案，黄仁勋走了，兜底担保没人签了。</span><span data-lang="en">Nvidia partnered with PE firms to help clients buy GPU compute on 'installments.' With Huang gone, no one signs the guarantee.</span>
+      </div>
+<div class="jargon-item">
+        <span class="jargon-term"><span data-lang="zh">剩余价值支持协议（兜底比例）</span><span data-lang="en">Residual Value Support (Guarantee Ratio)</span></span>：<span data-lang="zh">客户用完GPU后英伟达承诺回购多少比例。英伟达只兜25%，博通兜72.5%，客户觉得英伟达不够大方。</span><span data-lang="en">Nvidia promises to buy back a % of used GPUs. Nvidia only guarantees 25%, Broadcom 72.5% — clients find Nvidia less generous.</span>
+      </div>
+<div class="jargon-item">
+        <span class="jargon-term"><span data-lang="zh">13F文件</span><span data-lang="en">13F Filing</span></span>：<span data-lang="zh">美国机构每季度公布持仓，文艺复兴在丑闻爆发前就已清仓，说明"聪明钱"提前嗅到风险。</span><span data-lang="en">US institutions report holdings quarterly. Renaissance cleared positions before the scandal, showing 'smart money' sensed risk early.</span>
+      </div>
 </div>
     </div>
 <div class="chain-card">
-      <div class="chain-title">② 美联储加息预期飙升 → 强美元冲击全球流动性链 <span class="chain-status status-consensus">市场共识</span></div>
-      <div class="flow-nodes"><div class="flow-node trigger">PPI同比6.5%<br>四年新高</div><div class="flow-arrow">→</div><div class="flow-node normal">联储官员<br>警告通胀扩散</div><div class="flow-arrow">→</div><div class="flow-node normal">12月加息预期<br>+25bp概率高</div><div class="flow-arrow">→</div><div class="flow-node normal">2年期美债<br>周升33bp</div><div class="flow-arrow">→</div><div class="flow-node result-up">美元19个月新高<br>日元破160</div></div>
-      <div class="jargon-list"><div class="jargon-item"><span class="jargon-term">PPI（生产者价格指数）</span>：<span class="jargon-explain">工厂出厂价格涨多少，是CPI的"上游预告片"。PPI涨意味着几个月后消费者物价可能跟着涨。</span></div>
-<div class="jargon-item"><span class="jargon-term">通胀扩散</span>：<span class="jargon-explain">以前只有油价涨，现在服务业、医疗、住房都在涨，说明通胀不是单一原因而是全面蔓延，更难治。</span></div>
-<div class="jargon-item"><span class="jargon-term">2年期美债收益率</span>：<span class="jargon-explain">最敏感反映"未来1-2年利率预期"的指标。它暴涨说明市场认为美联储还要加息。</span></div>
-<div class="jargon-item"><span class="jargon-term">实际利差</span>：<span class="jargon-explain">两国利率差减去通胀差。日本央行高田创提到市场开始看实际利差，意味着即使日本加息，如果美国通胀更高，日元照样跌。</span></div>
+      <div class="chain-title"><span data-lang="zh">② 美联储加息预期飙升 → 强美元冲击全球流动性链</span><span data-lang="en">2. Fed Hike Expectations Surge → Strong USD Hits Global Liquidity</span> <span class="chain-status status-consensus"><span data-lang="zh">市场共识</span><span data-lang="en">Consensus</span></span></div>
+      <div class="flow-nodes"><div class="flow-node trigger"><span data-lang="zh">PPI同比6.5%<br>四年新高</span><span data-lang="en">PPI YoY 6.5%<br>4-year high</span></div><div class="flow-arrow">→</div><div class="flow-node normal"><span data-lang="zh">联储官员<br>警告通胀扩散</span><span data-lang="en">Fed officials<br>warn of inflation spread</span></div><div class="flow-arrow">→</div><div class="flow-node normal"><span data-lang="zh">12月加息预期<br>+25bp概率高</span><span data-lang="en">Dec hike expectation<br>+25bp likely</span></div><div class="flow-arrow">→</div><div class="flow-node normal"><span data-lang="zh">2年期美债<br>周升33bp</span><span data-lang="en">2Y UST yield<br>+33bp weekly</span></div><div class="flow-arrow">→</div><div class="flow-node result-up"><span data-lang="zh">美元19个月新高<br>日元破160</span><span data-lang="en">USD 19-mo high<br>JPY breaks 160</span></div></div>
+      <div class="jargon-list"><div class="jargon-item">
+        <span class="jargon-term"><span data-lang="zh">PPI（生产者价格指数）</span><span data-lang="en">PPI (Producer Price Index)</span></span>：<span data-lang="zh">工厂出厂价格涨多少，是CPI的"上游预告片"。PPI涨意味着几个月后消费者物价可能跟着涨。</span><span data-lang="en">How much factory gate prices rise — the 'upstream trailer' for CPI. Rising PPI means consumer prices may follow in coming months.</span>
+      </div>
+<div class="jargon-item">
+        <span class="jargon-term"><span data-lang="zh">通胀扩散</span><span data-lang="en">Inflation Broadening</span></span>：<span data-lang="zh">以前只有油价涨，现在服务业、医疗、住房都在涨，说明通胀不是单一原因而是全面蔓延，更难治。</span><span data-lang="en">Previously only oil rose; now services, healthcare, housing all rising — inflation is broad-based, harder to fix.</span>
+      </div>
+<div class="jargon-item">
+        <span class="jargon-term"><span data-lang="zh">2年期美债收益率</span><span data-lang="en">2Y UST Yield</span></span>：<span data-lang="zh">最敏感反映"未来1-2年利率预期"的指标。它暴涨说明市场认为美联储还要加息。</span><span data-lang="en">Most sensitive indicator of '1-2 year rate expectations.' A surge means markets think the Fed will hike more.</span>
+      </div>
+<div class="jargon-item">
+        <span class="jargon-term"><span data-lang="zh">实际利差</span><span data-lang="en">Real Rate Differential</span></span>：<span data-lang="zh">两国利率差减去通胀差。日本央行高田创提到市场开始看实际利差，意味着即使日本加息，如果美国通胀更高，日元照样跌。</span><span data-lang="en">Interest rate differential minus inflation differential. BOJ's Takata mentioned markets now look at real spreads — even if Japan hikes, higher US inflation means JPY still falls.</span>
+      </div>
 </div>
     </div>
 <div class="chain-card">
-      <div class="chain-title">③ 中东供应过剩预期 → 原油崩跌 → 黄金失锚链 <span class="chain-status status-consensus">市场共识</span></div>
-      <div class="flow-nodes"><div class="flow-node trigger">中东原油夺回<br>亚洲市场</div><div class="flow-arrow">→</div><div class="flow-node normal">IEA：四季度<br>供应过剩</div><div class="flow-arrow">→</div><div class="flow-node normal">高盛预测2027<br>大量过剩</div><div class="flow-arrow">→</div><div class="flow-node result-down">布油两周-19%<br>黄金周跌4.55%</div></div>
-      <div class="jargon-list"><div class="jargon-item"><span class="jargon-term">供应过剩</span>：<span class="jargon-explain">产油量超过消费量，多余石油只能存进油罐，价格自然下跌。</span></div>
-<div class="jargon-item"><span class="jargon-term">官方售价（OSP）</span>：<span class="jargon-explain">沙特等产油国每月公布给不同地区的原油报价。下调至六年低位=主动降价抢客户。</span></div>
-<div class="jargon-item"><span class="jargon-term">实际利率</span>：<span class="jargon-explain">名义利率减通胀预期。油价跌→通胀预期降→实际利率反而升→持有黄金的机会成本增加→金价跌。这就是为什么油价跌黄金也跌。</span></div>
+      <div class="chain-title"><span data-lang="zh">③ 中东供应过剩预期 → 原油崩跌 → 黄金失锚链</span><span data-lang="en">3. Middle East Surplus Expectation → Oil Crash → Gold Unanchored</span> <span class="chain-status status-consensus"><span data-lang="zh">市场共识</span><span data-lang="en">Consensus</span></span></div>
+      <div class="flow-nodes"><div class="flow-node trigger"><span data-lang="zh">中东原油夺回<br>亚洲市场</span><span data-lang="en">Middle East regains<br>Asian market</span></div><div class="flow-arrow">→</div><div class="flow-node normal"><span data-lang="zh">IEA：四季度<br>供应过剩</span><span data-lang="en">IEA: Q4<br>supply surplus</span></div><div class="flow-arrow">→</div><div class="flow-node normal"><span data-lang="zh">高盛预测2027<br>大量过剩</span><span data-lang="en">Goldman: 2027<br>massive surplus</span></div><div class="flow-arrow">→</div><div class="flow-node result-down"><span data-lang="zh">布油两周-19%<br>黄金周跌4.55%</span><span data-lang="en">Brent -19% 2wk<br>Gold -4.55% weekly</span></div></div>
+      <div class="jargon-list"><div class="jargon-item">
+        <span class="jargon-term"><span data-lang="zh">供应过剩</span><span data-lang="en">Supply Surplus</span></span>：<span data-lang="zh">产油量超过消费量，多余石油只能存进油罐，价格自然下跌。</span><span data-lang="en">Production exceeds consumption; excess oil goes into storage, prices naturally fall.</span>
+      </div>
+<div class="jargon-item">
+        <span class="jargon-term"><span data-lang="zh">官方售价（OSP）</span><span data-lang="en">Official Selling Price (OSP)</span></span>：<span data-lang="zh">沙特等产油国每月公布给不同地区的原油报价。下调至六年低位=主动降价抢客户。</span><span data-lang="en">Saudi etc. monthly publish oil prices for different regions. Cutting to 6-year low = proactively cutting prices to grab customers.</span>
+      </div>
+<div class="jargon-item">
+        <span class="jargon-term"><span data-lang="zh">实际利率</span><span data-lang="en">Real Interest Rate</span></span>：<span data-lang="zh">名义利率减通胀预期。油价跌→通胀预期降→实际利率反而升→持有黄金的机会成本增加→金价跌。这就是为什么油价跌黄金也跌。</span><span data-lang="en">Nominal rate minus inflation expectations. Oil falls → inflation expectations drop → real rates rise → gold holding opportunity cost increases → gold falls. This is why oil and gold fall together.</span>
+      </div>
 </div>
     </div>
 <div class="chain-card">
-      <div class="chain-title">④ 美联储点名AI估值泡沫 → 科技股风险偏好收缩链 <span class="chain-status status-consensus">市场共识</span></div>
-      <div class="flow-nodes"><div class="flow-node trigger">金融稳定报告<br>点名AI估值</div><div class="flow-arrow">→</div><div class="flow-node normal">"超级智能预期"<br>推高股价</div><div class="flow-arrow">→</div><div class="flow-node normal">AI投资扩张<br>或放大波动</div><div class="flow-arrow">→</div><div class="flow-node result-down">芯片指数-3%<br>纳指反弹失利</div></div>
-      <div class="jargon-list"><div class="jargon-item"><span class="jargon-term">金融稳定报告</span>：<span class="jargon-explain">美联储每半年发布一次，专门找金融系统的"隐患"。这次把AI资产估值列为"持续高位脆弱性"，等于官方说"你们炒太高了"。</span></div>
-<div class="jargon-item"><span class="jargon-term">超级智能预期</span>：<span class="jargon-explain">市场认为AI很快会达到或超越人类智能水平，所以提前给AI公司天价估值。美联储认为这个预期可能过度乐观。</span></div>
-<div class="jargon-item"><span class="jargon-term">放大波动</span>：<span class="jargon-explain">AI公司投入巨资买芯片建数据中心，如果收入不及预期，资本开支变成沉没成本，股价跌幅会比普通公司更大。</span></div>
+      <div class="chain-title"><span data-lang="zh">④ 美联储点名AI估值泡沫 → 科技股风险偏好收缩链</span><span data-lang="en">4. Fed Flags AI Valuation Bubble → Tech Risk Appetite Contracts</span> <span class="chain-status status-consensus"><span data-lang="zh">市场共识</span><span data-lang="en">Consensus</span></span></div>
+      <div class="flow-nodes"><div class="flow-node trigger"><span data-lang="zh">金融稳定报告<br>点名AI估值</span><span data-lang="en">Financial Stability<br>Report flags AI valuations</span></div><div class="flow-arrow">→</div><div class="flow-node normal"><span data-lang="zh">"超级智能预期"<br>推高股价</span><span data-lang="en">'Superintelligence<br>expectation' drives prices</span></div><div class="flow-arrow">→</div><div class="flow-node normal"><span data-lang="zh">AI投资扩张<br>或放大波动</span><span data-lang="en">AI investment expansion<br>may amplify volatility</span></div><div class="flow-arrow">→</div><div class="flow-node result-down"><span data-lang="zh">芯片指数-3%<br>纳指反弹失利</span><span data-lang="en">Chip index -3%<br>Nasdaq rebound fails</span></div></div>
+      <div class="jargon-list"><div class="jargon-item">
+        <span class="jargon-term"><span data-lang="zh">金融稳定报告</span><span data-lang="en">Financial Stability Report</span></span>：<span data-lang="zh">美联储每半年发布一次，专门找金融系统的"隐患"。这次把AI资产估值列为"持续高位脆弱性"，等于官方说"你们炒太高了"。</span><span data-lang="en">Fed publishes semi-annually to find financial 'vulnerabilities.' This time AI asset valuations flagged as 'persistently elevated fragility' — official way of saying 'you're buying too high.'</span>
+      </div>
+<div class="jargon-item">
+        <span class="jargon-term"><span data-lang="zh">超级智能预期</span><span data-lang="en">Superintelligence Expectation</span></span>：<span data-lang="zh">市场认为AI很快会达到或超越人类智能水平，所以提前给AI公司天价估值。美联储认为这个预期可能过度乐观。</span><span data-lang="en">Markets believe AI will soon reach or exceed human intelligence, so pre-price AI companies at sky-high valuations. Fed thinks this may be overly optimistic.</span>
+      </div>
+<div class="jargon-item">
+        <span class="jargon-term"><span data-lang="zh">放大波动</span><span data-lang="en">Amplify Volatility</span></span>：<span data-lang="zh">AI公司投入巨资买芯片建数据中心，如果收入不及预期，资本开支变成沉没成本，股价跌幅会比普通公司更大。</span><span data-lang="en">AI companies invest heavily in chips and data centers. If revenue misses, capex becomes sunk cost, stock drops more than ordinary companies.</span>
+      </div>
 </div>
     </div>
 <div class="chain-card">
-      <div class="chain-title">⑤ 中国10月数据偏弱 → A股成长股杀跌 → 防御切换链 <span class="chain-status status-consensus">市场共识</span></div>
-      <div class="flow-nodes"><div class="flow-node trigger">工业增加值<br>放缓至4.8%</div><div class="flow-arrow">→</div><div class="flow-node normal">社零仅+0.4%<br>地产投资-21.6%</div><div class="flow-arrow">→</div><div class="flow-node normal">成长股杀估值<br>创业板-3.32%</div><div class="flow-arrow">→</div><div class="flow-node result-up">银行股创新高<br>恒指+0.8%（分化）</div></div>
-      <div class="jargon-list"><div class="jargon-item"><span class="jargon-term">社零（社会消费品零售总额）</span>：<span class="jargon-explain">老百姓花了多少钱买东西。+0.4%几乎零增长，剔除汽车后+2.5%说明汽车拖累严重。</span></div>
-<div class="jargon-item"><span class="jargon-term">错月因素</span>：<span class="jargon-explain">国家统计局解释，今年10月工作日比去年同期少，数据看起来差部分是"日历效应"不是真差。</span></div>
-<div class="jargon-item"><span class="jargon-term">防御切换</span>：<span class="jargon-explain">经济弱时资金从高风险成长股（科技、新能源）流向低风险高股息股（银行、公用事业），叫"防御"。</span></div>
-<div class="jargon-item"><span class="jargon-term">M2与M1剪刀差</span>：<span class="jargon-explain">M2是全部存款，M1是活期存款。差收窄说明活钱开始动起来，经济活跃度边际改善的微弱信号。</span></div>
+      <div class="chain-title"><span data-lang="zh">⑤ 中国10月数据偏弱 → A股成长股杀跌 → 防御切换链</span><span data-lang="en">5. China Oct Data Weak → A-share Growth Selloff → Defensive Rotation</span> <span class="chain-status status-consensus"><span data-lang="zh">市场共识</span><span data-lang="en">Consensus</span></span></div>
+      <div class="flow-nodes"><div class="flow-node trigger"><span data-lang="zh">工业增加值<br>放缓至4.8%</span><span data-lang="en">Industrial output<br>slows to 4.8%</span></div><div class="flow-arrow">→</div><div class="flow-node normal"><span data-lang="zh">社零仅+0.4%<br>地产投资-21.6%</span><span data-lang="en">Retail +0.4% only<br>Property invest -21.6%</span></div><div class="flow-arrow">→</div><div class="flow-node normal"><span data-lang="zh">成长股杀估值<br>创业板-3.32%</span><span data-lang="en">Growth stock selloff<br>ChiNext -3.32%</span></div><div class="flow-arrow">→</div><div class="flow-node result-up"><span data-lang="zh">银行股创新高<br>恒指+0.8%（分化）</span><span data-lang="en">Bank stocks new high<br>HSI +0.8% (divergence)</span></div></div>
+      <div class="jargon-list"><div class="jargon-item">
+        <span class="jargon-term"><span data-lang="zh">社零（社会消费品零售总额）</span><span data-lang="en">Retail Sales (Total Social Consumer Goods)</span></span>：<span data-lang="zh">老百姓花了多少钱买东西。+0.4%几乎零增长，剔除汽车后+2.5%说明汽车拖累严重。</span><span data-lang="en">How much people spent buying things. +0.4% is near zero; ex-auto +2.5% shows autos dragged heavily.</span>
+      </div>
+<div class="jargon-item">
+        <span class="jargon-term"><span data-lang="zh">错月因素</span><span data-lang="en">Calendar Effect</span></span>：<span data-lang="zh">国家统计局解释，今年10月工作日比去年同期少，数据看起来差部分是"日历效应"不是真差。</span><span data-lang="en">NBS explains October had fewer working days than last year — data looks worse partly due to 'calendar effect' not real weakness.</span>
+      </div>
+<div class="jargon-item">
+        <span class="jargon-term"><span data-lang="zh">防御切换</span><span data-lang="en">Defensive Rotation</span></span>：<span data-lang="zh">经济弱时资金从高风险成长股（科技、新能源）流向低风险高股息股（银行、公用事业），叫"防御"。</span><span data-lang="en">When economy weak, money flows from high-risk growth (tech, new energy) to low-risk high-dividend (banks, utilities) — called 'defensive.'</span>
+      </div>
+<div class="jargon-item">
+        <span class="jargon-term"><span data-lang="zh">M2与M1剪刀差</span><span data-lang="en">M2-M1 Scissor Gap</span></span>：<span data-lang="zh">M2是全部存款，M1是活期存款。差收窄说明活钱开始动起来，经济活跃度边际改善的微弱信号。</span><span data-lang="en">M2 is total deposits, M1 is demand deposits. Gap narrowing means active money starts moving — weak signal of economic improvement.</span>
+      </div>
 </div>
     </div>
 <div class="chain-card">
-      <div class="chain-title">⑥ 特朗普AI"国家领军企业"名单 → 出口管制路线之争链 <span class="chain-status status-unverified">待验证</span></div>
-      <div class="flow-nodes"><div class="flow-node trigger">20+企业列入<br>AI领军名单</div><div class="flow-arrow">→</div><div class="flow-node normal">获芯片出口<br>快速审批</div><div class="flow-arrow">→</div><div class="flow-node normal">与黄仁勋反对<br>芯片后门冲突</div><div class="flow-arrow">→</div><div class="flow-node result-down">AI管制路线<br>不确定性上升</div></div>
-      <div class="jargon-list"><div class="jargon-item"><span class="jargon-term">国家领军企业</span>：<span class="jargon-explain">特朗普政府认证的"信得过"AI公司，卖芯片给海外客户时走绿色通道不用慢慢审批。</span></div>
-<div class="jargon-item"><span class="jargon-term">芯片后门/追踪功能</span>：<span class="jargon-explain">在芯片里装"定位追踪"，卖出去后能监控谁在用、用来干嘛。黄仁勋反对，Anthropic支持，这是路线之争的核心。</span></div>
-<div class="jargon-item"><span class="jargon-term">鲁比奥 vs Anthropic</span>：<span class="jargon-explain">鲁比奥涉嫌把CIA报告改写后泄露给媒体推动黄仁勋下台；Anthropic被指向记者提供爆料。两者都在推动更严格的芯片管制。</span></div>
+      <div class="chain-title"><span data-lang="zh">⑥ 特朗普AI"国家领军企业"名单 → 出口管制路线之争链</span><span data-lang="en">6. Trump AI 'National Champion' List → Export Control Route Battle</span> <span class="chain-status status-unverified"><span data-lang="zh">待验证</span><span data-lang="en">Unverified</span></span></div>
+      <div class="flow-nodes"><div class="flow-node trigger"><span data-lang="zh">20+企业列入<br>AI领军名单</span><span data-lang="en">20+ companies<br>on AI champion list</span></div><div class="flow-arrow">→</div><div class="flow-node normal"><span data-lang="zh">获芯片出口<br>快速审批</span><span data-lang="en">Fast-track<br>chip export approval</span></div><div class="flow-arrow">→</div><div class="flow-node normal"><span data-lang="zh">与黄仁勋反对<br>芯片后门冲突</span><span data-lang="en">Conflicts with Huang<br>anti-backdoor stance</span></div><div class="flow-arrow">→</div><div class="flow-node result-down"><span data-lang="zh">AI管制路线<br>不确定性上升</span><span data-lang="en">AI control route<br>uncertainty rises</span></div></div>
+      <div class="jargon-list"><div class="jargon-item">
+        <span class="jargon-term"><span data-lang="zh">国家领军企业</span><span data-lang="en">National Champion Enterprise</span></span>：<span data-lang="zh">特朗普政府认证的"信得过"AI公司，卖芯片给海外客户时走绿色通道不用慢慢审批。</span><span data-lang="en">Trump admin certifies 'trusted' AI companies — get green channel for overseas chip sales without slow approval.</span>
+      </div>
+<div class="jargon-item">
+        <span class="jargon-term"><span data-lang="zh">芯片后门/追踪功能</span><span data-lang="en">Chip Backdoor/Tracking</span></span>：<span data-lang="zh">在芯片里装"定位追踪"，卖出去后能监控谁在用、用来干嘛。黄仁勋反对，Anthropic支持，这是路线之争的核心。</span><span data-lang="en">Install 'location tracking' in chips — can monitor who uses them and for what after sale. Huang opposes, Anthropic supports — core of the route battle.</span>
+      </div>
+<div class="jargon-item">
+        <span class="jargon-term"><span data-lang="zh">鲁比奥 vs Anthropic</span><span data-lang="en">Rubio vs Anthropic</span></span>：<span data-lang="zh">鲁比奥涉嫌把CIA报告改写后泄露给媒体推动黄仁勋下台；Anthropic被指向记者提供爆料。两者都在推动更严格的芯片管制。</span><span data-lang="en">Rubio allegedly rewrote CIA report and leaked to media to push Huang out; Anthropic allegedly provided tips to journalists. Both push stricter chip controls.</span>
+      </div>
 </div>
     </div>
 <div class="chain-card">
-      <div class="chain-title">⑦ SpaceX-特斯拉合并 + 星舰复用 → 估值范式重塑链 <span class="chain-status status-unverified">待验证</span></div>
-      <div class="flow-nodes"><div class="flow-node trigger">合并谈判提速<br>最快12月宣布</div><div class="flow-arrow">→</div><div class="flow-node normal">星舰"双回收"<br>飞船回收待验证</div><div class="flow-arrow">→</div><div class="flow-node normal">完全复用<br>压低入轨成本</div><div class="flow-arrow">→</div><div class="flow-node result-up">特斯拉+1.9%<br>SpaceX万亿估值</div></div>
-      <div class="jargon-list"><div class="jargon-item"><span class="jargon-term">双回收</span>：<span class="jargon-explain">火箭发射后，助推器（下半截）和飞船（上半截）都要回收重复使用。这次助推器爆炸了，飞船回收待验证。</span></div>
-<div class="jargon-item"><span class="jargon-term">筷子夹飞船</span>：<span class="jargon-explain">用发射塔的机械臂像筷子一样夹住降落中的火箭/飞船，不用着陆腿，节省重量和成本。</span></div>
-<div class="jargon-item"><span class="jargon-term">完全复用</span>：<span class="jargon-explain">火箭每一部分都能回收再用，就像飞机一样。一旦实现，发射成本可能降低90%以上，是SpaceX万亿估值的核心逻辑。</span></div>
-<div class="jargon-item"><span class="jargon-term">世纪合并</span>：<span class="jargon-explain">SpaceX（未上市）和特斯拉（上市）合并，将是人类历史上最大并购案，意味着太空资产可借特斯拉上市公司通道变现。</span></div>
+      <div class="chain-title"><span data-lang="zh">⑦ SpaceX-特斯拉合并 + 星舰复用 → 估值范式重塑链</span><span data-lang="en">7. SpaceX-Tesla Merger + Starship Reuse → Valuation Paradigm Shift</span> <span class="chain-status status-unverified"><span data-lang="zh">待验证</span><span data-lang="en">Unverified</span></span></div>
+      <div class="flow-nodes"><div class="flow-node trigger"><span data-lang="zh">合并谈判提速<br>最快12月宣布</span><span data-lang="en">Merger talks accelerate<br>announce as early as Dec</span></div><div class="flow-arrow">→</div><div class="flow-node normal"><span data-lang="zh">星舰"双回收"<br>飞船回收待验证</span><span data-lang="en">Starship 'dual recovery'<br>spacecraft pending</span></div><div class="flow-arrow">→</div><div class="flow-node normal"><span data-lang="zh">完全复用<br>压低入轨成本</span><span data-lang="en">Full reuse<br>lowers orbit cost</span></div><div class="flow-arrow">→</div><div class="flow-node result-up"><span data-lang="zh">特斯拉+1.9%<br>SpaceX万亿估值</span><span data-lang="en">Tesla +1.9%<br>SpaceX $1T valuation</span></div></div>
+      <div class="jargon-list"><div class="jargon-item">
+        <span class="jargon-term"><span data-lang="zh">双回收</span><span data-lang="en">Dual Recovery</span></span>：<span data-lang="zh">火箭发射后，助推器（下半截）和飞船（上半截）都要回收重复使用。这次助推器爆炸了，飞船回收待验证。</span><span data-lang="en">After launch, both booster (lower half) and spacecraft (upper half) must be recovered and reused. This time booster exploded, spacecraft recovery pending.</span>
+      </div>
+<div class="jargon-item">
+        <span class="jargon-term"><span data-lang="zh">筷子夹飞船</span><span data-lang="en">Chopstick Catch</span></span>：<span data-lang="zh">用发射塔的机械臂像筷子一样夹住降落中的火箭/飞船，不用着陆腿，节省重量和成本。</span><span data-lang="en">Use launch tower mechanical arms to catch descending rocket/spacecraft like chopsticks — no landing legs, saves weight and cost.</span>
+      </div>
+<div class="jargon-item">
+        <span class="jargon-term"><span data-lang="zh">完全复用</span><span data-lang="en">Full Reusability</span></span>：<span data-lang="zh">火箭每一部分都能回收再用，就像飞机一样。一旦实现，发射成本可能降低90%以上，是SpaceX万亿估值的核心逻辑。</span><span data-lang="en">Every part of rocket recovered and reused, like an airplane. Once achieved, launch costs may drop 90%+ — core logic for SpaceX's trillion-dollar valuation.</span>
+      </div>
+<div class="jargon-item">
+        <span class="jargon-term"><span data-lang="zh">世纪合并</span><span data-lang="en">Century Merger</span></span>：<span data-lang="zh">SpaceX（未上市）和特斯拉（上市）合并，将是人类历史上最大并购案，意味着太空资产可借特斯拉上市公司通道变现。</span><span data-lang="en">SpaceX (private) and Tesla (public) merger would be the largest in history — space assets can be monetized through Tesla's public listing.</span>
+      </div>
 </div>
     </div>
 
@@ -496,70 +567,70 @@
 
   <!-- Verifications -->
   <div class="section">
-    <div class="section-title">🔍 待验证清单（5条）</div>
+    <div class="section-title"><span data-lang="zh">🔍 待验证清单（5条）</span><span data-lang="en">🔍 Watchlist (5)</span></div>
     <div class="verify-card">
-      <div class="verify-title">① 英伟达CEO危机是否会演变为AI capex"急刹车"？</div>
+      <div class="verify-title"><span data-lang="zh">① 英伟达CEO危机是否会演变为AI capex"急刹车"？</span><span data-lang="en">1. Will the Nvidia CEO crisis trigger an AI capex 'hard stop'?</span></div>
       <ul class="verify-list"><li>黄仁勋是否正式复职（关注本周特朗普亚洲行是否提及）</li>
 <li>5000亿AI融资平台首笔交易是否在明年1月落地</li>
 <li>微软/Meta/亚马逊Q4资本开支指引是否下调</li>
 <li>英伟达下季财报数据中心收入环比增速</li>
 </ul>
-      <div class="analogy"><strong>📖 历史类比：</strong>2000年思科CEO Chambers-era估值崩塌 — 互联网泡沫时思科是"卖铲人"，capex周期逆转后股价跌去80%。</div>
-      <div class="lesson">💡 <strong>教训：</strong>教训：当"卖铲人"自身出现领导危机，往往标志着整个capex周期见顶。</div>
-      <div class="diff">⚡ <strong>关键区别：</strong>关键区别：当年思科没有5000亿融资平台这种"兜底机制"，且AI需求有实际收入支撑（非纯预期），崩塌速度可能更慢但修复也可能更快。</div>
+      <div class="analogy"><strong><span data-lang="zh">📖 历史类比：</span><span data-lang="en">📖 Historical Analogy: </span></strong><span data-lang="zh">2000年思科CEO Chambers-era估值崩塌 — 互联网泡沫时思科是"卖铲人"，capex周期逆转后股价跌去80%。</span><span data-lang="en">2000 Cisco CEO Chambers-era Valuation Collapse — During dot-com bubble, Cisco was the 'shovel seller.' When capex cycle reversed, stock dropped 80%.</span></div>
+      <div class="lesson">💡 <strong><span data-lang="zh">教训：</span><span data-lang="en">Lesson: </span></strong><span data-lang="zh">教训：当"卖铲人"自身出现领导危机，往往标志着整个capex周期见顶。</span><span data-lang="en">Lesson: When the 'shovel seller' itself has a leadership crisis, it often marks the peak of the entire capex cycle.</span></div>
+      <div class="diff">⚡ <strong><span data-lang="zh">关键区别：</span><span data-lang="en">Key Difference: </span></strong><span data-lang="zh">关键区别：当年思科没有5000亿融资平台这种"兜底机制"，且AI需求有实际收入支撑（非纯预期），崩塌速度可能更慢但修复也可能更快。</span><span data-lang="en">Key difference: Cisco had no $500B financing 'safety net,' and AI demand has real revenue support (not pure expectations). Collapse may be slower but recovery could be faster.</span></div>
     </div>
 <div class="verify-card">
-      <div class="verify-title">② 强美元是否会引爆新兴市场/日元危机？</div>
+      <div class="verify-title"><span data-lang="zh">② 强美元是否会引爆新兴市场/日元危机？</span><span data-lang="en">2. Will the strong USD trigger an EM/JPY crisis?</span></div>
       <ul class="verify-list"><li>美元/日元能否站稳160上方（日本央行干预阈值）</li>
 <li>日本央行12月是否紧急加息（高田创已暗示灵活应对）</li>
 <li>美债10年期收益率是否突破5.2%并持续</li>
 <li>新兴市场美元债CDS利差是否走阔</li>
 </ul>
-      <div class="analogy"><strong>📖 历史类比：</strong>1997年亚洲金融危机 / 2022年英镑-日元崩跌 — 强美元+美债收益率飙升→资本回流美国→新兴市场货币崩塌。</div>
-      <div class="lesson">💡 <strong>教训：</strong>教训：美元指数突破105并持续3个月以上，新兴市场几乎必然出事。</div>
-      <div class="diff">⚡ <strong>关键区别：</strong>关键区别：当前日本外储充裕（1.2万亿美元），且日元贬值部分是日本央行默许的（利于出口），与1997年被动贬值不同。但日元破160后日本企业进口成本压力可能倒逼央行急转。</div>
+      <div class="analogy"><strong><span data-lang="zh">📖 历史类比：</span><span data-lang="en">📖 Historical Analogy: </span></strong><span data-lang="zh">1997年亚洲金融危机 / 2022年英镑-日元崩跌 — 强美元+美债收益率飙升→资本回流美国→新兴市场货币崩塌。</span><span data-lang="en">1997 Asian Financial Crisis / 2022 GBP-JPY Crash — Strong USD + UST yield surge → capital flows back to US → EM currency collapse.</span></div>
+      <div class="lesson">💡 <strong><span data-lang="zh">教训：</span><span data-lang="en">Lesson: </span></strong><span data-lang="zh">教训：美元指数突破105并持续3个月以上，新兴市场几乎必然出事。</span><span data-lang="en">Lesson: When Dollar Index exceeds 105 for 3+ months, EM crises are almost inevitable.</span></div>
+      <div class="diff">⚡ <strong><span data-lang="zh">关键区别：</span><span data-lang="en">Key Difference: </span></strong><span data-lang="zh">关键区别：当前日本外储充裕（1.2万亿美元），且日元贬值部分是日本央行默许的（利于出口），与1997年被动贬值不同。但日元破160后日本企业进口成本压力可能倒逼央行急转。</span><span data-lang="en">Key difference: Japan has ample reserves ($1.2T), and JPY depreciation is partly BOJ-tolerated (export-friendly), unlike 1997's passive devaluation. But above 160, import cost pressure may force BOJ to pivot.</span></div>
     </div>
 <div class="verify-card">
-      <div class="verify-title">③ 油价暴跌是"通胀退烧药"还是"衰退信号"？</div>
+      <div class="verify-title"><span data-lang="zh">③ 油价暴跌是"通胀退烧药"还是"衰退信号"？</span><span data-lang="en">3. Is the oil crash an 'inflation cure' or 'recession signal'?</span></div>
       <ul class="verify-list"><li>OPEC+是否紧急召开会议讨论减产</li>
 <li>美国页岩油钻机数是否开始下降（盈亏平衡线约$65-70）</li>
 <li>美国10月CPI能源分项环比变化</li>
 <li>高盛/IEA月报是否进一步下调2027需求预测</li>
 </ul>
-      <div class="analogy"><strong>📖 历史类比：</strong>2014-2015年油价从$100崩至$30 — 沙特拒绝减产抢市场份额，油价腰斩，一度被视为"消费者红利"，但实际是全球需求放缓的前兆。</div>
-      <div class="lesson">💡 <strong>教训：</strong>教训：油价大跌可以是好事（降通胀），但如果是因为需求塌方导致的，那就是衰退信号而非红利。</div>
-      <div class="diff">⚡ <strong>关键区别：</strong>关键区别：本次油价跌的主因是中东供应恢复而非需求崩塌，且高盛明确预测"过剩"而非"需求萎缩"，更接近2014年供给侧冲击。但若叠加AI capex放缓→就业走弱，可能演变为需求端问题。</div>
+      <div class="analogy"><strong><span data-lang="zh">📖 历史类比：</span><span data-lang="en">📖 Historical Analogy: </span></strong><span data-lang="zh">2014-2015年油价从$100崩至$30 — 沙特拒绝减产抢市场份额，油价腰斩，一度被视为"消费者红利"，但实际是全球需求放缓的前兆。</span><span data-lang="en">2014-2015 Oil Crash from $100 to $30 — Saudi refused to cut production for market share, oil halved — seen as 'consumer dividend' but actually a precursor to global demand slowdown.</span></div>
+      <div class="lesson">💡 <strong><span data-lang="zh">教训：</span><span data-lang="en">Lesson: </span></strong><span data-lang="zh">教训：油价大跌可以是好事（降通胀），但如果是因为需求塌方导致的，那就是衰退信号而非红利。</span><span data-lang="en">Lesson: Oil price drops can be good (lower inflation), but if caused by demand collapse, it's a recession signal not a dividend.</span></div>
+      <div class="diff">⚡ <strong><span data-lang="zh">关键区别：</span><span data-lang="en">Key Difference: </span></strong><span data-lang="zh">关键区别：本次油价跌的主因是中东供应恢复而非需求崩塌，且高盛明确预测"过剩"而非"需求萎缩"，更接近2014年供给侧冲击。但若叠加AI capex放缓→就业走弱，可能演变为需求端问题。</span><span data-lang="en">Key difference: This oil drop is mainly from Middle East supply recovery, not demand collapse. Goldman explicitly forecasts 'surplus' not 'demand shrinkage' — closer to 2014 supply-side shock. But if AI capex slowdown → job weakness, could become demand-side.</span></div>
     </div>
 <div class="verify-card">
-      <div class="verify-title">④ 中国经济数据偏弱是"错月扰动"还是"趋势性放缓"？</div>
+      <div class="verify-title"><span data-lang="zh">④ 中国经济数据偏弱是"错月扰动"还是"趋势性放缓"？</span><span data-lang="en">4. Is China's weak data a 'calendar effect' or 'structural slowdown'?</span></div>
       <ul class="verify-list"><li>11月工业增加值是否反弹（验证"错月"解释）</li>
 <li>房地产销售面积环比是否企稳（政策效果验证）</li>
 <li>社零中汽车分项是否回升（以旧换新效果）</li>
 <li>央行是否推出新的结构性货币政策工具</li>
 </ul>
-      <div class="analogy"><strong>📖 历史类比：</strong>2015年中国经济数据"骤降" — 当年7月数据突然走弱，官方解释为"基数效应/季节因素"，但实际是经济进入L型下行通道的开始。</div>
-      <div class="lesson">💡 <strong>教训：</strong>教训：当官方用"技术性因素"解释数据走弱时，至少有一半概率是趋势性问题而非暂时扰动。</div>
-      <div class="diff">⚡ <strong>关键区别：</strong>关键区别：当前信息服务业+20.5%、装备制造业出口+12.5%，结构亮点比2015年明显。但地产投资-21.6%的拖累力度也远超2015年，政策对冲力度需要更大。</div>
+      <div class="analogy"><strong><span data-lang="zh">📖 历史类比：</span><span data-lang="en">📖 Historical Analogy: </span></strong><span data-lang="zh">2015年中国经济数据"骤降" — 当年7月数据突然走弱，官方解释为"基数效应/季节因素"，但实际是经济进入L型下行通道的开始。</span><span data-lang="en">2015 China Data 'Sudden Drop' — July data suddenly weakened, officials explained as 'base effect/seasonal,' but it was actually the start of L-shaped downturn.</span></div>
+      <div class="lesson">💡 <strong><span data-lang="zh">教训：</span><span data-lang="en">Lesson: </span></strong><span data-lang="zh">教训：当官方用"技术性因素"解释数据走弱时，至少有一半概率是趋势性问题而非暂时扰动。</span><span data-lang="en">Lesson: When officials use 'technical factors' to explain weak data, there's at least a 50% chance it's structural, not temporary.</span></div>
+      <div class="diff">⚡ <strong><span data-lang="zh">关键区别：</span><span data-lang="en">Key Difference: </span></strong><span data-lang="zh">关键区别：当前信息服务业+20.5%、装备制造业出口+12.5%，结构亮点比2015年明显。但地产投资-21.6%的拖累力度也远超2015年，政策对冲力度需要更大。</span><span data-lang="en">Key difference: IT services +20.5%, equipment manufacturing exports +12.5% — structural bright spots clearer than 2015. But property investment -21.6% drag far exceeds 2015, requiring larger policy offset.</span></div>
     </div>
 <div class="verify-card">
-      <div class="verify-title">⑤ SpaceX-特斯拉合并是否真的会在12月落地？</div>
+      <div class="verify-title"><span data-lang="zh">⑤ SpaceX-特斯拉合并是否真的会在12月落地？</span><span data-lang="en">5. Will the SpaceX-Tesla merger actually close in December?</span></div>
       <ul class="verify-list"><li>SEC是否对跨界合并提出反垄断审查</li>
 <li>特斯拉股东大会是否召开投票</li>
 <li>SpaceX最新一轮融资估值</li>
 <li>星舰飞船回收是否成功（完全复用可行性验证）</li>
 </ul>
-      <div class="analogy"><strong>📖 历史类比：</strong>2000年时代华纳-美国在线（AOL）合并 — 号称"世纪合并"，互联网泡沫巅峰产物，合并后市值蒸发超80%。</div>
-      <div class="lesson">💡 <strong>教训：</strong>教训：在估值高点宣布的"世纪合并"，往往成为泡沫顶部标志而非价值创造起点。</div>
-      <div class="diff">⚡ <strong>关键区别：</strong>关键区别：AOL-时代华纳是纯股票互换、无实体协同；SpaceX-特斯拉有真实技术协同（自动驾驶+卫星通信+能源），且星舰复用若成功有实质成本优势。但监管阻力远大于当年。</div>
+      <div class="analogy"><strong><span data-lang="zh">📖 历史类比：</span><span data-lang="en">📖 Historical Analogy: </span></strong><span data-lang="zh">2000年时代华纳-美国在线（AOL）合并 — 号称"世纪合并"，互联网泡沫巅峰产物，合并后市值蒸发超80%。</span><span data-lang="en">2000 AOL-Time Warner Merger — Dubbed 'merger of the century,' peak dot-com bubble product. Post-merger market cap evaporated 80%+.</span></div>
+      <div class="lesson">💡 <strong><span data-lang="zh">教训：</span><span data-lang="en">Lesson: </span></strong><span data-lang="zh">教训：在估值高点宣布的"世纪合并"，往往成为泡沫顶部标志而非价值创造起点。</span><span data-lang="en">Lesson: 'Century mergers' announced at valuation peaks often mark bubble tops, not value creation starts.</span></div>
+      <div class="diff">⚡ <strong><span data-lang="zh">关键区别：</span><span data-lang="en">Key Difference: </span></strong><span data-lang="zh">关键区别：AOL-时代华纳是纯股票互换、无实体协同；SpaceX-特斯拉有真实技术协同（自动驾驶+卫星通信+能源），且星舰复用若成功有实质成本优势。但监管阻力远大于当年。</span><span data-lang="en">Key difference: AOL-TW was pure stock swap with no physical synergy; SpaceX-Tesla has real tech synergy (autonomous driving + satellite comms + energy), and Starship reuse success means real cost advantage. But regulatory阻力 is far greater.</span></div>
     </div>
 
   </div>
 
   <footer>
-    <p>📊 本市场地图基于华尔街见闻快讯（wallstreetcn.com/live/global）2026-11-16 约12:36（北京时间）抓取内容生成</p>
-    <p>三层漏斗：① 价格变动/新信息/宏观/资产相关 → ② 去重去噪 → ③ 保留10条核心，7条因果链，5条待验证</p>
-    <p style="margin-top:8px; color: var(--text-dim);">⚠️ 仅供研究参考，不构成投资建议</p>
-    <p style="margin-top:8px;">🤖 自动更新：GitHub Actions 每日13:00(UTC+8)自动抓取 → 构建 → 部署</p>
+    <p><span data-lang="zh">📊 本市场地图基于华尔街见闻快讯（wallstreetcn.com/live/global）2026-11-16 ~12:36 (UTC+8)抓取内容生成</span><span data-lang="en">📊 Based on WallstreetCN flash news (wallstreetcn.com/live/global), 2026-11-16 ~12:36 (UTC+8)</span></p>
+    <p><span data-lang="zh">三层漏斗：① 价格变动/新信息/宏观/资产相关 → ② 去重去噪 → ③ 保留10条核心，7条因果链，5条待验证</span><span data-lang="en">3-layer funnel: ① Price/Info/Macro filter → ② Dedup → ③ Top 10 events, 7 chains, 5 watchlist items</span></p>
+    <p style="margin-top:8px; color: var(--text-dim);"><span data-lang="zh">⚠️ 仅供研究参考，不构成投资建议</span><span data-lang="en">⚠️ For research reference only, not investment advice</span></p>
+    <p style="margin-top:8px;"><span data-lang="zh">🤖 自动更新：GitHub Actions 每半小时自动抓取 → 构建 → 部署</span><span data-lang="en">🤖 Auto-updated: GitHub Actions every 30min → Build → Deploy</span></p>
   </footer>
 </div>
 
@@ -577,10 +648,37 @@ function toggleTheme() {
   if (saved) document.body.setAttribute('data-theme', saved);
 })();
 
+// Language toggle
+function toggleLang() {
+  var body = document.body;
+  var current = body.className.indexOf('lang-en') >= 0 ? 'en' : 'zh';
+  if (current === 'zh') {
+    body.className = body.className.replace('lang-zh', 'lang-en');
+    document.querySelector('.lang-toggle').textContent = '中';
+    document.documentElement.lang = 'en';
+    localStorage.setItem('lang', 'en');
+  } else {
+    body.className = body.className.replace('lang-en', 'lang-zh');
+    document.querySelector('.lang-toggle').textContent = 'EN';
+    document.documentElement.lang = 'zh-CN';
+    localStorage.setItem('lang', 'zh');
+  }
+}
+(function() {
+  var saved = localStorage.getItem('lang');
+  if (saved === 'en') {
+    document.body.className = document.body.className.replace('lang-zh', 'lang-en');
+    var btn = document.querySelector('.lang-toggle');
+    if (btn) btn.textContent = '中';
+    document.documentElement.lang = 'en';
+  }
+})();
+
 // Copy link
 function copyLink() {
   navigator.clipboard.writeText(window.location.href).then(function() {
-    alert('链接已复制！');
+    var msg = document.body.className.indexOf('lang-en') >= 0 ? 'Link copied!' : '链接已复制！';
+    alert(msg);
   });
 }
 

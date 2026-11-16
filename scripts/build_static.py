@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-静态构建脚本 - 将 data/*.json 渲染为静态 HTML
-用于 Cloudflare Pages 部署（无需后端服务器）
+静态构建脚本 - 将 data/*.json 渲染为静态 HTML（支持中英文切换）
+用于 GitHub Pages 部署（无需后端服务器）
 """
 
 import json
@@ -14,6 +14,51 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_DIR = os.path.join(BASE_DIR, "data")
 OUTPUT_DIR = os.path.join(BASE_DIR, "public")
 
+# ========== 翻译字典 ==========
+
+I18N = {
+    # 导航
+    "today": {"zh": "今日", "en": "Today"},
+    "history": {"zh": "历史归档", "en": "Archive"},
+    "rss": {"zh": "RSS订阅", "en": "RSS"},
+    "json_api": {"zh": "JSON API", "en": "JSON API"},
+    # 分享
+    "copy_link": {"zh": "🔗 复制链接", "en": "🔗 Copy Link"},
+    "link_copied": {"zh": "链接已复制！", "en": "Link copied!"},
+    # 章节
+    "core_news": {"zh": "📌 核心要闻", "en": "📌 Key Headlines"},
+    "causal_chains": {"zh": "🔗 因果链逐条拆解", "en": "🔗 Causal Chain Breakdown"},
+    "verify_list": {"zh": "🔍 待验证清单", "en": "🔍 Watchlist"},
+    # 事件卡
+    "affected_assets": {"zh": "影响资产：", "en": "Affected Assets: "},
+    # 因果链
+    "market_consensus": {"zh": "市场共识", "en": "Consensus"},
+    "to_verify": {"zh": "待验证", "en": "Unverified"},
+    # 待验证
+    "analogy_label": {"zh": "📖 历史类比：", "en": "📖 Historical Analogy: "},
+    "lesson_label": {"zh": "💡 教训：", "en": "💡 Lesson: "},
+    "diff_label": {"zh": "⚡ 关键区别：", "en": "⚡ Key Difference: "},
+    # 页脚
+    "footer_source": {"zh": "📊 本市场地图基于华尔街见闻快讯", "en": "📊 Based on WallstreetCN flash news"},
+    "footer_funnel": {"zh": "三层漏斗：① 价格变动/新信息/宏观/资产相关 → ② 去重去噪 → ③ 保留", "en": "3-layer funnel: ① Price/Info/Macro → ② Dedup → ③ Top "},
+    "footer_funnel_mid": {"zh": "条核心，", "en": " key events, "},
+    "footer_funnel_end": {"zh": "条待验证", "en": " watchlist items"},
+    "footer_disclaimer": {"zh": "⚠️ 仅供研究参考，不构成投资建议", "en": "⚠️ For research reference only, not investment advice"},
+    "footer_auto": {"zh": "🤖 自动更新：GitHub Actions 每半小时自动抓取 → 构建 → 部署", "en": "🤖 Auto-updated: GitHub Actions every 30min → Build → Deploy"},
+    # 历史
+    "back_today": {"zh": "← 返回今日", "en": "← Back to Today"},
+    "history_title": {"zh": "📅 历史归档", "en": "📅 Archive"},
+    "weekday_map": {
+        "星期一": {"zh": "星期一", "en": "Monday"},
+        "星期二": {"zh": "星期二", "en": "Tuesday"},
+        "星期三": {"zh": "星期三", "en": "Wednesday"},
+        "星期四": {"zh": "星期四", "en": "Thursday"},
+        "星期五": {"zh": "星期五", "en": "Friday"},
+        "星期六": {"zh": "星期六", "en": "Saturday"},
+        "星期日": {"zh": "星期日", "en": "Sunday"},
+    }
+}
+
 # ========== HTML 模板 ==========
 
 HTML_TEMPLATE = '''<!DOCTYPE html>
@@ -21,7 +66,7 @@ HTML_TEMPLATE = '''<!DOCTYPE html>
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>每日市场地图 · {{ date }}</title>
+<title>每日市场地图 · Daily Market Map · {{ date }}</title>
 <meta name="description" content="华尔街见闻要闻三层漏斗筛选 → 四列表 → 因果链 → 待验证">
 <style>
   :root {
@@ -89,7 +134,7 @@ HTML_TEMPLATE = '''<!DOCTYPE html>
     transition: all 0.2s;
   }
   .topbar-nav a:hover { color: var(--accent); border-color: var(--accent); }
-  .theme-toggle {
+  .icon-btn {
     background: var(--card-2);
     border: 1px solid var(--border);
     border-radius: 6px;
@@ -99,7 +144,21 @@ HTML_TEMPLATE = '''<!DOCTYPE html>
     color: var(--text);
     transition: all 0.2s;
   }
-  .theme-toggle:hover { border-color: var(--accent); }
+  .icon-btn:hover { border-color: var(--accent); }
+  .lang-toggle {
+    background: var(--card-2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 5px 12px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--accent);
+    transition: all 0.2s;
+    min-width: 56px;
+    text-align: center;
+  }
+  .lang-toggle:hover { border-color: var(--accent); background: rgba(212,175,55,0.1); }
 
   /* Stats */
   .stats-grid {
@@ -247,7 +306,7 @@ HTML_TEMPLATE = '''<!DOCTYPE html>
     position: relative;
   }
   .verify-list li::before {
-    content: "☐";
+    content: "\\2610";
     position: absolute;
     left: 0;
     color: var(--accent);
@@ -307,6 +366,12 @@ HTML_TEMPLATE = '''<!DOCTYPE html>
     font-size: 12px;
   }
 
+  /* i18n: hide non-active language by default */
+  [data-lang="en"] { display: none; }
+  body.lang-en [data-lang="zh"] { display: none; }
+  body.lang-en [data-lang="en"] { display: inline; }
+  body.lang-en [data-lang="en"][style*="block"] { display: block; }
+
   /* Responsive */
   @media (max-width: 768px) {
     .container { padding: 12px; }
@@ -321,28 +386,29 @@ HTML_TEMPLATE = '''<!DOCTYPE html>
   }
 </style>
 </head>
-<body data-theme="dark">
+<body data-theme="dark" class="lang-zh">
 
 <div class="topbar">
   <div class="topbar-left">
     <div class="topbar-logo">📊 Macro Market Map</div>
-    <div class="topbar-date">{{ date }} {{ weekday }}</div>
+    <div class="topbar-date">{{ date }} <span data-lang="zh">{{ weekday_zh }}</span><span data-lang="en">{{ weekday_en }}</span></div>
   </div>
   <div class="topbar-nav">
-    <a href="/">今日</a>
-    <a href="/history.html">历史归档</a>
-    <a href="/rss.xml">RSS订阅</a>
+    <a href="/"><span data-lang="zh">今日</span><span data-lang="en">Today</span></a>
+    <a href="/history.html"><span data-lang="zh">历史归档</span><span data-lang="en">Archive</span></a>
+    <a href="/rss.xml">RSS</a>
     <a href="/api/latest.json">JSON API</a>
-    <button class="theme-toggle" onclick="toggleTheme()">🌙/☀️</button>
+    <button class="lang-toggle" onclick="toggleLang()">EN</button>
+    <button class="icon-btn" onclick="toggleTheme()">🌙/☀️</button>
   </div>
 </div>
 
 <div class="container">
 
   <div class="share-bar">
-    <a class="share-btn" href="https://twitter.com/intent/tweet?text=每日市场地图 {{ date }}" target="_blank">🐦 Twitter</a>
-    <a class="share-btn" href="https://service.weibo.com/share/share.php?title=每日市场地图 {{ date }}" target="_blank">📷 微博</a>
-    <button class="share-btn" onclick="copyLink()">🔗 复制链接</button>
+    <a class="share-btn" href="https://twitter.com/intent/tweet?text=Daily%20Market%20Map%20{{ date }}" target="_blank">🐦 Twitter</a>
+    <a class="share-btn" href="https://service.weibo.com/share/share.php?title=每日市场地图 {{ date }}" target="_blank"><span data-lang="zh">📷 微博</span><span data-lang="en">📷 Weibo</span></a>
+    <button class="share-btn" onclick="copyLink()"><span data-lang="zh">🔗 复制链接</span><span data-lang="en">🔗 Copy Link</span></button>
   </div>
 
   <!-- Stats -->
@@ -352,27 +418,27 @@ HTML_TEMPLATE = '''<!DOCTYPE html>
 
   <!-- Events -->
   <div class="section">
-    <div class="section-title">📌 核心要闻（{{ events_count }}条）</div>
+    <div class="section-title"><span data-lang="zh">📌 核心要闻（{{ events_count }}条）</span><span data-lang="en">📌 Key Headlines ({{ events_count }})</span></div>
     {{ events_html }}
   </div>
 
   <!-- Chains -->
   <div class="section">
-    <div class="section-title">🔗 因果链逐条拆解（{{ chains_count }}条）</div>
+    <div class="section-title"><span data-lang="zh">🔗 因果链逐条拆解（{{ chains_count }}条）</span><span data-lang="en">🔗 Causal Chain Breakdown ({{ chains_count }})</span></div>
     {{ chains_html }}
   </div>
 
   <!-- Verifications -->
   <div class="section">
-    <div class="section-title">🔍 待验证清单（{{ verifications_count }}条）</div>
+    <div class="section-title"><span data-lang="zh">🔍 待验证清单（{{ verifications_count }}条）</span><span data-lang="en">🔍 Watchlist ({{ verifications_count }})</span></div>
     {{ verifications_html }}
   </div>
 
   <footer>
-    <p>📊 本市场地图基于华尔街见闻快讯（{{ source }}）{{ date }} {{ crawl_time }}抓取内容生成</p>
-    <p>三层漏斗：① 价格变动/新信息/宏观/资产相关 → ② 去重去噪 → ③ 保留{{ events_count }}条核心，{{ chains_count }}条因果链，{{ verifications_count }}条待验证</p>
-    <p style="margin-top:8px; color: var(--text-dim);">⚠️ 仅供研究参考，不构成投资建议</p>
-    <p style="margin-top:8px;">🤖 自动更新：GitHub Actions 每日13:00(UTC+8)自动抓取 → 构建 → 部署</p>
+    <p><span data-lang="zh">📊 本市场地图基于华尔街见闻快讯（{{ source }}）{{ date }} {{ crawl_time }}抓取内容生成</span><span data-lang="en">📊 Based on WallstreetCN flash news ({{ source }}), {{ date }} {{ crawl_time }}</span></p>
+    <p><span data-lang="zh">三层漏斗：① 价格变动/新信息/宏观/资产相关 → ② 去重去噪 → ③ 保留{{ events_count }}条核心，{{ chains_count }}条因果链，{{ verifications_count }}条待验证</span><span data-lang="en">3-layer funnel: ① Price/Info/Macro filter → ② Dedup → ③ Top {{ events_count }} events, {{ chains_count }} chains, {{ verifications_count }} watchlist items</span></p>
+    <p style="margin-top:8px; color: var(--text-dim);"><span data-lang="zh">⚠️ 仅供研究参考，不构成投资建议</span><span data-lang="en">⚠️ For research reference only, not investment advice</span></p>
+    <p style="margin-top:8px;"><span data-lang="zh">🤖 自动更新：GitHub Actions 每半小时自动抓取 → 构建 → 部署</span><span data-lang="en">🤖 Auto-updated: GitHub Actions every 30min → Build → Deploy</span></p>
   </footer>
 </div>
 
@@ -390,10 +456,37 @@ function toggleTheme() {
   if (saved) document.body.setAttribute('data-theme', saved);
 })();
 
+// Language toggle
+function toggleLang() {
+  var body = document.body;
+  var current = body.className.indexOf('lang-en') >= 0 ? 'en' : 'zh';
+  if (current === 'zh') {
+    body.className = body.className.replace('lang-zh', 'lang-en');
+    document.querySelector('.lang-toggle').textContent = '中';
+    document.documentElement.lang = 'en';
+    localStorage.setItem('lang', 'en');
+  } else {
+    body.className = body.className.replace('lang-en', 'lang-zh');
+    document.querySelector('.lang-toggle').textContent = 'EN';
+    document.documentElement.lang = 'zh-CN';
+    localStorage.setItem('lang', 'zh');
+  }
+}
+(function() {
+  var saved = localStorage.getItem('lang');
+  if (saved === 'en') {
+    document.body.className = document.body.className.replace('lang-zh', 'lang-en');
+    var btn = document.querySelector('.lang-toggle');
+    if (btn) btn.textContent = '中';
+    document.documentElement.lang = 'en';
+  }
+})();
+
 // Copy link
 function copyLink() {
   navigator.clipboard.writeText(window.location.href).then(function() {
-    alert('链接已复制！');
+    var msg = document.body.className.indexOf('lang-en') >= 0 ? 'Link copied!' : '链接已复制！';
+    alert(msg);
   });
 }
 
@@ -404,59 +497,103 @@ setTimeout(function() { location.reload(); }, 5 * 60 * 1000);
 </html>'''
 
 
+def translate_weekday(weekday_zh):
+    """把中文星期翻译成英文"""
+    mapping = {
+        "星期一": "Monday", "星期二": "Tuesday", "星期三": "Wednesday",
+        "星期四": "Thursday", "星期五": "Friday", "星期六": "Saturday", "星期日": "Sunday",
+    }
+    return mapping.get(weekday_zh, weekday_zh)
+
+
 def render_stats(stats):
+    """渲染统计卡片，中文和英文都包含"""
     html = ""
     for s in stats:
         dir_class = f"stat-{s.get('dir', 'neutral')}"
+        label_en = s.get("label_en", s.get("label", ""))
+        change_en = s.get("change_en", s.get("change", ""))
         html += f'''<div class="stat-card">
-      <div class="stat-label">{s.get('label','')}</div>
+      <div class="stat-label"><span data-lang="zh">{s.get('label','')}</span><span data-lang="en">{label_en}</span></div>
       <div class="stat-value {dir_class}">{s.get('value','')}</div>
-      <div class="stat-change">{s.get('change','')}</div>
+      <div class="stat-change"><span data-lang="zh">{s.get('change','')}</span><span data-lang="en">{change_en}</span></div>
     </div>\n'''
     return html
 
 
+def translate_tag(text):
+    """翻译标签"""
+    mapping = {
+        "AI": "AI", "政策": "Policy", "央行": "Central Bank", "能源": "Energy",
+        "中国": "China", "生物科技": "Biotech", "财政": "Fiscal", "科技": "Tech",
+        "流动性": "Liquidity",
+    }
+    return mapping.get(text, text)
+
+
+def translate_event(ev):
+    """翻译事件内容"""
+    return {
+        "event_en": ev.get("event_en", ev.get("event", "")),
+        "assets_en": ev.get("assets_en", ev.get("assets", "")),
+        "logic_en": ev.get("logic_en", ev.get("logic", "")),
+    }
+
+
 def render_events(events):
+    """渲染事件卡片，中英文双语"""
     html = ""
     for ev in events:
         tags_html = ""
         for tag in ev.get("tags", []):
-            tags_html += f'<span class="tag tag-{tag["type"]}">{tag["text"]}</span>'
+            tag_en = translate_tag(tag["text"])
+            tags_html += f'<span class="tag tag-{tag["type"]}"><span data-lang="zh">{tag["text"]}</span><span data-lang="en">{tag_en}</span></span>'
 
         dir = ev.get("dir", "neutral")
         dir_class = f"dir-{dir}"
         arrow = {"up": "📈", "down": "📉", "split": "⚖️", "neutral": "➡️"}.get(dir, "➡️")
 
+        tr = translate_event(ev)
+
         html += f'''<div class="event-card">
       <div class="event-tags">{tags_html}</div>
-      <div class="event-text"><span class="dir-arrow {dir_class}">{arrow}</span> {ev.get("event","")}</div>
-      <div class="event-assets"><strong>影响资产：</strong>{ev.get("assets","")}</div>
-      <div class="event-logic">{ev.get("logic","")}</div>
+      <div class="event-text"><span class="dir-arrow {dir_class}">{arrow}</span> <span data-lang="zh">{ev.get("event","")}</span><span data-lang="en">{tr["event_en"]}</span></div>
+      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh">{ev.get("assets","")}</span><span data-lang="en">{tr["assets_en"]}</span></div>
+      <div class="event-logic"><span data-lang="zh">{ev.get("logic","")}</span><span data-lang="en">{tr["logic_en"]}</span></div>
     </div>\n'''
     return html
 
 
 def render_chains(chains):
+    """渲染因果链，中英文双语"""
     html = ""
     for ch in chains:
         status = ch.get("status", "unverified")
         status_class = f"status-{status}"
-        status_text = "市场共识" if status == "consensus" else "待验证"
+        status_zh = "市场共识" if status == "consensus" else "待验证"
+        status_en = "Consensus" if status == "consensus" else "Unverified"
+
+        title_en = ch.get("title_en", ch["title"])
 
         nodes_html = ""
         for i, node in enumerate(ch.get("nodes", [])):
             node_type = node.get("type", "normal")
             node_class = f"flow-node {node_type}"
-            nodes_html += f'<div class="{node_class}">{node["text"]}</div>'
+            node_en = node.get("text_en", node["text"])
+            nodes_html += f'<div class="{node_class}"><span data-lang="zh">{node["text"]}</span><span data-lang="en">{node_en}</span></div>'
             if i < len(ch["nodes"]) - 1:
                 nodes_html += '<div class="flow-arrow">→</div>'
 
         jargon_html = ""
         for j in ch.get("jargon", []):
-            jargon_html += f'<div class="jargon-item"><span class="jargon-term">{j["term"]}</span>：<span class="jargon-explain">{j["explain"]}</span></div>\n'
+            term_en = j.get("term_en", j["term"])
+            explain_en = j.get("explain_en", j["explain"])
+            jargon_html += f'''<div class="jargon-item">
+        <span class="jargon-term"><span data-lang="zh">{j["term"]}</span><span data-lang="en">{term_en}</span></span>：<span data-lang="zh">{j["explain"]}</span><span data-lang="en">{explain_en}</span>
+      </div>\n'''
 
         html += f'''<div class="chain-card">
-      <div class="chain-title">{ch["title"]} <span class="chain-status {status_class}">{status_text}</span></div>
+      <div class="chain-title"><span data-lang="zh">{ch["title"]}</span><span data-lang="en">{title_en}</span> <span class="chain-status {status_class}"><span data-lang="zh">{status_zh}</span><span data-lang="en">{status_en}</span></span></div>
       <div class="flow-nodes">{nodes_html}</div>
       <div class="jargon-list">{jargon_html}</div>
     </div>\n'''
@@ -464,28 +601,40 @@ def render_chains(chains):
 
 
 def render_verifications(verifications):
+    """渲染待验证清单，中英文双语"""
     html = ""
     for v in verifications:
         vars_html = ""
         for var in v.get("vars", []):
+            var_en = var if var.startswith("http") else var  # 变量项保持原文
             vars_html += f"<li>{var}</li>\n"
 
+        title_en = v.get("title_en", v["title"])
+        analogy_title_en = v.get("analogy_title_en", v.get("analogy_title", ""))
+        analogy_text_en = v.get("analogy_text_en", v.get("analogy_text", ""))
+        lesson_en = v.get("lesson_en", v.get("lesson", ""))
+        diff_en = v.get("diff_en", v.get("diff", ""))
+
         html += f'''<div class="verify-card">
-      <div class="verify-title">{v["title"]}</div>
+      <div class="verify-title"><span data-lang="zh">{v["title"]}</span><span data-lang="en">{title_en}</span></div>
       <ul class="verify-list">{vars_html}</ul>
-      <div class="analogy"><strong>📖 历史类比：</strong>{v.get("analogy_title","")} — {v.get("analogy_text","")}</div>
-      <div class="lesson">💡 <strong>教训：</strong>{v.get("lesson","")}</div>
-      <div class="diff">⚡ <strong>关键区别：</strong>{v.get("diff","")}</div>
+      <div class="analogy"><strong><span data-lang="zh">📖 历史类比：</span><span data-lang="en">📖 Historical Analogy: </span></strong><span data-lang="zh">{v.get("analogy_title","")} — {v.get("analogy_text","")}</span><span data-lang="en">{analogy_title_en} — {analogy_text_en}</span></div>
+      <div class="lesson">💡 <strong><span data-lang="zh">教训：</span><span data-lang="en">Lesson: </span></strong><span data-lang="zh">{v.get("lesson","")}</span><span data-lang="en">{lesson_en}</span></div>
+      <div class="diff">⚡ <strong><span data-lang="zh">关键区别：</span><span data-lang="en">Key Difference: </span></strong><span data-lang="zh">{v.get("diff","")}</span><span data-lang="en">{diff_en}</span></div>
     </div>\n'''
     return html
 
 
 def build_page(data):
-    """渲染单日数据为 HTML"""
+    """渲染单日数据为 HTML（双语）"""
     tpl = HTML_TEMPLATE
+    weekday_zh = data.get("weekday", "")
+    weekday_en = translate_weekday(weekday_zh)
+
     replacements = {
         "{{ date }}": data.get("date", ""),
-        "{{ weekday }}": data.get("weekday", ""),
+        "{{ weekday_zh }}": weekday_zh,
+        "{{ weekday_en }}": weekday_en,
         "{{ crawl_time }}": data.get("crawl_time", ""),
         "{{ source }}": data.get("source", ""),
         "{{ events_count }}": str(len(data.get("events", []))),
@@ -502,14 +651,14 @@ def build_page(data):
 
 
 def build_history(dates):
-    """构建历史归档页"""
+    """构建历史归档页（双语）"""
     items = ""
     for d in dates:
         items += f'<li><a href="/date/{d}.html">📅 {d}</a></li>\n'
 
     return f'''<!DOCTYPE html>
 <html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>历史归档 · 市场地图</title>
+<title>历史归档 · Archive · 市场地图</title>
 <style>
   :root {{ --bg:#0a0e17; --card:#131826; --border:#2a3344; --text:#e8ecf1; --text-dim:#8b95a7; --accent:#d4af37; }}
   * {{ margin:0; padding:0; box-sizing:border-box; }}
@@ -522,10 +671,37 @@ def build_history(dates):
   li {{ margin-bottom:10px; font-size:16px; }}
   li a:hover {{ color:var(--accent); }}
   .nav a {{ color:var(--accent); margin-right:14px; }}
-</style></head><body><div class="container">
-<div class="nav"><a href="/">← 返回今日</a></div>
-<h1>📅 历史归档</h1>
+  [data-lang="en"] {{ display:none; }}
+  body.lang-en [data-lang="zh"] {{ display:none; }}
+  body.lang-en [data-lang="en"] {{ display:inline; }}
+  .lang-toggle {{ background:var(--card); border:1px solid var(--border); border-radius:6px; padding:5px 12px; cursor:pointer; font-size:13px; font-weight:600; color:var(--accent); }}
+</style></head><body class="lang-zh"><div class="container">
+<div class="nav">
+  <a href="/"><span data-lang="zh">← 返回今日</span><span data-lang="en">← Back to Today</span></a>
+  <button class="lang-toggle" onclick="toggleLang()">EN</button>
+</div>
+<h1><span data-lang="zh">📅 历史归档</span><span data-lang="en">📅 Archive</span></h1>
 <div class="card"><ul>{items}</ul></div>
+<script>
+function toggleLang() {{
+  var b = document.body;
+  if (b.className.indexOf('lang-en') >= 0) {{
+    b.className = b.className.replace('lang-en','lang-zh');
+    document.querySelector('.lang-toggle').textContent = 'EN';
+    localStorage.setItem('lang','zh');
+  }} else {{
+    b.className = b.className.replace('lang-zh','lang-en');
+    document.querySelector('.lang-toggle').textContent = '中';
+    localStorage.setItem('lang','en');
+  }}
+}}
+(function() {{
+  if (localStorage.getItem('lang') === 'en') {{
+    document.body.className = 'lang-en';
+    document.querySelector('.lang-toggle').textContent = '中';
+  }}
+}})();
+</script>
 </div></body></html>'''
 
 
@@ -543,17 +719,17 @@ def build_rss(dates, all_data):
         description = " | ".join(desc_parts)[:300]
         items_xml += f"""<item>
   <title>{title}</title>
-  <link>https://market-map.pages.dev/date/{d}.html</link>
+  <link>https://anniexu991203-sys.github.io/market-map/date/{d}.html</link>
   <description><![CDATA[{description}]]></description>
   <pubDate>{d}T13:00:00+08:00</pubDate>
-  <guid>https://market-map.pages.dev/date/{d}.html</guid>
+  <guid>https://anniexu991203-sys.github.io/market-map/date/{d}.html</guid>
 </item>
 """
     return f"""<?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0">
 <channel>
-  <title>每日市场地图 · Macro Market Map</title>
-  <link>https://market-map.pages.dev</link>
+  <title>每日市场地图 · Daily Market Map</title>
+  <link>https://anniexu991203-sys.github.io/market-map/</link>
   <description>华尔街见闻要闻三层漏斗筛选 → 四列表 → 因果链 → 待验证</description>
   <language>zh-CN</language>
   <lastBuildDate>{datetime.now().strftime('%a, %d %b %Y %H:%M:%S +0800')}</lastBuildDate>
