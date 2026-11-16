@@ -2,16 +2,16 @@
   "date": "2026-11-17",
   "weekday": "星期二",
   "weekday_en": "Tuesday",
-  "crawl_time": "约21:35（北京时间）",
-  "source": "Investing.com News / CNBC Top News / MarketWatch Top Stories / CNBC Economy / CNBC World News",
+  "crawl_time": "约22:13（北京时间）",
+  "source": "CNBC World News / MarketWatch Top Stories / Investing.com News / CNBC Economy / CNBC Top News",
   "sources_detail": [
-    "Investing.com News",
-    "CNBC Top News",
+    "CNBC World News",
     "MarketWatch Top Stories",
+    "Investing.com News",
     "CNBC Economy",
-    "CNBC World News"
+    "CNBC Top News"
   ],
-  "filter_result": "45条核心要闻 / 0条因果链 / 91条原始抓取",
+  "filter_result": "46条核心要闻 / 0条因果链 / 92条原始抓取",
   "stats": [
     {
       "label": "oil",
@@ -443,6 +443,32 @@
           "text_en": "AI"
         },
         {
+          "type": "fed",
+          "text": "央行",
+          "text_en": "Central Bank"
+        },
+        {
+          "type": "china",
+          "text": "中国",
+          "text_en": "China"
+        }
+      ],
+      "event": "Trump’s accounts traded up to $97.5 million in Nvidia as Huang gained White House access | Trump’s accounts sold up to $1 million in Nvidia stock five days after he was briefed on Jensen Huang’s relat...",
+      "event_en": "Trump’s accounts traded up to $97.5 million in Nvidia as Huang gained White House access | Trump’s accounts sold up to $1 million in Nvidia stock five days after he was briefed on Jensen Huang’s relat...",
+      "assets": "",
+      "assets_en": "",
+      "dir": "up",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        },
+        {
           "type": "china",
           "text": "中国",
           "text_en": "China"
@@ -581,27 +607,6 @@
     {
       "tags": [
         {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        },
-        {
-          "type": "macro",
-          "text": "财政",
-          "text_en": "Fiscal"
-        }
-      ],
-      "event": "Bond-market volatility is exploding higher. It could be the new normal for investors. | If the AI trade falters, investors have “insurance” in the former of bonds with a longer duration, says David Ro...",
-      "event_en": "Bond-market volatility is exploding higher. It could be the new normal for investors. | If the AI trade falters, investors have “insurance” in the former of bonds with a longer duration, says David Ro...",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
           "type": "macro",
           "text": "宏观",
           "text_en": "Macro"
@@ -628,6 +633,27 @@
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        },
+        {
+          "type": "china",
+          "text": "中国",
+          "text_en": "China"
+        }
+      ],
+      "event": "Nvidia’s stock extends decline following harsh words from the U.S. government | The Commerce Department announced a new rule aimed at restricting China’s remote access to advanced chips.",
+      "event_en": "Nvidia’s stock extends decline following harsh words from the U.S. government | The Commerce Department announced a new rule aimed at restricting China’s remote access to advanced chips.",
+      "assets": "",
+      "assets_en": "",
+      "dir": "down",
       "logic": "",
       "logic_en": ""
     },
