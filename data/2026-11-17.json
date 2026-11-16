@@ -2,16 +2,16 @@
   "date": "2026-11-17",
   "weekday": "星期二",
   "weekday_en": "Tuesday",
-  "crawl_time": "约22:13（北京时间）",
-  "source": "CNBC World News / MarketWatch Top Stories / Investing.com News / CNBC Economy / CNBC Top News",
+  "crawl_time": "约23:10（北京时间）",
+  "source": "MarketWatch Top Stories / Investing.com News / CNBC World News / CNBC Economy / CNBC Top News",
   "sources_detail": [
-    "CNBC World News",
     "MarketWatch Top Stories",
     "Investing.com News",
+    "CNBC World News",
     "CNBC Economy",
     "CNBC Top News"
   ],
-  "filter_result": "46条核心要闻 / 0条因果链 / 92条原始抓取",
+  "filter_result": "45条核心要闻 / 0条因果链 / 91条原始抓取",
   "stats": [
     {
       "label": "oil",
@@ -97,22 +97,6 @@
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        }
-      ],
-      "event": "Micron, AMD and other AI stocks fall as the chip sector’s selloff intensifies | Investors are jittery about Nvidia’s upcoming earnings and whether the company will scale back its financing of the AI e...",
-      "event_en": "Micron, AMD and other AI stocks fall as the chip sector’s selloff intensifies | Investors are jittery about Nvidia’s upcoming earnings and whether the company will scale back its financing of the AI e...",
-      "assets": "",
-      "assets_en": "",
-      "dir": "down",
       "logic": "",
       "logic_en": ""
     },
@@ -257,22 +241,6 @@
     {
       "tags": [
         {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
-        }
-      ],
-      "event": "SpaceX catches upper stage of Starship rocket in historic first | Starship Test Flight 15 marked the first time Elon Musk's company tried to catch both the booster and upper stage of the rocket.",
-      "event_en": "SpaceX catches upper stage of Starship rocket in historic first | Starship Test Flight 15 marked the first time Elon Musk's company tried to catch both the booster and upper stage of the rocket.",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
           "type": "ai",
           "text": "AI",
           "text_en": "AI"
@@ -283,22 +251,6 @@
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
-        }
-      ],
-      "event": "Rare-earth stocks sink deeper into the red. Here’s the latest catalyst. | Shares of Trump-backed USA Rare Earth slides 10% as analysts push out their sales estimates.",
-      "event_en": "Rare-earth stocks sink deeper into the red. Here’s the latest catalyst. | Shares of Trump-backed USA Rare Earth slides 10% as analysts push out their sales estimates.",
-      "assets": "",
-      "assets_en": "",
-      "dir": "down",
       "logic": "",
       "logic_en": ""
     },
@@ -347,6 +299,22 @@
           "text_en": "AI"
         }
       ],
+      "event": "Aschenbrenner’s Situational Awareness made AI bets again before October rout | Leopold Aschenbrenner's hedge fund, which almost collapsed over the summer, bought AI stocks before shares began tumbling...",
+      "event_en": "Aschenbrenner’s Situational Awareness made AI bets again before October rout | Leopold Aschenbrenner's hedge fund, which almost collapsed over the summer, bought AI stocks before shares began tumbling...",
+      "assets": "",
+      "assets_en": "",
+      "dir": "up",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ],
       "event": "South Korea targets 'world's highest performance' sovereign AI model in record new budget | The 2027 budget will rise 12.8% to 820.9 trillion won, and will include a 21.3 trillion won investment into ...",
       "event_en": "South Korea targets 'world's highest performance' sovereign AI model in record new budget | The 2027 budget will rise 12.8% to 820.9 trillion won, and will include a 21.3 trillion won investment into ...",
       "assets": "",
@@ -381,22 +349,6 @@
       ],
       "event": "Warren Buffett donates $5.5 billion, says kindness 'compounds' in Thanksgiving letter | Following the donations, the chairman emeritus of Berkshire still owns 182,140 Class A shares -- roughly $162 bi...",
       "event_en": "Warren Buffett donates $5.5 billion, says kindness 'compounds' in Thanksgiving letter | Following the donations, the chairman emeritus of Berkshire still owns 182,140 Class A shares -- roughly $162 bi...",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        }
-      ],
-      "event": "Nvidia investors will be clamoring for these answers during a historic earnings call | There’s a lot that Nvidia investors want to know about the post-Jensen Huang era — although management is likely ...",
-      "event_en": "Nvidia investors will be clamoring for these answers during a historic earnings call | There’s a lot that Nvidia investors want to know about the post-Jensen Huang era — although management is likely ...",
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
@@ -575,22 +527,6 @@
     {
       "tags": [
         {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
-        }
-      ],
-      "event": "International student enrollment drops sharply, putting more U.S. colleges in financial jeopardy | Higher costs and new immigration rules have contributed to a sharp decline in the number of internati...",
-      "event_en": "International student enrollment drops sharply, putting more U.S. colleges in financial jeopardy | Higher costs and new immigration rules have contributed to a sharp decline in the number of internati...",
-      "assets": "",
-      "assets_en": "",
-      "dir": "down",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
           "type": "fed",
           "text": "央行",
           "text_en": "Central Bank"
@@ -633,6 +569,22 @@
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ],
+      "event": "U.S. dollar’s AI-driven breakout could become a stock-market wrecking ball | The dollar recently climbed to its strongest level in a year and a half.",
+      "event_en": "U.S. dollar’s AI-driven breakout could become a stock-market wrecking ball | The dollar recently climbed to its strongest level in a year and a half.",
+      "assets": "",
+      "assets_en": "",
+      "dir": "up",
       "logic": "",
       "logic_en": ""
     },
@@ -766,6 +718,22 @@
     {
       "tags": [
         {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "Berkshire upped its bet on a beleaguered U.S. housing market, while souring on these bank stocks | Berkshire Hathaway stepped up its investments in the U.S. housing market last quarter, nearly doublin...",
+      "event_en": "Berkshire upped its bet on a beleaguered U.S. housing market, while souring on these bank stocks | Berkshire Hathaway stepped up its investments in the U.S. housing market last quarter, nearly doublin...",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
           "type": "fed",
           "text": "央行",
           "text_en": "Central Bank"
@@ -776,6 +744,22 @@
       "assets": "",
       "assets_en": "",
       "dir": "down",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "Berkshire Hathaway raised its stake in Delta in the third quarter. It also trimmed a key bank holding | Berkshire Hathaway added to several stock positions in the third quarter while trimming others, ...",
+      "event_en": "Berkshire Hathaway raised its stake in Delta in the third quarter. It also trimmed a key bank holding | Berkshire Hathaway added to several stock positions in the third quarter while trimming others, ...",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
       "logic": "",
       "logic_en": ""
     },
