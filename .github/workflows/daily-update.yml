@@ -5,10 +5,20 @@ on:
     # 每周一到周五 UTC 05:00 = 北京时间 13:00
     - cron: '0 5 * * 1-5'
   workflow_dispatch: # 支持手动触发
+  push:
+    branches: [ main ]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
   update-and-deploy:
     runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
     steps:
       - name: 检出代码
         uses: actions/checkout@v4
@@ -32,11 +42,11 @@ jobs:
         run: |
           python scripts/build_static.py
 
-      - name: 部署到 Cloudflare Pages
-        uses: cloudflare/pages-action@v1
+      - name: 上传产物
+        uses: actions/upload-pages-artifact@v3
         with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: market-map
-          directory: public
-          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          path: public
+
+      - name: 部署到 GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
