@@ -2,17 +2,34 @@
   "date": "2026-11-18",
   "weekday": "星期三",
   "weekday_en": "Wednesday",
-  "crawl_time": "约17:27（北京时间）",
-  "source": "MarketWatch Top Stories / Investing.com News / CNBC World News / CNBC Economy / CNBC Top News",
+  "crawl_time": "约18:19（北京时间）",
+  "source": "Investing.com News / CNBC World News / MarketWatch Top Stories / CNBC Top News / CNBC Economy",
   "sources_detail": [
-    "MarketWatch Top Stories",
     "Investing.com News",
     "CNBC World News",
-    "CNBC Economy",
-    "CNBC Top News"
+    "MarketWatch Top Stories",
+    "CNBC Top News",
+    "CNBC Economy"
   ],
-  "filter_result": "47条核心要闻 / 0条因果链 / 94条原始抓取",
-  "stats": [],
+  "filter_result": "47条核心要闻 / 0条因果链 / 93条原始抓取",
+  "stats": [
+    {
+      "label": "S&P",
+      "label_en": "S&P",
+      "value": "500",
+      "change": "Why Salesforce’s stock is leading S&P 500 decliners amid tec",
+      "change_en": "Why Salesforce’s stock is leading S&P 500 decliners amid tec",
+      "dir": "down"
+    },
+    {
+      "label": "500",
+      "label_en": "500",
+      "value": "新低",
+      "change": "Why Salesforce’s stock is leading S&P 500 decliners amid tec",
+      "change_en": "Why Salesforce’s stock is leading S&P 500 decliners amid tec",
+      "dir": "down"
+    }
+  ],
   "events": [
     {
       "tags": [
@@ -373,6 +390,22 @@
           "text_en": "AI"
         }
       ],
+      "event": "Why Salesforce’s stock is leading S&P 500 decliners amid tech jitters | A series of technology outages has investors concerned that software companies could prove “particularly vulnerable” to AI misus...",
+      "event_en": "Why Salesforce’s stock is leading S&P 500 decliners amid tech jitters | A series of technology outages has investors concerned that software companies could prove “particularly vulnerable” to AI misus...",
+      "assets": "",
+      "assets_en": "",
+      "dir": "down",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ],
       "event": "If you own a Nasdaq-100 fund, you’ll own Anthropic shares after 15 trading days — whether you want to or not | Anthropic’s suppliers are buying $26 billion worth of stock at the IPO price because they...",
       "event_en": "If you own a Nasdaq-100 fund, you’ll own Anthropic shares after 15 trading days — whether you want to or not | Anthropic’s suppliers are buying $26 billion worth of stock at the IPO price because they...",
       "assets": "",
@@ -411,6 +444,22 @@
       "tags": [
         {
           "type": "macro",
+          "text": "财政",
+          "text_en": "Fiscal"
+        }
+      ],
+      "event": "As stocks struggle, bonds are finally helping investors play defense again. There’s just one problem. | For the first time since March, bonds are actually helping to offset some of the losses investor...",
+      "event_en": "As stocks struggle, bonds are finally helping investors play defense again. There’s just one problem. | For the first time since March, bonds are actually helping to offset some of the losses investor...",
+      "assets": "",
+      "assets_en": "",
+      "dir": "up",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "macro",
           "text": "宏观",
           "text_en": "Macro"
         }
@@ -431,11 +480,11 @@
           "text_en": "AI"
         }
       ],
-      "event": "Jensen Huang breaks his silence ahead of Nvidia earnings — plus, 1 stock to buy on weakness | The Investing Club holds its \"Morning Meeting\" every weekday at 10:20 a.m. ET.",
-      "event_en": "Jensen Huang breaks his silence ahead of Nvidia earnings — plus, 1 stock to buy on weakness | The Investing Club holds its \"Morning Meeting\" every weekday at 10:20 a.m. ET.",
+      "event": "Nvidia stock falls ahead of earnings as company reels from Huang resignation | Investors have been weighing the fallout from former CEO Jensen Huang's resignation.",
+      "event_en": "Nvidia stock falls ahead of earnings as company reels from Huang resignation | Investors have been weighing the fallout from former CEO Jensen Huang's resignation.",
       "assets": "",
       "assets_en": "",
-      "dir": "neutral",
+      "dir": "down",
       "logic": "",
       "logic_en": ""
     },
@@ -447,11 +496,11 @@
           "text_en": "AI"
         }
       ],
-      "event": "Nvidia stock falls ahead of earnings as company reels from Huang resignation | Investors have been weighing the fallout from former CEO Jensen Huang's resignation.",
-      "event_en": "Nvidia stock falls ahead of earnings as company reels from Huang resignation | Investors have been weighing the fallout from former CEO Jensen Huang's resignation.",
+      "event": "Jensen Huang breaks his silence ahead of Nvidia earnings — plus, 1 stock to buy on weakness | The Investing Club holds its \"Morning Meeting\" every weekday at 10:20 a.m. ET.",
+      "event_en": "Jensen Huang breaks his silence ahead of Nvidia earnings — plus, 1 stock to buy on weakness | The Investing Club holds its \"Morning Meeting\" every weekday at 10:20 a.m. ET.",
       "assets": "",
       "assets_en": "",
-      "dir": "down",
+      "dir": "neutral",
       "logic": "",
       "logic_en": ""
     },
@@ -583,22 +632,6 @@
           "type": "ai",
           "text": "AI",
           "text_en": "AI"
-        }
-      ],
-      "event": "Nvidia has lost $2 trillion in value. Here's what options traders expect from earnings | Nvidia options are pricing in a bigger move than usual.",
-      "event_en": "Nvidia has lost $2 trillion in value. Here's what options traders expect from earnings | Nvidia options are pricing in a bigger move than usual.",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
         },
         {
           "type": "macro",
@@ -718,32 +751,11 @@
           "text_en": "Macro"
         }
       ],
-      "event": "Property Play: Chase Home Lending CEO says he plans to 'go on offense' against non-bank lenders | Sean Grzebin, the CEO of Chase Home Lending, the nation's largest bank mortgage lender, said he's hiri...",
-      "event_en": "Property Play: Chase Home Lending CEO says he plans to 'go on offense' against non-bank lenders | Sean Grzebin, the CEO of Chase Home Lending, the nation's largest bank mortgage lender, said he's hiri...",
+      "event": "Chase Home Lending CEO says he plans to 'go on offense' against non-bank lenders | Sean Grzebin, the CEO of Chase Home Lending, the nation's largest bank mortgage lender, said he's hiring and bent on ...",
+      "event_en": "Chase Home Lending CEO says he plans to 'go on offense' against non-bank lenders | Sean Grzebin, the CEO of Chase Home Lending, the nation's largest bank mortgage lender, said he's hiring and bent on ...",
       "assets": "",
       "assets_en": "",
       "dir": "up",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        },
-        {
-          "type": "energy",
-          "text": "能源",
-          "text_en": "Energy"
-        }
-      ],
-      "event": "‘Nvidia’s turmoil has me spooked’: Should I sell my stocks and invest in real estate? | “Real estate here in Florida seems to be presenting some interesting opportunities.”",
-      "event_en": "‘Nvidia’s turmoil has me spooked’: Should I sell my stocks and invest in real estate? | “Real estate here in Florida seems to be presenting some interesting opportunities.”",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
       "logic": "",
       "logic_en": ""
     },
