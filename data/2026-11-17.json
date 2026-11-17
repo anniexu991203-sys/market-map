@@ -2,16 +2,16 @@
   "date": "2026-11-17",
   "weekday": "星期二",
   "weekday_en": "Tuesday",
-  "crawl_time": "约00:04（北京时间）",
-  "source": "Investing.com News / CNBC Economy / CNBC World News / MarketWatch Top Stories / CNBC Top News",
+  "crawl_time": "约01:43（北京时间）",
+  "source": "CNBC Economy / Investing.com News / MarketWatch Top Stories / CNBC Top News / CNBC World News",
   "sources_detail": [
-    "Investing.com News",
     "CNBC Economy",
-    "CNBC World News",
+    "Investing.com News",
     "MarketWatch Top Stories",
-    "CNBC Top News"
+    "CNBC Top News",
+    "CNBC World News"
   ],
-  "filter_result": "48条核心要闻 / 0条因果链 / 91条原始抓取",
+  "filter_result": "48条核心要闻 / 0条因果链 / 89条原始抓取",
   "stats": [
     {
       "label": "oil",
@@ -19,14 +19,6 @@
       "value": "85",
       "change": "U.S. crude oil declines to $85 a barrel on recovering Middle",
       "change_en": "U.S. crude oil declines to $85 a barrel on recovering Middle",
-      "dir": "down"
-    },
-    {
-      "label": "Bitcoin",
-      "label_en": "Bitcoin",
-      "value": "62",
-      "change": "Bitcoin slides to $62,000 following liquidation cascade, the",
-      "change_en": "Bitcoin slides to $62,000 following liquidation cascade, the",
       "dir": "down"
     }
   ],
@@ -511,43 +503,6 @@
           "text_en": "Macro"
         }
       ],
-      "event": "Bitcoin slides to $62,000 following liquidation cascade, then rebounds slightly | Bitcoin's ongoing weakness has pushed it below key technical support levels, triggering the cascade of long liquidatio...",
-      "event_en": "Bitcoin slides to $62,000 following liquidation cascade, then rebounds slightly | Bitcoin's ongoing weakness has pushed it below key technical support levels, triggering the cascade of long liquidatio...",
-      "assets": "",
-      "assets_en": "",
-      "dir": "down",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        },
-        {
-          "type": "macro",
-          "text": "财政",
-          "text_en": "Fiscal"
-        }
-      ],
-      "event": "‘Standing on one leg’: IMF chief warns about global economy as AI circular financing hits $1 trillion | Kristalina Georgieva says circular financing among AI companies has grown to just over $1 trilli...",
-      "event_en": "‘Standing on one leg’: IMF chief warns about global economy as AI circular financing hits $1 trillion | Kristalina Georgieva says circular financing among AI companies has grown to just over $1 trilli...",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
-        }
-      ],
       "event": "Jim Cramer says Costco's hefty special dividend signals ‘more gains ahead’ | Jim Cramer says investors should hold on to Costco after its $30-per-share special dividend announcement.",
       "event_en": "Jim Cramer says Costco's hefty special dividend signals ‘more gains ahead’ | Jim Cramer says investors should hold on to Costco after its $30-per-share special dividend announcement.",
       "assets": "",
@@ -585,6 +540,27 @@
       "assets": "",
       "assets_en": "",
       "dir": "down",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        },
+        {
+          "type": "macro",
+          "text": "财政",
+          "text_en": "Fiscal"
+        }
+      ],
+      "event": "‘Standing on one leg’: IMF chief warns about global economy as AI circular financing hits $1 trillion | Kristalina Georgieva says circular financing among AI companies has grown to just over $1 trilli...",
+      "event_en": "‘Standing on one leg’: IMF chief warns about global economy as AI circular financing hits $1 trillion | Kristalina Georgieva says circular financing among AI companies has grown to just over $1 trilli...",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
       "logic": "",
       "logic_en": ""
     },
@@ -750,6 +726,43 @@
     {
       "tags": [
         {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        },
+        {
+          "type": "fed",
+          "text": "央行",
+          "text_en": "Central Bank"
+        }
+      ],
+      "event": "Analysis: The Fed's chairman sees an AI revolution coming. Now he has to figure out what it means | Kevin Warsh sees AI at a turning point. He faces tough questions on jobs and interest rates.",
+      "event_en": "Analysis: The Fed's chairman sees an AI revolution coming. Now he has to figure out what it means | Kevin Warsh sees AI at a turning point. He faces tough questions on jobs and interest rates.",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ],
+      "event": "Jim Cramer says Nvidia’s leadership shake-up won’t derail the AI trade | CNBC's Jim Cramer pushed back against fears that Nvidia's leadership shake-up could unravel the AI boom.",
+      "event_en": "Jim Cramer says Nvidia’s leadership shake-up won’t derail the AI trade | CNBC's Jim Cramer pushed back against fears that Nvidia's leadership shake-up could unravel the AI boom.",
+      "assets": "",
+      "assets_en": "",
+      "dir": "up",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
           "type": "macro",
           "text": "宏观",
           "text_en": "Macro"
@@ -824,22 +837,6 @@
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        }
-      ],
-      "event": "Jim Cramer says Nvidia’s leadership shake-up won’t derail the AI trade | CNBC's Jim Cramer pushed back against fears that Nvidia's leadership shake-up could unravel the AI boom.",
-      "event_en": "Jim Cramer says Nvidia’s leadership shake-up won’t derail the AI trade | CNBC's Jim Cramer pushed back against fears that Nvidia's leadership shake-up could unravel the AI boom.",
-      "assets": "",
-      "assets_en": "",
-      "dir": "up",
       "logic": "",
       "logic_en": ""
     },
