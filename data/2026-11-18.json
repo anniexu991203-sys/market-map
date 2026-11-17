@@ -2,16 +2,16 @@
   "date": "2026-11-18",
   "weekday": "星期三",
   "weekday_en": "Wednesday",
-  "crawl_time": "约16:23（北京时间）",
-  "source": "CNBC Economy / Investing.com News / MarketWatch Top Stories / CNBC World News / CNBC Top News",
+  "crawl_time": "约17:27（北京时间）",
+  "source": "MarketWatch Top Stories / Investing.com News / CNBC World News / CNBC Economy / CNBC Top News",
   "sources_detail": [
-    "CNBC Economy",
-    "Investing.com News",
     "MarketWatch Top Stories",
+    "Investing.com News",
     "CNBC World News",
+    "CNBC Economy",
     "CNBC Top News"
   ],
-  "filter_result": "50条核心要闻 / 0条因果链 / 94条原始抓取",
+  "filter_result": "47条核心要闻 / 0条因果链 / 94条原始抓取",
   "stats": [],
   "events": [
     {
@@ -235,6 +235,22 @@
     {
       "tags": [
         {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "7 smart reasons to sell a stock—and my ‘golden rule’ for offloading shares, says hedge fund CEO | \"You need a clear, disciplined plan for when to sell,\" says Karen Finerman. Here are seven smart reaso...",
+      "event_en": "7 smart reasons to sell a stock—and my ‘golden rule’ for offloading shares, says hedge fund CEO | \"You need a clear, disciplined plan for when to sell,\" says Karen Finerman. Here are seven smart reaso...",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
           "type": "ai",
           "text": "AI",
           "text_en": "AI"
@@ -325,38 +341,6 @@
           "text_en": "AI"
         }
       ],
-      "event": "Nvidia investors will be clamoring for these answers during today’s historic earnings call | There’s a lot that Nvidia investors want to know about the post-Jensen Huang era — although management is l...",
-      "event_en": "Nvidia investors will be clamoring for these answers during today’s historic earnings call | There’s a lot that Nvidia investors want to know about the post-Jensen Huang era — although management is l...",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        }
-      ],
-      "event": "Nvidia shares try to rebound ahead of earnings as company reels from Huang resignation | Investors have been weighing the fallout from former CEO Jensen Huang's resignation.",
-      "event_en": "Nvidia shares try to rebound ahead of earnings as company reels from Huang resignation | Investors have been weighing the fallout from former CEO Jensen Huang's resignation.",
-      "assets": "",
-      "assets_en": "",
-      "dir": "down",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        }
-      ],
       "event": "Investor Steve Eisman says the AI neocloud stocks are in 'big trouble' from Nvidia fallout | Steve Eisman is appearing on \"Squawk Box\" on Tuesday.",
       "event_en": "Investor Steve Eisman says the AI neocloud stocks are in 'big trouble' from Nvidia fallout | Steve Eisman is appearing on \"Squawk Box\" on Tuesday.",
       "assets": "",
@@ -378,6 +362,22 @@
       "assets": "",
       "assets_en": "",
       "dir": "up",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ],
+      "event": "If you own a Nasdaq-100 fund, you’ll own Anthropic shares after 15 trading days — whether you want to or not | Anthropic’s suppliers are buying $26 billion worth of stock at the IPO price because they...",
+      "event_en": "If you own a Nasdaq-100 fund, you’ll own Anthropic shares after 15 trading days — whether you want to or not | Anthropic’s suppliers are buying $26 billion worth of stock at the IPO price because they...",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
       "logic": "",
       "logic_en": ""
     },
@@ -410,16 +410,48 @@
     {
       "tags": [
         {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "Measles cases in the U.S. are at a 35-year high. Here’s the staggering cost of falling vaccination rates for Americans. | The U.S. officially lost its measles elimination status on Tuesday as it grapp...",
+      "event_en": "Measles cases in the U.S. are at a 35-year high. Here’s the staggering cost of falling vaccination rates for Americans. | The U.S. officially lost its measles elimination status on Tuesday as it grapp...",
+      "assets": "",
+      "assets_en": "",
+      "dir": "down",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
           "type": "ai",
           "text": "AI",
           "text_en": "AI"
         }
       ],
-      "event": "Jim Cramer's top 10 things to watch in the stock market Tuesday | Can't understate how huge this Nvidia earnings day is.",
-      "event_en": "Jim Cramer's top 10 things to watch in the stock market Tuesday | Can't understate how huge this Nvidia earnings day is.",
+      "event": "Jensen Huang breaks his silence ahead of Nvidia earnings — plus, 1 stock to buy on weakness | The Investing Club holds its \"Morning Meeting\" every weekday at 10:20 a.m. ET.",
+      "event_en": "Jensen Huang breaks his silence ahead of Nvidia earnings — plus, 1 stock to buy on weakness | The Investing Club holds its \"Morning Meeting\" every weekday at 10:20 a.m. ET.",
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ],
+      "event": "Nvidia stock falls ahead of earnings as company reels from Huang resignation | Investors have been weighing the fallout from former CEO Jensen Huang's resignation.",
+      "event_en": "Nvidia stock falls ahead of earnings as company reels from Huang resignation | Investors have been weighing the fallout from former CEO Jensen Huang's resignation.",
+      "assets": "",
+      "assets_en": "",
+      "dir": "down",
       "logic": "",
       "logic_en": ""
     },
@@ -681,6 +713,22 @@
     {
       "tags": [
         {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "Property Play: Chase Home Lending CEO says he plans to 'go on offense' against non-bank lenders | Sean Grzebin, the CEO of Chase Home Lending, the nation's largest bank mortgage lender, said he's hiri...",
+      "event_en": "Property Play: Chase Home Lending CEO says he plans to 'go on offense' against non-bank lenders | Sean Grzebin, the CEO of Chase Home Lending, the nation's largest bank mortgage lender, said he's hiri...",
+      "assets": "",
+      "assets_en": "",
+      "dir": "up",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
           "type": "ai",
           "text": "AI",
           "text_en": "AI"
@@ -693,22 +741,6 @@
       ],
       "event": "‘Nvidia’s turmoil has me spooked’: Should I sell my stocks and invest in real estate? | “Real estate here in Florida seems to be presenting some interesting opportunities.”",
       "event_en": "‘Nvidia’s turmoil has me spooked’: Should I sell my stocks and invest in real estate? | “Real estate here in Florida seems to be presenting some interesting opportunities.”",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        }
-      ],
-      "event": "SpaceX got a vote of confidence from Nvidia ahead of Jensen Huang’s exit | Nvidia purchased millions of additional SpaceX shares during the third quarter.",
-      "event_en": "SpaceX got a vote of confidence from Nvidia ahead of Jensen Huang’s exit | Nvidia purchased millions of additional SpaceX shares during the third quarter.",
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
@@ -786,96 +818,6 @@
       "assets": "",
       "assets_en": "",
       "dir": "down",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
-        }
-      ],
-      "event": "Iran escalates threats as third U.S. carrier arrives in Middle East, tanker struck in Hormuz | Iran has ratcheted up threats against U.S. forces as a third American aircraft carrier arrived in the Gul...",
-      "event_en": "Iran escalates threats as third U.S. carrier arrives in Middle East, tanker struck in Hormuz | Iran has ratcheted up threats against U.S. forces as a third American aircraft carrier arrived in the Gul...",
-      "assets": "",
-      "assets_en": "",
-      "dir": "up",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
-        }
-      ],
-      "event": "Berkshire Hathaway raised its stake in Delta in the third quarter. It also trimmed a key bank holding | Berkshire Hathaway added to several stock positions in the third quarter while trimming others, ...",
-      "event_en": "Berkshire Hathaway raised its stake in Delta in the third quarter. It also trimmed a key bank holding | Berkshire Hathaway added to several stock positions in the third quarter while trimming others, ...",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "fed",
-          "text": "央行",
-          "text_en": "Central Bank"
-        },
-        {
-          "type": "macro",
-          "text": "财政",
-          "text_en": "Fiscal"
-        }
-      ],
-      "event": "Treasury yields moderate as investors parse retail sales data | Investors digested economic data and comments from Federal Reserve officials on Tuesday.",
-      "event_en": "Treasury yields moderate as investors parse retail sales data | Investors digested economic data and comments from Federal Reserve officials on Tuesday.",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        },
-        {
-          "type": "fed",
-          "text": "央行",
-          "text_en": "Central Bank"
-        }
-      ],
-      "event": "Analysis: The Fed's chairman sees an AI revolution coming. Now he has to figure out what it means | Kevin Warsh sees AI at a turning point. He faces tough questions on jobs and interest rates.",
-      "event_en": "Analysis: The Fed's chairman sees an AI revolution coming. Now he has to figure out what it means | Kevin Warsh sees AI at a turning point. He faces tough questions on jobs and interest rates.",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        }
-      ],
-      "event": "Jim Cramer says Nvidia’s leadership shake-up won’t derail the AI trade | CNBC's Jim Cramer pushed back against fears that Nvidia's leadership shake-up could unravel the AI boom.",
-      "event_en": "Jim Cramer says Nvidia’s leadership shake-up won’t derail the AI trade | CNBC's Jim Cramer pushed back against fears that Nvidia's leadership shake-up could unravel the AI boom.",
-      "assets": "",
-      "assets_en": "",
-      "dir": "up",
       "logic": "",
       "logic_en": ""
     }
