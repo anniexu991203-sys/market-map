@@ -2,24 +2,32 @@
   "date": "2026-11-18",
   "weekday": "星期三",
   "weekday_en": "Wednesday",
-  "crawl_time": "约20:24（北京时间）",
-  "source": "MarketWatch Top Stories / CNBC World News / CNBC Top News / Investing.com News / CNBC Economy",
+  "crawl_time": "约21:16（北京时间）",
+  "source": "CNBC World News / CNBC Top News / MarketWatch Top Stories / Investing.com News / CNBC Economy",
   "sources_detail": [
-    "MarketWatch Top Stories",
     "CNBC World News",
     "CNBC Top News",
+    "MarketWatch Top Stories",
     "Investing.com News",
     "CNBC Economy"
   ],
-  "filter_result": "46条核心要闻 / 0条因果链 / 93条原始抓取",
+  "filter_result": "50条核心要闻 / 0条因果链 / 93条原始抓取",
   "stats": [
     {
       "label": "S&P",
       "label_en": "S&P",
       "value": "500",
-      "change": "Only two ‘Magnificent Seven’ stocks have managed to beat the",
-      "change_en": "Only two ‘Magnificent Seven’ stocks have managed to beat the",
-      "dir": "up"
+      "change": "Why Salesforce’s stock is leading S&P 500 decliners amid tec",
+      "change_en": "Why Salesforce’s stock is leading S&P 500 decliners amid tec",
+      "dir": "down"
+    },
+    {
+      "label": "500",
+      "label_en": "500",
+      "value": "新低",
+      "change": "Why Salesforce’s stock is leading S&P 500 decliners amid tec",
+      "change_en": "Why Salesforce’s stock is leading S&P 500 decliners amid tec",
+      "dir": "down"
     }
   ],
   "events": [
@@ -228,22 +236,6 @@
     {
       "tags": [
         {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
-        }
-      ],
-      "event": "We’re watching Cramer’s favorite market indicator for a signal to buy stocks | Every weekday, the Investing Club releases the Homestretch; an actionable afternoon update just in time for the last hour...",
-      "event_en": "We’re watching Cramer’s favorite market indicator for a signal to buy stocks | Every weekday, the Investing Club releases the Homestretch; an actionable afternoon update just in time for the last hour...",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
           "type": "fed",
           "text": "央行",
           "text_en": "Central Bank"
@@ -361,6 +353,22 @@
     {
       "tags": [
         {
+          "type": "bio",
+          "text": "生物科技",
+          "text_en": "Biotech"
+        }
+      ],
+      "event": "Summit Therapeutics’ stock tumbles again as FDA recommends new trial for lung-cancer drug | The U.S. regulator’s disclosure was more extensive than what the biotech company had announced Sunday.",
+      "event_en": "Summit Therapeutics’ stock tumbles again as FDA recommends new trial for lung-cancer drug | The U.S. regulator’s disclosure was more extensive than what the biotech company had announced Sunday.",
+      "assets": "",
+      "assets_en": "",
+      "dir": "split",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
           "type": "ai",
           "text": "AI",
           "text_en": "AI"
@@ -387,6 +395,22 @@
       "assets": "",
       "assets_en": "",
       "dir": "up",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ],
+      "event": "Why Salesforce’s stock is leading S&P 500 decliners amid tech jitters | A series of technology outages has investors concerned that software companies could prove “particularly vulnerable” to AI misus...",
+      "event_en": "Why Salesforce’s stock is leading S&P 500 decliners amid tech jitters | A series of technology outages has investors concerned that software companies could prove “particularly vulnerable” to AI misus...",
+      "assets": "",
+      "assets_en": "",
+      "dir": "down",
       "logic": "",
       "logic_en": ""
     },
@@ -429,38 +453,6 @@
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
-        }
-      ],
-      "event": "These charts show investor fears run even deeper than the stock market’s decline suggests | The yen’s recent strengthening, particularly against the Australian dollar, suggests investors are unwinding...",
-      "event_en": "These charts show investor fears run even deeper than the stock market’s decline suggests | The yen’s recent strengthening, particularly against the Australian dollar, suggests investors are unwinding...",
-      "assets": "",
-      "assets_en": "",
-      "dir": "split",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        }
-      ],
-      "event": "Nvidia stock falls ahead of earnings as company reels from Huang resignation | Investors have been weighing the fallout from former CEO Jensen Huang's resignation.",
-      "event_en": "Nvidia stock falls ahead of earnings as company reels from Huang resignation | Investors have been weighing the fallout from former CEO Jensen Huang's resignation.",
-      "assets": "",
-      "assets_en": "",
-      "dir": "down",
       "logic": "",
       "logic_en": ""
     },
@@ -562,11 +554,11 @@
           "text_en": "AI"
         }
       ],
-      "event": "Demis Hassabis’ AI company raises $5 billion, months after he left as Google DeepMind CEO | Isomorphic Labs is looking to develop new medicines using AI.",
-      "event_en": "Demis Hassabis’ AI company raises $5 billion, months after he left as Google DeepMind CEO | Isomorphic Labs is looking to develop new medicines using AI.",
+      "event": "Nvidia closes lower ahead of earnings as company reels from Huang resignation | Investors have been weighing the fallout from former CEO Jensen Huang's resignation.",
+      "event_en": "Nvidia closes lower ahead of earnings as company reels from Huang resignation | Investors have been weighing the fallout from former CEO Jensen Huang's resignation.",
       "assets": "",
       "assets_en": "",
-      "dir": "neutral",
+      "dir": "down",
       "logic": "",
       "logic_en": ""
     },
@@ -578,11 +570,11 @@
           "text_en": "AI"
         }
       ],
-      "event": "Anthropic IPO: For hundreds of billions of dollars flowing into AI startups, a big debut is a must | Venture investors are sitting on big gains from the AI buildout. Anthropic's IPO could set the stag...",
-      "event_en": "Anthropic IPO: For hundreds of billions of dollars flowing into AI startups, a big debut is a must | Venture investors are sitting on big gains from the AI buildout. Anthropic's IPO could set the stag...",
+      "event": "Demis Hassabis’ AI company raises $5 billion, months after he left as Google DeepMind CEO | Isomorphic Labs is looking to develop new medicines using AI.",
+      "event_en": "Demis Hassabis’ AI company raises $5 billion, months after he left as Google DeepMind CEO | Isomorphic Labs is looking to develop new medicines using AI.",
       "assets": "",
       "assets_en": "",
-      "dir": "up",
+      "dir": "neutral",
       "logic": "",
       "logic_en": ""
     },
@@ -711,48 +703,11 @@
           "text_en": "Macro"
         }
       ],
-      "event": "Want to know what bitcoin is really worth? Check this chart. | A model for calculating bitcoin’s value has worked well to inform investors when the cryptocurrency is overbought or oversold. Now, the p...",
-      "event_en": "Want to know what bitcoin is really worth? Check this chart. | A model for calculating bitcoin’s value has worked well to inform investors when the cryptocurrency is overbought or oversold. Now, the p...",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
-        }
-      ],
       "event": "Chase Home Lending CEO says he plans to 'go on offense' against non-bank lenders | Sean Grzebin, the CEO of Chase Home Lending, the nation's largest bank mortgage lender, said he's hiring and bent on ...",
       "event_en": "Chase Home Lending CEO says he plans to 'go on offense' against non-bank lenders | Sean Grzebin, the CEO of Chase Home Lending, the nation's largest bank mortgage lender, said he's hiring and bent on ...",
       "assets": "",
       "assets_en": "",
       "dir": "up",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        },
-        {
-          "type": "energy",
-          "text": "能源",
-          "text_en": "Energy"
-        }
-      ],
-      "event": "‘Nvidia’s turmoil has me spooked’: Has the time come to sell my stocks? | “Real estate here in Florida seems to be presenting some interesting opportunities.”",
-      "event_en": "‘Nvidia’s turmoil has me spooked’: Has the time come to sell my stocks? | “Real estate here in Florida seems to be presenting some interesting opportunities.”",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
       "logic": "",
       "logic_en": ""
     },
@@ -783,6 +738,38 @@
           "type": "ai",
           "text": "AI",
           "text_en": "AI"
+        }
+      ],
+      "event": "Wall Street's fear gauge is surging again and this time it's not just about AI jitters | VIX up four days in a row as options traders show fear unseen since April",
+      "event_en": "Wall Street's fear gauge is surging again and this time it's not just about AI jitters | VIX up four days in a row as options traders show fear unseen since April",
+      "assets": "",
+      "assets_en": "",
+      "dir": "up",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "A generational flight from tech to defensive stocks is underway. How we’re capitalizing | Jim Cramer has pushed the message that its important for investors to balance their portfolios.",
+      "event_en": "A generational flight from tech to defensive stocks is underway. How we’re capitalizing | Jim Cramer has pushed the message that its important for investors to balance their portfolios.",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
         },
         {
           "type": "china",
@@ -792,6 +779,22 @@
       ],
       "event": "Nvidia warns chip buyers of legal risks tied to China AI access, sources tell CNBC | The U.S. Commerce Department is making moves to tighten export controls.",
       "event_en": "Nvidia warns chip buyers of legal risks tied to China AI access, sources tell CNBC | The U.S. Commerce Department is making moves to tighten export controls.",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "Gold is in a bear market — and hackproof in an increasingly digital world. Is now a good time to buy? | After the world’s largest crypto hack and a spate of outages in the digital world, physical gold...",
+      "event_en": "Gold is in a bear market — and hackproof in an increasingly digital world. Is now a good time to buy? | After the world’s largest crypto hack and a spate of outages in the digital world, physical gold...",
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
@@ -811,6 +814,80 @@
       "assets": "",
       "assets_en": "",
       "dir": "down",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "fed",
+          "text": "央行",
+          "text_en": "Central Bank"
+        },
+        {
+          "type": "macro",
+          "text": "财政",
+          "text_en": "Fiscal"
+        }
+      ],
+      "event": "Treasury yields moderate as investors parse retail sales data | Investors digested economic data and comments from Federal Reserve officials on Tuesday.",
+      "event_en": "Treasury yields moderate as investors parse retail sales data | Investors digested economic data and comments from Federal Reserve officials on Tuesday.",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        },
+        {
+          "type": "fed",
+          "text": "央行",
+          "text_en": "Central Bank"
+        }
+      ],
+      "event": "Analysis: The Fed's chairman sees an AI revolution coming. Now he has to figure out what it means | Kevin Warsh sees AI at a turning point. He faces tough questions on jobs and interest rates.",
+      "event_en": "Analysis: The Fed's chairman sees an AI revolution coming. Now he has to figure out what it means | Kevin Warsh sees AI at a turning point. He faces tough questions on jobs and interest rates.",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "Dollar finally dips after fresh 19-month peak, set to snap five-day win streak",
+      "event_en": "Dollar finally dips after fresh 19-month peak, set to snap five-day win streak",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "Citi forecasts Brazilian real to weaken to 5.50 per dollar in 2027",
+      "event_en": "Citi forecasts Brazilian real to weaken to 5.50 per dollar in 2027",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
       "logic": "",
       "logic_en": ""
     }
