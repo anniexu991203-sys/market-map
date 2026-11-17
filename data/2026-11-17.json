@@ -2,26 +2,17 @@
   "date": "2026-11-17",
   "weekday": "星期二",
   "weekday_en": "Tuesday",
-  "crawl_time": "约06:55（北京时间）",
-  "source": "Investing.com News / CNBC World News / CNBC Economy / MarketWatch Top Stories / CNBC Top News",
+  "crawl_time": "约08:12（北京时间）",
+  "source": "Investing.com News / CNBC World News / MarketWatch Top Stories / CNBC Top News / CNBC Economy",
   "sources_detail": [
     "Investing.com News",
     "CNBC World News",
-    "CNBC Economy",
     "MarketWatch Top Stories",
-    "CNBC Top News"
+    "CNBC Top News",
+    "CNBC Economy"
   ],
-  "filter_result": "49条核心要闻 / 0条因果链 / 89条原始抓取",
-  "stats": [
-    {
-      "label": "oil",
-      "label_en": "oil",
-      "value": "85",
-      "change": "U.S. crude oil declines to $85 a barrel on recovering Middle",
-      "change_en": "U.S. crude oil declines to $85 a barrel on recovering Middle",
-      "dir": "down"
-    }
-  ],
+  "filter_result": "48条核心要闻 / 0条因果链 / 89条原始抓取",
+  "stats": [],
   "events": [
     {
       "tags": [
@@ -114,27 +105,6 @@
           "type": "fed",
           "text": "央行",
           "text_en": "Central Bank"
-        },
-        {
-          "type": "macro",
-          "text": "财政",
-          "text_en": "Fiscal"
-        }
-      ],
-      "event": "Treasury yields log steepest weekly spikes since April 2025 on hawkish Fed signals",
-      "event_en": "Treasury yields log steepest weekly spikes since April 2025 on hawkish Fed signals",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "fed",
-          "text": "央行",
-          "text_en": "Central Bank"
         }
       ],
       "event": "A key report for where inflation stood in October comes out Tuesday. Here's what to expect | The CPI headline reading is expected to show an increase of 0.3% while the core is forecast to increase 0.2...",
@@ -174,22 +144,6 @@
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "energy",
-          "text": "能源",
-          "text_en": "Energy"
-        }
-      ],
-      "event": "U.S. crude oil declines to $85 a barrel on recovering Middle East exports | Oil prices are falling as forecasts project a surplus in oil in the fourth quarter",
-      "event_en": "U.S. crude oil declines to $85 a barrel on recovering Middle East exports | Oil prices are falling as forecasts project a surplus in oil in the fourth quarter",
-      "assets": "",
-      "assets_en": "",
-      "dir": "down",
       "logic": "",
       "logic_en": ""
     },
@@ -710,6 +664,27 @@
           "text_en": "AI"
         },
         {
+          "type": "china",
+          "text": "中国",
+          "text_en": "China"
+        }
+      ],
+      "event": "Nvidia warns chip buyers of legal risks tied to China AI access, sources tell CNBC | The U.S. Commerce Department is making moves to tighten export controls.",
+      "event_en": "Nvidia warns chip buyers of legal risks tied to China AI access, sources tell CNBC | The U.S. Commerce Department is making moves to tighten export controls.",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        },
+        {
           "type": "fed",
           "text": "央行",
           "text_en": "Central Bank"
@@ -859,8 +834,8 @@
           "text_en": "Central Bank"
         }
       ],
-      "event": "Asia FX subdued as dollar hits 19-mth peak on Fed tightening bets",
-      "event_en": "Asia FX subdued as dollar hits 19-mth peak on Fed tightening bets",
+      "event": "Dollar hits fresh 19-mth peak on Fed tightening bets",
+      "event_en": "Dollar hits fresh 19-mth peak on Fed tightening bets",
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
