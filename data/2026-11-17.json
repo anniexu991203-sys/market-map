@@ -2,16 +2,16 @@
   "date": "2026-11-17",
   "weekday": "星期二",
   "weekday_en": "Tuesday",
-  "crawl_time": "约09:28（北京时间）",
-  "source": "Investing.com News / CNBC World News / CNBC Economy / CNBC Top News / MarketWatch Top Stories",
+  "crawl_time": "约10:30（北京时间）",
+  "source": "CNBC Top News / Investing.com News / CNBC Economy / MarketWatch Top Stories / CNBC World News",
   "sources_detail": [
-    "Investing.com News",
-    "CNBC World News",
-    "CNBC Economy",
     "CNBC Top News",
-    "MarketWatch Top Stories"
+    "Investing.com News",
+    "CNBC Economy",
+    "MarketWatch Top Stories",
+    "CNBC World News"
   ],
-  "filter_result": "49条核心要闻 / 0条因果链 / 90条原始抓取",
+  "filter_result": "50条核心要闻 / 0条因果链 / 91条原始抓取",
   "stats": [],
   "events": [
     {
@@ -288,13 +288,13 @@
     {
       "tags": [
         {
-          "type": "bio",
-          "text": "生物科技",
-          "text_en": "Biotech"
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
         }
       ],
-      "event": "The FDA declined to approve one of biotech’s most closely watched cancer drugs. The company’s stock tumbled. | The regulator told Summit Therapeutics that the lung-cancer drug needs to prove it can he...",
-      "event_en": "The FDA declined to approve one of biotech’s most closely watched cancer drugs. The company’s stock tumbled. | The regulator told Summit Therapeutics that the lung-cancer drug needs to prove it can he...",
+      "event": "Deutsche Bank shares sink as whistleblowers reveal Epstein payments, Trump tax leak, Russia bets | A 15-million-file leak details alleged control failures at Deutsche Bank, including Epstein-linked pa...",
+      "event_en": "Deutsche Bank shares sink as whistleblowers reveal Epstein payments, Trump tax leak, Russia bets | A 15-million-file leak details alleged control failures at Deutsche Bank, including Epstein-linked pa...",
       "assets": "",
       "assets_en": "",
       "dir": "down",
@@ -357,32 +357,6 @@
           "text_en": "AI"
         },
         {
-          "type": "fed",
-          "text": "央行",
-          "text_en": "Central Bank"
-        },
-        {
-          "type": "china",
-          "text": "中国",
-          "text_en": "China"
-        }
-      ],
-      "event": "Trump’s accounts traded up to $97.5 million in Nvidia as Huang gained White House access | Trump’s accounts sold up to $1 million in Nvidia stock five days after he was briefed on Jensen Huang’s relat...",
-      "event_en": "Trump’s accounts traded up to $97.5 million in Nvidia as Huang gained White House access | Trump’s accounts sold up to $1 million in Nvidia stock five days after he was briefed on Jensen Huang’s relat...",
-      "assets": "",
-      "assets_en": "",
-      "dir": "up",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        },
-        {
           "type": "china",
           "text": "中国",
           "text_en": "China"
@@ -411,6 +385,32 @@
       ],
       "event": "California sues OpenAI over Hugging Face, other AI model loss of control | Two OpenAI models in July gained unauthorized access to Hugging Face's internal systems to find information for use in cheati...",
       "event_en": "California sues OpenAI over Hugging Face, other AI model loss of control | Two OpenAI models in July gained unauthorized access to Hugging Face's internal systems to find information for use in cheati...",
+      "assets": "",
+      "assets_en": "",
+      "dir": "up",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        },
+        {
+          "type": "fed",
+          "text": "央行",
+          "text_en": "Central Bank"
+        },
+        {
+          "type": "china",
+          "text": "中国",
+          "text_en": "China"
+        }
+      ],
+      "event": "Trump’s accounts traded up to $97.5 million in Nvidia as Huang gained White House access | Trump’s accounts sold up to $1 million in Nvidia stock five days after he was briefed on Jensen Huang’s relat...",
+      "event_en": "Trump’s accounts traded up to $97.5 million in Nvidia as Huang gained White House access | Trump’s accounts sold up to $1 million in Nvidia stock five days after he was briefed on Jensen Huang’s relat...",
       "assets": "",
       "assets_en": "",
       "dir": "up",
@@ -457,6 +457,22 @@
           "text_en": "Macro"
         }
       ],
+      "event": "Sterling today: Pound set to snap slide as dollar pauses; UK jobless dips to 4.6%",
+      "event_en": "Sterling today: Pound set to snap slide as dollar pauses; UK jobless dips to 4.6%",
+      "assets": "",
+      "assets_en": "",
+      "dir": "down",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
       "event": "Jim Cramer says Costco's hefty special dividend signals ‘more gains ahead’ | Jim Cramer says investors should hold on to Costco after its $30-per-share special dividend announcement.",
       "event_en": "Jim Cramer says Costco's hefty special dividend signals ‘more gains ahead’ | Jim Cramer says investors should hold on to Costco after its $30-per-share special dividend announcement.",
       "assets": "",
@@ -478,22 +494,6 @@
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
-        }
-      ],
-      "event": "Chile peso hits 19-month low as copper drops, US rate outlook weighs",
-      "event_en": "Chile peso hits 19-month low as copper drops, US rate outlook weighs",
-      "assets": "",
-      "assets_en": "",
-      "dir": "down",
       "logic": "",
       "logic_en": ""
     },
@@ -617,18 +617,13 @@
     {
       "tags": [
         {
-          "type": "fed",
-          "text": "央行",
-          "text_en": "Central Bank"
-        },
-        {
           "type": "macro",
-          "text": "财政",
-          "text_en": "Fiscal"
+          "text": "宏观",
+          "text_en": "Macro"
         }
       ],
-      "event": "Treasury yields are broadly flat as investors await retail sales data | U.S. Treasury yields were little changed on Tuesday morning as investors awaited economic data and comments from Federal Reserve...",
-      "event_en": "Treasury yields are broadly flat as investors await retail sales data | U.S. Treasury yields were little changed on Tuesday morning as investors awaited economic data and comments from Federal Reserve...",
+      "event": "Supermodel Bella Hadid snaps up a charming Colorado compound for $5.5 million | Bella Hadid has purchased a creekside compound in Crested Butte, Colorado, for $5.5 million.",
+      "event_en": "Supermodel Bella Hadid snaps up a charming Colorado compound for $5.5 million | Bella Hadid has purchased a creekside compound in Crested Butte, Colorado, for $5.5 million.",
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
@@ -675,6 +670,27 @@
     {
       "tags": [
         {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        },
+        {
+          "type": "energy",
+          "text": "能源",
+          "text_en": "Energy"
+        }
+      ],
+      "event": "‘Nvidia spooked me’: Should I sell my stocks or ride out the market turmoil? | “Real estate here in Florida seems to be presenting some interesting opportunities.”",
+      "event_en": "‘Nvidia spooked me’: Should I sell my stocks or ride out the market turmoil? | “Real estate here in Florida seems to be presenting some interesting opportunities.”",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
           "type": "fed",
           "text": "央行",
           "text_en": "Central Bank"
@@ -687,27 +703,6 @@
       ],
       "event": "Treasury yields pause near 1-month highs as traders brace for Fed signals",
       "event_en": "Treasury yields pause near 1-month highs as traders brace for Fed signals",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        },
-        {
-          "type": "fed",
-          "text": "央行",
-          "text_en": "Central Bank"
-        }
-      ],
-      "event": "Analysis: The Fed's chairman sees an AI revolution coming. Now he has to figure out what it means | Kevin Warsh sees AI at a turning point. He faces tough questions on jobs and interest rates.",
-      "event_en": "Analysis: The Fed's chairman sees an AI revolution coming. Now he has to figure out what it means | Kevin Warsh sees AI at a turning point. He faces tough questions on jobs and interest rates.",
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
@@ -741,6 +736,27 @@
           "type": "ai",
           "text": "AI",
           "text_en": "AI"
+        },
+        {
+          "type": "fed",
+          "text": "央行",
+          "text_en": "Central Bank"
+        }
+      ],
+      "event": "Analysis: The Fed's chairman sees an AI revolution coming. Now he has to figure out what it means | Kevin Warsh sees AI at a turning point. He faces tough questions on jobs and interest rates.",
+      "event_en": "Analysis: The Fed's chairman sees an AI revolution coming. Now he has to figure out what it means | Kevin Warsh sees AI at a turning point. He faces tough questions on jobs and interest rates.",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
         }
       ],
       "event": "Jim Cramer says Nvidia’s leadership shake-up won’t derail the AI trade | CNBC's Jim Cramer pushed back against fears that Nvidia's leadership shake-up could unravel the AI boom.",
@@ -754,13 +770,18 @@
     {
       "tags": [
         {
+          "type": "fed",
+          "text": "央行",
+          "text_en": "Central Bank"
+        },
+        {
           "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
+          "text": "财政",
+          "text_en": "Fiscal"
         }
       ],
-      "event": "Berkshire upped its bet on a beleaguered U.S. housing market, while souring on these bank stocks | Berkshire Hathaway stepped up its investments in the U.S. housing market last quarter, nearly doublin...",
-      "event_en": "Berkshire upped its bet on a beleaguered U.S. housing market, while souring on these bank stocks | Berkshire Hathaway stepped up its investments in the U.S. housing market last quarter, nearly doublin...",
+      "event": "Treasury yields are broadly flat as investors await retail sales data | U.S. Treasury yields were little changed on Tuesday morning as investors awaited economic data and comments from Federal Reserve...",
+      "event_en": "Treasury yields are broadly flat as investors await retail sales data | U.S. Treasury yields were little changed on Tuesday morning as investors awaited economic data and comments from Federal Reserve...",
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
