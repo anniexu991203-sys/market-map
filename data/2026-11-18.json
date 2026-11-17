@@ -2,16 +2,16 @@
   "date": "2026-11-18",
   "weekday": "星期三",
   "weekday_en": "Wednesday",
-  "crawl_time": "约22:20（北京时间）",
-  "source": "Investing.com News / CNBC Top News / MarketWatch Top Stories / CNBC Economy / CNBC World News",
+  "crawl_time": "约23:17（北京时间）",
+  "source": "CNBC Economy / CNBC Top News / MarketWatch Top Stories / CNBC World News / Investing.com News",
   "sources_detail": [
-    "Investing.com News",
+    "CNBC Economy",
     "CNBC Top News",
     "MarketWatch Top Stories",
-    "CNBC Economy",
-    "CNBC World News"
+    "CNBC World News",
+    "Investing.com News"
   ],
-  "filter_result": "50条核心要闻 / 0条因果链 / 93条原始抓取",
+  "filter_result": "47条核心要闻 / 0条因果链 / 94条原始抓取",
   "stats": [
     {
       "label": "S&P",
@@ -366,6 +366,22 @@
     {
       "tags": [
         {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "Costco is benefiting from ‘apocalyptic concerns’ as customers stock up on goods, analysts say | Mizuho analysts have seen an “acceleration on emergency prep sales” at the warehouse chain following the...",
+      "event_en": "Costco is benefiting from ‘apocalyptic concerns’ as customers stock up on goods, analysts say | Mizuho analysts have seen an “acceleration on emergency prep sales” at the warehouse chain following the...",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
           "type": "bio",
           "text": "生物科技",
           "text_en": "Biotech"
@@ -679,27 +695,6 @@
     {
       "tags": [
         {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        },
-        {
-          "type": "china",
-          "text": "中国",
-          "text_en": "China"
-        }
-      ],
-      "event": "Jensen Huang scandal fuels bipartisan push to block AI chip sales to China | Congress members are pushing for a series of chip-related export control bills to be included in the annual National Defens...",
-      "event_en": "Jensen Huang scandal fuels bipartisan push to block AI chip sales to China | Congress members are pushing for a series of chip-related export control bills to be included in the annual National Defens...",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
           "type": "macro",
           "text": "宏观",
           "text_en": "Macro"
@@ -811,13 +806,18 @@
     {
       "tags": [
         {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        },
+        {
+          "type": "china",
+          "text": "中国",
+          "text_en": "China"
         }
       ],
-      "event": "Gold is in a bear market — and hackproof in an increasingly digital world. Is now a good time to buy? | After the world’s largest crypto hack and a spate of outages in the digital world, physical gold...",
-      "event_en": "Gold is in a bear market — and hackproof in an increasingly digital world. Is now a good time to buy? | After the world’s largest crypto hack and a spate of outages in the digital world, physical gold...",
+      "event": "Jensen Huang scandal fuels bipartisan push to block AI chip sales to China | Congress members are pushing for a series of chip-related export control bills to be included in the annual National Defens...",
+      "event_en": "Jensen Huang scandal fuels bipartisan push to block AI chip sales to China | Congress members are pushing for a series of chip-related export control bills to be included in the annual National Defens...",
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
@@ -837,64 +837,6 @@
       "assets": "",
       "assets_en": "",
       "dir": "down",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "fed",
-          "text": "央行",
-          "text_en": "Central Bank"
-        },
-        {
-          "type": "macro",
-          "text": "财政",
-          "text_en": "Fiscal"
-        }
-      ],
-      "event": "Treasury yields moderate as investors parse retail sales data | Investors digested economic data and comments from Federal Reserve officials on Tuesday.",
-      "event_en": "Treasury yields moderate as investors parse retail sales data | Investors digested economic data and comments from Federal Reserve officials on Tuesday.",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        },
-        {
-          "type": "fed",
-          "text": "央行",
-          "text_en": "Central Bank"
-        }
-      ],
-      "event": "Analysis: The Fed's chairman sees an AI revolution coming. Now he has to figure out what it means | Kevin Warsh sees AI at a turning point. He faces tough questions on jobs and interest rates.",
-      "event_en": "Analysis: The Fed's chairman sees an AI revolution coming. Now he has to figure out what it means | Kevin Warsh sees AI at a turning point. He faces tough questions on jobs and interest rates.",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
-        }
-      ],
-      "event": "Dollar finally dips after fresh 19-month peak, set to snap five-day win streak",
-      "event_en": "Dollar finally dips after fresh 19-month peak, set to snap five-day win streak",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
       "logic": "",
       "logic_en": ""
     }
