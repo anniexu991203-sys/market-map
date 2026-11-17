@@ -2,14 +2,14 @@
   "date": "2026-11-17",
   "weekday": "星期二",
   "weekday_en": "Tuesday",
-  "crawl_time": "约12:46（北京时间）",
-  "source": "CNBC Economy / CNBC World News / MarketWatch Top Stories / Investing.com News / CNBC Top News",
+  "crawl_time": "约14:03（北京时间）",
+  "source": "CNBC World News / CNBC Economy / MarketWatch Top Stories / CNBC Top News / Investing.com News",
   "sources_detail": [
-    "CNBC Economy",
     "CNBC World News",
+    "CNBC Economy",
     "MarketWatch Top Stories",
-    "Investing.com News",
-    "CNBC Top News"
+    "CNBC Top News",
+    "Investing.com News"
   ],
   "filter_result": "50条核心要闻 / 0条因果链 / 90条原始抓取",
   "stats": [],
@@ -272,6 +272,22 @@
     {
       "tags": [
         {
+          "type": "fed",
+          "text": "央行",
+          "text_en": "Central Bank"
+        }
+      ],
+      "event": "St. Louis Fed's Musalem says four more rate hikes may be needed in coming months | The forecast represents one of the most hawkish views among policymakers.",
+      "event_en": "St. Louis Fed's Musalem says four more rate hikes may be needed in coming months | The forecast represents one of the most hawkish views among policymakers.",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
           "type": "macro",
           "text": "宏观",
           "text_en": "Macro"
@@ -288,16 +304,16 @@
     {
       "tags": [
         {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
         }
       ],
-      "event": "Warren Buffett donates $5.5 billion, says kindness 'compounds' in Thanksgiving letter | Following the donations, the chairman emeritus of Berkshire still owns 182,140 Class A shares -- roughly $162 bi...",
-      "event_en": "Warren Buffett donates $5.5 billion, says kindness 'compounds' in Thanksgiving letter | Following the donations, the chairman emeritus of Berkshire still owns 182,140 Class A shares -- roughly $162 bi...",
+      "event": "Nvidia shares slightly up after days of decline ahead of earnings | Investors have been weighing the fallout from former CEO Jensen Huang's resignation.",
+      "event_en": "Nvidia shares slightly up after days of decline ahead of earnings | Investors have been weighing the fallout from former CEO Jensen Huang's resignation.",
       "assets": "",
       "assets_en": "",
-      "dir": "neutral",
+      "dir": "down",
       "logic": "",
       "logic_en": ""
     },
@@ -309,11 +325,43 @@
           "text_en": "AI"
         }
       ],
-      "event": "Nvidia shares slightly up after days of decline ahead of earnings | Investors have been weighing the fallout from former CEO Jensen Huang's resignation.",
-      "event_en": "Nvidia shares slightly up after days of decline ahead of earnings | Investors have been weighing the fallout from former CEO Jensen Huang's resignation.",
+      "event": "Investor Steve Eisman says the AI neocloud stocks are in 'big trouble' from Nvidia fallout | Steve Eisman is appearing on \"Squawk Box\" on Tuesday.",
+      "event_en": "Investor Steve Eisman says the AI neocloud stocks are in 'big trouble' from Nvidia fallout | Steve Eisman is appearing on \"Squawk Box\" on Tuesday.",
       "assets": "",
       "assets_en": "",
       "dir": "down",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ],
+      "event": "Investors look to Nvidia's earnings and Anthropic's IPO to refresh the tech rally | How the market set-up is more favorable for the Anthropic IPO than the lead-up to SpaceX's debut.",
+      "event_en": "Investors look to Nvidia's earnings and Anthropic's IPO to refresh the tech rally | How the market set-up is more favorable for the Anthropic IPO than the lead-up to SpaceX's debut.",
+      "assets": "",
+      "assets_en": "",
+      "dir": "up",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ],
+      "event": "Tepper and Loeb among fund managers piling into Nvidia and other megacap tech stocks on eve of October drawdown | 13-F filings with the SEC offer a snapshot of how large institutional funds were posit...",
+      "event_en": "Tepper and Loeb among fund managers piling into Nvidia and other megacap tech stocks on eve of October drawdown | 13-F filings with the SEC offer a snapshot of how large institutional funds were posit...",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
       "logic": "",
       "logic_en": ""
     },
@@ -489,6 +537,22 @@
           "text_en": "AI"
         }
       ],
+      "event": "Anthropic IPO: For hundreds of billions of dollars flowing into AI startups, a big debut is a must | Venture investors are sitting on big gains from the AI buildout. Anthropic's IPO could set the stag...",
+      "event_en": "Anthropic IPO: For hundreds of billions of dollars flowing into AI startups, a big debut is a must | Venture investors are sitting on big gains from the AI buildout. Anthropic's IPO could set the stag...",
+      "assets": "",
+      "assets_en": "",
+      "dir": "up",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ],
       "event": "Nvidia has lost $2 trillion in value. Here's what options traders expect from earnings | Nvidia options are pricing in a bigger move than usual.",
       "event_en": "Nvidia has lost $2 trillion in value. Here's what options traders expect from earnings | Nvidia options are pricing in a bigger move than usual.",
       "assets": "",
@@ -574,32 +638,21 @@
     {
       "tags": [
         {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        }
-      ],
-      "event": "Tepper, Loeb among fund managers piling into Nvidia and other megacap tech on the eve of October drawdown | 13-F filings with the SEC offer a snapshot of how large institutional funds were positioning...",
-      "event_en": "Tepper, Loeb among fund managers piling into Nvidia and other megacap tech on the eve of October drawdown | 13-F filings with the SEC offer a snapshot of how large institutional funds were positioning...",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
+          "type": "fed",
+          "text": "央行",
+          "text_en": "Central Bank"
+        },
         {
           "type": "macro",
           "text": "财政",
           "text_en": "Fiscal"
         }
       ],
-      "event": "Euro yields hold near 1-month peaks on relentless U.S. Treasury pull",
-      "event_en": "Euro yields hold near 1-month peaks on relentless U.S. Treasury pull",
+      "event": "Treasury yields rise as investors parse retail sales data | U.S. Treasury yields were little changed on Tuesday morning as investors awaited economic data and comments from Federal Reserve officials l...",
+      "event_en": "Treasury yields rise as investors parse retail sales data | U.S. Treasury yields were little changed on Tuesday morning as investors awaited economic data and comments from Federal Reserve officials l...",
       "assets": "",
       "assets_en": "",
-      "dir": "neutral",
+      "dir": "up",
       "logic": "",
       "logic_en": ""
     },
@@ -661,22 +714,6 @@
       ],
       "event": "Fund managers just slashed their tech bets at the fastest pace in two decades — and this is the tail risk keeping them up at night | Investors are shifting their overweight positioning away from megac...",
       "event_en": "Fund managers just slashed their tech bets at the fastest pace in two decades — and this is the tail risk keeping them up at night | Investors are shifting their overweight positioning away from megac...",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
-        }
-      ],
-      "event": "Supermodel Bella Hadid snaps up a charming Colorado compound for $5.5 million | Bella Hadid has purchased a creekside compound in Crested Butte, Colorado, for $5.5 million.",
-      "event_en": "Supermodel Bella Hadid snaps up a charming Colorado compound for $5.5 million | Bella Hadid has purchased a creekside compound in Crested Butte, Colorado, for $5.5 million.",
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
@@ -789,27 +826,6 @@
           "type": "fed",
           "text": "央行",
           "text_en": "Central Bank"
-        },
-        {
-          "type": "macro",
-          "text": "财政",
-          "text_en": "Fiscal"
-        }
-      ],
-      "event": "Treasury yields are broadly flat as investors await retail sales data | U.S. Treasury yields were little changed on Tuesday morning as investors awaited economic data and comments from Federal Reserve...",
-      "event_en": "Treasury yields are broadly flat as investors await retail sales data | U.S. Treasury yields were little changed on Tuesday morning as investors awaited economic data and comments from Federal Reserve...",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "fed",
-          "text": "央行",
-          "text_en": "Central Bank"
         }
       ],
       "event": "Sterling today: Pound extends slide as dollar firms on hawkish Fed bets",
@@ -865,22 +881,6 @@
       "assets": "",
       "assets_en": "",
       "dir": "up",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        }
-      ],
-      "event": "AI is reshaping banking jobs – but its ability to drive profits remains unclear | Europe's banks are using AI to cut routine work, redeploy staff and hire more technical talent.",
-      "event_en": "AI is reshaping banking jobs – but its ability to drive profits remains unclear | Europe's banks are using AI to cut routine work, redeploy staff and hire more technical talent.",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
       "logic": "",
       "logic_en": ""
     }
