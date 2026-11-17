@@ -2,16 +2,16 @@
   "date": "2026-11-18",
   "weekday": "星期三",
   "weekday_en": "Wednesday",
-  "crawl_time": "约18:19（北京时间）",
-  "source": "Investing.com News / CNBC World News / MarketWatch Top Stories / CNBC Top News / CNBC Economy",
+  "crawl_time": "约19:29（北京时间）",
+  "source": "Investing.com News / CNBC Top News / CNBC World News / CNBC Economy / MarketWatch Top Stories",
   "sources_detail": [
     "Investing.com News",
-    "CNBC World News",
-    "MarketWatch Top Stories",
     "CNBC Top News",
-    "CNBC Economy"
+    "CNBC World News",
+    "CNBC Economy",
+    "MarketWatch Top Stories"
   ],
-  "filter_result": "47条核心要闻 / 0条因果链 / 93条原始抓取",
+  "filter_result": "46条核心要闻 / 0条因果链 / 93条原始抓取",
   "stats": [
     {
       "label": "S&P",
@@ -236,6 +236,22 @@
     {
       "tags": [
         {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "We’re watching Cramer’s favorite market indicator for a signal to buy stocks | Every weekday, the Investing Club releases the Homestretch; an actionable afternoon update just in time for the last hour...",
+      "event_en": "We’re watching Cramer’s favorite market indicator for a signal to buy stocks | Every weekday, the Investing Club releases the Homestretch; an actionable afternoon update just in time for the last hour...",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
           "type": "fed",
           "text": "央行",
           "text_en": "Central Bank"
@@ -404,22 +420,6 @@
           "type": "ai",
           "text": "AI",
           "text_en": "AI"
-        }
-      ],
-      "event": "If you own a Nasdaq-100 fund, you’ll own Anthropic shares after 15 trading days — whether you want to or not | Anthropic’s suppliers are buying $26 billion worth of stock at the IPO price because they...",
-      "event_en": "If you own a Nasdaq-100 fund, you’ll own Anthropic shares after 15 trading days — whether you want to or not | Anthropic’s suppliers are buying $26 billion worth of stock at the IPO price because they...",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
         },
         {
           "type": "fed",
@@ -444,6 +444,22 @@
       "tags": [
         {
           "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "These charts show investor fears run even deeper than the stock market’s decline suggests | The yen’s recent strengthening, particularly against the Australian dollar, suggests investors are unwinding...",
+      "event_en": "These charts show investor fears run even deeper than the stock market’s decline suggests | The yen’s recent strengthening, particularly against the Australian dollar, suggests investors are unwinding...",
+      "assets": "",
+      "assets_en": "",
+      "dir": "split",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "macro",
           "text": "财政",
           "text_en": "Fiscal"
         }
@@ -453,22 +469,6 @@
       "assets": "",
       "assets_en": "",
       "dir": "up",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
-        }
-      ],
-      "event": "Measles cases in the U.S. are at a 35-year high. Here’s the staggering cost of falling vaccination rates for Americans. | The U.S. officially lost its measles elimination status on Tuesday as it grapp...",
-      "event_en": "Measles cases in the U.S. are at a 35-year high. Here’s the staggering cost of falling vaccination rates for Americans. | The U.S. officially lost its measles elimination status on Tuesday as it grapp...",
-      "assets": "",
-      "assets_en": "",
-      "dir": "down",
       "logic": "",
       "logic_en": ""
     },
@@ -485,22 +485,6 @@
       "assets": "",
       "assets_en": "",
       "dir": "down",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        }
-      ],
-      "event": "Jensen Huang breaks his silence ahead of Nvidia earnings — plus, 1 stock to buy on weakness | The Investing Club holds its \"Morning Meeting\" every weekday at 10:20 a.m. ET.",
-      "event_en": "Jensen Huang breaks his silence ahead of Nvidia earnings — plus, 1 stock to buy on weakness | The Investing Club holds its \"Morning Meeting\" every weekday at 10:20 a.m. ET.",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
       "logic": "",
       "logic_en": ""
     },
@@ -730,22 +714,6 @@
     {
       "tags": [
         {
-          "type": "china",
-          "text": "中国",
-          "text_en": "China"
-        }
-      ],
-      "event": "Coherent and Lumentum stocks climb as potential U.S. import ban threatens Chinese rivals | The Trump administration is reportedly planning to move forward on banning imports of Chinese optical transce...",
-      "event_en": "Coherent and Lumentum stocks climb as potential U.S. import ban threatens Chinese rivals | The Trump administration is reportedly planning to move forward on banning imports of Chinese optical transce...",
-      "assets": "",
-      "assets_en": "",
-      "dir": "up",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
           "type": "macro",
           "text": "宏观",
           "text_en": "Macro"
@@ -756,6 +724,27 @@
       "assets": "",
       "assets_en": "",
       "dir": "up",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        },
+        {
+          "type": "energy",
+          "text": "能源",
+          "text_en": "Energy"
+        }
+      ],
+      "event": "‘Nvidia’s turmoil has me spooked’: Has the time come to sell my stocks? | “Real estate here in Florida seems to be presenting some interesting opportunities.”",
+      "event_en": "‘Nvidia’s turmoil has me spooked’: Has the time come to sell my stocks? | “Real estate here in Florida seems to be presenting some interesting opportunities.”",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
       "logic": "",
       "logic_en": ""
     },
