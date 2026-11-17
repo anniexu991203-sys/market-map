@@ -2,16 +2,16 @@
   "date": "2026-11-17",
   "weekday": "星期二",
   "weekday_en": "Tuesday",
-  "crawl_time": "约10:30（北京时间）",
-  "source": "CNBC Top News / Investing.com News / CNBC Economy / MarketWatch Top Stories / CNBC World News",
+  "crawl_time": "约11:39（北京时间）",
+  "source": "Investing.com News / CNBC Top News / CNBC World News / CNBC Economy / MarketWatch Top Stories",
   "sources_detail": [
-    "CNBC Top News",
     "Investing.com News",
+    "CNBC Top News",
+    "CNBC World News",
     "CNBC Economy",
-    "MarketWatch Top Stories",
-    "CNBC World News"
+    "MarketWatch Top Stories"
   ],
-  "filter_result": "50条核心要闻 / 0条因果链 / 91条原始抓取",
+  "filter_result": "50条核心要闻 / 0条因果链 / 90条原始抓取",
   "stats": [],
   "events": [
     {
@@ -320,22 +320,6 @@
     {
       "tags": [
         {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
-        }
-      ],
-      "event": "Prediction market odds for Tesla-SpaceX merger by April 2027 top 60% | The odds have climbed to 62% from 27% since Thursday, amid growing speculation that Musk's two companies will integrate.",
-      "event_en": "Prediction market odds for Tesla-SpaceX merger by April 2027 top 60% | The odds have climbed to 62% from 27% since Thursday, amid growing speculation that Musk's two companies will integrate.",
-      "assets": "",
-      "assets_en": "",
-      "dir": "up",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
           "type": "ai",
           "text": "AI",
           "text_en": "AI"
@@ -352,26 +336,16 @@
     {
       "tags": [
         {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        },
-        {
-          "type": "china",
-          "text": "中国",
-          "text_en": "China"
-        },
-        {
           "type": "macro",
-          "text": "财政",
-          "text_en": "Fiscal"
+          "text": "宏观",
+          "text_en": "Macro"
         }
       ],
-      "event": "Nvidia fallout: Commerce targets loophole for China's data center use | The rule was written by the Treasury Department and the National Security Council after criticism of Commerce Secretary Howard L...",
-      "event_en": "Nvidia fallout: Commerce targets loophole for China's data center use | The rule was written by the Treasury Department and the National Security Council after criticism of Commerce Secretary Howard L...",
+      "event": "Jim Cramer says Costco's hefty special dividend signals ‘more gains ahead’ | Jim Cramer says investors should hold on to Costco after its $30-per-share special dividend announcement.",
+      "event_en": "Jim Cramer says Costco's hefty special dividend signals ‘more gains ahead’ | Jim Cramer says investors should hold on to Costco after its $30-per-share special dividend announcement.",
       "assets": "",
       "assets_en": "",
-      "dir": "down",
+      "dir": "up",
       "logic": "",
       "logic_en": ""
     },
@@ -420,6 +394,32 @@
     {
       "tags": [
         {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        },
+        {
+          "type": "china",
+          "text": "中国",
+          "text_en": "China"
+        },
+        {
+          "type": "macro",
+          "text": "财政",
+          "text_en": "Fiscal"
+        }
+      ],
+      "event": "Nvidia fallout: Commerce targets loophole for China's data center use | The rule was written by the Treasury Department and the National Security Council after criticism of Commerce Secretary Howard L...",
+      "event_en": "Nvidia fallout: Commerce targets loophole for China's data center use | The rule was written by the Treasury Department and the National Security Council after criticism of Commerce Secretary Howard L...",
+      "assets": "",
+      "assets_en": "",
+      "dir": "down",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
           "type": "fed",
           "text": "央行",
           "text_en": "Central Bank"
@@ -457,11 +457,11 @@
           "text_en": "Macro"
         }
       ],
-      "event": "Sterling today: Pound set to snap slide as dollar pauses; UK jobless dips to 4.6%",
-      "event_en": "Sterling today: Pound set to snap slide as dollar pauses; UK jobless dips to 4.6%",
+      "event": "Pick the two sectors where earnings growth will accelerate — as long as the 10-year stays below this key level, say strategists | Strategists at the investment bank recommend hyperscalers and the heal...",
+      "event_en": "Pick the two sectors where earnings growth will accelerate — as long as the 10-year stays below this key level, say strategists | Strategists at the investment bank recommend hyperscalers and the heal...",
       "assets": "",
       "assets_en": "",
-      "dir": "down",
+      "dir": "neutral",
       "logic": "",
       "logic_en": ""
     },
@@ -473,11 +473,11 @@
           "text_en": "Macro"
         }
       ],
-      "event": "Jim Cramer says Costco's hefty special dividend signals ‘more gains ahead’ | Jim Cramer says investors should hold on to Costco after its $30-per-share special dividend announcement.",
-      "event_en": "Jim Cramer says Costco's hefty special dividend signals ‘more gains ahead’ | Jim Cramer says investors should hold on to Costco after its $30-per-share special dividend announcement.",
+      "event": "Sterling today: Pound set to snap slide as dollar pauses; UK jobless dips to 4.6%",
+      "event_en": "Sterling today: Pound set to snap slide as dollar pauses; UK jobless dips to 4.6%",
       "assets": "",
       "assets_en": "",
-      "dir": "up",
+      "dir": "down",
       "logic": "",
       "logic_en": ""
     },
@@ -491,6 +491,22 @@
       ],
       "event": "Bank of England hikes interest rate for the first time since Iran war, warns inflation will near 5% | One policymaker voted to raise the bank's key interest rate to 4.25%.",
       "event_en": "Bank of England hikes interest rate for the first time since Iran war, warns inflation will near 5% | One policymaker voted to raise the bank's key interest rate to 4.25%.",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ],
+      "event": "Data center policy dominated the midterms. The 'Virginia of Europe' is the latest battleground | Data center policy has become a key election issue in Spain, creating an obstacle to existing deals and...",
+      "event_en": "Data center policy dominated the midterms. The 'Virginia of Europe' is the latest battleground | Data center policy has become a key election issue in Spain, creating an obstacle to existing deals and...",
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
@@ -542,11 +558,11 @@
           "text_en": "AI"
         }
       ],
-      "event": "U.S. dollar’s AI-driven breakout could become a stock-market wrecking ball | The dollar recently climbed to its strongest level in a year and a half.",
-      "event_en": "U.S. dollar’s AI-driven breakout could become a stock-market wrecking ball | The dollar recently climbed to its strongest level in a year and a half.",
+      "event": "Tepper, Loeb among fund managers piling into Nvidia and other megacap tech on the eve of October drawdown | 13-F filings with the SEC offer a snapshot of how large institutional funds were positioning...",
+      "event_en": "Tepper, Loeb among fund managers piling into Nvidia and other megacap tech on the eve of October drawdown | 13-F filings with the SEC offer a snapshot of how large institutional funds were positioning...",
       "assets": "",
       "assets_en": "",
-      "dir": "up",
+      "dir": "neutral",
       "logic": "",
       "logic_en": ""
     },
@@ -636,43 +652,6 @@
           "type": "ai",
           "text": "AI",
           "text_en": "AI"
-        }
-      ],
-      "event": "OpenAI inks agreements with four independent evaluators to boost company's safety work | Independent evaluators have taken on outsized importance following a series of high-profile AI safety and secur...",
-      "event_en": "OpenAI inks agreements with four independent evaluators to boost company's safety work | Independent evaluators have taken on outsized importance following a series of high-profile AI safety and secur...",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        },
-        {
-          "type": "china",
-          "text": "中国",
-          "text_en": "China"
-        }
-      ],
-      "event": "Cantwell urges Lutnick to stop AI chip sales to China ahead of Xi meeting | Commerce Secretary Howard Lutnick has drawn fire for his close relationship with Nvidia CEO Jensen Huang and the department'...",
-      "event_en": "Cantwell urges Lutnick to stop AI chip sales to China ahead of Xi meeting | Commerce Secretary Howard Lutnick has drawn fire for his close relationship with Nvidia CEO Jensen Huang and the department'...",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
         },
         {
           "type": "energy",
@@ -682,6 +661,22 @@
       ],
       "event": "‘Nvidia spooked me’: Should I sell my stocks or ride out the market turmoil? | “Real estate here in Florida seems to be presenting some interesting opportunities.”",
       "event_en": "‘Nvidia spooked me’: Should I sell my stocks or ride out the market turmoil? | “Real estate here in Florida seems to be presenting some interesting opportunities.”",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "fed",
+          "text": "央行",
+          "text_en": "Central Bank"
+        }
+      ],
+      "event": "Dollar scales new 19-month peak on hawkish Fed bets; Yen hemmed near 160",
+      "event_en": "Dollar scales new 19-month peak on hawkish Fed bets; Yen hemmed near 160",
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
@@ -754,22 +749,6 @@
     {
       "tags": [
         {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        }
-      ],
-      "event": "Jim Cramer says Nvidia’s leadership shake-up won’t derail the AI trade | CNBC's Jim Cramer pushed back against fears that Nvidia's leadership shake-up could unravel the AI boom.",
-      "event_en": "Jim Cramer says Nvidia’s leadership shake-up won’t derail the AI trade | CNBC's Jim Cramer pushed back against fears that Nvidia's leadership shake-up could unravel the AI boom.",
-      "assets": "",
-      "assets_en": "",
-      "dir": "up",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
           "type": "fed",
           "text": "央行",
           "text_en": "Central Bank"
@@ -782,6 +761,22 @@
       ],
       "event": "Treasury yields are broadly flat as investors await retail sales data | U.S. Treasury yields were little changed on Tuesday morning as investors awaited economic data and comments from Federal Reserve...",
       "event_en": "Treasury yields are broadly flat as investors await retail sales data | U.S. Treasury yields were little changed on Tuesday morning as investors awaited economic data and comments from Federal Reserve...",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ],
+      "event": "OpenAI inks agreements with four independent evaluators to boost company's safety work | Independent evaluators have taken on outsized importance following a series of high-profile AI safety and secur...",
+      "event_en": "OpenAI inks agreements with four independent evaluators to boost company's safety work | Independent evaluators have taken on outsized importance following a series of high-profile AI safety and secur...",
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
@@ -812,11 +807,11 @@
           "text_en": "Macro"
         }
       ],
-      "event": "Iran escalates threats as third U.S. carrier arrives in Middle East, tanker struck in Hormuz | Iran has ratcheted up threats against U.S. forces as a third American aircraft carrier arrived in the Gul...",
-      "event_en": "Iran escalates threats as third U.S. carrier arrives in Middle East, tanker struck in Hormuz | Iran has ratcheted up threats against U.S. forces as a third American aircraft carrier arrived in the Gul...",
+      "event": "Berkshire Hathaway raised its stake in Delta in the third quarter. It also trimmed a key bank holding | Berkshire Hathaway added to several stock positions in the third quarter while trimming others, ...",
+      "event_en": "Berkshire Hathaway raised its stake in Delta in the third quarter. It also trimmed a key bank holding | Berkshire Hathaway added to several stock positions in the third quarter while trimming others, ...",
       "assets": "",
       "assets_en": "",
-      "dir": "up",
+      "dir": "neutral",
       "logic": "",
       "logic_en": ""
     },
@@ -828,11 +823,11 @@
           "text_en": "Macro"
         }
       ],
-      "event": "Berkshire Hathaway raised its stake in Delta in the third quarter. It also trimmed a key bank holding | Berkshire Hathaway added to several stock positions in the third quarter while trimming others, ...",
-      "event_en": "Berkshire Hathaway raised its stake in Delta in the third quarter. It also trimmed a key bank holding | Berkshire Hathaway added to several stock positions in the third quarter while trimming others, ...",
+      "event": "Iran escalates threats as third U.S. carrier arrives in Middle East, tanker struck in Hormuz | Iran has ratcheted up threats against U.S. forces as a third American aircraft carrier arrived in the Gul...",
+      "event_en": "Iran escalates threats as third U.S. carrier arrives in Middle East, tanker struck in Hormuz | Iran has ratcheted up threats against U.S. forces as a third American aircraft carrier arrived in the Gul...",
       "assets": "",
       "assets_en": "",
-      "dir": "neutral",
+      "dir": "up",
       "logic": "",
       "logic_en": ""
     },
@@ -860,24 +855,24 @@
           "text_en": "AI"
         }
       ],
-      "event": "AI is reshaping banking jobs – but its ability to drive profits remains unclear | Europe's banks are using AI to cut routine work, redeploy staff and hire more technical talent.",
-      "event_en": "AI is reshaping banking jobs – but its ability to drive profits remains unclear | Europe's banks are using AI to cut routine work, redeploy staff and hire more technical talent.",
+      "event": "Jim Cramer says Nvidia’s leadership shake-up won’t derail the AI trade | CNBC's Jim Cramer pushed back against fears that Nvidia's leadership shake-up could unravel the AI boom.",
+      "event_en": "Jim Cramer says Nvidia’s leadership shake-up won’t derail the AI trade | CNBC's Jim Cramer pushed back against fears that Nvidia's leadership shake-up could unravel the AI boom.",
       "assets": "",
       "assets_en": "",
-      "dir": "neutral",
+      "dir": "up",
       "logic": "",
       "logic_en": ""
     },
     {
       "tags": [
         {
-          "type": "fed",
-          "text": "央行",
-          "text_en": "Central Bank"
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
         }
       ],
-      "event": "Dollar hits fresh 19-mth peak on Fed tightening bets",
-      "event_en": "Dollar hits fresh 19-mth peak on Fed tightening bets",
+      "event": "AI is reshaping banking jobs – but its ability to drive profits remains unclear | Europe's banks are using AI to cut routine work, redeploy staff and hire more technical talent.",
+      "event_en": "AI is reshaping banking jobs – but its ability to drive profits remains unclear | Europe's banks are using AI to cut routine work, redeploy staff and hire more technical talent.",
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
