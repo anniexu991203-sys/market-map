@@ -2,14 +2,14 @@
   "date": "2026-11-17",
   "weekday": "星期二",
   "weekday_en": "Tuesday",
-  "crawl_time": "约04:46（北京时间）",
-  "source": "CNBC Economy / Investing.com News / CNBC Top News / CNBC World News / MarketWatch Top Stories",
+  "crawl_time": "约05:49（北京时间）",
+  "source": "CNBC World News / Investing.com News / CNBC Top News / MarketWatch Top Stories / CNBC Economy",
   "sources_detail": [
-    "CNBC Economy",
+    "CNBC World News",
     "Investing.com News",
     "CNBC Top News",
-    "CNBC World News",
-    "MarketWatch Top Stories"
+    "MarketWatch Top Stories",
+    "CNBC Economy"
   ],
   "filter_result": "49条核心要闻 / 0条因果链 / 89条原始抓取",
   "stats": [
@@ -779,8 +779,8 @@
           "text_en": "Macro"
         }
       ],
-      "event": "Third U.S. carrier arrives, stoking concerns about renewed conflicts with Iran | Iran has ratcheted up threats against U.S. forces as a third American aircraft carrier arrived in the Gulf, stoking fea...",
-      "event_en": "Third U.S. carrier arrives, stoking concerns about renewed conflicts with Iran | Iran has ratcheted up threats against U.S. forces as a third American aircraft carrier arrived in the Gulf, stoking fea...",
+      "event": "Third U.S. carrier arrives in the Gulf, stoking concerns about renewed conflicts with Iran | Iran has ratcheted up threats against U.S. forces as a third American aircraft carrier arrived in the Gulf,...",
+      "event_en": "Third U.S. carrier arrives in the Gulf, stoking concerns about renewed conflicts with Iran | Iran has ratcheted up threats against U.S. forces as a third American aircraft carrier arrived in the Gulf,...",
       "assets": "",
       "assets_en": "",
       "dir": "up",
