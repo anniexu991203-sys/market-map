@@ -2,16 +2,16 @@
   "date": "2026-11-17",
   "weekday": "星期二",
   "weekday_en": "Tuesday",
-  "crawl_time": "约01:43（北京时间）",
-  "source": "CNBC Economy / Investing.com News / MarketWatch Top Stories / CNBC Top News / CNBC World News",
+  "crawl_time": "约02:43（北京时间）",
+  "source": "Investing.com News / CNBC Economy / CNBC Top News / CNBC World News / MarketWatch Top Stories",
   "sources_detail": [
-    "CNBC Economy",
     "Investing.com News",
-    "MarketWatch Top Stories",
+    "CNBC Economy",
     "CNBC Top News",
-    "CNBC World News"
+    "CNBC World News",
+    "MarketWatch Top Stories"
   ],
-  "filter_result": "48条核心要闻 / 0条因果链 / 89条原始抓取",
+  "filter_result": "47条核心要闻 / 0条因果链 / 89条原始抓取",
   "stats": [
     {
       "label": "oil",
@@ -593,27 +593,6 @@
       "assets": "",
       "assets_en": "",
       "dir": "up",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        },
-        {
-          "type": "china",
-          "text": "中国",
-          "text_en": "China"
-        }
-      ],
-      "event": "Nvidia’s stock extends decline following harsh words from the U.S. government | The Commerce Department announced a new rule aimed at restricting China’s remote access to advanced chips.",
-      "event_en": "Nvidia’s stock extends decline following harsh words from the U.S. government | The Commerce Department announced a new rule aimed at restricting China’s remote access to advanced chips.",
-      "assets": "",
-      "assets_en": "",
-      "dir": "down",
       "logic": "",
       "logic_en": ""
     },
