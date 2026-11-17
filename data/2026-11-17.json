@@ -2,16 +2,16 @@
   "date": "2026-11-17",
   "weekday": "星期二",
   "weekday_en": "Tuesday",
-  "crawl_time": "约03:42（北京时间）",
-  "source": "CNBC Economy / MarketWatch Top Stories / CNBC World News / CNBC Top News / Investing.com News",
+  "crawl_time": "约04:46（北京时间）",
+  "source": "CNBC Economy / Investing.com News / CNBC Top News / CNBC World News / MarketWatch Top Stories",
   "sources_detail": [
     "CNBC Economy",
-    "MarketWatch Top Stories",
-    "CNBC World News",
+    "Investing.com News",
     "CNBC Top News",
-    "Investing.com News"
+    "CNBC World News",
+    "MarketWatch Top Stories"
   ],
-  "filter_result": "47条核心要闻 / 0条因果链 / 89条原始抓取",
+  "filter_result": "49条核心要闻 / 0条因果链 / 89条原始抓取",
   "stats": [
     {
       "label": "oil",
@@ -779,6 +779,22 @@
           "text_en": "Macro"
         }
       ],
+      "event": "Third U.S. carrier arrives, stoking concerns about renewed conflicts with Iran | Iran has ratcheted up threats against U.S. forces as a third American aircraft carrier arrived in the Gulf, stoking fea...",
+      "event_en": "Third U.S. carrier arrives, stoking concerns about renewed conflicts with Iran | Iran has ratcheted up threats against U.S. forces as a third American aircraft carrier arrived in the Gulf, stoking fea...",
+      "assets": "",
+      "assets_en": "",
+      "dir": "up",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
       "event": "Berkshire Hathaway raised its stake in Delta in the third quarter. It also trimmed a key bank holding | Berkshire Hathaway added to several stock positions in the third quarter while trimming others, ...",
       "event_en": "Berkshire Hathaway raised its stake in Delta in the third quarter. It also trimmed a key bank holding | Berkshire Hathaway added to several stock positions in the third quarter while trimming others, ...",
       "assets": "",
@@ -829,6 +845,22 @@
       ],
       "event": "AI is reshaping banking jobs – but its ability to drive profits remains unclear | Europe's banks are using AI to cut routine work, redeploy staff and hire more technical talent.",
       "event_en": "AI is reshaping banking jobs – but its ability to drive profits remains unclear | Europe's banks are using AI to cut routine work, redeploy staff and hire more technical talent.",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "fed",
+          "text": "央行",
+          "text_en": "Central Bank"
+        }
+      ],
+      "event": "Asia FX subdued as dollar hits 19-mth peak on Fed tightening bets",
+      "event_en": "Asia FX subdued as dollar hits 19-mth peak on Fed tightening bets",
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
