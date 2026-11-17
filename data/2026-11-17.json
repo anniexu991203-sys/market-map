@@ -2,16 +2,16 @@
   "date": "2026-11-17",
   "weekday": "星期二",
   "weekday_en": "Tuesday",
-  "crawl_time": "约14:03（北京时间）",
-  "source": "CNBC World News / CNBC Economy / MarketWatch Top Stories / CNBC Top News / Investing.com News",
+  "crawl_time": "约15:17（北京时间）",
+  "source": "MarketWatch Top Stories / CNBC Economy / CNBC Top News / Investing.com News / CNBC World News",
   "sources_detail": [
-    "CNBC World News",
-    "CNBC Economy",
     "MarketWatch Top Stories",
+    "CNBC Economy",
     "CNBC Top News",
-    "Investing.com News"
+    "Investing.com News",
+    "CNBC World News"
   ],
-  "filter_result": "50条核心要闻 / 0条因果链 / 90条原始抓取",
+  "filter_result": "46条核心要闻 / 0条因果链 / 92条原始抓取",
   "stats": [],
   "events": [
     {
@@ -64,6 +64,22 @@
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "energy",
+          "text": "能源",
+          "text_en": "Energy"
+        }
+      ],
+      "event": "Homebuilder sentiment plunges to 14-year low, leading more builders to drop prices | Homebuilder sentiment fell to a 14-year low amid high mortgage rates and higher prices for energy, labor and materi...",
+      "event_en": "Homebuilder sentiment plunges to 14-year low, leading more builders to drop prices | Homebuilder sentiment fell to a 14-year low amid high mortgage rates and higher prices for energy, labor and materi...",
+      "assets": "",
+      "assets_en": "",
+      "dir": "down",
       "logic": "",
       "logic_en": ""
     },
@@ -309,11 +325,11 @@
           "text_en": "AI"
         }
       ],
-      "event": "Nvidia shares slightly up after days of decline ahead of earnings | Investors have been weighing the fallout from former CEO Jensen Huang's resignation.",
-      "event_en": "Nvidia shares slightly up after days of decline ahead of earnings | Investors have been weighing the fallout from former CEO Jensen Huang's resignation.",
+      "event": "Nvidia investors will be clamoring for these answers during today’s historic earnings call | There’s a lot that Nvidia investors want to know about the post-Jensen Huang era — although management is l...",
+      "event_en": "Nvidia investors will be clamoring for these answers during today’s historic earnings call | There’s a lot that Nvidia investors want to know about the post-Jensen Huang era — although management is l...",
       "assets": "",
       "assets_en": "",
-      "dir": "down",
+      "dir": "neutral",
       "logic": "",
       "logic_en": ""
     },
@@ -355,22 +371,6 @@
           "type": "ai",
           "text": "AI",
           "text_en": "AI"
-        }
-      ],
-      "event": "Tepper and Loeb among fund managers piling into Nvidia and other megacap tech stocks on eve of October drawdown | 13-F filings with the SEC offer a snapshot of how large institutional funds were posit...",
-      "event_en": "Tepper and Loeb among fund managers piling into Nvidia and other megacap tech stocks on eve of October drawdown | 13-F filings with the SEC offer a snapshot of how large institutional funds were posit...",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
         },
         {
           "type": "fed",
@@ -394,16 +394,16 @@
     {
       "tags": [
         {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
         }
       ],
-      "event": "Jim Cramer says Costco's hefty special dividend signals ‘more gains ahead’ | Jim Cramer says investors should hold on to Costco after its $30-per-share special dividend announcement.",
-      "event_en": "Jim Cramer says Costco's hefty special dividend signals ‘more gains ahead’ | Jim Cramer says investors should hold on to Costco after its $30-per-share special dividend announcement.",
+      "event": "Nvidia shares try to rebound ahead of earnings as company company reels from Huang resignation | Investors have been weighing the fallout from former CEO Jensen Huang's resignation.",
+      "event_en": "Nvidia shares try to rebound ahead of earnings as company company reels from Huang resignation | Investors have been weighing the fallout from former CEO Jensen Huang's resignation.",
       "assets": "",
       "assets_en": "",
-      "dir": "up",
+      "dir": "down",
       "logic": "",
       "logic_en": ""
     },
@@ -415,8 +415,24 @@
           "text_en": "AI"
         }
       ],
-      "event": "California sues OpenAI over Hugging Face, other AI model loss of control | Two OpenAI models in July gained unauthorized access to Hugging Face's internal systems to find information for use in cheati...",
-      "event_en": "California sues OpenAI over Hugging Face, other AI model loss of control | Two OpenAI models in July gained unauthorized access to Hugging Face's internal systems to find information for use in cheati...",
+      "event": "Jim Cramer's top 10 things to watch in the stock market Tuesday | Can't understate how huge this Nvidia earnings day is.",
+      "event_en": "Jim Cramer's top 10 things to watch in the stock market Tuesday | Can't understate how huge this Nvidia earnings day is.",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "Jim Cramer says Costco's hefty special dividend signals ‘more gains ahead’ | Jim Cramer says investors should hold on to Costco after its $30-per-share special dividend announcement.",
+      "event_en": "Jim Cramer says Costco's hefty special dividend signals ‘more gains ahead’ | Jim Cramer says investors should hold on to Costco after its $30-per-share special dividend announcement.",
       "assets": "",
       "assets_en": "",
       "dir": "up",
@@ -489,22 +505,6 @@
           "text_en": "Macro"
         }
       ],
-      "event": "Pick the two sectors where earnings growth will accelerate — as long as the 10-year stays below this key level, say strategists | Strategists at the investment bank recommend hyperscalers and the heal...",
-      "event_en": "Pick the two sectors where earnings growth will accelerate — as long as the 10-year stays below this key level, say strategists | Strategists at the investment bank recommend hyperscalers and the heal...",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
-        }
-      ],
       "event": "Sterling today: Pound set to snap slide as dollar pauses; UK jobless dips to 4.6%",
       "event_en": "Sterling today: Pound set to snap slide as dollar pauses; UK jobless dips to 4.6%",
       "assets": "",
@@ -523,6 +523,22 @@
       ],
       "event": "Bank of England hikes interest rate for the first time since Iran war, warns inflation will near 5% | One policymaker voted to raise the bank's key interest rate to 4.25%.",
       "event_en": "Bank of England hikes interest rate for the first time since Iran war, warns inflation will near 5% | One policymaker voted to raise the bank's key interest rate to 4.25%.",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ],
+      "event": "Demis Hassabis’ AI company raises $5 billion, months after he left as Google DeepMind CEO | Isomorphic Labs is looking to develop new medicines using AI.",
+      "event_en": "Demis Hassabis’ AI company raises $5 billion, months after he left as Google DeepMind CEO | Isomorphic Labs is looking to develop new medicines using AI.",
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
@@ -617,27 +633,6 @@
     {
       "tags": [
         {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        },
-        {
-          "type": "fed",
-          "text": "央行",
-          "text_en": "Central Bank"
-        }
-      ],
-      "event": "Can Nvidia sell investors on a future without Jensen Huang? | Co-founder Huang is gone. Can Colette Kress ease market fears? Can a new board committee? Plus, the Fed weighs AI’s economic fallout, and ...",
-      "event_en": "Can Nvidia sell investors on a future without Jensen Huang? | Co-founder Huang is gone. Can Colette Kress ease market fears? Can a new board committee? Plus, the Fed weighs AI’s economic fallout, and ...",
-      "assets": "",
-      "assets_en": "",
-      "dir": "down",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
           "type": "fed",
           "text": "央行",
           "text_en": "Central Bank"
@@ -707,34 +702,13 @@
     {
       "tags": [
         {
-          "type": "macro",
-          "text": "财政",
-          "text_en": "Fiscal"
-        }
-      ],
-      "event": "Fund managers just slashed their tech bets at the fastest pace in two decades — and this is the tail risk keeping them up at night | Investors are shifting their overweight positioning away from megac...",
-      "event_en": "Fund managers just slashed their tech bets at the fastest pace in two decades — and this is the tail risk keeping them up at night | Investors are shifting their overweight positioning away from megac...",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
           "type": "ai",
           "text": "AI",
           "text_en": "AI"
-        },
-        {
-          "type": "energy",
-          "text": "能源",
-          "text_en": "Energy"
         }
       ],
-      "event": "‘Nvidia spooked me’: Should I sell my stocks or ride out the market turmoil? | “Real estate here in Florida seems to be presenting some interesting opportunities.”",
-      "event_en": "‘Nvidia spooked me’: Should I sell my stocks or ride out the market turmoil? | “Real estate here in Florida seems to be presenting some interesting opportunities.”",
+      "event": "SpaceX got a vote of confidence from Nvidia ahead of Jensen Huang’s exit | Nvidia purchased millions of additional SpaceX shares during the third quarter.",
+      "event_en": "SpaceX got a vote of confidence from Nvidia ahead of Jensen Huang’s exit | Nvidia purchased millions of additional SpaceX shares during the third quarter.",
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
@@ -833,54 +807,6 @@
       "assets": "",
       "assets_en": "",
       "dir": "down",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
-        }
-      ],
-      "event": "Iran escalates threats as third U.S. carrier arrives in Middle East, tanker struck in Hormuz | Iran has ratcheted up threats against U.S. forces as a third American aircraft carrier arrived in the Gul...",
-      "event_en": "Iran escalates threats as third U.S. carrier arrives in Middle East, tanker struck in Hormuz | Iran has ratcheted up threats against U.S. forces as a third American aircraft carrier arrived in the Gul...",
-      "assets": "",
-      "assets_en": "",
-      "dir": "up",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
-        }
-      ],
-      "event": "Berkshire Hathaway raised its stake in Delta in the third quarter. It also trimmed a key bank holding | Berkshire Hathaway added to several stock positions in the third quarter while trimming others, ...",
-      "event_en": "Berkshire Hathaway raised its stake in Delta in the third quarter. It also trimmed a key bank holding | Berkshire Hathaway added to several stock positions in the third quarter while trimming others, ...",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        }
-      ],
-      "event": "Jim Cramer says Nvidia’s leadership shake-up won’t derail the AI trade | CNBC's Jim Cramer pushed back against fears that Nvidia's leadership shake-up could unravel the AI boom.",
-      "event_en": "Jim Cramer says Nvidia’s leadership shake-up won’t derail the AI trade | CNBC's Jim Cramer pushed back against fears that Nvidia's leadership shake-up could unravel the AI boom.",
-      "assets": "",
-      "assets_en": "",
-      "dir": "up",
       "logic": "",
       "logic_en": ""
     }
