@@ -2,16 +2,16 @@
   "date": "2026-11-18",
   "weekday": "星期三",
   "weekday_en": "Wednesday",
-  "crawl_time": "约06:55（北京时间）",
-  "source": "Investing.com News / CNBC World News / CNBC Top News / CNBC Economy / MarketWatch Top Stories",
+  "crawl_time": "约08:08（北京时间）",
+  "source": "CNBC Economy / MarketWatch Top Stories / CNBC Top News / CNBC World News / Investing.com News",
   "sources_detail": [
-    "Investing.com News",
-    "CNBC World News",
-    "CNBC Top News",
     "CNBC Economy",
-    "MarketWatch Top Stories"
+    "MarketWatch Top Stories",
+    "CNBC Top News",
+    "CNBC World News",
+    "Investing.com News"
   ],
-  "filter_result": "49条核心要闻 / 0条因果链 / 91条原始抓取",
+  "filter_result": "47条核心要闻 / 0条因果链 / 89条原始抓取",
   "stats": [],
   "events": [
     {
@@ -174,22 +174,6 @@
           "type": "fed",
           "text": "央行",
           "text_en": "Central Bank"
-        }
-      ],
-      "event": "Third-quarter U.S. GDP increases a better-than-expected 3.4% as September inflation accelerates | The personal consumption expenditures price index was projected to increase 0.5% in September for an a...",
-      "event_en": "Third-quarter U.S. GDP increases a better-than-expected 3.4% as September inflation accelerates | The personal consumption expenditures price index was projected to increase 0.5% in September for an a...",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "fed",
-          "text": "央行",
-          "text_en": "Central Bank"
         },
         {
           "type": "china",
@@ -234,22 +218,6 @@
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
-        }
-      ],
-      "event": "Yen steady against euro and dollar after soft Japanese GDP data",
-      "event_en": "Yen steady against euro and dollar after soft Japanese GDP data",
-      "assets": "",
-      "assets_en": "",
-      "dir": "up",
       "logic": "",
       "logic_en": ""
     },
@@ -357,22 +325,6 @@
     {
       "tags": [
         {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        }
-      ],
-      "event": "Investor Steve Eisman says the AI neocloud stocks are in 'big trouble' from Nvidia fallout | Steve Eisman is appearing on \"Squawk Box\" on Tuesday.",
-      "event_en": "Investor Steve Eisman says the AI neocloud stocks are in 'big trouble' from Nvidia fallout | Steve Eisman is appearing on \"Squawk Box\" on Tuesday.",
-      "assets": "",
-      "assets_en": "",
-      "dir": "down",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
           "type": "fed",
           "text": "央行",
           "text_en": "Central Bank"
@@ -447,22 +399,6 @@
     {
       "tags": [
         {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        }
-      ],
-      "event": "'Who and what comes next': Analysts expect Nvidia investor uncertainty despite earnings beat | Nvidia’s Q3 results should help ease short-term concerns, but uncertainty remains around long-term leader...",
-      "event_en": "'Who and what comes next': Analysts expect Nvidia investor uncertainty despite earnings beat | Nvidia’s Q3 results should help ease short-term concerns, but uncertainty remains around long-term leader...",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
           "type": "fed",
           "text": "央行",
           "text_en": "Central Bank"
@@ -521,6 +457,22 @@
       "assets": "",
       "assets_en": "",
       "dir": "down",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "fed",
+          "text": "央行",
+          "text_en": "Central Bank"
+        }
+      ],
+      "event": "Record diesel prices drive UK inflation to 1-year high of 3.6% | It put the U.K.'s annual inflation rate at a 1-year high.",
+      "event_en": "Record diesel prices drive UK inflation to 1-year high of 3.6% | It put the U.K.'s annual inflation rate at a 1-year high.",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
       "logic": "",
       "logic_en": ""
     },
@@ -623,6 +575,22 @@
     {
       "tags": [
         {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "Senators press acting U.S. Navy Secretary on Iran war costs, sailor health in confirmation hearing | Acting Navy Secretary Hung Cao told senators the Navy recoded and used munitions he called expired ...",
+      "event_en": "Senators press acting U.S. Navy Secretary on Iran war costs, sailor health in confirmation hearing | Acting Navy Secretary Hung Cao told senators the Navy recoded and used munitions he called expired ...",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
           "type": "ai",
           "text": "AI",
           "text_en": "AI"
@@ -688,6 +656,27 @@
       ],
       "event": "Treasury yields pause near 1-month highs as traders brace for Fed signals",
       "event_en": "Treasury yields pause near 1-month highs as traders brace for Fed signals",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        },
+        {
+          "type": "china",
+          "text": "中国",
+          "text_en": "China"
+        }
+      ],
+      "event": "Nvidia warns chip buyers of legal risks tied to China AI access, sources tell CNBC | The U.S. Commerce Department is making moves to tighten export controls.",
+      "event_en": "Nvidia warns chip buyers of legal risks tied to China AI access, sources tell CNBC | The U.S. Commerce Department is making moves to tighten export controls.",
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
@@ -771,27 +760,6 @@
           "text_en": "AI"
         },
         {
-          "type": "china",
-          "text": "中国",
-          "text_en": "China"
-        }
-      ],
-      "event": "Nvidia warns chip buyers of legal risks tied to China AI access, sources tell CNBC | The U.S. Commerce Department is making moves to tighten export controls.",
-      "event_en": "Nvidia warns chip buyers of legal risks tied to China AI access, sources tell CNBC | The U.S. Commerce Department is making moves to tighten export controls.",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        },
-        {
           "type": "fed",
           "text": "央行",
           "text_en": "Central Bank"
@@ -808,13 +776,13 @@
     {
       "tags": [
         {
-          "type": "fed",
-          "text": "央行",
-          "text_en": "Central Bank"
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
         }
       ],
-      "event": "Asia FX subdued as dollar holds near 19-mth high on Fed hike bets",
-      "event_en": "Asia FX subdued as dollar holds near 19-mth high on Fed hike bets",
+      "event": "After $6.3 billion crypto heist, Binance plans foray into 5 Asian markets",
+      "event_en": "After $6.3 billion crypto heist, Binance plans foray into 5 Asian markets",
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
