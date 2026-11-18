@@ -2,16 +2,16 @@
   "date": "2026-11-18",
   "weekday": "星期三",
   "weekday_en": "Wednesday",
-  "crawl_time": "约14:43（北京时间）",
-  "source": "CNBC World News / MarketWatch Top Stories / CNBC Top News / Investing.com News / CNBC Economy",
+  "crawl_time": "约15:46（北京时间）",
+  "source": "CNBC Economy / CNBC World News / MarketWatch Top Stories / Investing.com News / CNBC Top News",
   "sources_detail": [
+    "CNBC Economy",
     "CNBC World News",
     "MarketWatch Top Stories",
-    "CNBC Top News",
     "Investing.com News",
-    "CNBC Economy"
+    "CNBC Top News"
   ],
-  "filter_result": "50条核心要闻 / 0条因果链 / 94条原始抓取",
+  "filter_result": "50条核心要闻 / 0条因果链 / 93条原始抓取",
   "stats": [
     {
       "label": "S&P",
@@ -89,6 +89,22 @@
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ],
+      "event": "Anthropic IPO: AI lab considers increasing the offering as investor demand surges | Anthropic stock is set to begin trading on the Nasdaq under the ticker symbol \"ANT\" on Thursday.",
+      "event_en": "Anthropic IPO: AI lab considers increasing the offering as investor demand surges | Anthropic stock is set to begin trading on the Nasdaq under the ticker symbol \"ANT\" on Thursday.",
+      "assets": "",
+      "assets_en": "",
+      "dir": "up",
       "logic": "",
       "logic_en": ""
     },
@@ -204,6 +220,22 @@
           "type": "fed",
           "text": "央行",
           "text_en": "Central Bank"
+        }
+      ],
+      "event": "Fed’s Waller says interest-rate hikes may be needed to ‘shock’ inflation out of the system | The central bank might need to hike interest rates by a full percentage point or more to cool down inflatio...",
+      "event_en": "Fed’s Waller says interest-rate hikes may be needed to ‘shock’ inflation out of the system | The central bank might need to hike interest rates by a full percentage point or more to cool down inflatio...",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "fed",
+          "text": "央行",
+          "text_en": "Central Bank"
         },
         {
           "type": "macro",
@@ -269,22 +301,6 @@
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        }
-      ],
-      "event": "Nvidia earnings spark rally in shares and neoclouds despite Huang scandal | The chip giant's earnings come at a tumultuous time for the company.",
-      "event_en": "Nvidia earnings spark rally in shares and neoclouds despite Huang scandal | The chip giant's earnings come at a tumultuous time for the company.",
-      "assets": "",
-      "assets_en": "",
-      "dir": "up",
       "logic": "",
       "logic_en": ""
     },
@@ -392,22 +408,6 @@
     {
       "tags": [
         {
-          "type": "fed",
-          "text": "央行",
-          "text_en": "Central Bank"
-        }
-      ],
-      "event": "How high must interest rates go to cool inflation? Possibly 100 basis points or more, Fed’s Waller says. | The central bank might have to be more aggressive in order to “shock” inflation out of the sy...",
-      "event_en": "How high must interest rates go to cool inflation? Possibly 100 basis points or more, Fed’s Waller says. | The central bank might have to be more aggressive in order to “shock” inflation out of the sy...",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
           "type": "ai",
           "text": "AI",
           "text_en": "AI"
@@ -466,6 +466,22 @@
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ],
+      "event": "CoreWeave, Iren, Nebius shares sink following Nvidia earnings | Nvidia's earnings come at a tumultuous time for the company.",
+      "event_en": "CoreWeave, Iren, Nebius shares sink following Nvidia earnings | Nvidia's earnings come at a tumultuous time for the company.",
+      "assets": "",
+      "assets_en": "",
+      "dir": "down",
       "logic": "",
       "logic_en": ""
     },
@@ -540,6 +556,22 @@
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "fed",
+          "text": "央行",
+          "text_en": "Central Bank"
+        }
+      ],
+      "event": "Two new housing reports point to bleak winter ahead, with record low sales | Two new reports on the state of the housing market show things are just getting worse, as high mortgage rates and inflation...",
+      "event_en": "Two new housing reports point to bleak winter ahead, with record low sales | Two new reports on the state of the housing market show things are just getting worse, as high mortgage rates and inflation...",
+      "assets": "",
+      "assets_en": "",
+      "dir": "down",
       "logic": "",
       "logic_en": ""
     },
@@ -674,22 +706,6 @@
     {
       "tags": [
         {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        }
-      ],
-      "event": "OpenAI bugging case defendant Alfozan set for trial in January | Abdulrahman Alfozan has been held without bail since his arrest in October, after prosecutors said he planted a listening device in an ...",
-      "event_en": "OpenAI bugging case defendant Alfozan set for trial in January | Abdulrahman Alfozan has been held without bail since his arrest in October, after prosecutors said he planted a listening device in an ...",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
           "type": "macro",
           "text": "宏观",
           "text_en": "Macro"
@@ -759,11 +775,11 @@
           "text_en": "AI"
         }
       ],
-      "event": "Wall Street's fear gauge is surging again and this time it's not just about AI jitters | VIX up four days in a row as options traders show fear unseen since April",
-      "event_en": "Wall Street's fear gauge is surging again and this time it's not just about AI jitters | VIX up four days in a row as options traders show fear unseen since April",
+      "event": "OpenAI bugging case defendant Alfozan set for trial in January | Abdulrahman Alfozan has been held without bail since his arrest in October, after prosecutors said he planted a listening device in an ...",
+      "event_en": "OpenAI bugging case defendant Alfozan set for trial in January | Abdulrahman Alfozan has been held without bail since his arrest in October, after prosecutors said he planted a listening device in an ...",
       "assets": "",
       "assets_en": "",
-      "dir": "up",
+      "dir": "neutral",
       "logic": "",
       "logic_en": ""
     },
@@ -851,22 +867,6 @@
       ],
       "event": "Analysis: The Fed's chairman sees an AI revolution coming. Now he has to figure out what it means | Kevin Warsh sees AI at a turning point. He faces tough questions on jobs and interest rates.",
       "event_en": "Analysis: The Fed's chairman sees an AI revolution coming. Now he has to figure out what it means | Kevin Warsh sees AI at a turning point. He faces tough questions on jobs and interest rates.",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
-        }
-      ],
-      "event": "After $6.3 billion crypto heist, Binance plans Asia expansion",
-      "event_en": "After $6.3 billion crypto heist, Binance plans Asia expansion",
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
