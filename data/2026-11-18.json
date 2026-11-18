@@ -2,16 +2,16 @@
   "date": "2026-11-18",
   "weekday": "星期三",
   "weekday_en": "Wednesday",
-  "crawl_time": "约03:44（北京时间）",
-  "source": "CNBC Economy / Investing.com News / CNBC Top News / CNBC World News / MarketWatch Top Stories",
+  "crawl_time": "约04:49（北京时间）",
+  "source": "CNBC Economy / Investing.com News / MarketWatch Top Stories / CNBC Top News / CNBC World News",
   "sources_detail": [
     "CNBC Economy",
     "Investing.com News",
+    "MarketWatch Top Stories",
     "CNBC Top News",
-    "CNBC World News",
-    "MarketWatch Top Stories"
+    "CNBC World News"
   ],
-  "filter_result": "44条核心要闻 / 0条因果链 / 91条原始抓取",
+  "filter_result": "48条核心要闻 / 0条因果链 / 90条原始抓取",
   "stats": [],
   "events": [
     {
@@ -272,22 +272,6 @@
     {
       "tags": [
         {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
-        }
-      ],
-      "event": "7 smart reasons to sell a stock—and my ‘golden rule’ for offloading shares, says hedge fund CEO | \"You need a clear, disciplined plan for when to sell,\" says Karen Finerman. Here are seven smart reaso...",
-      "event_en": "7 smart reasons to sell a stock—and my ‘golden rule’ for offloading shares, says hedge fund CEO | \"You need a clear, disciplined plan for when to sell,\" says Karen Finerman. Here are seven smart reaso...",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
           "type": "ai",
           "text": "AI",
           "text_en": "AI"
@@ -405,22 +389,6 @@
     {
       "tags": [
         {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
-        }
-      ],
-      "event": "Deutsche Bank shares sink as whistleblowers reveal Epstein payments, Trump tax leak, Russia bets | A 15-million-file leak details alleged control failures at Deutsche Bank, including Epstein-linked pa...",
-      "event_en": "Deutsche Bank shares sink as whistleblowers reveal Epstein payments, Trump tax leak, Russia bets | A 15-million-file leak details alleged control failures at Deutsche Bank, including Epstein-linked pa...",
-      "assets": "",
-      "assets_en": "",
-      "dir": "down",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
           "type": "ai",
           "text": "AI",
           "text_en": "AI"
@@ -479,6 +447,22 @@
     {
       "tags": [
         {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ],
+      "event": "'Who and what comes next': Analysts expect Nvidia investor uncertainty despite earnings beat | Nvidia’s Q3 results should help ease short-term concerns, but uncertainty remains around long-term leader...",
+      "event_en": "'Who and what comes next': Analysts expect Nvidia investor uncertainty despite earnings beat | Nvidia’s Q3 results should help ease short-term concerns, but uncertainty remains around long-term leader...",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
           "type": "fed",
           "text": "央行",
           "text_en": "Central Bank"
@@ -521,6 +505,22 @@
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "Putin says EU is losing industry, falling behind competition ahead of meeting with Trump, Xi | Putin used the speech to emphasize Russia's economic resilience despite U.S. sanctions, and played up opp...",
+      "event_en": "Putin says EU is losing industry, falling behind competition ahead of meeting with Trump, Xi | Putin used the speech to emphasize Russia's economic resilience despite U.S. sanctions, and played up opp...",
+      "assets": "",
+      "assets_en": "",
+      "dir": "down",
       "logic": "",
       "logic_en": ""
     },
@@ -760,6 +760,80 @@
       "assets": "",
       "assets_en": "",
       "dir": "down",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        },
+        {
+          "type": "china",
+          "text": "中国",
+          "text_en": "China"
+        }
+      ],
+      "event": "Nvidia warns chip buyers of legal risks tied to China AI access, sources tell CNBC | The U.S. Commerce Department is making moves to tighten export controls.",
+      "event_en": "Nvidia warns chip buyers of legal risks tied to China AI access, sources tell CNBC | The U.S. Commerce Department is making moves to tighten export controls.",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        },
+        {
+          "type": "fed",
+          "text": "央行",
+          "text_en": "Central Bank"
+        }
+      ],
+      "event": "Analysis: The Fed's chairman sees an AI revolution coming. Now he has to figure out what it means | Kevin Warsh sees AI at a turning point. He faces tough questions on jobs and interest rates.",
+      "event_en": "Analysis: The Fed's chairman sees an AI revolution coming. Now he has to figure out what it means | Kevin Warsh sees AI at a turning point. He faces tough questions on jobs and interest rates.",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "Dollar finally dips after fresh 19-month peak, set to snap five-day win streak",
+      "event_en": "Dollar finally dips after fresh 19-month peak, set to snap five-day win streak",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "Citi forecasts Brazilian real to weaken to 5.50 per dollar in 2027",
+      "event_en": "Citi forecasts Brazilian real to weaken to 5.50 per dollar in 2027",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
       "logic": "",
       "logic_en": ""
     }
