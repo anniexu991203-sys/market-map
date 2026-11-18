@@ -2,17 +2,26 @@
   "date": "2026-11-18",
   "weekday": "星期三",
   "weekday_en": "Wednesday",
-  "crawl_time": "约08:08（北京时间）",
-  "source": "CNBC Economy / MarketWatch Top Stories / CNBC Top News / CNBC World News / Investing.com News",
+  "crawl_time": "约09:28（北京时间）",
+  "source": "CNBC World News / Investing.com News / CNBC Top News / MarketWatch Top Stories / CNBC Economy",
   "sources_detail": [
-    "CNBC Economy",
-    "MarketWatch Top Stories",
-    "CNBC Top News",
     "CNBC World News",
-    "Investing.com News"
+    "Investing.com News",
+    "CNBC Top News",
+    "MarketWatch Top Stories",
+    "CNBC Economy"
   ],
-  "filter_result": "47条核心要闻 / 0条因果链 / 89条原始抓取",
-  "stats": [],
+  "filter_result": "48条核心要闻 / 0条因果链 / 88条原始抓取",
+  "stats": [
+    {
+      "label": "S&P",
+      "label_en": "S&P",
+      "value": "500",
+      "change": "The S&P 500 just broke a crucial support level. Here’s what ",
+      "change_en": "The S&P 500 just broke a crucial support level. Here’s what ",
+      "dir": "up"
+    }
+  ],
   "events": [
     {
       "tags": [
@@ -45,6 +54,22 @@
       ],
       "event": "Euro zone inflation hits 4% for first time in three years as interest rate hike looms | It was driven by energy inflation, which surged above 20% in October.",
       "event_en": "Euro zone inflation hits 4% for first time in three years as interest rate hike looms | It was driven by energy inflation, which surged above 20% in October.",
+      "assets": "",
+      "assets_en": "",
+      "dir": "up",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ],
+      "event": "Nvidia stock up 3% as earnings beat expectations. Neoclouds surge | The chip giant's earnings come at a tumultuous time for the company.",
+      "event_en": "Nvidia stock up 3% as earnings beat expectations. Neoclouds surge | The chip giant's earnings come at a tumultuous time for the company.",
       "assets": "",
       "assets_en": "",
       "dir": "up",
@@ -96,22 +121,6 @@
       "assets": "",
       "assets_en": "",
       "dir": "down",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "fed",
-          "text": "央行",
-          "text_en": "Central Bank"
-        }
-      ],
-      "event": "European Central Bank keeps key interest rate on hold at 2.5% | Markets saw the decision as a hawkish pause and were last pricing in a 67% chance of a December rate hike.",
-      "event_en": "European Central Bank keeps key interest rate on hold at 2.5% | Markets saw the decision as a hawkish pause and were last pricing in a 67% chance of a December rate hike.",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
       "logic": "",
       "logic_en": ""
     },
@@ -399,6 +408,27 @@
     {
       "tags": [
         {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        },
+        {
+          "type": "china",
+          "text": "中国",
+          "text_en": "China"
+        }
+      ],
+      "event": "Southeast Asia’s data center boom leaned on Chinese demand. New U.S. rules put that pipeline at risk | The rules require data centers in Southeast Asia to seek U.S. approval to buy advanced AI chips, ...",
+      "event_en": "Southeast Asia’s data center boom leaned on Chinese demand. New U.S. rules put that pipeline at risk | The rules require data centers in Southeast Asia to seek U.S. approval to buy advanced AI chips, ...",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
           "type": "fed",
           "text": "央行",
           "text_en": "Central Bank"
@@ -452,8 +482,40 @@
           "text_en": "Macro"
         }
       ],
-      "event": "Putin says EU is losing industry, falling behind competition ahead of meeting with Trump, Xi | Putin used the speech to emphasize Russia's economic resilience despite U.S. sanctions, and played up opp...",
-      "event_en": "Putin says EU is losing industry, falling behind competition ahead of meeting with Trump, Xi | Putin used the speech to emphasize Russia's economic resilience despite U.S. sanctions, and played up opp...",
+      "event": "The S&P 500 just broke a crucial support level. Here’s what history shows may happen now. | Breaching a 200-day moving average is taken as a bearish signal. That may not be the case for this market, s...",
+      "event_en": "The S&P 500 just broke a crucial support level. Here’s what history shows may happen now. | Breaching a 200-day moving average is taken as a bearish signal. That may not be the case for this market, s...",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "fed",
+          "text": "央行",
+          "text_en": "Central Bank"
+        }
+      ],
+      "event": "Euro yields anchor near 1-month highs as traders brace for sticky inflation print",
+      "event_en": "Euro yields anchor near 1-month highs as traders brace for sticky inflation print",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "Putin says EU is losing industry, falling behind competition, ahead of meeting with Trump and Xi | Putin used the speech to emphasize Russia's economic resilience despite U.S. sanctions, and played up...",
+      "event_en": "Putin says EU is losing industry, falling behind competition, ahead of meeting with Trump and Xi | Putin used the speech to emphasize Russia's economic resilience despite U.S. sanctions, and played up...",
       "assets": "",
       "assets_en": "",
       "dir": "down",
@@ -564,8 +626,8 @@
           "text_en": "Macro"
         }
       ],
-      "event": "Medicare Part B premiums rise due higher healthcare spending | The premiums will increase by $6.50, to $209.40 a month.",
-      "event_en": "Medicare Part B premiums rise due higher healthcare spending | The premiums will increase by $6.50, to $209.40 a month.",
+      "event": "Medicare Part B premiums rise due to higher healthcare spending | The premiums will increase by $6.50, to $209.40 a month.",
+      "event_en": "Medicare Part B premiums rise due to higher healthcare spending | The premiums will increase by $6.50, to $209.40 a month.",
       "assets": "",
       "assets_en": "",
       "dir": "up",
@@ -644,27 +706,6 @@
     {
       "tags": [
         {
-          "type": "fed",
-          "text": "央行",
-          "text_en": "Central Bank"
-        },
-        {
-          "type": "macro",
-          "text": "财政",
-          "text_en": "Fiscal"
-        }
-      ],
-      "event": "Treasury yields pause near 1-month highs as traders brace for Fed signals",
-      "event_en": "Treasury yields pause near 1-month highs as traders brace for Fed signals",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
           "type": "ai",
           "text": "AI",
           "text_en": "AI"
@@ -733,22 +774,6 @@
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "fed",
-          "text": "央行",
-          "text_en": "Central Bank"
-        }
-      ],
-      "event": "Sterling today: Pound extends slide as dollar firms on hawkish Fed bets",
-      "event_en": "Sterling today: Pound extends slide as dollar firms on hawkish Fed bets",
-      "assets": "",
-      "assets_en": "",
-      "dir": "down",
       "logic": "",
       "logic_en": ""
     },
