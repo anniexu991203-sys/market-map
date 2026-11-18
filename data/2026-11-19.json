@@ -2,16 +2,16 @@
   "date": "2026-11-19",
   "weekday": "星期四",
   "weekday_en": "Thursday",
-  "crawl_time": "约19:48（北京时间）",
-  "source": "MarketWatch Top Stories / CNBC Top News / CNBC World News / CNBC Economy / Investing.com News",
+  "crawl_time": "约20:42（北京时间）",
+  "source": "CNBC Economy / Investing.com News / CNBC World News / CNBC Top News / MarketWatch Top Stories",
   "sources_detail": [
-    "MarketWatch Top Stories",
-    "CNBC Top News",
-    "CNBC World News",
     "CNBC Economy",
-    "Investing.com News"
+    "Investing.com News",
+    "CNBC World News",
+    "CNBC Top News",
+    "MarketWatch Top Stories"
   ],
-  "filter_result": "41条核心要闻 / 0条因果链 / 91条原始抓取",
+  "filter_result": "48条核心要闻 / 0条因果链 / 91条原始抓取",
   "stats": [],
   "events": [
     {
@@ -245,8 +245,8 @@
           "text_en": "AI"
         }
       ],
-      "event": "Nvidia reverses, metals crash ahead of Anthropic IPO: Options Action Live | Big moves have options traders wondering if Anthropic's IPO is spurring a rotation trade.",
-      "event_en": "Nvidia reverses, metals crash ahead of Anthropic IPO: Options Action Live | Big moves have options traders wondering if Anthropic's IPO is spurring a rotation trade.",
+      "event": "Nvidia reverses, metals crash ahead of Anthropic IPO | Big moves have options traders wondering if Anthropic's IPO is spurring a rotation trade.",
+      "event_en": "Nvidia reverses, metals crash ahead of Anthropic IPO | Big moves have options traders wondering if Anthropic's IPO is spurring a rotation trade.",
       "assets": "",
       "assets_en": "",
       "dir": "down",
@@ -383,27 +383,27 @@
           "text_en": "Fiscal"
         }
       ],
-      "event": "2-year Treasury yield is little changed as traders weigh Waller comments, Fed minutes | The short end of the Treasury yield curve was relatively unchanged on Wednesday.",
-      "event_en": "2-year Treasury yield is little changed as traders weigh Waller comments, Fed minutes | The short end of the Treasury yield curve was relatively unchanged on Wednesday.",
+      "event": "Longer dated Treasury yields fall as traders weigh Waller comments, Fed minutes | Yields at the long end of the Treasury yield curve declined Wednesday.",
+      "event_en": "Longer dated Treasury yields fall as traders weigh Waller comments, Fed minutes | Yields at the long end of the Treasury yield curve declined Wednesday.",
       "assets": "",
       "assets_en": "",
-      "dir": "neutral",
+      "dir": "down",
       "logic": "",
       "logic_en": ""
     },
     {
       "tags": [
         {
-          "type": "energy",
-          "text": "能源",
-          "text_en": "Energy"
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
         }
       ],
-      "event": "It’s not too late to add U.S. energy companies to your 401(k). They’ve been making out like bandits. | Energy stocks are pretending the war is over. It isn’t.",
-      "event_en": "It’s not too late to add U.S. energy companies to your 401(k). They’ve been making out like bandits. | Energy stocks are pretending the war is over. It isn’t.",
+      "event": "Grand Theft Callout: ‘GTA 6’ fans are missing work to play — and some companies are making the game’s release a holiday | After waiting 13 years for this videogame, almost one-fifth of workers are sai...",
+      "event_en": "Grand Theft Callout: ‘GTA 6’ fans are missing work to play — and some companies are making the game’s release a holiday | After waiting 13 years for this videogame, almost one-fifth of workers are sai...",
       "assets": "",
       "assets_en": "",
-      "dir": "neutral",
+      "dir": "down",
       "logic": "",
       "logic_en": ""
     },
@@ -431,8 +431,8 @@
           "text_en": "Macro"
         }
       ],
-      "event": "‘GTA 6’ is the biggest game ever. Take-Two’s stock, delivery apps and podcasts are along for the ride. | “Grand Theft Auto VI” has racked up a Metacritic score of 99 and been nominated for Game of the...",
-      "event_en": "‘GTA 6’ is the biggest game ever. Take-Two’s stock, delivery apps and podcasts are along for the ride. | “Grand Theft Auto VI” has racked up a Metacritic score of 99 and been nominated for Game of the...",
+      "event": "‘GTA 6’ is the biggest game of all time. What it means for Take-Two’s stock. | “Grand Theft Auto VI” has racked up a Metacritic score of 99 and been nominated for Game of the Year already. “Clearly, t...",
+      "event_en": "‘GTA 6’ is the biggest game of all time. What it means for Take-Two’s stock. | “Grand Theft Auto VI” has racked up a Metacritic score of 99 and been nominated for Game of the Year already. “Clearly, t...",
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
@@ -699,6 +699,123 @@
       ],
       "event": "Fed minutes show growing unease about the outlook for inflation | The minutes of the Federal Reserve’s October policy meeting showed growing unease among officials about the outlook for inflation, eve...",
       "event_en": "Fed minutes show growing unease about the outlook for inflation | The minutes of the Federal Reserve’s October policy meeting showed growing unease among officials about the outlook for inflation, eve...",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ],
+      "event": "One of AI's most notorious 'doomers' stands to make billions in Anthropic's IPO | An Estonian tech billionaire famous for his stance that AI could end humanity is expected to be one of the biggest win...",
+      "event_en": "One of AI's most notorious 'doomers' stands to make billions in Anthropic's IPO | An Estonian tech billionaire famous for his stance that AI could end humanity is expected to be one of the biggest win...",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ],
+      "event": "Is Apple the safe haven investors think it is? Here's a way to trade it with less risk | Traders have flocked to Apple's perceived safety in the wake of Nvidia's scandal. It may not be so safe, says M...",
+      "event_en": "Is Apple the safe haven investors think it is? Here's a way to trade it with less risk | Traders have flocked to Apple's perceived safety in the wake of Nvidia's scandal. It may not be so safe, says M...",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ],
+      "event": "Paris Hilton, Alexandria Ocasio-Cortez press House to pass Defiance Act to fight AI deepfake pornography | Paris Hilton, backed by Alexandria Ocasio-Cortez, is pushing for the anti-AI deepfake pornogr...",
+      "event_en": "Paris Hilton, Alexandria Ocasio-Cortez press House to pass Defiance Act to fight AI deepfake pornography | Paris Hilton, backed by Alexandria Ocasio-Cortez, is pushing for the anti-AI deepfake pornogr...",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        },
+        {
+          "type": "fed",
+          "text": "央行",
+          "text_en": "Central Bank"
+        }
+      ],
+      "event": "Analysis: The Fed's chairman sees an AI revolution coming. Now he has to figure out what it means | Kevin Warsh sees AI at a turning point. He faces tough questions on jobs and interest rates.",
+      "event_en": "Analysis: The Fed's chairman sees an AI revolution coming. Now he has to figure out what it means | Kevin Warsh sees AI at a turning point. He faces tough questions on jobs and interest rates.",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "After $6.3 billion crypto heist, Binance plans Asia expansion",
+      "event_en": "After $6.3 billion crypto heist, Binance plans Asia expansion",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "Dollar finally dips after fresh 19-month peak, set to snap five-day win streak",
+      "event_en": "Dollar finally dips after fresh 19-month peak, set to snap five-day win streak",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "Citi forecasts Brazilian real to weaken to 5.50 per dollar in 2027",
+      "event_en": "Citi forecasts Brazilian real to weaken to 5.50 per dollar in 2027",
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
