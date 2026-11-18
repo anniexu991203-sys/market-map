@@ -2,26 +2,17 @@
   "date": "2026-11-18",
   "weekday": "星期三",
   "weekday_en": "Wednesday",
-  "crawl_time": "约12:18（北京时间）",
-  "source": "CNBC World News / CNBC Economy / MarketWatch Top Stories / Investing.com News / CNBC Top News",
+  "crawl_time": "约13:43（北京时间）",
+  "source": "CNBC Economy / Investing.com News / CNBC World News / CNBC Top News / MarketWatch Top Stories",
   "sources_detail": [
-    "CNBC World News",
     "CNBC Economy",
-    "MarketWatch Top Stories",
     "Investing.com News",
-    "CNBC Top News"
+    "CNBC World News",
+    "CNBC Top News",
+    "MarketWatch Top Stories"
   ],
-  "filter_result": "45条核心要闻 / 0条因果链 / 90条原始抓取",
-  "stats": [
-    {
-      "label": "S&P",
-      "label_en": "S&P",
-      "value": "500",
-      "change": "The S&P 500 just broke a crucial support level. Here’s what ",
-      "change_en": "The S&P 500 just broke a crucial support level. Here’s what ",
-      "dir": "up"
-    }
-  ],
+  "filter_result": "50条核心要闻 / 0条因果链 / 91条原始抓取",
+  "stats": [],
   "events": [
     {
       "tags": [
@@ -100,6 +91,43 @@
           "text_en": "Central Bank"
         }
       ],
+      "event": "Fed’s Waller says central bank may need to ‘shock people’ with half-point rate hike | Continued inflation above the Fed's 2% target is pushing central bank officials into a more aggressive stance.",
+      "event_en": "Fed’s Waller says central bank may need to ‘shock people’ with half-point rate hike | Continued inflation above the Fed's 2% target is pushing central bank officials into a more aggressive stance.",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "fed",
+          "text": "央行",
+          "text_en": "Central Bank"
+        },
+        {
+          "type": "macro",
+          "text": "财政",
+          "text_en": "Fiscal"
+        }
+      ],
+      "event": "Want to earn 5% on shorter-term Treasurys again? Watch for this shift. | Don’t rule out a half-point interest-rate hike in December, BofA Global’s rates team said.",
+      "event_en": "Want to earn 5% on shorter-term Treasurys again? Watch for this shift. | Don’t rule out a half-point interest-rate hike in December, BofA Global’s rates team said.",
+      "assets": "",
+      "assets_en": "",
+      "dir": "up",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "fed",
+          "text": "央行",
+          "text_en": "Central Bank"
+        }
+      ],
       "event": "A key report for where inflation stood in October comes out Tuesday. Here's what to expect | The CPI headline reading is expected to show an increase of 0.3% while the core is forecast to increase 0.2...",
       "event_en": "A key report for where inflation stood in October comes out Tuesday. Here's what to expect | The CPI headline reading is expected to show an increase of 0.3% while the core is forecast to increase 0.2...",
       "assets": "",
@@ -164,6 +192,27 @@
     {
       "tags": [
         {
+          "type": "fed",
+          "text": "央行",
+          "text_en": "Central Bank"
+        },
+        {
+          "type": "macro",
+          "text": "财政",
+          "text_en": "Fiscal"
+        }
+      ],
+      "event": "Two-year Treasury note yield climbs as Waller warns that Fed may need to ‘shock people’ with half-point rate hike | The short end of the Treasury yield curve rose Wednesday.",
+      "event_en": "Two-year Treasury note yield climbs as Waller warns that Fed may need to ‘shock people’ with half-point rate hike | The short end of the Treasury yield curve rose Wednesday.",
+      "assets": "",
+      "assets_en": "",
+      "dir": "up",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
           "type": "macro",
           "text": "宏观",
           "text_en": "Macro"
@@ -187,6 +236,27 @@
       ],
       "event": "Analysis: Nvidia’s leadership crisis tests the chipmaker’s role as the ‘central bank of AI’ | The tech giant's web of ties to other companies is raising the possibility that it could do far-reaching e...",
       "event_en": "Analysis: Nvidia’s leadership crisis tests the chipmaker’s role as the ‘central bank of AI’ | The tech giant's web of ties to other companies is raising the possibility that it could do far-reaching e...",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        },
+        {
+          "type": "fed",
+          "text": "央行",
+          "text_en": "Central Bank"
+        }
+      ],
+      "event": "Worried about the AI bubble popping? How investing pros say to adjust your strategy | Tech concentration and AI-stock volatility are rattling investors. Experts explain how to diversify without abando...",
+      "event_en": "Worried about the AI bubble popping? How investing pros say to adjust your strategy | Tech concentration and AI-stock volatility are rattling investors. Experts explain how to diversify without abando...",
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
@@ -227,6 +297,22 @@
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "fed",
+          "text": "央行",
+          "text_en": "Central Bank"
+        }
+      ],
+      "event": "Mortgage demand turns lower, as interest rates shoot back up to the highest level in three weeks. | Mortgage rates moved sharply higher last week, causing demand for both mortgage refinances and home ...",
+      "event_en": "Mortgage demand turns lower, as interest rates shoot back up to the highest level in three weeks. | Mortgage rates moved sharply higher last week, causing demand for both mortgage refinances and home ...",
+      "assets": "",
+      "assets_en": "",
+      "dir": "down",
       "logic": "",
       "logic_en": ""
     },
@@ -286,13 +372,13 @@
     {
       "tags": [
         {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
+          "type": "fed",
+          "text": "央行",
+          "text_en": "Central Bank"
         }
       ],
-      "event": "What Wall Street analysts are now saying after Nvidia’s beat-and-raise quarter | The chip company’s stock rose over 3% in premarket trading on Wednesday. A team at JPMorgan said there is likely more v...",
-      "event_en": "What Wall Street analysts are now saying after Nvidia’s beat-and-raise quarter | The chip company’s stock rose over 3% in premarket trading on Wednesday. A team at JPMorgan said there is likely more v...",
+      "event": "Consumer prices rose 0.4% in October, more than expected, complicating Fed's inflation fight | The report comes at a critical juncture for the Federal Reserve as it considers its next move regarding i...",
+      "event_en": "Consumer prices rose 0.4% in October, more than expected, complicating Fed's inflation fight | The report comes at a critical juncture for the Federal Reserve as it considers its next move regarding i...",
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
@@ -302,13 +388,13 @@
     {
       "tags": [
         {
-          "type": "fed",
-          "text": "央行",
-          "text_en": "Central Bank"
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
         }
       ],
-      "event": "Consumer prices rose 0.4% in October, more than expected, complicating Fed's inflation fight | The report comes at a critical juncture for the Federal Reserve as it considers its next move regarding i...",
-      "event_en": "Consumer prices rose 0.4% in October, more than expected, complicating Fed's inflation fight | The report comes at a critical juncture for the Federal Reserve as it considers its next move regarding i...",
+      "event": "Nvidia’s leadership saga unfolds as demand is surging for Anthropic’s IPO | Three takeaways from Colette Kress’s first earnings call as Nvidia’s interim CEO. Plus, what Medicare Part B will cost in 20...",
+      "event_en": "Nvidia’s leadership saga unfolds as demand is surging for Anthropic’s IPO | Three takeaways from Colette Kress’s first earnings call as Nvidia’s interim CEO. Plus, what Medicare Part B will cost in 20...",
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
@@ -424,22 +510,6 @@
     {
       "tags": [
         {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        }
-      ],
-      "event": "Nvidia closes lower ahead of earnings as company reels from Huang resignation | Investors have been weighing the fallout from former CEO Jensen Huang's resignation.",
-      "event_en": "Nvidia closes lower ahead of earnings as company reels from Huang resignation | Investors have been weighing the fallout from former CEO Jensen Huang's resignation.",
-      "assets": "",
-      "assets_en": "",
-      "dir": "down",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
           "type": "fed",
           "text": "央行",
           "text_en": "Central Bank"
@@ -477,38 +547,6 @@
           "text_en": "Macro"
         }
       ],
-      "event": "The S&P 500 just broke a crucial support level. Here’s what history shows may happen now. | Breaching a 200-day moving average is taken as a bearish signal. That may not be the case for this market, s...",
-      "event_en": "The S&P 500 just broke a crucial support level. Here’s what history shows may happen now. | Breaching a 200-day moving average is taken as a bearish signal. That may not be the case for this market, s...",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "fed",
-          "text": "央行",
-          "text_en": "Central Bank"
-        }
-      ],
-      "event": "Euro yields anchor near 1-month highs as traders brace for sticky inflation print",
-      "event_en": "Euro yields anchor near 1-month highs as traders brace for sticky inflation print",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
-        }
-      ],
       "event": "Putin says EU is losing industry, falling behind competition, ahead of meeting with Trump and Xi | Putin used the speech to emphasize Russia's economic resilience despite U.S. sanctions, and played up...",
       "event_en": "Putin says EU is losing industry, falling behind competition, ahead of meeting with Trump and Xi | Putin used the speech to emphasize Russia's economic resilience despite U.S. sanctions, and played up...",
       "assets": "",
@@ -530,6 +568,22 @@
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ],
+      "event": "Nvidia closes lower ahead of earnings as company reels from Huang resignation | Investors have been weighing the fallout from former CEO Jensen Huang's resignation.",
+      "event_en": "Nvidia closes lower ahead of earnings as company reels from Huang resignation | Investors have been weighing the fallout from former CEO Jensen Huang's resignation.",
+      "assets": "",
+      "assets_en": "",
+      "dir": "down",
       "logic": "",
       "logic_en": ""
     },
@@ -619,6 +673,27 @@
           "type": "ai",
           "text": "AI",
           "text_en": "AI"
+        },
+        {
+          "type": "energy",
+          "text": "能源",
+          "text_en": "Energy"
+        }
+      ],
+      "event": "‘Nvidia’s turmoil has me spooked’: Has the time come to sell my stocks? | “Real estate here in Florida seems to be presenting some interesting opportunities.”",
+      "event_en": "‘Nvidia’s turmoil has me spooked’: Has the time come to sell my stocks? | “Real estate here in Florida seems to be presenting some interesting opportunities.”",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
         }
       ],
       "event": "With Jensen Huang gone, Colette Kress shows Nvidia is still at the center of AI | In her first earnings report as interim CEO, Nvidia's Colette Kress calmed investors' nerves, at least for the moment.",
@@ -626,6 +701,22 @@
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ],
+      "event": "Booking Holdings creates new enterprise division as AI reshapes travel planning | The future for online travel agencies increasingly relies on scaling business-to-business travel platforms.",
+      "event_en": "Booking Holdings creates new enterprise division as AI reshapes travel planning | The future for online travel agencies increasingly relies on scaling business-to-business travel platforms.",
+      "assets": "",
+      "assets_en": "",
+      "dir": "up",
       "logic": "",
       "logic_en": ""
     },
@@ -669,13 +760,13 @@
     {
       "tags": [
         {
-          "type": "energy",
-          "text": "能源",
-          "text_en": "Energy"
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
         }
       ],
-      "event": "IEA chief sees no 'credible pathway' back to pre-war normality in the Strait of Hormuz | The Iran war has 'crushed' confidence in the Strait of Hormuz as a reliable energy and goods corridor, the IEA'...",
-      "event_en": "IEA chief sees no 'credible pathway' back to pre-war normality in the Strait of Hormuz | The Iran war has 'crushed' confidence in the Strait of Hormuz as a reliable energy and goods corridor, the IEA'...",
+      "event": "Paris Hilton, Alexandria Ocasio-Cortez press House to pass Defiance Act to fight AI deepfake pornography | Paris Hilton, backed by Alexandria Ocasio-Cortez, is pushing for the anti-AI deepfake pornogr...",
+      "event_en": "Paris Hilton, Alexandria Ocasio-Cortez press House to pass Defiance Act to fight AI deepfake pornography | Paris Hilton, backed by Alexandria Ocasio-Cortez, is pushing for the anti-AI deepfake pornogr...",
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
@@ -685,18 +776,13 @@
     {
       "tags": [
         {
-          "type": "fed",
-          "text": "央行",
-          "text_en": "Central Bank"
-        },
-        {
-          "type": "macro",
-          "text": "财政",
-          "text_en": "Fiscal"
+          "type": "energy",
+          "text": "能源",
+          "text_en": "Energy"
         }
       ],
-      "event": "Treasury yields hold steady as investors look ahead to Fed minutes | U.S. Treasury yields were broadly flat on Wednesday, as Wall Street awaits the release of the latest FOMC minutes.",
-      "event_en": "Treasury yields hold steady as investors look ahead to Fed minutes | U.S. Treasury yields were broadly flat on Wednesday, as Wall Street awaits the release of the latest FOMC minutes.",
+      "event": "IEA chief sees no 'credible pathway' back to pre-war normality in the Strait of Hormuz | The Iran war has 'crushed' confidence in the Strait of Hormuz as a reliable energy and goods corridor, the IEA'...",
+      "event_en": "IEA chief sees no 'credible pathway' back to pre-war normality in the Strait of Hormuz | The Iran war has 'crushed' confidence in the Strait of Hormuz as a reliable energy and goods corridor, the IEA'...",
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
