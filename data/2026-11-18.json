@@ -2,16 +2,16 @@
   "date": "2026-11-18",
   "weekday": "星期三",
   "weekday_en": "Wednesday",
-  "crawl_time": "约04:49（北京时间）",
-  "source": "CNBC Economy / Investing.com News / MarketWatch Top Stories / CNBC Top News / CNBC World News",
+  "crawl_time": "约05:53（北京时间）",
+  "source": "Investing.com News / MarketWatch Top Stories / CNBC Top News / CNBC Economy / CNBC World News",
   "sources_detail": [
-    "CNBC Economy",
     "Investing.com News",
     "MarketWatch Top Stories",
     "CNBC Top News",
+    "CNBC Economy",
     "CNBC World News"
   ],
-  "filter_result": "48条核心要闻 / 0条因果链 / 90条原始抓取",
+  "filter_result": "49条核心要闻 / 0条因果链 / 91条原始抓取",
   "stats": [],
   "events": [
     {
@@ -341,22 +341,6 @@
     {
       "tags": [
         {
-          "type": "fed",
-          "text": "央行",
-          "text_en": "Central Bank"
-        }
-      ],
-      "event": "St. Louis Fed's Musalem says four more rate hikes may be needed in coming months | The forecast represents one of the most hawkish views among policymakers.",
-      "event_en": "St. Louis Fed's Musalem says four more rate hikes may be needed in coming months | The forecast represents one of the most hawkish views among policymakers.",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
           "type": "macro",
           "text": "宏观",
           "text_en": "Macro"
@@ -383,6 +367,22 @@
       "assets": "",
       "assets_en": "",
       "dir": "down",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "fed",
+          "text": "央行",
+          "text_en": "Central Bank"
+        }
+      ],
+      "event": "St. Louis Fed's Musalem says four more rate hikes may be needed in coming months | The forecast represents one of the most hawkish views among policymakers.",
+      "event_en": "St. Louis Fed's Musalem says four more rate hikes may be needed in coming months | The forecast represents one of the most hawkish views among policymakers.",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
       "logic": "",
       "logic_en": ""
     },
@@ -799,6 +799,22 @@
       ],
       "event": "Analysis: The Fed's chairman sees an AI revolution coming. Now he has to figure out what it means | Kevin Warsh sees AI at a turning point. He faces tough questions on jobs and interest rates.",
       "event_en": "Analysis: The Fed's chairman sees an AI revolution coming. Now he has to figure out what it means | Kevin Warsh sees AI at a turning point. He faces tough questions on jobs and interest rates.",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "fed",
+          "text": "央行",
+          "text_en": "Central Bank"
+        }
+      ],
+      "event": "Asia FX subdued as dollar holds near 19-mth high on Fed hike bets",
+      "event_en": "Asia FX subdued as dollar holds near 19-mth high on Fed hike bets",
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
