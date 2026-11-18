@@ -2,26 +2,17 @@
   "date": "2026-11-19",
   "weekday": "星期四",
   "weekday_en": "Thursday",
-  "crawl_time": "约17:47（北京时间）",
-  "source": "CNBC Top News / CNBC World News / CNBC Economy / MarketWatch Top Stories / Investing.com News",
+  "crawl_time": "约18:41（北京时间）",
+  "source": "CNBC World News / MarketWatch Top Stories / CNBC Top News / CNBC Economy / Investing.com News",
   "sources_detail": [
-    "CNBC Top News",
     "CNBC World News",
-    "CNBC Economy",
     "MarketWatch Top Stories",
+    "CNBC Top News",
+    "CNBC Economy",
     "Investing.com News"
   ],
-  "filter_result": "48条核心要闻 / 0条因果链 / 88条原始抓取",
-  "stats": [
-    {
-      "label": "S&P",
-      "label_en": "S&P",
-      "value": "500",
-      "change": "Worried investors are paying a premium for these stocks — so",
-      "change_en": "Worried investors are paying a premium for these stocks — so",
-      "dir": "up"
-    }
-  ],
+  "filter_result": "47条核心要闻 / 0条因果链 / 90条原始抓取",
+  "stats": [],
   "events": [
     {
       "tags": [
@@ -249,6 +240,22 @@
     {
       "tags": [
         {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "Off-price retailer TJX keeps its promise and the stock soars. We’re satisfied, for now | TJX Companies is in rally mode.",
+      "event_en": "Off-price retailer TJX keeps its promise and the stock soars. We’re satisfied, for now | TJX Companies is in rally mode.",
+      "assets": "",
+      "assets_en": "",
+      "dir": "up",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
           "type": "ai",
           "text": "AI",
           "text_en": "AI"
@@ -296,8 +303,8 @@
           "text_en": "Macro"
         }
       ],
-      "event": "Target shares rise 5% as retailer posts best sales growth in five years, hikes guidance | Target beat third-quarter sales expectations and raised its guidance as it continues a turnaround effort.",
-      "event_en": "Target shares rise 5% as retailer posts best sales growth in five years, hikes guidance | Target beat third-quarter sales expectations and raised its guidance as it continues a turnaround effort.",
+      "event": "Target shares rise 7% as retailer posts best sales growth in five years, hikes guidance | Target beat third-quarter sales expectations and raised its guidance as it continues a turnaround effort.",
+      "event_en": "Target shares rise 7% as retailer posts best sales growth in five years, hikes guidance | Target beat third-quarter sales expectations and raised its guidance as it continues a turnaround effort.",
       "assets": "",
       "assets_en": "",
       "dir": "up",
@@ -355,22 +362,6 @@
     {
       "tags": [
         {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
-        }
-      ],
-      "event": "Worried investors are paying a premium for these stocks — some with as much as 49% upside, analysts say | Defensive sectors have beaten the S&P 500 by a wide margin in recent months, even though they ...",
-      "event_en": "Worried investors are paying a premium for these stocks — some with as much as 49% upside, analysts say | Defensive sectors have beaten the S&P 500 by a wide margin in recent months, even though they ...",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
           "type": "energy",
           "text": "能源",
           "text_en": "Energy"
@@ -387,13 +378,13 @@
     {
       "tags": [
         {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
+          "type": "fed",
+          "text": "央行",
+          "text_en": "Central Bank"
         }
       ],
-      "event": "Jim Cramer looks at what turned the market lower and where stocks could go next | The Investing Club holds its \"Morning Meeting\" every weekday at 10:20 a.m. ET.",
-      "event_en": "Jim Cramer looks at what turned the market lower and where stocks could go next | The Investing Club holds its \"Morning Meeting\" every weekday at 10:20 a.m. ET.",
+      "event": "Consumer prices rose 0.4% in October, more than expected, complicating Fed's inflation fight | The report comes at a critical juncture for the Federal Reserve as it considers its next move regarding i...",
+      "event_en": "Consumer prices rose 0.4% in October, more than expected, complicating Fed's inflation fight | The report comes at a critical juncture for the Federal Reserve as it considers its next move regarding i...",
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
@@ -403,13 +394,13 @@
     {
       "tags": [
         {
-          "type": "fed",
-          "text": "央行",
-          "text_en": "Central Bank"
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
         }
       ],
-      "event": "Consumer prices rose 0.4% in October, more than expected, complicating Fed's inflation fight | The report comes at a critical juncture for the Federal Reserve as it considers its next move regarding i...",
-      "event_en": "Consumer prices rose 0.4% in October, more than expected, complicating Fed's inflation fight | The report comes at a critical juncture for the Federal Reserve as it considers its next move regarding i...",
+      "event": "‘GTA 6’ is the biggest game ever. Take-Two’s stock, delivery apps and podcasts are along for the ride. | “Grand Theft Auto VI” has racked up a Metacritic score of 99 and been nominated for Game of the...",
+      "event_en": "‘GTA 6’ is the biggest game ever. Take-Two’s stock, delivery apps and podcasts are along for the ride. | “Grand Theft Auto VI” has racked up a Metacritic score of 99 and been nominated for Game of the...",
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
@@ -493,13 +484,13 @@
           "text_en": "AI"
         },
         {
-          "type": "macro",
-          "text": "财政",
-          "text_en": "Fiscal"
+          "type": "china",
+          "text": "中国",
+          "text_en": "China"
         }
       ],
-      "event": "Oracle’s stock is ridiculously cheap even in the most gloomy scenarios, analyst says | Even if you assume Oracle’s AI data-center business disappears while its debt remains, Oracle shares are still tr...",
-      "event_en": "Oracle’s stock is ridiculously cheap even in the most gloomy scenarios, analyst says | Even if you assume Oracle’s AI data-center business disappears while its debt remains, Oracle shares are still tr...",
+      "event": "Read Jim Cramer’s full interview with Nvidia’s Colette Kress: Demand, buybacks and China | Interim CEO Kress sat down with CNBC’s Jim Cramer Tuesday evening shortly after the AI chip giant delivered a...",
+      "event_en": "Read Jim Cramer’s full interview with Nvidia’s Colette Kress: Demand, buybacks and China | Interim CEO Kress sat down with CNBC’s Jim Cramer Tuesday evening shortly after the AI chip giant delivered a...",
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
@@ -540,22 +531,6 @@
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        }
-      ],
-      "event": "CoreWeave’s stock drops as Nvidia talks up a ‘disciplined’ approach to financing | Nvidia interim CEO Colette Kress said neoclouds are “increasingly important,” but added the company will take “a very...",
-      "event_en": "CoreWeave’s stock drops as Nvidia talks up a ‘disciplined’ approach to financing | Nvidia interim CEO Colette Kress said neoclouds are “increasingly important,” but added the company will take “a very...",
-      "assets": "",
-      "assets_en": "",
-      "dir": "down",
       "logic": "",
       "logic_en": ""
     },
@@ -732,8 +707,8 @@
           "text_en": "AI"
         }
       ],
-      "event": "Paris Hilton, Alexandria Ocasio-Cortez press House to pass Defiance Act to fight AI deepfake pornography | Paris Hilton, backed by Alexandria Ocasio-Cortez, is pushing for the anti-AI deepfake pornogr...",
-      "event_en": "Paris Hilton, Alexandria Ocasio-Cortez press House to pass Defiance Act to fight AI deepfake pornography | Paris Hilton, backed by Alexandria Ocasio-Cortez, is pushing for the anti-AI deepfake pornogr...",
+      "event": "Is Apple the safe haven investors think it is? Here's a way to trade it with less risk | Traders have flocked to Apple's perceived safety in the wake of Nvidia's scandal. It may not be so safe, says M...",
+      "event_en": "Is Apple the safe haven investors think it is? Here's a way to trade it with less risk | Traders have flocked to Apple's perceived safety in the wake of Nvidia's scandal. It may not be so safe, says M...",
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
@@ -743,13 +718,13 @@
     {
       "tags": [
         {
-          "type": "energy",
-          "text": "能源",
-          "text_en": "Energy"
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
         }
       ],
-      "event": "IEA chief sees no 'credible pathway' back to pre-war normality in the Strait of Hormuz | The Iran war has 'crushed' confidence in the Strait of Hormuz as a reliable energy and goods corridor, the IEA'...",
-      "event_en": "IEA chief sees no 'credible pathway' back to pre-war normality in the Strait of Hormuz | The Iran war has 'crushed' confidence in the Strait of Hormuz as a reliable energy and goods corridor, the IEA'...",
+      "event": "Paris Hilton, Alexandria Ocasio-Cortez press House to pass Defiance Act to fight AI deepfake pornography | Paris Hilton, backed by Alexandria Ocasio-Cortez, is pushing for the anti-AI deepfake pornogr...",
+      "event_en": "Paris Hilton, Alexandria Ocasio-Cortez press House to pass Defiance Act to fight AI deepfake pornography | Paris Hilton, backed by Alexandria Ocasio-Cortez, is pushing for the anti-AI deepfake pornogr...",
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
