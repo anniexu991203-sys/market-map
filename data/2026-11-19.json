@@ -2,16 +2,16 @@
   "date": "2026-11-19",
   "weekday": "星期四",
   "weekday_en": "Thursday",
-  "crawl_time": "约20:42（北京时间）",
-  "source": "CNBC Economy / Investing.com News / CNBC World News / CNBC Top News / MarketWatch Top Stories",
+  "crawl_time": "约21:42（北京时间）",
+  "source": "CNBC World News / MarketWatch Top Stories / Investing.com News / CNBC Top News / CNBC Economy",
   "sources_detail": [
-    "CNBC Economy",
-    "Investing.com News",
     "CNBC World News",
+    "MarketWatch Top Stories",
+    "Investing.com News",
     "CNBC Top News",
-    "MarketWatch Top Stories"
+    "CNBC Economy"
   ],
-  "filter_result": "48条核心要闻 / 0条因果链 / 91条原始抓取",
+  "filter_result": "49条核心要闻 / 0条因果链 / 91条原始抓取",
   "stats": [],
   "events": [
     {
@@ -80,22 +80,6 @@
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        }
-      ],
-      "event": "Anthropic IPO: AI lab considers increasing the offering as investor demand surges, sources say | Anthropic stock is set to begin trading on the Nasdaq under the ticker symbol ANT on Thursday.",
-      "event_en": "Anthropic IPO: AI lab considers increasing the offering as investor demand surges, sources say | Anthropic stock is set to begin trading on the Nasdaq under the ticker symbol ANT on Thursday.",
-      "assets": "",
-      "assets_en": "",
-      "dir": "up",
       "logic": "",
       "logic_en": ""
     },
@@ -383,8 +367,8 @@
           "text_en": "Fiscal"
         }
       ],
-      "event": "Longer dated Treasury yields fall as traders weigh Waller comments, Fed minutes | Yields at the long end of the Treasury yield curve declined Wednesday.",
-      "event_en": "Longer dated Treasury yields fall as traders weigh Waller comments, Fed minutes | Yields at the long end of the Treasury yield curve declined Wednesday.",
+      "event": "Longer-dated Treasury yields fall as traders weigh Waller comments, Fed minutes | Yields at the long end of the Treasury yield curve declined Wednesday.",
+      "event_en": "Longer-dated Treasury yields fall as traders weigh Waller comments, Fed minutes | Yields at the long end of the Treasury yield curve declined Wednesday.",
       "assets": "",
       "assets_en": "",
       "dir": "down",
@@ -404,6 +388,22 @@
       "assets": "",
       "assets_en": "",
       "dir": "down",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ],
+      "event": "Anthropic prices IPO at $83 per share, above expected range, source tells CNBC | Anthropic stock is set to begin trading on the Nasdaq under the ticker symbol ANT on Thursday.",
+      "event_en": "Anthropic prices IPO at $83 per share, above expected range, source tells CNBC | Anthropic stock is set to begin trading on the Nasdaq under the ticker symbol ANT on Thursday.",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
       "logic": "",
       "logic_en": ""
     },
@@ -612,6 +612,27 @@
     {
       "tags": [
         {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        },
+        {
+          "type": "energy",
+          "text": "能源",
+          "text_en": "Energy"
+        }
+      ],
+      "event": "‘Nvidia’s turmoil has me spooked’: Should I sell my stocks and buy real estate — or ride out the storm? | Tempted to ditch stocks for property or CDs? Take a deep breath before making any sudden moves...",
+      "event_en": "‘Nvidia’s turmoil has me spooked’: Should I sell my stocks and buy real estate — or ride out the storm? | Tempted to ditch stocks for property or CDs? Take a deep breath before making any sudden moves...",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
           "type": "macro",
           "text": "宏观",
           "text_en": "Macro"
@@ -676,22 +697,6 @@
     {
       "tags": [
         {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
-        }
-      ],
-      "event": "Senators press acting U.S. Navy Secretary on Iran war costs, sailor health in confirmation hearing | Acting Navy Secretary Hung Cao told senators the Navy recoded and used munitions he called expired ...",
-      "event_en": "Senators press acting U.S. Navy Secretary on Iran war costs, sailor health in confirmation hearing | Acting Navy Secretary Hung Cao told senators the Navy recoded and used munitions he called expired ...",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
           "type": "fed",
           "text": "央行",
           "text_en": "Central Bank"
@@ -702,6 +707,22 @@
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "bio",
+          "text": "生物科技",
+          "text_en": "Biotech"
+        }
+      ],
+      "event": "CEO turned informant: How the FDA built a case against executives promising cheap medications | The FDA's unprecedented criminal case against an alternative funding program hinged on the cooperation o...",
+      "event_en": "CEO turned informant: How the FDA built a case against executives promising cheap medications | The FDA's unprecedented criminal case against an alternative funding program hinged on the cooperation o...",
+      "assets": "",
+      "assets_en": "",
+      "dir": "up",
       "logic": "",
       "logic_en": ""
     },
