@@ -2,14 +2,14 @@
   "date": "2026-11-18",
   "weekday": "星期三",
   "weekday_en": "Wednesday",
-  "crawl_time": "约05:53（北京时间）",
-  "source": "Investing.com News / MarketWatch Top Stories / CNBC Top News / CNBC Economy / CNBC World News",
+  "crawl_time": "约06:55（北京时间）",
+  "source": "Investing.com News / CNBC World News / CNBC Top News / CNBC Economy / MarketWatch Top Stories",
   "sources_detail": [
     "Investing.com News",
-    "MarketWatch Top Stories",
+    "CNBC World News",
     "CNBC Top News",
     "CNBC Economy",
-    "CNBC World News"
+    "MarketWatch Top Stories"
   ],
   "filter_result": "49条核心要闻 / 0条因果链 / 91条原始抓取",
   "stats": [],
