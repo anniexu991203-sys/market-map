@@ -2,16 +2,16 @@
   "date": "2026-11-18",
   "weekday": "星期三",
   "weekday_en": "Wednesday",
-  "crawl_time": "约11:25（北京时间）",
-  "source": "CNBC Economy / Investing.com News / CNBC Top News / CNBC World News / MarketWatch Top Stories",
+  "crawl_time": "约12:18（北京时间）",
+  "source": "CNBC World News / CNBC Economy / MarketWatch Top Stories / Investing.com News / CNBC Top News",
   "sources_detail": [
-    "CNBC Economy",
-    "Investing.com News",
-    "CNBC Top News",
     "CNBC World News",
-    "MarketWatch Top Stories"
+    "CNBC Economy",
+    "MarketWatch Top Stories",
+    "Investing.com News",
+    "CNBC Top News"
   ],
-  "filter_result": "46条核心要闻 / 0条因果链 / 90条原始抓取",
+  "filter_result": "45条核心要闻 / 0条因果链 / 90条原始抓取",
   "stats": [
     {
       "label": "S&P",
@@ -240,6 +240,27 @@
       ],
       "event": "South Korea targets 'world's highest performance' sovereign AI model in record new budget | The 2027 budget will rise 12.8% to 820.9 trillion won, and will include a 21.3 trillion won investment into ...",
       "event_en": "South Korea targets 'world's highest performance' sovereign AI model in record new budget | The 2027 budget will rise 12.8% to 820.9 trillion won, and will include a 21.3 trillion won investment into ...",
+      "assets": "",
+      "assets_en": "",
+      "dir": "up",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "fed",
+          "text": "央行",
+          "text_en": "Central Bank"
+        },
+        {
+          "type": "macro",
+          "text": "财政",
+          "text_en": "Fiscal"
+        }
+      ],
+      "event": "The Fed is tightening, the economy is slowing — and that’s the perfect setup to buy bonds, this trader argues | Having missed the rally in U.S. Treasurys that statrted in mid-October, Macro Tourist co...",
+      "event_en": "The Fed is tightening, the economy is slowing — and that’s the perfect setup to buy bonds, this trader argues | Having missed the rally in U.S. Treasurys that statrted in mid-October, Macro Tourist co...",
       "assets": "",
       "assets_en": "",
       "dir": "up",
@@ -568,38 +589,6 @@
           "text_en": "Macro"
         }
       ],
-      "event": "Medicare Part B premiums rise due to higher healthcare spending | The premiums will increase by $6.50, to $209.40 a month.",
-      "event_en": "Medicare Part B premiums rise due to higher healthcare spending | The premiums will increase by $6.50, to $209.40 a month.",
-      "assets": "",
-      "assets_en": "",
-      "dir": "up",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "macro",
-          "text": "财政",
-          "text_en": "Fiscal"
-        }
-      ],
-      "event": "Target is set to report earnings before the bell. Here's what to expect | Target is expected to offer more color on the progress of its turnaround and a preview of the holiday season as it reports fis...",
-      "event_en": "Target is set to report earnings before the bell. Here's what to expect | Target is expected to offer more color on the progress of its turnaround and a preview of the holiday season as it reports fis...",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
-        }
-      ],
       "event": "Senators press acting U.S. Navy Secretary on Iran war costs, sailor health in confirmation hearing | Acting Navy Secretary Hung Cao told senators the Navy recoded and used munitions he called expired ...",
       "event_en": "Senators press acting U.S. Navy Secretary on Iran war costs, sailor health in confirmation hearing | Acting Navy Secretary Hung Cao told senators the Navy recoded and used munitions he called expired ...",
       "assets": "",
@@ -621,22 +610,6 @@
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
-        }
-      ],
-      "event": "Chase Home Lending CEO says he plans to 'go on offense' against non-bank lenders | Sean Grzebin, the CEO of Chase Home Lending, the nation's largest bank mortgage lender, said he's hiring and bent on ...",
-      "event_en": "Chase Home Lending CEO says he plans to 'go on offense' against non-bank lenders | Sean Grzebin, the CEO of Chase Home Lending, the nation's largest bank mortgage lender, said he's hiring and bent on ...",
-      "assets": "",
-      "assets_en": "",
-      "dir": "up",
       "logic": "",
       "logic_en": ""
     },
@@ -687,6 +660,22 @@
       ],
       "event": "Jensen Huang scandal fuels bipartisan push to block AI chip sales to China | Congress members are pushing for a series of chip-related export control bills to be included in the annual National Defens...",
       "event_en": "Jensen Huang scandal fuels bipartisan push to block AI chip sales to China | Congress members are pushing for a series of chip-related export control bills to be included in the annual National Defens...",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "energy",
+          "text": "能源",
+          "text_en": "Energy"
+        }
+      ],
+      "event": "IEA chief sees no 'credible pathway' back to pre-war normality in the Strait of Hormuz | The Iran war has 'crushed' confidence in the Strait of Hormuz as a reliable energy and goods corridor, the IEA'...",
+      "event_en": "IEA chief sees no 'credible pathway' back to pre-war normality in the Strait of Hormuz | The Iran war has 'crushed' confidence in the Strait of Hormuz as a reliable energy and goods corridor, the IEA'...",
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
