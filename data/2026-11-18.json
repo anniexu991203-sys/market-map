@@ -2,34 +2,27 @@
   "date": "2026-11-18",
   "weekday": "星期三",
   "weekday_en": "Wednesday",
-  "crawl_time": "约13:43（北京时间）",
-  "source": "CNBC Economy / Investing.com News / CNBC World News / CNBC Top News / MarketWatch Top Stories",
+  "crawl_time": "约14:43（北京时间）",
+  "source": "CNBC World News / MarketWatch Top Stories / CNBC Top News / Investing.com News / CNBC Economy",
   "sources_detail": [
-    "CNBC Economy",
-    "Investing.com News",
     "CNBC World News",
+    "MarketWatch Top Stories",
     "CNBC Top News",
-    "MarketWatch Top Stories"
+    "Investing.com News",
+    "CNBC Economy"
   ],
-  "filter_result": "50条核心要闻 / 0条因果链 / 91条原始抓取",
-  "stats": [],
-  "events": [
+  "filter_result": "50条核心要闻 / 0条因果链 / 94条原始抓取",
+  "stats": [
     {
-      "tags": [
-        {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        }
-      ],
-      "event": "Japan exports in October surge 20.5%, beating estimates on robust chip shipments | Semiconductor shipments spiked almost 50% year on year.",
-      "event_en": "Japan exports in October surge 20.5%, beating estimates on robust chip shipments | Semiconductor shipments spiked almost 50% year on year.",
-      "assets": "",
-      "assets_en": "",
-      "dir": "up",
-      "logic": "",
-      "logic_en": ""
-    },
+      "label": "S&P",
+      "label_en": "S&P",
+      "value": "500",
+      "change": "Only two ‘Magnificent Seven’ stocks have managed to beat the",
+      "change_en": "Only two ‘Magnificent Seven’ stocks have managed to beat the",
+      "dir": "up"
+    }
+  ],
+  "events": [
     {
       "tags": [
         {
@@ -45,6 +38,22 @@
       ],
       "event": "Euro zone inflation hits 4% for first time in three years as interest rate hike looms | It was driven by energy inflation, which surged above 20% in October.",
       "event_en": "Euro zone inflation hits 4% for first time in three years as interest rate hike looms | It was driven by energy inflation, which surged above 20% in October.",
+      "assets": "",
+      "assets_en": "",
+      "dir": "up",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ],
+      "event": "Japan exports in October surge 20.5%, beating estimates on robust chip shipments | Semiconductor shipments spiked almost 50% year on year.",
+      "event_en": "Japan exports in October surge 20.5%, beating estimates on robust chip shipments | Semiconductor shipments spiked almost 50% year on year.",
       "assets": "",
       "assets_en": "",
       "dir": "up",
@@ -308,8 +317,8 @@
           "text_en": "Central Bank"
         }
       ],
-      "event": "Mortgage demand turns lower, as interest rates shoot back up to the highest level in three weeks. | Mortgage rates moved sharply higher last week, causing demand for both mortgage refinances and home ...",
-      "event_en": "Mortgage demand turns lower, as interest rates shoot back up to the highest level in three weeks. | Mortgage rates moved sharply higher last week, causing demand for both mortgage refinances and home ...",
+      "event": "Mortgage demand turns lower, as interest rates shoot back up to the highest level in three weeks | Mortgage rates moved sharply higher last week, causing demand for both mortgage refinances and home p...",
+      "event_en": "Mortgage demand turns lower, as interest rates shoot back up to the highest level in three weeks | Mortgage rates moved sharply higher last week, causing demand for both mortgage refinances and home p...",
       "assets": "",
       "assets_en": "",
       "dir": "down",
@@ -335,18 +344,29 @@
     {
       "tags": [
         {
-          "type": "fed",
-          "text": "央行",
-          "text_en": "Central Bank"
-        },
-        {
           "type": "macro",
-          "text": "财政",
-          "text_en": "Fiscal"
+          "text": "宏观",
+          "text_en": "Macro"
         }
       ],
-      "event": "The Fed is tightening, the economy is slowing — and that’s the perfect setup to buy bonds, this trader argues | Having missed the rally in U.S. Treasurys that statrted in mid-October, Macro Tourist co...",
-      "event_en": "The Fed is tightening, the economy is slowing — and that’s the perfect setup to buy bonds, this trader argues | Having missed the rally in U.S. Treasurys that statrted in mid-October, Macro Tourist co...",
+      "event": "Costco is benefiting from ‘apocalyptic concerns’ as customers stock up on goods, analysts say | Mizuho analysts have seen an “acceleration on emergency prep sales” at the warehouse chain following the...",
+      "event_en": "Costco is benefiting from ‘apocalyptic concerns’ as customers stock up on goods, analysts say | Mizuho analysts have seen an “acceleration on emergency prep sales” at the warehouse chain following the...",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ],
+      "event": "Jim Cramer's top 10 things to watch in the stock market Wednesday | Can Nvidia hold these gains after earnings?",
+      "event_en": "Jim Cramer's top 10 things to watch in the stock market Wednesday | Can Nvidia hold these gains after earnings?",
       "assets": "",
       "assets_en": "",
       "dir": "up",
@@ -377,8 +397,8 @@
           "text_en": "Central Bank"
         }
       ],
-      "event": "Consumer prices rose 0.4% in October, more than expected, complicating Fed's inflation fight | The report comes at a critical juncture for the Federal Reserve as it considers its next move regarding i...",
-      "event_en": "Consumer prices rose 0.4% in October, more than expected, complicating Fed's inflation fight | The report comes at a critical juncture for the Federal Reserve as it considers its next move regarding i...",
+      "event": "How high must interest rates go to cool inflation? Possibly 100 basis points or more, Fed’s Waller says. | The central bank might have to be more aggressive in order to “shock” inflation out of the sy...",
+      "event_en": "How high must interest rates go to cool inflation? Possibly 100 basis points or more, Fed’s Waller says. | The central bank might have to be more aggressive in order to “shock” inflation out of the sy...",
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
@@ -393,8 +413,8 @@
           "text_en": "AI"
         }
       ],
-      "event": "Nvidia’s leadership saga unfolds as demand is surging for Anthropic’s IPO | Three takeaways from Colette Kress’s first earnings call as Nvidia’s interim CEO. Plus, what Medicare Part B will cost in 20...",
-      "event_en": "Nvidia’s leadership saga unfolds as demand is surging for Anthropic’s IPO | Three takeaways from Colette Kress’s first earnings call as Nvidia’s interim CEO. Plus, what Medicare Part B will cost in 20...",
+      "event": "Only two ‘Magnificent Seven’ stocks have managed to beat the S&P 500 since the start of 2025 | Alphabet and Apple have approached artificial intelligence in ways that have resonated on Wall Street.",
+      "event_en": "Only two ‘Magnificent Seven’ stocks have managed to beat the S&P 500 since the start of 2025 | Alphabet and Apple have approached artificial intelligence in ways that have resonated on Wall Street.",
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
@@ -404,13 +424,13 @@
     {
       "tags": [
         {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
+          "type": "fed",
+          "text": "央行",
+          "text_en": "Central Bank"
         }
       ],
-      "event": "The good news: Bubble predictions vastly outnumber actual episodes. The bad: There may be a 97% chance of one, right now. | It turns out, the business media cries wolf about impending stock-market doo...",
-      "event_en": "The good news: Bubble predictions vastly outnumber actual episodes. The bad: There may be a 97% chance of one, right now. | It turns out, the business media cries wolf about impending stock-market doo...",
+      "event": "Consumer prices rose 0.4% in October, more than expected, complicating Fed's inflation fight | The report comes at a critical juncture for the Federal Reserve as it considers its next move regarding i...",
+      "event_en": "Consumer prices rose 0.4% in October, more than expected, complicating Fed's inflation fight | The report comes at a critical juncture for the Federal Reserve as it considers its next move regarding i...",
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
@@ -430,6 +450,22 @@
       "assets": "",
       "assets_en": "",
       "dir": "down",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "bio",
+          "text": "生物科技",
+          "text_en": "Biotech"
+        }
+      ],
+      "event": "Hims & Hers launches new peptide treatments — while admitting there's more to learn about efficacy | The telehealth company will now offer compounded forms of sermorelin, glutathione, NAD+,  vitamin B...",
+      "event_en": "Hims & Hers launches new peptide treatments — while admitting there's more to learn about efficacy | The telehealth company will now offer compounded forms of sermorelin, glutathione, NAD+,  vitamin B...",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
       "logic": "",
       "logic_en": ""
     },
@@ -526,38 +562,6 @@
     {
       "tags": [
         {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
-        }
-      ],
-      "event": "Strategists say investors should start asking ‘what could go right’ after tech’s 42% valuation reset | Strategists at Truist Advisory Services recommend investors consider using the industry’s current...",
-      "event_en": "Strategists say investors should start asking ‘what could go right’ after tech’s 42% valuation reset | Strategists at Truist Advisory Services recommend investors consider using the industry’s current...",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
-        }
-      ],
-      "event": "Putin says EU is losing industry, falling behind competition, ahead of meeting with Trump and Xi | Putin used the speech to emphasize Russia's economic resilience despite U.S. sanctions, and played up...",
-      "event_en": "Putin says EU is losing industry, falling behind competition, ahead of meeting with Trump and Xi | Putin used the speech to emphasize Russia's economic resilience despite U.S. sanctions, and played up...",
-      "assets": "",
-      "assets_en": "",
-      "dir": "down",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
           "type": "fed",
           "text": "央行",
           "text_en": "Central Bank"
@@ -643,6 +647,22 @@
           "text_en": "Macro"
         }
       ],
+      "event": "Medicare Part B premiums rise due to higher healthcare spending | The premiums will increase by $6.50, to $209.40 a month.",
+      "event_en": "Medicare Part B premiums rise due to higher healthcare spending | The premiums will increase by $6.50, to $209.40 a month.",
+      "assets": "",
+      "assets_en": "",
+      "dir": "up",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
       "event": "Senators press acting U.S. Navy Secretary on Iran war costs, sailor health in confirmation hearing | Acting Navy Secretary Hung Cao told senators the Navy recoded and used munitions he called expired ...",
       "event_en": "Senators press acting U.S. Navy Secretary on Iran war costs, sailor health in confirmation hearing | Acting Navy Secretary Hung Cao told senators the Navy recoded and used munitions he called expired ...",
       "assets": "",
@@ -670,18 +690,29 @@
     {
       "tags": [
         {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "Putin says EU is losing industry, falling behind competition, ahead of meeting with Trump and Xi | Putin used the speech to emphasize Russia's economic resilience despite U.S. sanctions, and played up...",
+      "event_en": "Putin says EU is losing industry, falling behind competition, ahead of meeting with Trump and Xi | Putin used the speech to emphasize Russia's economic resilience despite U.S. sanctions, and played up...",
+      "assets": "",
+      "assets_en": "",
+      "dir": "down",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
           "type": "ai",
           "text": "AI",
           "text_en": "AI"
-        },
-        {
-          "type": "energy",
-          "text": "能源",
-          "text_en": "Energy"
         }
       ],
-      "event": "‘Nvidia’s turmoil has me spooked’: Has the time come to sell my stocks? | “Real estate here in Florida seems to be presenting some interesting opportunities.”",
-      "event_en": "‘Nvidia’s turmoil has me spooked’: Has the time come to sell my stocks? | “Real estate here in Florida seems to be presenting some interesting opportunities.”",
+      "event": "With Jensen Huang gone, Colette Kress shows Nvidia is still at the center of AI | In her first earnings report as interim CEO, Nvidia's Colette Kress calmed investors' nerves, at least for the moment.",
+      "event_en": "With Jensen Huang gone, Colette Kress shows Nvidia is still at the center of AI | In her first earnings report as interim CEO, Nvidia's Colette Kress calmed investors' nerves, at least for the moment.",
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
@@ -696,8 +727,8 @@
           "text_en": "AI"
         }
       ],
-      "event": "With Jensen Huang gone, Colette Kress shows Nvidia is still at the center of AI | In her first earnings report as interim CEO, Nvidia's Colette Kress calmed investors' nerves, at least for the moment.",
-      "event_en": "With Jensen Huang gone, Colette Kress shows Nvidia is still at the center of AI | In her first earnings report as interim CEO, Nvidia's Colette Kress calmed investors' nerves, at least for the moment.",
+      "event": "How to get Anthropic stock — without buying the IPO | Investors will get access to the AI startup's stock offering courtesy of its inclusion in many mutual funds and ETFs.",
+      "event_en": "How to get Anthropic stock — without buying the IPO | Investors will get access to the AI startup's stock offering courtesy of its inclusion in many mutual funds and ETFs.",
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
@@ -751,6 +782,22 @@
       ],
       "event": "Jensen Huang scandal fuels bipartisan push to block AI chip sales to China | Congress members are pushing for a series of chip-related export control bills to be included in the annual National Defens...",
       "event_en": "Jensen Huang scandal fuels bipartisan push to block AI chip sales to China | Congress members are pushing for a series of chip-related export control bills to be included in the annual National Defens...",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ],
+      "event": "Retail investor enthusiasm for Anthropic IPO to rival SpaceX debut | Anthropic is gearing up for a blockbuster initial public offering this week, and excitement among retail investors looks to be off ...",
+      "event_en": "Retail investor enthusiasm for Anthropic IPO to rival SpaceX debut | Anthropic is gearing up for a blockbuster initial public offering this week, and excitement among retail investors looks to be off ...",
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
@@ -820,54 +867,6 @@
       ],
       "event": "After $6.3 billion crypto heist, Binance plans Asia expansion",
       "event_en": "After $6.3 billion crypto heist, Binance plans Asia expansion",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "fed",
-          "text": "央行",
-          "text_en": "Central Bank"
-        }
-      ],
-      "event": "Dollar holds near 19-mth high in 7th daily advance on Fed hike bets",
-      "event_en": "Dollar holds near 19-mth high in 7th daily advance on Fed hike bets",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
-        }
-      ],
-      "event": "Dollar finally dips after fresh 19-month peak, set to snap five-day win streak",
-      "event_en": "Dollar finally dips after fresh 19-month peak, set to snap five-day win streak",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
-        }
-      ],
-      "event": "Citi forecasts Brazilian real to weaken to 5.50 per dollar in 2027",
-      "event_en": "Citi forecasts Brazilian real to weaken to 5.50 per dollar in 2027",
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
