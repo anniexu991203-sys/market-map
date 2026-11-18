@@ -2,16 +2,16 @@
   "date": "2026-11-19",
   "weekday": "星期四",
   "weekday_en": "Thursday",
-  "crawl_time": "约21:42（北京时间）",
-  "source": "CNBC World News / MarketWatch Top Stories / Investing.com News / CNBC Top News / CNBC Economy",
+  "crawl_time": "约22:41（北京时间）",
+  "source": "CNBC World News / CNBC Economy / MarketWatch Top Stories / CNBC Top News / Investing.com News",
   "sources_detail": [
     "CNBC World News",
+    "CNBC Economy",
     "MarketWatch Top Stories",
-    "Investing.com News",
     "CNBC Top News",
-    "CNBC Economy"
+    "Investing.com News"
   ],
-  "filter_result": "49条核心要闻 / 0条因果链 / 91条原始抓取",
+  "filter_result": "50条核心要闻 / 0条因果链 / 91条原始抓取",
   "stats": [],
   "events": [
     {
@@ -192,6 +192,22 @@
     {
       "tags": [
         {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ],
+      "event": "Copper’s plunge could make the AI data-center buildout more painful | The world might not be able to mine enough copper to meet AI’s demand for years to come.",
+      "event_en": "Copper’s plunge could make the AI data-center buildout more painful | The world might not be able to mine enough copper to meet AI’s demand for years to come.",
+      "assets": "",
+      "assets_en": "",
+      "dir": "down",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
           "type": "macro",
           "text": "宏观",
           "text_en": "Macro"
@@ -229,24 +245,8 @@
           "text_en": "AI"
         }
       ],
-      "event": "Nvidia reverses, metals crash ahead of Anthropic IPO | Big moves have options traders wondering if Anthropic's IPO is spurring a rotation trade.",
-      "event_en": "Nvidia reverses, metals crash ahead of Anthropic IPO | Big moves have options traders wondering if Anthropic's IPO is spurring a rotation trade.",
-      "assets": "",
-      "assets_en": "",
-      "dir": "down",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "fed",
-          "text": "央行",
-          "text_en": "Central Bank"
-        }
-      ],
-      "event": "Dollar on 7th daily advance as Fed minutes reinforce rate hike bets",
-      "event_en": "Dollar on 7th daily advance as Fed minutes reinforce rate hike bets",
+      "event": "Palo Alto inks $4.5 billion deal for AI startup Applied Compute, shares pop 7% on earnings | Palo Alto Networks has been steadily acquiring companies to capitalize on demand for cyber tools to fight A...",
+      "event_en": "Palo Alto inks $4.5 billion deal for AI startup Applied Compute, shares pop 7% on earnings | Palo Alto Networks has been steadily acquiring companies to capitalize on demand for cyber tools to fight A...",
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
@@ -357,6 +357,38 @@
     {
       "tags": [
         {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "Has the stock market’s slump hit bottom yet? Here’s what these contrarian indicators say. | Contrarian buy signals typically don’t come until sentiment has dropped further than they have so far",
+      "event_en": "Has the stock market’s slump hit bottom yet? Here’s what these contrarian indicators say. | Contrarian buy signals typically don’t come until sentiment has dropped further than they have so far",
+      "assets": "",
+      "assets_en": "",
+      "dir": "down",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ],
+      "event": "Palo Alto Networks’ stock soars as earnings show AI has upped the stakes for cybersecurity | The company boosts its outlook in the face of the “current threat environment and demand we see ahead of us...",
+      "event_en": "Palo Alto Networks’ stock soars as earnings show AI has upped the stakes for cybersecurity | The company boosts its outlook in the face of the “current threat environment and demand we see ahead of us...",
+      "assets": "",
+      "assets_en": "",
+      "dir": "up",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
           "type": "fed",
           "text": "央行",
           "text_en": "Central Bank"
@@ -369,22 +401,6 @@
       ],
       "event": "Longer-dated Treasury yields fall as traders weigh Waller comments, Fed minutes | Yields at the long end of the Treasury yield curve declined Wednesday.",
       "event_en": "Longer-dated Treasury yields fall as traders weigh Waller comments, Fed minutes | Yields at the long end of the Treasury yield curve declined Wednesday.",
-      "assets": "",
-      "assets_en": "",
-      "dir": "down",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
-        }
-      ],
-      "event": "Grand Theft Callout: ‘GTA 6’ fans are missing work to play — and some companies are making the game’s release a holiday | After waiting 13 years for this videogame, almost one-fifth of workers are sai...",
-      "event_en": "Grand Theft Callout: ‘GTA 6’ fans are missing work to play — and some companies are making the game’s release a holiday | After waiting 13 years for this videogame, almost one-fifth of workers are sai...",
       "assets": "",
       "assets_en": "",
       "dir": "down",
@@ -417,22 +433,6 @@
       ],
       "event": "Consumer prices rose 0.4% in October, more than expected, complicating Fed's inflation fight | The report comes at a critical juncture for the Federal Reserve as it considers its next move regarding i...",
       "event_en": "Consumer prices rose 0.4% in October, more than expected, complicating Fed's inflation fight | The report comes at a critical juncture for the Federal Reserve as it considers its next move regarding i...",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
-        }
-      ],
-      "event": "‘GTA 6’ is the biggest game of all time. What it means for Take-Two’s stock. | “Grand Theft Auto VI” has racked up a Metacritic score of 99 and been nominated for Game of the Year already. “Clearly, t...",
-      "event_en": "‘GTA 6’ is the biggest game of all time. What it means for Take-Two’s stock. | “Grand Theft Auto VI” has racked up a Metacritic score of 99 and been nominated for Game of the Year already. “Clearly, t...",
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
@@ -734,8 +734,8 @@
           "text_en": "AI"
         }
       ],
-      "event": "One of AI's most notorious 'doomers' stands to make billions in Anthropic's IPO | An Estonian tech billionaire famous for his stance that AI could end humanity is expected to be one of the biggest win...",
-      "event_en": "One of AI's most notorious 'doomers' stands to make billions in Anthropic's IPO | An Estonian tech billionaire famous for his stance that AI could end humanity is expected to be one of the biggest win...",
+      "event": "Retail investor enthusiasm for Anthropic IPO to rival SpaceX debut | Anthropic is gearing up for a blockbuster initial public offering this week, and excitement among retail investors looks to be off ...",
+      "event_en": "Retail investor enthusiasm for Anthropic IPO to rival SpaceX debut | Anthropic is gearing up for a blockbuster initial public offering this week, and excitement among retail investors looks to be off ...",
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
@@ -798,6 +798,43 @@
     {
       "tags": [
         {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        },
+        {
+          "type": "china",
+          "text": "中国",
+          "text_en": "China"
+        }
+      ],
+      "event": "Nvidia’s booming demand is ‘hard to ignore,’ but these four questions loom over the stock | Nvidia investors face uncertainty around CEO succession, the AI ecosystem, export controls and China.",
+      "event_en": "Nvidia’s booming demand is ‘hard to ignore,’ but these four questions loom over the stock | Nvidia investors face uncertainty around CEO succession, the AI ecosystem, export controls and China.",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "fed",
+          "text": "央行",
+          "text_en": "Central Bank"
+        }
+      ],
+      "event": "Dollar pinned at 19-month high amid hawkish signals from Fed’s Waller, minutes",
+      "event_en": "Dollar pinned at 19-month high amid hawkish signals from Fed’s Waller, minutes",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
           "type": "macro",
           "text": "宏观",
           "text_en": "Macro"
@@ -821,22 +858,6 @@
       ],
       "event": "Dollar finally dips after fresh 19-month peak, set to snap five-day win streak",
       "event_en": "Dollar finally dips after fresh 19-month peak, set to snap five-day win streak",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
-        }
-      ],
-      "event": "Citi forecasts Brazilian real to weaken to 5.50 per dollar in 2027",
-      "event_en": "Citi forecasts Brazilian real to weaken to 5.50 per dollar in 2027",
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
