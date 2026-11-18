@@ -2,16 +2,16 @@
   "date": "2026-11-19",
   "weekday": "星期四",
   "weekday_en": "Thursday",
-  "crawl_time": "约22:41（北京时间）",
-  "source": "CNBC World News / CNBC Economy / MarketWatch Top Stories / CNBC Top News / Investing.com News",
+  "crawl_time": "约23:40（北京时间）",
+  "source": "MarketWatch Top Stories / CNBC World News / CNBC Top News / CNBC Economy / Investing.com News",
   "sources_detail": [
-    "CNBC World News",
-    "CNBC Economy",
     "MarketWatch Top Stories",
+    "CNBC World News",
     "CNBC Top News",
+    "CNBC Economy",
     "Investing.com News"
   ],
-  "filter_result": "50条核心要闻 / 0条因果链 / 91条原始抓取",
+  "filter_result": "50条核心要闻 / 0条因果链 / 90条原始抓取",
   "stats": [],
   "events": [
     {
@@ -197,8 +197,8 @@
           "text_en": "AI"
         }
       ],
-      "event": "Copper’s plunge could make the AI data-center buildout more painful | The world might not be able to mine enough copper to meet AI’s demand for years to come.",
-      "event_en": "Copper’s plunge could make the AI data-center buildout more painful | The world might not be able to mine enough copper to meet AI’s demand for years to come.",
+      "event": "How copper’s plunge could hurt the AI buildout | The world might not be able to mine enough copper to meet AI’s demand for years to come.",
+      "event_en": "How copper’s plunge could hurt the AI buildout | The world might not be able to mine enough copper to meet AI’s demand for years to come.",
       "assets": "",
       "assets_en": "",
       "dir": "down",
@@ -376,10 +376,15 @@
           "type": "ai",
           "text": "AI",
           "text_en": "AI"
+        },
+        {
+          "type": "macro",
+          "text": "财政",
+          "text_en": "Fiscal"
         }
       ],
-      "event": "Palo Alto Networks’ stock soars as earnings show AI has upped the stakes for cybersecurity | The company boosts its outlook in the face of the “current threat environment and demand we see ahead of us...",
-      "event_en": "Palo Alto Networks’ stock soars as earnings show AI has upped the stakes for cybersecurity | The company boosts its outlook in the face of the “current threat environment and demand we see ahead of us...",
+      "event": "Big bets against AI debt, from CoreWeave to Oracle and the Mag 7, could soon hit the ETF market | Investor fears about AI balance sheets and debt are running high, especially for neoclouds. ETFs targe...",
+      "event_en": "Big bets against AI debt, from CoreWeave to Oracle and the Mag 7, could soon hit the ETF market | Investor fears about AI balance sheets and debt are running high, especially for neoclouds. ETFs targe...",
       "assets": "",
       "assets_en": "",
       "dir": "up",
@@ -389,34 +394,18 @@
     {
       "tags": [
         {
-          "type": "fed",
-          "text": "央行",
-          "text_en": "Central Bank"
-        },
-        {
-          "type": "macro",
-          "text": "财政",
-          "text_en": "Fiscal"
-        }
-      ],
-      "event": "Longer-dated Treasury yields fall as traders weigh Waller comments, Fed minutes | Yields at the long end of the Treasury yield curve declined Wednesday.",
-      "event_en": "Longer-dated Treasury yields fall as traders weigh Waller comments, Fed minutes | Yields at the long end of the Treasury yield curve declined Wednesday.",
-      "assets": "",
-      "assets_en": "",
-      "dir": "down",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
           "type": "ai",
           "text": "AI",
           "text_en": "AI"
+        },
+        {
+          "type": "fed",
+          "text": "央行",
+          "text_en": "Central Bank"
         }
       ],
-      "event": "Anthropic prices IPO at $83 per share, above expected range, source tells CNBC | Anthropic stock is set to begin trading on the Nasdaq under the ticker symbol ANT on Thursday.",
-      "event_en": "Anthropic prices IPO at $83 per share, above expected range, source tells CNBC | Anthropic stock is set to begin trading on the Nasdaq under the ticker symbol ANT on Thursday.",
+      "event": "Anthropic IPO raises over $81 billion in largest offering on record, topping SpaceX | Anthropic stock is set to begin trading on the Nasdaq under the ticker symbol ANT on Thursday.",
+      "event_en": "Anthropic IPO raises over $81 billion in largest offering on record, topping SpaceX | Anthropic stock is set to begin trading on the Nasdaq under the ticker symbol ANT on Thursday.",
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
@@ -505,6 +494,38 @@
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "What the ‘death cross’ in small-cap stocks means for the rest of the market | The negative chart pattern confirms weakness in the Russell 2000 and in overall market breadth.",
+      "event_en": "What the ‘death cross’ in small-cap stocks means for the rest of the market | The negative chart pattern confirms weakness in the Russell 2000 and in overall market breadth.",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "The stock market is being rocked by the biggest shake-up in a generation as tech falls behind | Tech stocks are looking cheap, while defensive sectors like consumer staples are screening as expensive.",
+      "event_en": "The stock market is being rocked by the biggest shake-up in a generation as tech falls behind | Tech stocks are looking cheap, while defensive sectors like consumer staples are screening as expensive.",
+      "assets": "",
+      "assets_en": "",
+      "dir": "down",
       "logic": "",
       "logic_en": ""
     },
@@ -612,27 +633,6 @@
     {
       "tags": [
         {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        },
-        {
-          "type": "energy",
-          "text": "能源",
-          "text_en": "Energy"
-        }
-      ],
-      "event": "‘Nvidia’s turmoil has me spooked’: Should I sell my stocks and buy real estate — or ride out the storm? | Tempted to ditch stocks for property or CDs? Take a deep breath before making any sudden moves...",
-      "event_en": "‘Nvidia’s turmoil has me spooked’: Should I sell my stocks and buy real estate — or ride out the storm? | Tempted to ditch stocks for property or CDs? Take a deep breath before making any sudden moves...",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
           "type": "macro",
           "text": "宏观",
           "text_en": "Macro"
@@ -643,6 +643,22 @@
       "assets": "",
       "assets_en": "",
       "dir": "down",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ],
+      "event": "Palo Alto Networks’ stock gets a fresh AI-fueled boost from earnings | The company boosts its outlook in the face of the “current threat environment and demand we see ahead of us.”",
+      "event_en": "Palo Alto Networks’ stock gets a fresh AI-fueled boost from earnings | The company boosts its outlook in the face of the “current threat environment and demand we see ahead of us.”",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
       "logic": "",
       "logic_en": ""
     },
@@ -691,22 +707,6 @@
       "assets": "",
       "assets_en": "",
       "dir": "up",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "fed",
-          "text": "央行",
-          "text_en": "Central Bank"
-        }
-      ],
-      "event": "Fed minutes show growing unease about the outlook for inflation | The minutes of the Federal Reserve’s October policy meeting showed growing unease among officials about the outlook for inflation, eve...",
-      "event_en": "Fed minutes show growing unease about the outlook for inflation | The minutes of the Federal Reserve’s October policy meeting showed growing unease among officials about the outlook for inflation, eve...",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
       "logic": "",
       "logic_en": ""
     },
