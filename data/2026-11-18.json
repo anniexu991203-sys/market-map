@@ -2,16 +2,16 @@
   "date": "2026-11-18",
   "weekday": "星期三",
   "weekday_en": "Wednesday",
-  "crawl_time": "约00:13（北京时间）",
-  "source": "CNBC Top News / CNBC World News / MarketWatch Top Stories / Investing.com News / CNBC Economy",
+  "crawl_time": "约01:47（北京时间）",
+  "source": "CNBC Top News / CNBC Economy / CNBC World News / MarketWatch Top Stories / Investing.com News",
   "sources_detail": [
     "CNBC Top News",
+    "CNBC Economy",
     "CNBC World News",
     "MarketWatch Top Stories",
-    "Investing.com News",
-    "CNBC Economy"
+    "Investing.com News"
   ],
-  "filter_result": "45条核心要闻 / 0条因果链 / 93条原始抓取",
+  "filter_result": "50条核心要闻 / 0条因果链 / 93条原始抓取",
   "stats": [
     {
       "label": "S&P",
@@ -23,6 +23,22 @@
     }
   ],
   "events": [
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ],
+      "event": "Japan exports in October surge 20.5%, beating estimates on robust chip shipments | Semiconductor shipments spiked almost 50% year on year.",
+      "event_en": "Japan exports in October surge 20.5%, beating estimates on robust chip shipments | Semiconductor shipments spiked almost 50% year on year.",
+      "assets": "",
+      "assets_en": "",
+      "dir": "up",
+      "logic": "",
+      "logic_en": ""
+    },
     {
       "tags": [
         {
@@ -38,22 +54,6 @@
       ],
       "event": "Euro zone inflation hits 4% for first time in three years as interest rate hike looms | It was driven by energy inflation, which surged above 20% in October.",
       "event_en": "Euro zone inflation hits 4% for first time in three years as interest rate hike looms | It was driven by energy inflation, which surged above 20% in October.",
-      "assets": "",
-      "assets_en": "",
-      "dir": "up",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        }
-      ],
-      "event": "Japan exports in October surge 20.5%, beating estimates on robust chip shipments | Semiconductor shipments spiked almost 50% year on year.",
-      "event_en": "Japan exports in October surge 20.5%, beating estimates on robust chip shipments | Semiconductor shipments spiked almost 50% year on year.",
       "assets": "",
       "assets_en": "",
       "dir": "up",
@@ -312,6 +312,22 @@
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ],
+      "event": "Nvidia’s stock rises as blowout numbers help ease CEO transition fears | Nvidia’s revenue growth and $130 billion quarterly forecast showed that demand for chips is still sky-high.",
+      "event_en": "Nvidia’s stock rises as blowout numbers help ease CEO transition fears | Nvidia’s revenue growth and $130 billion quarterly forecast showed that demand for chips is still sky-high.",
+      "assets": "",
+      "assets_en": "",
+      "dir": "up",
       "logic": "",
       "logic_en": ""
     },
@@ -658,6 +674,22 @@
           "text_en": "Macro"
         }
       ],
+      "event": "Medicare Part B premiums rise due higher healthcare spending | The premiums will increase by $6.50, to $209.40 a month.",
+      "event_en": "Medicare Part B premiums rise due higher healthcare spending | The premiums will increase by $6.50, to $209.40 a month.",
+      "assets": "",
+      "assets_en": "",
+      "dir": "up",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
       "event": "Chase Home Lending CEO says he plans to 'go on offense' against non-bank lenders | Sean Grzebin, the CEO of Chase Home Lending, the nation's largest bank mortgage lender, said he's hiring and bent on ...",
       "event_en": "Chase Home Lending CEO says he plans to 'go on offense' against non-bank lenders | Sean Grzebin, the CEO of Chase Home Lending, the nation's largest bank mortgage lender, said he's hiring and bent on ...",
       "assets": "",
@@ -767,6 +799,22 @@
           "type": "ai",
           "text": "AI",
           "text_en": "AI"
+        }
+      ],
+      "event": "OpenAI bugging case defendant Alfozan set for trial in January | Abdulrahman Alfozan has been held without bail since his arrest in October, after prosecutors said he planted a listening device in an ...",
+      "event_en": "OpenAI bugging case defendant Alfozan set for trial in January | Abdulrahman Alfozan has been held without bail since his arrest in October, after prosecutors said he planted a listening device in an ...",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
         },
         {
           "type": "china",
@@ -795,6 +843,43 @@
       "assets": "",
       "assets_en": "",
       "dir": "down",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        },
+        {
+          "type": "fed",
+          "text": "央行",
+          "text_en": "Central Bank"
+        }
+      ],
+      "event": "Analysis: The Fed's chairman sees an AI revolution coming. Now he has to figure out what it means | Kevin Warsh sees AI at a turning point. He faces tough questions on jobs and interest rates.",
+      "event_en": "Analysis: The Fed's chairman sees an AI revolution coming. Now he has to figure out what it means | Kevin Warsh sees AI at a turning point. He faces tough questions on jobs and interest rates.",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "Dollar finally dips after fresh 19-month peak, set to snap five-day win streak",
+      "event_en": "Dollar finally dips after fresh 19-month peak, set to snap five-day win streak",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
       "logic": "",
       "logic_en": ""
     }
