@@ -2,16 +2,16 @@
   "date": "2026-11-18",
   "weekday": "星期三",
   "weekday_en": "Wednesday",
-  "crawl_time": "约10:28（北京时间）",
-  "source": "CNBC World News / MarketWatch Top Stories / Investing.com News / CNBC Top News / CNBC Economy",
+  "crawl_time": "约11:25（北京时间）",
+  "source": "CNBC Economy / Investing.com News / CNBC Top News / CNBC World News / MarketWatch Top Stories",
   "sources_detail": [
-    "CNBC World News",
-    "MarketWatch Top Stories",
+    "CNBC Economy",
     "Investing.com News",
     "CNBC Top News",
-    "CNBC Economy"
+    "CNBC World News",
+    "MarketWatch Top Stories"
   ],
-  "filter_result": "47条核心要闻 / 0条因果链 / 91条原始抓取",
+  "filter_result": "46条核心要闻 / 0条因果链 / 90条原始抓取",
   "stats": [
     {
       "label": "S&P",
@@ -63,22 +63,6 @@
     {
       "tags": [
         {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        }
-      ],
-      "event": "Nvidia stock up nearly 4% as earnings beat expectations. Neoclouds surge | The chip giant's earnings come at a tumultuous time for the company.",
-      "event_en": "Nvidia stock up nearly 4% as earnings beat expectations. Neoclouds surge | The chip giant's earnings come at a tumultuous time for the company.",
-      "assets": "",
-      "assets_en": "",
-      "dir": "up",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
           "type": "macro",
           "text": "宏观",
           "text_en": "Macro"
@@ -111,22 +95,6 @@
     {
       "tags": [
         {
-          "type": "energy",
-          "text": "能源",
-          "text_en": "Energy"
-        }
-      ],
-      "event": "Homebuilder sentiment plunges to 14-year low, leading more builders to drop prices | Homebuilder sentiment fell to a 14-year low amid high mortgage rates and higher prices for energy, labor and materi...",
-      "event_en": "Homebuilder sentiment plunges to 14-year low, leading more builders to drop prices | Homebuilder sentiment fell to a 14-year low amid high mortgage rates and higher prices for energy, labor and materi...",
-      "assets": "",
-      "assets_en": "",
-      "dir": "down",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
           "type": "fed",
           "text": "央行",
           "text_en": "Central Bank"
@@ -150,6 +118,22 @@
       ],
       "event": "Job openings posted big September gain in positive sign for labor market ahead of payrolls report | The BLS reported job openings at 7.52 million, up 333,000 from August and well above the Dow Jones c...",
       "event_en": "Job openings posted big September gain in positive sign for labor market ahead of payrolls report | The BLS reported job openings at 7.52 million, up 333,000 from August and well above the Dow Jones c...",
+      "assets": "",
+      "assets_en": "",
+      "dir": "up",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "fed",
+          "text": "央行",
+          "text_en": "Central Bank"
+        }
+      ],
+      "event": "Sterling today: Pound slips as U.S. rate bets outweigh UK CPI rise to 3.6%",
+      "event_en": "Sterling today: Pound slips as U.S. rate bets outweigh UK CPI rise to 3.6%",
       "assets": "",
       "assets_en": "",
       "dir": "up",
@@ -212,16 +196,16 @@
     {
       "tags": [
         {
-          "type": "fed",
-          "text": "央行",
-          "text_en": "Central Bank"
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
         }
       ],
-      "event": "Dollar hits 19-month high as hawkish Fed signals bolster rate hike bets",
-      "event_en": "Dollar hits 19-month high as hawkish Fed signals bolster rate hike bets",
+      "event": "Nvidia earnings spark rally in shares and neoclouds despite Huang scandal | The chip giant's earnings come at a tumultuous time for the company.",
+      "event_en": "Nvidia earnings spark rally in shares and neoclouds despite Huang scandal | The chip giant's earnings come at a tumultuous time for the company.",
       "assets": "",
       "assets_en": "",
-      "dir": "neutral",
+      "dir": "up",
       "logic": "",
       "logic_en": ""
     },
@@ -243,22 +227,6 @@
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        }
-      ],
-      "event": "Nvidia’s stock rises as blowout numbers help ease CEO transition fears | Nvidia’s revenue growth and $130 billion quarterly forecast showed that demand for chips is still sky-high.",
-      "event_en": "Nvidia’s stock rises as blowout numbers help ease CEO transition fears | Nvidia’s revenue growth and $130 billion quarterly forecast showed that demand for chips is still sky-high.",
-      "assets": "",
-      "assets_en": "",
-      "dir": "up",
       "logic": "",
       "logic_en": ""
     },
@@ -302,22 +270,6 @@
           "text_en": "AI"
         }
       ],
-      "event": "Investor Steve Eisman says the AI neocloud stocks are in 'big trouble' from Nvidia fallout | Steve Eisman is appearing on \"Squawk Box\" on Tuesday.",
-      "event_en": "Investor Steve Eisman says the AI neocloud stocks are in 'big trouble' from Nvidia fallout | Steve Eisman is appearing on \"Squawk Box\" on Tuesday.",
-      "assets": "",
-      "assets_en": "",
-      "dir": "down",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        }
-      ],
       "event": "What Wall Street analysts are now saying after Nvidia’s beat-and-raise quarter | The chip company’s stock rose over 3% in premarket trading on Wednesday. A team at JPMorgan said there is likely more v...",
       "event_en": "What Wall Street analysts are now saying after Nvidia’s beat-and-raise quarter | The chip company’s stock rose over 3% in premarket trading on Wednesday. A team at JPMorgan said there is likely more v...",
       "assets": "",
@@ -350,11 +302,43 @@
           "text_en": "Macro"
         }
       ],
+      "event": "The good news: Bubble predictions vastly outnumber actual episodes. The bad: There may be a 97% chance of one, right now. | It turns out, the business media cries wolf about impending stock-market doo...",
+      "event_en": "The good news: Bubble predictions vastly outnumber actual episodes. The bad: There may be a 97% chance of one, right now. | It turns out, the business media cries wolf about impending stock-market doo...",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
       "event": "Sterling today: Pound set to snap slide as dollar pauses; UK jobless dips to 4.6%",
       "event_en": "Sterling today: Pound set to snap slide as dollar pauses; UK jobless dips to 4.6%",
       "assets": "",
       "assets_en": "",
       "dir": "down",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ],
+      "event": "'Who and what comes next': Analysts expect Nvidia investor uncertainty despite earnings beat | Nvidia’s Q3 results should help ease short-term concerns, but uncertainty remains around long-term leader...",
+      "event_en": "'Who and what comes next': Analysts expect Nvidia investor uncertainty despite earnings beat | Nvidia’s Q3 results should help ease short-term concerns, but uncertainty remains around long-term leader...",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
       "logic": "",
       "logic_en": ""
     },
@@ -401,6 +385,27 @@
           "type": "ai",
           "text": "AI",
           "text_en": "AI"
+        },
+        {
+          "type": "china",
+          "text": "中国",
+          "text_en": "China"
+        }
+      ],
+      "event": "China’s military seeks Nvidia’s advanced chips for AI capabilities, commission says | A congressional commission issued its findings as Nvidia has been rocked by its CEO's resignation after reports he...",
+      "event_en": "China’s military seeks Nvidia’s advanced chips for AI capabilities, commission says | A congressional commission issued its findings as Nvidia has been rocked by its CEO's resignation after reports he...",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
         }
       ],
       "event": "Nvidia closes lower ahead of earnings as company reels from Huang resignation | Investors have been weighing the fallout from former CEO Jensen Huang's resignation.",
@@ -421,6 +426,22 @@
       ],
       "event": "Australia hikes rates to 18-year high to fight inflation | The Reserve Bank of Australia's decision was in line with expectations from economists polled by Reuters, and marked its fifth rate increase ...",
       "event_en": "Australia hikes rates to 18-year high to fight inflation | The Reserve Bank of Australia's decision was in line with expectations from economists polled by Reuters, and marked its fifth rate increase ...",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "Strategists say investors should start asking ‘what could go right’ after tech’s 42% valuation reset | Strategists at Truist Advisory Services recommend investors consider using the industry’s current...",
+      "event_en": "Strategists say investors should start asking ‘what could go right’ after tech’s 42% valuation reset | Strategists at Truist Advisory Services recommend investors consider using the industry’s current...",
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
@@ -485,38 +506,6 @@
       ],
       "event": "Record diesel prices drive UK inflation to 1-year high of 3.6% | It put the U.K.'s annual inflation rate at a 1-year high.",
       "event_en": "Record diesel prices drive UK inflation to 1-year high of 3.6% | It put the U.K.'s annual inflation rate at a 1-year high.",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        }
-      ],
-      "event": "Demis Hassabis’ AI company raises $5 billion, months after he left as Google DeepMind CEO | Isomorphic Labs is looking to develop new medicines using AI.",
-      "event_en": "Demis Hassabis’ AI company raises $5 billion, months after he left as Google DeepMind CEO | Isomorphic Labs is looking to develop new medicines using AI.",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        }
-      ],
-      "event": "Data center policy dominated the midterms. The 'Virginia of Europe' is the latest battleground | Data center policy has become a key election issue in Spain, creating an obstacle to existing deals and...",
-      "event_en": "Data center policy dominated the midterms. The 'Virginia of Europe' is the latest battleground | Data center policy has become a key election issue in Spain, creating an obstacle to existing deals and...",
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
@@ -654,13 +643,13 @@
     {
       "tags": [
         {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
         }
       ],
-      "event": "A generational flight from tech to defensive stocks is underway. How we’re capitalizing | Jim Cramer has pushed the message that its important for investors to balance their portfolios.",
-      "event_en": "A generational flight from tech to defensive stocks is underway. How we’re capitalizing | Jim Cramer has pushed the message that its important for investors to balance their portfolios.",
+      "event": "With Jensen Huang gone, Colette Kress shows Nvidia is still at the center of AI | In her first earnings report as interim CEO, Nvidia's Colette Kress calmed investors' nerves, at least for the moment.",
+      "event_en": "With Jensen Huang gone, Colette Kress shows Nvidia is still at the center of AI | In her first earnings report as interim CEO, Nvidia's Colette Kress calmed investors' nerves, at least for the moment.",
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
@@ -733,27 +722,6 @@
           "text_en": "AI"
         },
         {
-          "type": "china",
-          "text": "中国",
-          "text_en": "China"
-        }
-      ],
-      "event": "Nvidia warns chip buyers of legal risks tied to China AI access, sources tell CNBC | The U.S. Commerce Department is making moves to tighten export controls.",
-      "event_en": "Nvidia warns chip buyers of legal risks tied to China AI access, sources tell CNBC | The U.S. Commerce Department is making moves to tighten export controls.",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        },
-        {
           "type": "fed",
           "text": "央行",
           "text_en": "Central Bank"
@@ -777,6 +745,22 @@
       ],
       "event": "After $6.3 billion crypto heist, Binance plans Asia expansion",
       "event_en": "After $6.3 billion crypto heist, Binance plans Asia expansion",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "fed",
+          "text": "央行",
+          "text_en": "Central Bank"
+        }
+      ],
+      "event": "Dollar holds near 19-mth high in 7th daily advance on Fed hike bets",
+      "event_en": "Dollar holds near 19-mth high in 7th daily advance on Fed hike bets",
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
