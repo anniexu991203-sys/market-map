@@ -2,16 +2,16 @@
   "date": "2026-11-19",
   "weekday": "星期四",
   "weekday_en": "Thursday",
-  "crawl_time": "约18:41（北京时间）",
-  "source": "CNBC World News / MarketWatch Top Stories / CNBC Top News / CNBC Economy / Investing.com News",
+  "crawl_time": "约19:48（北京时间）",
+  "source": "MarketWatch Top Stories / CNBC Top News / CNBC World News / CNBC Economy / Investing.com News",
   "sources_detail": [
-    "CNBC World News",
     "MarketWatch Top Stories",
     "CNBC Top News",
+    "CNBC World News",
     "CNBC Economy",
     "Investing.com News"
   ],
-  "filter_result": "47条核心要闻 / 0条因果链 / 90条原始抓取",
+  "filter_result": "41条核心要闻 / 0条因果链 / 91条原始抓取",
   "stats": [],
   "events": [
     {
@@ -102,18 +102,18 @@
     {
       "tags": [
         {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        },
+        {
           "type": "fed",
           "text": "央行",
           "text_en": "Central Bank"
-        },
-        {
-          "type": "macro",
-          "text": "财政",
-          "text_en": "Fiscal"
         }
       ],
-      "event": "2-year Treasury note yield is little changed as Waller warns that Fed may need to ‘shock people’ with half-point rate hike | The short end of the Treasury yield curve was relatively unchanged on Wedne...",
-      "event_en": "2-year Treasury note yield is little changed as Waller warns that Fed may need to ‘shock people’ with half-point rate hike | The short end of the Treasury yield curve was relatively unchanged on Wedne...",
+      "event": "Fed officials expect more rate hikes, worry about AI impact on inflation, minutes show | The Federal Reserve on Wednesday released minutes from its October policy meeting at which it voted to hold its...",
+      "event_en": "Fed officials expect more rate hikes, worry about AI impact on inflation, minutes show | The Federal Reserve on Wednesday released minutes from its October policy meeting at which it voted to hold its...",
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
@@ -240,34 +240,29 @@
     {
       "tags": [
         {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
         }
       ],
-      "event": "Off-price retailer TJX keeps its promise and the stock soars. We’re satisfied, for now | TJX Companies is in rally mode.",
-      "event_en": "Off-price retailer TJX keeps its promise and the stock soars. We’re satisfied, for now | TJX Companies is in rally mode.",
+      "event": "Nvidia reverses, metals crash ahead of Anthropic IPO: Options Action Live | Big moves have options traders wondering if Anthropic's IPO is spurring a rotation trade.",
+      "event_en": "Nvidia reverses, metals crash ahead of Anthropic IPO: Options Action Live | Big moves have options traders wondering if Anthropic's IPO is spurring a rotation trade.",
       "assets": "",
       "assets_en": "",
-      "dir": "up",
+      "dir": "down",
       "logic": "",
       "logic_en": ""
     },
     {
       "tags": [
         {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        },
-        {
           "type": "fed",
           "text": "央行",
           "text_en": "Central Bank"
         }
       ],
-      "event": "Worried about the AI bubble popping? How investing pros say to adjust your strategy | Tech concentration and AI-stock volatility are rattling investors. Experts explain how to diversify without abando...",
-      "event_en": "Worried about the AI bubble popping? How investing pros say to adjust your strategy | Tech concentration and AI-stock volatility are rattling investors. Experts explain how to diversify without abando...",
+      "event": "Dollar on 7th daily advance as Fed minutes reinforce rate hike bets",
+      "event_en": "Dollar on 7th daily advance as Fed minutes reinforce rate hike bets",
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
@@ -289,6 +284,22 @@
       ],
       "event": "AI risks are the biggest threat to the financial system, Fed survey finds | The report comes with Wall Street on edge over high-flying AI hyperscalers, while communities are on alert for the rapid spr...",
       "event_en": "AI risks are the biggest threat to the financial system, Fed survey finds | The report comes with Wall Street on edge over high-flying AI hyperscalers, while communities are on alert for the rapid spr...",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ],
+      "event": "Why Anthropic's hot IPO is bringing out sellers — plus, a silver lining of the down market | Every weekday, the Investing Club releases the Homestretch; an actionable afternoon update just in time for...",
+      "event_en": "Why Anthropic's hot IPO is bringing out sellers — plus, a silver lining of the down market | Every weekday, the Investing Club releases the Homestretch; an actionable afternoon update just in time for...",
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
@@ -353,6 +364,27 @@
       ],
       "event": "St. Louis Fed's Musalem says four more rate hikes may be needed in coming months | The forecast represents one of the most hawkish views among policymakers.",
       "event_en": "St. Louis Fed's Musalem says four more rate hikes may be needed in coming months | The forecast represents one of the most hawkish views among policymakers.",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "fed",
+          "text": "央行",
+          "text_en": "Central Bank"
+        },
+        {
+          "type": "macro",
+          "text": "财政",
+          "text_en": "Fiscal"
+        }
+      ],
+      "event": "2-year Treasury yield is little changed as traders weigh Waller comments, Fed minutes | The short end of the Treasury yield curve was relatively unchanged on Wednesday.",
+      "event_en": "2-year Treasury yield is little changed as traders weigh Waller comments, Fed minutes | The short end of the Treasury yield curve was relatively unchanged on Wednesday.",
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
@@ -500,27 +532,6 @@
     {
       "tags": [
         {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        },
-        {
-          "type": "china",
-          "text": "中国",
-          "text_en": "China"
-        }
-      ],
-      "event": "China’s military seeks Nvidia’s advanced chips for AI capabilities, commission says | A congressional commission issued its findings as Nvidia has been rocked by its CEO's resignation after reports he...",
-      "event_en": "China’s military seeks Nvidia’s advanced chips for AI capabilities, commission says | A congressional commission issued its findings as Nvidia has been rocked by its CEO's resignation after reports he...",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
           "type": "fed",
           "text": "央行",
           "text_en": "Central Bank"
@@ -606,48 +617,11 @@
           "text_en": "Macro"
         }
       ],
-      "event": "Senators press acting U.S. Navy Secretary on Iran war costs, sailor health in confirmation hearing | Acting Navy Secretary Hung Cao told senators the Navy recoded and used munitions he called expired ...",
-      "event_en": "Senators press acting U.S. Navy Secretary on Iran war costs, sailor health in confirmation hearing | Acting Navy Secretary Hung Cao told senators the Navy recoded and used munitions he called expired ...",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
-        }
-      ],
       "event": "Putin says EU is losing industry, falling behind competition, ahead of meeting with Trump and Xi | Putin used the speech to emphasize Russia's economic resilience despite U.S. sanctions, and played up...",
       "event_en": "Putin says EU is losing industry, falling behind competition, ahead of meeting with Trump and Xi | Putin used the speech to emphasize Russia's economic resilience despite U.S. sanctions, and played up...",
       "assets": "",
       "assets_en": "",
       "dir": "down",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        },
-        {
-          "type": "energy",
-          "text": "能源",
-          "text_en": "Energy"
-        }
-      ],
-      "event": "‘Nvidia’s turmoil has me spooked’: Has the time come to sell my stocks and buy real estate? | “Real estate here in Florida seems to be presenting some interesting opportunities.”",
-      "event_en": "‘Nvidia’s turmoil has me spooked’: Has the time come to sell my stocks and buy real estate? | “Real estate here in Florida seems to be presenting some interesting opportunities.”",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
       "logic": "",
       "logic_en": ""
     },
@@ -702,66 +676,13 @@
     {
       "tags": [
         {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        }
-      ],
-      "event": "Is Apple the safe haven investors think it is? Here's a way to trade it with less risk | Traders have flocked to Apple's perceived safety in the wake of Nvidia's scandal. It may not be so safe, says M...",
-      "event_en": "Is Apple the safe haven investors think it is? Here's a way to trade it with less risk | Traders have flocked to Apple's perceived safety in the wake of Nvidia's scandal. It may not be so safe, says M...",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        }
-      ],
-      "event": "Paris Hilton, Alexandria Ocasio-Cortez press House to pass Defiance Act to fight AI deepfake pornography | Paris Hilton, backed by Alexandria Ocasio-Cortez, is pushing for the anti-AI deepfake pornogr...",
-      "event_en": "Paris Hilton, Alexandria Ocasio-Cortez press House to pass Defiance Act to fight AI deepfake pornography | Paris Hilton, backed by Alexandria Ocasio-Cortez, is pushing for the anti-AI deepfake pornogr...",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        },
-        {
-          "type": "fed",
-          "text": "央行",
-          "text_en": "Central Bank"
-        }
-      ],
-      "event": "Analysis: The Fed's chairman sees an AI revolution coming. Now he has to figure out what it means | Kevin Warsh sees AI at a turning point. He faces tough questions on jobs and interest rates.",
-      "event_en": "Analysis: The Fed's chairman sees an AI revolution coming. Now he has to figure out what it means | Kevin Warsh sees AI at a turning point. He faces tough questions on jobs and interest rates.",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
           "type": "macro",
           "text": "宏观",
           "text_en": "Macro"
         }
       ],
-      "event": "After $6.3 billion crypto heist, Binance plans Asia expansion",
-      "event_en": "After $6.3 billion crypto heist, Binance plans Asia expansion",
+      "event": "Senators press acting U.S. Navy Secretary on Iran war costs, sailor health in confirmation hearing | Acting Navy Secretary Hung Cao told senators the Navy recoded and used munitions he called expired ...",
+      "event_en": "Senators press acting U.S. Navy Secretary on Iran war costs, sailor health in confirmation hearing | Acting Navy Secretary Hung Cao told senators the Navy recoded and used munitions he called expired ...",
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
@@ -776,40 +697,8 @@
           "text_en": "Central Bank"
         }
       ],
-      "event": "Dollar holds near 19-mth high in 7th daily advance on Fed hike bets",
-      "event_en": "Dollar holds near 19-mth high in 7th daily advance on Fed hike bets",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
-        }
-      ],
-      "event": "Dollar finally dips after fresh 19-month peak, set to snap five-day win streak",
-      "event_en": "Dollar finally dips after fresh 19-month peak, set to snap five-day win streak",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
-        }
-      ],
-      "event": "Citi forecasts Brazilian real to weaken to 5.50 per dollar in 2027",
-      "event_en": "Citi forecasts Brazilian real to weaken to 5.50 per dollar in 2027",
+      "event": "Fed minutes show growing unease about the outlook for inflation | The minutes of the Federal Reserve’s October policy meeting showed growing unease among officials about the outlook for inflation, eve...",
+      "event_en": "Fed minutes show growing unease about the outlook for inflation | The minutes of the Federal Reserve’s October policy meeting showed growing unease among officials about the outlook for inflation, eve...",
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
