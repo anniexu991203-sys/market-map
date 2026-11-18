@@ -2,16 +2,16 @@
   "date": "2026-11-18",
   "weekday": "星期三",
   "weekday_en": "Wednesday",
-  "crawl_time": "约02:42（北京时间）",
-  "source": "CNBC World News / CNBC Economy / Investing.com News / MarketWatch Top Stories / CNBC Top News",
+  "crawl_time": "约03:44（北京时间）",
+  "source": "CNBC Economy / Investing.com News / CNBC Top News / CNBC World News / MarketWatch Top Stories",
   "sources_detail": [
-    "CNBC World News",
     "CNBC Economy",
     "Investing.com News",
-    "MarketWatch Top Stories",
-    "CNBC Top News"
+    "CNBC Top News",
+    "CNBC World News",
+    "MarketWatch Top Stories"
   ],
-  "filter_result": "48条核心要闻 / 0条因果链 / 91条原始抓取",
+  "filter_result": "44条核心要闻 / 0条因果链 / 91条原始抓取",
   "stats": [],
   "events": [
     {
@@ -760,80 +760,6 @@
       "assets": "",
       "assets_en": "",
       "dir": "down",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        },
-        {
-          "type": "china",
-          "text": "中国",
-          "text_en": "China"
-        }
-      ],
-      "event": "Nvidia warns chip buyers of legal risks tied to China AI access, sources tell CNBC | The U.S. Commerce Department is making moves to tighten export controls.",
-      "event_en": "Nvidia warns chip buyers of legal risks tied to China AI access, sources tell CNBC | The U.S. Commerce Department is making moves to tighten export controls.",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        },
-        {
-          "type": "fed",
-          "text": "央行",
-          "text_en": "Central Bank"
-        }
-      ],
-      "event": "Analysis: The Fed's chairman sees an AI revolution coming. Now he has to figure out what it means | Kevin Warsh sees AI at a turning point. He faces tough questions on jobs and interest rates.",
-      "event_en": "Analysis: The Fed's chairman sees an AI revolution coming. Now he has to figure out what it means | Kevin Warsh sees AI at a turning point. He faces tough questions on jobs and interest rates.",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
-        }
-      ],
-      "event": "Dollar finally dips after fresh 19-month peak, set to snap five-day win streak",
-      "event_en": "Dollar finally dips after fresh 19-month peak, set to snap five-day win streak",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
-        }
-      ],
-      "event": "Citi forecasts Brazilian real to weaken to 5.50 per dollar in 2027",
-      "event_en": "Citi forecasts Brazilian real to weaken to 5.50 per dollar in 2027",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
       "logic": "",
       "logic_en": ""
     }
