@@ -2,16 +2,16 @@
   "date": "2026-11-18",
   "weekday": "星期三",
   "weekday_en": "Wednesday",
-  "crawl_time": "约23:17（北京时间）",
-  "source": "CNBC Economy / CNBC Top News / MarketWatch Top Stories / CNBC World News / Investing.com News",
+  "crawl_time": "约00:13（北京时间）",
+  "source": "CNBC Top News / CNBC World News / MarketWatch Top Stories / Investing.com News / CNBC Economy",
   "sources_detail": [
-    "CNBC Economy",
     "CNBC Top News",
-    "MarketWatch Top Stories",
     "CNBC World News",
-    "Investing.com News"
+    "MarketWatch Top Stories",
+    "Investing.com News",
+    "CNBC Economy"
   ],
-  "filter_result": "47条核心要闻 / 0条因果链 / 94条原始抓取",
+  "filter_result": "45条核心要闻 / 0条因果链 / 93条原始抓取",
   "stats": [
     {
       "label": "S&P",
@@ -38,6 +38,22 @@
       ],
       "event": "Euro zone inflation hits 4% for first time in three years as interest rate hike looms | It was driven by energy inflation, which surged above 20% in October.",
       "event_en": "Euro zone inflation hits 4% for first time in three years as interest rate hike looms | It was driven by energy inflation, which surged above 20% in October.",
+      "assets": "",
+      "assets_en": "",
+      "dir": "up",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ],
+      "event": "Japan exports in October surge 20.5%, beating estimates on robust chip shipments | Semiconductor shipments spiked almost 50% year on year.",
+      "event_en": "Japan exports in October surge 20.5%, beating estimates on robust chip shipments | Semiconductor shipments spiked almost 50% year on year.",
       "assets": "",
       "assets_en": "",
       "dir": "up",
@@ -382,22 +398,6 @@
     {
       "tags": [
         {
-          "type": "bio",
-          "text": "生物科技",
-          "text_en": "Biotech"
-        }
-      ],
-      "event": "Summit Therapeutics’ stock tumbles again as FDA recommends new trial for lung-cancer drug | The U.S. regulator’s disclosure was more extensive than what the biotech company had announced Sunday.",
-      "event_en": "Summit Therapeutics’ stock tumbles again as FDA recommends new trial for lung-cancer drug | The U.S. regulator’s disclosure was more extensive than what the biotech company had announced Sunday.",
-      "assets": "",
-      "assets_en": "",
-      "dir": "split",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
           "type": "ai",
           "text": "AI",
           "text_en": "AI"
@@ -472,32 +472,6 @@
     {
       "tags": [
         {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        },
-        {
-          "type": "china",
-          "text": "中国",
-          "text_en": "China"
-        },
-        {
-          "type": "macro",
-          "text": "财政",
-          "text_en": "Fiscal"
-        }
-      ],
-      "event": "Nvidia fallout: Commerce targets loophole for China's data center use | The rule was written by the Treasury Department and the National Security Council after criticism of Commerce Secretary Howard L...",
-      "event_en": "Nvidia fallout: Commerce targets loophole for China's data center use | The rule was written by the Treasury Department and the National Security Council after criticism of Commerce Secretary Howard L...",
-      "assets": "",
-      "assets_en": "",
-      "dir": "down",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
           "type": "fed",
           "text": "央行",
           "text_en": "Central Bank"
@@ -505,22 +479,6 @@
       ],
       "event": "Consumer prices rose 0.4% in October, more than expected, complicating Fed's inflation fight | The report comes at a critical juncture for the Federal Reserve as it considers its next move regarding i...",
       "event_en": "Consumer prices rose 0.4% in October, more than expected, complicating Fed's inflation fight | The report comes at a critical juncture for the Federal Reserve as it considers its next move regarding i...",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
-        }
-      ],
-      "event": "The politics of President Lagarde's European Central Bank early exit  — and who could replace her | European Central Bank President Christine Lagarde will step down on Feb. 7 next year, she announced ...",
-      "event_en": "The politics of President Lagarde's European Central Bank early exit  — and who could replace her | European Central Bank President Christine Lagarde will step down on Feb. 7 next year, she announced ...",
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
