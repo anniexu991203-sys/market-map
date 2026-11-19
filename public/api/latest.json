@@ -226,13 +226,13 @@
           "text_en": "Macro"
         }
       ],
-      "event": "日经225指数收盘上涨0.7%，报59,444.21点。日本东证指数收盘下跌0.04%，报3,822.47点。",
-      "event_en": "日经225指数收盘上涨0.7%，报59,444.21点。日本东证指数收盘下跌0.04%，报3,822.47点。",
-      "assets": "详见原文",
-      "assets_en": "See source",
-      "dir": "split",
-      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
-      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst"
+      "event": "沃尔玛第三季度营收1,888.4亿美元，预估1,871.7亿美元。\n\n沃尔玛第三季度调整后每股收益0.65美元，预估0.64美元。\n\n沃尔玛预计全年调整后每股收益2.84美元至2.89美元，此前预计2.80美元至2.87美元，市场预估2.89美元。\n\n沃尔玛美股盘前跌超2%。",
+      "event_en": "沃尔玛第三季度营收1,888.4亿美元，预估1,871.7亿美元。\n\n沃尔玛第三季度调整后每股收益0.65美元，预估0.64美元。\n\n沃尔玛预计全年调整后每股收益2.84美元至2.89美元，此前预计2.80美元至2.87美元，市场预估2.89美元。\n\n沃尔玛美股盘前跌超2%。",
+      "assets": "美元指数",
+      "assets_en": "USD Index",
+      "dir": "down",
+      "logic": "财报发布 → 盈利/指引更新 → 估值重估",
+      "logic_en": "Earnings released → earnings/guidance update → re-rating"
     },
     {
       "tags": [
@@ -269,6 +269,22 @@
     {
       "tags": [
         {
+          "type": "geopolitics",
+          "text": "地缘",
+          "text_en": "Geopolitics"
+        }
+      ],
+      "event": "11月19日下午，国家主席习近平在深圳同俄罗斯总统普京、美国总统特朗普举行中俄美元首会晤。三国元首围绕“维护世界和平，促进大国关系战略稳定”主题进行深入讨论。",
+      "event_en": "11月19日下午，国家主席习近平在深圳同俄罗斯总统普京、美国总统特朗普举行中俄美元首会晤。三国元首围绕“维护世界和平，促进大国关系战略稳定”主题进行深入讨论。",
+      "assets": "美元指数",
+      "assets_en": "USD Index",
+      "dir": "neutral",
+      "logic": "事件发生 → 市场消化信息 → 资产价格调整",
+      "logic_en": "Event occurs → market digests info → asset prices adjust"
+    },
+    {
+      "tags": [
+        {
           "type": "macro",
           "text": "宏观",
           "text_en": "Macro"
@@ -290,8 +306,8 @@
           "text_en": "Macro"
         }
       ],
-      "event": "11月19日下午，国家主席习近平在深圳同俄罗斯总统普京、美国总统特朗普举行中俄美元首会晤。目前，会晤已结束。（央视新闻）",
-      "event_en": "11月19日下午，国家主席习近平在深圳同俄罗斯总统普京、美国总统特朗普举行中俄美元首会晤。目前，会晤已结束。（央视新闻）",
+      "event": "11月19日下午，国家主席习近平将在深圳同俄罗斯总统普京、美国总统特朗普举行中俄美元首会晤。 (央视新闻)",
+      "event_en": "11月19日下午，国家主席习近平将在深圳同俄罗斯总统普京、美国总统特朗普举行中俄美元首会晤。 (央视新闻)",
       "assets": "美元指数",
       "assets_en": "USD Index",
       "dir": "neutral",
@@ -306,13 +322,13 @@
           "text_en": "Macro"
         }
       ],
-      "event": "11月19日下午，国家主席习近平将在深圳同俄罗斯总统普京、美国总统特朗普举行中俄美元首会晤。 (央视新闻)",
-      "event_en": "11月19日下午，国家主席习近平将在深圳同俄罗斯总统普京、美国总统特朗普举行中俄美元首会晤。 (央视新闻)",
-      "assets": "美元指数",
-      "assets_en": "USD Index",
-      "dir": "neutral",
-      "logic": "事件发生 → 市场消化信息 → 资产价格调整",
-      "logic_en": "Event occurs → market digests info → asset prices adjust"
+      "event": "拼多多美股盘前拉升，现涨超5%，此前一度跌近3%。",
+      "event_en": "拼多多美股盘前拉升，现涨超5%，此前一度跌近3%。",
+      "assets": "详见原文",
+      "assets_en": "See source",
+      "dir": "split",
+      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
+      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst"
     },
     {
       "tags": [
@@ -361,6 +377,22 @@
       "dir": "down",
       "logic": "利空事件 → 市场预期恶化 → 资产价格下跌",
       "logic_en": "Negative event → market expectations worsen → asset prices fall"
+    },
+    {
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "拼多多美股盘前直线拉升，现涨超9%。",
+      "event_en": "拼多多美股盘前直线拉升，现涨超9%。",
+      "assets": "详见原文",
+      "assets_en": "See source",
+      "dir": "up",
+      "logic": "利好事件 → 市场预期改善 → 资产价格上涨",
+      "logic_en": "Positive event → market expectations improve → asset prices rise"
     },
     {
       "tags": [
@@ -476,6 +508,22 @@
           "text_en": "Macro"
         }
       ],
+      "event": "Bath&Body Works第三季度调整后每股收益0.26美元，上年同期0.35美元，预估0.12美元\n\n第三季度调每股收益0.19美元，上年同期0.37美元。\n\n第三季度调销售净额15.8亿美元，预估15.5亿美元。\n\n第三季度调调整后运营收益1.21亿美元，同比-25%，预估8,670万美元。\n\nBath&Body Works仍预计全年调整后每股收益2.60美元至2.80美元，市场预估2.7...",
+      "event_en": "Bath&Body Works第三季度调整后每股收益0.26美元，上年同期0.35美元，预估0.12美元\n\n第三季度调每股收益0.19美元，上年同期0.37美元。\n\n第三季度调销售净额15.8亿美元，预估15.5亿美元。\n\n第三季度调调整后运营收益1.21亿美元，同比-25%，预估8,670万美元。\n\nBath&Body Works仍预计全年调整后每股收益2.60美元至2.80美元，市场预估2.7...",
+      "assets": "美元指数",
+      "assets_en": "USD Index",
+      "dir": "neutral",
+      "logic": "财报发布 → 盈利/指引更新 → 估值重估",
+      "logic_en": "Earnings released → earnings/guidance update → re-rating"
+    },
+    {
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
       "event": "【长鑫科技：调整回购方案，回购金额上调至25亿元至50亿元】长鑫科技公告，公司于2026年10月30日召开第二届董事会第八次会议审议通过回购方案，2026年11月3日收到董事长朱一明提议将回购金额增加至不低于人民币25亿元（含），不超过人民币50亿元（含）。2026年11月19日，公司召开第二届董事会第九次会议审议通过调整回购方案。回购价格不超过人民币63.78元/股（含），回购股份用途为股权激励...",
       "event_en": "【长鑫科技：调整回购方案，回购金额上调至25亿元至50亿元】长鑫科技公告，公司于2026年10月30日召开第二届董事会第八次会议审议通过回购方案，2026年11月3日收到董事长朱一明提议将回购金额增加至不低于CNY25亿元（含），不超过CNY50亿元（含）。2026年11月19日，公司召开第二届董事会第九次会议审议通过调整回购方案。回购价格不超过CNY63.78元/股（含），回购股份用途为股权激励...",
       "assets": "人民币",
@@ -568,6 +616,22 @@
       "dir": "neutral",
       "logic": "AI产业事件 → 算力/芯片需求预期变化 → 相关板块联动",
       "logic_en": "AI industry event → compute/chip demand expectations shift → related sectors correlate"
+    },
+    {
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "北京时间11月19日凌晨，《侠盗猎车手》系列游戏开发商Rockstar Games年度新作《侠盗猎车手6》（GTA6）正式发售，首发登陆PlayStation 5和Xbox Series X|S平台，PC版本暂未推出。\n\n市场情报机构Sensor Tower估算，游戏预购销售额已突破16.5亿美元、数量逾1700万份，其中约75%来自PlayStation平台。",
+      "event_en": "北京时间11月19日凌晨，《侠盗猎车手》系列游戏开发商Rockstar Games年度新作《侠盗猎车手6》（GTA6）正式发售，首发登陆PlayStation 5和Xbox Series X|S平台，PC版本暂未推出。\n\n市场情报机构Sensor Tower估算，游戏预购销售额已突破16.5亿美元、数量逾1700万份，其中约75%来自PlayStation平台。",
+      "assets": "美元指数",
+      "assets_en": "USD Index",
+      "dir": "neutral",
+      "logic": "事件发生 → 市场消化信息 → 资产价格调整",
+      "logic_en": "Event occurs → market digests info → asset prices adjust"
     },
     {
       "tags": [
@@ -760,22 +824,6 @@
       "dir": "neutral",
       "logic": "事件发生 → 市场消化信息 → 资产价格调整",
       "logic_en": "Event occurs → market digests info → asset prices adjust"
-    },
-    {
-      "tags": [
-        {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        }
-      ],
-      "event": "据Politico援引欧盟官员报道，欧盟委员会遭遇网络攻击，个人数据可能受到影响，部分员工无法录入薪资信息。欧盟机构网络安全应急响应机构CERT-EU本月早些时候发现，黑客使用了ARTEX。这是一款公开可用、利用人工智能(AI)技术识别IT系统漏洞的工具。欧盟委员会认为已遏制大部分攻击，但具体损害程度仍不清楚。该官员表示，部分系统可能正在恢复运行，调查仍在继续。作为预防措施，部分应用程序曾被暂时停...",
-      "event_en": "据Politico援引欧盟官员报道，欧盟委员会遭遇网络攻击，个人数据可能受到影响，部分员工无法录入薪资信息。欧盟机构网络安全应急响应机构CERT-EU本月早些时候发现，黑客使用了ARTEX。这是一款公开可用、利用人工智能(AI)技术识别IT系统漏洞的工具。欧盟委员会认为已遏制大部分攻击，但具体损害程度仍不清楚。该官员表示，部分系统可能正在恢复运行，调查仍在继续。作为预防措施，部分应用程序曾被暂时停...",
-      "assets": "详见原文",
-      "assets_en": "See source",
-      "dir": "neutral",
-      "logic": "AI产业事件 → 算力/芯片需求预期变化 → 相关板块联动",
-      "logic_en": "AI industry event → compute/chip demand expectations shift → related sectors correlate"
     }
   ],
   "four_column_table": [

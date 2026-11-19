@@ -50,8 +50,8 @@ jobs:
             CHAIN_COUNT=$(python3 -c "import json; d=json.load(open('data/${TODAY}.json')); print(len(d.get('chains',[])))" 2>/dev/null || echo "0")
             TABLE_COUNT=$(python3 -c "import json; d=json.load(open('data/${TODAY}.json')); print(len(d.get('four_column_table',[])))" 2>/dev/null || echo "0")
             echo "已有数据: chains=${CHAIN_COUNT}, table_rows=${TABLE_COUNT}"
-            if [ "$CHAIN_COUNT" -ge 5 ] && [ "$TABLE_COUNT" -le 15 ]; then
-              echo "✅ 数据质量达标（chains>=5, table<=15），跳过重新抓取"
+            if [ "$CHAIN_COUNT" -ge 4 ]; then
+              echo "✅ 数据质量达标（chains>=4），跳过重新抓取"
               echo "skip_crawl=true" >> $GITHUB_ENV
             else
               echo "⚠️ 数据质量不足，重新抓取..."
