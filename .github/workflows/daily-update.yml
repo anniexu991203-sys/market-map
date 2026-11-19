@@ -8,9 +8,6 @@ on:
   workflow_dispatch: # 支持手动触发
   push:
     branches: [ main ]
-    paths-ignore:
-      - 'data/**'
-      - 'public/**'
 
 permissions:
   contents: write  # 改为 write，允许 commit 新数据回仓库
@@ -44,16 +41,32 @@ jobs:
           git config user.name "Market Map Bot"
           git config user.email "actions@github.com"
 
-      - name: 抓取今日数据（中英双语，多源聚合）
+      - name: 抓取今日数据（已有高质量数据则跳过）
         env:
           LLM_API_KEY: ${{ secrets.LLM_API_KEY }}
         run: |
-          python scripts/update_daily.py --date $(date -u -d "+8 hours" +%Y-%m-%d)
-          echo "=== 抓取完成，检查数据文件 ==="
+          TODAY=$(date -u -d "+8 hours" +%Y-%m-%d)
+          if [ -f "data/${TODAY}.json" ]; then
+            CHAIN_COUNT=$(python3 -c "import json; d=json.load(open('data/${TODAY}.json')); print(len(d.get('chains',[])))" 2>/dev/null || echo "0")
+            TABLE_COUNT=$(python3 -c "import json; d=json.load(open('data/${TODAY}.json')); print(len(d.get('four_column_table',[])))" 2>/dev/null || echo "0")
+            echo "已有数据: chains=${CHAIN_COUNT}, table_rows=${TABLE_COUNT}"
+            if [ "$CHAIN_COUNT" -ge 5 ] && [ "$TABLE_COUNT" -le 15 ]; then
+              echo "✅ 数据质量达标（chains>=5, table<=15），跳过重新抓取"
+              echo "skip_crawl=true" >> $GITHUB_ENV
+            else
+              echo "⚠️ 数据质量不足，重新抓取..."
+              python scripts/update_daily.py --date $TODAY
+            fi
+          else
+            echo "无数据文件，开始抓取..."
+            python scripts/update_daily.py --date $TODAY
+          fi
+          echo "=== 数据检查 ==="
           ls -la data/ || true
-          cat data/$(date -u -d "+8 hours" +%Y-%m-%d).json | python3 -c "import json,sys; d=json.load(sys.stdin); print(f'事件:{len(d.get(\"events\",[]))} 统计:{len(d.get(\"stats\",[]))} 因果链:{len(d.get(\"chains\",[]))} 数据源:{d.get(\"source\",\"\")}')" 2>/dev/null || echo "数据文件检查失败"
+          cat data/${TODAY}.json | python3 -c "import json,sys; d=json.load(sys.stdin); print(f'事件:{len(d.get(\"events\",[]))} 统计:{len(d.get(\"stats\",[]))} 因果链:{len(d.get(\"chains\",[]))} 四列表:{len(d.get(\"four_column_table\",[]))} 数据源:{d.get(\"source\",\"\")}')" 2>/dev/null || echo "数据文件检查失败"
 
-      - name: 提交新数据到仓库
+      - name: 提交新数据到仓库（跳过抓取时则跳过）
+        if: env.skip_crawl != 'true'
         run: |
           git add data/
           if git diff --cached --quiet; then
