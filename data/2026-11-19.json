@@ -2,16 +2,16 @@
   "date": "2026-11-19",
   "weekday": "星期四",
   "weekday_en": "Thursday",
-  "crawl_time": "约06:54（北京时间）",
-  "source": "Investing.com News / MarketWatch Top Stories / CNBC World News / CNBC Economy / CNBC Top News",
+  "crawl_time": "约08:15（北京时间）",
+  "source": "MarketWatch Top Stories / CNBC Top News / CNBC Economy / CNBC World News / Investing.com News",
   "sources_detail": [
-    "Investing.com News",
     "MarketWatch Top Stories",
-    "CNBC World News",
+    "CNBC Top News",
     "CNBC Economy",
-    "CNBC Top News"
+    "CNBC World News",
+    "Investing.com News"
   ],
-  "filter_result": "42条核心要闻 / 0条因果链 / 89条原始抓取",
+  "filter_result": "41条核心要闻 / 0条因果链 / 89条原始抓取",
   "stats": [],
   "events": [
     {
@@ -457,22 +457,6 @@
       "assets": "",
       "assets_en": "",
       "dir": "down",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "bio",
-          "text": "生物科技",
-          "text_en": "Biotech"
-        }
-      ],
-      "event": "Hims & Hers launches new peptide treatments — while admitting there's more to learn about efficacy | The telehealth company will now offer compounded forms of sermorelin, glutathione, NAD+,  vitamin B...",
-      "event_en": "Hims & Hers launches new peptide treatments — while admitting there's more to learn about efficacy | The telehealth company will now offer compounded forms of sermorelin, glutathione, NAD+,  vitamin B...",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
       "logic": "",
       "logic_en": ""
     },
