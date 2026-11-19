@@ -1,0 +1,723 @@
+{
+  "date": "2026-11-20",
+  "weekday": "星期五",
+  "weekday_en": "Friday",
+  "crawl_time": "约16:28（北京时间）",
+  "source": "华尔街见闻",
+  "sources_detail": [
+    "华尔街见闻"
+  ],
+  "filter_result": "10条核心要闻 / 4条因果链 / 100条原始抓取",
+  "stats": [
+    {
+      "label": "网易Q3营收同比下",
+      "label_en": "网易Q3revenue同比下",
+      "value": "1.8%",
+      "change": "据新华社，习近平会见美国总统特朗普。\n\n据央视，习近平主持中俄美元首会晤。\n\n据新华社，习近平就大国如何正确相处提出4点",
+      "change_en": "据新华社，习近平会见US President Trump。\n\n据央视，习近平主持中俄USD首summit。\n\n据新华社，习近平就大国如何正确相处提出4点",
+      "dir": "split"
+    },
+    {
+      "label": "纳斯达克100指数",
+      "label_en": "纳斯达克100index",
+      "value": "0.1%",
+      "change": "Anthropic美国IPO首日开盘之前，标普500指数跌超0.3%，道指下跌超400点、跌幅扩大至0.8%，纳斯达克1",
+      "change_en": "Anthropic美国IPO首dayopen之前，S&P 500indexdrop below0.3%，Dow Jonesfall超400点、lossexpanded至0.8%，纳斯达克1",
+      "dir": "split"
+    },
+    {
+      "label": "英伟达",
+      "label_en": "Nvidia",
+      "value": "1.2%",
+      "change": "美股盘初，英伟达涨1.2%，SpaceX涨1.3%，希捷科技、Nebius、西部数据、英特尔、SK海力士ADR、闪迪、C",
+      "change_en": "美股盘初，Nvidia涨1.2%，SpaceX涨1.3%，希捷科技、Nebius、西部数据、英特尔、SK海力士ADR、闪迪、C",
+      "dir": "split"
+    },
+    {
+      "label": "股价在法兰克福一度下",
+      "label_en": "股价在法兰克福一度下",
+      "value": "23%",
+      "change": "巴斯夫（BASF SE）在两次报价被拒后，终止了对赢创工业（Evonik Industries AG）的收购尝试，从而结",
+      "change_en": "巴斯夫（BASF SE）在两次reported价被拒后，终止了对赢hit工业（Evonik Industries AG）的收购尝试，从而结",
+      "dir": "split"
+    },
+    {
+      "label": "洋山进口铜溢价过去一",
+      "label_en": "洋山importscopperpremium过去一",
+      "value": "new high",
+      "change": "知情人士透露，过去几天，物流公司收到了大量来自交易商的询盘，寻求将铜从美国运往中国，目前已有数批船货完成订舱。交易商已开",
+      "change_en": "知情人士透露，过去几天，物流公司收到了大量来自交易商的询盘，寻求将copper从美国运往中国，目前已有数批船货完成订舱。交易商已开",
+      "dir": "up"
+    },
+    {
+      "label": "AMD跌超10",
+      "label_en": "AMDdrop below10",
+      "value": "new low",
+      "change": "AMD跌超10%，创11月9日以来盘中新低，HunterBrook宣布做空。\n\n对冲基金Hunterbrook发布做空报",
+      "change_en": "AMDdrop below10%，hit11month9day以来盘中new low，HunterBrook宣布做空。\n\n对冲基金Hunterbrook发布做空reported",
+      "dir": "down"
+    }
+  ],
+  "events": [
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        },
+        {
+          "type": "central-bank",
+          "text": "央行",
+          "text_en": "Central Bank"
+        },
+        {
+          "type": "china",
+          "text": "中国",
+          "text_en": "China"
+        },
+        {
+          "type": "geopolitics",
+          "text": "地缘",
+          "text_en": "Geopolitics"
+        }
+      ],
+      "event": "据新华社，习近平会见美国总统特朗普。 据央视，习近平主持中俄美元首会晤。 据新华社，习近平就大国如何正确相处提出4点看法。 据新华社，中俄美元首和平宣言。 阿里Q3净利润同比大增213%...",
+      "event_en": "据新华社，习近平会见US President Trump。 据央视，习近平主持中俄USD首summit。 据新华社，习近平就大国如何正确相处提出4点看法。 据新华社，中俄USD首peacedeclaration。 阿里Q3净profit同比大增213%...",
+      "assets": "A股/沪指 / 纳指 / 美元指数 / 铜 / 阿里巴巴",
+      "assets_en": "A-shares/Shanghai Composite / Nasdaq / USD Index / Copper / Alibaba",
+      "dir": "split",
+      "logic": "央行鹰派信号 → 加息预期升温 → 利率上行 → 风险资产承压",
+      "logic_en": "Central bank hawkish signal → rate hike expectations rise → yields rise → risk assets under pressure"
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ],
+      "event": "Anthropic美国IPO首日开盘之前，标普500指数跌超0.3%，道指下跌超400点、跌幅扩大至0.8%，纳斯达克100指数跌0.1%。",
+      "event_en": "Anthropic美国IPO首dayopen之前，S&P 500indexdrop below0.3%，Dow Jonesfall超400点、lossexpanded至0.8%，纳斯达克100index跌0.1%。",
+      "assets": "标普500 / 道指 / 半导体板块 / Anthropic",
+      "assets_en": "S&P 500 / Dow Jones / Semiconductors / Anthropic",
+      "dir": "split",
+      "logic": "AI公司IPO/融资 → AI capex叙事验证 → 半导体/算力需求预期上修 → 相关板块大涨",
+      "logic_en": "AI company IPO/funding → AI capex narrative validated → semiconductor/compute demand expectations revised up → related sectors surge"
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        },
+        {
+          "type": "central-bank",
+          "text": "央行",
+          "text_en": "Central Bank"
+        }
+      ],
+      "event": "美联储副主席菲利普·杰斐逊（Philip Jefferson）表示，人工智能（AI）热潮正在刺激经济需求，从而推高短期通胀。",
+      "event_en": "the Fed副主席菲利普·杰斐逊（Philip Jefferson）表示，人工智能（AI）热潮正在刺激经济需求，从而推高短期inflation。",
+      "assets": "详见原文",
+      "assets_en": "See source",
+      "dir": "up",
+      "logic": "AI产业事件 → 算力/芯片需求预期变化 → 相关板块联动",
+      "logic_en": "AI industry event → compute/chip demand expectations shift → related sectors correlate"
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        },
+        {
+          "type": "china",
+          "text": "中国",
+          "text_en": "China"
+        }
+      ],
+      "event": "美股盘初，英伟达涨1.2%，SpaceX涨1.3%，希捷科技、Nebius、西部数据、英特尔、SK海力士ADR、闪迪、CoreWeave、美光等科技股至多涨5.3%。",
+      "event_en": "美股盘初，Nvidia涨1.2%，SpaceX涨1.3%，希捷科技、Nebius、西部数据、英特尔、SK海力士ADR、闪迪、CoreWeave、美光等科技股至多涨5.3%。",
+      "assets": "英伟达 / 阿里巴巴",
+      "assets_en": "Nvidia / Alibaba",
+      "dir": "split",
+      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
+      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst"
+    },
+    {
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "巴斯夫（BASF SE）在两次报价被拒后，终止了对赢创工业（Evonik Industries AG）的收购尝试，从而结束了德国两大化工巨头可能的合并。",
+      "event_en": "巴斯夫（BASF SE）在两次reported价被拒后，终止了对赢hit工业（Evonik Industries AG）的收购尝试，从而结束了德国两大化工巨头可能的合并。",
+      "assets": "美元指数 / 欧元",
+      "assets_en": "USD Index / EUR",
+      "dir": "split",
+      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
+      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst"
+    },
+    {
+      "tags": [
+        {
+          "type": "central-bank",
+          "text": "央行",
+          "text_en": "Central Bank"
+        },
+        {
+          "type": "energy",
+          "text": "能源",
+          "text_en": "Energy"
+        },
+        {
+          "type": "geopolitics",
+          "text": "地缘",
+          "text_en": "Geopolitics"
+        }
+      ],
+      "event": "欧洲央行管委兼德国央行行长Nagel表示，欧洲央行12月再次加息将释放一个强烈信号，表明决策者控制通胀的决心。",
+      "event_en": "欧洲central bank管委兼德国central bank行长Nagel表示，欧洲central bank12month再次rate hike将释放一个强烈信号，表明决策者控制inflation的决心。",
+      "assets": "详见原文",
+      "assets_en": "See source",
+      "dir": "split",
+      "logic": "央行鹰派信号 → 加息预期升温 → 利率上行 → 风险资产承压",
+      "logic_en": "Central bank hawkish signal → rate hike expectations rise → yields rise → risk assets under pressure"
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ],
+      "event": "Anthropic将向参与其重磅IPO的华尔街银行支付5.5亿美元费用，高于此前史上最大IPO纪录保持者SpaceX向承销银行支付的金额。",
+      "event_en": "Anthropic将向参与其重磅IPO的华尔街silver行支付5.5亿USD费用，高于此前史上最大IPO纪录保持者SpaceX向承销silver行支付的金额。",
+      "assets": "美元指数 / Anthropic",
+      "assets_en": "USD Index / Anthropic",
+      "dir": "up",
+      "logic": "AI公司IPO/融资 → AI capex叙事验证 → 半导体/算力需求预期上修 → 相关板块大涨",
+      "logic_en": "AI company IPO/funding → AI capex narrative validated → semiconductor/compute demand expectations revised up → related sectors surge"
+    },
+    {
+      "tags": [
+        {
+          "type": "china",
+          "text": "中国",
+          "text_en": "China"
+        }
+      ],
+      "event": "知情人士透露，过去几天，物流公司收到了大量来自交易商的询盘，寻求将铜从美国运往中国，目前已有数批船货完成订舱。",
+      "event_en": "知情人士透露，过去几天，物流公司收到了大量来自交易商的询盘，寻求将copper从美国运往中国，目前已有数批船货完成订舱。",
+      "assets": "美元指数 / 铜",
+      "assets_en": "USD Index / Copper",
+      "dir": "up",
+      "logic": "贸易数据变化 → 全球需求/供应链预期调整 → 相关货币/股市影响",
+      "logic_en": "Trade data shift → global demand / supply chain expectations adjust → related currencies / stocks impacted"
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ],
+      "event": "AMD跌超10%，创11月9日以来盘中新低，HunterBrook宣布做空。",
+      "event_en": "AMDdrop below10%，hit11month9day以来盘中new low，HunterBrook宣布做空。",
+      "assets": "英伟达 / 芯片板块",
+      "assets_en": "Nvidia / Chips",
+      "dir": "down",
+      "logic": "AI产业事件 → 算力/芯片需求预期变化 → 相关板块联动",
+      "logic_en": "AI industry event → compute/chip demand expectations shift → related sectors correlate"
+    },
+    {
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "日本烟草产业公司（Japan Tobacco Inc.）在失去对俄罗斯子公司的控制权后，将计提1.4万亿日元（约合89亿美元）的特别损失，导致这家卷烟制造商全年预计出现净亏损，并大幅下调股息预测。",
+      "event_en": "day本烟草产业公司（Japan Tobacco Inc.）在失去对俄罗斯子公司的控制权后，将计提1.4trillionJPY（约合89亿USD）的特别损失，导致这家卷烟制造商全year预计出现净亏损，并大幅下调股息预测。",
+      "assets": "美元指数 / 日元",
+      "assets_en": "USD Index / JPY",
+      "dir": "neutral",
+      "logic": "财报发布 → 盈利/指引更新 → 估值重估",
+      "logic_en": "Earnings released → earnings/guidance update → re-rating"
+    }
+  ],
+  "four_column_table": [
+    {
+      "event": "据新华社，习近平会见美国总统特朗普。 据央视，习近平主持中俄美元首会晤。 据新华社，习近平就大国如何正确相处提出4点看法。 据新华社，中俄美元首和平宣言。 阿里Q3净利润同比大增213%...",
+      "event_en": "据新华社，习近平会见US President Trump。 据央视，习近平主持中俄USD首summit。 据新华社，习近平就大国如何正确相处提出4点看法。 据新华社，中俄USD首peacedeclaration。 阿里Q3净profit同比大增213%...",
+      "assets": "A股/沪指 / 纳指 / 美元指数 / 铜 / 阿里巴巴",
+      "assets_en": "A-shares/Shanghai Composite / Nasdaq / USD Index / Copper / Alibaba",
+      "dir": "split",
+      "logic": "央行鹰派信号 → 加息预期升温 → 利率上行 → 风险资产承压",
+      "logic_en": "Central bank hawkish signal → rate hike expectations rise → yields rise → risk assets under pressure",
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        },
+        {
+          "type": "central-bank",
+          "text": "央行",
+          "text_en": "Central Bank"
+        },
+        {
+          "type": "china",
+          "text": "中国",
+          "text_en": "China"
+        },
+        {
+          "type": "geopolitics",
+          "text": "地缘",
+          "text_en": "Geopolitics"
+        }
+      ]
+    },
+    {
+      "event": "Anthropic美国IPO首日开盘之前，标普500指数跌超0.3%，道指下跌超400点、跌幅扩大至0.8%，纳斯达克100指数跌0.1%。",
+      "event_en": "Anthropic美国IPO首dayopen之前，S&P 500indexdrop below0.3%，Dow Jonesfall超400点、lossexpanded至0.8%，纳斯达克100index跌0.1%。",
+      "assets": "标普500 / 道指 / 半导体板块 / Anthropic",
+      "assets_en": "S&P 500 / Dow Jones / Semiconductors / Anthropic",
+      "dir": "split",
+      "logic": "AI公司IPO/融资 → AI capex叙事验证 → 半导体/算力需求预期上修 → 相关板块大涨",
+      "logic_en": "AI company IPO/funding → AI capex narrative validated → semiconductor/compute demand expectations revised up → related sectors surge",
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ]
+    },
+    {
+      "event": "美联储副主席菲利普·杰斐逊（Philip Jefferson）表示，人工智能（AI）热潮正在刺激经济需求，从而推高短期通胀。",
+      "event_en": "the Fed副主席菲利普·杰斐逊（Philip Jefferson）表示，人工智能（AI）热潮正在刺激经济需求，从而推高短期inflation。",
+      "assets": "详见原文",
+      "assets_en": "See source",
+      "dir": "up",
+      "logic": "AI产业事件 → 算力/芯片需求预期变化 → 相关板块联动",
+      "logic_en": "AI industry event → compute/chip demand expectations shift → related sectors correlate",
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        },
+        {
+          "type": "central-bank",
+          "text": "央行",
+          "text_en": "Central Bank"
+        }
+      ]
+    },
+    {
+      "event": "美股盘初，英伟达涨1.2%，SpaceX涨1.3%，希捷科技、Nebius、西部数据、英特尔、SK海力士ADR、闪迪、CoreWeave、美光等科技股至多涨5.3%。",
+      "event_en": "美股盘初，Nvidia涨1.2%，SpaceX涨1.3%，希捷科技、Nebius、西部数据、英特尔、SK海力士ADR、闪迪、CoreWeave、美光等科技股至多涨5.3%。",
+      "assets": "英伟达 / 阿里巴巴",
+      "assets_en": "Nvidia / Alibaba",
+      "dir": "split",
+      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
+      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst",
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        },
+        {
+          "type": "china",
+          "text": "中国",
+          "text_en": "China"
+        }
+      ]
+    },
+    {
+      "event": "巴斯夫（BASF SE）在两次报价被拒后，终止了对赢创工业（Evonik Industries AG）的收购尝试，从而结束了德国两大化工巨头可能的合并。",
+      "event_en": "巴斯夫（BASF SE）在两次reported价被拒后，终止了对赢hit工业（Evonik Industries AG）的收购尝试，从而结束了德国两大化工巨头可能的合并。",
+      "assets": "美元指数 / 欧元",
+      "assets_en": "USD Index / EUR",
+      "dir": "split",
+      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
+      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst",
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ]
+    },
+    {
+      "event": "欧洲央行管委兼德国央行行长Nagel表示，欧洲央行12月再次加息将释放一个强烈信号，表明决策者控制通胀的决心。",
+      "event_en": "欧洲central bank管委兼德国central bank行长Nagel表示，欧洲central bank12month再次rate hike将释放一个强烈信号，表明决策者控制inflation的决心。",
+      "assets": "详见原文",
+      "assets_en": "See source",
+      "dir": "split",
+      "logic": "央行鹰派信号 → 加息预期升温 → 利率上行 → 风险资产承压",
+      "logic_en": "Central bank hawkish signal → rate hike expectations rise → yields rise → risk assets under pressure",
+      "tags": [
+        {
+          "type": "central-bank",
+          "text": "央行",
+          "text_en": "Central Bank"
+        },
+        {
+          "type": "energy",
+          "text": "能源",
+          "text_en": "Energy"
+        },
+        {
+          "type": "geopolitics",
+          "text": "地缘",
+          "text_en": "Geopolitics"
+        }
+      ]
+    },
+    {
+      "event": "Anthropic将向参与其重磅IPO的华尔街银行支付5.5亿美元费用，高于此前史上最大IPO纪录保持者SpaceX向承销银行支付的金额。",
+      "event_en": "Anthropic将向参与其重磅IPO的华尔街silver行支付5.5亿USD费用，高于此前史上最大IPO纪录保持者SpaceX向承销silver行支付的金额。",
+      "assets": "美元指数 / Anthropic",
+      "assets_en": "USD Index / Anthropic",
+      "dir": "up",
+      "logic": "AI公司IPO/融资 → AI capex叙事验证 → 半导体/算力需求预期上修 → 相关板块大涨",
+      "logic_en": "AI company IPO/funding → AI capex narrative validated → semiconductor/compute demand expectations revised up → related sectors surge",
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ]
+    },
+    {
+      "event": "知情人士透露，过去几天，物流公司收到了大量来自交易商的询盘，寻求将铜从美国运往中国，目前已有数批船货完成订舱。",
+      "event_en": "知情人士透露，过去几天，物流公司收到了大量来自交易商的询盘，寻求将copper从美国运往中国，目前已有数批船货完成订舱。",
+      "assets": "美元指数 / 铜",
+      "assets_en": "USD Index / Copper",
+      "dir": "up",
+      "logic": "贸易数据变化 → 全球需求/供应链预期调整 → 相关货币/股市影响",
+      "logic_en": "Trade data shift → global demand / supply chain expectations adjust → related currencies / stocks impacted",
+      "tags": [
+        {
+          "type": "china",
+          "text": "中国",
+          "text_en": "China"
+        }
+      ]
+    },
+    {
+      "event": "AMD跌超10%，创11月9日以来盘中新低，HunterBrook宣布做空。",
+      "event_en": "AMDdrop below10%，hit11month9day以来盘中new low，HunterBrook宣布做空。",
+      "assets": "英伟达 / 芯片板块",
+      "assets_en": "Nvidia / Chips",
+      "dir": "down",
+      "logic": "AI产业事件 → 算力/芯片需求预期变化 → 相关板块联动",
+      "logic_en": "AI industry event → compute/chip demand expectations shift → related sectors correlate",
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ]
+    },
+    {
+      "event": "日本烟草产业公司（Japan Tobacco Inc.）在失去对俄罗斯子公司的控制权后，将计提1.4万亿日元（约合89亿美元）的特别损失，导致这家卷烟制造商全年预计出现净亏损，并大幅下调股息预测。",
+      "event_en": "day本烟草产业公司（Japan Tobacco Inc.）在失去对俄罗斯子公司的控制权后，将计提1.4trillionJPY（约合89亿USD）的特别损失，导致这家卷烟制造商全year预计出现净亏损，并大幅下调股息预测。",
+      "assets": "美元指数 / 日元",
+      "assets_en": "USD Index / JPY",
+      "dir": "neutral",
+      "logic": "财报发布 → 盈利/指引更新 → 估值重估",
+      "logic_en": "Earnings released → earnings/guidance update → re-rating",
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ]
+    }
+  ],
+  "chains": [
+    {
+      "title": "地缘链：欧洲央行管委兼德国央行行长Nagel表示 → 据新华社，习近平会见美国总统特朗普",
+      "title_en": "Geopolitical Chain: 欧洲central bank管委兼德国central bank行长Nagel表示 → 据新华社，习近平会见US President Trump",
+      "status": "unverified",
+      "nodes": [
+        {
+          "text": "欧洲央行管委兼德国央行行长Nagel表示，欧洲央行12月再次加息将释放一个强烈信号，表明决策者控制通胀的决心",
+          "text_en": "欧洲central bank管委兼德国central bank行长Nagel表示，欧洲central bank12month再次rate hike将释放一个强烈信号，表明决策者控制inflation的决心",
+          "type": "cause"
+        },
+        {
+          "text": "据新华社，习近平会见美国总统特朗普",
+          "text_en": "据新华社，习近平会见US President Trump",
+          "type": "effect"
+        }
+      ],
+      "jargon": [
+        {
+          "term": "地缘风险溢价",
+          "term_en": "Geopolitical Risk Premium",
+          "explain": "因为担心打仗，投资者要求额外回报才肯持有资产。一旦风险下降，这部分'恐惧折扣'被去掉，资产价格就跳涨。",
+          "explain_en": "Extra return investors demand for holding assets when they fear conflict. Once risk falls, this 'fear discount' is removed and prices jump."
+        },
+        {
+          "term": "避险资产",
+          "term_en": "Safe-Haven Assets",
+          "explain": "市场恐慌时资金流入的资产，如黄金、美债、日元。地缘紧张时涨，缓和时跌。",
+          "explain_en": "Assets that capital flows into during panic: gold, US Treasuries, JPY. Rise when geopolitics tense, fall when easing."
+        },
+        {
+          "term": "风险偏好",
+          "term_en": "Risk Appetite",
+          "explain": "投资者更愿意买股票（风险资产）还是买国债（避险资产）的倾向。",
+          "explain_en": "Whether investors prefer stocks (risk assets) or bonds (safe havens)."
+        }
+      ]
+    },
+    {
+      "title": "AI Capex链：Anthropic将向参与其重磅IPO的华尔... → AMD跌超10%，创11月9日以来盘中新低，HunterBrook宣布做空",
+      "title_en": "AI Capex Chain: Anthropic将向参与其重磅IPO的华尔... → AMDdrop below10%，hit11month9day以来盘中new low，HunterBrook宣布做空",
+      "status": "unverified",
+      "nodes": [
+        {
+          "text": "Anthropic将向参与其重磅IPO的华尔街银行支付5.5亿美元费用，高于此前史上最大IPO纪录保持者SpaceX向承销银行支付的金额",
+          "text_en": "Anthropic将向参与其重磅IPO的华尔街silver行支付5.5亿USD费用，高于此前史上最大IPO纪录保持者SpaceX向承销silver行支付的金额",
+          "type": "cause"
+        },
+        {
+          "text": "美联储副主席菲利普·杰斐逊（Philip Jefferson）表示，人工智能（AI）热潮正在刺激经济需求，从而推高短期通胀",
+          "text_en": "the Fed副主席菲利普·杰斐逊（Philip Jefferson）表示，人工智能（AI）热潮正在刺激经济需求，从而推高短期inflation",
+          "type": "intermediate"
+        },
+        {
+          "text": "Anthropic美国IPO首日开盘之前，标普500指数跌超0.3%，道指下跌超400点、跌幅扩大至0.8%，纳斯达克100指数跌0.1%",
+          "text_en": "Anthropic美国IPO首dayopen之前，S&P 500indexdrop below0.3%，Dow Jonesfall超400点、lossexpanded至0.8%，纳斯达克100index跌0.1%",
+          "type": "intermediate"
+        },
+        {
+          "text": "AMD跌超10%，创11月9日以来盘中新低，HunterBrook宣布做空",
+          "text_en": "AMDdrop below10%，hit11month9day以来盘中new low，HunterBrook宣布做空",
+          "type": "effect"
+        }
+      ],
+      "jargon": [
+        {
+          "term": "AI Capex",
+          "term_en": "AI Capex (Capital Expenditure)",
+          "explain": "AI公司花在买芯片、建数据中心、租GPU上的钱。这笔钱最终变成半导体公司的订单。",
+          "explain_en": "Money AI companies spend on chips, data centers, and GPUs. Ultimately becomes semiconductor company orders."
+        },
+        {
+          "term": "光通信",
+          "term_en": "Optical Communications",
+          "explain": "数据中心里用光传输数据的技术。AI集群越大，需要的光模块越多。",
+          "explain_en": "Technology using light to transmit data in data centers. Bigger AI clusters need more optical modules."
+        },
+        {
+          "term": "暗盘交易",
+          "term_en": "Grey Market Trading",
+          "explain": "IPO正式挂牌前的场外交易。暗盘涨跌反映机构对IPO的预期。",
+          "explain_en": "Off-exchange trading before official IPO listing. Grey market moves reflect institutional expectations."
+        }
+      ]
+    },
+    {
+      "title": "中国市场链：美股盘初，英伟达涨1.2%，SpaceX涨1... → 知情人士透露，过去几天，物流公司收到了大量来...",
+      "title_en": "China Market Chain: 美股盘初，Nvidia涨1.2%，SpaceX涨1... → 知情人士透露，过去几天，物流公司收到了大量来...",
+      "status": "consensus",
+      "nodes": [
+        {
+          "text": "美股盘初，英伟达涨1.2%，SpaceX涨1.3%",
+          "text_en": "美股盘初，Nvidia涨1.2%，SpaceX涨1.3%",
+          "type": "cause"
+        },
+        {
+          "text": "知情人士透露，过去几天，物流公司收到了大量来自交易商的询盘，寻求将铜从美国运往中国，目前已有数批船货完成订舱",
+          "text_en": "知情人士透露，过去几天，物流公司收到了大量来自交易商的询盘，寻求将copper从美国运往中国，目前已有数批船货完成订舱",
+          "type": "effect"
+        }
+      ],
+      "jargon": [
+        {
+          "term": "自由现金流（FCF）",
+          "term_en": "Free Cash Flow (FCF)",
+          "explain": "赚的钱减去必须花的钱后，真正落袋的现金。FCF为负=花得比赚得多。",
+          "explain_en": "Earnings minus mandatory spending, actual pocketed cash. Negative FCF = spending exceeds earnings."
+        },
+        {
+          "term": "社零（社会消费品零售总额）",
+          "term_en": "Retail Sales",
+          "explain": "老百姓花钱消费的总量，反映内需强弱。升=消费旺，降=消费弱。",
+          "explain_en": "Total consumer spending, reflecting domestic demand strength."
+        },
+        {
+          "term": "北向资金",
+          "term_en": "Northbound Capital",
+          "explain": "通过沪港通/深港通从香港流入A股的资金，被视为外资风向标。",
+          "explain_en": "Capital flowing from HK into A-shares via Stock Connect, seen as foreign capital barometer."
+        }
+      ]
+    },
+    {
+      "title": "宏观链：巴斯夫（BASF SE）在两次报价被拒后 → 日本烟草产业公司（Japan Tobacco...",
+      "title_en": "Macro Chain: 巴斯夫（BASF SE）在两次reported价被拒后 → day本烟草产业公司（Japan Tobacco...",
+      "status": "unverified",
+      "nodes": [
+        {
+          "text": "巴斯夫（BASF SE）在两次报价被拒后",
+          "text_en": "巴斯夫（BASF SE）在两次reported价被拒后",
+          "type": "cause"
+        },
+        {
+          "text": "日本烟草产业公司（Japan Tobacco Inc.）在失去对俄罗斯子公司的控制权后",
+          "text_en": "day本烟草产业公司（Japan Tobacco Inc.）在失去对俄罗斯子公司的控制权后",
+          "type": "effect"
+        }
+      ],
+      "jargon": [
+        {
+          "term": "美元走强→商品下跌",
+          "term_en": "Strong USD → Commodity Down",
+          "explain": "国际大宗商品以美元计价。美元贵了，同样一桶油用美元买就贵了，需求减少，价格就跌。",
+          "explain_en": "Commodities priced in USD. Stronger dollar = more expensive commodities = lower demand."
+        },
+        {
+          "term": "避险情绪",
+          "term_en": "Risk-Off Sentiment",
+          "explain": "市场害怕风险时，资金从股票等高风险资产流向黄金/美债等安全资产。",
+          "explain_en": "When markets fear risk, capital flows from stocks to safe havens like gold/Treasuries."
+        },
+        {
+          "term": "PMI（采购经理人指数）",
+          "term_en": "PMI (Purchasing Managers' Index)",
+          "explain": "衡量制造业/服务业景气度的指标。50以上=扩张，50以下=收缩。",
+          "explain_en": "Index measuring manufacturing/services activity. Above 50 = expansion, below 50 = contraction."
+        }
+      ]
+    }
+  ],
+  "verifications": [
+    {
+      "title": "地缘链：欧洲央行管委兼德国央行行长Nagel表示 → 据新华社，习近平会见美国总统特朗普能否持续？",
+      "title_en": "Can 'Geopolitical Chain: 欧洲central bank管委兼德国central bank行长Nagel表示 → 据新华社，习近平会见US President Trump' sustain?",
+      "layer1": "地缘缓和信号能否真正转化为风险溢价的持久压缩？宣言是政治表态，能否转化为可执行方案？",
+      "layer1_en": "Can geopolitical easing truly translate into lasting risk premium compression? Can a declaration become actionable?",
+      "vars": [
+        "VIX恐慌指数：持续低于15=市场已price in和平；反弹至18+=市场持保留态度",
+        "布伦特原油价格：跌破70美元=市场认可增产；反弹至78+=供应担忧未消",
+        "黄金走势：央行持续购金=央行层面仍在对冲地缘风险",
+        "后续军事动态：是否有和平宣言与战场现实的落差？"
+      ],
+      "vars_en": [
+        "VIX: sustained below 15 = peace priced in; rebound to 18+ = market skeptical",
+        "Brent crude: below $70 = market believes production; above $78 = supply fears persist",
+        "Gold trend: continued CB purchases = CBs still hedging geopolitical risk",
+        "Follow-up military actions: gap between declaration and battlefield reality?"
+      ]
+    },
+    {
+      "title": "AI Capex链：Anthropic将向参与其重磅IPO的华尔... → AMD跌超10%，创11月9日以来盘中新低，HunterBrook宣布做空能否持续？",
+      "title_en": "Can 'AI Capex Chain: Anthropic将向参与其重磅IPO的华尔... → AMDdrop below10%，hit11month9day以来盘中new low，HunterBrook宣布做空' sustain?",
+      "layer1": "AI capex叙事能否从'融资验证'切换到'盈利验证'？巨量融资证明了吸金能力，但何时能证明赚钱能力？",
+      "layer1_en": "Can the AI capex narrative shift from 'funding validation' to 'profit validation'? Massive funding proves capital attraction, but when profitability?",
+      "vars": [
+        "AI公司上市后5日股价：暗盘涨幅是初始热情，挂牌后是否破发或涨幅收窄",
+        "云厂商Capex/收入比：若比率持续上升，AI投入回报周期将被质疑",
+        "SK海力士/美光股价持续性：盘前大涨是情绪驱动，需确认HBM订单是否真正追加",
+        "A股算力芯片分化：国产AI芯片是否出现信任危机？"
+      ],
+      "vars_en": [
+        "AI company 5-day post-IPO stock: grey market gains are initial enthusiasm, watch for narrowing or break issue price",
+        "Cloud vendor Capex/revenue ratio: if rising, AI ROI cycle questioned",
+        "SK Hynix/Micron sustainability: pre-market rally is sentiment-driven, confirm HBM order additions",
+        "A-share compute chip divergence: domestic AI chip trust crisis?"
+      ]
+    },
+    {
+      "title": "中国市场链：美股盘初，英伟达涨1.2%，SpaceX涨1... → 知情人士透露，过去几天，物流公司收到了大量来...能否持续？",
+      "title_en": "Can 'China Market Chain: 美股盘初，Nvidia涨1.2%，SpaceX涨1... → 知情人士透露，过去几天，物流公司收到了大量来...' sustain?",
+      "layer1": "中国市场多空因素交织：财报分化、政策预期、资金流向如何演变？",
+      "layer1_en": "China market mixed signals: how will earnings divergence, policy expectations, and capital flows evolve?",
+      "vars": [
+        "北向资金流向：净流入=外资看好，净流出=外资谨慎",
+        "社零/工业增加值数据：若超预期=内需回暖，低于预期=经济承压",
+        "A股成交量：放量上涨=信心恢复，缩量=观望情绪浓",
+        "中概股盘前/盘后走势：财报后市场如何评价盈利质量"
+      ],
+      "vars_en": [
+        "Northbound capital: net inflow = foreign bullish, net outflow = cautious",
+        "Retail sales / industrial output: beat = domestic demand recovering, miss = economy pressured",
+        "A-share volume: high volume + up = confidence recovery, low volume = wait-and-see",
+        "China ADR pre/post-market: how market assesses earnings quality post-report"
+      ]
+    },
+    {
+      "title": "宏观链：巴斯夫（BASF SE）在两次报价被拒后 → 日本烟草产业公司（Japan Tobacco...能否持续？",
+      "title_en": "Can 'Macro Chain: 巴斯夫（BASF SE）在两次reported价被拒后 → day本烟草产业公司（Japan Tobacco...' sustain?",
+      "layer1": "该宏观事件后续发展如何？市场当前定价是否充分？",
+      "layer1_en": "How will this macro event develop? Is current market pricing adequate?",
+      "vars": [
+        "相关资产价格次日开盘方向",
+        "成交量是否异常放大（恐慌or追涨）",
+        "官方/央行是否有后续声明或澄清",
+        "关联资产是否同步反应（验证逻辑链）"
+      ],
+      "vars_en": [
+        "Related asset price direction at next open",
+        "Volume anomaly (panic or chasing)",
+        "Official/central bank follow-up statement",
+        "Correlated assets confirmation"
+      ]
+    }
+  ],
+  "historical_analogies": [
+    {
+      "event": "2000年互联网泡沫：Capex暴增先于盈利崩塌（1999-2001年）",
+      "event_en": "Dot-com bubble: Capex surge preceded profit collapse (1999-2001)",
+      "lesson": "当市场为单一公司IPO狂欢时，不要忘记2000年电信公司疯狂铺设光缆、随后盈利无法覆盖投入的教训。巨量融资不等于盈利验证，系统脆弱性往往在最乐观时暴露。",
+      "lesson_en": "When markets celebrate a single company's IPO, remember the 2000 telecom companies frantically laying fiber, then profits failing to cover investment. Massive funding does not equal profitability validation.",
+      "diff": "2000年铺设的光缆后来确实被用了，只是用了5-10年才回本。AI基础设施的变现周期可能更短，且这次有真实的B端付费需求在支撑，不像当年很多流量是免费的。",
+      "diff_en": "The fiber laid in 2000 was eventually used, just took 5-10 years to break even. AI infrastructure monetization may be faster, with real B-side paid demand unlike free dot-com traffic."
+    },
+    {
+      "event": "两伊战争期间的油轮战（1984-1988年）",
+      "event_en": "Tanker War during Iran-Iraq War (1984-1988)",
+      "lesson": "霍尔木兹海峡油轮遭袭并非首次。1980年代两伊战争期间，双方互相袭击油轮，导致油价短期飙升后又被全球协调护航机制压制。今天的局势可能在复制有限升级到国际协调再到风险消退的剧本。",
+      "lesson_en": "Hormuz tanker attacks aren't unprecedented. During the 1980s Iran-Iraq War, both sides attacked tankers, causing oil to spike then subside through globally coordinated escorts. Today may replicate the limited escalation to coordination to risk subsiding script.",
+      "diff": "1980年代没有中俄美联合宣言这种三方协调机制。如果三方增产共识真正落地，即使海峡发生局部冲突，全球能源供应的兜底能力比当年强得多。但伊朗的无人机和水雷技术也远超当年。",
+      "diff_en": "The 1980s lacked a China-Russia-US coordination mechanism. If three-nation production consensus materializes, global energy resilience is far stronger. But Iran's drone and mine technology is also far superior."
+    },
+    {
+      "event": "欧债危机：希腊-意大利-西班牙利差螺旋（2011-2012年）",
+      "event_en": "European Debt Crisis: Greece-Italy-Spain spread spiral (2011-2012)",
+      "lesson": "央行在通胀压力下过早加息、随后引爆债务螺旋的剧本高度相似。加息加上高债务等于火药桶。2011年欧央行加息后，意大利债务利差飙升，最终靠Draghi的whatever it takes才稳住。",
+      "lesson_en": "The script of a central bank raising rates prematurely under inflation pressure then triggering a debt spiral is highly similar. Rate hikes plus high debt equals powder keg. In 2011, the ECB hiked, Italian spreads surged, only stabilized by Draghi's whatever it takes.",
+      "diff": "2012年Draghi的承诺和OMT/PEPP/TPI等工具箱今天已存在。央行自己也在监控这条线。但工具存在不等于能无成本使用，政治博弈才是关键。",
+      "diff_en": "Draghi's 2012 pledge and tools like OMT/PEPP/TPI now exist. The central bank is monitoring this line. But tool existence does not equal cost-free usage; political gaming is the key."
+    },
+    {
+      "event": "2008年雷曼兄弟破产 + AIG救助（2008年9月）",
+      "event_en": "Lehman Brothers collapse + AIG bailout (Sep 2008)",
+      "lesson": "当市场为金融创新或科技突破狂欢时，不要忘记2008年雷曼破产前市场也在为金融创新永动机定价。巨量融资不等于盈利验证，系统脆弱性往往在最乐观时暴露。",
+      "lesson_en": "When markets celebrate financial innovation or tech breakthroughs, remember that before Lehman's collapse in 2008, markets were also pricing in a financial innovation perpetual motion machine. Massive funding does not equal profitability validation.",
+      "diff": "2008年的风险藏在衍生品不透明链条里；今天AI公司的资产负债表相对透明。且AI基础设施投入有明确的终端需求，不像CDO的底层资产是次贷。",
+      "diff_en": "2008's risk was hidden in opaque derivative chains; today's AI companies have relatively transparent balance sheets. AI infrastructure investment has clear end-user demand, unlike CDOs backed by subprime mortgages."
+    }
+  ]
+}
