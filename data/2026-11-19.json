@@ -2,16 +2,16 @@
   "date": "2026-11-19",
   "weekday": "星期四",
   "weekday_en": "Thursday",
-  "crawl_time": "约00:48（北京时间）",
-  "source": "CNBC Economy / Investing.com News / CNBC Top News / MarketWatch Top Stories / CNBC World News",
+  "crawl_time": "约02:05（北京时间）",
+  "source": "CNBC World News / CNBC Economy / MarketWatch Top Stories / Investing.com News / CNBC Top News",
   "sources_detail": [
+    "CNBC World News",
     "CNBC Economy",
-    "Investing.com News",
-    "CNBC Top News",
     "MarketWatch Top Stories",
-    "CNBC World News"
+    "Investing.com News",
+    "CNBC Top News"
   ],
-  "filter_result": "50条核心要闻 / 0条因果链 / 90条原始抓取",
+  "filter_result": "44条核心要闻 / 0条因果链 / 89条原始抓取",
   "stats": [],
   "events": [
     {
@@ -101,6 +101,22 @@
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ],
+      "event": "Palo Alto stock surges as all signs point to how important cybersecurity is in the AI age | The need for all-encompassing, rapid-response cybersecurity platforms has never been greater.",
+      "event_en": "Palo Alto stock surges as all signs point to how important cybersecurity is in the AI age | The need for all-encompassing, rapid-response cybersecurity platforms has never been greater.",
+      "assets": "",
+      "assets_en": "",
+      "dir": "up",
       "logic": "",
       "logic_en": ""
     },
@@ -466,6 +482,22 @@
           "type": "ai",
           "text": "AI",
           "text_en": "AI"
+        }
+      ],
+      "event": "Intel signs first external customer for advanced 18A chips | Intel CEO Lip-Bu Tan said Wednesday that the company signed its first outside customer for its 18A chips.",
+      "event_en": "Intel signs first external customer for advanced 18A chips | Intel CEO Lip-Bu Tan said Wednesday that the company signed its first outside customer for its 18A chips.",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
         },
         {
           "type": "china",
@@ -728,144 +760,6 @@
       "assets": "",
       "assets_en": "",
       "dir": "up",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "bio",
-          "text": "生物科技",
-          "text_en": "Biotech"
-        }
-      ],
-      "event": "CEO turned informant: How the FDA built a case against executives promising cheap medications | The FDA's unprecedented criminal case against an alternative funding program hinged on the cooperation o...",
-      "event_en": "CEO turned informant: How the FDA built a case against executives promising cheap medications | The FDA's unprecedented criminal case against an alternative funding program hinged on the cooperation o...",
-      "assets": "",
-      "assets_en": "",
-      "dir": "up",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        }
-      ],
-      "event": "Retail investor enthusiasm for Anthropic IPO to rival SpaceX debut | Anthropic is gearing up for a blockbuster initial public offering this week, and excitement among retail investors looks to be off ...",
-      "event_en": "Retail investor enthusiasm for Anthropic IPO to rival SpaceX debut | Anthropic is gearing up for a blockbuster initial public offering this week, and excitement among retail investors looks to be off ...",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        }
-      ],
-      "event": "Is Apple the safe haven investors think it is? Here's a way to trade it with less risk | Traders have flocked to Apple's perceived safety in the wake of Nvidia's scandal. It may not be so safe, says M...",
-      "event_en": "Is Apple the safe haven investors think it is? Here's a way to trade it with less risk | Traders have flocked to Apple's perceived safety in the wake of Nvidia's scandal. It may not be so safe, says M...",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        }
-      ],
-      "event": "Paris Hilton, Alexandria Ocasio-Cortez press House to pass Defiance Act to fight AI deepfake pornography | Paris Hilton, backed by Alexandria Ocasio-Cortez, is pushing for the anti-AI deepfake pornogr...",
-      "event_en": "Paris Hilton, Alexandria Ocasio-Cortez press House to pass Defiance Act to fight AI deepfake pornography | Paris Hilton, backed by Alexandria Ocasio-Cortez, is pushing for the anti-AI deepfake pornogr...",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        },
-        {
-          "type": "fed",
-          "text": "央行",
-          "text_en": "Central Bank"
-        }
-      ],
-      "event": "Analysis: The Fed's chairman sees an AI revolution coming. Now he has to figure out what it means | Kevin Warsh sees AI at a turning point. He faces tough questions on jobs and interest rates.",
-      "event_en": "Analysis: The Fed's chairman sees an AI revolution coming. Now he has to figure out what it means | Kevin Warsh sees AI at a turning point. He faces tough questions on jobs and interest rates.",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        },
-        {
-          "type": "china",
-          "text": "中国",
-          "text_en": "China"
-        }
-      ],
-      "event": "Nvidia’s booming demand is ‘hard to ignore,’ but these four questions loom over the stock | Nvidia investors face uncertainty around CEO succession, the AI ecosystem, export controls and China.",
-      "event_en": "Nvidia’s booming demand is ‘hard to ignore,’ but these four questions loom over the stock | Nvidia investors face uncertainty around CEO succession, the AI ecosystem, export controls and China.",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "fed",
-          "text": "央行",
-          "text_en": "Central Bank"
-        }
-      ],
-      "event": "Dollar pinned at 19-month high amid hawkish signals from Fed’s Waller, minutes",
-      "event_en": "Dollar pinned at 19-month high amid hawkish signals from Fed’s Waller, minutes",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
-        }
-      ],
-      "event": "After $6.3 billion crypto heist, Binance plans Asia expansion",
-      "event_en": "After $6.3 billion crypto heist, Binance plans Asia expansion",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
       "logic": "",
       "logic_en": ""
     }
