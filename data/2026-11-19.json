@@ -2,16 +2,15 @@
   "date": "2026-11-19",
   "weekday": "星期四",
   "weekday_en": "Thursday",
-  "crawl_time": "约09:32（北京时间）",
-  "source": "CNBC World News / CNBC Economy / MarketWatch Top Stories / CNBC Top News / Investing.com News",
+  "crawl_time": "约10:50（北京时间）",
+  "source": "CNBC Top News / CNBC World News / CNBC Economy / Investing.com News",
   "sources_detail": [
+    "CNBC Top News",
     "CNBC World News",
     "CNBC Economy",
-    "MarketWatch Top Stories",
-    "CNBC Top News",
     "Investing.com News"
   ],
-  "filter_result": "44条核心要闻 / 0条因果链 / 91条原始抓取",
+  "filter_result": "37条核心要闻 / 0条因果链 / 81条原始抓取",
   "stats": [],
   "events": [
     {
@@ -155,6 +154,22 @@
     {
       "tags": [
         {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "Microsoft CEO Satya Nadella calls Outlook outage a 'perfect storm.' Here's what went wrong | Microsoft shares have dropped nearly 9% since closing at a record high on Nov. 4.",
+      "event_en": "Microsoft CEO Satya Nadella calls Outlook outage a 'perfect storm.' Here's what went wrong | Microsoft shares have dropped nearly 9% since closing at a record high on Nov. 4.",
+      "assets": "",
+      "assets_en": "",
+      "dir": "split",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
           "type": "fed",
           "text": "央行",
           "text_en": "Central Bank"
@@ -187,22 +202,6 @@
     {
       "tags": [
         {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
-        }
-      ],
-      "event": "Here’s the precise moment when cyberattacks started increasing exponentially | One of the world’s top hedge funds has identified the exact moment of time when cyber incidents have started to surge.",
-      "event_en": "Here’s the precise moment when cyberattacks started increasing exponentially | One of the world’s top hedge funds has identified the exact moment of time when cyber incidents have started to surge.",
-      "assets": "",
-      "assets_en": "",
-      "dir": "up",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
           "type": "fed",
           "text": "央行",
           "text_en": "Central Bank"
@@ -213,22 +212,6 @@
       "assets": "",
       "assets_en": "",
       "dir": "up",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
-        }
-      ],
-      "event": "Microsoft CEO Satya Nadella calls Outlook outage a 'perfect storm.' Here's what went wrong | Microsoft shares have dropped nearly 9% since closing at a record high on Nov. 4.",
-      "event_en": "Microsoft CEO Satya Nadella calls Outlook outage a 'perfect storm.' Here's what went wrong | Microsoft shares have dropped nearly 9% since closing at a record high on Nov. 4.",
-      "assets": "",
-      "assets_en": "",
-      "dir": "split",
       "logic": "",
       "logic_en": ""
     },
@@ -250,22 +233,6 @@
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        }
-      ],
-      "event": "How copper’s plunge could hurt the AI buildout | The world might not be able to mine enough copper to meet AI’s demand for years to come.",
-      "event_en": "How copper’s plunge could hurt the AI buildout | The world might not be able to mine enough copper to meet AI’s demand for years to come.",
-      "assets": "",
-      "assets_en": "",
-      "dir": "down",
       "logic": "",
       "logic_en": ""
     },
@@ -346,22 +313,6 @@
           "text_en": "AI"
         }
       ],
-      "event": "Why Anthropic's hot IPO is bringing out sellers — plus, a silver lining of the down market | Every weekday, the Investing Club releases the Homestretch; an actionable afternoon update just in time for...",
-      "event_en": "Why Anthropic's hot IPO is bringing out sellers — plus, a silver lining of the down market | Every weekday, the Investing Club releases the Homestretch; an actionable afternoon update just in time for...",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        }
-      ],
       "event": "South Korea targets 'world's highest performance' sovereign AI model in record new budget | The 2027 budget will rise 12.8% to 820.9 trillion won, and will include a 21.3 trillion won investment into ...",
       "event_en": "South Korea targets 'world's highest performance' sovereign AI model in record new budget | The 2027 budget will rise 12.8% to 820.9 trillion won, and will include a 21.3 trillion won investment into ...",
       "assets": "",
@@ -380,6 +331,22 @@
       ],
       "event": "St. Louis Fed's Musalem says four more rate hikes may be needed in coming months | The forecast represents one of the most hawkish views among policymakers.",
       "event_en": "St. Louis Fed's Musalem says four more rate hikes may be needed in coming months | The forecast represents one of the most hawkish views among policymakers.",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ],
+      "event": "Data center electricity use could double by 2030, IEA says | Global electricity use by data centers could double by 2030 as the AI boom adds pressure to power grids across the world, according to the ...",
+      "event_en": "Data center electricity use could double by 2030, IEA says | Global electricity use by data centers could double by 2030 as the AI boom adds pressure to power grids across the world, according to the ...",
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
@@ -431,6 +398,22 @@
     {
       "tags": [
         {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ],
+      "event": "Intel signs first external customer for advanced 18A chips | Intel CEO Lip-Bu Tan said Wednesday that the company signed its first outside customer for its 18A chips.",
+      "event_en": "Intel signs first external customer for advanced 18A chips | Intel CEO Lip-Bu Tan said Wednesday that the company signed its first outside customer for its 18A chips.",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
           "type": "fed",
           "text": "央行",
           "text_en": "Central Bank"
@@ -447,45 +430,13 @@
     {
       "tags": [
         {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
+          "type": "bio",
+          "text": "生物科技",
+          "text_en": "Biotech"
         }
       ],
-      "event": "This closely-watched guru just sold everything | Panmure Liberum strategist and widely-followed stock-market commentator Joachim Klement has effectively had his personal retirement portfolio 100% inve...",
-      "event_en": "This closely-watched guru just sold everything | Panmure Liberum strategist and widely-followed stock-market commentator Joachim Klement has effectively had his personal retirement portfolio 100% inve...",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "fed",
-          "text": "央行",
-          "text_en": "Central Bank"
-        }
-      ],
-      "event": "Two new housing reports point to bleak winter ahead, with record low sales | Two new reports on the state of the housing market show things are just getting worse, as high mortgage rates and inflation...",
-      "event_en": "Two new housing reports point to bleak winter ahead, with record low sales | Two new reports on the state of the housing market show things are just getting worse, as high mortgage rates and inflation...",
-      "assets": "",
-      "assets_en": "",
-      "dir": "down",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        }
-      ],
-      "event": "Intel signs first external customer for advanced 18A chips | Intel CEO Lip-Bu Tan said Wednesday that the company signed its first outside customer for its 18A chips.",
-      "event_en": "Intel signs first external customer for advanced 18A chips | Intel CEO Lip-Bu Tan said Wednesday that the company signed its first outside customer for its 18A chips.",
+      "event": "Novartis raises blockbuster drug forecasts to $18 billion as it seeks to prove growth can last | The drugmaker cited strong demand for its blockbuster drugs as it upgraded peak sales forecasts for mul...",
+      "event_en": "Novartis raises blockbuster drug forecasts to $18 billion as it seeks to prove growth can last | The drugmaker cited strong demand for its blockbuster drugs as it upgraded peak sales forecasts for mul...",
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
@@ -532,38 +483,6 @@
     {
       "tags": [
         {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
-        }
-      ],
-      "event": "What the ‘death cross’ in small-cap stocks means for the rest of the market | The negative chart pattern confirms weakness in the Russell 2000 and in overall market breadth.",
-      "event_en": "What the ‘death cross’ in small-cap stocks means for the rest of the market | The negative chart pattern confirms weakness in the Russell 2000 and in overall market breadth.",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
-        }
-      ],
-      "event": "The stock market is being rocked by the biggest shake-up in a generation as tech falls behind | Tech stocks are looking cheap, while defensive sectors like consumer staples are screening as expensive.",
-      "event_en": "The stock market is being rocked by the biggest shake-up in a generation as tech falls behind | Tech stocks are looking cheap, while defensive sectors like consumer staples are screening as expensive.",
-      "assets": "",
-      "assets_en": "",
-      "dir": "down",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
           "type": "ai",
           "text": "AI",
           "text_en": "AI"
@@ -585,16 +504,16 @@
     {
       "tags": [
         {
-          "type": "bio",
-          "text": "生物科技",
-          "text_en": "Biotech"
+          "type": "fed",
+          "text": "央行",
+          "text_en": "Central Bank"
         }
       ],
-      "event": "Novartis bets on bigger blockbusters to power growth, forecasting 5% annual sales through 2031 | The drugmaker cited strong demand for its blockbuster drugs as it upgraded peak sales forecasts for mul...",
-      "event_en": "Novartis bets on bigger blockbusters to power growth, forecasting 5% annual sales through 2031 | The drugmaker cited strong demand for its blockbuster drugs as it upgraded peak sales forecasts for mul...",
+      "event": "Two new housing reports point to bleak winter ahead, with record low sales | Two new reports on the state of the housing market show things are just getting worse, as high mortgage rates and inflation...",
+      "event_en": "Two new housing reports point to bleak winter ahead, with record low sales | Two new reports on the state of the housing market show things are just getting worse, as high mortgage rates and inflation...",
       "assets": "",
       "assets_en": "",
-      "dir": "neutral",
+      "dir": "down",
       "logic": "",
       "logic_en": ""
     },
@@ -611,6 +530,22 @@
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "Sterling today: Pound flat as dollar holds firm; UK Gen Z confidence slumps",
+      "event_en": "Sterling today: Pound flat as dollar holds firm; UK Gen Z confidence slumps",
+      "assets": "",
+      "assets_en": "",
+      "dir": "down",
       "logic": "",
       "logic_en": ""
     },
@@ -681,27 +616,6 @@
     {
       "tags": [
         {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        },
-        {
-          "type": "energy",
-          "text": "能源",
-          "text_en": "Energy"
-        }
-      ],
-      "event": "‘Nvidia’s turmoil has me spooked’: Should I sell my stocks and buy real estate — or ride out the storm? | Tempted to ditch stocks for property or CDs? Take a deep breath before making any sudden moves...",
-      "event_en": "‘Nvidia’s turmoil has me spooked’: Should I sell my stocks and buy real estate — or ride out the storm? | Tempted to ditch stocks for property or CDs? Take a deep breath before making any sudden moves...",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
           "type": "macro",
           "text": "宏观",
           "text_en": "Macro"
@@ -718,22 +632,6 @@
     {
       "tags": [
         {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        }
-      ],
-      "event": "Palo Alto Networks’ stock gets a fresh AI-fueled boost from earnings | The company boosts its outlook in the face of the “current threat environment and demand we see ahead of us.”",
-      "event_en": "Palo Alto Networks’ stock gets a fresh AI-fueled boost from earnings | The company boosts its outlook in the face of the “current threat environment and demand we see ahead of us.”",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
           "type": "fed",
           "text": "央行",
           "text_en": "Central Bank"
@@ -744,22 +642,6 @@
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "fed",
-          "text": "央行",
-          "text_en": "Central Bank"
-        }
-      ],
-      "event": "Dollar hits fresh 19-mth peak on hawkish Fed; Aussie slides after weak jobs data",
-      "event_en": "Dollar hits fresh 19-mth peak on hawkish Fed; Aussie slides after weak jobs data",
-      "assets": "",
-      "assets_en": "",
-      "dir": "down",
       "logic": "",
       "logic_en": ""
     }
