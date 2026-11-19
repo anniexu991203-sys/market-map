@@ -2,12 +2,12 @@
   "date": "2026-11-19",
   "weekday": "星期四",
   "weekday_en": "Thursday",
-  "crawl_time": "约11:36（北京时间）",
+  "crawl_time": "约11:46（北京时间）",
   "source": "华尔街见闻",
   "sources_detail": [
     "华尔街见闻"
   ],
-  "filter_result": "43条核心要闻 / 4条因果链 / 100条原始抓取",
+  "filter_result": "44条核心要闻 / 4条因果链 / 100条原始抓取",
   "stats": [
     {
       "label": "截止收盘沪指",
@@ -346,8 +346,8 @@
           "text_en": "Macro"
         }
       ],
-      "event": "拼多多美股盘前拉升，现涨超3%，此前一度跌近3%。",
-      "event_en": "拼多多美股盘前拉升，现涨超3%，此前一度跌近3%。",
+      "event": "拼多多美股盘前拉升，现涨超5%，此前一度跌近3%。",
+      "event_en": "拼多多美股盘前拉升，现涨超5%，此前一度跌近3%。",
       "assets": "详见原文",
       "assets_en": "See source",
       "dir": "split",
@@ -401,6 +401,22 @@
       "dir": "down",
       "logic": "利空事件 → 市场预期恶化 → 资产价格下跌",
       "logic_en": "Negative event → market expectations worsen → asset prices fall"
+    },
+    {
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "拼多多美股盘前直线拉升，现涨超9%。",
+      "event_en": "拼多多美股盘前直线拉升，现涨超9%。",
+      "assets": "详见原文",
+      "assets_en": "See source",
+      "dir": "up",
+      "logic": "利好事件 → 市场预期改善 → 资产价格上涨",
+      "logic_en": "Positive event → market expectations improve → asset prices rise"
     },
     {
       "tags": [
@@ -1059,8 +1075,8 @@
       ]
     },
     {
-      "event": "拼多多美股盘前拉升，现涨超3%，此前一度跌近3%。",
-      "event_en": "拼多多美股盘前拉升，现涨超3%，此前一度跌近3%。",
+      "event": "拼多多美股盘前拉升，现涨超5%，此前一度跌近3%。",
+      "event_en": "拼多多美股盘前拉升，现涨超5%，此前一度跌近3%。",
       "assets": "详见原文",
       "assets_en": "See source",
       "dir": "split",
@@ -1114,6 +1130,22 @@
       "dir": "down",
       "logic": "利空事件 → 市场预期恶化 → 资产价格下跌",
       "logic_en": "Negative event → market expectations worsen → asset prices fall",
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ]
+    },
+    {
+      "event": "拼多多美股盘前直线拉升，现涨超9%。",
+      "event_en": "拼多多美股盘前直线拉升，现涨超9%。",
+      "assets": "详见原文",
+      "assets_en": "See source",
+      "dir": "up",
+      "logic": "利好事件 → 市场预期改善 → 资产价格上涨",
+      "logic_en": "Positive event → market expectations improve → asset prices rise",
       "tags": [
         {
           "type": "macro",
