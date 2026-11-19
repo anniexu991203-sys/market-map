@@ -2,14 +2,14 @@
   "date": "2026-11-19",
   "weekday": "星期四",
   "weekday_en": "Thursday",
-  "crawl_time": "约02:05（北京时间）",
-  "source": "CNBC World News / CNBC Economy / MarketWatch Top Stories / Investing.com News / CNBC Top News",
+  "crawl_time": "约03:18（北京时间）",
+  "source": "Investing.com News / MarketWatch Top Stories / CNBC Top News / CNBC Economy / CNBC World News",
   "sources_detail": [
-    "CNBC World News",
-    "CNBC Economy",
-    "MarketWatch Top Stories",
     "Investing.com News",
-    "CNBC Top News"
+    "MarketWatch Top Stories",
+    "CNBC Top News",
+    "CNBC Economy",
+    "CNBC World News"
   ],
   "filter_result": "44条核心要闻 / 0条因果链 / 89条原始抓取",
   "stats": [],
@@ -45,6 +45,22 @@
       ],
       "event": "Japan exports in October surge 20.5%, beating estimates on robust chip shipments | Semiconductor shipments spiked almost 50% year on year.",
       "event_en": "Japan exports in October surge 20.5%, beating estimates on robust chip shipments | Semiconductor shipments spiked almost 50% year on year.",
+      "assets": "",
+      "assets_en": "",
+      "dir": "up",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "china",
+          "text": "中国",
+          "text_en": "China"
+        }
+      ],
+      "event": "'Parasite' backer and other South Korean media, gaming and travel stocks rally on China trade deal | Korean media, gaming and travel stocks surged on hopes of greater access to China.",
+      "event_en": "'Parasite' backer and other South Korean media, gaming and travel stocks rally on China trade deal | Korean media, gaming and travel stocks surged on hopes of greater access to China.",
       "assets": "",
       "assets_en": "",
       "dir": "up",
@@ -744,22 +760,6 @@
       "assets": "",
       "assets_en": "",
       "dir": "down",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        }
-      ],
-      "event": "Booking Holdings creates new enterprise division as AI reshapes travel planning | The future for online travel agencies increasingly relies on scaling business-to-business travel platforms.",
-      "event_en": "Booking Holdings creates new enterprise division as AI reshapes travel planning | The future for online travel agencies increasingly relies on scaling business-to-business travel platforms.",
-      "assets": "",
-      "assets_en": "",
-      "dir": "up",
       "logic": "",
       "logic_en": ""
     }
