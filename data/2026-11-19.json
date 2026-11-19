@@ -2,14 +2,14 @@
   "date": "2026-11-19",
   "weekday": "星期四",
   "weekday_en": "Thursday",
-  "crawl_time": "约03:18（北京时间）",
-  "source": "Investing.com News / MarketWatch Top Stories / CNBC Top News / CNBC Economy / CNBC World News",
+  "crawl_time": "约04:28（北京时间）",
+  "source": "Investing.com News / CNBC World News / MarketWatch Top Stories / CNBC Top News / CNBC Economy",
   "sources_detail": [
     "Investing.com News",
+    "CNBC World News",
     "MarketWatch Top Stories",
     "CNBC Top News",
-    "CNBC Economy",
-    "CNBC World News"
+    "CNBC Economy"
   ],
   "filter_result": "44条核心要闻 / 0条因果链 / 89条原始抓取",
   "stats": [],
@@ -389,22 +389,6 @@
     {
       "tags": [
         {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
-        }
-      ],
-      "event": "Has the stock market’s slump hit bottom yet? Here’s what these contrarian indicators say. | Contrarian buy signals typically don’t come until sentiment has dropped further than they have so far",
-      "event_en": "Has the stock market’s slump hit bottom yet? Here’s what these contrarian indicators say. | Contrarian buy signals typically don’t come until sentiment has dropped further than they have so far",
-      "assets": "",
-      "assets_en": "",
-      "dir": "down",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
           "type": "ai",
           "text": "AI",
           "text_en": "AI"
@@ -728,6 +712,22 @@
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "fed",
+          "text": "央行",
+          "text_en": "Central Bank"
+        }
+      ],
+      "event": "Dollar hits fresh 19-mth peak on hawkish Fed; Aussie slides after weak jobs data",
+      "event_en": "Dollar hits fresh 19-mth peak on hawkish Fed; Aussie slides after weak jobs data",
+      "assets": "",
+      "assets_en": "",
+      "dir": "down",
       "logic": "",
       "logic_en": ""
     },
