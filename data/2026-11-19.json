@@ -2,16 +2,16 @@
   "date": "2026-11-19",
   "weekday": "星期四",
   "weekday_en": "Thursday",
-  "crawl_time": "约08:15（北京时间）",
-  "source": "MarketWatch Top Stories / CNBC Top News / CNBC Economy / CNBC World News / Investing.com News",
+  "crawl_time": "约09:32（北京时间）",
+  "source": "CNBC World News / CNBC Economy / MarketWatch Top Stories / CNBC Top News / Investing.com News",
   "sources_detail": [
+    "CNBC World News",
+    "CNBC Economy",
     "MarketWatch Top Stories",
     "CNBC Top News",
-    "CNBC Economy",
-    "CNBC World News",
     "Investing.com News"
   ],
-  "filter_result": "41条核心要闻 / 0条因果链 / 89条原始抓取",
+  "filter_result": "44条核心要闻 / 0条因果链 / 91条原始抓取",
   "stats": [],
   "events": [
     {
@@ -187,6 +187,22 @@
     {
       "tags": [
         {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "Here’s the precise moment when cyberattacks started increasing exponentially | One of the world’s top hedge funds has identified the exact moment of time when cyber incidents have started to surge.",
+      "event_en": "Here’s the precise moment when cyberattacks started increasing exponentially | One of the world’s top hedge funds has identified the exact moment of time when cyber incidents have started to surge.",
+      "assets": "",
+      "assets_en": "",
+      "dir": "up",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
           "type": "fed",
           "text": "央行",
           "text_en": "Central Bank"
@@ -341,22 +357,6 @@
     {
       "tags": [
         {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
-        }
-      ],
-      "event": "Target shares rise 7% as retailer posts best sales growth in five years, hikes guidance | Target beat third-quarter sales expectations and raised its guidance as it continues a turnaround effort.",
-      "event_en": "Target shares rise 7% as retailer posts best sales growth in five years, hikes guidance | Target beat third-quarter sales expectations and raised its guidance as it continues a turnaround effort.",
-      "assets": "",
-      "assets_en": "",
-      "dir": "up",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
           "type": "ai",
           "text": "AI",
           "text_en": "AI"
@@ -438,6 +438,22 @@
       ],
       "event": "Consumer prices rose 0.4% in October, more than expected, complicating Fed's inflation fight | The report comes at a critical juncture for the Federal Reserve as it considers its next move regarding i...",
       "event_en": "Consumer prices rose 0.4% in October, more than expected, complicating Fed's inflation fight | The report comes at a critical juncture for the Federal Reserve as it considers its next move regarding i...",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "This closely-watched guru just sold everything | Panmure Liberum strategist and widely-followed stock-market commentator Joachim Klement has effectively had his personal retirement portfolio 100% inve...",
+      "event_en": "This closely-watched guru just sold everything | Panmure Liberum strategist and widely-followed stock-market commentator Joachim Klement has effectively had his personal retirement portfolio 100% inve...",
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
@@ -560,6 +576,22 @@
       ],
       "event": "Read Jim Cramer’s full interview with Nvidia’s Colette Kress: Demand, buybacks and China | Interim CEO Kress sat down with CNBC’s Jim Cramer Tuesday evening shortly after the AI chip giant delivered a...",
       "event_en": "Read Jim Cramer’s full interview with Nvidia’s Colette Kress: Demand, buybacks and China | Interim CEO Kress sat down with CNBC’s Jim Cramer Tuesday evening shortly after the AI chip giant delivered a...",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "bio",
+          "text": "生物科技",
+          "text_en": "Biotech"
+        }
+      ],
+      "event": "Novartis bets on bigger blockbusters to power growth, forecasting 5% annual sales through 2031 | The drugmaker cited strong demand for its blockbuster drugs as it upgraded peak sales forecasts for mul...",
+      "event_en": "Novartis bets on bigger blockbusters to power growth, forecasting 5% annual sales through 2031 | The drugmaker cited strong demand for its blockbuster drugs as it upgraded peak sales forecasts for mul...",
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
@@ -693,6 +725,22 @@
       ],
       "event": "Palo Alto Networks’ stock gets a fresh AI-fueled boost from earnings | The company boosts its outlook in the face of the “current threat environment and demand we see ahead of us.”",
       "event_en": "Palo Alto Networks’ stock gets a fresh AI-fueled boost from earnings | The company boosts its outlook in the face of the “current threat environment and demand we see ahead of us.”",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "fed",
+          "text": "央行",
+          "text_en": "Central Bank"
+        }
+      ],
+      "event": "Euro yields idle near 1-month peaks on hawkish Fed and ECB rhetoric trap",
+      "event_en": "Euro yields idle near 1-month peaks on hawkish Fed and ECB rhetoric trap",
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
