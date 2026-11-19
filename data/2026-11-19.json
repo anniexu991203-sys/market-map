@@ -2,12 +2,12 @@
   "date": "2026-11-19",
   "weekday": "星期四",
   "weekday_en": "Thursday",
-  "crawl_time": "约19:35（北京时间）",
+  "crawl_time": "约11:36（北京时间）",
   "source": "华尔街见闻",
   "sources_detail": [
     "华尔街见闻"
   ],
-  "filter_result": "42条核心要闻 / 4条因果链 / 100条原始抓取",
+  "filter_result": "43条核心要闻 / 4条因果链 / 100条原始抓取",
   "stats": [
     {
       "label": "截止收盘沪指",
@@ -337,6 +337,22 @@
       "dir": "neutral",
       "logic": "事件发生 → 市场消化信息 → 资产价格调整",
       "logic_en": "Event occurs → market digests info → asset prices adjust"
+    },
+    {
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "拼多多美股盘前拉升，现涨超3%，此前一度跌近3%。",
+      "event_en": "拼多多美股盘前拉升，现涨超3%，此前一度跌近3%。",
+      "assets": "详见原文",
+      "assets_en": "See source",
+      "dir": "split",
+      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
+      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst"
     },
     {
       "tags": [
@@ -1034,6 +1050,22 @@
       "dir": "neutral",
       "logic": "事件发生 → 市场消化信息 → 资产价格调整",
       "logic_en": "Event occurs → market digests info → asset prices adjust",
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ]
+    },
+    {
+      "event": "拼多多美股盘前拉升，现涨超3%，此前一度跌近3%。",
+      "event_en": "拼多多美股盘前拉升，现涨超3%，此前一度跌近3%。",
+      "assets": "详见原文",
+      "assets_en": "See source",
+      "dir": "split",
+      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
+      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst",
       "tags": [
         {
           "type": "macro",
