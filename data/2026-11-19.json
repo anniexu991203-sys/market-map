@@ -2,14 +2,14 @@
   "date": "2026-11-19",
   "weekday": "星期四",
   "weekday_en": "Thursday",
-  "crawl_time": "约23:40（北京时间）",
-  "source": "MarketWatch Top Stories / CNBC World News / CNBC Top News / CNBC Economy / Investing.com News",
+  "crawl_time": "约00:48（北京时间）",
+  "source": "CNBC Economy / Investing.com News / CNBC Top News / MarketWatch Top Stories / CNBC World News",
   "sources_detail": [
-    "MarketWatch Top Stories",
-    "CNBC World News",
-    "CNBC Top News",
     "CNBC Economy",
-    "Investing.com News"
+    "Investing.com News",
+    "CNBC Top News",
+    "MarketWatch Top Stories",
+    "CNBC World News"
   ],
   "filter_result": "50条核心要闻 / 0条因果链 / 90条原始抓取",
   "stats": [],
@@ -171,6 +171,22 @@
     {
       "tags": [
         {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "Microsoft CEO Satya Nadella calls Outlook outage a 'perfect storm.' Here's what went wrong | Microsoft shares have dropped nearly 9% since closing at a record high on Nov. 4.",
+      "event_en": "Microsoft CEO Satya Nadella calls Outlook outage a 'perfect storm.' Here's what went wrong | Microsoft shares have dropped nearly 9% since closing at a record high on Nov. 4.",
+      "assets": "",
+      "assets_en": "",
+      "dir": "split",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
           "type": "fed",
           "text": "央行",
           "text_en": "Central Bank"
@@ -303,22 +319,6 @@
       "assets": "",
       "assets_en": "",
       "dir": "up",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "fed",
-          "text": "央行",
-          "text_en": "Central Bank"
-        }
-      ],
-      "event": "Mortgage demand turns lower, as interest rates shoot back up to the highest level in three weeks | Mortgage rates moved sharply higher last week, causing demand for both mortgage refinances and home p...",
-      "event_en": "Mortgage demand turns lower, as interest rates shoot back up to the highest level in three weeks | Mortgage rates moved sharply higher last week, causing demand for both mortgage refinances and home p...",
-      "assets": "",
-      "assets_en": "",
-      "dir": "down",
       "logic": "",
       "logic_en": ""
     },
@@ -633,6 +633,27 @@
     {
       "tags": [
         {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        },
+        {
+          "type": "energy",
+          "text": "能源",
+          "text_en": "Energy"
+        }
+      ],
+      "event": "‘Nvidia’s turmoil has me spooked’: Should I sell my stocks and buy real estate — or ride out the storm? | Tempted to ditch stocks for property or CDs? Take a deep breath before making any sudden moves...",
+      "event_en": "‘Nvidia’s turmoil has me spooked’: Should I sell my stocks and buy real estate — or ride out the storm? | Tempted to ditch stocks for property or CDs? Take a deep breath before making any sudden moves...",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
           "type": "macro",
           "text": "宏观",
           "text_en": "Macro"
@@ -842,22 +863,6 @@
       ],
       "event": "After $6.3 billion crypto heist, Binance plans Asia expansion",
       "event_en": "After $6.3 billion crypto heist, Binance plans Asia expansion",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
-        }
-      ],
-      "event": "Dollar finally dips after fresh 19-month peak, set to snap five-day win streak",
-      "event_en": "Dollar finally dips after fresh 19-month peak, set to snap five-day win streak",
       "assets": "",
       "assets_en": "",
       "dir": "neutral",
