@@ -1,0 +1,879 @@
+{
+  "date": "2026-11-18",
+  "weekday": "星期三",
+  "weekday_en": "Wednesday",
+  "crawl_time": "约15:46（北京时间）",
+  "source": "CNBC Economy / CNBC World News / MarketWatch Top Stories / Investing.com News / CNBC Top News",
+  "sources_detail": [
+    "CNBC Economy",
+    "CNBC World News",
+    "MarketWatch Top Stories",
+    "Investing.com News",
+    "CNBC Top News"
+  ],
+  "filter_result": "50条核心要闻 / 0条因果链 / 93条原始抓取",
+  "stats": [
+    {
+      "label": "S&P",
+      "label_en": "S&P",
+      "value": "500",
+      "change": "Only two ‘Magnificent Seven’ stocks have managed to beat the",
+      "change_en": "Only two ‘Magnificent Seven’ stocks have managed to beat the",
+      "dir": "up"
+    }
+  ],
+  "events": [
+    {
+      "tags": [
+        {
+          "type": "fed",
+          "text": "央行",
+          "text_en": "Central Bank"
+        },
+        {
+          "type": "energy",
+          "text": "能源",
+          "text_en": "Energy"
+        }
+      ],
+      "event": "Euro zone inflation hits 4% for first time in three years as interest rate hike looms | It was driven by energy inflation, which surged above 20% in October.",
+      "event_en": "Euro zone inflation hits 4% for first time in three years as interest rate hike looms | It was driven by energy inflation, which surged above 20% in October.",
+      "assets": "",
+      "assets_en": "",
+      "dir": "up",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ],
+      "event": "Japan exports in October surge 20.5%, beating estimates on robust chip shipments | Semiconductor shipments spiked almost 50% year on year.",
+      "event_en": "Japan exports in October surge 20.5%, beating estimates on robust chip shipments | Semiconductor shipments spiked almost 50% year on year.",
+      "assets": "",
+      "assets_en": "",
+      "dir": "up",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "The October jobs report is out Friday. Here's everything to expect | The Bureau of Labor Statistics releases the October nonfarm payrolls report Friday at 8:30 a.m. ET.",
+      "event_en": "The October jobs report is out Friday. Here's everything to expect | The Bureau of Labor Statistics releases the October nonfarm payrolls report Friday at 8:30 a.m. ET.",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "U.S. economy added 165,000 jobs in October, way more than expected; unemployment rate slips to 4.1% | Nonfarm payrolls were expected to increase by 59,000 in October as the unemployment rate was expec...",
+      "event_en": "U.S. economy added 165,000 jobs in October, way more than expected; unemployment rate slips to 4.1% | Nonfarm payrolls were expected to increase by 59,000 in October as the unemployment rate was expec...",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ],
+      "event": "Anthropic IPO: AI lab considers increasing the offering as investor demand surges | Anthropic stock is set to begin trading on the Nasdaq under the ticker symbol \"ANT\" on Thursday.",
+      "event_en": "Anthropic IPO: AI lab considers increasing the offering as investor demand surges | Anthropic stock is set to begin trading on the Nasdaq under the ticker symbol \"ANT\" on Thursday.",
+      "assets": "",
+      "assets_en": "",
+      "dir": "up",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "fed",
+          "text": "央行",
+          "text_en": "Central Bank"
+        }
+      ],
+      "event": "Fed’s Waller says central bank may need to ‘shock people’ with half-point rate hike | Continued inflation above the Fed's 2% target is pushing central bank officials into a more aggressive stance.",
+      "event_en": "Fed’s Waller says central bank may need to ‘shock people’ with half-point rate hike | Continued inflation above the Fed's 2% target is pushing central bank officials into a more aggressive stance.",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "fed",
+          "text": "央行",
+          "text_en": "Central Bank"
+        },
+        {
+          "type": "macro",
+          "text": "财政",
+          "text_en": "Fiscal"
+        }
+      ],
+      "event": "Want to earn 5% on shorter-term Treasurys again? Watch for this shift. | Don’t rule out a half-point interest-rate hike in December, BofA Global’s rates team said.",
+      "event_en": "Want to earn 5% on shorter-term Treasurys again? Watch for this shift. | Don’t rule out a half-point interest-rate hike in December, BofA Global’s rates team said.",
+      "assets": "",
+      "assets_en": "",
+      "dir": "up",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "fed",
+          "text": "央行",
+          "text_en": "Central Bank"
+        }
+      ],
+      "event": "A key report for where inflation stood in October comes out Tuesday. Here's what to expect | The CPI headline reading is expected to show an increase of 0.3% while the core is forecast to increase 0.2...",
+      "event_en": "A key report for where inflation stood in October comes out Tuesday. Here's what to expect | The CPI headline reading is expected to show an increase of 0.3% while the core is forecast to increase 0.2...",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "Job openings posted big September gain in positive sign for labor market ahead of payrolls report | The BLS reported job openings at 7.52 million, up 333,000 from August and well above the Dow Jones c...",
+      "event_en": "Job openings posted big September gain in positive sign for labor market ahead of payrolls report | The BLS reported job openings at 7.52 million, up 333,000 from August and well above the Dow Jones c...",
+      "assets": "",
+      "assets_en": "",
+      "dir": "up",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "fed",
+          "text": "央行",
+          "text_en": "Central Bank"
+        }
+      ],
+      "event": "Sterling today: Pound slips as U.S. rate bets outweigh UK CPI rise to 3.6%",
+      "event_en": "Sterling today: Pound slips as U.S. rate bets outweigh UK CPI rise to 3.6%",
+      "assets": "",
+      "assets_en": "",
+      "dir": "up",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "fed",
+          "text": "央行",
+          "text_en": "Central Bank"
+        },
+        {
+          "type": "china",
+          "text": "中国",
+          "text_en": "China"
+        }
+      ],
+      "event": "China wholesale inflation hits highest in more than four years as consumer measure slows | The PPI for October came in at 5.7%, compared to the 5.3% expected by economists polled by Reuters.",
+      "event_en": "China wholesale inflation hits highest in more than four years as consumer measure slows | The PPI for October came in at 5.7%, compared to the 5.3% expected by economists polled by Reuters.",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "fed",
+          "text": "央行",
+          "text_en": "Central Bank"
+        }
+      ],
+      "event": "Fed’s Waller says interest-rate hikes may be needed to ‘shock’ inflation out of the system | The central bank might need to hike interest rates by a full percentage point or more to cool down inflatio...",
+      "event_en": "Fed’s Waller says interest-rate hikes may be needed to ‘shock’ inflation out of the system | The central bank might need to hike interest rates by a full percentage point or more to cool down inflatio...",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "fed",
+          "text": "央行",
+          "text_en": "Central Bank"
+        },
+        {
+          "type": "macro",
+          "text": "财政",
+          "text_en": "Fiscal"
+        }
+      ],
+      "event": "Two-year Treasury note yield climbs as Waller warns that Fed may need to ‘shock people’ with half-point rate hike | The short end of the Treasury yield curve rose Wednesday.",
+      "event_en": "Two-year Treasury note yield climbs as Waller warns that Fed may need to ‘shock people’ with half-point rate hike | The short end of the Treasury yield curve rose Wednesday.",
+      "assets": "",
+      "assets_en": "",
+      "dir": "up",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "Euro zone economy slows to 0.4% growth in Q3 as crisis-hit France contracts | The euro zone showed surprising resilience, but weak productivity, industrial competitiveness challenges and demographic p...",
+      "event_en": "Euro zone economy slows to 0.4% growth in Q3 as crisis-hit France contracts | The euro zone showed surprising resilience, but weak productivity, industrial competitiveness challenges and demographic p...",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ],
+      "event": "Analysis: Nvidia’s leadership crisis tests the chipmaker’s role as the ‘central bank of AI’ | The tech giant's web of ties to other companies is raising the possibility that it could do far-reaching e...",
+      "event_en": "Analysis: Nvidia’s leadership crisis tests the chipmaker’s role as the ‘central bank of AI’ | The tech giant's web of ties to other companies is raising the possibility that it could do far-reaching e...",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        },
+        {
+          "type": "fed",
+          "text": "央行",
+          "text_en": "Central Bank"
+        }
+      ],
+      "event": "Worried about the AI bubble popping? How investing pros say to adjust your strategy | Tech concentration and AI-stock volatility are rattling investors. Experts explain how to diversify without abando...",
+      "event_en": "Worried about the AI bubble popping? How investing pros say to adjust your strategy | Tech concentration and AI-stock volatility are rattling investors. Experts explain how to diversify without abando...",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        },
+        {
+          "type": "fed",
+          "text": "央行",
+          "text_en": "Central Bank"
+        }
+      ],
+      "event": "AI risks are the biggest threat to the financial system, Fed survey finds | The report comes with Wall Street on edge over high-flying AI hyperscalers, while communities are on alert for the rapid spr...",
+      "event_en": "AI risks are the biggest threat to the financial system, Fed survey finds | The report comes with Wall Street on edge over high-flying AI hyperscalers, while communities are on alert for the rapid spr...",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "fed",
+          "text": "央行",
+          "text_en": "Central Bank"
+        }
+      ],
+      "event": "Mortgage demand turns lower, as interest rates shoot back up to the highest level in three weeks | Mortgage rates moved sharply higher last week, causing demand for both mortgage refinances and home p...",
+      "event_en": "Mortgage demand turns lower, as interest rates shoot back up to the highest level in three weeks | Mortgage rates moved sharply higher last week, causing demand for both mortgage refinances and home p...",
+      "assets": "",
+      "assets_en": "",
+      "dir": "down",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ],
+      "event": "South Korea targets 'world's highest performance' sovereign AI model in record new budget | The 2027 budget will rise 12.8% to 820.9 trillion won, and will include a 21.3 trillion won investment into ...",
+      "event_en": "South Korea targets 'world's highest performance' sovereign AI model in record new budget | The 2027 budget will rise 12.8% to 820.9 trillion won, and will include a 21.3 trillion won investment into ...",
+      "assets": "",
+      "assets_en": "",
+      "dir": "up",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "Costco is benefiting from ‘apocalyptic concerns’ as customers stock up on goods, analysts say | Mizuho analysts have seen an “acceleration on emergency prep sales” at the warehouse chain following the...",
+      "event_en": "Costco is benefiting from ‘apocalyptic concerns’ as customers stock up on goods, analysts say | Mizuho analysts have seen an “acceleration on emergency prep sales” at the warehouse chain following the...",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ],
+      "event": "Jim Cramer's top 10 things to watch in the stock market Wednesday | Can Nvidia hold these gains after earnings?",
+      "event_en": "Jim Cramer's top 10 things to watch in the stock market Wednesday | Can Nvidia hold these gains after earnings?",
+      "assets": "",
+      "assets_en": "",
+      "dir": "up",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "fed",
+          "text": "央行",
+          "text_en": "Central Bank"
+        }
+      ],
+      "event": "St. Louis Fed's Musalem says four more rate hikes may be needed in coming months | The forecast represents one of the most hawkish views among policymakers.",
+      "event_en": "St. Louis Fed's Musalem says four more rate hikes may be needed in coming months | The forecast represents one of the most hawkish views among policymakers.",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ],
+      "event": "Only two ‘Magnificent Seven’ stocks have managed to beat the S&P 500 since the start of 2025 | Alphabet and Apple have approached artificial intelligence in ways that have resonated on Wall Street.",
+      "event_en": "Only two ‘Magnificent Seven’ stocks have managed to beat the S&P 500 since the start of 2025 | Alphabet and Apple have approached artificial intelligence in ways that have resonated on Wall Street.",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "fed",
+          "text": "央行",
+          "text_en": "Central Bank"
+        }
+      ],
+      "event": "Consumer prices rose 0.4% in October, more than expected, complicating Fed's inflation fight | The report comes at a critical juncture for the Federal Reserve as it considers its next move regarding i...",
+      "event_en": "Consumer prices rose 0.4% in October, more than expected, complicating Fed's inflation fight | The report comes at a critical juncture for the Federal Reserve as it considers its next move regarding i...",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "Sterling today: Pound set to snap slide as dollar pauses; UK jobless dips to 4.6%",
+      "event_en": "Sterling today: Pound set to snap slide as dollar pauses; UK jobless dips to 4.6%",
+      "assets": "",
+      "assets_en": "",
+      "dir": "down",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "bio",
+          "text": "生物科技",
+          "text_en": "Biotech"
+        }
+      ],
+      "event": "Hims & Hers launches new peptide treatments — while admitting there's more to learn about efficacy | The telehealth company will now offer compounded forms of sermorelin, glutathione, NAD+,  vitamin B...",
+      "event_en": "Hims & Hers launches new peptide treatments — while admitting there's more to learn about efficacy | The telehealth company will now offer compounded forms of sermorelin, glutathione, NAD+,  vitamin B...",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ],
+      "event": "CoreWeave, Iren, Nebius shares sink following Nvidia earnings | Nvidia's earnings come at a tumultuous time for the company.",
+      "event_en": "CoreWeave, Iren, Nebius shares sink following Nvidia earnings | Nvidia's earnings come at a tumultuous time for the company.",
+      "assets": "",
+      "assets_en": "",
+      "dir": "down",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ],
+      "event": "'Who and what comes next': Analysts expect Nvidia investor uncertainty despite earnings beat | Nvidia’s Q3 results should help ease short-term concerns, but uncertainty remains around long-term leader...",
+      "event_en": "'Who and what comes next': Analysts expect Nvidia investor uncertainty despite earnings beat | Nvidia’s Q3 results should help ease short-term concerns, but uncertainty remains around long-term leader...",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        },
+        {
+          "type": "china",
+          "text": "中国",
+          "text_en": "China"
+        }
+      ],
+      "event": "Southeast Asia’s data center boom leaned on Chinese demand. New U.S. rules put that pipeline at risk | The rules require data centers in Southeast Asia to seek U.S. approval to buy advanced AI chips, ...",
+      "event_en": "Southeast Asia’s data center boom leaned on Chinese demand. New U.S. rules put that pipeline at risk | The rules require data centers in Southeast Asia to seek U.S. approval to buy advanced AI chips, ...",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "fed",
+          "text": "央行",
+          "text_en": "Central Bank"
+        }
+      ],
+      "event": "Bank of England hikes interest rate for the first time since Iran war, warns inflation will near 5% | One policymaker voted to raise the bank's key interest rate to 4.25%.",
+      "event_en": "Bank of England hikes interest rate for the first time since Iran war, warns inflation will near 5% | One policymaker voted to raise the bank's key interest rate to 4.25%.",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        },
+        {
+          "type": "china",
+          "text": "中国",
+          "text_en": "China"
+        }
+      ],
+      "event": "China’s military seeks Nvidia’s advanced chips for AI capabilities, commission says | A congressional commission issued its findings as Nvidia has been rocked by its CEO's resignation after reports he...",
+      "event_en": "China’s military seeks Nvidia’s advanced chips for AI capabilities, commission says | A congressional commission issued its findings as Nvidia has been rocked by its CEO's resignation after reports he...",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "fed",
+          "text": "央行",
+          "text_en": "Central Bank"
+        }
+      ],
+      "event": "Two new housing reports point to bleak winter ahead, with record low sales | Two new reports on the state of the housing market show things are just getting worse, as high mortgage rates and inflation...",
+      "event_en": "Two new housing reports point to bleak winter ahead, with record low sales | Two new reports on the state of the housing market show things are just getting worse, as high mortgage rates and inflation...",
+      "assets": "",
+      "assets_en": "",
+      "dir": "down",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "fed",
+          "text": "央行",
+          "text_en": "Central Bank"
+        }
+      ],
+      "event": "Australia hikes rates to 18-year high to fight inflation | The Reserve Bank of Australia's decision was in line with expectations from economists polled by Reuters, and marked its fifth rate increase ...",
+      "event_en": "Australia hikes rates to 18-year high to fight inflation | The Reserve Bank of Australia's decision was in line with expectations from economists polled by Reuters, and marked its fifth rate increase ...",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "fed",
+          "text": "央行",
+          "text_en": "Central Bank"
+        }
+      ],
+      "event": "Record diesel prices drive UK inflation to 1-year high of 3.6% | It put the U.K.'s annual inflation rate at a 1-year high.",
+      "event_en": "Record diesel prices drive UK inflation to 1-year high of 3.6% | It put the U.K.'s annual inflation rate at a 1-year high.",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ],
+      "event": "Nvidia closes lower ahead of earnings as company reels from Huang resignation | Investors have been weighing the fallout from former CEO Jensen Huang's resignation.",
+      "event_en": "Nvidia closes lower ahead of earnings as company reels from Huang resignation | Investors have been weighing the fallout from former CEO Jensen Huang's resignation.",
+      "assets": "",
+      "assets_en": "",
+      "dir": "down",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ],
+      "event": "UK economy expands 0.7% in third quarter as AI provides 'extra engine of growth' | The U.K. economy grew 0.7% in the third quarter of the year, in line with estimates.",
+      "event_en": "UK economy expands 0.7% in third quarter as AI provides 'extra engine of growth' | The U.K. economy grew 0.7% in the third quarter of the year, in line with estimates.",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "3 unexpected reasons the October jobs report was so strong | October's jobs report blew past economist forecasts. Here are three reasons.",
+      "event_en": "3 unexpected reasons the October jobs report was so strong | October's jobs report blew past economist forecasts. Here are three reasons.",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "Private companies added 86,000 jobs in October, slightly higher than expected, ADP says | Private-sector job growth held steady in October, with gains spread across sectors",
+      "event_en": "Private companies added 86,000 jobs in October, slightly higher than expected, ADP says | Private-sector job growth held steady in October, with gains spread across sectors",
+      "assets": "",
+      "assets_en": "",
+      "dir": "up",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "Medicare Part B premiums rise due to higher healthcare spending | The premiums will increase by $6.50, to $209.40 a month.",
+      "event_en": "Medicare Part B premiums rise due to higher healthcare spending | The premiums will increase by $6.50, to $209.40 a month.",
+      "assets": "",
+      "assets_en": "",
+      "dir": "up",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "Senators press acting U.S. Navy Secretary on Iran war costs, sailor health in confirmation hearing | Acting Navy Secretary Hung Cao told senators the Navy recoded and used munitions he called expired ...",
+      "event_en": "Senators press acting U.S. Navy Secretary on Iran war costs, sailor health in confirmation hearing | Acting Navy Secretary Hung Cao told senators the Navy recoded and used munitions he called expired ...",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "Putin says EU is losing industry, falling behind competition, ahead of meeting with Trump and Xi | Putin used the speech to emphasize Russia's economic resilience despite U.S. sanctions, and played up...",
+      "event_en": "Putin says EU is losing industry, falling behind competition, ahead of meeting with Trump and Xi | Putin used the speech to emphasize Russia's economic resilience despite U.S. sanctions, and played up...",
+      "assets": "",
+      "assets_en": "",
+      "dir": "down",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ],
+      "event": "With Jensen Huang gone, Colette Kress shows Nvidia is still at the center of AI | In her first earnings report as interim CEO, Nvidia's Colette Kress calmed investors' nerves, at least for the moment.",
+      "event_en": "With Jensen Huang gone, Colette Kress shows Nvidia is still at the center of AI | In her first earnings report as interim CEO, Nvidia's Colette Kress calmed investors' nerves, at least for the moment.",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ],
+      "event": "How to get Anthropic stock — without buying the IPO | Investors will get access to the AI startup's stock offering courtesy of its inclusion in many mutual funds and ETFs.",
+      "event_en": "How to get Anthropic stock — without buying the IPO | Investors will get access to the AI startup's stock offering courtesy of its inclusion in many mutual funds and ETFs.",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ],
+      "event": "Booking Holdings creates new enterprise division as AI reshapes travel planning | The future for online travel agencies increasingly relies on scaling business-to-business travel platforms.",
+      "event_en": "Booking Holdings creates new enterprise division as AI reshapes travel planning | The future for online travel agencies increasingly relies on scaling business-to-business travel platforms.",
+      "assets": "",
+      "assets_en": "",
+      "dir": "up",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ],
+      "event": "OpenAI bugging case defendant Alfozan set for trial in January | Abdulrahman Alfozan has been held without bail since his arrest in October, after prosecutors said he planted a listening device in an ...",
+      "event_en": "OpenAI bugging case defendant Alfozan set for trial in January | Abdulrahman Alfozan has been held without bail since his arrest in October, after prosecutors said he planted a listening device in an ...",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        },
+        {
+          "type": "china",
+          "text": "中国",
+          "text_en": "China"
+        }
+      ],
+      "event": "Jensen Huang scandal fuels bipartisan push to block AI chip sales to China | Congress members are pushing for a series of chip-related export control bills to be included in the annual National Defens...",
+      "event_en": "Jensen Huang scandal fuels bipartisan push to block AI chip sales to China | Congress members are pushing for a series of chip-related export control bills to be included in the annual National Defens...",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ],
+      "event": "Retail investor enthusiasm for Anthropic IPO to rival SpaceX debut | Anthropic is gearing up for a blockbuster initial public offering this week, and excitement among retail investors looks to be off ...",
+      "event_en": "Retail investor enthusiasm for Anthropic IPO to rival SpaceX debut | Anthropic is gearing up for a blockbuster initial public offering this week, and excitement among retail investors looks to be off ...",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ],
+      "event": "Paris Hilton, Alexandria Ocasio-Cortez press House to pass Defiance Act to fight AI deepfake pornography | Paris Hilton, backed by Alexandria Ocasio-Cortez, is pushing for the anti-AI deepfake pornogr...",
+      "event_en": "Paris Hilton, Alexandria Ocasio-Cortez press House to pass Defiance Act to fight AI deepfake pornography | Paris Hilton, backed by Alexandria Ocasio-Cortez, is pushing for the anti-AI deepfake pornogr...",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "energy",
+          "text": "能源",
+          "text_en": "Energy"
+        }
+      ],
+      "event": "IEA chief sees no 'credible pathway' back to pre-war normality in the Strait of Hormuz | The Iran war has 'crushed' confidence in the Strait of Hormuz as a reliable energy and goods corridor, the IEA'...",
+      "event_en": "IEA chief sees no 'credible pathway' back to pre-war normality in the Strait of Hormuz | The Iran war has 'crushed' confidence in the Strait of Hormuz as a reliable energy and goods corridor, the IEA'...",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        },
+        {
+          "type": "fed",
+          "text": "央行",
+          "text_en": "Central Bank"
+        }
+      ],
+      "event": "Analysis: The Fed's chairman sees an AI revolution coming. Now he has to figure out what it means | Kevin Warsh sees AI at a turning point. He faces tough questions on jobs and interest rates.",
+      "event_en": "Analysis: The Fed's chairman sees an AI revolution coming. Now he has to figure out what it means | Kevin Warsh sees AI at a turning point. He faces tough questions on jobs and interest rates.",
+      "assets": "",
+      "assets_en": "",
+      "dir": "neutral",
+      "logic": "",
+      "logic_en": ""
+    }
+  ],
+  "chains": [],
+  "verifications": []
+}
