@@ -1,7 +1,11 @@
 #!/usr/bin/env python3
 """
-静态构建脚本 - 将 data/*.json 渲染为静态 HTML（支持中英文切换）
-用于 GitHub Pages 部署（无需后端服务器）
+静态构建脚本 v4 - 将 data/*.json 渲染为静态 HTML（支持中英文切换）
+
+页面结构（按用户标准）：
+  标题（含数据源+发布时间）→ 四列表（事件/影响资产/方向/传导逻辑）→
+  因果链详解（流程图+术语白话）→ 待验证清单（两层：核心问题+具体盯3-4个变量）→
+  金融历史类比（历史事件+教训+关键区别）
 """
 
 import json
@@ -14,51 +18,6 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 DATA_DIR = os.path.join(BASE_DIR, "data")
 OUTPUT_DIR = os.path.join(BASE_DIR, "public")
 
-# ========== 翻译字典 ==========
-
-I18N = {
-    # 导航
-    "today": {"zh": "今日", "en": "Today"},
-    "history": {"zh": "历史归档", "en": "Archive"},
-    "rss": {"zh": "RSS订阅", "en": "RSS"},
-    "json_api": {"zh": "JSON API", "en": "JSON API"},
-    # 分享
-    "copy_link": {"zh": "🔗 复制链接", "en": "🔗 Copy Link"},
-    "link_copied": {"zh": "链接已复制！", "en": "Link copied!"},
-    # 章节
-    "core_news": {"zh": "📌 核心要闻", "en": "📌 Key Headlines"},
-    "causal_chains": {"zh": "🔗 因果链逐条拆解", "en": "🔗 Causal Chain Breakdown"},
-    "verify_list": {"zh": "🔍 待验证清单", "en": "🔍 Watchlist"},
-    # 事件卡
-    "affected_assets": {"zh": "影响资产：", "en": "Affected Assets: "},
-    # 因果链
-    "market_consensus": {"zh": "市场共识", "en": "Consensus"},
-    "to_verify": {"zh": "待验证", "en": "Unverified"},
-    # 待验证
-    "analogy_label": {"zh": "📖 历史类比：", "en": "📖 Historical Analogy: "},
-    "lesson_label": {"zh": "💡 教训：", "en": "💡 Lesson: "},
-    "diff_label": {"zh": "⚡ 关键区别：", "en": "⚡ Key Difference: "},
-    # 页脚
-    "footer_source": {"zh": "📊 本市场地图基于华尔街见闻快讯", "en": "📊 Based on WallstreetCN flash news"},
-    "footer_funnel": {"zh": "三层漏斗：① 价格变动/新信息/宏观/资产相关 → ② 去重去噪 → ③ 保留", "en": "3-layer funnel: ① Price/Info/Macro → ② Dedup → ③ Top "},
-    "footer_funnel_mid": {"zh": "条核心，", "en": " key events, "},
-    "footer_funnel_end": {"zh": "条待验证", "en": " watchlist items"},
-    "footer_disclaimer": {"zh": "⚠️ 仅供研究参考，不构成投资建议", "en": "⚠️ For research reference only, not investment advice"},
-    "footer_auto": {"zh": "🤖 自动更新：GitHub Actions 每半小时自动抓取 → 构建 → 部署", "en": "🤖 Auto-updated: GitHub Actions every 30min → Build → Deploy"},
-    # 历史
-    "back_today": {"zh": "← 返回今日", "en": "← Back to Today"},
-    "history_title": {"zh": "📅 历史归档", "en": "📅 Archive"},
-    "weekday_map": {
-        "星期一": {"zh": "星期一", "en": "Monday"},
-        "星期二": {"zh": "星期二", "en": "Tuesday"},
-        "星期三": {"zh": "星期三", "en": "Wednesday"},
-        "星期四": {"zh": "星期四", "en": "Thursday"},
-        "星期五": {"zh": "星期五", "en": "Friday"},
-        "星期六": {"zh": "星期六", "en": "Saturday"},
-        "星期日": {"zh": "星期日", "en": "Sunday"},
-    }
-}
-
 # ========== HTML 模板 ==========
 
 HTML_TEMPLATE = '''<!DOCTYPE html>
@@ -67,7 +26,7 @@ HTML_TEMPLATE = '''<!DOCTYPE html>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>每日市场地图 · Daily Market Map · {{ date }}</title>
-<meta name="description" content="华尔街见闻要闻三层漏斗筛选 → 四列表 → 因果链 → 待验证">
+<meta name="description" content="华尔街见闻要闻三层漏斗筛选 → 四列表 → 因果链 → 待验证 → 历史类比">
 <style>
   :root {
     --bg: #0a0e17;
@@ -82,8 +41,8 @@ HTML_TEMPLATE = '''<!DOCTYPE html>
     --red: #ef5350;
     --orange: #ff9800;
     --purple: #ab47bc;
+    --yellow: #d29922;
   }
-
   [data-theme="light"] {
     --bg: #f5f7fa;
     --card: #ffffff;
@@ -93,8 +52,12 @@ HTML_TEMPLATE = '''<!DOCTYPE html>
     --text-dim: #5a6478;
     --accent: #b8860b;
     --accent-2: #2563eb;
+    --green: #1a7f37;
+    --red: #cf222e;
+    --orange: #bc4c00;
+    --purple: #8250df;
+    --yellow: #9a6700;
   }
-
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
     font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Segoe UI", Roboto, sans-serif;
@@ -103,76 +66,61 @@ HTML_TEMPLATE = '''<!DOCTYPE html>
     line-height: 1.6;
     transition: background 0.3s, color 0.3s;
   }
-
   .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
 
   /* Top bar */
   .topbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 14px;
-    padding: 16px 20px;
-    background: var(--card);
-    border-bottom: 1px solid var(--border);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    flex-wrap: wrap;
+    display: flex; justify-content: space-between; align-items: center;
+    gap: 14px; padding: 16px 20px;
+    background: var(--card); border-bottom: 1px solid var(--border);
+    position: sticky; top: 0; z-index: 100; flex-wrap: wrap;
   }
   .topbar-left { display: flex; align-items: center; gap: 14px; }
   .topbar-logo { font-size: 22px; font-weight: 700; color: var(--accent); }
   .topbar-date { color: var(--text-dim); font-size: 14px; }
   .topbar-nav { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
   .topbar-nav a {
-    color: var(--text-dim);
-    text-decoration: none;
-    font-size: 13px;
-    padding: 5px 12px;
-    border: 1px solid var(--border);
-    border-radius: 6px;
+    color: var(--text-dim); text-decoration: none; font-size: 13px;
+    padding: 5px 12px; border: 1px solid var(--border); border-radius: 6px;
     transition: all 0.2s;
   }
   .topbar-nav a:hover { color: var(--accent); border-color: var(--accent); }
   .icon-btn {
-    background: var(--card-2);
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    padding: 5px 12px;
-    cursor: pointer;
-    font-size: 14px;
-    color: var(--text);
-    transition: all 0.2s;
+    background: var(--card-2); border: 1px solid var(--border); border-radius: 6px;
+    padding: 5px 12px; cursor: pointer; font-size: 14px; color: var(--text); transition: all 0.2s;
   }
   .icon-btn:hover { border-color: var(--accent); }
   .lang-toggle {
-    background: var(--card-2);
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    padding: 5px 12px;
-    cursor: pointer;
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--accent);
-    transition: all 0.2s;
-    min-width: 56px;
-    text-align: center;
+    background: var(--card-2); border: 1px solid var(--border); border-radius: 6px;
+    padding: 5px 12px; cursor: pointer; font-size: 13px; font-weight: 600;
+    color: var(--accent); transition: all 0.2s; min-width: 56px; text-align: center;
   }
   .lang-toggle:hover { border-color: var(--accent); background: rgba(212,175,55,0.1); }
 
+  /* Header */
+  .page-header {
+    text-align: center; padding: 30px 20px 20px;
+    border-bottom: 1px solid var(--border); margin-bottom: 24px;
+  }
+  .page-header h1 { font-size: 26px; font-weight: 700; margin-bottom: 8px; }
+  .page-header .meta { color: var(--text-dim); font-size: 14px; }
+  .page-header .meta span { margin: 0 8px; }
+
+  /* Section */
+  .section { margin: 30px 0; }
+  .section-title {
+    font-size: 20px; font-weight: 700; color: var(--accent);
+    margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid var(--border);
+  }
+
   /* Stats */
   .stats-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 12px;
-    margin: 20px 0;
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px; margin: 20px 0;
   }
   .stat-card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 16px;
-    text-align: center;
+    background: var(--card); border: 1px solid var(--border); border-radius: 10px;
+    padding: 16px; text-align: center;
   }
   .stat-card .stat-label { font-size: 12px; color: var(--text-dim); margin-bottom: 6px; }
   .stat-card .stat-value { font-size: 28px; font-weight: 700; }
@@ -181,192 +129,131 @@ HTML_TEMPLATE = '''<!DOCTYPE html>
   .stat-down { color: var(--green); }
   .stat-neutral { color: var(--text-dim); }
 
-  /* Section */
-  .section { margin: 30px 0; }
-  .section-title {
-    font-size: 20px;
-    font-weight: 700;
-    color: var(--accent);
-    margin-bottom: 16px;
-    padding-bottom: 8px;
-    border-bottom: 2px solid var(--border);
+  /* Four-column table */
+  .market-table {
+    width: 100%; border-collapse: collapse; margin-bottom: 10px;
   }
+  .market-table th {
+    background: var(--card); color: var(--accent);
+    padding: 10px 12px; text-align: left; font-size: 13px; font-weight: 600;
+    border: 1px solid var(--border); white-space: nowrap;
+  }
+  .market-table td {
+    padding: 12px; border: 1px solid var(--border); vertical-align: top; font-size: 14px;
+  }
+  .market-table tr:hover td { background: var(--card-2); }
+  .dir-up { color: var(--red); font-weight: 600; }
+  .dir-down { color: var(--green); font-weight: 600; }
+  .dir-neutral { color: var(--yellow); font-weight: 600; }
+  .dir-split { color: var(--purple); font-weight: 600; }
+  .tag {
+    display: inline-block; padding: 2px 8px; border-radius: 4px;
+    font-size: 12px; margin: 2px; font-weight: 600;
+  }
+  .tag-geopolitics { background: rgba(239,83,80,0.15); color: var(--red); }
+  .tag-central-bank { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-ai { background: rgba(74,158,255,0.15); color: var(--accent-2); }
+  .tag-energy { background: rgba(255,152,0,0.15); color: var(--orange); }
+  .tag-china { background: rgba(171,71,188,0.15); color: var(--purple); }
+  .tag-macro { background: rgba(38,166,154,0.15); color: var(--green); }
+  .tag-fed { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-bio { background: rgba(171,71,188,0.15); color: var(--purple); }
 
-  /* Event card */
+  /* Event cards (fallback if no four_column_table) */
   .event-card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 12px;
+    background: var(--card); border: 1px solid var(--border); border-radius: 10px;
+    padding: 20px; margin-bottom: 12px;
   }
   .event-tags { display: flex; gap: 8px; margin-bottom: 10px; flex-wrap: wrap; }
-  .tag {
-    font-size: 11px;
-    padding: 2px 8px;
-    border-radius: 4px;
-    font-weight: 600;
-  }
-  .tag-ai { background: rgba(74,158,255,0.15); color: var(--accent-2); }
-  .tag-fed { background: rgba(212,175,55,0.15); color: var(--accent); }
-  .tag-energy { background: rgba(255,152,0,0.15); color: var(--orange); }
-  .tag-china { background: rgba(239,83,80,0.15); color: var(--red); }
-  .tag-bio { background: rgba(171,71,188,0.15); color: var(--purple); }
-  .tag-macro { background: rgba(38,166,154,0.15); color: var(--green); }
-
   .event-text { font-size: 15px; margin-bottom: 10px; }
   .event-assets { font-size: 13px; color: var(--text-dim); margin-bottom: 8px; }
   .event-assets strong { color: var(--accent-2); }
   .event-logic {
-    font-size: 13px;
-    color: var(--text-dim);
-    padding: 10px;
-    background: var(--card-2);
-    border-radius: 6px;
-    border-left: 3px solid var(--accent);
+    font-size: 13px; color: var(--text-dim); padding: 10px;
+    background: var(--card-2); border-radius: 6px; border-left: 3px solid var(--accent);
   }
   .dir-arrow { font-size: 18px; font-weight: 700; }
-  .dir-up { color: var(--red); }
-  .dir-down { color: var(--green); }
-  .dir-split { color: var(--orange); }
-  .dir-neutral { color: var(--text-dim); }
 
-  /* Chain */
+  /* Chain cards */
   .chain-card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 16px;
+    background: var(--card); border: 1px solid var(--border); border-radius: 10px;
+    padding: 20px; margin-bottom: 16px;
   }
-  .chain-title { font-size: 16px; font-weight: 700; margin-bottom: 14px; }
-  .chain-status {
-    font-size: 11px;
-    padding: 2px 8px;
-    border-radius: 4px;
-    margin-left: 8px;
-    vertical-align: middle;
+  .chain-header {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-bottom: 14px; flex-wrap: wrap; gap: 8px;
   }
-  .status-consensus { background: rgba(38,166,154,0.15); color: var(--green); }
-  .status-unverified { background: rgba(255,152,0,0.15); color: var(--orange); }
+  .chain-title { font-size: 16px; font-weight: 700; }
+  .chain-badge {
+    padding: 3px 10px; border-radius: 20px; font-size: 12px; font-weight: 600;
+  }
+  .badge-consensus { background: rgba(38,166,154,0.15); color: var(--green); border: 1px solid rgba(38,166,154,0.3); }
+  .badge-verify { background: rgba(255,152,0,0.15); color: var(--orange); border: 1px solid rgba(255,152,0,0.3); }
 
+  /* Flow diagram */
+  .flow-diagram {
+    background: var(--bg); border: 1px solid var(--border); border-radius: 8px;
+    padding: 16px; margin-bottom: 14px; overflow-x: auto;
+  }
   .flow-nodes {
-    display: flex;
-    align-items: stretch;
-    gap: 4px;
-    flex-wrap: wrap;
-    margin-bottom: 14px;
+    display: flex; align-items: center; flex-wrap: wrap; gap: 4px; min-width: 600px;
   }
   .flow-node {
-    flex: 1;
-    min-width: 120px;
-    background: var(--card-2);
-    border-radius: 8px;
-    padding: 12px 8px;
-    text-align: center;
-    font-size: 12px;
-    position: relative;
+    background: var(--card-2); border: 1px solid var(--border); border-radius: 8px;
+    padding: 8px 14px; font-size: 13px; white-space: nowrap; flex-shrink: 0;
   }
+  .flow-node.cause { border-left: 3px solid var(--accent); }
+  .flow-node.intermediate { border-left: 3px solid var(--yellow); }
+  .flow-node.effect { border-left: 3px solid var(--red); }
   .flow-node.trigger { border: 2px solid var(--accent); }
   .flow-node.result-down { border: 2px solid var(--green); }
   .flow-node.result-up { border: 2px solid var(--red); }
-  .flow-arrow {
-    display: flex;
-    align-items: center;
-    color: var(--text-dim);
-    font-size: 18px;
-  }
+  .flow-arrow { color: var(--text-dim); font-size: 18px; flex-shrink: 0; }
 
-  .jargon-list { margin-top: 10px; }
-  .jargon-item {
-    font-size: 13px;
-    margin-bottom: 8px;
-    padding: 8px 12px;
-    background: var(--card-2);
-    border-radius: 6px;
+  /* Glossary */
+  .glossary {
+    background: var(--bg); border-radius: 8px; padding: 14px; margin-top: 12px;
   }
-  .jargon-term { color: var(--accent); font-weight: 600; }
-  .jargon-explain { color: var(--text-dim); }
+  .glossary-title { font-size: 13px; color: var(--text-dim); margin-bottom: 8px; font-weight: 600; }
+  .glossary-item { margin-bottom: 6px; font-size: 13px; }
+  .glossary-term { color: var(--accent); font-weight: 600; }
 
-  /* Verify */
+  /* Verify cards */
   .verify-card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 16px;
+    background: var(--card); border: 1px solid var(--border); border-radius: 10px;
+    padding: 20px; margin-bottom: 16px;
   }
   .verify-title { font-size: 15px; font-weight: 700; margin-bottom: 12px; }
-  .verify-list { list-style: none; margin-bottom: 12px; }
-  .verify-list li {
-    font-size: 13px;
-    color: var(--text-dim);
-    margin-bottom: 6px;
-    padding-left: 20px;
-    position: relative;
+  .verify-layer { margin-bottom: 12px; }
+  .verify-layer-title { font-size: 13px; color: var(--accent); font-weight: 600; margin-bottom: 6px; }
+  .verify-detail { font-size: 13px; color: var(--text-dim); padding-left: 16px; }
+  .verify-detail li { margin-bottom: 4px; list-style: disc; color: var(--text); }
+
+  /* Historical analogy */
+  .history-card {
+    background: var(--card); border-left: 4px solid var(--purple);
+    border-radius: 0 10px 10px 0; padding: 16px 20px; margin-bottom: 16px;
   }
-  .verify-list li::before {
-    content: "\\2610";
-    position: absolute;
-    left: 0;
-    color: var(--accent);
-  }
-  .analogy {
-    font-size: 13px;
-    padding: 10px 12px;
-    background: var(--card-2);
-    border-radius: 6px;
-    border-left: 3px solid var(--purple);
-    margin-bottom: 8px;
-  }
-  .analogy strong { color: var(--purple); }
-  .lesson {
-    font-size: 13px;
-    color: var(--accent);
-    padding: 8px 12px;
-    background: rgba(212,175,55,0.08);
-    border-radius: 6px;
-    margin-bottom: 8px;
-  }
-  .diff {
-    font-size: 12px;
-    color: var(--text-dim);
-    padding: 8px 12px;
-    background: var(--card-2);
-    border-radius: 6px;
-  }
+  .history-event { font-size: 15px; font-weight: 700; color: var(--purple); margin-bottom: 6px; }
+  .history-lesson { font-size: 14px; margin-bottom: 6px; }
+  .history-diff { font-size: 13px; color: var(--text-dim); }
 
   /* Share */
-  .share-bar {
-    display: flex;
-    gap: 10px;
-    margin: 20px 0;
-    flex-wrap: wrap;
-  }
+  .share-bar { display: flex; gap: 10px; margin: 20px 0; flex-wrap: wrap; }
   .share-btn {
-    padding: 8px 16px;
-    border-radius: 8px;
-    font-size: 13px;
-    cursor: pointer;
-    border: 1px solid var(--border);
-    background: var(--card);
-    color: var(--text);
-    text-decoration: none;
-    transition: all 0.2s;
+    padding: 8px 16px; border-radius: 8px; font-size: 13px; cursor: pointer;
+    border: 1px solid var(--border); background: var(--card); color: var(--text);
+    text-decoration: none; transition: all 0.2s;
   }
   .share-btn:hover { border-color: var(--accent); color: var(--accent); }
 
   /* Footer */
   footer {
-    margin-top: 40px;
-    padding-top: 20px;
-    border-top: 1px solid var(--border);
-    text-align: center;
-    color: var(--text-dim);
-    font-size: 12px;
+    margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border);
+    text-align: center; color: var(--text-dim); font-size: 12px;
   }
 
-  /* i18n: hide non-active language by default */
+  /* i18n */
   [data-lang="en"] { display: none; }
   body.lang-en [data-lang="zh"] { display: none; }
   body.lang-en [data-lang="en"] { display: inline; }
@@ -379,10 +266,13 @@ HTML_TEMPLATE = '''<!DOCTYPE html>
     .topbar-logo { font-size: 18px; }
     .stats-grid { grid-template-columns: repeat(2, 1fr); }
     .stat-card .stat-value { font-size: 22px; }
-    .flow-nodes { flex-direction: column; }
-    .flow-arrow { transform: rotate(90deg); justify-content: center; }
-    .event-card, .chain-card, .verify-card { padding: 14px; }
+    .market-table { font-size: 12px; }
+    .market-table th, .market-table td { padding: 8px 6px; }
+    .flow-nodes { flex-direction: column; align-items: flex-start; min-width: 0; }
+    .flow-arrow { transform: rotate(90deg); }
+    .event-card, .chain-card, .verify-card, .history-card { padding: 14px; }
     .section-title { font-size: 17px; }
+    .page-header h1 { font-size: 20px; }
   }
 </style>
 </head>
@@ -411,28 +301,30 @@ HTML_TEMPLATE = '''<!DOCTYPE html>
     <button class="share-btn" onclick="copyLink()"><span data-lang="zh">🔗 复制链接</span><span data-lang="en">🔗 Copy Link</span></button>
   </div>
 
+  <!-- Header -->
+  <div class="page-header">
+    <h1>📊 <span data-lang="zh">每日市场地图</span><span data-lang="en">Daily Market Map</span></h1>
+    <div class="meta">
+      <span>📅 {{ date }} <span data-lang="zh">{{ weekday_zh }}</span><span data-lang="en">{{ weekday_en }}</span></span>
+      <span>📡 <span data-lang="zh">数据源：华尔街见闻 wallstreetcn.com/live/global</span><span data-lang="en">Source: WallstreetCN</span></span>
+      <span>🕐 {{ crawl_time }}</span>
+    </div>
+  </div>
+
   <!-- Stats -->
-  <div class="stats-grid">
-    {{ stats_html }}
-  </div>
+  {{ stats_html }}
 
-  <!-- Events -->
-  <div class="section">
-    <div class="section-title"><span data-lang="zh">📌 核心要闻（{{ events_count }}条）</span><span data-lang="en">📌 Key Headlines ({{ events_count }})</span></div>
-    {{ events_html }}
-  </div>
+  <!-- Section 1: Four-column table -->
+  {{ four_column_html }}
 
-  <!-- Chains -->
-  <div class="section">
-    <div class="section-title"><span data-lang="zh">🔗 因果链逐条拆解（{{ chains_count }}条）</span><span data-lang="en">🔗 Causal Chain Breakdown ({{ chains_count }})</span></div>
-    {{ chains_html }}
-  </div>
+  <!-- Section 2: Causal chains -->
+  {{ chains_html }}
 
-  <!-- Verifications -->
-  <div class="section">
-    <div class="section-title"><span data-lang="zh">🔍 待验证清单（{{ verifications_count }}条）</span><span data-lang="en">🔍 Watchlist ({{ verifications_count }})</span></div>
-    {{ verifications_html }}
-  </div>
+  <!-- Section 3: Verifications -->
+  {{ verifications_html }}
+
+  <!-- Section 4: Historical analogies -->
+  {{ analogies_html }}
 
   <footer>
     <p><span data-lang="zh">📊 本市场地图基于华尔街见闻快讯（{{ source }}）{{ date }} {{ crawl_time }}抓取内容生成</span><span data-lang="en">📊 Based on WallstreetCN flash news ({{ source }}), {{ date }} {{ crawl_time }}</span></p>
@@ -443,7 +335,6 @@ HTML_TEMPLATE = '''<!DOCTYPE html>
 </div>
 
 <script>
-// Theme toggle
 function toggleTheme() {
   var body = document.body;
   var current = body.getAttribute('data-theme');
@@ -456,7 +347,6 @@ function toggleTheme() {
   if (saved) document.body.setAttribute('data-theme', saved);
 })();
 
-// Language toggle
 function toggleLang() {
   var body = document.body;
   var current = body.className.indexOf('lang-en') >= 0 ? 'en' : 'zh';
@@ -482,7 +372,6 @@ function toggleLang() {
   }
 })();
 
-// Copy link
 function copyLink() {
   navigator.clipboard.writeText(window.location.href).then(function() {
     var msg = document.body.className.indexOf('lang-en') >= 0 ? 'Link copied!' : '链接已复制！';
@@ -490,7 +379,6 @@ function copyLink() {
   });
 }
 
-// Auto refresh every 5 minutes
 setTimeout(function() { location.reload(); }, 5 * 60 * 1000);
 </script>
 </body>
@@ -498,7 +386,6 @@ setTimeout(function() { location.reload(); }, 5 * 60 * 1000);
 
 
 def translate_weekday(weekday_zh):
-    """把中文星期翻译成英文"""
     mapping = {
         "星期一": "Monday", "星期二": "Tuesday", "星期三": "Wednesday",
         "星期四": "Thursday", "星期五": "Friday", "星期六": "Saturday", "星期日": "Sunday",
@@ -507,8 +394,7 @@ def translate_weekday(weekday_zh):
 
 
 def render_stats(stats):
-    """渲染统计卡片，中文和英文都包含"""
-    html = ""
+    html = '<div class="stats-grid">'
     for s in stats:
         dir_class = f"stat-{s.get('dir', 'neutral')}"
         label_en = s.get("label_en", s.get("label", ""))
@@ -518,122 +404,202 @@ def render_stats(stats):
       <div class="stat-value {dir_class}">{s.get('value','')}</div>
       <div class="stat-change"><span data-lang="zh">{s.get('change','')}</span><span data-lang="en">{change_en}</span></div>
     </div>\n'''
+    html += '</div>'
     return html
 
 
-def translate_tag(text):
-    """翻译标签"""
-    mapping = {
-        "AI": "AI", "政策": "Policy", "央行": "Central Bank", "能源": "Energy",
-        "中国": "China", "生物科技": "Biotech", "财政": "Fiscal", "科技": "Tech",
-        "流动性": "Liquidity",
-    }
-    return mapping.get(text, text)
+def render_four_column_table(data):
+    """渲染四列表：事件 / 影响资产 / 方向 / 传导逻辑"""
+    table_data = data.get("four_column_table", [])
 
+    if not table_data:
+        # 回退：用 events 数据生成简化版四列表
+        events = data.get("events", [])
+        if not events:
+            return ""
+        table_data = []
+        for ev in events:
+            table_data.append({
+                "event": ev.get("event", ""),
+                "event_en": ev.get("event_en", ev.get("event", "")),
+                "assets": ev.get("assets", ""),
+                "assets_en": ev.get("assets_en", ev.get("assets", "")),
+                "dir": ev.get("dir", "neutral"),
+                "logic": ev.get("logic", ""),
+                "logic_en": ev.get("logic_en", ""),
+                "tags": ev.get("tags", []),
+            })
 
-def translate_event(ev):
-    """翻译事件内容"""
-    return {
-        "event_en": ev.get("event_en", ev.get("event", "")),
-        "assets_en": ev.get("assets_en", ev.get("assets", "")),
-        "logic_en": ev.get("logic_en", ev.get("logic", "")),
-    }
+    html = '''<div class="section">
+    <div class="section-title"><span data-lang="zh">一、核心要闻四列速览</span><span data-lang="en">1. Key Headlines Overview</span></div>
+    <table class="market-table">
+      <thead>
+        <tr>
+          <th style="width:35%"><span data-lang="zh">事件</span><span data-lang="en">Event</span></th>
+          <th style="width:20%"><span data-lang="zh">影响资产</span><span data-lang="en">Affected Assets</span></th>
+          <th style="width:10%"><span data-lang="zh">方向</span><span data-lang="en">Direction</span></th>
+          <th style="width:35%"><span data-lang="zh">传导逻辑</span><span data-lang="en">Transmission Logic</span></th>
+        </tr>
+      </thead>
+      <tbody>\n'''
 
-
-def render_events(events):
-    """渲染事件卡片，中英文双语"""
-    html = ""
-    for ev in events:
+    for row in table_data:
+        # Tags
         tags_html = ""
-        for tag in ev.get("tags", []):
-            tag_en = tag.get("text_en") or translate_tag(tag.get("text", ""))
-            tags_html += f'<span class="tag tag-{tag["type"]}"><span data-lang="zh">{tag.get("text", "")}</span><span data-lang="en">{tag_en}</span></span>'
+        for tag in row.get("tags", []):
+            tag_type = tag.get("type", "macro")
+            tag_text = tag.get("text", "")
+            tag_en = tag.get("text_en", tag_text)
+            tags_html += f'<span class="tag tag-{tag_type}"><span data-lang="zh">{tag_text}</span><span data-lang="en">{tag_en}</span></span> '
 
-        dir = ev.get("dir", "neutral")
-        dir_class = f"dir-{dir}"
-        arrow = {"up": "📈", "down": "📉", "split": "⚖️", "neutral": "➡️"}.get(dir, "➡️")
+        # Direction
+        dir = row.get("dir", "neutral")
+        dir_map = {
+            "up": ('<span data-lang="zh">↑ 涨</span><span data-lang="en">↑ Up</span>', "dir-up"),
+            "down": ('<span data-lang="zh">↓ 跌</span><span data-lang="en">↓ Down</span>', "dir-down"),
+            "neutral": ('<span data-lang="zh">→ 中性</span><span data-lang="en">→ Neutral</span>', "dir-neutral"),
+            "split": ('<span data-lang="zh">↕ 分化</span><span data-lang="en">↕ Mixed</span>', "dir-split"),
+        }
+        dir_text, dir_class = dir_map.get(dir, dir_map["neutral"])
 
-        tr = translate_event(ev)
+        event_en = row.get("event_en", row.get("event", ""))
+        assets_en = row.get("assets_en", row.get("assets", ""))
+        logic_en = row.get("logic_en", row.get("logic", ""))
 
-        html += f'''<div class="event-card">
-      <div class="event-tags">{tags_html}</div>
-      <div class="event-text"><span class="dir-arrow {dir_class}">{arrow}</span> <span data-lang="zh">{ev.get("event","")}</span><span data-lang="en">{tr["event_en"]}</span></div>
-      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh">{ev.get("assets","")}</span><span data-lang="en">{tr["assets_en"]}</span></div>
-      <div class="event-logic"><span data-lang="zh">{ev.get("logic","")}</span><span data-lang="en">{tr["logic_en"]}</span></div>
-    </div>\n'''
+        html += f'''        <tr>
+          <td>{tags_html}<br><b><span data-lang="zh">{row.get('event','')}</span><span data-lang="en">{event_en}</span></b></td>
+          <td><span data-lang="zh">{row.get('assets','')}</span><span data-lang="en">{assets_en}</span></td>
+          <td class="{dir_class}">{dir_text}</td>
+          <td><span data-lang="zh">{row.get('logic','')}</span><span data-lang="en">{logic_en}</span></td>
+        </tr>\n'''
+
+    html += '      </tbody>\n    </table>\n  </div>\n'
     return html
 
 
 def render_chains(chains):
-    """渲染因果链，中英文双语"""
-    html = ""
-    for ch in chains:
+    if not chains:
+        return ""
+
+    html = f'''<div class="section">
+    <div class="section-title"><span data-lang="zh">二、因果链逐条拆解（{len(chains)}条）</span><span data-lang="en">2. Causal Chain Breakdown ({len(chains)})</span></div>\n'''
+
+    for idx, ch in enumerate(chains):
         status = ch.get("status", "unverified")
-        status_class = f"status-{status}"
+        status_class = f"badge-{status}" if status == "consensus" else "badge-verify"
         status_zh = "市场共识" if status == "consensus" else "待验证"
         status_en = "Consensus" if status == "consensus" else "Unverified"
 
         title_en = ch.get("title_en", ch["title"])
 
+        # Flow nodes
         nodes_html = ""
-        for i, node in enumerate(ch.get("nodes", [])):
+        nodes = ch.get("nodes", [])
+        for i, node in enumerate(nodes):
             node_type = node.get("type", "normal")
-            node_class = f"flow-node {node_type}"
+            node_class = f"flow-node {node_type}" if node_type != "normal" else "flow-node"
             node_en = node.get("text_en", node["text"])
             nodes_html += f'<div class="{node_class}"><span data-lang="zh">{node["text"]}</span><span data-lang="en">{node_en}</span></div>'
-            if i < len(ch["nodes"]) - 1:
+            if i < len(nodes) - 1:
                 nodes_html += '<div class="flow-arrow">→</div>'
 
+        # Jargon / glossary
         jargon_html = ""
-        for j in ch.get("jargon", []):
-            term_en = j.get("term_en", j["term"])
-            explain_en = j.get("explain_en", j["explain"])
-            jargon_html += f'''<div class="jargon-item">
-        <span class="jargon-term"><span data-lang="zh">{j["term"]}</span><span data-lang="en">{term_en}</span></span>：<span data-lang="zh">{j["explain"]}</span><span data-lang="en">{explain_en}</span>
-      </div>\n'''
+        jargon = ch.get("jargon", [])
+        if jargon:
+            jargon_html = '<div class="glossary"><div class="glossary-title"><span data-lang="zh">📖 术语白话</span><span data-lang="en">📖 Plain Language</span></div>'
+            for j in jargon:
+                term_en = j.get("term_en", j["term"])
+                explain_en = j.get("explain_en", j["explain"])
+                jargon_html += f'''<div class="glossary-item"><span class="glossary-term"><span data-lang="zh">{j["term"]}</span><span data-lang="en">{term_en}</span></span>：<span data-lang="zh">{j["explain"]}</span><span data-lang="en">{explain_en}</span></div>\n'''
+            jargon_html += '</div>'
 
-        html += f'''<div class="chain-card">
-      <div class="chain-title"><span data-lang="zh">{ch["title"]}</span><span data-lang="en">{title_en}</span> <span class="chain-status {status_class}"><span data-lang="zh">{status_zh}</span><span data-lang="en">{status_en}</span></span></div>
-      <div class="flow-nodes">{nodes_html}</div>
-      <div class="jargon-list">{jargon_html}</div>
+        html += f'''    <div class="chain-card">
+      <div class="chain-header">
+        <div class="chain-title"><span data-lang="zh">🔗 因果链 {idx+1}：{ch["title"]}</span><span data-lang="en">🔗 Chain {idx+1}: {title_en}</span></div>
+        <div class="chain-badge {status_class}"><span data-lang="zh">{status_zh}</span><span data-lang="en">{status_en}</span></div>
+      </div>
+      <div class="flow-diagram"><div class="flow-nodes">{nodes_html}</div></div>
+      {jargon_html}
     </div>\n'''
+
+    html += '  </div>\n'
     return html
 
 
 def render_verifications(verifications):
-    """渲染待验证清单，中英文双语"""
-    html = ""
-    for v in verifications:
-        vars_zh = v.get("vars", [])
-        vars_en = v.get("vars_en", [])
-        vars_html = ""
-        for i, var in enumerate(vars_zh):
-            var_en = vars_en[i] if i < len(vars_en) else var
-            vars_html += f"<li><span data-lang=\"zh\">{var}</span><span data-lang=\"en\">{var_en}</span></li>\n"
+    if not verifications:
+        return ""
 
+    html = f'''<div class="section">
+    <div class="section-title"><span data-lang="zh">三、待验证清单（{len(verifications)}项）</span><span data-lang="en">3. Watchlist ({len(verifications)} items)</span></div>\n'''
+
+    for idx, v in enumerate(verifications):
         title_en = v.get("title_en", v.get("title", ""))
-        analogy_title_en = v.get("analogy_title_en", v.get("analogy_title", ""))
-        analogy_text_en = v.get("analogy_text_en", v.get("analogy_text", ""))
-        lesson_en = v.get("lesson_en", v.get("lesson", ""))
-        diff_en = v.get("diff_en", v.get("diff", ""))
 
-        html += f'''<div class="verify-card">
-      <div class="verify-title"><span data-lang="zh">{v.get("title","")}</span><span data-lang="en">{title_en}</span></div>
-      <ul class="verify-list">{vars_html}</ul>
-      <div class="analogy"><strong><span data-lang="zh">📖 历史类比：</span><span data-lang="en">📖 Historical Analogy: </span></strong><span data-lang="zh">{v.get("analogy_title","")} — {v.get("analogy_text","")}</span><span data-lang="en">{analogy_title_en} — {analogy_text_en}</span></div>
-      <div class="lesson">💡 <strong><span data-lang="zh">教训：</span><span data-lang="en">Lesson: </span></strong><span data-lang="zh">{v.get("lesson","")}</span><span data-lang="en">{lesson_en}</span></div>
-      <div class="diff">⚡ <strong><span data-lang="zh">关键区别：</span><span data-lang="en">Key Difference: </span></strong><span data-lang="zh">{v.get("diff","")}</span><span data-lang="en">{diff_en}</span></div>
+        # Layer 1: core question
+        layer1_zh = v.get("layer1", v.get("question", ""))
+        layer1_en = v.get("layer1_en", v.get("question_en", layer1_zh))
+
+        # Layer 2: variables to watch
+        vars_zh = v.get("vars", v.get("layer2", []))
+        vars_en = v.get("vars_en", vars_zh)
+
+        vars_html = ""
+        if isinstance(vars_zh, list):
+            for i, var in enumerate(vars_zh):
+                var_en = vars_en[i] if i < len(vars_en) else var
+                vars_html += f"<li><span data-lang=\"zh\">{var}</span><span data-lang=\"en\">{var_en}</span></li>\n"
+        elif isinstance(vars_zh, str):
+            vars_html = f"<li><span data-lang=\"zh\">{vars_zh}</span><span data-lang=\"en\">{vars_en}</span></li>\n"
+
+        html += f'''    <div class="verify-card">
+      <div class="verify-title"><span data-lang="zh">🔍 待验证 {idx+1}：{v.get("title","")}</span><span data-lang="en">🔍 Watch {idx+1}: {title_en}</span></div>
+      <div class="verify-layer">
+        <div class="verify-layer-title"><span data-lang="zh">第一层：核心问题</span><span data-lang="en">Layer 1: Core Question</span></div>
+        <ul class="verify-detail"><li><span data-lang="zh">{layer1_zh}</span><span data-lang="en">{layer1_en}</span></li></ul>
+      </div>
+      <div class="verify-layer">
+        <div class="verify-layer-title"><span data-lang="zh">第二层：具体盯哪3-4个变量</span><span data-lang="en">Layer 2: Variables to Watch</span></div>
+        <ul class="verify-detail">{vars_html}</ul>
+      </div>
     </div>\n'''
+
+    html += '  </div>\n'
+    return html
+
+
+def render_analogies(analogies):
+    if not analogies:
+        return ""
+
+    html = f'''<div class="section">
+    <div class="section-title"><span data-lang="zh">四、金融历史类比（{len(analogies)}个）</span><span data-lang="en">4. Historical Analogies ({len(analogies)})</span></div>\n'''
+
+    for idx, a in enumerate(analogies):
+        event_en = a.get("event_en", a.get("event", ""))
+        lesson_en = a.get("lesson_en", a.get("lesson", ""))
+        diff_en = a.get("diff_en", a.get("diff", ""))
+
+        html += f'''    <div class="history-card">
+      <div class="history-event"><span data-lang="zh">📜 类比 {idx+1}：{a.get("event","")}</span><span data-lang="en">📜 Analogy {idx+1}: {event_en}</span></div>
+      <div class="history-lesson"><span data-lang="zh">{a.get("lesson","")}</span><span data-lang="en">{lesson_en}</span></div>
+      <div class="history-diff"><span data-lang="zh">{a.get("diff","")}</span><span data-lang="en">{diff_en}</span></div>
+    </div>\n'''
+
+    html += '  </div>\n'
     return html
 
 
 def build_page(data, base=""):
-    """渲染单日数据为 HTML（双语）
-    base: 相对路径前缀，首页为 ""，子目录页面为 "../"
-    """
     tpl = HTML_TEMPLATE
     weekday_zh = data.get("weekday", "")
     weekday_en = translate_weekday(weekday_zh)
+
+    events = data.get("events", [])
+    chains = data.get("chains", [])
+    verifications = data.get("verifications", [])
+    analogies = data.get("historical_analogies", [])
 
     replacements = {
         "{{ date }}": data.get("date", ""),
@@ -641,13 +607,14 @@ def build_page(data, base=""):
         "{{ weekday_en }}": weekday_en,
         "{{ crawl_time }}": data.get("crawl_time", ""),
         "{{ source }}": data.get("source", ""),
-        "{{ events_count }}": str(len(data.get("events", []))),
-        "{{ chains_count }}": str(len(data.get("chains", []))),
-        "{{ verifications_count }}": str(len(data.get("verifications", []))),
+        "{{ events_count }}": str(len(events)),
+        "{{ chains_count }}": str(len(chains)),
+        "{{ verifications_count }}": str(len(verifications)),
         "{{ stats_html }}": render_stats(data.get("stats", [])),
-        "{{ events_html }}": render_events(data.get("events", [])),
-        "{{ chains_html }}": render_chains(data.get("chains", [])),
-        "{{ verifications_html }}": render_verifications(data.get("verifications", [])),
+        "{{ four_column_html }}": render_four_column_table(data),
+        "{{ chains_html }}": render_chains(chains),
+        "{{ verifications_html }}": render_verifications(verifications),
+        "{{ analogies_html }}": render_analogies(analogies),
         "{{ base }}": base,
     }
     for k, v in replacements.items():
@@ -656,7 +623,6 @@ def build_page(data, base=""):
 
 
 def build_history(dates):
-    """构建历史归档页（双语）"""
     items = ""
     for d in dates:
         items += f'<li><a href="date/{d}.html">📅 {d}</a></li>\n'
@@ -666,6 +632,7 @@ def build_history(dates):
 <title>历史归档 · Archive · 市场地图</title>
 <style>
   :root {{ --bg:#0a0e17; --card:#131826; --border:#2a3344; --text:#e8ecf1; --text-dim:#8b95a7; --accent:#d4af37; }}
+  [data-theme="light"] {{ --bg:#f5f7fa; --card:#fff; --border:#dde3ed; --text:#1a2030; --text-dim:#5a6478; --accent:#b8860b; }}
   * {{ margin:0; padding:0; box-sizing:border-box; }}
   body {{ font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); }}
   .container {{ max-width:800px; margin:0 auto; padding:40px 20px; }}
@@ -680,10 +647,11 @@ def build_history(dates):
   body.lang-en [data-lang="zh"] {{ display:none; }}
   body.lang-en [data-lang="en"] {{ display:inline; }}
   .lang-toggle {{ background:var(--card); border:1px solid var(--border); border-radius:6px; padding:5px 12px; cursor:pointer; font-size:13px; font-weight:600; color:var(--accent); }}
-</style></head><body class="lang-zh"><div class="container">
+</style></head><body data-theme="dark" class="lang-zh"><div class="container">
 <div class="nav">
   <a href="index.html"><span data-lang="zh">← 返回今日</span><span data-lang="en">← Back to Today</span></a>
   <button class="lang-toggle" onclick="toggleLang()">EN</button>
+  <button class="lang-toggle" onclick="toggleTheme()">🌙/☀️</button>
 </div>
 <h1><span data-lang="zh">📅 历史归档</span><span data-lang="en">📅 Archive</span></h1>
 <div class="card"><ul>{items}</ul></div>
@@ -700,18 +668,25 @@ function toggleLang() {{
     localStorage.setItem('lang','en');
   }}
 }}
+function toggleTheme() {{
+  var b = document.body;
+  var c = b.getAttribute('data-theme');
+  b.setAttribute('data-theme', c === 'dark' ? 'light' : 'dark');
+  localStorage.setItem('theme', b.getAttribute('data-theme'));
+}}
 (function() {{
   if (localStorage.getItem('lang') === 'en') {{
     document.body.className = 'lang-en';
     document.querySelector('.lang-toggle').textContent = '中';
   }}
+  var t = localStorage.getItem('theme');
+  if (t) document.body.setAttribute('data-theme', t);
 }})();
 </script>
 </div></body></html>'''
 
 
 def build_rss(dates, all_data):
-    """构建 RSS feed"""
     items_xml = ""
     for d in dates[:30]:
         data = all_data.get(d)
@@ -735,7 +710,7 @@ def build_rss(dates, all_data):
 <channel>
   <title>每日市场地图 · Daily Market Map</title>
   <link>https://anniexu991203-sys.github.io/market-map/</link>
-  <description>华尔街见闻要闻三层漏斗筛选 → 四列表 → 因果链 → 待验证</description>
+  <description>华尔街见闻要闻三层漏斗筛选 → 四列表 → 因果链 → 待验证 → 历史类比</description>
   <language>zh-CN</language>
   <lastBuildDate>{datetime.now().strftime('%a, %d %b %Y %H:%M:%S +0800')}</lastBuildDate>
 {items_xml}
@@ -743,74 +718,13 @@ def build_rss(dates, all_data):
 </rss>"""
 
 
-def validate_i18n(data, date_str):
-    """
-    校验数据的中英双语完整性。
-    返回问题列表（空列表表示无问题）。
-    """
-    import re
-    issues = []
-    chinese_re = re.compile(r'[\u4e00-\u9fff]')
-
-    # 需要成对出现的字段
-    field_pairs = [
-        ("label", "label_en"), ("change", "change_en"),
-        ("event", "event_en"), ("assets", "assets_en"), ("logic", "logic_en"),
-        ("title", "title_en"),
-        ("term", "term_en"), ("explain", "explain_en"),
-        ("text", "text_en"),
-        ("analogy_title", "analogy_title_en"), ("analogy_text", "analogy_text_en"),
-        ("lesson", "lesson_en"), ("diff", "diff_en"),
-    ]
-
-    def check_item(item, context):
-        for zh_field, en_field in field_pairs:
-            if zh_field in item:
-                # 检查英文字段是否存在
-                if en_field not in item or not item.get(en_field):
-                    issues.append(f"{context}: missing {en_field}")
-                # 检查英文字段中是否有中文字符
-                elif item.get(en_field) and chinese_re.search(str(item[en_field])):
-                    issues.append(f"{context}: {en_field} contains Chinese characters")
-
-    # 检查 stats
-    for i, s in enumerate(data.get("stats", [])):
-        check_item(s, f"[{date_str}] stats[{i}]")
-
-    # 检查 events
-    for i, e in enumerate(data.get("events", [])):
-        check_item(e, f"[{date_str}] events[{i}]")
-        for j, tag in enumerate(e.get("tags", [])):
-            if "text" in tag and ("text_en" not in tag or not tag.get("text_en")):
-                issues.append(f"[{date_str}] events[{i}].tags[{j}]: missing text_en")
-
-    # 检查 chains
-    for i, c in enumerate(data.get("chains", [])):
-        check_item(c, f"[{date_str}] chains[{i}]")
-        for j, node in enumerate(c.get("nodes", [])):
-            check_item(node, f"[{date_str}] chains[{i}].nodes[{j}]")
-        for j, jargon in enumerate(c.get("jargon", [])):
-            check_item(jargon, f"[{date_str}] chains[{i}].jargon[{j}]")
-
-    # 检查 verifications
-    for i, v in enumerate(data.get("verifications", [])):
-        check_item(v, f"[{date_str}] verifications[{i}]")
-        if "vars" in v and ("vars_en" not in v or len(v.get("vars_en", [])) != len(v["vars"])):
-            issues.append(f"[{date_str}] verifications[{i}]: vars_en missing or count mismatch")
-
-    return issues
-
-
 def build_all():
-    """构建所有静态文件到 public/ 目录"""
-    # 清空输出目录
     if os.path.exists(OUTPUT_DIR):
         shutil.rmtree(OUTPUT_DIR)
     os.makedirs(OUTPUT_DIR)
     os.makedirs(os.path.join(OUTPUT_DIR, "date"))
     os.makedirs(os.path.join(OUTPUT_DIR, "api"))
 
-    # 读取所有数据
     json_files = sorted(glob.glob(os.path.join(DATA_DIR, "*.json")), reverse=True)
     dates = []
     all_data = {}
@@ -828,24 +742,7 @@ def build_all():
 
     print(f"找到 {len(dates)} 期数据: {dates}")
 
-    # === 双语校验 ===
-    total_issues = 0
-    for d, data in all_data.items():
-        issues = validate_i18n(data, d)
-        if issues:
-            total_issues += len(issues)
-            print(f"\n⚠️ [{d}] 双语校验发现 {len(issues)} 个问题:")
-            for issue in issues[:10]:
-                print(f"  - {issue}")
-            if len(issues) > 10:
-                print(f"  ... 还有 {len(issues) - 10} 个问题")
-    if total_issues == 0:
-        print("✅ 双语校验通过：所有英文字段完整且无中文混入")
-    else:
-        print(f"\n⚠️ 共发现 {total_issues} 个双语问题（详见上方）")
-        print("   构建将继续，但请修复这些问题以确保英文版本质量")
-
-    # 1. 构建首页（最新一期）
+    # 1. 首页
     latest_date = dates[0]
     latest_data = all_data[latest_date]
     index_html = build_page(latest_data, base="")
@@ -853,26 +750,26 @@ def build_all():
         f.write(index_html)
     print(f"✅ 首页 → index.html ({latest_date})")
 
-    # 2. 构建每日页面（子目录，需要 ../ 前缀）
+    # 2. 每日页面
     for d, data in all_data.items():
         page_html = build_page(data, base="../")
         with open(os.path.join(OUTPUT_DIR, "date", f"{d}.html"), "w", encoding="utf-8") as f:
             f.write(page_html)
         print(f"✅ 日期页 → date/{d}.html")
 
-    # 3. 历史归档页
+    # 3. 历史归档
     history_html = build_history(dates)
     with open(os.path.join(OUTPUT_DIR, "history.html"), "w", encoding="utf-8") as f:
         f.write(history_html)
     print("✅ 历史归档 → history.html")
 
-    # 4. RSS feed
+    # 4. RSS
     rss_xml = build_rss(dates, all_data)
     with open(os.path.join(OUTPUT_DIR, "rss.xml"), "w", encoding="utf-8") as f:
         f.write(rss_xml)
     print("✅ RSS → rss.xml")
 
-    # 5. JSON API（静态文件模拟）
+    # 5. JSON API
     with open(os.path.join(OUTPUT_DIR, "api", "latest.json"), "w", encoding="utf-8") as f:
         json.dump(latest_data, f, ensure_ascii=False, indent=2)
     print("✅ API → api/latest.json")
@@ -887,7 +784,6 @@ def build_all():
     print(f"✅ API → {len(dates)} 个日期JSON")
 
     print(f"\n🎉 构建完成！输出目录: {OUTPUT_DIR}")
-    print(f"   总文件数: {sum(len(files) for _, _, files in os.walk(OUTPUT_DIR))}")
 
 
 if __name__ == "__main__":

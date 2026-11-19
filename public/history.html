@@ -3,6 +3,7 @@
 <title>历史归档 · Archive · 市场地图</title>
 <style>
   :root { --bg:#0a0e17; --card:#131826; --border:#2a3344; --text:#e8ecf1; --text-dim:#8b95a7; --accent:#d4af37; }
+  [data-theme="light"] { --bg:#f5f7fa; --card:#fff; --border:#dde3ed; --text:#1a2030; --text-dim:#5a6478; --accent:#b8860b; }
   * { margin:0; padding:0; box-sizing:border-box; }
   body { font-family:-apple-system,BlinkMacSystemFont,"PingFang SC","Microsoft YaHei",sans-serif; background:var(--bg); color:var(--text); }
   .container { max-width:800px; margin:0 auto; padding:40px 20px; }
@@ -17,13 +18,15 @@
   body.lang-en [data-lang="zh"] { display:none; }
   body.lang-en [data-lang="en"] { display:inline; }
   .lang-toggle { background:var(--card); border:1px solid var(--border); border-radius:6px; padding:5px 12px; cursor:pointer; font-size:13px; font-weight:600; color:var(--accent); }
-</style></head><body class="lang-zh"><div class="container">
+</style></head><body data-theme="dark" class="lang-zh"><div class="container">
 <div class="nav">
   <a href="index.html"><span data-lang="zh">← 返回今日</span><span data-lang="en">← Back to Today</span></a>
   <button class="lang-toggle" onclick="toggleLang()">EN</button>
+  <button class="lang-toggle" onclick="toggleTheme()">🌙/☀️</button>
 </div>
 <h1><span data-lang="zh">📅 历史归档</span><span data-lang="en">📅 Archive</span></h1>
 <div class="card"><ul><li><a href="date/2026-11-19.html">📅 2026-11-19</a></li>
+<li><a href="date/2026-11-18.html">📅 2026-11-18</a></li>
 <li><a href="date/2026-11-17.html">📅 2026-11-17</a></li>
 <li><a href="date/2026-11-16.html">📅 2026-11-16</a></li>
 </ul></div>
@@ -40,11 +43,19 @@ function toggleLang() {
     localStorage.setItem('lang','en');
   }
 }
+function toggleTheme() {
+  var b = document.body;
+  var c = b.getAttribute('data-theme');
+  b.setAttribute('data-theme', c === 'dark' ? 'light' : 'dark');
+  localStorage.setItem('theme', b.getAttribute('data-theme'));
+}
 (function() {
   if (localStorage.getItem('lang') === 'en') {
     document.body.className = 'lang-en';
     document.querySelector('.lang-toggle').textContent = '中';
   }
+  var t = localStorage.getItem('theme');
+  if (t) document.body.setAttribute('data-theme', t);
 })();
 </script>
 </div></body></html>

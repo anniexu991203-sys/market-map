@@ -2,12 +2,12 @@
   "date": "2026-11-19",
   "weekday": "星期四",
   "weekday_en": "Thursday",
-  "crawl_time": "约19:17（北京时间）",
+  "crawl_time": "约19:35（北京时间）",
   "source": "华尔街见闻",
   "sources_detail": [
     "华尔街见闻"
   ],
-  "filter_result": "42条核心要闻 / 0条因果链 / 100条原始抓取",
+  "filter_result": "42条核心要闻 / 4条因果链 / 100条原始抓取",
   "stats": [
     {
       "label": "截止收盘沪指",
@@ -74,6 +74,14 @@
       "dir": "down"
     },
     {
+      "label": "较去年同期下",
+      "label_en": "较去年同期下",
+      "value": "7%",
+      "change": "世界黄金协会数据显示，9月全球央行继续增持黄金，公开净购金量达61吨，创2026年迄今单月最高纪录。波兰和中国为购金主力",
+      "change_en": "世界gold协会数据显示，9月全球央行继续增持gold，公开净购金量达61吨，创2026年迄今单月最高纪录。波兰和中国为购金主力",
+      "dir": "down"
+    },
+    {
       "label": "同比下",
       "label_en": "同比下",
       "value": "19.0%",
@@ -106,11 +114,11 @@
       ],
       "event": "1、市场全天震荡调整，三大指数小幅下跌。光刻机、光刻胶概念逆势活跃，盛剑科技3连板，兴业股份、格林达、江化微等涨停。先进封装、存储芯片板块盘中拉升，蓝箭电子、时空科技、大港股份等涨停。下跌方面，AI漫剧概念下挫，慈文传媒、横店影视、文投控股3连跌停；算力芯片股下挫，燧原科技20cm跌停，沐曦股份跌超10%。个股呈现普跌态势，沪深京三市超4800股飘绿，今日成交1.31万亿。截止收盘沪指跌0.28%...",
       "event_en": "1、市场全天震荡调整，三大指数小幅下跌。光刻机、光刻胶概念逆势活跃，盛剑科技3连板，兴业股份、格林达、江化微等涨停。先进封装、存储chips板块盘中拉升，蓝箭电子、时空科技、大HK stocks份等涨停。下跌方面，AI漫剧概念下挫，慈文传媒、横店影视、文投控股3连跌停；算力chips股下挫，燧原科技20cm跌停，沐曦股份跌超10%。个股呈现普跌态势，沪深京三市超4800股飘绿，今日成交1.31万亿。截止收盘沪指跌0.28%...",
-      "assets": "",
-      "assets_en": "",
+      "assets": "A股/沪指 / A股/深成指 / 创业板 / 港股 / 芯片板块",
+      "assets_en": "A-shares/沪指 / A-shares/深成指 / ChiNext / HK Stocks / Chips",
       "dir": "split",
-      "logic": "",
-      "logic_en": ""
+      "logic": "AI产业事件 → 算力/芯片需求预期变化 → 相关板块联动",
+      "logic_en": "AI industry event → compute/chip demand expectations shift → related sectors correlate"
     },
     {
       "tags": [
@@ -123,15 +131,20 @@
           "type": "china",
           "text": "中国",
           "text_en": "China"
+        },
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
         }
       ],
       "event": "韩国政府发布声明，韩国年度出口额于当地时间11月19日下午2:09首次突破1万亿美元。继德国、美国和中国之后，韩国成为全球第四个年出口额达到1万亿美元的国家。随着全球科技公司加大人工智能投资，半导体和计算机出口引领了增长。在9个主要地区中，有7个地区的出口额增长，中小企业的出口额也创下历史新高。（彭博）",
       "event_en": "韩国政府发布声明，韩国年度出口额于当地时间11月19日下午2:09首次突破1万亿美元。继德国、美国和中国之后，韩国成为全球第四个年出口额达到1万亿美元的国家。随着全球科技公司加大人工智能投资，semiconductors和计算机出口引领了增长。在9个主要地区中，有7个地区的出口额增长，中小企业的出口额也创下历史new high。（彭博）",
-      "assets": "",
-      "assets_en": "",
+      "assets": "美元指数 / 半导体板块",
+      "assets_en": "USD Index / Semiconductors",
       "dir": "up",
-      "logic": "",
-      "logic_en": ""
+      "logic": "贸易数据变化 → 全球需求/供应链预期调整 → 相关货币/股市影响",
+      "logic_en": "Trade data shift → global demand / supply chain expectations adjust → related currencies / stocks impacted"
     },
     {
       "tags": [
@@ -143,11 +156,11 @@
       ],
       "event": "阿里巴巴：截至2026年9月30日止季度，资本性支出为人民币504.77亿元（75.29 亿美元），较2025年同期的人民币315.01亿元增长60%，由于我们持续投入 AI 基础设施，以满足强劲且不断加速的客户需求。同比显著增长主要由于加速扩大算力规模、各类芯片组件价格上涨、预期客户持续采用 AI 智能体带动的 CPU 算力增加，以及采购周期波动。同期自由现金流净流出344.72亿元，上年同期净...",
       "event_en": "阿里巴巴：截至2026年9月30日止季度，资本性支出为CNY504.77亿元（75.29 亿美元），较2025年同期的CNY315.01亿元增长60%，由于我们持续投入 AI 基础设施，以满足强劲且不断加速的客户需求。同比显著增长主要由于加速扩大算力规模、各类chips组件价格上涨、预期客户持续采用 AI 智能体带动的 CPU 算力增加，以及采购周期波动。同期自由现金流净流出344.72亿元，上年同期净...",
-      "assets": "",
-      "assets_en": "",
+      "assets": "美元指数 / 人民币 / 阿里巴巴 / 芯片板块",
+      "assets_en": "USD Index / CNY / Alibaba / Chips",
       "dir": "up",
-      "logic": "",
-      "logic_en": ""
+      "logic": "AI产业事件 → 算力/芯片需求预期变化 → 相关板块联动",
+      "logic_en": "AI industry event → compute/chip demand expectations shift → related sectors correlate"
     },
     {
       "tags": [
@@ -159,11 +172,11 @@
       ],
       "event": "阿里巴巴第二财季营收2,715.2亿元人民币，预估2,705.3亿元人民币。\n\n第二财季调整后每ADS收益8.10元人民币，预估10.75元人民币。\n\n第二财季调整后息税折旧及摊销前利润460.6亿元人民币，预估399亿元人民币。\n\n第二财季调整后净利润199.1亿元人民币，预估266.1亿元人民币。\n\n第二财季AI云与算力服务收入609.7亿元人民币，同比增长53%，预估597.7亿元人民币。\n...",
       "event_en": "阿里巴巴第二财季营收2,715.2亿元CNY，预估2,705.3亿元CNY。\n\n第二财季调整后每ADS收益8.10元CNY，预估10.75元CNY。\n\n第二财季调整后息税折旧及摊销前利润460.6亿元CNY，预估399亿元CNY。\n\n第二财季调整后净利润199.1亿元CNY，预估266.1亿元CNY。\n\n第二财季AI云与算力服务收入609.7亿元CNY，同比增长53%，预估597.7亿元CNY。\n...",
-      "assets": "",
-      "assets_en": "",
+      "assets": "美元指数 / 人民币 / 阿里巴巴",
+      "assets_en": "USD Index / CNY / Alibaba",
       "dir": "up",
-      "logic": "",
-      "logic_en": ""
+      "logic": "财报发布 → 盈利/指引更新 → 估值重估",
+      "logic_en": "Earnings released → earnings/guidance update → re-rating"
     },
     {
       "tags": [
@@ -175,11 +188,11 @@
       ],
       "event": "商品期货收盘，苹果主力合约跌超7%，沪铜跌超5%，沪锡、国际铜跌超4%，沪银、沪镍、丙烯、乙二醇、液化气跌超3%。集运欧线涨超4%。",
       "event_en": "商品期货收盘，Apple主力合约跌超7%，沪铜跌超5%，沪锡、国际铜跌超4%，沪银、沪镍、丙烯、乙二醇、液化气跌超3%。集运欧线涨超4%。",
-      "assets": "",
-      "assets_en": "",
+      "assets": "铜 / 苹果",
+      "assets_en": "Copper / Apple",
       "dir": "split",
-      "logic": "",
-      "logic_en": ""
+      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
+      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst"
     },
     {
       "tags": [
@@ -191,11 +204,11 @@
       ],
       "event": "燧原科技11月19日公告，公司股票交易连续三个交易日内（2026年11月17日、11月18日、11月19日）收盘价格跌幅偏离值累计达到30%以上，根据《上海证券交易所交易规则》的有关规定，属于股票交易异常波动情形。公司注意到近期相关产业新闻引发了大量关注和讨论。公司在手订单充沛，并正在与多家国内半导体产业伙伴进行合作，打造基于国产供应链的云端AI芯片产品，构建稳定的供应链体系，支撑公司业务发展。公...",
       "event_en": "燧原科技11月19日公告，公司股票交易连续三个交易日内（2026年11月17日、11月18日、11月19日）收盘价格跌幅偏离值累计达到30%以上，根据《上海证券交易所交易规则》的有关规定，属于股票交易异常波动情形。公司注意到近期相关产业新闻引发了大量关注和讨论。公司在手订单充沛，并正在与多家国内semiconductors产业伙伴进行合作，打造基于国产供应链的云端AIchips产品，构建稳定的供应链体系，支撑公司业务发展。公...",
-      "assets": "",
-      "assets_en": "",
+      "assets": "半导体板块 / 芯片板块",
+      "assets_en": "Semiconductors / Chips",
       "dir": "down",
-      "logic": "",
-      "logic_en": ""
+      "logic": "AI产业事件 → 算力/芯片需求预期变化 → 相关板块联动",
+      "logic_en": "AI industry event → compute/chip demand expectations shift → related sectors correlate"
     },
     {
       "tags": [
@@ -207,11 +220,11 @@
       ],
       "event": "上证指数收报3577.62点，跌0.28%。\n\n深证成指收报10583.20点，跌0.71%。\n\n创业板指收报2293.34点，跌0.79%。\n\n沪深300收报3984.84点，涨0.03%。\n\n科创50收报1270.78点，涨1.83%。\n\n中证500收报6251.96点，跌0.48%。\n\n中证1000收报5938.90点，跌1.88%。",
       "event_en": "上证指数收报3577.62点，跌0.28%。\n\n深证成指收报10583.20点，跌0.71%。\n\nChiNext指收报2293.34点，跌0.79%。\n\n沪深300收报3984.84点，涨0.03%。\n\n科创50收报1270.78点，涨1.83%。\n\n中证500收报6251.96点，跌0.48%。\n\n中证1000收报5938.90点，跌1.88%。",
-      "assets": "",
-      "assets_en": "",
+      "assets": "创业板 / 科创50",
+      "assets_en": "ChiNext / STAR 50",
       "dir": "split",
-      "logic": "",
-      "logic_en": ""
+      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
+      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst"
     },
     {
       "tags": [
@@ -223,11 +236,11 @@
       ],
       "event": "美股期货涨幅扩大，纳斯达克100指数期货涨2%，标普500指数期货涨1.1%，道指期货涨0.7%。Anthropic即将挂牌上市，该公司扩大IPO和私募配售规模，融资1073亿美元。",
       "event_en": "美股期货涨幅扩大，纳斯达克100指数期货涨2%，S&P500指数期货涨1.1%，道指期货涨0.7%。Anthropic即将挂牌上市，该公司扩大IPO和私募配售规模，融资1073亿美元。",
-      "assets": "",
-      "assets_en": "",
+      "assets": "标普500 / 道指 / 美元指数",
+      "assets_en": "S&P 500 / Dow Jones / USD Index",
       "dir": "up",
-      "logic": "",
-      "logic_en": ""
+      "logic": "IPO事件 → 市场资金流向/行业估值锚定 → 相关板块联动",
+      "logic_en": "IPO event → capital flows / sector valuation anchoring → related sectors correlate"
     },
     {
       "tags": [
@@ -239,11 +252,11 @@
       ],
       "event": "日经225指数收盘上涨0.7%，报59,444.21点。日本东证指数收盘下跌0.04%，报3,822.47点。",
       "event_en": "日经225指数收盘上涨0.7%，报59,444.21点。日本东证指数收盘下跌0.04%，报3,822.47点。",
-      "assets": "",
-      "assets_en": "",
+      "assets": "详见原文",
+      "assets_en": "See source",
       "dir": "split",
-      "logic": "",
-      "logic_en": ""
+      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
+      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst"
     },
     {
       "tags": [
@@ -255,11 +268,11 @@
       ],
       "event": "阿里巴巴美股盘前走低，现跌超2%，此前一度涨超4%。",
       "event_en": "阿里巴巴美股盘前走低，现跌超2%，此前一度涨超4%。",
-      "assets": "",
-      "assets_en": "",
+      "assets": "阿里巴巴",
+      "assets_en": "Alibaba",
       "dir": "split",
-      "logic": "",
-      "logic_en": ""
+      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
+      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst"
     },
     {
       "tags": [
@@ -271,11 +284,11 @@
       ],
       "event": "暗盘交易显示，Anthropic PBC股票开盘料较发行价83美元上涨20%至26%。之前这家AI实验室通过扩大了规模的IPO及私募配售，筹资1,073亿美元，打破了SpaceX创造的纪录。",
       "event_en": "暗盘交易显示，Anthropic PBC股票开盘料较发行价83美元上涨20%至26%。之前这家AI实验室通过扩大了规模的IPO及私募配售，筹资1,073亿美元，打破了SpaceX创造的纪录。",
-      "assets": "",
-      "assets_en": "",
+      "assets": "美元指数",
+      "assets_en": "USD Index",
       "dir": "up",
-      "logic": "",
-      "logic_en": ""
+      "logic": "AI产业事件 → 算力/芯片需求预期变化 → 相关板块联动",
+      "logic_en": "AI industry event → compute/chip demand expectations shift → related sectors correlate"
     },
     {
       "tags": [
@@ -287,11 +300,11 @@
       ],
       "event": "据新华社，11月19日下午，国家主席习近平在深圳同俄罗斯总统普京、美国总统特朗普举行中俄美元首会晤，总结此次会晤达成的主要共识。",
       "event_en": "据新华社，11月19日下午，国家主席习近平在深圳同俄罗斯总统普京、美国总统特朗普举行中俄美元首会晤，总结此次会晤达成的主要共识。",
-      "assets": "",
-      "assets_en": "",
+      "assets": "美元指数",
+      "assets_en": "USD Index",
       "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
+      "logic": "事件发生 → 市场消化信息 → 资产价格调整",
+      "logic_en": "Event occurs → market digests info → asset prices adjust"
     },
     {
       "tags": [
@@ -303,11 +316,11 @@
       ],
       "event": "11月19日下午，国家主席习近平在深圳同俄罗斯总统普京、美国总统特朗普举行中俄美元首会晤。目前，会晤已结束。（央视新闻）",
       "event_en": "11月19日下午，国家主席习近平在深圳同俄罗斯总统普京、美国总统特朗普举行中俄美元首会晤。目前，会晤已结束。（央视新闻）",
-      "assets": "",
-      "assets_en": "",
+      "assets": "美元指数",
+      "assets_en": "USD Index",
       "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
+      "logic": "事件发生 → 市场消化信息 → 资产价格调整",
+      "logic_en": "Event occurs → market digests info → asset prices adjust"
     },
     {
       "tags": [
@@ -319,11 +332,11 @@
       ],
       "event": "11月19日下午，国家主席习近平将在深圳同俄罗斯总统普京、美国总统特朗普举行中俄美元首会晤。 (央视新闻)",
       "event_en": "11月19日下午，国家主席习近平将在深圳同俄罗斯总统普京、美国总统特朗普举行中俄美元首会晤。 (央视新闻)",
-      "assets": "",
-      "assets_en": "",
+      "assets": "美元指数",
+      "assets_en": "USD Index",
       "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
+      "logic": "事件发生 → 市场消化信息 → 资产价格调整",
+      "logic_en": "Event occurs → market digests info → asset prices adjust"
     },
     {
       "tags": [
@@ -335,11 +348,11 @@
       ],
       "event": "美股盘前，存储芯片股普涨，SK海力士涨约5%，闪迪涨约4%，美光科技涨约4%，希捷科技涨约4%。\n\n光通信股普涨，Coherent涨约4%，Credo涨约5%，Lumentum涨约4%，迈威尔科技涨约4%，康宁涨约3%。",
       "event_en": "美股盘前，存储chips股普涨，SK海力士涨约5%，闪迪涨约4%，美光科技涨约4%，希捷科技涨约4%。\n\n光通信股普涨，Coherent涨约4%，Credo涨约5%，Lumentum涨约4%，迈威尔科技涨约4%，康宁涨约3%。",
-      "assets": "",
-      "assets_en": "",
+      "assets": "芯片板块",
+      "assets_en": "Chips",
       "dir": "up",
-      "logic": "",
-      "logic_en": ""
+      "logic": "AI产业事件 → 算力/芯片需求预期变化 → 相关板块联动",
+      "logic_en": "AI industry event → compute/chip demand expectations shift → related sectors correlate"
     },
     {
       "tags": [
@@ -351,11 +364,11 @@
       ],
       "event": "11月19日晚间，阿里巴巴集团发布最新季度业绩，阿里云外部客户收入同比增长64%，较上一季度的45%显著加快，刷新近六年来的增速高点。季度内，AI相关产品收入连续第13个季度实现三位数增长，驱动阿里云收入增长再创新高。",
       "event_en": "11月19日晚间，阿里巴巴集团发布最新季度业绩，阿里云外部客户收入同比增长64%，较上一季度的45%显著加快，刷新近六年来的增速高点。季度内，AI相关产品收入连续第13个季度实现三位数增长，驱动阿里云收入增长再创new high。",
-      "assets": "",
-      "assets_en": "",
+      "assets": "阿里巴巴",
+      "assets_en": "Alibaba",
       "dir": "up",
-      "logic": "",
-      "logic_en": ""
+      "logic": "AI产业事件 → 算力/芯片需求预期变化 → 相关板块联动",
+      "logic_en": "AI industry event → compute/chip demand expectations shift → related sectors correlate"
     },
     {
       "tags": [
@@ -367,11 +380,32 @@
       ],
       "event": "恒生指数收盘跌1.95%，报22841.62点；恒生科技指数收跌2.33%，报3649.14点，创2024年9月17日以来的最低。万国数据跌7.41%，小马智行跌7.93%，京东健康跌7%，联想集团跌5.52%，微博跌5.77%，阿里巴巴跌5.51%。",
       "event_en": "恒生指数收盘跌1.95%，报22841.62点；恒生科技指数收跌2.33%，报3649.14点，创2024年9月17日以来的最低。万国数据跌7.41%，小马智行跌7.93%，京东健康跌7%，联想集团跌5.52%，微博跌5.77%，阿里巴巴跌5.51%。",
-      "assets": "",
-      "assets_en": "",
+      "assets": "港股/恒生科技 / 阿里巴巴",
+      "assets_en": "HK stocks/恒生科技 / Alibaba",
       "dir": "down",
-      "logic": "",
-      "logic_en": ""
+      "logic": "利空事件 → 市场预期恶化 → 资产价格下跌",
+      "logic_en": "Negative event → market expectations worsen → asset prices fall"
+    },
+    {
+      "tags": [
+        {
+          "type": "fed",
+          "text": "央行",
+          "text_en": "Central Bank"
+        },
+        {
+          "type": "china",
+          "text": "中国",
+          "text_en": "China"
+        }
+      ],
+      "event": "世界黄金协会数据显示，9月全球央行继续增持黄金，公开净购金量达61吨，创2026年迄今单月最高纪录。波兰和中国为购金主力，其他净买家包括乌兹别克斯坦、哈萨克斯坦、约旦、捷克和玻利维亚。今年1至9月，全球央行公开净购黄金228吨，较去年同期下降7%。",
+      "event_en": "世界gold协会数据显示，9月全球央行继续增持gold，公开净购金量达61吨，创2026年迄今单月最高纪录。波兰和中国为购金主力，其他净买家包括乌兹别克斯坦、哈萨克斯坦、约旦、捷克和玻利维亚。今年1至9月，全球央行公开净购gold228吨，较去年同期下降7%。",
+      "assets": "黄金",
+      "assets_en": "Gold",
+      "dir": "split",
+      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
+      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst"
     },
     {
       "tags": [
@@ -383,11 +417,11 @@
       ],
       "event": "阿里巴巴美股盘前拉升，一度涨超4%，公司第二财季营收和调整后每ADS收益均高于预期。",
       "event_en": "阿里巴巴美股盘前拉升，一度涨超4%，公司第二财季营收和调整后每ADS收益均高于预期。",
-      "assets": "",
-      "assets_en": "",
+      "assets": "阿里巴巴",
+      "assets_en": "Alibaba",
       "dir": "up",
-      "logic": "",
-      "logic_en": ""
+      "logic": "财报发布 → 盈利/指引更新 → 估值重估",
+      "logic_en": "Earnings released → earnings/guidance update → re-rating"
     },
     {
       "tags": [
@@ -404,11 +438,11 @@
       ],
       "event": "11月19日，网易有道公布了2026年第三季度未经审计的财务业绩。报告期内，有道持续推进AI原生战略，聚焦高质量、高毛利率业务，AI应用在学习、办公、营销等场景纵深落地，盈利能力与经营质量保持稳健提升。",
       "event_en": "11月19日，网易有道公布了2026年第三季度未经审计的财务业绩。报告期内，有道持续推进AI原生战略，聚焦高质量、高毛利率业务，AI应用在学习、办公、营销等场景纵深落地，盈利能力与经营质量保持稳健提升。",
-      "assets": "",
-      "assets_en": "",
+      "assets": "详见原文",
+      "assets_en": "See source",
       "dir": "up",
-      "logic": "",
-      "logic_en": ""
+      "logic": "AI产业事件 → 算力/芯片需求预期变化 → 相关板块联动",
+      "logic_en": "AI industry event → compute/chip demand expectations shift → related sectors correlate"
     },
     {
       "tags": [
@@ -420,11 +454,11 @@
       ],
       "event": "欧洲央行管委Kocher：可能需要进一步加息。",
       "event_en": "欧洲央行管委Kocher：可能需要进一步rate hike。",
-      "assets": "",
-      "assets_en": "",
+      "assets": "详见原文",
+      "assets_en": "See source",
       "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
+      "logic": "央行鹰派信号 → 加息预期升温 → 美元走强/利率上行 → 风险资产承压",
+      "logic_en": "Central bank hawkish signal → rate hike expectations rise → USD strengthens / yields rise → risk assets under pressure"
     },
     {
       "tags": [
@@ -436,11 +470,11 @@
       ],
       "event": "快手在港交所公告，2026年第三季度，直播业务收入为人民币78亿元，同比下降19.0%。其他服务收入由2025年同期的人民币59亿元增加1.5%至2026年第三季度的人民币60亿元，主要是由于游戏及可灵AI业务收入增加，部分被电商收入减少所抵销。",
       "event_en": "快手在港交所公告，2026年第三季度，直播业务收入为CNY78亿元，同比下降19.0%。其他服务收入由2025年同期的CNY59亿元增加1.5%至2026年第三季度的CNY60亿元，主要是由于游戏及可灵AI业务收入增加，部分被电商收入减少所抵销。",
-      "assets": "",
-      "assets_en": "",
+      "assets": "人民币",
+      "assets_en": "CNY",
       "dir": "split",
-      "logic": "",
-      "logic_en": ""
+      "logic": "AI产业事件 → 算力/芯片需求预期变化 → 相关板块联动",
+      "logic_en": "AI industry event → compute/chip demand expectations shift → related sectors correlate"
     },
     {
       "tags": [
@@ -452,11 +486,11 @@
       ],
       "event": "部分宽基ETF持续放量，中证500ETF南方(510500)成交超100亿元，已超昨日4倍，科创50ETF易方达（588080）成交超66亿元，超昨日1.5倍，创业板ETF易方达（159915）、沪深300ETF华泰柏瑞(510300)、中证1000ETF南方(512100)等均明显放量。",
       "event_en": "部分宽基ETF持续放量，中证500ETF南方(510500)成交超100亿元，已超昨日4倍，科创50ETF易方达（588080）成交超66亿元，超昨日1.5倍，ChiNextETF易方达（159915）、沪深300ETF华泰柏瑞(510300)、中证1000ETF南方(512100)等均明显放量。",
-      "assets": "",
-      "assets_en": "",
+      "assets": "创业板 / 科创50",
+      "assets_en": "ChiNext / STAR 50",
       "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
+      "logic": "事件发生 → 市场消化信息 → 资产价格调整",
+      "logic_en": "Event occurs → market digests info → asset prices adjust"
     },
     {
       "tags": [
@@ -468,11 +502,11 @@
       ],
       "event": "【长鑫科技：调整回购方案，回购金额上调至25亿元至50亿元】长鑫科技公告，公司于2026年10月30日召开第二届董事会第八次会议审议通过回购方案，2026年11月3日收到董事长朱一明提议将回购金额增加至不低于人民币25亿元（含），不超过人民币50亿元（含）。2026年11月19日，公司召开第二届董事会第九次会议审议通过调整回购方案。回购价格不超过人民币63.78元/股（含），回购股份用途为股权激励...",
       "event_en": "【长鑫科技：调整回购方案，回购金额上调至25亿元至50亿元】长鑫科技公告，公司于2026年10月30日召开第二届董事会第八次会议审议通过回购方案，2026年11月3日收到董事长朱一明提议将回购金额增加至不低于CNY25亿元（含），不超过CNY50亿元（含）。2026年11月19日，公司召开第二届董事会第九次会议审议通过调整回购方案。回购价格不超过CNY63.78元/股（含），回购股份用途为股权激励...",
-      "assets": "",
-      "assets_en": "",
+      "assets": "人民币",
+      "assets_en": "CNY",
       "dir": "split",
-      "logic": "",
-      "logic_en": ""
+      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
+      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst"
     },
     {
       "tags": [
@@ -480,15 +514,20 @@
           "type": "china",
           "text": "中国",
           "text_en": "China"
+        },
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
         }
       ],
       "event": "中国国际贸易促进委员会会长任鸿斌11月19日在深圳与美国特斯拉公司首席执行官埃隆·马斯克会面。2027年是中国国际供应链促进博览会（链博会）五周年，中国贸促会会长任鸿斌表示，特斯拉展台每次都能吸引很多中国客户，大家对特斯拉的产品、技术，尤其是前沿技术非常感兴趣。任鸿斌邀请马斯克前往参加开幕式，欢迎特斯拉明年能带来最新技术参展，不仅展示给中国，也展示给全世界。对此，马斯克回应：“当然，听起来非常好。...",
       "event_en": "中国国际贸易促进委员会会长任鸿斌11月19日在深圳与美国Tesla公司首席执行官埃隆·马斯克会面。2027年是中国国际供应链促进博览会（链博会）五周年，中国贸促会会长任鸿斌表示，Tesla展台每次都能吸引很多中国客户，大家对Tesla的产品、技术，尤其是前沿技术非常感兴趣。任鸿斌邀请马斯克前往参加开幕式，欢迎Tesla明年能带来最新技术参展，不仅展示给中国，也展示给全世界。对此，马斯克回应：“当然，听起来非常好。...",
-      "assets": "",
-      "assets_en": "",
+      "assets": "特斯拉",
+      "assets_en": "Tesla",
       "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
+      "logic": "贸易数据变化 → 全球需求/供应链预期调整 → 相关货币/股市影响",
+      "logic_en": "Trade data shift → global demand / supply chain expectations adjust → related currencies / stocks impacted"
     },
     {
       "tags": [
@@ -500,11 +539,11 @@
       ],
       "event": "快手科技第三季度营收316亿元人民币，预估329亿元人民币。\n\n第三季度调整后净利润7.90亿元人民币，预估7.088亿元人民币。\n\n第三季度净亏损9.510亿元人民币，预估亏损1.637亿元人民币。\n\n第三季度调整后息税折旧及摊销前利润38.9亿元人民币，同比下降49%，预估35.8亿元人民币。\n\n第三季度研发支出51.8亿元人民币，同比增长42%，预估51.7亿元人民币。\n\n第三季度平均月活跃...",
       "event_en": "快手科技第三季度营收316亿元CNY，预估329亿元CNY。\n\n第三季度调整后净利润7.90亿元CNY，预估7.088亿元CNY。\n\n第三季度净亏损9.510亿元CNY，预估亏损1.637亿元CNY。\n\n第三季度调整后息税折旧及摊销前利润38.9亿元CNY，同比下降49%，预估35.8亿元CNY。\n\n第三季度研发支出51.8亿元CNY，同比增长42%，预估51.7亿元CNY。\n\n第三季度平均月活跃...",
-      "assets": "",
-      "assets_en": "",
+      "assets": "人民币",
+      "assets_en": "CNY",
       "dir": "split",
-      "logic": "",
-      "logic_en": ""
+      "logic": "财报发布 → 盈利/指引更新 → 估值重估",
+      "logic_en": "Earnings released → earnings/guidance update → re-rating"
     },
     {
       "tags": [
@@ -516,11 +555,11 @@
       ],
       "event": "网易第三季度营收279亿元人民币，预估303.8亿元人民币。\n\n第三季度经调整每股ADS持续经营净收益14.21元人民币，预估16.36元人民币。\n\n第三季度在线游戏服务净收入229.4亿元人民币，同比下降1.7%，预估253.4亿元人民币。\n\n第三季度创新及其他业务净收入15.4亿元人民币，同比增长7.1%，预估14.1亿元人民币。\n\n第三季度毛利190.5亿元人民币，同比增长4.8%，预估21...",
       "event_en": "网易第三季度营收279亿元CNY，预估303.8亿元CNY。\n\n第三季度经调整每股ADS持续经营净收益14.21元CNY，预估16.36元CNY。\n\n第三季度在线游戏服务净收入229.4亿元CNY，同比下降1.7%，预估253.4亿元CNY。\n\n第三季度创新及其他业务净收入15.4亿元CNY，同比增长7.1%，预估14.1亿元CNY。\n\n第三季度毛利190.5亿元CNY，同比增长4.8%，预估21...",
-      "assets": "",
-      "assets_en": "",
+      "assets": "人民币",
+      "assets_en": "CNY",
       "dir": "split",
-      "logic": "",
-      "logic_en": ""
+      "logic": "财报发布 → 盈利/指引更新 → 估值重估",
+      "logic_en": "Earnings released → earnings/guidance update → re-rating"
     },
     {
       "tags": [
@@ -532,11 +571,11 @@
       ],
       "event": "欧洲斯托克50指数开盘涨0.65%，德国DAX指数涨0.3%，英国富时100指数平开，法国CAC 40指数涨0.6%。",
       "event_en": "欧洲斯托克50指数开盘涨0.65%，德国DAX指数涨0.3%，英国富时100指数平开，法国CAC 40指数涨0.6%。",
-      "assets": "",
-      "assets_en": "",
+      "assets": "详见原文",
+      "assets_en": "See source",
       "dir": "up",
-      "logic": "",
-      "logic_en": ""
+      "logic": "利好事件 → 市场预期改善 → 资产价格上涨",
+      "logic_en": "Positive event → market expectations improve → asset prices rise"
     },
     {
       "tags": [
@@ -548,11 +587,11 @@
       ],
       "event": "11月19日，针对投资者关于“你们是否有接到台积电的通知，不给你们供应12nm以下流片了？”的提问，翱捷科技在互动平台回应称，该言论并不属实。凡是取得BIS的ECCN分类编码，确认不属于限制范围的合规芯片可以正常流片。此机制在本次新规出来之前就存在，现在也没有变。无论公司自身产品还是客户项目产品，均沿合规流片和封测路径进行项目推进和管控，这也是公司一直以来坚持的原则。不存在BIS新规出来后台积电不...",
       "event_en": "11月19日，针对投资者关于“你们是否有接到台积电的通知，不给你们供应12nm以下流片了？”的提问，翱捷科技在互动平台回应称，该言论并不属实。凡是取得BIS的ECCN分类编码，确认不属于限制范围的合规chips可以正常流片。此机制在本次新规出来之前就存在，现在也没有变。无论公司自身产品还是客户项目产品，均沿合规流片和封测路径进行项目推进和管控，这也是公司一直以来坚持的原则。不存在BIS新规出来后台积电不...",
-      "assets": "",
-      "assets_en": "",
+      "assets": "芯片板块",
+      "assets_en": "Chips",
       "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
+      "logic": "AI产业事件 → 算力/芯片需求预期变化 → 相关板块联动",
+      "logic_en": "AI industry event → compute/chip demand expectations shift → related sectors correlate"
     },
     {
       "tags": [
@@ -564,11 +603,11 @@
       ],
       "event": "我国自主研发的合成生物领域人工智能基础大模型——“天华开物”酶设计大模型19日在天津大学发布。该大模型与天津大学合成生物自动化设备结合，形成工业酶闭环迭代优化系统，一周内可以给出酶设计方案，让三个月内完成菌种定制化构建和目标产品制备工艺开发成为可能。",
       "event_en": "我国自主研发的合成生物领域人工智能基础大模型——“天华开物”酶设计大模型19日在天津大学发布。该大模型与天津大学合成生物自动化设备结合，形成工业酶闭环迭代优化系统，一周内可以给出酶设计方案，让三个月内完成菌种定制化构建和目标产品制备工艺开发成为可能。",
-      "assets": "",
-      "assets_en": "",
+      "assets": "详见原文",
+      "assets_en": "See source",
       "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
+      "logic": "事件发生 → 市场消化信息 → 资产价格调整",
+      "logic_en": "Event occurs → market digests info → asset prices adjust"
     },
     {
       "tags": [
@@ -580,11 +619,11 @@
       ],
       "event": "当地时间11月19日，伊朗伊斯兰革命卫队海军表示，两艘超级油轮在霍尔木兹海峡沿未经伊朗授权的航线航行时触雷爆炸。这两艘油轮载有超过400万桶原油，这些船只在美军战斗机和无人机的护航下，试图秘密通过霍尔木兹海峡内的一条禁航路线。伊朗伊斯兰革命卫队海军警告称，任何在美军指挥下或与其合作、试图通过霍尔木兹海峡内未经授权航线的油轮，都将遭到伊朗的坚决回击。（央视新闻）",
       "event_en": "当地时间11月19日，伊朗伊斯兰革命卫队海军表示，两艘超级油轮在霍尔木兹海峡沿未经伊朗授权的航线航行时触雷爆炸。这两艘油轮载有超过400万桶crude oil，这些船只在美军战斗机和无人机的护航下，试图秘密通过霍尔木兹海峡内的一条禁航路线。伊朗伊斯兰革命卫队海军警告称，任何在美军指挥下或与其合作、试图通过霍尔木兹海峡内未经授权航线的油轮，都将遭到伊朗的坚决回击。（央视新闻）",
-      "assets": "",
-      "assets_en": "",
+      "assets": "原油",
+      "assets_en": "Crude Oil",
       "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
+      "logic": "原油供给/需求变化 → 油价波动 → 能源股/通胀预期联动",
+      "logic_en": "Oil supply/demand shift → oil price volatility → energy stocks / inflation expectations correlate"
     },
     {
       "tags": [
@@ -596,11 +635,11 @@
       ],
       "event": "快手在港交所公告，展望2026年第四季度，短期经营环境依然充满挑战，消费者和营销客户的支出意愿相对保守，市场竞争激烈。此外，公司的流量趋势已出现疲软，将进一步对商业化能力造成压力。公司在可灵AI及整体AI战略上的持续投入，也将继续带来成本影响，并在短期内对盈利能力形成压力。因此，2026年第四季度，收入和盈利能力可能持续承压。",
       "event_en": "快手在港交所公告，展望2026年第四季度，短期经营环境依然充满挑战，消费者和营销客户的支出意愿相对保守，市场竞争激烈。此外，公司的流量趋势已出现疲软，将进一步对商业化能力造成压力。公司在可灵AI及整体AI战略上的持续投入，也将继续带来成本影响，并在短期内对盈利能力形成压力。因此，2026年第四季度，收入和盈利能力可能持续承压。",
-      "assets": "",
-      "assets_en": "",
+      "assets": "详见原文",
+      "assets_en": "See source",
       "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
+      "logic": "AI产业事件 → 算力/芯片需求预期变化 → 相关板块联动",
+      "logic_en": "AI industry event → compute/chip demand expectations shift → related sectors correlate"
     },
     {
       "tags": [
@@ -612,11 +651,11 @@
       ],
       "event": "在19日下午举办的业绩会上，联想集团董事长兼CEO杨元庆表示，基于今年前两个季度的增长势头，联想集团此前提出的“两年内推动集团年营收突破1000亿美元”的目标，有信心提前到今年，提前一年实现。（证券时报）",
       "event_en": "在19日下午举办的业绩会上，联想集团董事长兼CEO杨元庆表示，基于今年前两个季度的增长势头，联想集团此前提出的“两年内推动集团年营收突破1000亿美元”的目标，有信心提前到今年，提前一年实现。（证券时报）",
-      "assets": "",
-      "assets_en": "",
+      "assets": "美元指数",
+      "assets_en": "USD Index",
       "dir": "up",
-      "logic": "",
-      "logic_en": ""
+      "logic": "财报发布 → 盈利/指引更新 → 估值重估",
+      "logic_en": "Earnings released → earnings/guidance update → re-rating"
     },
     {
       "tags": [
@@ -628,11 +667,11 @@
       ],
       "event": "韩国大法院全员合议庭19日对前总统尹锡悦夫人金建希涉嫌股价操纵、违法接受民调以及与宗教团体有资金往来等“三大争议案”作出终审判决，维持二审判决，判处金建希有期徒刑4年、罚款5000万韩元（约合人民币25万元）。其中，德国汽车公司股价操纵案部分指控成立，与宗教团体有资金往来的指控成立，而违法接受民调则维持二审的无罪判决。 (央视新闻)",
       "event_en": "韩国大法院全员合议庭19日对前总统尹锡悦夫人金建希涉嫌股价操纵、违法接受民调以及与宗教团体有资金往来等“三大争议案”作出终审判决，维持二审判决，判处金建希有期徒刑4年、罚款5000万韩元（约合CNY25万元）。其中，德国汽车公司股价操纵案部分指控成立，与宗教团体有资金往来的指控成立，而违法接受民调则维持二审的无罪判决。 (央视新闻)",
-      "assets": "",
-      "assets_en": "",
+      "assets": "人民币",
+      "assets_en": "CNY",
       "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
+      "logic": "事件发生 → 市场消化信息 → 资产价格调整",
+      "logic_en": "Event occurs → market digests info → asset prices adjust"
     },
     {
       "tags": [
@@ -644,11 +683,11 @@
       ],
       "event": "11月19日，商务部新闻发言人何亚东在例行新闻发布会上表示，今年“双十一”整体平稳。在服务方面，线上下单、线下体验新模式广受欢迎，到店餐饮消费需求加速释放；在场景方面，“词元+终端”创新消费体验，人工智能与消费深度融合，主要电商平台上线词元专区，让买算力像充话费一样简单。总的来看，“双十一”购物车扩容向新，消费边界不断拓展，勾勒出消费多元图景。（证券时报）",
       "event_en": "11月19日，商务部新闻发言人何亚东在例行新闻发布会上表示，今年“双十一”整体平稳。在服务方面，线上下单、线下体验新模式广受欢迎，到店餐饮消费需求加速释放；在场景方面，“词元+终端”创新消费体验，人工智能与消费深度融合，主要电商平台上线词元专区，让买算力像充话费一样简单。总的来看，“双十一”购物车扩容向新，消费边界不断拓展，勾勒出消费多元图景。（证券时报）",
-      "assets": "",
-      "assets_en": "",
+      "assets": "详见原文",
+      "assets_en": "See source",
       "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
+      "logic": "AI产业事件 → 算力/芯片需求预期变化 → 相关板块联动",
+      "logic_en": "AI industry event → compute/chip demand expectations shift → related sectors correlate"
     },
     {
       "tags": [
@@ -660,11 +699,11 @@
       ],
       "event": "联想集团最新财报附注披露，已于2026年4月27日耗资约5000万美元现金，全资收购老牌BIOS厂商Phoenix Technologies EMEA Limited的全部权益及相关业务。该交易确认了2700万美元无形资产及约2595万美元商誉。上半财年，该标的无外部营收，并录得900万美元税前亏损。",
       "event_en": "联想集团最新财报附注披露，已于2026年4月27日耗资约5000万美元现金，全资收购老牌BIOS厂商Phoenix Technologies EMEA Limited的全部权益及相关业务。该交易确认了2700万美元无形资产及约2595万美元商誉。上半财年，该标的无外部营收，并录得900万美元税前亏损。",
-      "assets": "",
-      "assets_en": "",
+      "assets": "美元指数",
+      "assets_en": "USD Index",
       "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
+      "logic": "财报发布 → 盈利/指引更新 → 估值重估",
+      "logic_en": "Earnings released → earnings/guidance update → re-rating"
     },
     {
       "tags": [
@@ -676,11 +715,11 @@
       ],
       "event": "天眼查App显示，DeepSeek工商主体杭州深度求索人工智能基础技术研究有限公司近日完成工商变更，新增股东杭州程砚企业管理咨询合伙企业（有限合伙）、公司注册资本变更为1991.8707万元，增幅约21.1%。",
       "event_en": "天眼查App显示，DeepSeek工商主体杭州深度求索人工智能基础技术研究有限公司近日完成工商变更，新增股东杭州程砚企业管理咨询合伙企业（有限合伙）、公司注册资本变更为1991.8707万元，增幅约21.1%。",
-      "assets": "",
-      "assets_en": "",
+      "assets": "详见原文",
+      "assets_en": "See source",
       "dir": "up",
-      "logic": "",
-      "logic_en": ""
+      "logic": "利好事件 → 市场预期改善 → 资产价格上涨",
+      "logic_en": "Positive event → market expectations improve → asset prices rise"
     },
     {
       "tags": [
@@ -692,11 +731,11 @@
       ],
       "event": "伦敦金属交易所(LME)：铝库存减少1725吨，铜库存增加125吨，锌库存减少575吨，锡库存减少45吨，铅库存减少2675吨，镍库存增加1002吨。",
       "event_en": "伦敦金属交易所(LME)：铝库存减少1725吨，铜库存增加125吨，锌库存减少575吨，锡库存减少45吨，铅库存减少2675吨，镍库存增加1002吨。",
-      "assets": "",
-      "assets_en": "",
+      "assets": "铜",
+      "assets_en": "Copper",
       "dir": "split",
-      "logic": "",
-      "logic_en": ""
+      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
+      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst"
     },
     {
       "tags": [
@@ -708,11 +747,11 @@
       ],
       "event": "从2027届全国普通高校毕业生就业创业工作会议上获悉，2027届全国普通高校毕业生规模预计1299万人，各地各部门将强化协同、央地联动，全力确保2027届高校毕业生就业总体稳定。 (央视新闻)",
       "event_en": "从2027届全国普通高校毕业生就业创业工作会议上获悉，2027届全国普通高校毕业生规模预计1299万人，各地各部门将强化协同、央地联动，全力确保2027届高校毕业生就业总体稳定。 (央视新闻)",
-      "assets": "",
-      "assets_en": "",
+      "assets": "详见原文",
+      "assets_en": "See source",
       "dir": "up",
-      "logic": "",
-      "logic_en": ""
+      "logic": "利好事件 → 市场预期改善 → 资产价格上涨",
+      "logic_en": "Positive event → market expectations improve → asset prices rise"
     },
     {
       "tags": [
@@ -724,11 +763,11 @@
       ],
       "event": "国开行发行1年期债券，规模10亿元，发行利率1.3200%，预期1.2900%，投标倍数12.56倍，边际倍数8.41倍。",
       "event_en": "国开行发行1年期债券，规模10亿元，发行利率1.3200%，预期1.2900%，投标倍数12.56倍，边际倍数8.41倍。",
-      "assets": "",
-      "assets_en": "",
+      "assets": "详见原文",
+      "assets_en": "See source",
       "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
+      "logic": "事件发生 → 市场消化信息 → 资产价格调整",
+      "logic_en": "Event occurs → market digests info → asset prices adjust"
     },
     {
       "tags": [
@@ -740,11 +779,11 @@
       ],
       "event": "11月19日，沪深两市全天成交额合计13051.47亿元。其中，沪市成交额为6369.09亿元；深市成交额为6682.38亿元；创业板成交额为3143.80亿元。",
       "event_en": "11月19日，沪深两市全天成交额合计13051.47亿元。其中，沪市成交额为6369.09亿元；深市成交额为6682.38亿元；ChiNext成交额为3143.80亿元。",
-      "assets": "",
-      "assets_en": "",
+      "assets": "创业板",
+      "assets_en": "ChiNext",
       "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
+      "logic": "事件发生 → 市场消化信息 → 资产价格调整",
+      "logic_en": "Event occurs → market digests info → asset prices adjust"
     },
     {
       "tags": [
@@ -756,29 +795,1013 @@
       ],
       "event": "据Politico援引欧盟官员报道，欧盟委员会遭遇网络攻击，个人数据可能受到影响，部分员工无法录入薪资信息。欧盟机构网络安全应急响应机构CERT-EU本月早些时候发现，黑客使用了ARTEX。这是一款公开可用、利用人工智能(AI)技术识别IT系统漏洞的工具。欧盟委员会认为已遏制大部分攻击，但具体损害程度仍不清楚。该官员表示，部分系统可能正在恢复运行，调查仍在继续。作为预防措施，部分应用程序曾被暂时停...",
       "event_en": "据Politico援引欧盟官员报道，欧盟委员会遭遇网络攻击，个人数据可能受到影响，部分员工无法录入薪资信息。欧盟机构网络安全应急响应机构CERT-EU本月早些时候发现，黑客使用了ARTEX。这是一款公开可用、利用人工智能(AI)技术识别IT系统漏洞的工具。欧盟委员会认为已遏制大部分攻击，但具体损害程度仍不清楚。该官员表示，部分系统可能正在恢复运行，调查仍在继续。作为预防措施，部分应用程序曾被暂时停...",
-      "assets": "",
-      "assets_en": "",
+      "assets": "详见原文",
+      "assets_en": "See source",
       "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
+      "logic": "AI产业事件 → 算力/芯片需求预期变化 → 相关板块联动",
+      "logic_en": "AI industry event → compute/chip demand expectations shift → related sectors correlate"
+    }
+  ],
+  "four_column_table": [
+    {
+      "event": "1、市场全天震荡调整，三大指数小幅下跌。光刻机、光刻胶概念逆势活跃，盛剑科技3连板，兴业股份、格林达、江化微等涨停。先进封装、存储芯片板块盘中拉升，蓝箭电子、时空科技、大港股份等涨停。下跌方面，AI漫剧概念下挫，慈文传媒、横店影视、文投控股3连跌停；算力芯片股下挫，燧原科技20cm跌停，沐曦股份跌超10%。个股呈现普跌态势，沪深京三市超4800股飘绿，今日成交1.31万亿。截止收盘沪指跌0.28%...",
+      "event_en": "1、市场全天震荡调整，三大指数小幅下跌。光刻机、光刻胶概念逆势活跃，盛剑科技3连板，兴业股份、格林达、江化微等涨停。先进封装、存储chips板块盘中拉升，蓝箭电子、时空科技、大HK stocks份等涨停。下跌方面，AI漫剧概念下挫，慈文传媒、横店影视、文投控股3连跌停；算力chips股下挫，燧原科技20cm跌停，沐曦股份跌超10%。个股呈现普跌态势，沪深京三市超4800股飘绿，今日成交1.31万亿。截止收盘沪指跌0.28%...",
+      "assets": "A股/沪指 / A股/深成指 / 创业板 / 港股 / 芯片板块",
+      "assets_en": "A股/沪指 / A股/深成指 / ChiNext / HK Stocks / Chips",
+      "dir": "split",
+      "logic": "AI产业事件 → 算力/芯片需求预期变化 → 相关板块联动",
+      "logic_en": "AI industry event → compute/chip demand expectations shift → related sectors correlate",
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        },
+        {
+          "type": "china",
+          "text": "中国",
+          "text_en": "China"
+        }
+      ]
     },
     {
+      "event": "韩国政府发布声明，韩国年度出口额于当地时间11月19日下午2:09首次突破1万亿美元。继德国、美国和中国之后，韩国成为全球第四个年出口额达到1万亿美元的国家。随着全球科技公司加大人工智能投资，半导体和计算机出口引领了增长。在9个主要地区中，有7个地区的出口额增长，中小企业的出口额也创下历史新高。（彭博）",
+      "event_en": "韩国政府发布声明，韩国年度出口额于当地时间11月19日下午2:09首次突破1万亿美元。继德国、美国和中国之后，韩国成为全球第四个年出口额达到1万亿美元的国家。随着全球科技公司加大人工智能投资，semiconductors和计算机出口引领了增长。在9个主要地区中，有7个地区的出口额增长，中小企业的出口额也创下历史new high。（彭博）",
+      "assets": "美元指数 / 半导体板块",
+      "assets_en": "USD Index / Semiconductors",
+      "dir": "up",
+      "logic": "贸易数据变化 → 全球需求/供应链预期调整 → 相关货币/股市影响",
+      "logic_en": "Trade data shift → global demand / supply chain expectations adjust → related currencies / stocks impacted",
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        },
+        {
+          "type": "china",
+          "text": "中国",
+          "text_en": "China"
+        },
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ]
+    },
+    {
+      "event": "阿里巴巴：截至2026年9月30日止季度，资本性支出为人民币504.77亿元（75.29 亿美元），较2025年同期的人民币315.01亿元增长60%，由于我们持续投入 AI 基础设施，以满足强劲且不断加速的客户需求。同比显著增长主要由于加速扩大算力规模、各类芯片组件价格上涨、预期客户持续采用 AI 智能体带动的 CPU 算力增加，以及采购周期波动。同期自由现金流净流出344.72亿元，上年同期净...",
+      "event_en": "阿里巴巴：截至2026年9月30日止季度，资本性支出为CNY504.77亿元（75.29 亿美元），较2025年同期的CNY315.01亿元增长60%，由于我们持续投入 AI 基础设施，以满足强劲且不断加速的客户需求。同比显著增长主要由于加速扩大算力规模、各类chips组件价格上涨、预期客户持续采用 AI 智能体带动的 CPU 算力增加，以及采购周期波动。同期自由现金流净流出344.72亿元，上年同期净...",
+      "assets": "美元指数 / 人民币 / 阿里巴巴 / 芯片板块",
+      "assets_en": "USD Index / CNY / Alibaba / Chips",
+      "dir": "up",
+      "logic": "AI产业事件 → 算力/芯片需求预期变化 → 相关板块联动",
+      "logic_en": "AI industry event → compute/chip demand expectations shift → related sectors correlate",
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ]
+    },
+    {
+      "event": "阿里巴巴第二财季营收2,715.2亿元人民币，预估2,705.3亿元人民币。\n\n第二财季调整后每ADS收益8.10元人民币，预估10.75元人民币。\n\n第二财季调整后息税折旧及摊销前利润460.6亿元人民币，预估399亿元人民币。\n\n第二财季调整后净利润199.1亿元人民币，预估266.1亿元人民币。\n\n第二财季AI云与算力服务收入609.7亿元人民币，同比增长53%，预估597.7亿元人民币。\n...",
+      "event_en": "阿里巴巴第二财季营收2,715.2亿元CNY，预估2,705.3亿元CNY。\n\n第二财季调整后每ADS收益8.10元CNY，预估10.75元CNY。\n\n第二财季调整后息税折旧及摊销前利润460.6亿元CNY，预估399亿元CNY。\n\n第二财季调整后净利润199.1亿元CNY，预估266.1亿元CNY。\n\n第二财季AI云与算力服务收入609.7亿元CNY，同比增长53%，预估597.7亿元CNY。\n...",
+      "assets": "美元指数 / 人民币 / 阿里巴巴",
+      "assets_en": "USD Index / CNY / Alibaba",
+      "dir": "up",
+      "logic": "财报发布 → 盈利/指引更新 → 估值重估",
+      "logic_en": "Earnings released → earnings/guidance update → re-rating",
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ]
+    },
+    {
+      "event": "商品期货收盘，苹果主力合约跌超7%，沪铜跌超5%，沪锡、国际铜跌超4%，沪银、沪镍、丙烯、乙二醇、液化气跌超3%。集运欧线涨超4%。",
+      "event_en": "商品期货收盘，Apple主力合约跌超7%，沪铜跌超5%，沪锡、国际铜跌超4%，沪银、沪镍、丙烯、乙二醇、液化气跌超3%。集运欧线涨超4%。",
+      "assets": "铜 / 苹果",
+      "assets_en": "Copper / Apple",
+      "dir": "split",
+      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
+      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst",
       "tags": [
         {
           "type": "macro",
           "text": "宏观",
           "text_en": "Macro"
         }
-      ],
-      "event": "韩国总统李在明：韩国今年以来出口额已超过1万亿美元。",
-      "event_en": "韩国总统李在明：韩国今年以来出口额已超过1万亿美元。",
-      "assets": "",
-      "assets_en": "",
+      ]
+    },
+    {
+      "event": "燧原科技11月19日公告，公司股票交易连续三个交易日内（2026年11月17日、11月18日、11月19日）收盘价格跌幅偏离值累计达到30%以上，根据《上海证券交易所交易规则》的有关规定，属于股票交易异常波动情形。公司注意到近期相关产业新闻引发了大量关注和讨论。公司在手订单充沛，并正在与多家国内半导体产业伙伴进行合作，打造基于国产供应链的云端AI芯片产品，构建稳定的供应链体系，支撑公司业务发展。公...",
+      "event_en": "燧原科技11月19日公告，公司股票交易连续三个交易日内（2026年11月17日、11月18日、11月19日）收盘价格跌幅偏离值累计达到30%以上，根据《上海证券交易所交易规则》的有关规定，属于股票交易异常波动情形。公司注意到近期相关产业新闻引发了大量关注和讨论。公司在手订单充沛，并正在与多家国内semiconductors产业伙伴进行合作，打造基于国产供应链的云端AIchips产品，构建稳定的供应链体系，支撑公司业务发展。公...",
+      "assets": "半导体板块 / 芯片板块",
+      "assets_en": "Semiconductors / Chips",
+      "dir": "down",
+      "logic": "AI产业事件 → 算力/芯片需求预期变化 → 相关板块联动",
+      "logic_en": "AI industry event → compute/chip demand expectations shift → related sectors correlate",
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ]
+    },
+    {
+      "event": "上证指数收报3577.62点，跌0.28%。\n\n深证成指收报10583.20点，跌0.71%。\n\n创业板指收报2293.34点，跌0.79%。\n\n沪深300收报3984.84点，涨0.03%。\n\n科创50收报1270.78点，涨1.83%。\n\n中证500收报6251.96点，跌0.48%。\n\n中证1000收报5938.90点，跌1.88%。",
+      "event_en": "上证指数收报3577.62点，跌0.28%。\n\n深证成指收报10583.20点，跌0.71%。\n\nChiNext指收报2293.34点，跌0.79%。\n\n沪深300收报3984.84点，涨0.03%。\n\n科创50收报1270.78点，涨1.83%。\n\n中证500收报6251.96点，跌0.48%。\n\n中证1000收报5938.90点，跌1.88%。",
+      "assets": "创业板 / 科创50",
+      "assets_en": "ChiNext / STAR 50",
+      "dir": "split",
+      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
+      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst",
+      "tags": [
+        {
+          "type": "china",
+          "text": "中国",
+          "text_en": "China"
+        }
+      ]
+    },
+    {
+      "event": "美股期货涨幅扩大，纳斯达克100指数期货涨2%，标普500指数期货涨1.1%，道指期货涨0.7%。Anthropic即将挂牌上市，该公司扩大IPO和私募配售规模，融资1073亿美元。",
+      "event_en": "美股期货涨幅扩大，纳斯达克100指数期货涨2%，S&P500指数期货涨1.1%，道指期货涨0.7%。Anthropic即将挂牌上市，该公司扩大IPO和私募配售规模，融资1073亿美元。",
+      "assets": "标普500 / 道指 / 美元指数",
+      "assets_en": "S&P 500 / Dow Jones / USD Index",
+      "dir": "up",
+      "logic": "IPO事件 → 市场资金流向/行业估值锚定 → 相关板块联动",
+      "logic_en": "IPO event → capital flows / sector valuation anchoring → related sectors correlate",
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ]
+    },
+    {
+      "event": "日经225指数收盘上涨0.7%，报59,444.21点。日本东证指数收盘下跌0.04%，报3,822.47点。",
+      "event_en": "日经225指数收盘上涨0.7%，报59,444.21点。日本东证指数收盘下跌0.04%，报3,822.47点。",
+      "assets": "详见原文",
+      "assets_en": "See source",
+      "dir": "split",
+      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
+      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst",
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ]
+    },
+    {
+      "event": "阿里巴巴美股盘前走低，现跌超2%，此前一度涨超4%。",
+      "event_en": "阿里巴巴美股盘前走低，现跌超2%，此前一度涨超4%。",
+      "assets": "阿里巴巴",
+      "assets_en": "Alibaba",
+      "dir": "split",
+      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
+      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst",
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ]
+    },
+    {
+      "event": "暗盘交易显示，Anthropic PBC股票开盘料较发行价83美元上涨20%至26%。之前这家AI实验室通过扩大了规模的IPO及私募配售，筹资1,073亿美元，打破了SpaceX创造的纪录。",
+      "event_en": "暗盘交易显示，Anthropic PBC股票开盘料较发行价83美元上涨20%至26%。之前这家AI实验室通过扩大了规模的IPO及私募配售，筹资1,073亿美元，打破了SpaceX创造的纪录。",
+      "assets": "美元指数",
+      "assets_en": "USD Index",
+      "dir": "up",
+      "logic": "AI产业事件 → 算力/芯片需求预期变化 → 相关板块联动",
+      "logic_en": "AI industry event → compute/chip demand expectations shift → related sectors correlate",
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ]
+    },
+    {
+      "event": "据新华社，11月19日下午，国家主席习近平在深圳同俄罗斯总统普京、美国总统特朗普举行中俄美元首会晤，总结此次会晤达成的主要共识。",
+      "event_en": "据新华社，11月19日下午，国家主席习近平在深圳同俄罗斯总统普京、美国总统特朗普举行中俄美元首会晤，总结此次会晤达成的主要共识。",
+      "assets": "美元指数",
+      "assets_en": "USD Index",
       "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
+      "logic": "事件发生 → 市场消化信息 → 资产价格调整",
+      "logic_en": "Event occurs → market digests info → asset prices adjust",
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ]
+    },
+    {
+      "event": "11月19日下午，国家主席习近平在深圳同俄罗斯总统普京、美国总统特朗普举行中俄美元首会晤。目前，会晤已结束。（央视新闻）",
+      "event_en": "11月19日下午，国家主席习近平在深圳同俄罗斯总统普京、美国总统特朗普举行中俄美元首会晤。目前，会晤已结束。（央视新闻）",
+      "assets": "美元指数",
+      "assets_en": "USD Index",
+      "dir": "neutral",
+      "logic": "事件发生 → 市场消化信息 → 资产价格调整",
+      "logic_en": "Event occurs → market digests info → asset prices adjust",
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ]
+    },
+    {
+      "event": "11月19日下午，国家主席习近平将在深圳同俄罗斯总统普京、美国总统特朗普举行中俄美元首会晤。 (央视新闻)",
+      "event_en": "11月19日下午，国家主席习近平将在深圳同俄罗斯总统普京、美国总统特朗普举行中俄美元首会晤。 (央视新闻)",
+      "assets": "美元指数",
+      "assets_en": "USD Index",
+      "dir": "neutral",
+      "logic": "事件发生 → 市场消化信息 → 资产价格调整",
+      "logic_en": "Event occurs → market digests info → asset prices adjust",
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ]
+    },
+    {
+      "event": "美股盘前，存储芯片股普涨，SK海力士涨约5%，闪迪涨约4%，美光科技涨约4%，希捷科技涨约4%。\n\n光通信股普涨，Coherent涨约4%，Credo涨约5%，Lumentum涨约4%，迈威尔科技涨约4%，康宁涨约3%。",
+      "event_en": "美股盘前，存储chips股普涨，SK海力士涨约5%，闪迪涨约4%，美光科技涨约4%，希捷科技涨约4%。\n\n光通信股普涨，Coherent涨约4%，Credo涨约5%，Lumentum涨约4%，迈威尔科技涨约4%，康宁涨约3%。",
+      "assets": "芯片板块",
+      "assets_en": "Chips",
+      "dir": "up",
+      "logic": "AI产业事件 → 算力/芯片需求预期变化 → 相关板块联动",
+      "logic_en": "AI industry event → compute/chip demand expectations shift → related sectors correlate",
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ]
+    },
+    {
+      "event": "11月19日晚间，阿里巴巴集团发布最新季度业绩，阿里云外部客户收入同比增长64%，较上一季度的45%显著加快，刷新近六年来的增速高点。季度内，AI相关产品收入连续第13个季度实现三位数增长，驱动阿里云收入增长再创新高。",
+      "event_en": "11月19日晚间，阿里巴巴集团发布最新季度业绩，阿里云外部客户收入同比增长64%，较上一季度的45%显著加快，刷新近六年来的增速高点。季度内，AI相关产品收入连续第13个季度实现三位数增长，驱动阿里云收入增长再创new high。",
+      "assets": "阿里巴巴",
+      "assets_en": "Alibaba",
+      "dir": "up",
+      "logic": "AI产业事件 → 算力/芯片需求预期变化 → 相关板块联动",
+      "logic_en": "AI industry event → compute/chip demand expectations shift → related sectors correlate",
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ]
+    },
+    {
+      "event": "恒生指数收盘跌1.95%，报22841.62点；恒生科技指数收跌2.33%，报3649.14点，创2024年9月17日以来的最低。万国数据跌7.41%，小马智行跌7.93%，京东健康跌7%，联想集团跌5.52%，微博跌5.77%，阿里巴巴跌5.51%。",
+      "event_en": "恒生指数收盘跌1.95%，报22841.62点；恒生科技指数收跌2.33%，报3649.14点，创2024年9月17日以来的最低。万国数据跌7.41%，小马智行跌7.93%，京东健康跌7%，联想集团跌5.52%，微博跌5.77%，阿里巴巴跌5.51%。",
+      "assets": "港股/恒生科技 / 阿里巴巴",
+      "assets_en": "港股/恒生科技 / Alibaba",
+      "dir": "down",
+      "logic": "利空事件 → 市场预期恶化 → 资产价格下跌",
+      "logic_en": "Negative event → market expectations worsen → asset prices fall",
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ]
+    },
+    {
+      "event": "世界黄金协会数据显示，9月全球央行继续增持黄金，公开净购金量达61吨，创2026年迄今单月最高纪录。波兰和中国为购金主力，其他净买家包括乌兹别克斯坦、哈萨克斯坦、约旦、捷克和玻利维亚。今年1至9月，全球央行公开净购黄金228吨，较去年同期下降7%。",
+      "event_en": "世界gold协会数据显示，9月全球央行继续增持gold，公开净购金量达61吨，创2026年迄今单月最高纪录。波兰和中国为购金主力，其他净买家包括乌兹别克斯坦、哈萨克斯坦、约旦、捷克和玻利维亚。今年1至9月，全球央行公开净购gold228吨，较去年同期下降7%。",
+      "assets": "黄金",
+      "assets_en": "Gold",
+      "dir": "split",
+      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
+      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst",
+      "tags": [
+        {
+          "type": "fed",
+          "text": "央行",
+          "text_en": "Central Bank"
+        },
+        {
+          "type": "china",
+          "text": "中国",
+          "text_en": "China"
+        }
+      ]
+    },
+    {
+      "event": "阿里巴巴美股盘前拉升，一度涨超4%，公司第二财季营收和调整后每ADS收益均高于预期。",
+      "event_en": "阿里巴巴美股盘前拉升，一度涨超4%，公司第二财季营收和调整后每ADS收益均高于预期。",
+      "assets": "阿里巴巴",
+      "assets_en": "Alibaba",
+      "dir": "up",
+      "logic": "财报发布 → 盈利/指引更新 → 估值重估",
+      "logic_en": "Earnings released → earnings/guidance update → re-rating",
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ]
+    },
+    {
+      "event": "11月19日，网易有道公布了2026年第三季度未经审计的财务业绩。报告期内，有道持续推进AI原生战略，聚焦高质量、高毛利率业务，AI应用在学习、办公、营销等场景纵深落地，盈利能力与经营质量保持稳健提升。",
+      "event_en": "11月19日，网易有道公布了2026年第三季度未经审计的财务业绩。报告期内，有道持续推进AI原生战略，聚焦高质量、高毛利率业务，AI应用在学习、办公、营销等场景纵深落地，盈利能力与经营质量保持稳健提升。",
+      "assets": "详见原文",
+      "assets_en": "See source",
+      "dir": "up",
+      "logic": "AI产业事件 → 算力/芯片需求预期变化 → 相关板块联动",
+      "logic_en": "AI industry event → compute/chip demand expectations shift → related sectors correlate",
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        },
+        {
+          "type": "fed",
+          "text": "央行",
+          "text_en": "Central Bank"
+        }
+      ]
+    },
+    {
+      "event": "欧洲央行管委Kocher：可能需要进一步加息。",
+      "event_en": "欧洲央行管委Kocher：可能需要进一步rate hike。",
+      "assets": "详见原文",
+      "assets_en": "See source",
+      "dir": "neutral",
+      "logic": "央行鹰派信号 → 加息预期升温 → 美元走强/利率上行 → 风险资产承压",
+      "logic_en": "Central bank hawkish signal → rate hike expectations rise → USD strengthens / yields rise → risk assets under pressure",
+      "tags": [
+        {
+          "type": "fed",
+          "text": "央行",
+          "text_en": "Central Bank"
+        }
+      ]
+    },
+    {
+      "event": "快手在港交所公告，2026年第三季度，直播业务收入为人民币78亿元，同比下降19.0%。其他服务收入由2025年同期的人民币59亿元增加1.5%至2026年第三季度的人民币60亿元，主要是由于游戏及可灵AI业务收入增加，部分被电商收入减少所抵销。",
+      "event_en": "快手在港交所公告，2026年第三季度，直播业务收入为CNY78亿元，同比下降19.0%。其他服务收入由2025年同期的CNY59亿元增加1.5%至2026年第三季度的CNY60亿元，主要是由于游戏及可灵AI业务收入增加，部分被电商收入减少所抵销。",
+      "assets": "人民币",
+      "assets_en": "CNY",
+      "dir": "split",
+      "logic": "AI产业事件 → 算力/芯片需求预期变化 → 相关板块联动",
+      "logic_en": "AI industry event → compute/chip demand expectations shift → related sectors correlate",
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ]
+    },
+    {
+      "event": "部分宽基ETF持续放量，中证500ETF南方(510500)成交超100亿元，已超昨日4倍，科创50ETF易方达（588080）成交超66亿元，超昨日1.5倍，创业板ETF易方达（159915）、沪深300ETF华泰柏瑞(510300)、中证1000ETF南方(512100)等均明显放量。",
+      "event_en": "部分宽基ETF持续放量，中证500ETF南方(510500)成交超100亿元，已超昨日4倍，科创50ETF易方达（588080）成交超66亿元，超昨日1.5倍，ChiNextETF易方达（159915）、沪深300ETF华泰柏瑞(510300)、中证1000ETF南方(512100)等均明显放量。",
+      "assets": "创业板 / 科创50",
+      "assets_en": "ChiNext / STAR 50",
+      "dir": "neutral",
+      "logic": "事件发生 → 市场消化信息 → 资产价格调整",
+      "logic_en": "Event occurs → market digests info → asset prices adjust",
+      "tags": [
+        {
+          "type": "china",
+          "text": "中国",
+          "text_en": "China"
+        }
+      ]
+    },
+    {
+      "event": "【长鑫科技：调整回购方案，回购金额上调至25亿元至50亿元】长鑫科技公告，公司于2026年10月30日召开第二届董事会第八次会议审议通过回购方案，2026年11月3日收到董事长朱一明提议将回购金额增加至不低于人民币25亿元（含），不超过人民币50亿元（含）。2026年11月19日，公司召开第二届董事会第九次会议审议通过调整回购方案。回购价格不超过人民币63.78元/股（含），回购股份用途为股权激励...",
+      "event_en": "【长鑫科技：调整回购方案，回购金额上调至25亿元至50亿元】长鑫科技公告，公司于2026年10月30日召开第二届董事会第八次会议审议通过回购方案，2026年11月3日收到董事长朱一明提议将回购金额增加至不低于CNY25亿元（含），不超过CNY50亿元（含）。2026年11月19日，公司召开第二届董事会第九次会议审议通过调整回购方案。回购价格不超过CNY63.78元/股（含），回购股份用途为股权激励...",
+      "assets": "人民币",
+      "assets_en": "CNY",
+      "dir": "split",
+      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
+      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst",
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ]
+    },
+    {
+      "event": "中国国际贸易促进委员会会长任鸿斌11月19日在深圳与美国特斯拉公司首席执行官埃隆·马斯克会面。2027年是中国国际供应链促进博览会（链博会）五周年，中国贸促会会长任鸿斌表示，特斯拉展台每次都能吸引很多中国客户，大家对特斯拉的产品、技术，尤其是前沿技术非常感兴趣。任鸿斌邀请马斯克前往参加开幕式，欢迎特斯拉明年能带来最新技术参展，不仅展示给中国，也展示给全世界。对此，马斯克回应：“当然，听起来非常好。...",
+      "event_en": "中国国际贸易促进委员会会长任鸿斌11月19日在深圳与美国Tesla公司首席执行官埃隆·马斯克会面。2027年是中国国际供应链促进博览会（链博会）五周年，中国贸促会会长任鸿斌表示，Tesla展台每次都能吸引很多中国客户，大家对Tesla的产品、技术，尤其是前沿技术非常感兴趣。任鸿斌邀请马斯克前往参加开幕式，欢迎Tesla明年能带来最新技术参展，不仅展示给中国，也展示给全世界。对此，马斯克回应：“当然，听起来非常好。...",
+      "assets": "特斯拉",
+      "assets_en": "Tesla",
+      "dir": "neutral",
+      "logic": "贸易数据变化 → 全球需求/供应链预期调整 → 相关货币/股市影响",
+      "logic_en": "Trade data shift → global demand / supply chain expectations adjust → related currencies / stocks impacted",
+      "tags": [
+        {
+          "type": "china",
+          "text": "中国",
+          "text_en": "China"
+        },
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ]
+    },
+    {
+      "event": "快手科技第三季度营收316亿元人民币，预估329亿元人民币。\n\n第三季度调整后净利润7.90亿元人民币，预估7.088亿元人民币。\n\n第三季度净亏损9.510亿元人民币，预估亏损1.637亿元人民币。\n\n第三季度调整后息税折旧及摊销前利润38.9亿元人民币，同比下降49%，预估35.8亿元人民币。\n\n第三季度研发支出51.8亿元人民币，同比增长42%，预估51.7亿元人民币。\n\n第三季度平均月活跃...",
+      "event_en": "快手科技第三季度营收316亿元CNY，预估329亿元CNY。\n\n第三季度调整后净利润7.90亿元CNY，预估7.088亿元CNY。\n\n第三季度净亏损9.510亿元CNY，预估亏损1.637亿元CNY。\n\n第三季度调整后息税折旧及摊销前利润38.9亿元CNY，同比下降49%，预估35.8亿元CNY。\n\n第三季度研发支出51.8亿元CNY，同比增长42%，预估51.7亿元CNY。\n\n第三季度平均月活跃...",
+      "assets": "人民币",
+      "assets_en": "CNY",
+      "dir": "split",
+      "logic": "财报发布 → 盈利/指引更新 → 估值重估",
+      "logic_en": "Earnings released → earnings/guidance update → re-rating",
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ]
+    },
+    {
+      "event": "网易第三季度营收279亿元人民币，预估303.8亿元人民币。\n\n第三季度经调整每股ADS持续经营净收益14.21元人民币，预估16.36元人民币。\n\n第三季度在线游戏服务净收入229.4亿元人民币，同比下降1.7%，预估253.4亿元人民币。\n\n第三季度创新及其他业务净收入15.4亿元人民币，同比增长7.1%，预估14.1亿元人民币。\n\n第三季度毛利190.5亿元人民币，同比增长4.8%，预估21...",
+      "event_en": "网易第三季度营收279亿元CNY，预估303.8亿元CNY。\n\n第三季度经调整每股ADS持续经营净收益14.21元CNY，预估16.36元CNY。\n\n第三季度在线游戏服务净收入229.4亿元CNY，同比下降1.7%，预估253.4亿元CNY。\n\n第三季度创新及其他业务净收入15.4亿元CNY，同比增长7.1%，预估14.1亿元CNY。\n\n第三季度毛利190.5亿元CNY，同比增长4.8%，预估21...",
+      "assets": "人民币",
+      "assets_en": "CNY",
+      "dir": "split",
+      "logic": "财报发布 → 盈利/指引更新 → 估值重估",
+      "logic_en": "Earnings released → earnings/guidance update → re-rating",
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ]
+    },
+    {
+      "event": "欧洲斯托克50指数开盘涨0.65%，德国DAX指数涨0.3%，英国富时100指数平开，法国CAC 40指数涨0.6%。",
+      "event_en": "欧洲斯托克50指数开盘涨0.65%，德国DAX指数涨0.3%，英国富时100指数平开，法国CAC 40指数涨0.6%。",
+      "assets": "详见原文",
+      "assets_en": "See source",
+      "dir": "up",
+      "logic": "利好事件 → 市场预期改善 → 资产价格上涨",
+      "logic_en": "Positive event → market expectations improve → asset prices rise",
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ]
+    },
+    {
+      "event": "11月19日，针对投资者关于“你们是否有接到台积电的通知，不给你们供应12nm以下流片了？”的提问，翱捷科技在互动平台回应称，该言论并不属实。凡是取得BIS的ECCN分类编码，确认不属于限制范围的合规芯片可以正常流片。此机制在本次新规出来之前就存在，现在也没有变。无论公司自身产品还是客户项目产品，均沿合规流片和封测路径进行项目推进和管控，这也是公司一直以来坚持的原则。不存在BIS新规出来后台积电不...",
+      "event_en": "11月19日，针对投资者关于“你们是否有接到台积电的通知，不给你们供应12nm以下流片了？”的提问，翱捷科技在互动平台回应称，该言论并不属实。凡是取得BIS的ECCN分类编码，确认不属于限制范围的合规chips可以正常流片。此机制在本次新规出来之前就存在，现在也没有变。无论公司自身产品还是客户项目产品，均沿合规流片和封测路径进行项目推进和管控，这也是公司一直以来坚持的原则。不存在BIS新规出来后台积电不...",
+      "assets": "芯片板块",
+      "assets_en": "Chips",
+      "dir": "neutral",
+      "logic": "AI产业事件 → 算力/芯片需求预期变化 → 相关板块联动",
+      "logic_en": "AI industry event → compute/chip demand expectations shift → related sectors correlate",
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ]
+    },
+    {
+      "event": "我国自主研发的合成生物领域人工智能基础大模型——“天华开物”酶设计大模型19日在天津大学发布。该大模型与天津大学合成生物自动化设备结合，形成工业酶闭环迭代优化系统，一周内可以给出酶设计方案，让三个月内完成菌种定制化构建和目标产品制备工艺开发成为可能。",
+      "event_en": "我国自主研发的合成生物领域人工智能基础大模型——“天华开物”酶设计大模型19日在天津大学发布。该大模型与天津大学合成生物自动化设备结合，形成工业酶闭环迭代优化系统，一周内可以给出酶设计方案，让三个月内完成菌种定制化构建和目标产品制备工艺开发成为可能。",
+      "assets": "详见原文",
+      "assets_en": "See source",
+      "dir": "neutral",
+      "logic": "事件发生 → 市场消化信息 → 资产价格调整",
+      "logic_en": "Event occurs → market digests info → asset prices adjust",
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ]
+    },
+    {
+      "event": "当地时间11月19日，伊朗伊斯兰革命卫队海军表示，两艘超级油轮在霍尔木兹海峡沿未经伊朗授权的航线航行时触雷爆炸。这两艘油轮载有超过400万桶原油，这些船只在美军战斗机和无人机的护航下，试图秘密通过霍尔木兹海峡内的一条禁航路线。伊朗伊斯兰革命卫队海军警告称，任何在美军指挥下或与其合作、试图通过霍尔木兹海峡内未经授权航线的油轮，都将遭到伊朗的坚决回击。（央视新闻）",
+      "event_en": "当地时间11月19日，伊朗伊斯兰革命卫队海军表示，两艘超级油轮在霍尔木兹海峡沿未经伊朗授权的航线航行时触雷爆炸。这两艘油轮载有超过400万桶crude oil，这些船只在美军战斗机和无人机的护航下，试图秘密通过霍尔木兹海峡内的一条禁航路线。伊朗伊斯兰革命卫队海军警告称，任何在美军指挥下或与其合作、试图通过霍尔木兹海峡内未经授权航线的油轮，都将遭到伊朗的坚决回击。（央视新闻）",
+      "assets": "原油",
+      "assets_en": "Crude Oil",
+      "dir": "neutral",
+      "logic": "原油供给/需求变化 → 油价波动 → 能源股/通胀预期联动",
+      "logic_en": "Oil supply/demand shift → oil price volatility → energy stocks / inflation expectations correlate",
+      "tags": [
+        {
+          "type": "energy",
+          "text": "能源",
+          "text_en": "Energy"
+        }
+      ]
+    },
+    {
+      "event": "快手在港交所公告，展望2026年第四季度，短期经营环境依然充满挑战，消费者和营销客户的支出意愿相对保守，市场竞争激烈。此外，公司的流量趋势已出现疲软，将进一步对商业化能力造成压力。公司在可灵AI及整体AI战略上的持续投入，也将继续带来成本影响，并在短期内对盈利能力形成压力。因此，2026年第四季度，收入和盈利能力可能持续承压。",
+      "event_en": "快手在港交所公告，展望2026年第四季度，短期经营环境依然充满挑战，消费者和营销客户的支出意愿相对保守，市场竞争激烈。此外，公司的流量趋势已出现疲软，将进一步对商业化能力造成压力。公司在可灵AI及整体AI战略上的持续投入，也将继续带来成本影响，并在短期内对盈利能力形成压力。因此，2026年第四季度，收入和盈利能力可能持续承压。",
+      "assets": "详见原文",
+      "assets_en": "See source",
+      "dir": "neutral",
+      "logic": "AI产业事件 → 算力/芯片需求预期变化 → 相关板块联动",
+      "logic_en": "AI industry event → compute/chip demand expectations shift → related sectors correlate",
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ]
+    },
+    {
+      "event": "在19日下午举办的业绩会上，联想集团董事长兼CEO杨元庆表示，基于今年前两个季度的增长势头，联想集团此前提出的“两年内推动集团年营收突破1000亿美元”的目标，有信心提前到今年，提前一年实现。（证券时报）",
+      "event_en": "在19日下午举办的业绩会上，联想集团董事长兼CEO杨元庆表示，基于今年前两个季度的增长势头，联想集团此前提出的“两年内推动集团年营收突破1000亿美元”的目标，有信心提前到今年，提前一年实现。（证券时报）",
+      "assets": "美元指数",
+      "assets_en": "USD Index",
+      "dir": "up",
+      "logic": "财报发布 → 盈利/指引更新 → 估值重估",
+      "logic_en": "Earnings released → earnings/guidance update → re-rating",
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ]
+    },
+    {
+      "event": "韩国大法院全员合议庭19日对前总统尹锡悦夫人金建希涉嫌股价操纵、违法接受民调以及与宗教团体有资金往来等“三大争议案”作出终审判决，维持二审判决，判处金建希有期徒刑4年、罚款5000万韩元（约合人民币25万元）。其中，德国汽车公司股价操纵案部分指控成立，与宗教团体有资金往来的指控成立，而违法接受民调则维持二审的无罪判决。 (央视新闻)",
+      "event_en": "韩国大法院全员合议庭19日对前总统尹锡悦夫人金建希涉嫌股价操纵、违法接受民调以及与宗教团体有资金往来等“三大争议案”作出终审判决，维持二审判决，判处金建希有期徒刑4年、罚款5000万韩元（约合CNY25万元）。其中，德国汽车公司股价操纵案部分指控成立，与宗教团体有资金往来的指控成立，而违法接受民调则维持二审的无罪判决。 (央视新闻)",
+      "assets": "人民币",
+      "assets_en": "CNY",
+      "dir": "neutral",
+      "logic": "事件发生 → 市场消化信息 → 资产价格调整",
+      "logic_en": "Event occurs → market digests info → asset prices adjust",
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ]
+    },
+    {
+      "event": "11月19日，商务部新闻发言人何亚东在例行新闻发布会上表示，今年“双十一”整体平稳。在服务方面，线上下单、线下体验新模式广受欢迎，到店餐饮消费需求加速释放；在场景方面，“词元+终端”创新消费体验，人工智能与消费深度融合，主要电商平台上线词元专区，让买算力像充话费一样简单。总的来看，“双十一”购物车扩容向新，消费边界不断拓展，勾勒出消费多元图景。（证券时报）",
+      "event_en": "11月19日，商务部新闻发言人何亚东在例行新闻发布会上表示，今年“双十一”整体平稳。在服务方面，线上下单、线下体验新模式广受欢迎，到店餐饮消费需求加速释放；在场景方面，“词元+终端”创新消费体验，人工智能与消费深度融合，主要电商平台上线词元专区，让买算力像充话费一样简单。总的来看，“双十一”购物车扩容向新，消费边界不断拓展，勾勒出消费多元图景。（证券时报）",
+      "assets": "详见原文",
+      "assets_en": "See source",
+      "dir": "neutral",
+      "logic": "AI产业事件 → 算力/芯片需求预期变化 → 相关板块联动",
+      "logic_en": "AI industry event → compute/chip demand expectations shift → related sectors correlate",
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ]
+    },
+    {
+      "event": "联想集团最新财报附注披露，已于2026年4月27日耗资约5000万美元现金，全资收购老牌BIOS厂商Phoenix Technologies EMEA Limited的全部权益及相关业务。该交易确认了2700万美元无形资产及约2595万美元商誉。上半财年，该标的无外部营收，并录得900万美元税前亏损。",
+      "event_en": "联想集团最新财报附注披露，已于2026年4月27日耗资约5000万美元现金，全资收购老牌BIOS厂商Phoenix Technologies EMEA Limited的全部权益及相关业务。该交易确认了2700万美元无形资产及约2595万美元商誉。上半财年，该标的无外部营收，并录得900万美元税前亏损。",
+      "assets": "美元指数",
+      "assets_en": "USD Index",
+      "dir": "neutral",
+      "logic": "财报发布 → 盈利/指引更新 → 估值重估",
+      "logic_en": "Earnings released → earnings/guidance update → re-rating",
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ]
+    },
+    {
+      "event": "天眼查App显示，DeepSeek工商主体杭州深度求索人工智能基础技术研究有限公司近日完成工商变更，新增股东杭州程砚企业管理咨询合伙企业（有限合伙）、公司注册资本变更为1991.8707万元，增幅约21.1%。",
+      "event_en": "天眼查App显示，DeepSeek工商主体杭州深度求索人工智能基础技术研究有限公司近日完成工商变更，新增股东杭州程砚企业管理咨询合伙企业（有限合伙）、公司注册资本变更为1991.8707万元，增幅约21.1%。",
+      "assets": "详见原文",
+      "assets_en": "See source",
+      "dir": "up",
+      "logic": "利好事件 → 市场预期改善 → 资产价格上涨",
+      "logic_en": "Positive event → market expectations improve → asset prices rise",
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ]
+    },
+    {
+      "event": "伦敦金属交易所(LME)：铝库存减少1725吨，铜库存增加125吨，锌库存减少575吨，锡库存减少45吨，铅库存减少2675吨，镍库存增加1002吨。",
+      "event_en": "伦敦金属交易所(LME)：铝库存减少1725吨，铜库存增加125吨，锌库存减少575吨，锡库存减少45吨，铅库存减少2675吨，镍库存增加1002吨。",
+      "assets": "铜",
+      "assets_en": "Copper",
+      "dir": "split",
+      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
+      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst",
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ]
+    },
+    {
+      "event": "从2027届全国普通高校毕业生就业创业工作会议上获悉，2027届全国普通高校毕业生规模预计1299万人，各地各部门将强化协同、央地联动，全力确保2027届高校毕业生就业总体稳定。 (央视新闻)",
+      "event_en": "从2027届全国普通高校毕业生就业创业工作会议上获悉，2027届全国普通高校毕业生规模预计1299万人，各地各部门将强化协同、央地联动，全力确保2027届高校毕业生就业总体稳定。 (央视新闻)",
+      "assets": "详见原文",
+      "assets_en": "See source",
+      "dir": "up",
+      "logic": "利好事件 → 市场预期改善 → 资产价格上涨",
+      "logic_en": "Positive event → market expectations improve → asset prices rise",
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ]
+    },
+    {
+      "event": "国开行发行1年期债券，规模10亿元，发行利率1.3200%，预期1.2900%，投标倍数12.56倍，边际倍数8.41倍。",
+      "event_en": "国开行发行1年期债券，规模10亿元，发行利率1.3200%，预期1.2900%，投标倍数12.56倍，边际倍数8.41倍。",
+      "assets": "详见原文",
+      "assets_en": "See source",
+      "dir": "neutral",
+      "logic": "事件发生 → 市场消化信息 → 资产价格调整",
+      "logic_en": "Event occurs → market digests info → asset prices adjust",
+      "tags": [
+        {
+          "type": "fed",
+          "text": "央行",
+          "text_en": "Central Bank"
+        }
+      ]
+    },
+    {
+      "event": "11月19日，沪深两市全天成交额合计13051.47亿元。其中，沪市成交额为6369.09亿元；深市成交额为6682.38亿元；创业板成交额为3143.80亿元。",
+      "event_en": "11月19日，沪深两市全天成交额合计13051.47亿元。其中，沪市成交额为6369.09亿元；深市成交额为6682.38亿元；ChiNext成交额为3143.80亿元。",
+      "assets": "创业板",
+      "assets_en": "ChiNext",
+      "dir": "neutral",
+      "logic": "事件发生 → 市场消化信息 → 资产价格调整",
+      "logic_en": "Event occurs → market digests info → asset prices adjust",
+      "tags": [
+        {
+          "type": "china",
+          "text": "中国",
+          "text_en": "China"
+        }
+      ]
+    },
+    {
+      "event": "据Politico援引欧盟官员报道，欧盟委员会遭遇网络攻击，个人数据可能受到影响，部分员工无法录入薪资信息。欧盟机构网络安全应急响应机构CERT-EU本月早些时候发现，黑客使用了ARTEX。这是一款公开可用、利用人工智能(AI)技术识别IT系统漏洞的工具。欧盟委员会认为已遏制大部分攻击，但具体损害程度仍不清楚。该官员表示，部分系统可能正在恢复运行，调查仍在继续。作为预防措施，部分应用程序曾被暂时停...",
+      "event_en": "据Politico援引欧盟官员报道，欧盟委员会遭遇网络攻击，个人数据可能受到影响，部分员工无法录入薪资信息。欧盟机构网络安全应急响应机构CERT-EU本月早些时候发现，黑客使用了ARTEX。这是一款公开可用、利用人工智能(AI)技术识别IT系统漏洞的工具。欧盟委员会认为已遏制大部分攻击，但具体损害程度仍不清楚。该官员表示，部分系统可能正在恢复运行，调查仍在继续。作为预防措施，部分应用程序曾被暂时停...",
+      "assets": "详见原文",
+      "assets_en": "See source",
+      "dir": "neutral",
+      "logic": "AI产业事件 → 算力/芯片需求预期变化 → 相关板块联动",
+      "logic_en": "AI industry event → compute/chip demand expectations shift → related sectors correlate",
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ]
     }
   ],
-  "chains": [],
-  "verifications": []
+  "chains": [
+    {
+      "title": "AI产业链因果链",
+      "title_en": "AI Industry Chain Causal Chain",
+      "status": "unverified",
+      "nodes": [
+        {
+          "text": "1、市场全天震荡调整，三大指数小幅下跌。光刻机、光刻胶概念逆势活跃，盛剑科技3连板，兴业股份、格林达、江化微等涨停。先进封装、存储芯片板块盘中拉升，蓝箭电子、时",
+          "text_en": "1、市场全天震荡调整，三大指数小幅下跌。光刻机、光刻胶概念逆势活跃，盛剑科技3连板，兴业股份、格林达、江化微等涨停。先进封装、存储chips板块盘中拉升，蓝箭电",
+          "type": "cause"
+        },
+        {
+          "text": "韩国政府发布声明，韩国年度出口额于当地时间11月19日下午2:09首次突破1万亿美元。继德国、美国和中国之后，韩国成为全球第四个年出口额达到1万亿美元的国家。随",
+          "text_en": "韩国政府发布声明，韩国年度出口额于当地时间11月19日下午2:09首次突破1万亿美元。继德国、美国和中国之后，韩国成为全球第四个年出口额达到1万亿美元的国家。随",
+          "type": "intermediate"
+        },
+        {
+          "text": "阿里巴巴：截至2026年9月30日止季度，资本性支出为人民币504.77亿元（75.29 亿美元），较2025年同期的人民币315.01亿元增长60%，由于我们",
+          "text_en": "阿里巴巴：截至2026年9月30日止季度，资本性支出为CNY504.77亿元（75.29 亿美元），较2025年同期的CNY315.01亿元增长60%，由于我们",
+          "type": "intermediate"
+        },
+        {
+          "text": "阿里巴巴第二财季营收2,715.2亿元人民币，预估2,705.3亿元人民币。\n\n第二财季调整后每ADS收益8.10元人民币，预估10.75元人民币。\n\n第二财季",
+          "text_en": "阿里巴巴第二财季营收2,715.2亿元CNY，预估2,705.3亿元CNY。\n\n第二财季调整后每ADS收益8.10元CNY，预估10.75元CNY。\n\n第二财季",
+          "type": "effect"
+        }
+      ],
+      "jargon": [
+        {
+          "term": "AI Capex（资本支出）",
+          "term_en": "AI Capex (Capital Expenditure)",
+          "explain": "AI公司花在买GPU、建数据中心、租算力上的钱。这笔钱最终流向芯片公司。",
+          "explain_en": "Money AI companies spend on GPUs, data centers, and compute. Ultimately flows to chip makers."
+        },
+        {
+          "term": "算力",
+          "term_en": "Compute Power",
+          "explain": "计算机处理信息的能力，AI训练和推理都需要大量算力。算力越多，AI越强。",
+          "explain_en": "Computing capacity for AI training and inference. More compute = stronger AI."
+        },
+        {
+          "term": "涨跌幅",
+          "term_en": "Price Change %",
+          "explain": "价格变化的百分比。涨5%意味着如果你有100元，现在变成了105元。",
+          "explain_en": "Percentage price change. +5% means 100 units become 105."
+        }
+      ]
+    },
+    {
+      "title": "中国市场因果链",
+      "title_en": "China Market Causal Chain",
+      "status": "unverified",
+      "nodes": [
+        {
+          "text": "1、市场全天震荡调整，三大指数小幅下跌。光刻机、光刻胶概念逆势活跃，盛剑科技3连板，兴业股份、格林达、江化微等涨停。先进封装、存储芯片板块盘中拉升，蓝箭电子、时",
+          "text_en": "1、市场全天震荡调整，三大指数小幅下跌。光刻机、光刻胶概念逆势活跃，盛剑科技3连板，兴业股份、格林达、江化微等涨停。先进封装、存储chips板块盘中拉升，蓝箭电",
+          "type": "cause"
+        },
+        {
+          "text": "韩国政府发布声明，韩国年度出口额于当地时间11月19日下午2:09首次突破1万亿美元。继德国、美国和中国之后，韩国成为全球第四个年出口额达到1万亿美元的国家。随",
+          "text_en": "韩国政府发布声明，韩国年度出口额于当地时间11月19日下午2:09首次突破1万亿美元。继德国、美国和中国之后，韩国成为全球第四个年出口额达到1万亿美元的国家。随",
+          "type": "intermediate"
+        },
+        {
+          "text": "上证指数收报3577.62点，跌0.28%。\n\n深证成指收报10583.20点，跌0.71%。\n\n创业板指收报2293.34点，跌0.79%。\n\n沪深300收报",
+          "text_en": "上证指数收报3577.62点，跌0.28%。\n\n深证成指收报10583.20点，跌0.71%。\n\nChiNext指收报2293.34点，跌0.79%。\n\n沪深3",
+          "type": "intermediate"
+        },
+        {
+          "text": "世界黄金协会数据显示，9月全球央行继续增持黄金，公开净购金量达61吨，创2026年迄今单月最高纪录。波兰和中国为购金主力，其他净买家包括乌兹别克斯坦、哈萨克斯坦",
+          "text_en": "世界gold协会数据显示，9月全球央行继续增持gold，公开净购金量达61吨，创2026年迄今单月最高纪录。波兰和中国为购金主力，其他净买家包括乌兹别克斯坦、哈",
+          "type": "effect"
+        }
+      ],
+      "jargon": [
+        {
+          "term": "社零（社会消费品零售总额）",
+          "term_en": "Retail Sales",
+          "explain": "老百姓花钱消费的总量，反映内需强弱。升=消费旺，降=消费弱。",
+          "explain_en": "Total consumer spending, reflecting domestic demand strength."
+        },
+        {
+          "term": "北向资金",
+          "term_en": "Northbound Capital",
+          "explain": "通过沪港通/深港通从香港流入A股的资金，被视为'外资风向标'。",
+          "explain_en": "Capital flowing from HK into A-shares via Stock Connect, seen as 'foreign capital barometer'."
+        },
+        {
+          "term": "涨跌幅",
+          "term_en": "Price Change %",
+          "explain": "价格变化的百分比。涨5%意味着如果你有100元，现在变成了105元。",
+          "explain_en": "Percentage price change. +5% means 100 units become 105."
+        }
+      ]
+    },
+    {
+      "title": "宏观经济因果链",
+      "title_en": "Macro Economy Causal Chain",
+      "status": "unverified",
+      "nodes": [
+        {
+          "text": "韩国政府发布声明，韩国年度出口额于当地时间11月19日下午2:09首次突破1万亿美元。继德国、美国和中国之后，韩国成为全球第四个年出口额达到1万亿美元的国家。随",
+          "text_en": "韩国政府发布声明，韩国年度出口额于当地时间11月19日下午2:09首次突破1万亿美元。继德国、美国和中国之后，韩国成为全球第四个年出口额达到1万亿美元的国家。随",
+          "type": "cause"
+        },
+        {
+          "text": "商品期货收盘，苹果主力合约跌超7%，沪铜跌超5%，沪锡、国际铜跌超4%，沪银、沪镍、丙烯、乙二醇、液化气跌超3%。集运欧线涨超4%。",
+          "text_en": "商品期货收盘，Apple主力合约跌超7%，沪铜跌超5%，沪锡、国际铜跌超4%，沪银、沪镍、丙烯、乙二醇、液化气跌超3%。集运欧线涨超4%。",
+          "type": "intermediate"
+        },
+        {
+          "text": "日经225指数收盘上涨0.7%，报59,444.21点。日本东证指数收盘下跌0.04%，报3,822.47点。",
+          "text_en": "日经225指数收盘上涨0.7%，报59,444.21点。日本东证指数收盘下跌0.04%，报3,822.47点。",
+          "type": "intermediate"
+        },
+        {
+          "text": "阿里巴巴美股盘前走低，现跌超2%，此前一度涨超4%。",
+          "text_en": "阿里巴巴美股盘前走低，现跌超2%，此前一度涨超4%。",
+          "type": "effect"
+        }
+      ],
+      "jargon": [
+        {
+          "term": "美元走强→商品下跌",
+          "term_en": "Strong USD → Commodity Down",
+          "explain": "国际大宗商品以美元计价。美元贵了，同样一桶油用美元买就贵了，需求减少，价格就跌。",
+          "explain_en": "Commodities priced in USD. Stronger dollar = more expensive commodities = lower demand."
+        },
+        {
+          "term": "避险情绪",
+          "term_en": "Risk-Off Sentiment",
+          "explain": "市场害怕风险时，资金从股票等高风险资产流向黄金/美债等安全资产。",
+          "explain_en": "When markets fear risk, capital flows from stocks to safe havens like gold/Treasuries."
+        },
+        {
+          "term": "涨跌幅",
+          "term_en": "Price Change %",
+          "explain": "价格变化的百分比。涨5%意味着如果你有100元，现在变成了105元。",
+          "explain_en": "Percentage price change. +5% means 100 units become 105."
+        }
+      ]
+    },
+    {
+      "title": "央行政策因果链",
+      "title_en": "Central Bank Policy Causal Chain",
+      "status": "unverified",
+      "nodes": [
+        {
+          "text": "世界黄金协会数据显示，9月全球央行继续增持黄金，公开净购金量达61吨，创2026年迄今单月最高纪录。波兰和中国为购金主力，其他净买家包括乌兹别克斯坦、哈萨克斯坦",
+          "text_en": "世界gold协会数据显示，9月全球央行继续增持gold，公开净购金量达61吨，创2026年迄今单月最高纪录。波兰和中国为购金主力，其他净买家包括乌兹别克斯坦、哈",
+          "type": "cause"
+        },
+        {
+          "text": "11月19日，网易有道公布了2026年第三季度未经审计的财务业绩。报告期内，有道持续推进AI原生战略，聚焦高质量、高毛利率业务，AI应用在学习、办公、营销等场景",
+          "text_en": "11月19日，网易有道公布了2026年第三季度未经审计的财务业绩。报告期内，有道持续推进AI原生战略，聚焦高质量、高毛利率业务，AI应用在学习、办公、营销等场景",
+          "type": "intermediate"
+        },
+        {
+          "text": "欧洲央行管委Kocher：可能需要进一步加息。",
+          "text_en": "欧洲央行管委Kocher：可能需要进一步rate hike。",
+          "type": "intermediate"
+        },
+        {
+          "text": "国开行发行1年期债券，规模10亿元，发行利率1.3200%，预期1.2900%，投标倍数12.56倍，边际倍数8.41倍。",
+          "text_en": "国开行发行1年期债券，规模10亿元，发行利率1.3200%，预期1.2900%，投标倍数12.56倍，边际倍数8.41倍。",
+          "type": "effect"
+        }
+      ],
+      "jargon": [
+        {
+          "term": "FOMC会议纪要",
+          "term_en": "FOMC Minutes",
+          "explain": "美联储开会讨论的'会议记录'，透露委员们对加息的真实想法。比官方声明更'说真话'。",
+          "explain_en": "Records of Fed meetings revealing members' true thinking on rates. More candid than official statements."
+        },
+        {
+          "term": "鹰派/鸽派",
+          "term_en": "Hawkish / Dovish",
+          "explain": "鹰派偏向加息控通胀，鸽派偏向降息保就业。就像'刹车'和'油门'两种驾驶风格。",
+          "explain_en": "Hawks favor rate hikes to control inflation; doves favor cuts to support employment."
+        },
+        {
+          "term": "涨跌幅",
+          "term_en": "Price Change %",
+          "explain": "价格变化的百分比。涨5%意味着如果你有100元，现在变成了105元。",
+          "explain_en": "Percentage price change. +5% means 100 units become 105."
+        }
+      ]
+    }
+  ],
+  "verifications": [
+    {
+      "title": "欧洲央行管委Kocher：可能需要进一步加息。",
+      "title_en": "欧洲央行管委Kocher：可能需要进一步rate hike。",
+      "layer1": "该事件的后续发展如何？市场当前定价是否充分？",
+      "layer1_en": "How will this event develop? Is current market pricing adequate?",
+      "vars": [
+        "相关资产价格次日开盘方向",
+        "成交量是否异常放大（恐慌or追涨）",
+        "官方/公司是否有后续声明或澄清",
+        "关联资产是否同步反应（验证逻辑链）"
+      ],
+      "vars_en": [
+        "Related asset price direction at next open",
+        "Volume anomaly (panic or chasing)",
+        "Official/company follow-up statement",
+        "Correlated assets confirmation"
+      ]
+    },
+    {
+      "title": "韩国政府发布声明，韩国年度出口额于当地时间11月19日下午2:09首次突破1万亿美元。继德国、美国和中国之后，韩国成为全...",
+      "title_en": "韩国政府发布声明，韩国年度出口额于当地时间11月19日下午2:09首次突破1万亿美元。继德国、美国和中国之后，韩国成为全...",
+      "layer1": "该事件的后续发展如何？市场当前定价是否充分？",
+      "layer1_en": "How will this event develop? Is current market pricing adequate?",
+      "vars": [
+        "相关资产价格次日开盘方向",
+        "成交量是否异常放大（恐慌or追涨）",
+        "官方/公司是否有后续声明或澄清",
+        "关联资产是否同步反应（验证逻辑链）"
+      ],
+      "vars_en": [
+        "Related asset price direction at next open",
+        "Volume anomaly (panic or chasing)",
+        "Official/company follow-up statement",
+        "Correlated assets confirmation"
+      ]
+    },
+    {
+      "title": "据新华社，11月19日下午，国家主席习近平在深圳同俄罗斯总统普京、美国总统特朗普举行中俄美元首会晤，总结此次会晤达成的主...",
+      "title_en": "据新华社，11月19日下午，国家主席习近平在深圳同俄罗斯总统普京、美国总统特朗普举行中俄美元首会晤，总结此次会晤达成的主...",
+      "layer1": "该事件的后续发展如何？市场当前定价是否充分？",
+      "layer1_en": "How will this event develop? Is current market pricing adequate?",
+      "vars": [
+        "相关资产价格次日开盘方向",
+        "成交量是否异常放大（恐慌or追涨）",
+        "官方/公司是否有后续声明或澄清",
+        "关联资产是否同步反应（验证逻辑链）"
+      ],
+      "vars_en": [
+        "Related asset price direction at next open",
+        "Volume anomaly (panic or chasing)",
+        "Official/company follow-up statement",
+        "Correlated assets confirmation"
+      ]
+    },
+    {
+      "title": "11月19日下午，国家主席习近平在深圳同俄罗斯总统普京、美国总统特朗普举行中俄美元首会晤。目前，会晤已结束。（央视新闻）",
+      "title_en": "11月19日下午，国家主席习近平在深圳同俄罗斯总统普京、美国总统特朗普举行中俄美元首会晤。目前，会晤已结束。（央视新闻）",
+      "layer1": "该事件的后续发展如何？市场当前定价是否充分？",
+      "layer1_en": "How will this event develop? Is current market pricing adequate?",
+      "vars": [
+        "相关资产价格次日开盘方向",
+        "成交量是否异常放大（恐慌or追涨）",
+        "官方/公司是否有后续声明或澄清",
+        "关联资产是否同步反应（验证逻辑链）"
+      ],
+      "vars_en": [
+        "Related asset price direction at next open",
+        "Volume anomaly (panic or chasing)",
+        "Official/company follow-up statement",
+        "Correlated assets confirmation"
+      ]
+    }
+  ],
+  "historical_analogies": [
+    {
+      "event": "AI Capex暴增 → 烧钱还是投资未来？",
+      "event_en": "AI Capex surge → Burning cash or investing in future?",
+      "lesson": "2012-2015年亚马逊Capex占营收比超10%，FCF多次为负，华尔街质疑'烧钱'。但2015年后AWS贡献巨额利润，股价5年涨10倍。",
+      "lesson_en": "2012-15 Amazon Capex >10% revenue, negative FCF. Post-2015 AWS profits drove 10x stock.",
+      "diff": "需关注Capex/营收比是否持续上升，以及AI收入增速是否匹配投入。",
+      "diff_en": "Key: is Capex/revenue ratio rising? Does AI revenue growth match spending?"
+    },
+    {
+      "event": "芯片股恐慌性杀跌 → 板块轮动信号？",
+      "event_en": "Chip stock panic selloff → Sector rotation signal?",
+      "lesson": "2018年中美贸易战期间，芯片股集体暴跌后迎来2019-2021年超级周期。恐慌往往是长期机会的起点。",
+      "lesson_en": "2018 trade war chip selloff preceded 2019-2021 super cycle. Panic often marks long-term opportunity.",
+      "diff": "需区分'恐慌性杀跌'和'基本面恶化'——前者是机会，后者是陷阱。",
+      "diff_en": "Distinguish panic selling from fundamental deterioration — former is opportunity, latter is trap."
+    },
+    {
+      "event": "大宗商品全面承压 → 美元周期重现",
+      "event_en": "Broad commodity selloff → USD cycle repeats",
+      "lesson": "2014-2015年美元指数从80涨至100，黄金从$1300跌至$1050，原油从$100跌至$30。美元走强周期中大宗商品无一幸免。",
+      "lesson_en": "2014-15: DXY 80→100, gold $1300→$1050, oil $100→$30. Strong dollar cycle spares no commodity.",
+      "diff": "需关注美联储实际加息路径是否如预期，以及通胀是否支撑继续加息。",
+      "diff_en": "Key: does Fed actually hike as expected? Does inflation support further hikes?"
+    },
+    {
+      "event": "史上最大IPO → 市场顶部信号？",
+      "event_en": "Largest IPO ever → Market top signal?",
+      "lesson": "2000年思科市值5000亿成全球最大，随后互联网泡沫破裂跌80%。2021年Rivian上市首日涨29%，随后跌90%。史上最大IPO往往出现在产业泡沫顶部。",
+      "lesson_en": "Historic IPOs often mark industry bubble tops: Cisco 2000 (-80%), Rivian 2021 (-90%).",
+      "diff": "需关注公司是否有真实收入和产品，而非纯概念。",
+      "diff_en": "Key: does the company have real revenue and product, not just concept?"
+    }
+  ]
 }

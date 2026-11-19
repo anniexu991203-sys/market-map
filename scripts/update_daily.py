@@ -698,20 +698,43 @@ Output strictly in the following JSON format (output JSON only, no other text):
       "diff": "关键区别（中文）",
       "diff_en": "Key difference (English)"
     }}
+  ],
+  "four_column_table": [
+    {{
+      "tags": [{{"type": "ai/fed/energy/china/bio/macro/geopolitics", "text": "标签（中文）", "text_en": "Tag (English)"}}],
+      "event": "事件描述（中文，简洁完整）",
+      "event_en": "Event description (English)",
+      "assets": "影响资产（中文，逗号分隔）",
+      "assets_en": "Affected assets (English)",
+      "dir": "up/down/neutral/split",
+      "logic": "传导逻辑（中文，A→B→C格式）",
+      "logic_en": "Transmission logic (English, A→B→C)"
+    }}
+  ],
+  "historical_analogies": [
+    {{
+      "event": "历史类比标题（中文）",
+      "event_en": "Analogy title (English)",
+      "lesson": "历史事件+教训（中文）",
+      "lesson_en": "Historical event + lesson (English)",
+      "diff": "关键区别（中文）",
+      "diff_en": "Key difference (English)"
+    }}
   ]
 }}
 
 Requirements:
-1. stats: extract ALL important market data points (no fixed limit — include every significant number: index moves, commodity prices, currency rates, crypto, yields, etc.)
-2. events: include ALL significant market events — do NOT cap at a fixed number. If there are many important developments, include them all. Prioritize by importance but don't exclude important news just to fit a limit.
-3. chains: extract causal chains for every significant market narrative (aim for completeness, not a fixed count)
-4. verifications: generate watchlist items for key uncertainties
-5. Use <br> for line breaks in node text
-6. CRITICAL: Every *_en field MUST be in pure English with NO Chinese characters whatsoever
-7. CRITICAL: Every Chinese field MUST have a corresponding *_en English field
-8. English must use proper financial terminology (e.g., "re-rating" not "haircut", "rate hike" not "interest increase")
-9. For English-language news headlines, the Chinese fields should be proper translations (not transliterations)
-10. Output strictly valid JSON"""
+1. stats: extract ALL important market data points (no fixed limit)
+2. events: include ALL significant market events — no fixed cap
+3. four_column_table: generate the 4-column table data (Event / Affected Assets / Direction / Logic) for the 6-10 most important events after funnel filtering
+4. chains: extract causal chains for every significant market narrative (3-7 chains, based on actual importance)
+5. verifications: generate watchlist items with TWO layers — layer1 = core question, vars = 3-4 specific variables to watch
+6. historical_analogies: generate 3-4 real historical parallels with lesson and key difference
+7. Use <br> for line breaks in node text
+8. CRITICAL: Every *_en field MUST be in pure English with NO Chinese characters whatsoever
+9. CRITICAL: Every Chinese field MUST have a corresponding *_en English field
+10. English must use proper financial terminology
+11. Output strictly valid JSON"""
 
 
 def llm_structure(headlines):
@@ -879,11 +902,457 @@ def auto_fill_english(data):
     return data
 
 
+def extract_assets_from_text(text):
+    """从快讯文本中提取影响资产"""
+    assets = []
+    text_lower = text.lower()
+
+    # 中文资产
+    asset_map_zh = {
+        "沪指": "A股/沪指", "深成指": "A股/深成指", "创业板": "创业板",
+        "科创50": "科创50", "恒生科技": "港股/恒生科技", "港股": "港股",
+        "纳指": "纳指", "标普": "标普500", "道指": "道指",
+        "美元": "美元指数", "日元": "日元", "人民币": "人民币",
+        "美债": "美债", "十年期": "10年期美债",
+        "原油": "原油", "布油": "布伦特原油", "黄金": "黄金", "白银": "白银",
+        "铜": "铜", "铁矿石": "铁矿石",
+        "比特币": "比特币",
+        "英伟达": "英伟达", "苹果": "苹果", "特斯拉": "特斯拉",
+        "阿里巴巴": "阿里巴巴", "阿里": "阿里巴巴",
+        "半导体": "半导体板块", "芯片": "芯片板块", "光刻机": "光刻机板块",
+    }
+    for kw, asset in asset_map_zh.items():
+        if kw in text and asset not in assets:
+            assets.append(asset)
+
+    # 英文资产
+    asset_map_en = {
+        "nasdaq": "Nasdaq", "s&p": "S&P 500", "dow": "Dow Jones",
+        "oil": "Crude Oil", "crude": "Crude Oil", "brent": "Brent Oil",
+        "gold": "Gold", "silver": "Silver", "copper": "Copper",
+        "dollar": "USD Index", "treasury": "US Treasuries", "yield": "Bond Yields",
+        "bitcoin": "Bitcoin", "nvidia": "Nvidia", "apple": "Apple",
+        "tesla": "Tesla", "fed": "Fed Policy",
+    }
+    for kw, asset in asset_map_en.items():
+        if kw in text_lower and asset not in assets:
+            assets.append(asset)
+
+    if not assets:
+        assets.append("详见原文")
+    return " / ".join(assets[:5])
+
+
+def extract_logic_from_text(text, dir):
+    """从快讯文本中生成简化传导逻辑"""
+    text_lower = text.lower()
+
+    # 按事件类型生成逻辑
+    if any(kw in text for kw in ["加息", "鹰派"]) or "rate hike" in text_lower or "hawkish" in text_lower:
+        return "央行鹰派信号 → 加息预期升温 → 美元走强/利率上行 → 风险资产承压"
+    if any(kw in text for kw in ["降息", "鸽派"]) or "rate cut" in text_lower or "dovish" in text_lower:
+        return "央行鸽派信号 → 降息预期升温 → 流动性预期改善 → 风险资产受益"
+    if any(kw in text for kw in ["地缘", "战争", "冲突", "制裁"]) or "geopolitical" in text_lower or "sanction" in text_lower:
+        return "地缘风险事件 → 避险情绪升温 → 避险资产上涨/风险资产下跌"
+    if any(kw in text for kw in ["财报", "营收", "利润", "EPS"]) or "earnings" in text_lower or "revenue" in text_lower:
+        if "超预期" in text or "beat" in text_lower:
+            return "财报超预期 → 盈利预期上修 → 股价上涨"
+        elif "不及预期" in text or "miss" in text_lower:
+            return "财报不及预期 → 盈利预期下修 → 股价下跌"
+        return "财报发布 → 盈利/指引更新 → 估值重估"
+    if any(kw in text for kw in ["AI", "芯片", "算力"]) or "artificial intelligence" in text_lower:
+        return "AI产业事件 → 算力/芯片需求预期变化 → 相关板块联动"
+    if any(kw in text for kw in ["原油", "油价", "OPEC"]) or "oil" in text_lower or "opec" in text_lower:
+        return "原油供给/需求变化 → 油价波动 → 能源股/通胀预期联动"
+    if any(kw in text for kw in ["出口", "进口", "贸易"]) or "trade" in text_lower or "export" in text_lower:
+        return "贸易数据变化 → 全球需求/供应链预期调整 → 相关货币/股市影响"
+    if "ipo" in text_lower:
+        return "IPO事件 → 市场资金流向/行业估值锚定 → 相关板块联动"
+
+    # 默认逻辑
+    if dir == "up":
+        return "利好事件 → 市场预期改善 → 资产价格上涨"
+    elif dir == "down":
+        return "利空事件 → 市场预期恶化 → 资产价格下跌"
+    elif dir == "split":
+        return "多空因素交织 → 板块/资产分化 → 需关注后续催化"
+    return "事件发生 → 市场消化信息 → 资产价格调整"
+
+
+def extract_assets_en(assets_zh):
+    """翻译资产名称为英文"""
+    mapping = {
+        "A股": "A-shares", "沪指": "Shanghai Composite", "深成指": "Shenzhen Component",
+        "创业板": "ChiNext", "科创50": "STAR 50", "港股": "HK Stocks",
+        "恒生科技": "Hang Seng Tech", "纳指": "Nasdaq", "标普500": "S&P 500",
+        "道指": "Dow Jones", "美元指数": "USD Index", "日元": "JPY",
+        "人民币": "CNY", "美债": "US Treasuries", "10年期美债": "10Y Treasury",
+        "原油": "Crude Oil", "布伦特原油": "Brent", "黄金": "Gold",
+        "白银": "Silver", "铜": "Copper", "铁矿石": "Iron Ore",
+        "比特币": "Bitcoin", "英伟达": "Nvidia", "苹果": "Apple",
+        "特斯拉": "Tesla", "阿里巴巴": "Alibaba", "半导体板块": "Semiconductors",
+        "芯片板块": "Chips", "光刻机板块": "Lithography",
+        "Nasdaq": "Nasdaq", "S&P 500": "S&P 500", "Dow Jones": "Dow Jones",
+        "Crude Oil": "Crude Oil", "Brent Oil": "Brent", "Gold": "Gold",
+        "Silver": "Silver", "Copper": "Copper", "USD Index": "USD Index",
+        "US Treasuries": "US Treasuries", "Bond Yields": "Bond Yields",
+        "Bitcoin": "Bitcoin", "Nvidia": "Nvidia", "Apple": "Apple",
+        "Tesla": "Tesla", "Fed Policy": "Fed Policy",
+        "详见原文": "See source",
+    }
+    parts = assets_zh.split(" / ")
+    return " / ".join(mapping.get(p.strip(), p) for p in parts)
+
+
+def extract_logic_en(logic_zh):
+    """翻译传导逻辑为英文"""
+    mapping = {
+        "央行鹰派信号": "Central bank hawkish signal",
+        "加息预期升温": "rate hike expectations rise",
+        "美元走强/利率上行": "USD strengthens / yields rise",
+        "风险资产承压": "risk assets under pressure",
+        "央行鸽派信号": "Central bank dovish signal",
+        "降息预期升温": "rate cut expectations rise",
+        "流动性预期改善": "liquidity expectations improve",
+        "风险资产受益": "risk assets benefit",
+        "地缘风险事件": "Geopolitical risk event",
+        "避险情绪升温": "safe-haven sentiment rises",
+        "避险资产上涨/风险资产下跌": "safe-haven up / risk assets down",
+        "财报超预期": "Earnings beat",
+        "盈利预期上修": "earnings estimates revised up",
+        "股价上涨": "stock price rises",
+        "财报不及预期": "Earnings miss",
+        "盈利预期下修": "earnings estimates revised down",
+        "股价下跌": "stock price falls",
+        "财报发布": "Earnings released",
+        "盈利/指引更新": "earnings/guidance update",
+        "估值重估": "re-rating",
+        "AI产业事件": "AI industry event",
+        "算力/芯片需求预期变化": "compute/chip demand expectations shift",
+        "相关板块联动": "related sectors correlate",
+        "原油供给/需求变化": "Oil supply/demand shift",
+        "油价波动": "oil price volatility",
+        "能源股/通胀预期联动": "energy stocks / inflation expectations correlate",
+        "贸易数据变化": "Trade data shift",
+        "全球需求/供应链预期调整": "global demand / supply chain expectations adjust",
+        "相关货币/股市影响": "related currencies / stocks impacted",
+        "IPO事件": "IPO event",
+        "市场资金流向/行业估值锚定": "capital flows / sector valuation anchoring",
+        "利好事件": "Positive event",
+        "市场预期改善": "market expectations improve",
+        "资产价格上涨": "asset prices rise",
+        "利空事件": "Negative event",
+        "市场预期恶化": "market expectations worsen",
+        "资产价格下跌": "asset prices fall",
+        "多空因素交织": "Mixed bullish/bearish factors",
+        "板块/资产分化": "sector / asset divergence",
+        "需关注后续催化": "watch for next catalyst",
+        "事件发生": "Event occurs",
+        "市场消化信息": "market digests info",
+        "资产价格调整": "asset prices adjust",
+    }
+    result = logic_zh
+    for zh, en in sorted(mapping.items(), key=lambda x: len(x[0]), reverse=True):
+        result = result.replace(zh, en)
+    return result
+
+
+def generate_four_column_table(events):
+    """从事件列表生成四列表数据"""
+    table = []
+    for ev in events:
+        table.append({
+            "event": ev.get("event", ""),
+            "event_en": ev.get("event_en", ev.get("event", "")),
+            "assets": ev.get("assets", "") or extract_assets_from_text(ev.get("event", "")),
+            "assets_en": ev.get("assets_en", "") or extract_assets_en(extract_assets_from_text(ev.get("event", ""))),
+            "dir": ev.get("dir", "neutral"),
+            "logic": ev.get("logic", "") or extract_logic_from_text(ev.get("event", ""), ev.get("dir", "neutral")),
+            "logic_en": ev.get("logic_en", "") or extract_logic_en(extract_logic_from_text(ev.get("event", ""), ev.get("dir", "neutral"))),
+            "tags": ev.get("tags", []),
+        })
+    return table
+
+
+def generate_chains_from_events(events):
+    """从事件中提取因果链（规则兜底版）"""
+    chains = []
+    seen_themes = set()
+
+    # 按主题分组事件
+    theme_groups = {}
+    for ev in events:
+        tags = ev.get("tags", [])
+        for tag in tags:
+            tag_type = tag.get("type", "macro")
+            if tag_type not in theme_groups:
+                theme_groups[tag_type] = []
+            theme_groups[tag_type].append(ev)
+
+    # 为每个有3+事件的主题生成一条因果链
+    for theme, group_events in theme_groups.items():
+        if len(group_events) < 2:
+            continue
+        # 取该主题下前3个最重要的事件
+        top_events = group_events[:4]
+
+        theme_names = {
+            "ai": ("AI产业链因果链", "AI Industry Chain Causal Chain"),
+            "fed": ("央行政策因果链", "Central Bank Policy Causal Chain"),
+            "energy": ("能源市场因果链", "Energy Market Causal Chain"),
+            "china": ("中国市场因果链", "China Market Causal Chain"),
+            "bio": ("生物科技因果链", "Biotech Causal Chain"),
+            "macro": ("宏观经济因果链", "Macro Economy Causal Chain"),
+        }
+        title_zh, title_en = theme_names.get(theme, ("市场因果链", "Market Causal Chain"))
+
+        if title_zh in seen_themes:
+            continue
+        seen_themes.add(title_zh)
+
+        # 构建流程节点
+        nodes = []
+        for i, ev in enumerate(top_events):
+            node_type = "cause" if i == 0 else ("effect" if i == len(top_events) - 1 else "intermediate")
+            text = ev.get("event", "")[:80]
+            text_en = ev.get("event_en", text)[:80]
+            nodes.append({"text": text, "text_en": text_en, "type": node_type})
+
+        # 判断状态
+        has_breaking = any(
+            any(kw in ev.get("event", "") for kw in BREAKING_KEYWORDS_ZH)
+            for ev in top_events
+        )
+        status = "consensus" if not has_breaking else "unverified"
+
+        # 生成术语白话
+        jargon = generate_jargon_for_theme(theme, top_events)
+
+        chains.append({
+            "title": title_zh,
+            "title_en": title_en,
+            "status": status,
+            "nodes": nodes,
+            "jargon": jargon,
+        })
+
+        if len(chains) >= 7:
+            break
+
+    return chains
+
+
+def generate_jargon_for_theme(theme, events):
+    """为特定主题的因果链生成术语白话"""
+    jargon_map = {
+        "ai": [
+            {"term": "AI Capex（资本支出）", "term_en": "AI Capex (Capital Expenditure)",
+             "explain": "AI公司花在买GPU、建数据中心、租算力上的钱。这笔钱最终流向芯片公司。",
+             "explain_en": "Money AI companies spend on GPUs, data centers, and compute. Ultimately flows to chip makers."},
+            {"term": "算力", "term_en": "Compute Power",
+             "explain": "计算机处理信息的能力，AI训练和推理都需要大量算力。算力越多，AI越强。",
+             "explain_en": "Computing capacity for AI training and inference. More compute = stronger AI."},
+        ],
+        "fed": [
+            {"term": "FOMC会议纪要", "term_en": "FOMC Minutes",
+             "explain": "美联储开会讨论的'会议记录'，透露委员们对加息的真实想法。比官方声明更'说真话'。",
+             "explain_en": "Records of Fed meetings revealing members' true thinking on rates. More candid than official statements."},
+            {"term": "鹰派/鸽派", "term_en": "Hawkish / Dovish",
+             "explain": "鹰派偏向加息控通胀，鸽派偏向降息保就业。就像'刹车'和'油门'两种驾驶风格。",
+             "explain_en": "Hawks favor rate hikes to control inflation; doves favor cuts to support employment."},
+        ],
+        "energy": [
+            {"term": "地缘风险溢价", "term_en": "Geopolitical Risk Premium",
+             "explain": "因为打仗或可能打仗，市场给油价多加的'保险费'。和平了，这笔钱就退掉。",
+             "explain_en": "Extra 'insurance' added to oil prices due to war risk. Recedes when peace returns."},
+            {"term": "OPEC+", "term_en": "OPEC+",
+             "explain": "石油输出国组织及其盟友，控制全球约40%原油产量。减产=涨价，增产=跌价。",
+             "explain_en": "Oil producers' alliance controlling ~40% of global supply. Cut = price up, increase = price down."},
+        ],
+        "china": [
+            {"term": "社零（社会消费品零售总额）", "term_en": "Retail Sales",
+             "explain": "老百姓花钱消费的总量，反映内需强弱。升=消费旺，降=消费弱。",
+             "explain_en": "Total consumer spending, reflecting domestic demand strength."},
+            {"term": "北向资金", "term_en": "Northbound Capital",
+             "explain": "通过沪港通/深港通从香港流入A股的资金，被视为'外资风向标'。",
+             "explain_en": "Capital flowing from HK into A-shares via Stock Connect, seen as 'foreign capital barometer'."},
+        ],
+        "macro": [
+            {"term": "美元走强→商品下跌", "term_en": "Strong USD → Commodity Down",
+             "explain": "国际大宗商品以美元计价。美元贵了，同样一桶油用美元买就贵了，需求减少，价格就跌。",
+             "explain_en": "Commodities priced in USD. Stronger dollar = more expensive commodities = lower demand."},
+            {"term": "避险情绪", "term_en": "Risk-Off Sentiment",
+             "explain": "市场害怕风险时，资金从股票等高风险资产流向黄金/美债等安全资产。",
+             "explain_en": "When markets fear risk, capital flows from stocks to safe havens like gold/Treasuries."},
+        ],
+    }
+
+    base_jargon = jargon_map.get(theme, jargon_map["macro"])
+    # 如果事件中有具体数字，增加一条关于数字的术语
+    for ev in events:
+        text = ev.get("event", "")
+        if re.search(r'\d+\.?\d*%', text):
+            base_jargon = base_jargon + [{
+                "term": "涨跌幅", "term_en": "Price Change %",
+                "explain": "价格变化的百分比。涨5%意味着如果你有100元，现在变成了105元。",
+                "explain_en": "Percentage price change. +5% means 100 units become 105.",
+            }]
+            break
+
+    return base_jargon[:3]
+
+
+def generate_verifications_from_events(events, chains):
+    """从事件和因果链生成待验证清单"""
+    verifications = []
+
+    # 取最重要的事件（有突发关键词或有方向分化的）
+    key_events = []
+    for ev in events:
+        text = ev.get("event", "")
+        score = 0
+        if any(kw in text for kw in BREAKING_KEYWORDS_ZH):
+            score += 10
+        if ev.get("dir") == "split":
+            score += 5
+        if any(kw in text for kw in ["美联储", "加息", "降息", "CPI", "非农"]):
+            score += 5
+        if score > 0:
+            key_events.append((ev, score))
+
+    key_events.sort(key=lambda x: x[1], reverse=True)
+    key_events = [ev for ev, _ in key_events[:4]]
+
+    for ev in key_events:
+        text = ev.get("event", "")
+        text_en = ev.get("event_en", text)
+
+        # 生成验证问题
+        title = text[:60] + ("..." if len(text) > 60 else "")
+        title_en = text_en[:60] + ("..." if len(text_en) > 60 else "")
+
+        # 第一层：核心问题
+        layer1 = f"该事件的后续发展如何？市场当前定价是否充分？"
+        layer1_en = "How will this event develop? Is current market pricing adequate?"
+
+        # 第二层：盯哪些变量
+        vars_zh = [
+            "相关资产价格次日开盘方向",
+            "成交量是否异常放大（恐慌or追涨）",
+            "官方/公司是否有后续声明或澄清",
+            "关联资产是否同步反应（验证逻辑链）",
+        ]
+        vars_en = [
+            "Related asset price direction at next open",
+            "Volume anomaly (panic or chasing)",
+            "Official/company follow-up statement",
+            "Correlated assets confirmation",
+        ]
+
+        verifications.append({
+            "title": title,
+            "title_en": title_en,
+            "layer1": layer1,
+            "layer1_en": layer1_en,
+            "vars": vars_zh,
+            "vars_en": vars_en,
+        })
+
+        if len(verifications) >= 4:
+            break
+
+    return verifications
+
+
+def generate_historical_analogies(events):
+    """从事件中生成金融历史类比"""
+    analogies = []
+    seen_types = set()
+
+    analogy_templates = {
+        "ipo": {
+            "event": "史上最大IPO → 市场顶部信号？",
+            "event_en": "Largest IPO ever → Market top signal?",
+            "lesson": "2000年思科市值5000亿成全球最大，随后互联网泡沫破裂跌80%。2021年Rivian上市首日涨29%，随后跌90%。史上最大IPO往往出现在产业泡沫顶部。",
+            "lesson_en": "Historic IPOs often mark industry bubble tops: Cisco 2000 (-80%), Rivian 2021 (-90%).",
+            "diff": "需关注公司是否有真实收入和产品，而非纯概念。",
+            "diff_en": "Key: does the company have real revenue and product, not just concept?",
+        },
+        "fed_hawkish": {
+            "event": "美联储鹰派 + 美元走强 → 新兴市场失血",
+            "event_en": "Fed hawkish + strong USD → EM outflows",
+            "lesson": "2022年美联储连续加息75bp，美元指数冲至114，新兴市场货币集体崩溃，港股恒生科技跌60%。",
+            "lesson_en": "2022: Fed hiked 75bp consecutively, DXY hit 114, EM currencies collapsed, Hang Seng Tech -60%.",
+            "diff": "当前美元指数远低于2022年峰值，中国央行有更大政策空间。",
+            "diff_en": "Current DXY well below 2022 peak; PBOC has more policy room.",
+        },
+        "geopolitics_oil": {
+            "event": "地缘冲突 → 油价跳涨",
+            "event_en": "Geopolitical conflict → Oil price spike",
+            "lesson": "1984年两伊'油轮战'数百艘船被击沉，油价从$29飙至$40。2019年阿曼湾油轮被袭，油价单日跳涨4%。",
+            "lesson_en": "1984 Tanker War: oil $29→$40. 2019 Gulf of Oman: oil +4% in one day.",
+            "diff": "需关注是否有和平对冲力量同时存在，以及海峡实际通行能力是否受影响。",
+            "diff_en": "Key: is there a peace counter-force? Is the strait actually blocked?",
+        },
+        "ai_capex": {
+            "event": "AI Capex暴增 → 烧钱还是投资未来？",
+            "event_en": "AI Capex surge → Burning cash or investing in future?",
+            "lesson": "2012-2015年亚马逊Capex占营收比超10%，FCF多次为负，华尔街质疑'烧钱'。但2015年后AWS贡献巨额利润，股价5年涨10倍。",
+            "lesson_en": "2012-15 Amazon Capex >10% revenue, negative FCF. Post-2015 AWS profits drove 10x stock.",
+            "diff": "需关注Capex/营收比是否持续上升，以及AI收入增速是否匹配投入。",
+            "diff_en": "Key: is Capex/revenue ratio rising? Does AI revenue growth match spending?",
+        },
+        "chip_panic": {
+            "event": "芯片股恐慌性杀跌 → 板块轮动信号？",
+            "event_en": "Chip stock panic selloff → Sector rotation signal?",
+            "lesson": "2018年中美贸易战期间，芯片股集体暴跌后迎来2019-2021年超级周期。恐慌往往是长期机会的起点。",
+            "lesson_en": "2018 trade war chip selloff preceded 2019-2021 super cycle. Panic often marks long-term opportunity.",
+            "diff": "需区分'恐慌性杀跌'和'基本面恶化'——前者是机会，后者是陷阱。",
+            "diff_en": "Distinguish panic selling from fundamental deterioration — former is opportunity, latter is trap.",
+        },
+        "rate_sensitivity": {
+            "event": "大宗商品全面承压 → 美元周期重现",
+            "event_en": "Broad commodity selloff → USD cycle repeats",
+            "lesson": "2014-2015年美元指数从80涨至100，黄金从$1300跌至$1050，原油从$100跌至$30。美元走强周期中大宗商品无一幸免。",
+            "lesson_en": "2014-15: DXY 80→100, gold $1300→$1050, oil $100→$30. Strong dollar cycle spares no commodity.",
+            "diff": "需关注美联储实际加息路径是否如预期，以及通胀是否支撑继续加息。",
+            "diff_en": "Key: does Fed actually hike as expected? Does inflation support further hikes?",
+        },
+    }
+
+    for ev in events:
+        text = ev.get("event", "") + ev.get("event_en", "")
+        text_lower = text.lower()
+
+        analogy_type = None
+        if "ipo" in text_lower or "上市" in text:
+            analogy_type = "ipo"
+        elif any(kw in text for kw in ["加息", "鹰派", "FOMC", "纪要"]) or "hawkish" in text_lower:
+            analogy_type = "fed_hawkish"
+        elif any(kw in text for kw in ["地缘", "战争", "冲突", "海峡", "油轮"]) or "geopolitical" in text_lower or "strait" in text_lower:
+            analogy_type = "geopolitics_oil"
+        elif any(kw in text for kw in ["AI", "资本支出", "Capex", "算力"]) and any(kw in text for kw in ["增", "暴", "亿"]):
+            analogy_type = "ai_capex"
+        elif any(kw in text for kw in ["芯片", "半导体", "代工", "断供"]) or "chip" in text_lower:
+            analogy_type = "chip_panic"
+        elif any(kw in text for kw in ["原油", "黄金", "铜", "大宗"]) and any(kw in text for kw in ["跌", "挫"]):
+            analogy_type = "rate_sensitivity"
+
+        if analogy_type and analogy_type not in seen_types:
+            seen_types.add(analogy_type)
+            template = analogy_templates[analogy_type]
+            analogies.append(template)
+            if len(analogies) >= 4:
+                break
+
+    return analogies
+
+
 def rule_based_structure(headlines):
     """
-    无 LLM 时的规则兜底方案：
-    从快讯中提取关键信息，生成基础中英双语结构化数据
-    v2: 去掉硬编码上限，按重要性动态保留
+    无 LLM 时的规则兜底方案 v4：
+    生成完整标准结构：四列表 + 因果链 + 待验证 + 历史类比
+    按重要性动态保留，不固定条数
     """
     events = []
     seen_topics = set()
@@ -910,39 +1379,40 @@ def rule_based_structure(headlines):
 
         # 判断标签（中文+英文）
         tags = []
-        if any(kw in text for kw in ["AI", "芯片", "英伟达", "半导体", "人工智能", "OpenAI", "数据中心"]) or \
+        if any(kw in text for kw in ["AI", "芯片", "英伟达", "半导体", "人工智能", "OpenAI", "数据中心", "Anthropic"]) or \
            any(kw in text_lower for kw in ["ai ", "artificial intelligence", "nvidia", "chip", "semiconductor", "openai", "data center", "anthropic"]):
             tags.append({"type": "ai", "text": "AI", "text_en": "AI"})
-        if any(kw in text for kw in ["美联储", "央行", "加息", "降息", "利率", "PPI", "CPI", "通胀"]) or \
-           any(kw in text_lower for kw in ["fed", "federal reserve", "rate hike", "rate cut", "interest rate", "inflation", "cpi", "ppi", "powell", "warsh"]):
+        if any(kw in text for kw in ["美联储", "央行", "加息", "降息", "利率", "PPI", "CPI", "通胀", "FOMC"]) or \
+           any(kw in text_lower for kw in ["fed", "federal reserve", "rate hike", "rate cut", "interest rate", "inflation", "cpi", "ppi", "powell", "fomc"]):
             tags.append({"type": "fed", "text": "央行", "text_en": "Central Bank"})
-        if any(kw in text for kw in ["原油", "油价", "布油", "OPEC", "能源"]) or \
-           any(kw in text_lower for kw in ["oil", "crude", "brent", "wti", "opec", "energy"]):
+        if any(kw in text for kw in ["原油", "油价", "布油", "OPEC", "能源", "海峡", "油轮"]) or \
+           any(kw in text_lower for kw in ["oil", "crude", "brent", "wti", "opec", "energy", "strait", "tanker"]):
             tags.append({"type": "energy", "text": "能源", "text_en": "Energy"})
-        if any(kw in text for kw in ["中国", "A股", "社零", "工业增加值", "地产", "统计局", "创业板", "港股"]) or \
+        if any(kw in text for kw in ["中国", "A股", "社零", "工业增加值", "地产", "统计局", "创业板", "港股", "沪指"]) or \
            any(kw in text_lower for kw in ["china", "a-shares", "chinese", "beijing", "shanghai", "yuan", "hang seng"]):
             tags.append({"type": "china", "text": "中国", "text_en": "China"})
-        if any(kw in text for kw in ["生物科技", "创新药", "医药", "临床"]) or \
-           any(kw in text_lower for kw in ["biotech", "pharma", "drug", "clinical", "fda"]):
-            tags.append({"type": "bio", "text": "生物科技", "text_en": "Biotech"})
-        if any(kw in text for kw in ["赤字", "财政", "国债", "发债"]) or \
-           any(kw in text_lower for kw in ["deficit", "fiscal", "treasury", "debt", "bond"]):
-            tags.append({"type": "macro", "text": "财政", "text_en": "Fiscal"})
+        if any(kw in text for kw in ["地缘", "战争", "冲突", "制裁", "宣言", "和平"]) or \
+           any(kw in text_lower for kw in ["geopolitical", "war", "conflict", "sanction", "peace", "declaration"]):
+            tags.append({"type": "geopolitics", "text": "地缘", "text_en": "Geopolitics"})
+        if any(kw in text for kw in ["赤字", "财政", "国债", "发债", "出口", "贸易"]) or \
+           any(kw in text_lower for kw in ["deficit", "fiscal", "treasury", "debt", "bond", "export", "trade"]):
+            tags.append({"type": "macro", "text": "宏观", "text_en": "Macro"})
         if not tags:
             tags.append({"type": "macro", "text": "宏观", "text_en": "Macro"})
 
-        # 提取数字
-        numbers = re.findall(r'(\d+\.?\d*%?)', text)
-        # 简化事件描述
+        # 提取事件描述
         event_text = text[:200] + ("..." if len(text) > 200 else "")
-        # 如果原文是英文，event_en直接用原文；如果有中文，用规则翻译
         chinese_re = re.compile(r'[\u4e00-\u9fff]')
         if chinese_re.search(event_text):
             event_en = translate_text(event_text)
         else:
-            # 英文原文，中文需要标记（规则兜底无法翻译英文→中文）
-            event_en = event_text  # 英文原样保留
-            event_text = event_text  # 也保留原文（LLM不可用时的妥协）
+            event_en = event_text
+
+        # 提取资产和逻辑
+        assets = extract_assets_from_text(text)
+        assets_en_text = extract_assets_en(assets)
+        logic = extract_logic_from_text(text, dir)
+        logic_en = extract_logic_en(logic)
 
         # 简单去重（用前40字符）
         topic = text[:40].lower()
@@ -954,15 +1424,13 @@ def rule_based_structure(headlines):
             "tags": tags,
             "event": event_text,
             "event_en": event_en,
-            "assets": "",
-            "assets_en": "",
+            "assets": assets,
+            "assets_en": assets_en_text,
             "dir": dir,
-            "logic": "",
-            "logic_en": "",
+            "logic": logic,
+            "logic_en": logic_en,
         })
 
-        # 不再硬编码上限 —— 保留所有有意义的条目
-        # 但设置一个安全上限防止极端情况
         if len(events) >= 50:
             break
 
@@ -971,12 +1439,10 @@ def rule_based_structure(headlines):
     stat_seen = set()
     for h in headlines:
         text = h["text"]
-        # 中文模式
         patterns_zh = [
             r'([\u4e00-\u9fa5\w]{2,10})[，,]?\s*(?:涨|跌|升|降)([\d.]+%)',
             r'([\u4e00-\u9fa5\w]{2,10}).*?创.*?(?:新高|新低)',
         ]
-        # 英文模式
         patterns_en = [
             r'(Nasdaq|S&P|Dow|Nvidia|Apple|Tesla|Microsoft|Google|Amazon|Meta|oil|gold|Bitcoin|dollar|yen|euro|Treasury|yield)\s*(?:surge[sd]?|plunge[sd]?|rall(?:y|ies|ied)|drop[sd]?|fall[s]?|rose|fell|jump[sd]?|sink[s]?|slide[sd]?|decline[sd]?|gain[sd]?|climb[sd]?)?\s*(?:to)?\s*(?:\$)?([\d.]+%?)',
             r'([\d.]+%?)\s*(?:surge|plunge|rally|drop|fall|gain|decline)',
@@ -991,14 +1457,14 @@ def rule_based_structure(headlines):
 
                 value = ""
                 change = text[:60]
-                dir = "up"
+                dir_stat = "up"
                 text_lower = text.lower()
                 if any(kw in text for kw in ["跌", "降"]) or \
                    any(kw in text_lower for kw in ["plunge", "slump", "tumble", "drop", "fall", "decline", "sink", "slide", "crash", "selloff"]):
-                    dir = "down"
+                    dir_stat = "down"
                 if any(kw in text for kw in ["涨", "升"]) or \
                    any(kw in text_lower for kw in ["surge", "soar", "rally", "jump", "rise", "gain", "climb"]):
-                    dir = "up"
+                    dir_stat = "up"
                 if m.lastindex and m.lastindex >= 2:
                     value = m.group(2)
 
@@ -1009,25 +1475,41 @@ def rule_based_structure(headlines):
                     label_en = label
 
                 stats.append({
-                    "label": label if chinese_re.search(label) else label,
+                    "label": label,
                     "label_en": label_en,
-                    "value": value or ("新高" if dir == "up" else "新低"),
+                    "value": value or ("新高" if dir_stat == "up" else "新低"),
                     "change": change,
                     "change_en": translate_text(change) if chinese_re.search(change) else change,
-                    "dir": dir,
+                    "dir": dir_stat,
                 })
                 if len(stats) >= 12:
                     break
         if len(stats) >= 12:
             break
 
-    log(f"[规则] 结构化完成: {len(events)} 条事件, {len(stats)} 条统计")
+    # 生成四列表
+    four_column_table = generate_four_column_table(events)
+
+    # 生成因果链
+    chains = generate_chains_from_events(events)
+
+    # 生成待验证清单
+    verifications = generate_verifications_from_events(events, chains)
+
+    # 生成历史类比
+    historical_analogies = generate_historical_analogies(events)
+
+    log(f"[规则] 结构化完成: {len(events)} 条事件, {len(stats)} 条统计, "
+        f"{len(four_column_table)} 行四列表, {len(chains)} 条因果链, "
+        f"{len(verifications)} 项待验证, {len(historical_analogies)} 个历史类比")
 
     return {
         "stats": stats,
         "events": events,
-        "chains": [],
-        "verifications": [],
+        "four_column_table": four_column_table,
+        "chains": chains,
+        "verifications": verifications,
+        "historical_analogies": historical_analogies,
     }
 
 
@@ -1083,7 +1565,6 @@ def generate_data_file(target_date=None, source="auto", dry_run=False):
         log("[校验] ✅ 双语数据完整，无问题")
 
     # Step 5: 组装最终数据
-    # 列出所有数据源
     sources_used = list(set(h.get("source", "unknown") for h in headlines))
     data = {
         "date": target_date,
@@ -1095,8 +1576,10 @@ def generate_data_file(target_date=None, source="auto", dry_run=False):
         "filter_result": f"{len(structured.get('events',[]))}条核心要闻 / {len(structured.get('chains',[]))}条因果链 / {len(headlines)}条原始抓取",
         "stats": structured.get("stats", []),
         "events": structured.get("events", []),
+        "four_column_table": structured.get("four_column_table", []),
         "chains": structured.get("chains", []),
         "verifications": structured.get("verifications", []),
+        "historical_analogies": structured.get("historical_analogies", []),
     }
 
     if dry_run:
@@ -1111,7 +1594,9 @@ def generate_data_file(target_date=None, source="auto", dry_run=False):
 
     log(f"数据已保存: {filepath}")
     log(f"统计: {len(data['stats'])} 条统计, {len(data['events'])} 条事件, "
-        f"{len(data['chains'])} 条因果链, {len(data['verifications'])} 条待验证")
+        f"{len(data.get('four_column_table', []))} 行四列表, "
+        f"{len(data['chains'])} 条因果链, {len(data['verifications'])} 条待验证, "
+        f"{len(data.get('historical_analogies', []))} 个历史类比")
     return True
 
 

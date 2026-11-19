@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>每日市场地图 · Daily Market Map · 2026-11-18</title>
-<meta name="description" content="华尔街见闻要闻三层漏斗筛选 → 四列表 → 因果链 → 待验证">
+<meta name="description" content="华尔街见闻要闻三层漏斗筛选 → 四列表 → 因果链 → 待验证 → 历史类比">
 <style>
   :root {
     --bg: #0a0e17;
@@ -19,8 +19,8 @@
     --red: #ef5350;
     --orange: #ff9800;
     --purple: #ab47bc;
+    --yellow: #d29922;
   }
-
   [data-theme="light"] {
     --bg: #f5f7fa;
     --card: #ffffff;
@@ -30,8 +30,12 @@
     --text-dim: #5a6478;
     --accent: #b8860b;
     --accent-2: #2563eb;
+    --green: #1a7f37;
+    --red: #cf222e;
+    --orange: #bc4c00;
+    --purple: #8250df;
+    --yellow: #9a6700;
   }
-
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body {
     font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Segoe UI", Roboto, sans-serif;
@@ -40,76 +44,61 @@
     line-height: 1.6;
     transition: background 0.3s, color 0.3s;
   }
-
   .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
 
   /* Top bar */
   .topbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 14px;
-    padding: 16px 20px;
-    background: var(--card);
-    border-bottom: 1px solid var(--border);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    flex-wrap: wrap;
+    display: flex; justify-content: space-between; align-items: center;
+    gap: 14px; padding: 16px 20px;
+    background: var(--card); border-bottom: 1px solid var(--border);
+    position: sticky; top: 0; z-index: 100; flex-wrap: wrap;
   }
   .topbar-left { display: flex; align-items: center; gap: 14px; }
   .topbar-logo { font-size: 22px; font-weight: 700; color: var(--accent); }
   .topbar-date { color: var(--text-dim); font-size: 14px; }
   .topbar-nav { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
   .topbar-nav a {
-    color: var(--text-dim);
-    text-decoration: none;
-    font-size: 13px;
-    padding: 5px 12px;
-    border: 1px solid var(--border);
-    border-radius: 6px;
+    color: var(--text-dim); text-decoration: none; font-size: 13px;
+    padding: 5px 12px; border: 1px solid var(--border); border-radius: 6px;
     transition: all 0.2s;
   }
   .topbar-nav a:hover { color: var(--accent); border-color: var(--accent); }
   .icon-btn {
-    background: var(--card-2);
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    padding: 5px 12px;
-    cursor: pointer;
-    font-size: 14px;
-    color: var(--text);
-    transition: all 0.2s;
+    background: var(--card-2); border: 1px solid var(--border); border-radius: 6px;
+    padding: 5px 12px; cursor: pointer; font-size: 14px; color: var(--text); transition: all 0.2s;
   }
   .icon-btn:hover { border-color: var(--accent); }
   .lang-toggle {
-    background: var(--card-2);
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    padding: 5px 12px;
-    cursor: pointer;
-    font-size: 13px;
-    font-weight: 600;
-    color: var(--accent);
-    transition: all 0.2s;
-    min-width: 56px;
-    text-align: center;
+    background: var(--card-2); border: 1px solid var(--border); border-radius: 6px;
+    padding: 5px 12px; cursor: pointer; font-size: 13px; font-weight: 600;
+    color: var(--accent); transition: all 0.2s; min-width: 56px; text-align: center;
   }
   .lang-toggle:hover { border-color: var(--accent); background: rgba(212,175,55,0.1); }
 
+  /* Header */
+  .page-header {
+    text-align: center; padding: 30px 20px 20px;
+    border-bottom: 1px solid var(--border); margin-bottom: 24px;
+  }
+  .page-header h1 { font-size: 26px; font-weight: 700; margin-bottom: 8px; }
+  .page-header .meta { color: var(--text-dim); font-size: 14px; }
+  .page-header .meta span { margin: 0 8px; }
+
+  /* Section */
+  .section { margin: 30px 0; }
+  .section-title {
+    font-size: 20px; font-weight: 700; color: var(--accent);
+    margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid var(--border);
+  }
+
   /* Stats */
   .stats-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 12px;
-    margin: 20px 0;
+    display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px; margin: 20px 0;
   }
   .stat-card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 16px;
-    text-align: center;
+    background: var(--card); border: 1px solid var(--border); border-radius: 10px;
+    padding: 16px; text-align: center;
   }
   .stat-card .stat-label { font-size: 12px; color: var(--text-dim); margin-bottom: 6px; }
   .stat-card .stat-value { font-size: 28px; font-weight: 700; }
@@ -118,192 +107,131 @@
   .stat-down { color: var(--green); }
   .stat-neutral { color: var(--text-dim); }
 
-  /* Section */
-  .section { margin: 30px 0; }
-  .section-title {
-    font-size: 20px;
-    font-weight: 700;
-    color: var(--accent);
-    margin-bottom: 16px;
-    padding-bottom: 8px;
-    border-bottom: 2px solid var(--border);
+  /* Four-column table */
+  .market-table {
+    width: 100%; border-collapse: collapse; margin-bottom: 10px;
   }
+  .market-table th {
+    background: var(--card); color: var(--accent);
+    padding: 10px 12px; text-align: left; font-size: 13px; font-weight: 600;
+    border: 1px solid var(--border); white-space: nowrap;
+  }
+  .market-table td {
+    padding: 12px; border: 1px solid var(--border); vertical-align: top; font-size: 14px;
+  }
+  .market-table tr:hover td { background: var(--card-2); }
+  .dir-up { color: var(--red); font-weight: 600; }
+  .dir-down { color: var(--green); font-weight: 600; }
+  .dir-neutral { color: var(--yellow); font-weight: 600; }
+  .dir-split { color: var(--purple); font-weight: 600; }
+  .tag {
+    display: inline-block; padding: 2px 8px; border-radius: 4px;
+    font-size: 12px; margin: 2px; font-weight: 600;
+  }
+  .tag-geopolitics { background: rgba(239,83,80,0.15); color: var(--red); }
+  .tag-central-bank { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-ai { background: rgba(74,158,255,0.15); color: var(--accent-2); }
+  .tag-energy { background: rgba(255,152,0,0.15); color: var(--orange); }
+  .tag-china { background: rgba(171,71,188,0.15); color: var(--purple); }
+  .tag-macro { background: rgba(38,166,154,0.15); color: var(--green); }
+  .tag-fed { background: rgba(210,153,34,0.15); color: var(--yellow); }
+  .tag-bio { background: rgba(171,71,188,0.15); color: var(--purple); }
 
-  /* Event card */
+  /* Event cards (fallback if no four_column_table) */
   .event-card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 12px;
+    background: var(--card); border: 1px solid var(--border); border-radius: 10px;
+    padding: 20px; margin-bottom: 12px;
   }
   .event-tags { display: flex; gap: 8px; margin-bottom: 10px; flex-wrap: wrap; }
-  .tag {
-    font-size: 11px;
-    padding: 2px 8px;
-    border-radius: 4px;
-    font-weight: 600;
-  }
-  .tag-ai { background: rgba(74,158,255,0.15); color: var(--accent-2); }
-  .tag-fed { background: rgba(212,175,55,0.15); color: var(--accent); }
-  .tag-energy { background: rgba(255,152,0,0.15); color: var(--orange); }
-  .tag-china { background: rgba(239,83,80,0.15); color: var(--red); }
-  .tag-bio { background: rgba(171,71,188,0.15); color: var(--purple); }
-  .tag-macro { background: rgba(38,166,154,0.15); color: var(--green); }
-
   .event-text { font-size: 15px; margin-bottom: 10px; }
   .event-assets { font-size: 13px; color: var(--text-dim); margin-bottom: 8px; }
   .event-assets strong { color: var(--accent-2); }
   .event-logic {
-    font-size: 13px;
-    color: var(--text-dim);
-    padding: 10px;
-    background: var(--card-2);
-    border-radius: 6px;
-    border-left: 3px solid var(--accent);
+    font-size: 13px; color: var(--text-dim); padding: 10px;
+    background: var(--card-2); border-radius: 6px; border-left: 3px solid var(--accent);
   }
   .dir-arrow { font-size: 18px; font-weight: 700; }
-  .dir-up { color: var(--red); }
-  .dir-down { color: var(--green); }
-  .dir-split { color: var(--orange); }
-  .dir-neutral { color: var(--text-dim); }
 
-  /* Chain */
+  /* Chain cards */
   .chain-card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 16px;
+    background: var(--card); border: 1px solid var(--border); border-radius: 10px;
+    padding: 20px; margin-bottom: 16px;
   }
-  .chain-title { font-size: 16px; font-weight: 700; margin-bottom: 14px; }
-  .chain-status {
-    font-size: 11px;
-    padding: 2px 8px;
-    border-radius: 4px;
-    margin-left: 8px;
-    vertical-align: middle;
+  .chain-header {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-bottom: 14px; flex-wrap: wrap; gap: 8px;
   }
-  .status-consensus { background: rgba(38,166,154,0.15); color: var(--green); }
-  .status-unverified { background: rgba(255,152,0,0.15); color: var(--orange); }
+  .chain-title { font-size: 16px; font-weight: 700; }
+  .chain-badge {
+    padding: 3px 10px; border-radius: 20px; font-size: 12px; font-weight: 600;
+  }
+  .badge-consensus { background: rgba(38,166,154,0.15); color: var(--green); border: 1px solid rgba(38,166,154,0.3); }
+  .badge-verify { background: rgba(255,152,0,0.15); color: var(--orange); border: 1px solid rgba(255,152,0,0.3); }
 
+  /* Flow diagram */
+  .flow-diagram {
+    background: var(--bg); border: 1px solid var(--border); border-radius: 8px;
+    padding: 16px; margin-bottom: 14px; overflow-x: auto;
+  }
   .flow-nodes {
-    display: flex;
-    align-items: stretch;
-    gap: 4px;
-    flex-wrap: wrap;
-    margin-bottom: 14px;
+    display: flex; align-items: center; flex-wrap: wrap; gap: 4px; min-width: 600px;
   }
   .flow-node {
-    flex: 1;
-    min-width: 120px;
-    background: var(--card-2);
-    border-radius: 8px;
-    padding: 12px 8px;
-    text-align: center;
-    font-size: 12px;
-    position: relative;
+    background: var(--card-2); border: 1px solid var(--border); border-radius: 8px;
+    padding: 8px 14px; font-size: 13px; white-space: nowrap; flex-shrink: 0;
   }
+  .flow-node.cause { border-left: 3px solid var(--accent); }
+  .flow-node.intermediate { border-left: 3px solid var(--yellow); }
+  .flow-node.effect { border-left: 3px solid var(--red); }
   .flow-node.trigger { border: 2px solid var(--accent); }
   .flow-node.result-down { border: 2px solid var(--green); }
   .flow-node.result-up { border: 2px solid var(--red); }
-  .flow-arrow {
-    display: flex;
-    align-items: center;
-    color: var(--text-dim);
-    font-size: 18px;
-  }
+  .flow-arrow { color: var(--text-dim); font-size: 18px; flex-shrink: 0; }
 
-  .jargon-list { margin-top: 10px; }
-  .jargon-item {
-    font-size: 13px;
-    margin-bottom: 8px;
-    padding: 8px 12px;
-    background: var(--card-2);
-    border-radius: 6px;
+  /* Glossary */
+  .glossary {
+    background: var(--bg); border-radius: 8px; padding: 14px; margin-top: 12px;
   }
-  .jargon-term { color: var(--accent); font-weight: 600; }
-  .jargon-explain { color: var(--text-dim); }
+  .glossary-title { font-size: 13px; color: var(--text-dim); margin-bottom: 8px; font-weight: 600; }
+  .glossary-item { margin-bottom: 6px; font-size: 13px; }
+  .glossary-term { color: var(--accent); font-weight: 600; }
 
-  /* Verify */
+  /* Verify cards */
   .verify-card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 16px;
+    background: var(--card); border: 1px solid var(--border); border-radius: 10px;
+    padding: 20px; margin-bottom: 16px;
   }
   .verify-title { font-size: 15px; font-weight: 700; margin-bottom: 12px; }
-  .verify-list { list-style: none; margin-bottom: 12px; }
-  .verify-list li {
-    font-size: 13px;
-    color: var(--text-dim);
-    margin-bottom: 6px;
-    padding-left: 20px;
-    position: relative;
+  .verify-layer { margin-bottom: 12px; }
+  .verify-layer-title { font-size: 13px; color: var(--accent); font-weight: 600; margin-bottom: 6px; }
+  .verify-detail { font-size: 13px; color: var(--text-dim); padding-left: 16px; }
+  .verify-detail li { margin-bottom: 4px; list-style: disc; color: var(--text); }
+
+  /* Historical analogy */
+  .history-card {
+    background: var(--card); border-left: 4px solid var(--purple);
+    border-radius: 0 10px 10px 0; padding: 16px 20px; margin-bottom: 16px;
   }
-  .verify-list li::before {
-    content: "\2610";
-    position: absolute;
-    left: 0;
-    color: var(--accent);
-  }
-  .analogy {
-    font-size: 13px;
-    padding: 10px 12px;
-    background: var(--card-2);
-    border-radius: 6px;
-    border-left: 3px solid var(--purple);
-    margin-bottom: 8px;
-  }
-  .analogy strong { color: var(--purple); }
-  .lesson {
-    font-size: 13px;
-    color: var(--accent);
-    padding: 8px 12px;
-    background: rgba(212,175,55,0.08);
-    border-radius: 6px;
-    margin-bottom: 8px;
-  }
-  .diff {
-    font-size: 12px;
-    color: var(--text-dim);
-    padding: 8px 12px;
-    background: var(--card-2);
-    border-radius: 6px;
-  }
+  .history-event { font-size: 15px; font-weight: 700; color: var(--purple); margin-bottom: 6px; }
+  .history-lesson { font-size: 14px; margin-bottom: 6px; }
+  .history-diff { font-size: 13px; color: var(--text-dim); }
 
   /* Share */
-  .share-bar {
-    display: flex;
-    gap: 10px;
-    margin: 20px 0;
-    flex-wrap: wrap;
-  }
+  .share-bar { display: flex; gap: 10px; margin: 20px 0; flex-wrap: wrap; }
   .share-btn {
-    padding: 8px 16px;
-    border-radius: 8px;
-    font-size: 13px;
-    cursor: pointer;
-    border: 1px solid var(--border);
-    background: var(--card);
-    color: var(--text);
-    text-decoration: none;
-    transition: all 0.2s;
+    padding: 8px 16px; border-radius: 8px; font-size: 13px; cursor: pointer;
+    border: 1px solid var(--border); background: var(--card); color: var(--text);
+    text-decoration: none; transition: all 0.2s;
   }
   .share-btn:hover { border-color: var(--accent); color: var(--accent); }
 
   /* Footer */
   footer {
-    margin-top: 40px;
-    padding-top: 20px;
-    border-top: 1px solid var(--border);
-    text-align: center;
-    color: var(--text-dim);
-    font-size: 12px;
+    margin-top: 40px; padding-top: 20px; border-top: 1px solid var(--border);
+    text-align: center; color: var(--text-dim); font-size: 12px;
   }
 
-  /* i18n: hide non-active language by default */
+  /* i18n */
   [data-lang="en"] { display: none; }
   body.lang-en [data-lang="zh"] { display: none; }
   body.lang-en [data-lang="en"] { display: inline; }
@@ -316,10 +244,13 @@
     .topbar-logo { font-size: 18px; }
     .stats-grid { grid-template-columns: repeat(2, 1fr); }
     .stat-card .stat-value { font-size: 22px; }
-    .flow-nodes { flex-direction: column; }
-    .flow-arrow { transform: rotate(90deg); justify-content: center; }
-    .event-card, .chain-card, .verify-card { padding: 14px; }
+    .market-table { font-size: 12px; }
+    .market-table th, .market-table td { padding: 8px 6px; }
+    .flow-nodes { flex-direction: column; align-items: flex-start; min-width: 0; }
+    .flow-arrow { transform: rotate(90deg); }
+    .event-card, .chain-card, .verify-card, .history-card { padding: 14px; }
     .section-title { font-size: 17px; }
+    .page-header h1 { font-size: 20px; }
   }
 </style>
 </head>
@@ -348,333 +279,350 @@
     <button class="share-btn" onclick="copyLink()"><span data-lang="zh">🔗 复制链接</span><span data-lang="en">🔗 Copy Link</span></button>
   </div>
 
+  <!-- Header -->
+  <div class="page-header">
+    <h1>📊 <span data-lang="zh">每日市场地图</span><span data-lang="en">Daily Market Map</span></h1>
+    <div class="meta">
+      <span>📅 2026-11-18 <span data-lang="zh">星期三</span><span data-lang="en">Wednesday</span></span>
+      <span>📡 <span data-lang="zh">数据源：华尔街见闻 wallstreetcn.com/live/global</span><span data-lang="en">Source: WallstreetCN</span></span>
+      <span>🕐 约15:46（北京时间）</span>
+    </div>
+  </div>
+
   <!-- Stats -->
-  <div class="stats-grid">
-    <div class="stat-card">
+  <div class="stats-grid"><div class="stat-card">
       <div class="stat-label"><span data-lang="zh">S&P</span><span data-lang="en">S&P</span></div>
       <div class="stat-value stat-up">500</div>
       <div class="stat-change"><span data-lang="zh">Only two ‘Magnificent Seven’ stocks have managed to beat the</span><span data-lang="en">Only two ‘Magnificent Seven’ stocks have managed to beat the</span></div>
     </div>
+</div>
 
-  </div>
-
-  <!-- Events -->
+  <!-- Section 1: Four-column table -->
   <div class="section">
-    <div class="section-title"><span data-lang="zh">📌 核心要闻（50条）</span><span data-lang="en">📌 Key Headlines (50)</span></div>
-    <div class="event-card">
-      <div class="event-tags"><span class="tag tag-fed"><span data-lang="zh">央行</span><span data-lang="en">Central Bank</span></span><span class="tag tag-energy"><span data-lang="zh">能源</span><span data-lang="en">Energy</span></span></div>
-      <div class="event-text"><span class="dir-arrow dir-up">📈</span> <span data-lang="zh">Euro zone inflation hits 4% for first time in three years as interest rate hike looms | It was driven by energy inflation, which surged above 20% in October.</span><span data-lang="en">Euro zone inflation hits 4% for first time in three years as interest rate hike looms | It was driven by energy inflation, which surged above 20% in October.</span></div>
-      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
-      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
-    </div>
-<div class="event-card">
-      <div class="event-tags"><span class="tag tag-ai"><span data-lang="zh">AI</span><span data-lang="en">AI</span></span></div>
-      <div class="event-text"><span class="dir-arrow dir-up">📈</span> <span data-lang="zh">Japan exports in October surge 20.5%, beating estimates on robust chip shipments | Semiconductor shipments spiked almost 50% year on year.</span><span data-lang="en">Japan exports in October surge 20.5%, beating estimates on robust chip shipments | Semiconductor shipments spiked almost 50% year on year.</span></div>
-      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
-      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
-    </div>
-<div class="event-card">
-      <div class="event-tags"><span class="tag tag-macro"><span data-lang="zh">宏观</span><span data-lang="en">Macro</span></span></div>
-      <div class="event-text"><span class="dir-arrow dir-neutral">➡️</span> <span data-lang="zh">The October jobs report is out Friday. Here's everything to expect | The Bureau of Labor Statistics releases the October nonfarm payrolls report Friday at 8:30 a.m. ET.</span><span data-lang="en">The October jobs report is out Friday. Here's everything to expect | The Bureau of Labor Statistics releases the October nonfarm payrolls report Friday at 8:30 a.m. ET.</span></div>
-      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
-      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
-    </div>
-<div class="event-card">
-      <div class="event-tags"><span class="tag tag-macro"><span data-lang="zh">宏观</span><span data-lang="en">Macro</span></span></div>
-      <div class="event-text"><span class="dir-arrow dir-neutral">➡️</span> <span data-lang="zh">U.S. economy added 165,000 jobs in October, way more than expected; unemployment rate slips to 4.1% | Nonfarm payrolls were expected to increase by 59,000 in October as the unemployment rate was expec...</span><span data-lang="en">U.S. economy added 165,000 jobs in October, way more than expected; unemployment rate slips to 4.1% | Nonfarm payrolls were expected to increase by 59,000 in October as the unemployment rate was expec...</span></div>
-      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
-      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
-    </div>
-<div class="event-card">
-      <div class="event-tags"><span class="tag tag-ai"><span data-lang="zh">AI</span><span data-lang="en">AI</span></span></div>
-      <div class="event-text"><span class="dir-arrow dir-up">📈</span> <span data-lang="zh">Anthropic IPO: AI lab considers increasing the offering as investor demand surges | Anthropic stock is set to begin trading on the Nasdaq under the ticker symbol "ANT" on Thursday.</span><span data-lang="en">Anthropic IPO: AI lab considers increasing the offering as investor demand surges | Anthropic stock is set to begin trading on the Nasdaq under the ticker symbol "ANT" on Thursday.</span></div>
-      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
-      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
-    </div>
-<div class="event-card">
-      <div class="event-tags"><span class="tag tag-fed"><span data-lang="zh">央行</span><span data-lang="en">Central Bank</span></span></div>
-      <div class="event-text"><span class="dir-arrow dir-neutral">➡️</span> <span data-lang="zh">Fed’s Waller says central bank may need to ‘shock people’ with half-point rate hike | Continued inflation above the Fed's 2% target is pushing central bank officials into a more aggressive stance.</span><span data-lang="en">Fed’s Waller says central bank may need to ‘shock people’ with half-point rate hike | Continued inflation above the Fed's 2% target is pushing central bank officials into a more aggressive stance.</span></div>
-      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
-      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
-    </div>
-<div class="event-card">
-      <div class="event-tags"><span class="tag tag-fed"><span data-lang="zh">央行</span><span data-lang="en">Central Bank</span></span><span class="tag tag-macro"><span data-lang="zh">财政</span><span data-lang="en">Fiscal</span></span></div>
-      <div class="event-text"><span class="dir-arrow dir-up">📈</span> <span data-lang="zh">Want to earn 5% on shorter-term Treasurys again? Watch for this shift. | Don’t rule out a half-point interest-rate hike in December, BofA Global’s rates team said.</span><span data-lang="en">Want to earn 5% on shorter-term Treasurys again? Watch for this shift. | Don’t rule out a half-point interest-rate hike in December, BofA Global’s rates team said.</span></div>
-      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
-      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
-    </div>
-<div class="event-card">
-      <div class="event-tags"><span class="tag tag-fed"><span data-lang="zh">央行</span><span data-lang="en">Central Bank</span></span></div>
-      <div class="event-text"><span class="dir-arrow dir-neutral">➡️</span> <span data-lang="zh">A key report for where inflation stood in October comes out Tuesday. Here's what to expect | The CPI headline reading is expected to show an increase of 0.3% while the core is forecast to increase 0.2...</span><span data-lang="en">A key report for where inflation stood in October comes out Tuesday. Here's what to expect | The CPI headline reading is expected to show an increase of 0.3% while the core is forecast to increase 0.2...</span></div>
-      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
-      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
-    </div>
-<div class="event-card">
-      <div class="event-tags"><span class="tag tag-macro"><span data-lang="zh">宏观</span><span data-lang="en">Macro</span></span></div>
-      <div class="event-text"><span class="dir-arrow dir-up">📈</span> <span data-lang="zh">Job openings posted big September gain in positive sign for labor market ahead of payrolls report | The BLS reported job openings at 7.52 million, up 333,000 from August and well above the Dow Jones c...</span><span data-lang="en">Job openings posted big September gain in positive sign for labor market ahead of payrolls report | The BLS reported job openings at 7.52 million, up 333,000 from August and well above the Dow Jones c...</span></div>
-      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
-      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
-    </div>
-<div class="event-card">
-      <div class="event-tags"><span class="tag tag-fed"><span data-lang="zh">央行</span><span data-lang="en">Central Bank</span></span></div>
-      <div class="event-text"><span class="dir-arrow dir-up">📈</span> <span data-lang="zh">Sterling today: Pound slips as U.S. rate bets outweigh UK CPI rise to 3.6%</span><span data-lang="en">Sterling today: Pound slips as U.S. rate bets outweigh UK CPI rise to 3.6%</span></div>
-      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
-      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
-    </div>
-<div class="event-card">
-      <div class="event-tags"><span class="tag tag-fed"><span data-lang="zh">央行</span><span data-lang="en">Central Bank</span></span><span class="tag tag-china"><span data-lang="zh">中国</span><span data-lang="en">China</span></span></div>
-      <div class="event-text"><span class="dir-arrow dir-neutral">➡️</span> <span data-lang="zh">China wholesale inflation hits highest in more than four years as consumer measure slows | The PPI for October came in at 5.7%, compared to the 5.3% expected by economists polled by Reuters.</span><span data-lang="en">China wholesale inflation hits highest in more than four years as consumer measure slows | The PPI for October came in at 5.7%, compared to the 5.3% expected by economists polled by Reuters.</span></div>
-      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
-      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
-    </div>
-<div class="event-card">
-      <div class="event-tags"><span class="tag tag-fed"><span data-lang="zh">央行</span><span data-lang="en">Central Bank</span></span></div>
-      <div class="event-text"><span class="dir-arrow dir-neutral">➡️</span> <span data-lang="zh">Fed’s Waller says interest-rate hikes may be needed to ‘shock’ inflation out of the system | The central bank might need to hike interest rates by a full percentage point or more to cool down inflatio...</span><span data-lang="en">Fed’s Waller says interest-rate hikes may be needed to ‘shock’ inflation out of the system | The central bank might need to hike interest rates by a full percentage point or more to cool down inflatio...</span></div>
-      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
-      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
-    </div>
-<div class="event-card">
-      <div class="event-tags"><span class="tag tag-fed"><span data-lang="zh">央行</span><span data-lang="en">Central Bank</span></span><span class="tag tag-macro"><span data-lang="zh">财政</span><span data-lang="en">Fiscal</span></span></div>
-      <div class="event-text"><span class="dir-arrow dir-up">📈</span> <span data-lang="zh">Two-year Treasury note yield climbs as Waller warns that Fed may need to ‘shock people’ with half-point rate hike | The short end of the Treasury yield curve rose Wednesday.</span><span data-lang="en">Two-year Treasury note yield climbs as Waller warns that Fed may need to ‘shock people’ with half-point rate hike | The short end of the Treasury yield curve rose Wednesday.</span></div>
-      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
-      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
-    </div>
-<div class="event-card">
-      <div class="event-tags"><span class="tag tag-macro"><span data-lang="zh">宏观</span><span data-lang="en">Macro</span></span></div>
-      <div class="event-text"><span class="dir-arrow dir-neutral">➡️</span> <span data-lang="zh">Euro zone economy slows to 0.4% growth in Q3 as crisis-hit France contracts | The euro zone showed surprising resilience, but weak productivity, industrial competitiveness challenges and demographic p...</span><span data-lang="en">Euro zone economy slows to 0.4% growth in Q3 as crisis-hit France contracts | The euro zone showed surprising resilience, but weak productivity, industrial competitiveness challenges and demographic p...</span></div>
-      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
-      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
-    </div>
-<div class="event-card">
-      <div class="event-tags"><span class="tag tag-ai"><span data-lang="zh">AI</span><span data-lang="en">AI</span></span></div>
-      <div class="event-text"><span class="dir-arrow dir-neutral">➡️</span> <span data-lang="zh">Analysis: Nvidia’s leadership crisis tests the chipmaker’s role as the ‘central bank of AI’ | The tech giant's web of ties to other companies is raising the possibility that it could do far-reaching e...</span><span data-lang="en">Analysis: Nvidia’s leadership crisis tests the chipmaker’s role as the ‘central bank of AI’ | The tech giant's web of ties to other companies is raising the possibility that it could do far-reaching e...</span></div>
-      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
-      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
-    </div>
-<div class="event-card">
-      <div class="event-tags"><span class="tag tag-ai"><span data-lang="zh">AI</span><span data-lang="en">AI</span></span><span class="tag tag-fed"><span data-lang="zh">央行</span><span data-lang="en">Central Bank</span></span></div>
-      <div class="event-text"><span class="dir-arrow dir-neutral">➡️</span> <span data-lang="zh">Worried about the AI bubble popping? How investing pros say to adjust your strategy | Tech concentration and AI-stock volatility are rattling investors. Experts explain how to diversify without abando...</span><span data-lang="en">Worried about the AI bubble popping? How investing pros say to adjust your strategy | Tech concentration and AI-stock volatility are rattling investors. Experts explain how to diversify without abando...</span></div>
-      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
-      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
-    </div>
-<div class="event-card">
-      <div class="event-tags"><span class="tag tag-ai"><span data-lang="zh">AI</span><span data-lang="en">AI</span></span><span class="tag tag-fed"><span data-lang="zh">央行</span><span data-lang="en">Central Bank</span></span></div>
-      <div class="event-text"><span class="dir-arrow dir-neutral">➡️</span> <span data-lang="zh">AI risks are the biggest threat to the financial system, Fed survey finds | The report comes with Wall Street on edge over high-flying AI hyperscalers, while communities are on alert for the rapid spr...</span><span data-lang="en">AI risks are the biggest threat to the financial system, Fed survey finds | The report comes with Wall Street on edge over high-flying AI hyperscalers, while communities are on alert for the rapid spr...</span></div>
-      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
-      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
-    </div>
-<div class="event-card">
-      <div class="event-tags"><span class="tag tag-fed"><span data-lang="zh">央行</span><span data-lang="en">Central Bank</span></span></div>
-      <div class="event-text"><span class="dir-arrow dir-down">📉</span> <span data-lang="zh">Mortgage demand turns lower, as interest rates shoot back up to the highest level in three weeks | Mortgage rates moved sharply higher last week, causing demand for both mortgage refinances and home p...</span><span data-lang="en">Mortgage demand turns lower, as interest rates shoot back up to the highest level in three weeks | Mortgage rates moved sharply higher last week, causing demand for both mortgage refinances and home p...</span></div>
-      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
-      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
-    </div>
-<div class="event-card">
-      <div class="event-tags"><span class="tag tag-ai"><span data-lang="zh">AI</span><span data-lang="en">AI</span></span></div>
-      <div class="event-text"><span class="dir-arrow dir-up">📈</span> <span data-lang="zh">South Korea targets 'world's highest performance' sovereign AI model in record new budget | The 2027 budget will rise 12.8% to 820.9 trillion won, and will include a 21.3 trillion won investment into ...</span><span data-lang="en">South Korea targets 'world's highest performance' sovereign AI model in record new budget | The 2027 budget will rise 12.8% to 820.9 trillion won, and will include a 21.3 trillion won investment into ...</span></div>
-      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
-      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
-    </div>
-<div class="event-card">
-      <div class="event-tags"><span class="tag tag-macro"><span data-lang="zh">宏观</span><span data-lang="en">Macro</span></span></div>
-      <div class="event-text"><span class="dir-arrow dir-neutral">➡️</span> <span data-lang="zh">Costco is benefiting from ‘apocalyptic concerns’ as customers stock up on goods, analysts say | Mizuho analysts have seen an “acceleration on emergency prep sales” at the warehouse chain following the...</span><span data-lang="en">Costco is benefiting from ‘apocalyptic concerns’ as customers stock up on goods, analysts say | Mizuho analysts have seen an “acceleration on emergency prep sales” at the warehouse chain following the...</span></div>
-      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
-      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
-    </div>
-<div class="event-card">
-      <div class="event-tags"><span class="tag tag-ai"><span data-lang="zh">AI</span><span data-lang="en">AI</span></span></div>
-      <div class="event-text"><span class="dir-arrow dir-up">📈</span> <span data-lang="zh">Jim Cramer's top 10 things to watch in the stock market Wednesday | Can Nvidia hold these gains after earnings?</span><span data-lang="en">Jim Cramer's top 10 things to watch in the stock market Wednesday | Can Nvidia hold these gains after earnings?</span></div>
-      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
-      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
-    </div>
-<div class="event-card">
-      <div class="event-tags"><span class="tag tag-fed"><span data-lang="zh">央行</span><span data-lang="en">Central Bank</span></span></div>
-      <div class="event-text"><span class="dir-arrow dir-neutral">➡️</span> <span data-lang="zh">St. Louis Fed's Musalem says four more rate hikes may be needed in coming months | The forecast represents one of the most hawkish views among policymakers.</span><span data-lang="en">St. Louis Fed's Musalem says four more rate hikes may be needed in coming months | The forecast represents one of the most hawkish views among policymakers.</span></div>
-      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
-      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
-    </div>
-<div class="event-card">
-      <div class="event-tags"><span class="tag tag-ai"><span data-lang="zh">AI</span><span data-lang="en">AI</span></span></div>
-      <div class="event-text"><span class="dir-arrow dir-neutral">➡️</span> <span data-lang="zh">Only two ‘Magnificent Seven’ stocks have managed to beat the S&P 500 since the start of 2025 | Alphabet and Apple have approached artificial intelligence in ways that have resonated on Wall Street.</span><span data-lang="en">Only two ‘Magnificent Seven’ stocks have managed to beat the S&P 500 since the start of 2025 | Alphabet and Apple have approached artificial intelligence in ways that have resonated on Wall Street.</span></div>
-      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
-      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
-    </div>
-<div class="event-card">
-      <div class="event-tags"><span class="tag tag-fed"><span data-lang="zh">央行</span><span data-lang="en">Central Bank</span></span></div>
-      <div class="event-text"><span class="dir-arrow dir-neutral">➡️</span> <span data-lang="zh">Consumer prices rose 0.4% in October, more than expected, complicating Fed's inflation fight | The report comes at a critical juncture for the Federal Reserve as it considers its next move regarding i...</span><span data-lang="en">Consumer prices rose 0.4% in October, more than expected, complicating Fed's inflation fight | The report comes at a critical juncture for the Federal Reserve as it considers its next move regarding i...</span></div>
-      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
-      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
-    </div>
-<div class="event-card">
-      <div class="event-tags"><span class="tag tag-macro"><span data-lang="zh">宏观</span><span data-lang="en">Macro</span></span></div>
-      <div class="event-text"><span class="dir-arrow dir-down">📉</span> <span data-lang="zh">Sterling today: Pound set to snap slide as dollar pauses; UK jobless dips to 4.6%</span><span data-lang="en">Sterling today: Pound set to snap slide as dollar pauses; UK jobless dips to 4.6%</span></div>
-      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
-      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
-    </div>
-<div class="event-card">
-      <div class="event-tags"><span class="tag tag-bio"><span data-lang="zh">生物科技</span><span data-lang="en">Biotech</span></span></div>
-      <div class="event-text"><span class="dir-arrow dir-neutral">➡️</span> <span data-lang="zh">Hims & Hers launches new peptide treatments — while admitting there's more to learn about efficacy | The telehealth company will now offer compounded forms of sermorelin, glutathione, NAD+,  vitamin B...</span><span data-lang="en">Hims & Hers launches new peptide treatments — while admitting there's more to learn about efficacy | The telehealth company will now offer compounded forms of sermorelin, glutathione, NAD+,  vitamin B...</span></div>
-      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
-      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
-    </div>
-<div class="event-card">
-      <div class="event-tags"><span class="tag tag-ai"><span data-lang="zh">AI</span><span data-lang="en">AI</span></span></div>
-      <div class="event-text"><span class="dir-arrow dir-down">📉</span> <span data-lang="zh">CoreWeave, Iren, Nebius shares sink following Nvidia earnings | Nvidia's earnings come at a tumultuous time for the company.</span><span data-lang="en">CoreWeave, Iren, Nebius shares sink following Nvidia earnings | Nvidia's earnings come at a tumultuous time for the company.</span></div>
-      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
-      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
-    </div>
-<div class="event-card">
-      <div class="event-tags"><span class="tag tag-ai"><span data-lang="zh">AI</span><span data-lang="en">AI</span></span></div>
-      <div class="event-text"><span class="dir-arrow dir-neutral">➡️</span> <span data-lang="zh">'Who and what comes next': Analysts expect Nvidia investor uncertainty despite earnings beat | Nvidia’s Q3 results should help ease short-term concerns, but uncertainty remains around long-term leader...</span><span data-lang="en">'Who and what comes next': Analysts expect Nvidia investor uncertainty despite earnings beat | Nvidia’s Q3 results should help ease short-term concerns, but uncertainty remains around long-term leader...</span></div>
-      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
-      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
-    </div>
-<div class="event-card">
-      <div class="event-tags"><span class="tag tag-ai"><span data-lang="zh">AI</span><span data-lang="en">AI</span></span><span class="tag tag-china"><span data-lang="zh">中国</span><span data-lang="en">China</span></span></div>
-      <div class="event-text"><span class="dir-arrow dir-neutral">➡️</span> <span data-lang="zh">Southeast Asia’s data center boom leaned on Chinese demand. New U.S. rules put that pipeline at risk | The rules require data centers in Southeast Asia to seek U.S. approval to buy advanced AI chips, ...</span><span data-lang="en">Southeast Asia’s data center boom leaned on Chinese demand. New U.S. rules put that pipeline at risk | The rules require data centers in Southeast Asia to seek U.S. approval to buy advanced AI chips, ...</span></div>
-      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
-      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
-    </div>
-<div class="event-card">
-      <div class="event-tags"><span class="tag tag-fed"><span data-lang="zh">央行</span><span data-lang="en">Central Bank</span></span></div>
-      <div class="event-text"><span class="dir-arrow dir-neutral">➡️</span> <span data-lang="zh">Bank of England hikes interest rate for the first time since Iran war, warns inflation will near 5% | One policymaker voted to raise the bank's key interest rate to 4.25%.</span><span data-lang="en">Bank of England hikes interest rate for the first time since Iran war, warns inflation will near 5% | One policymaker voted to raise the bank's key interest rate to 4.25%.</span></div>
-      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
-      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
-    </div>
-<div class="event-card">
-      <div class="event-tags"><span class="tag tag-ai"><span data-lang="zh">AI</span><span data-lang="en">AI</span></span><span class="tag tag-china"><span data-lang="zh">中国</span><span data-lang="en">China</span></span></div>
-      <div class="event-text"><span class="dir-arrow dir-neutral">➡️</span> <span data-lang="zh">China’s military seeks Nvidia’s advanced chips for AI capabilities, commission says | A congressional commission issued its findings as Nvidia has been rocked by its CEO's resignation after reports he...</span><span data-lang="en">China’s military seeks Nvidia’s advanced chips for AI capabilities, commission says | A congressional commission issued its findings as Nvidia has been rocked by its CEO's resignation after reports he...</span></div>
-      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
-      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
-    </div>
-<div class="event-card">
-      <div class="event-tags"><span class="tag tag-fed"><span data-lang="zh">央行</span><span data-lang="en">Central Bank</span></span></div>
-      <div class="event-text"><span class="dir-arrow dir-down">📉</span> <span data-lang="zh">Two new housing reports point to bleak winter ahead, with record low sales | Two new reports on the state of the housing market show things are just getting worse, as high mortgage rates and inflation...</span><span data-lang="en">Two new housing reports point to bleak winter ahead, with record low sales | Two new reports on the state of the housing market show things are just getting worse, as high mortgage rates and inflation...</span></div>
-      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
-      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
-    </div>
-<div class="event-card">
-      <div class="event-tags"><span class="tag tag-fed"><span data-lang="zh">央行</span><span data-lang="en">Central Bank</span></span></div>
-      <div class="event-text"><span class="dir-arrow dir-neutral">➡️</span> <span data-lang="zh">Australia hikes rates to 18-year high to fight inflation | The Reserve Bank of Australia's decision was in line with expectations from economists polled by Reuters, and marked its fifth rate increase ...</span><span data-lang="en">Australia hikes rates to 18-year high to fight inflation | The Reserve Bank of Australia's decision was in line with expectations from economists polled by Reuters, and marked its fifth rate increase ...</span></div>
-      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
-      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
-    </div>
-<div class="event-card">
-      <div class="event-tags"><span class="tag tag-fed"><span data-lang="zh">央行</span><span data-lang="en">Central Bank</span></span></div>
-      <div class="event-text"><span class="dir-arrow dir-neutral">➡️</span> <span data-lang="zh">Record diesel prices drive UK inflation to 1-year high of 3.6% | It put the U.K.'s annual inflation rate at a 1-year high.</span><span data-lang="en">Record diesel prices drive UK inflation to 1-year high of 3.6% | It put the U.K.'s annual inflation rate at a 1-year high.</span></div>
-      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
-      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
-    </div>
-<div class="event-card">
-      <div class="event-tags"><span class="tag tag-ai"><span data-lang="zh">AI</span><span data-lang="en">AI</span></span></div>
-      <div class="event-text"><span class="dir-arrow dir-down">📉</span> <span data-lang="zh">Nvidia closes lower ahead of earnings as company reels from Huang resignation | Investors have been weighing the fallout from former CEO Jensen Huang's resignation.</span><span data-lang="en">Nvidia closes lower ahead of earnings as company reels from Huang resignation | Investors have been weighing the fallout from former CEO Jensen Huang's resignation.</span></div>
-      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
-      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
-    </div>
-<div class="event-card">
-      <div class="event-tags"><span class="tag tag-ai"><span data-lang="zh">AI</span><span data-lang="en">AI</span></span></div>
-      <div class="event-text"><span class="dir-arrow dir-neutral">➡️</span> <span data-lang="zh">UK economy expands 0.7% in third quarter as AI provides 'extra engine of growth' | The U.K. economy grew 0.7% in the third quarter of the year, in line with estimates.</span><span data-lang="en">UK economy expands 0.7% in third quarter as AI provides 'extra engine of growth' | The U.K. economy grew 0.7% in the third quarter of the year, in line with estimates.</span></div>
-      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
-      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
-    </div>
-<div class="event-card">
-      <div class="event-tags"><span class="tag tag-macro"><span data-lang="zh">宏观</span><span data-lang="en">Macro</span></span></div>
-      <div class="event-text"><span class="dir-arrow dir-neutral">➡️</span> <span data-lang="zh">3 unexpected reasons the October jobs report was so strong | October's jobs report blew past economist forecasts. Here are three reasons.</span><span data-lang="en">3 unexpected reasons the October jobs report was so strong | October's jobs report blew past economist forecasts. Here are three reasons.</span></div>
-      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
-      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
-    </div>
-<div class="event-card">
-      <div class="event-tags"><span class="tag tag-macro"><span data-lang="zh">宏观</span><span data-lang="en">Macro</span></span></div>
-      <div class="event-text"><span class="dir-arrow dir-up">📈</span> <span data-lang="zh">Private companies added 86,000 jobs in October, slightly higher than expected, ADP says | Private-sector job growth held steady in October, with gains spread across sectors</span><span data-lang="en">Private companies added 86,000 jobs in October, slightly higher than expected, ADP says | Private-sector job growth held steady in October, with gains spread across sectors</span></div>
-      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
-      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
-    </div>
-<div class="event-card">
-      <div class="event-tags"><span class="tag tag-macro"><span data-lang="zh">宏观</span><span data-lang="en">Macro</span></span></div>
-      <div class="event-text"><span class="dir-arrow dir-up">📈</span> <span data-lang="zh">Medicare Part B premiums rise due to higher healthcare spending | The premiums will increase by $6.50, to $209.40 a month.</span><span data-lang="en">Medicare Part B premiums rise due to higher healthcare spending | The premiums will increase by $6.50, to $209.40 a month.</span></div>
-      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
-      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
-    </div>
-<div class="event-card">
-      <div class="event-tags"><span class="tag tag-macro"><span data-lang="zh">宏观</span><span data-lang="en">Macro</span></span></div>
-      <div class="event-text"><span class="dir-arrow dir-neutral">➡️</span> <span data-lang="zh">Senators press acting U.S. Navy Secretary on Iran war costs, sailor health in confirmation hearing | Acting Navy Secretary Hung Cao told senators the Navy recoded and used munitions he called expired ...</span><span data-lang="en">Senators press acting U.S. Navy Secretary on Iran war costs, sailor health in confirmation hearing | Acting Navy Secretary Hung Cao told senators the Navy recoded and used munitions he called expired ...</span></div>
-      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
-      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
-    </div>
-<div class="event-card">
-      <div class="event-tags"><span class="tag tag-macro"><span data-lang="zh">宏观</span><span data-lang="en">Macro</span></span></div>
-      <div class="event-text"><span class="dir-arrow dir-down">📉</span> <span data-lang="zh">Putin says EU is losing industry, falling behind competition, ahead of meeting with Trump and Xi | Putin used the speech to emphasize Russia's economic resilience despite U.S. sanctions, and played up...</span><span data-lang="en">Putin says EU is losing industry, falling behind competition, ahead of meeting with Trump and Xi | Putin used the speech to emphasize Russia's economic resilience despite U.S. sanctions, and played up...</span></div>
-      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
-      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
-    </div>
-<div class="event-card">
-      <div class="event-tags"><span class="tag tag-ai"><span data-lang="zh">AI</span><span data-lang="en">AI</span></span></div>
-      <div class="event-text"><span class="dir-arrow dir-neutral">➡️</span> <span data-lang="zh">With Jensen Huang gone, Colette Kress shows Nvidia is still at the center of AI | In her first earnings report as interim CEO, Nvidia's Colette Kress calmed investors' nerves, at least for the moment.</span><span data-lang="en">With Jensen Huang gone, Colette Kress shows Nvidia is still at the center of AI | In her first earnings report as interim CEO, Nvidia's Colette Kress calmed investors' nerves, at least for the moment.</span></div>
-      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
-      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
-    </div>
-<div class="event-card">
-      <div class="event-tags"><span class="tag tag-ai"><span data-lang="zh">AI</span><span data-lang="en">AI</span></span></div>
-      <div class="event-text"><span class="dir-arrow dir-neutral">➡️</span> <span data-lang="zh">How to get Anthropic stock — without buying the IPO | Investors will get access to the AI startup's stock offering courtesy of its inclusion in many mutual funds and ETFs.</span><span data-lang="en">How to get Anthropic stock — without buying the IPO | Investors will get access to the AI startup's stock offering courtesy of its inclusion in many mutual funds and ETFs.</span></div>
-      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
-      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
-    </div>
-<div class="event-card">
-      <div class="event-tags"><span class="tag tag-ai"><span data-lang="zh">AI</span><span data-lang="en">AI</span></span></div>
-      <div class="event-text"><span class="dir-arrow dir-up">📈</span> <span data-lang="zh">Booking Holdings creates new enterprise division as AI reshapes travel planning | The future for online travel agencies increasingly relies on scaling business-to-business travel platforms.</span><span data-lang="en">Booking Holdings creates new enterprise division as AI reshapes travel planning | The future for online travel agencies increasingly relies on scaling business-to-business travel platforms.</span></div>
-      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
-      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
-    </div>
-<div class="event-card">
-      <div class="event-tags"><span class="tag tag-ai"><span data-lang="zh">AI</span><span data-lang="en">AI</span></span></div>
-      <div class="event-text"><span class="dir-arrow dir-neutral">➡️</span> <span data-lang="zh">OpenAI bugging case defendant Alfozan set for trial in January | Abdulrahman Alfozan has been held without bail since his arrest in October, after prosecutors said he planted a listening device in an ...</span><span data-lang="en">OpenAI bugging case defendant Alfozan set for trial in January | Abdulrahman Alfozan has been held without bail since his arrest in October, after prosecutors said he planted a listening device in an ...</span></div>
-      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
-      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
-    </div>
-<div class="event-card">
-      <div class="event-tags"><span class="tag tag-ai"><span data-lang="zh">AI</span><span data-lang="en">AI</span></span><span class="tag tag-china"><span data-lang="zh">中国</span><span data-lang="en">China</span></span></div>
-      <div class="event-text"><span class="dir-arrow dir-neutral">➡️</span> <span data-lang="zh">Jensen Huang scandal fuels bipartisan push to block AI chip sales to China | Congress members are pushing for a series of chip-related export control bills to be included in the annual National Defens...</span><span data-lang="en">Jensen Huang scandal fuels bipartisan push to block AI chip sales to China | Congress members are pushing for a series of chip-related export control bills to be included in the annual National Defens...</span></div>
-      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
-      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
-    </div>
-<div class="event-card">
-      <div class="event-tags"><span class="tag tag-ai"><span data-lang="zh">AI</span><span data-lang="en">AI</span></span></div>
-      <div class="event-text"><span class="dir-arrow dir-neutral">➡️</span> <span data-lang="zh">Retail investor enthusiasm for Anthropic IPO to rival SpaceX debut | Anthropic is gearing up for a blockbuster initial public offering this week, and excitement among retail investors looks to be off ...</span><span data-lang="en">Retail investor enthusiasm for Anthropic IPO to rival SpaceX debut | Anthropic is gearing up for a blockbuster initial public offering this week, and excitement among retail investors looks to be off ...</span></div>
-      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
-      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
-    </div>
-<div class="event-card">
-      <div class="event-tags"><span class="tag tag-ai"><span data-lang="zh">AI</span><span data-lang="en">AI</span></span></div>
-      <div class="event-text"><span class="dir-arrow dir-neutral">➡️</span> <span data-lang="zh">Paris Hilton, Alexandria Ocasio-Cortez press House to pass Defiance Act to fight AI deepfake pornography | Paris Hilton, backed by Alexandria Ocasio-Cortez, is pushing for the anti-AI deepfake pornogr...</span><span data-lang="en">Paris Hilton, Alexandria Ocasio-Cortez press House to pass Defiance Act to fight AI deepfake pornography | Paris Hilton, backed by Alexandria Ocasio-Cortez, is pushing for the anti-AI deepfake pornogr...</span></div>
-      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
-      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
-    </div>
-<div class="event-card">
-      <div class="event-tags"><span class="tag tag-energy"><span data-lang="zh">能源</span><span data-lang="en">Energy</span></span></div>
-      <div class="event-text"><span class="dir-arrow dir-neutral">➡️</span> <span data-lang="zh">IEA chief sees no 'credible pathway' back to pre-war normality in the Strait of Hormuz | The Iran war has 'crushed' confidence in the Strait of Hormuz as a reliable energy and goods corridor, the IEA'...</span><span data-lang="en">IEA chief sees no 'credible pathway' back to pre-war normality in the Strait of Hormuz | The Iran war has 'crushed' confidence in the Strait of Hormuz as a reliable energy and goods corridor, the IEA'...</span></div>
-      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
-      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
-    </div>
-<div class="event-card">
-      <div class="event-tags"><span class="tag tag-ai"><span data-lang="zh">AI</span><span data-lang="en">AI</span></span><span class="tag tag-fed"><span data-lang="zh">央行</span><span data-lang="en">Central Bank</span></span></div>
-      <div class="event-text"><span class="dir-arrow dir-neutral">➡️</span> <span data-lang="zh">Analysis: The Fed's chairman sees an AI revolution coming. Now he has to figure out what it means | Kevin Warsh sees AI at a turning point. He faces tough questions on jobs and interest rates.</span><span data-lang="en">Analysis: The Fed's chairman sees an AI revolution coming. Now he has to figure out what it means | Kevin Warsh sees AI at a turning point. He faces tough questions on jobs and interest rates.</span></div>
-      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
-      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
-    </div>
-
+    <div class="section-title"><span data-lang="zh">一、核心要闻四列速览</span><span data-lang="en">1. Key Headlines Overview</span></div>
+    <table class="market-table">
+      <thead>
+        <tr>
+          <th style="width:35%"><span data-lang="zh">事件</span><span data-lang="en">Event</span></th>
+          <th style="width:20%"><span data-lang="zh">影响资产</span><span data-lang="en">Affected Assets</span></th>
+          <th style="width:10%"><span data-lang="zh">方向</span><span data-lang="en">Direction</span></th>
+          <th style="width:35%"><span data-lang="zh">传导逻辑</span><span data-lang="en">Transmission Logic</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="tag tag-fed"><span data-lang="zh">央行</span><span data-lang="en">Central Bank</span></span> <span class="tag tag-energy"><span data-lang="zh">能源</span><span data-lang="en">Energy</span></span> <br><b><span data-lang="zh">Euro zone inflation hits 4% for first time in three years as interest rate hike looms | It was driven by energy inflation, which surged above 20% in October.</span><span data-lang="en">Euro zone inflation hits 4% for first time in three years as interest rate hike looms | It was driven by energy inflation, which surged above 20% in October.</span></b></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+          <td class="dir-up"><span data-lang="zh">↑ 涨</span><span data-lang="en">↑ Up</span></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-ai"><span data-lang="zh">AI</span><span data-lang="en">AI</span></span> <br><b><span data-lang="zh">Japan exports in October surge 20.5%, beating estimates on robust chip shipments | Semiconductor shipments spiked almost 50% year on year.</span><span data-lang="en">Japan exports in October surge 20.5%, beating estimates on robust chip shipments | Semiconductor shipments spiked almost 50% year on year.</span></b></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+          <td class="dir-up"><span data-lang="zh">↑ 涨</span><span data-lang="en">↑ Up</span></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-macro"><span data-lang="zh">宏观</span><span data-lang="en">Macro</span></span> <br><b><span data-lang="zh">The October jobs report is out Friday. Here's everything to expect | The Bureau of Labor Statistics releases the October nonfarm payrolls report Friday at 8:30 a.m. ET.</span><span data-lang="en">The October jobs report is out Friday. Here's everything to expect | The Bureau of Labor Statistics releases the October nonfarm payrolls report Friday at 8:30 a.m. ET.</span></b></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+          <td class="dir-neutral"><span data-lang="zh">→ 中性</span><span data-lang="en">→ Neutral</span></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-macro"><span data-lang="zh">宏观</span><span data-lang="en">Macro</span></span> <br><b><span data-lang="zh">U.S. economy added 165,000 jobs in October, way more than expected; unemployment rate slips to 4.1% | Nonfarm payrolls were expected to increase by 59,000 in October as the unemployment rate was expec...</span><span data-lang="en">U.S. economy added 165,000 jobs in October, way more than expected; unemployment rate slips to 4.1% | Nonfarm payrolls were expected to increase by 59,000 in October as the unemployment rate was expec...</span></b></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+          <td class="dir-neutral"><span data-lang="zh">→ 中性</span><span data-lang="en">→ Neutral</span></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-ai"><span data-lang="zh">AI</span><span data-lang="en">AI</span></span> <br><b><span data-lang="zh">Anthropic IPO: AI lab considers increasing the offering as investor demand surges | Anthropic stock is set to begin trading on the Nasdaq under the ticker symbol "ANT" on Thursday.</span><span data-lang="en">Anthropic IPO: AI lab considers increasing the offering as investor demand surges | Anthropic stock is set to begin trading on the Nasdaq under the ticker symbol "ANT" on Thursday.</span></b></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+          <td class="dir-up"><span data-lang="zh">↑ 涨</span><span data-lang="en">↑ Up</span></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-fed"><span data-lang="zh">央行</span><span data-lang="en">Central Bank</span></span> <br><b><span data-lang="zh">Fed’s Waller says central bank may need to ‘shock people’ with half-point rate hike | Continued inflation above the Fed's 2% target is pushing central bank officials into a more aggressive stance.</span><span data-lang="en">Fed’s Waller says central bank may need to ‘shock people’ with half-point rate hike | Continued inflation above the Fed's 2% target is pushing central bank officials into a more aggressive stance.</span></b></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+          <td class="dir-neutral"><span data-lang="zh">→ 中性</span><span data-lang="en">→ Neutral</span></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-fed"><span data-lang="zh">央行</span><span data-lang="en">Central Bank</span></span> <span class="tag tag-macro"><span data-lang="zh">财政</span><span data-lang="en">Fiscal</span></span> <br><b><span data-lang="zh">Want to earn 5% on shorter-term Treasurys again? Watch for this shift. | Don’t rule out a half-point interest-rate hike in December, BofA Global’s rates team said.</span><span data-lang="en">Want to earn 5% on shorter-term Treasurys again? Watch for this shift. | Don’t rule out a half-point interest-rate hike in December, BofA Global’s rates team said.</span></b></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+          <td class="dir-up"><span data-lang="zh">↑ 涨</span><span data-lang="en">↑ Up</span></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-fed"><span data-lang="zh">央行</span><span data-lang="en">Central Bank</span></span> <br><b><span data-lang="zh">A key report for where inflation stood in October comes out Tuesday. Here's what to expect | The CPI headline reading is expected to show an increase of 0.3% while the core is forecast to increase 0.2...</span><span data-lang="en">A key report for where inflation stood in October comes out Tuesday. Here's what to expect | The CPI headline reading is expected to show an increase of 0.3% while the core is forecast to increase 0.2...</span></b></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+          <td class="dir-neutral"><span data-lang="zh">→ 中性</span><span data-lang="en">→ Neutral</span></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-macro"><span data-lang="zh">宏观</span><span data-lang="en">Macro</span></span> <br><b><span data-lang="zh">Job openings posted big September gain in positive sign for labor market ahead of payrolls report | The BLS reported job openings at 7.52 million, up 333,000 from August and well above the Dow Jones c...</span><span data-lang="en">Job openings posted big September gain in positive sign for labor market ahead of payrolls report | The BLS reported job openings at 7.52 million, up 333,000 from August and well above the Dow Jones c...</span></b></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+          <td class="dir-up"><span data-lang="zh">↑ 涨</span><span data-lang="en">↑ Up</span></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-fed"><span data-lang="zh">央行</span><span data-lang="en">Central Bank</span></span> <br><b><span data-lang="zh">Sterling today: Pound slips as U.S. rate bets outweigh UK CPI rise to 3.6%</span><span data-lang="en">Sterling today: Pound slips as U.S. rate bets outweigh UK CPI rise to 3.6%</span></b></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+          <td class="dir-up"><span data-lang="zh">↑ 涨</span><span data-lang="en">↑ Up</span></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-fed"><span data-lang="zh">央行</span><span data-lang="en">Central Bank</span></span> <span class="tag tag-china"><span data-lang="zh">中国</span><span data-lang="en">China</span></span> <br><b><span data-lang="zh">China wholesale inflation hits highest in more than four years as consumer measure slows | The PPI for October came in at 5.7%, compared to the 5.3% expected by economists polled by Reuters.</span><span data-lang="en">China wholesale inflation hits highest in more than four years as consumer measure slows | The PPI for October came in at 5.7%, compared to the 5.3% expected by economists polled by Reuters.</span></b></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+          <td class="dir-neutral"><span data-lang="zh">→ 中性</span><span data-lang="en">→ Neutral</span></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-fed"><span data-lang="zh">央行</span><span data-lang="en">Central Bank</span></span> <br><b><span data-lang="zh">Fed’s Waller says interest-rate hikes may be needed to ‘shock’ inflation out of the system | The central bank might need to hike interest rates by a full percentage point or more to cool down inflatio...</span><span data-lang="en">Fed’s Waller says interest-rate hikes may be needed to ‘shock’ inflation out of the system | The central bank might need to hike interest rates by a full percentage point or more to cool down inflatio...</span></b></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+          <td class="dir-neutral"><span data-lang="zh">→ 中性</span><span data-lang="en">→ Neutral</span></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-fed"><span data-lang="zh">央行</span><span data-lang="en">Central Bank</span></span> <span class="tag tag-macro"><span data-lang="zh">财政</span><span data-lang="en">Fiscal</span></span> <br><b><span data-lang="zh">Two-year Treasury note yield climbs as Waller warns that Fed may need to ‘shock people’ with half-point rate hike | The short end of the Treasury yield curve rose Wednesday.</span><span data-lang="en">Two-year Treasury note yield climbs as Waller warns that Fed may need to ‘shock people’ with half-point rate hike | The short end of the Treasury yield curve rose Wednesday.</span></b></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+          <td class="dir-up"><span data-lang="zh">↑ 涨</span><span data-lang="en">↑ Up</span></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-macro"><span data-lang="zh">宏观</span><span data-lang="en">Macro</span></span> <br><b><span data-lang="zh">Euro zone economy slows to 0.4% growth in Q3 as crisis-hit France contracts | The euro zone showed surprising resilience, but weak productivity, industrial competitiveness challenges and demographic p...</span><span data-lang="en">Euro zone economy slows to 0.4% growth in Q3 as crisis-hit France contracts | The euro zone showed surprising resilience, but weak productivity, industrial competitiveness challenges and demographic p...</span></b></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+          <td class="dir-neutral"><span data-lang="zh">→ 中性</span><span data-lang="en">→ Neutral</span></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-ai"><span data-lang="zh">AI</span><span data-lang="en">AI</span></span> <br><b><span data-lang="zh">Analysis: Nvidia’s leadership crisis tests the chipmaker’s role as the ‘central bank of AI’ | The tech giant's web of ties to other companies is raising the possibility that it could do far-reaching e...</span><span data-lang="en">Analysis: Nvidia’s leadership crisis tests the chipmaker’s role as the ‘central bank of AI’ | The tech giant's web of ties to other companies is raising the possibility that it could do far-reaching e...</span></b></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+          <td class="dir-neutral"><span data-lang="zh">→ 中性</span><span data-lang="en">→ Neutral</span></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-ai"><span data-lang="zh">AI</span><span data-lang="en">AI</span></span> <span class="tag tag-fed"><span data-lang="zh">央行</span><span data-lang="en">Central Bank</span></span> <br><b><span data-lang="zh">Worried about the AI bubble popping? How investing pros say to adjust your strategy | Tech concentration and AI-stock volatility are rattling investors. Experts explain how to diversify without abando...</span><span data-lang="en">Worried about the AI bubble popping? How investing pros say to adjust your strategy | Tech concentration and AI-stock volatility are rattling investors. Experts explain how to diversify without abando...</span></b></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+          <td class="dir-neutral"><span data-lang="zh">→ 中性</span><span data-lang="en">→ Neutral</span></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-ai"><span data-lang="zh">AI</span><span data-lang="en">AI</span></span> <span class="tag tag-fed"><span data-lang="zh">央行</span><span data-lang="en">Central Bank</span></span> <br><b><span data-lang="zh">AI risks are the biggest threat to the financial system, Fed survey finds | The report comes with Wall Street on edge over high-flying AI hyperscalers, while communities are on alert for the rapid spr...</span><span data-lang="en">AI risks are the biggest threat to the financial system, Fed survey finds | The report comes with Wall Street on edge over high-flying AI hyperscalers, while communities are on alert for the rapid spr...</span></b></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+          <td class="dir-neutral"><span data-lang="zh">→ 中性</span><span data-lang="en">→ Neutral</span></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-fed"><span data-lang="zh">央行</span><span data-lang="en">Central Bank</span></span> <br><b><span data-lang="zh">Mortgage demand turns lower, as interest rates shoot back up to the highest level in three weeks | Mortgage rates moved sharply higher last week, causing demand for both mortgage refinances and home p...</span><span data-lang="en">Mortgage demand turns lower, as interest rates shoot back up to the highest level in three weeks | Mortgage rates moved sharply higher last week, causing demand for both mortgage refinances and home p...</span></b></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+          <td class="dir-down"><span data-lang="zh">↓ 跌</span><span data-lang="en">↓ Down</span></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-ai"><span data-lang="zh">AI</span><span data-lang="en">AI</span></span> <br><b><span data-lang="zh">South Korea targets 'world's highest performance' sovereign AI model in record new budget | The 2027 budget will rise 12.8% to 820.9 trillion won, and will include a 21.3 trillion won investment into ...</span><span data-lang="en">South Korea targets 'world's highest performance' sovereign AI model in record new budget | The 2027 budget will rise 12.8% to 820.9 trillion won, and will include a 21.3 trillion won investment into ...</span></b></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+          <td class="dir-up"><span data-lang="zh">↑ 涨</span><span data-lang="en">↑ Up</span></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-macro"><span data-lang="zh">宏观</span><span data-lang="en">Macro</span></span> <br><b><span data-lang="zh">Costco is benefiting from ‘apocalyptic concerns’ as customers stock up on goods, analysts say | Mizuho analysts have seen an “acceleration on emergency prep sales” at the warehouse chain following the...</span><span data-lang="en">Costco is benefiting from ‘apocalyptic concerns’ as customers stock up on goods, analysts say | Mizuho analysts have seen an “acceleration on emergency prep sales” at the warehouse chain following the...</span></b></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+          <td class="dir-neutral"><span data-lang="zh">→ 中性</span><span data-lang="en">→ Neutral</span></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-ai"><span data-lang="zh">AI</span><span data-lang="en">AI</span></span> <br><b><span data-lang="zh">Jim Cramer's top 10 things to watch in the stock market Wednesday | Can Nvidia hold these gains after earnings?</span><span data-lang="en">Jim Cramer's top 10 things to watch in the stock market Wednesday | Can Nvidia hold these gains after earnings?</span></b></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+          <td class="dir-up"><span data-lang="zh">↑ 涨</span><span data-lang="en">↑ Up</span></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-fed"><span data-lang="zh">央行</span><span data-lang="en">Central Bank</span></span> <br><b><span data-lang="zh">St. Louis Fed's Musalem says four more rate hikes may be needed in coming months | The forecast represents one of the most hawkish views among policymakers.</span><span data-lang="en">St. Louis Fed's Musalem says four more rate hikes may be needed in coming months | The forecast represents one of the most hawkish views among policymakers.</span></b></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+          <td class="dir-neutral"><span data-lang="zh">→ 中性</span><span data-lang="en">→ Neutral</span></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-ai"><span data-lang="zh">AI</span><span data-lang="en">AI</span></span> <br><b><span data-lang="zh">Only two ‘Magnificent Seven’ stocks have managed to beat the S&P 500 since the start of 2025 | Alphabet and Apple have approached artificial intelligence in ways that have resonated on Wall Street.</span><span data-lang="en">Only two ‘Magnificent Seven’ stocks have managed to beat the S&P 500 since the start of 2025 | Alphabet and Apple have approached artificial intelligence in ways that have resonated on Wall Street.</span></b></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+          <td class="dir-neutral"><span data-lang="zh">→ 中性</span><span data-lang="en">→ Neutral</span></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-fed"><span data-lang="zh">央行</span><span data-lang="en">Central Bank</span></span> <br><b><span data-lang="zh">Consumer prices rose 0.4% in October, more than expected, complicating Fed's inflation fight | The report comes at a critical juncture for the Federal Reserve as it considers its next move regarding i...</span><span data-lang="en">Consumer prices rose 0.4% in October, more than expected, complicating Fed's inflation fight | The report comes at a critical juncture for the Federal Reserve as it considers its next move regarding i...</span></b></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+          <td class="dir-neutral"><span data-lang="zh">→ 中性</span><span data-lang="en">→ Neutral</span></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-macro"><span data-lang="zh">宏观</span><span data-lang="en">Macro</span></span> <br><b><span data-lang="zh">Sterling today: Pound set to snap slide as dollar pauses; UK jobless dips to 4.6%</span><span data-lang="en">Sterling today: Pound set to snap slide as dollar pauses; UK jobless dips to 4.6%</span></b></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+          <td class="dir-down"><span data-lang="zh">↓ 跌</span><span data-lang="en">↓ Down</span></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-bio"><span data-lang="zh">生物科技</span><span data-lang="en">Biotech</span></span> <br><b><span data-lang="zh">Hims & Hers launches new peptide treatments — while admitting there's more to learn about efficacy | The telehealth company will now offer compounded forms of sermorelin, glutathione, NAD+,  vitamin B...</span><span data-lang="en">Hims & Hers launches new peptide treatments — while admitting there's more to learn about efficacy | The telehealth company will now offer compounded forms of sermorelin, glutathione, NAD+,  vitamin B...</span></b></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+          <td class="dir-neutral"><span data-lang="zh">→ 中性</span><span data-lang="en">→ Neutral</span></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-ai"><span data-lang="zh">AI</span><span data-lang="en">AI</span></span> <br><b><span data-lang="zh">CoreWeave, Iren, Nebius shares sink following Nvidia earnings | Nvidia's earnings come at a tumultuous time for the company.</span><span data-lang="en">CoreWeave, Iren, Nebius shares sink following Nvidia earnings | Nvidia's earnings come at a tumultuous time for the company.</span></b></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+          <td class="dir-down"><span data-lang="zh">↓ 跌</span><span data-lang="en">↓ Down</span></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-ai"><span data-lang="zh">AI</span><span data-lang="en">AI</span></span> <br><b><span data-lang="zh">'Who and what comes next': Analysts expect Nvidia investor uncertainty despite earnings beat | Nvidia’s Q3 results should help ease short-term concerns, but uncertainty remains around long-term leader...</span><span data-lang="en">'Who and what comes next': Analysts expect Nvidia investor uncertainty despite earnings beat | Nvidia’s Q3 results should help ease short-term concerns, but uncertainty remains around long-term leader...</span></b></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+          <td class="dir-neutral"><span data-lang="zh">→ 中性</span><span data-lang="en">→ Neutral</span></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-ai"><span data-lang="zh">AI</span><span data-lang="en">AI</span></span> <span class="tag tag-china"><span data-lang="zh">中国</span><span data-lang="en">China</span></span> <br><b><span data-lang="zh">Southeast Asia’s data center boom leaned on Chinese demand. New U.S. rules put that pipeline at risk | The rules require data centers in Southeast Asia to seek U.S. approval to buy advanced AI chips, ...</span><span data-lang="en">Southeast Asia’s data center boom leaned on Chinese demand. New U.S. rules put that pipeline at risk | The rules require data centers in Southeast Asia to seek U.S. approval to buy advanced AI chips, ...</span></b></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+          <td class="dir-neutral"><span data-lang="zh">→ 中性</span><span data-lang="en">→ Neutral</span></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-fed"><span data-lang="zh">央行</span><span data-lang="en">Central Bank</span></span> <br><b><span data-lang="zh">Bank of England hikes interest rate for the first time since Iran war, warns inflation will near 5% | One policymaker voted to raise the bank's key interest rate to 4.25%.</span><span data-lang="en">Bank of England hikes interest rate for the first time since Iran war, warns inflation will near 5% | One policymaker voted to raise the bank's key interest rate to 4.25%.</span></b></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+          <td class="dir-neutral"><span data-lang="zh">→ 中性</span><span data-lang="en">→ Neutral</span></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-ai"><span data-lang="zh">AI</span><span data-lang="en">AI</span></span> <span class="tag tag-china"><span data-lang="zh">中国</span><span data-lang="en">China</span></span> <br><b><span data-lang="zh">China’s military seeks Nvidia’s advanced chips for AI capabilities, commission says | A congressional commission issued its findings as Nvidia has been rocked by its CEO's resignation after reports he...</span><span data-lang="en">China’s military seeks Nvidia’s advanced chips for AI capabilities, commission says | A congressional commission issued its findings as Nvidia has been rocked by its CEO's resignation after reports he...</span></b></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+          <td class="dir-neutral"><span data-lang="zh">→ 中性</span><span data-lang="en">→ Neutral</span></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-fed"><span data-lang="zh">央行</span><span data-lang="en">Central Bank</span></span> <br><b><span data-lang="zh">Two new housing reports point to bleak winter ahead, with record low sales | Two new reports on the state of the housing market show things are just getting worse, as high mortgage rates and inflation...</span><span data-lang="en">Two new housing reports point to bleak winter ahead, with record low sales | Two new reports on the state of the housing market show things are just getting worse, as high mortgage rates and inflation...</span></b></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+          <td class="dir-down"><span data-lang="zh">↓ 跌</span><span data-lang="en">↓ Down</span></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-fed"><span data-lang="zh">央行</span><span data-lang="en">Central Bank</span></span> <br><b><span data-lang="zh">Australia hikes rates to 18-year high to fight inflation | The Reserve Bank of Australia's decision was in line with expectations from economists polled by Reuters, and marked its fifth rate increase ...</span><span data-lang="en">Australia hikes rates to 18-year high to fight inflation | The Reserve Bank of Australia's decision was in line with expectations from economists polled by Reuters, and marked its fifth rate increase ...</span></b></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+          <td class="dir-neutral"><span data-lang="zh">→ 中性</span><span data-lang="en">→ Neutral</span></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-fed"><span data-lang="zh">央行</span><span data-lang="en">Central Bank</span></span> <br><b><span data-lang="zh">Record diesel prices drive UK inflation to 1-year high of 3.6% | It put the U.K.'s annual inflation rate at a 1-year high.</span><span data-lang="en">Record diesel prices drive UK inflation to 1-year high of 3.6% | It put the U.K.'s annual inflation rate at a 1-year high.</span></b></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+          <td class="dir-neutral"><span data-lang="zh">→ 中性</span><span data-lang="en">→ Neutral</span></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-ai"><span data-lang="zh">AI</span><span data-lang="en">AI</span></span> <br><b><span data-lang="zh">Nvidia closes lower ahead of earnings as company reels from Huang resignation | Investors have been weighing the fallout from former CEO Jensen Huang's resignation.</span><span data-lang="en">Nvidia closes lower ahead of earnings as company reels from Huang resignation | Investors have been weighing the fallout from former CEO Jensen Huang's resignation.</span></b></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+          <td class="dir-down"><span data-lang="zh">↓ 跌</span><span data-lang="en">↓ Down</span></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-ai"><span data-lang="zh">AI</span><span data-lang="en">AI</span></span> <br><b><span data-lang="zh">UK economy expands 0.7% in third quarter as AI provides 'extra engine of growth' | The U.K. economy grew 0.7% in the third quarter of the year, in line with estimates.</span><span data-lang="en">UK economy expands 0.7% in third quarter as AI provides 'extra engine of growth' | The U.K. economy grew 0.7% in the third quarter of the year, in line with estimates.</span></b></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+          <td class="dir-neutral"><span data-lang="zh">→ 中性</span><span data-lang="en">→ Neutral</span></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-macro"><span data-lang="zh">宏观</span><span data-lang="en">Macro</span></span> <br><b><span data-lang="zh">3 unexpected reasons the October jobs report was so strong | October's jobs report blew past economist forecasts. Here are three reasons.</span><span data-lang="en">3 unexpected reasons the October jobs report was so strong | October's jobs report blew past economist forecasts. Here are three reasons.</span></b></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+          <td class="dir-neutral"><span data-lang="zh">→ 中性</span><span data-lang="en">→ Neutral</span></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-macro"><span data-lang="zh">宏观</span><span data-lang="en">Macro</span></span> <br><b><span data-lang="zh">Private companies added 86,000 jobs in October, slightly higher than expected, ADP says | Private-sector job growth held steady in October, with gains spread across sectors</span><span data-lang="en">Private companies added 86,000 jobs in October, slightly higher than expected, ADP says | Private-sector job growth held steady in October, with gains spread across sectors</span></b></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+          <td class="dir-up"><span data-lang="zh">↑ 涨</span><span data-lang="en">↑ Up</span></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-macro"><span data-lang="zh">宏观</span><span data-lang="en">Macro</span></span> <br><b><span data-lang="zh">Medicare Part B premiums rise due to higher healthcare spending | The premiums will increase by $6.50, to $209.40 a month.</span><span data-lang="en">Medicare Part B premiums rise due to higher healthcare spending | The premiums will increase by $6.50, to $209.40 a month.</span></b></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+          <td class="dir-up"><span data-lang="zh">↑ 涨</span><span data-lang="en">↑ Up</span></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-macro"><span data-lang="zh">宏观</span><span data-lang="en">Macro</span></span> <br><b><span data-lang="zh">Senators press acting U.S. Navy Secretary on Iran war costs, sailor health in confirmation hearing | Acting Navy Secretary Hung Cao told senators the Navy recoded and used munitions he called expired ...</span><span data-lang="en">Senators press acting U.S. Navy Secretary on Iran war costs, sailor health in confirmation hearing | Acting Navy Secretary Hung Cao told senators the Navy recoded and used munitions he called expired ...</span></b></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+          <td class="dir-neutral"><span data-lang="zh">→ 中性</span><span data-lang="en">→ Neutral</span></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-macro"><span data-lang="zh">宏观</span><span data-lang="en">Macro</span></span> <br><b><span data-lang="zh">Putin says EU is losing industry, falling behind competition, ahead of meeting with Trump and Xi | Putin used the speech to emphasize Russia's economic resilience despite U.S. sanctions, and played up...</span><span data-lang="en">Putin says EU is losing industry, falling behind competition, ahead of meeting with Trump and Xi | Putin used the speech to emphasize Russia's economic resilience despite U.S. sanctions, and played up...</span></b></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+          <td class="dir-down"><span data-lang="zh">↓ 跌</span><span data-lang="en">↓ Down</span></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-ai"><span data-lang="zh">AI</span><span data-lang="en">AI</span></span> <br><b><span data-lang="zh">With Jensen Huang gone, Colette Kress shows Nvidia is still at the center of AI | In her first earnings report as interim CEO, Nvidia's Colette Kress calmed investors' nerves, at least for the moment.</span><span data-lang="en">With Jensen Huang gone, Colette Kress shows Nvidia is still at the center of AI | In her first earnings report as interim CEO, Nvidia's Colette Kress calmed investors' nerves, at least for the moment.</span></b></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+          <td class="dir-neutral"><span data-lang="zh">→ 中性</span><span data-lang="en">→ Neutral</span></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-ai"><span data-lang="zh">AI</span><span data-lang="en">AI</span></span> <br><b><span data-lang="zh">How to get Anthropic stock — without buying the IPO | Investors will get access to the AI startup's stock offering courtesy of its inclusion in many mutual funds and ETFs.</span><span data-lang="en">How to get Anthropic stock — without buying the IPO | Investors will get access to the AI startup's stock offering courtesy of its inclusion in many mutual funds and ETFs.</span></b></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+          <td class="dir-neutral"><span data-lang="zh">→ 中性</span><span data-lang="en">→ Neutral</span></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-ai"><span data-lang="zh">AI</span><span data-lang="en">AI</span></span> <br><b><span data-lang="zh">Booking Holdings creates new enterprise division as AI reshapes travel planning | The future for online travel agencies increasingly relies on scaling business-to-business travel platforms.</span><span data-lang="en">Booking Holdings creates new enterprise division as AI reshapes travel planning | The future for online travel agencies increasingly relies on scaling business-to-business travel platforms.</span></b></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+          <td class="dir-up"><span data-lang="zh">↑ 涨</span><span data-lang="en">↑ Up</span></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-ai"><span data-lang="zh">AI</span><span data-lang="en">AI</span></span> <br><b><span data-lang="zh">OpenAI bugging case defendant Alfozan set for trial in January | Abdulrahman Alfozan has been held without bail since his arrest in October, after prosecutors said he planted a listening device in an ...</span><span data-lang="en">OpenAI bugging case defendant Alfozan set for trial in January | Abdulrahman Alfozan has been held without bail since his arrest in October, after prosecutors said he planted a listening device in an ...</span></b></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+          <td class="dir-neutral"><span data-lang="zh">→ 中性</span><span data-lang="en">→ Neutral</span></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-ai"><span data-lang="zh">AI</span><span data-lang="en">AI</span></span> <span class="tag tag-china"><span data-lang="zh">中国</span><span data-lang="en">China</span></span> <br><b><span data-lang="zh">Jensen Huang scandal fuels bipartisan push to block AI chip sales to China | Congress members are pushing for a series of chip-related export control bills to be included in the annual National Defens...</span><span data-lang="en">Jensen Huang scandal fuels bipartisan push to block AI chip sales to China | Congress members are pushing for a series of chip-related export control bills to be included in the annual National Defens...</span></b></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+          <td class="dir-neutral"><span data-lang="zh">→ 中性</span><span data-lang="en">→ Neutral</span></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-ai"><span data-lang="zh">AI</span><span data-lang="en">AI</span></span> <br><b><span data-lang="zh">Retail investor enthusiasm for Anthropic IPO to rival SpaceX debut | Anthropic is gearing up for a blockbuster initial public offering this week, and excitement among retail investors looks to be off ...</span><span data-lang="en">Retail investor enthusiasm for Anthropic IPO to rival SpaceX debut | Anthropic is gearing up for a blockbuster initial public offering this week, and excitement among retail investors looks to be off ...</span></b></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+          <td class="dir-neutral"><span data-lang="zh">→ 中性</span><span data-lang="en">→ Neutral</span></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-ai"><span data-lang="zh">AI</span><span data-lang="en">AI</span></span> <br><b><span data-lang="zh">Paris Hilton, Alexandria Ocasio-Cortez press House to pass Defiance Act to fight AI deepfake pornography | Paris Hilton, backed by Alexandria Ocasio-Cortez, is pushing for the anti-AI deepfake pornogr...</span><span data-lang="en">Paris Hilton, Alexandria Ocasio-Cortez press House to pass Defiance Act to fight AI deepfake pornography | Paris Hilton, backed by Alexandria Ocasio-Cortez, is pushing for the anti-AI deepfake pornogr...</span></b></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+          <td class="dir-neutral"><span data-lang="zh">→ 中性</span><span data-lang="en">→ Neutral</span></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-energy"><span data-lang="zh">能源</span><span data-lang="en">Energy</span></span> <br><b><span data-lang="zh">IEA chief sees no 'credible pathway' back to pre-war normality in the Strait of Hormuz | The Iran war has 'crushed' confidence in the Strait of Hormuz as a reliable energy and goods corridor, the IEA'...</span><span data-lang="en">IEA chief sees no 'credible pathway' back to pre-war normality in the Strait of Hormuz | The Iran war has 'crushed' confidence in the Strait of Hormuz as a reliable energy and goods corridor, the IEA'...</span></b></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+          <td class="dir-neutral"><span data-lang="zh">→ 中性</span><span data-lang="en">→ Neutral</span></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+        </tr>
+        <tr>
+          <td><span class="tag tag-ai"><span data-lang="zh">AI</span><span data-lang="en">AI</span></span> <span class="tag tag-fed"><span data-lang="zh">央行</span><span data-lang="en">Central Bank</span></span> <br><b><span data-lang="zh">Analysis: The Fed's chairman sees an AI revolution coming. Now he has to figure out what it means | Kevin Warsh sees AI at a turning point. He faces tough questions on jobs and interest rates.</span><span data-lang="en">Analysis: The Fed's chairman sees an AI revolution coming. Now he has to figure out what it means | Kevin Warsh sees AI at a turning point. He faces tough questions on jobs and interest rates.</span></b></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+          <td class="dir-neutral"><span data-lang="zh">→ 中性</span><span data-lang="en">→ Neutral</span></td>
+          <td><span data-lang="zh"></span><span data-lang="en"></span></td>
+        </tr>
+      </tbody>
+    </table>
   </div>
 
-  <!-- Chains -->
-  <div class="section">
-    <div class="section-title"><span data-lang="zh">🔗 因果链逐条拆解（0条）</span><span data-lang="en">🔗 Causal Chain Breakdown (0)</span></div>
-    
-  </div>
 
-  <!-- Verifications -->
-  <div class="section">
-    <div class="section-title"><span data-lang="zh">🔍 待验证清单（0条）</span><span data-lang="en">🔍 Watchlist (0)</span></div>
-    
-  </div>
+  <!-- Section 2: Causal chains -->
+  
+
+  <!-- Section 3: Verifications -->
+  
+
+  <!-- Section 4: Historical analogies -->
+  
 
   <footer>
     <p><span data-lang="zh">📊 本市场地图基于华尔街见闻快讯（CNBC Economy / CNBC World News / MarketWatch Top Stories / Investing.com News / CNBC Top News）2026-11-18 约15:46（北京时间）抓取内容生成</span><span data-lang="en">📊 Based on WallstreetCN flash news (CNBC Economy / CNBC World News / MarketWatch Top Stories / Investing.com News / CNBC Top News), 2026-11-18 约15:46（北京时间）</span></p>
@@ -685,7 +633,6 @@
 </div>
 
 <script>
-// Theme toggle
 function toggleTheme() {
   var body = document.body;
   var current = body.getAttribute('data-theme');
@@ -698,7 +645,6 @@ function toggleTheme() {
   if (saved) document.body.setAttribute('data-theme', saved);
 })();
 
-// Language toggle
 function toggleLang() {
   var body = document.body;
   var current = body.className.indexOf('lang-en') >= 0 ? 'en' : 'zh';
@@ -724,7 +670,6 @@ function toggleLang() {
   }
 })();
 
-// Copy link
 function copyLink() {
   navigator.clipboard.writeText(window.location.href).then(function() {
     var msg = document.body.className.indexOf('lang-en') >= 0 ? 'Link copied!' : '链接已复制！';
@@ -732,7 +677,6 @@ function copyLink() {
   });
 }
 
-// Auto refresh every 5 minutes
 setTimeout(function() { location.reload(); }, 5 * 60 * 1000);
 </script>
 </body>
