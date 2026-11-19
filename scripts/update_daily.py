@@ -1,26 +1,27 @@
 #!/usr/bin/env python3
 """
-每日市场地图 - 自动更新脚本 (完整版 v2)
+每日市场地图 - 自动更新脚本 (完整版 v3)
 
 数据流：
-  多源RSS抓取 → 原始快讯 → 三层漏斗筛选 → LLM结构化/规则兜底 → 中英双语JSON → 网站自动展示
+  华尔街见闻API抓取 → 原始快讯 → 三层漏斗筛选 → LLM结构化/规则兜底 → 中英双语JSON → 网站自动展示
 
 数据源（按优先级）：
-  1. CNBC Top News RSS        (英文, 30条)
-  2. CNBC World News RSS       (英文, 30条)
-  3. CNBC Economy RSS          (英文, 30条)
-  4. MarketWatch Top Stories   (英文, 10条)
-  5. Investing.com News RSS    (英文, 10条)
-  6. 华尔街见闻 API            (中文, 可能403)
-  7. 华尔街见闻 RSS            (中文, 可能404)
-  8. 华尔街见闻 页面           (中文, SPA可能无数据)
+  1. 华尔街见闻 API            (中文, 主数据源, ~100条/次)
+     域名: api-one-wscn.awtmt.com (2026年迁移，旧域名 api.wallstreetcn.com 已失效)
+  2. CNBC Top News RSS        (英文, 备用)
+  3. CNBC World News RSS       (英文, 备用)
+  4. CNBC Economy RSS          (英文, 备用)
+  5. MarketWatch Top Stories   (英文, 备用)
+  6. Investing.com News RSS    (英文, 备用)
+  7. 华尔街见闻 RSS            (中文, 备用)
+  8. 华尔街见闻 页面           (中文, 备用)
 
 使用方法：
   python3 update_daily.py                        # 抓取今天的数据
-  python3 update_daily.py --date 2026-11-17      # 指定日期
+  python3 update_daily.py --date 2026-11-19      # 指定日期
   python3 update_daily.py --dry-run              # 只抓取不保存（测试用）
+  python3 update_daily.py --source api           # 只用华尔街见闻API
   python3 update_daily.py --source rss           # 只用RSS源
-  python3 update_daily.py --source cnbc          # 只用CNBC
 
 环境变量：
   LLM_API_KEY    - LLM API 密钥（用于结构化，可选，无则用规则筛选）
@@ -54,13 +55,19 @@ WEEKDAYS_EN = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday
 # 数据源配置
 # ============================================================
 
-# RSS 数据源（全部已验证可用）
+# 华尔街见闻 API（主数据源 — 2026年域名迁移至 awtmt.com）
+# 旧域名 api.wallstreetcn.com 已返回403，新域名 api-one-wscn.awtmt.com 正常
+WSCN_API = "https://api-one-wscn.awtmt.com/apiv1/content/lives?channel=global-channel&limit=200"
+WSCN_RSS = "https://wallstreetcn.com/rss"          # 保留尝试（可能404）
+WSCN_PAGE = "https://wallstreetcn.com/live/global"  # SPA页面（保留尝试）
+
+# 备用 RSS 数据源（当华尔街见闻不可用时使用）
 RSS_SOURCES = [
     {
         "name": "CNBC Top News",
         "url": "https://www.cnbc.com/id/100003114/device/rss/rss.html",
         "lang": "en",
-        "weight": 3,  # 高权重
+        "weight": 3,
     },
     {
         "name": "CNBC World News",
@@ -87,11 +94,6 @@ RSS_SOURCES = [
         "weight": 1,
     },
 ]
-
-# 华尔街见闻（保留尝试，可能恢复）
-WSCN_API = "https://api.wallstreetcn.com/apiv1/content/lives?channel=global-channel&limit=200"
-WSCN_RSS = "https://wallstreetcn.com/rss"
-WSCN_PAGE = "https://wallstreetcn.com/live/global"
 
 # ============================================================
 # 关键词配置（中英双语）
@@ -314,25 +316,28 @@ def fetch_all_rss():
 
 
 def fetch_via_api():
-    """通过华尔街见闻 API 抓取快讯（可能403，保留尝试）"""
+    """通过华尔街见闻 API 抓取快讯（主数据源，2026年迁移至 api-one-wscn.awtmt.com）"""
     headers = {
         "User-Agent": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-        "Accept": "application/json",
+        "Accept": "application/json, text/plain, */*",
+        "Accept-Language": "zh-CN,zh;q=0.9",
+        "Origin": "https://wallstreetcn.com",
         "Referer": "https://wallstreetcn.com/live/global",
     }
     try:
         log(f"[API] 正在请求华尔街见闻 API: {WSCN_API}")
-        resp = requests.get(WSCN_API, headers=headers, timeout=15)
+        resp = requests.get(WSCN_API, headers=headers, timeout=20)
         resp.raise_for_status()
         data = resp.json()
         items = data.get("data", {}).get("items", [])
-        log(f"[API] 获取 {len(items)} 条快讯")
+        log(f"[API] 华尔街见闻: 获取 {len(items)} 条快讯")
         headlines = []
         for item in items:
             text = item.get("content_text", "") or item.get("content", "")
             if "<" in text:
                 text = BeautifulSoup(text, "html.parser").get_text(strip=True)
-            create_time = item.get("created_at", 0)
+            # 华尔街见闻使用 display_time 字段（Unix时间戳）
+            create_time = item.get("display_time", 0) or item.get("created_at", 0)
             if create_time:
                 dt = datetime.fromtimestamp(create_time)
             else:
@@ -341,7 +346,7 @@ def fetch_via_api():
                 "text": text.strip(),
                 "time": dt.strftime("%H:%M"),
                 "timestamp": create_time,
-                "source": "华尔街见闻API",
+                "source": "华尔街见闻",
                 "lang": "zh",
                 "weight": 3,
             })
@@ -462,7 +467,8 @@ def fetch_via_page():
 def fetch_headlines(source="auto"):
     """
     抓取快讯（多源聚合）
-    优先尝试国际RSS源（已验证可用），同时尝试华尔街见闻（可能恢复）
+    主数据源：华尔街见闻 API（中文快讯，最新最全）
+    备用数据源：国际RSS（当华尔街见闻不可用时使用）
     """
     if source == "api":
         return fetch_via_api()
@@ -471,23 +477,35 @@ def fetch_headlines(source="auto"):
     elif source == "page":
         return fetch_via_page()
     elif source == "cnbc":
-        # 只用CNBC源
         cnbc_sources = [s for s in RSS_SOURCES if "CNBC" in s["name"]]
         all_h = []
         for s in cnbc_sources:
             all_h.extend(fetch_via_rss_source(s))
         return all_h
     else:
-        # auto: 先抓国际RSS（可靠），再尝试华尔街见闻（可能失败）
-        all_headlines = fetch_all_rss()
+        # auto: 优先华尔街见闻（主数据源），失败则用国际RSS备用
+        all_headlines = []
 
-        # 尝试华尔街见闻（增加中文内容）
-        for fetch_fn in [fetch_via_api, fetch_via_wscn_rss, fetch_via_page]:
-            wscn_headlines = fetch_fn()
-            if wscn_headlines:
-                all_headlines.extend(wscn_headlines)
-                break
-            time.sleep(1)
+        # 1. 华尔街见闻 API（主数据源）
+        wscn_headlines = fetch_via_api()
+        if wscn_headlines:
+            all_headlines.extend(wscn_headlines)
+            log(f"✅ 华尔街见闻: {len(wscn_headlines)} 条（主数据源）")
+
+        # 2. 如果华尔街见闻不可用或数据不足，补充国际RSS
+        if not wscn_headlines or len(wscn_headlines) < 20:
+            log("华尔街见闻数据不足，补充国际RSS源...")
+            rss_headlines = fetch_all_rss()
+            all_headlines.extend(rss_headlines)
+
+        # 3. 尝试华尔街见闻 RSS 和页面作为额外补充（可选）
+        if len(all_headlines) < 30:
+            for fetch_fn in [fetch_via_wscn_rss, fetch_via_page]:
+                extra = fetch_fn()
+                if extra:
+                    all_headlines.extend(extra)
+                    break
+                time.sleep(1)
 
         if not all_headlines:
             log("❌ 所有抓取方式均失败")
@@ -496,7 +514,6 @@ def fetch_headlines(source="auto"):
             seen_texts = set()
             deduped = []
             for h in all_headlines:
-                # 用文本前80字符的hash做跨源去重
                 text_hash = hashlib.md5(h["text"][:80].lower().encode()).hexdigest()
                 if text_hash not in seen_texts:
                     seen_texts.add(text_hash)

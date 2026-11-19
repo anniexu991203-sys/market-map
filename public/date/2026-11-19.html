@@ -1,0 +1,826 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日市场地图 · Daily Market Map · 2026-11-19</title>
+<meta name="description" content="华尔街见闻要闻三层漏斗筛选 → 四列表 → 因果链 → 待验证">
+<style>
+  :root {
+    --bg: #0a0e17;
+    --card: #131826;
+    --card-2: #1a2030;
+    --border: #2a3344;
+    --text: #e8ecf1;
+    --text-dim: #8b95a7;
+    --accent: #d4af37;
+    --accent-2: #4a9eff;
+    --green: #26a69a;
+    --red: #ef5350;
+    --orange: #ff9800;
+    --purple: #ab47bc;
+  }
+
+  [data-theme="light"] {
+    --bg: #f5f7fa;
+    --card: #ffffff;
+    --card-2: #eef1f5;
+    --border: #dde3ed;
+    --text: #1a2030;
+    --text-dim: #5a6478;
+    --accent: #b8860b;
+    --accent-2: #2563eb;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", "Segoe UI", Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+    transition: background 0.3s, color 0.3s;
+  }
+
+  .container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+
+  /* Top bar */
+  .topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 20px;
+    background: var(--card);
+    border-bottom: 1px solid var(--border);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    flex-wrap: wrap;
+  }
+  .topbar-left { display: flex; align-items: center; gap: 14px; }
+  .topbar-logo { font-size: 22px; font-weight: 700; color: var(--accent); }
+  .topbar-date { color: var(--text-dim); font-size: 14px; }
+  .topbar-nav { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+  .topbar-nav a {
+    color: var(--text-dim);
+    text-decoration: none;
+    font-size: 13px;
+    padding: 5px 12px;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    transition: all 0.2s;
+  }
+  .topbar-nav a:hover { color: var(--accent); border-color: var(--accent); }
+  .icon-btn {
+    background: var(--card-2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 5px 12px;
+    cursor: pointer;
+    font-size: 14px;
+    color: var(--text);
+    transition: all 0.2s;
+  }
+  .icon-btn:hover { border-color: var(--accent); }
+  .lang-toggle {
+    background: var(--card-2);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 5px 12px;
+    cursor: pointer;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--accent);
+    transition: all 0.2s;
+    min-width: 56px;
+    text-align: center;
+  }
+  .lang-toggle:hover { border-color: var(--accent); background: rgba(212,175,55,0.1); }
+
+  /* Stats */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+    margin: 20px 0;
+  }
+  .stat-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 16px;
+    text-align: center;
+  }
+  .stat-card .stat-label { font-size: 12px; color: var(--text-dim); margin-bottom: 6px; }
+  .stat-card .stat-value { font-size: 28px; font-weight: 700; }
+  .stat-card .stat-change { font-size: 11px; color: var(--text-dim); margin-top: 4px; }
+  .stat-up { color: var(--red); }
+  .stat-down { color: var(--green); }
+  .stat-neutral { color: var(--text-dim); }
+
+  /* Section */
+  .section { margin: 30px 0; }
+  .section-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--accent);
+    margin-bottom: 16px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--border);
+  }
+
+  /* Event card */
+  .event-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 12px;
+  }
+  .event-tags { display: flex; gap: 8px; margin-bottom: 10px; flex-wrap: wrap; }
+  .tag {
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-weight: 600;
+  }
+  .tag-ai { background: rgba(74,158,255,0.15); color: var(--accent-2); }
+  .tag-fed { background: rgba(212,175,55,0.15); color: var(--accent); }
+  .tag-energy { background: rgba(255,152,0,0.15); color: var(--orange); }
+  .tag-china { background: rgba(239,83,80,0.15); color: var(--red); }
+  .tag-bio { background: rgba(171,71,188,0.15); color: var(--purple); }
+  .tag-macro { background: rgba(38,166,154,0.15); color: var(--green); }
+
+  .event-text { font-size: 15px; margin-bottom: 10px; }
+  .event-assets { font-size: 13px; color: var(--text-dim); margin-bottom: 8px; }
+  .event-assets strong { color: var(--accent-2); }
+  .event-logic {
+    font-size: 13px;
+    color: var(--text-dim);
+    padding: 10px;
+    background: var(--card-2);
+    border-radius: 6px;
+    border-left: 3px solid var(--accent);
+  }
+  .dir-arrow { font-size: 18px; font-weight: 700; }
+  .dir-up { color: var(--red); }
+  .dir-down { color: var(--green); }
+  .dir-split { color: var(--orange); }
+  .dir-neutral { color: var(--text-dim); }
+
+  /* Chain */
+  .chain-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 16px;
+  }
+  .chain-title { font-size: 16px; font-weight: 700; margin-bottom: 14px; }
+  .chain-status {
+    font-size: 11px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-left: 8px;
+    vertical-align: middle;
+  }
+  .status-consensus { background: rgba(38,166,154,0.15); color: var(--green); }
+  .status-unverified { background: rgba(255,152,0,0.15); color: var(--orange); }
+
+  .flow-nodes {
+    display: flex;
+    align-items: stretch;
+    gap: 4px;
+    flex-wrap: wrap;
+    margin-bottom: 14px;
+  }
+  .flow-node {
+    flex: 1;
+    min-width: 120px;
+    background: var(--card-2);
+    border-radius: 8px;
+    padding: 12px 8px;
+    text-align: center;
+    font-size: 12px;
+    position: relative;
+  }
+  .flow-node.trigger { border: 2px solid var(--accent); }
+  .flow-node.result-down { border: 2px solid var(--green); }
+  .flow-node.result-up { border: 2px solid var(--red); }
+  .flow-arrow {
+    display: flex;
+    align-items: center;
+    color: var(--text-dim);
+    font-size: 18px;
+  }
+
+  .jargon-list { margin-top: 10px; }
+  .jargon-item {
+    font-size: 13px;
+    margin-bottom: 8px;
+    padding: 8px 12px;
+    background: var(--card-2);
+    border-radius: 6px;
+  }
+  .jargon-term { color: var(--accent); font-weight: 600; }
+  .jargon-explain { color: var(--text-dim); }
+
+  /* Verify */
+  .verify-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 16px;
+  }
+  .verify-title { font-size: 15px; font-weight: 700; margin-bottom: 12px; }
+  .verify-list { list-style: none; margin-bottom: 12px; }
+  .verify-list li {
+    font-size: 13px;
+    color: var(--text-dim);
+    margin-bottom: 6px;
+    padding-left: 20px;
+    position: relative;
+  }
+  .verify-list li::before {
+    content: "\2610";
+    position: absolute;
+    left: 0;
+    color: var(--accent);
+  }
+  .analogy {
+    font-size: 13px;
+    padding: 10px 12px;
+    background: var(--card-2);
+    border-radius: 6px;
+    border-left: 3px solid var(--purple);
+    margin-bottom: 8px;
+  }
+  .analogy strong { color: var(--purple); }
+  .lesson {
+    font-size: 13px;
+    color: var(--accent);
+    padding: 8px 12px;
+    background: rgba(212,175,55,0.08);
+    border-radius: 6px;
+    margin-bottom: 8px;
+  }
+  .diff {
+    font-size: 12px;
+    color: var(--text-dim);
+    padding: 8px 12px;
+    background: var(--card-2);
+    border-radius: 6px;
+  }
+
+  /* Share */
+  .share-bar {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+    flex-wrap: wrap;
+  }
+  .share-btn {
+    padding: 8px 16px;
+    border-radius: 8px;
+    font-size: 13px;
+    cursor: pointer;
+    border: 1px solid var(--border);
+    background: var(--card);
+    color: var(--text);
+    text-decoration: none;
+    transition: all 0.2s;
+  }
+  .share-btn:hover { border-color: var(--accent); color: var(--accent); }
+
+  /* Footer */
+  footer {
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 1px solid var(--border);
+    text-align: center;
+    color: var(--text-dim);
+    font-size: 12px;
+  }
+
+  /* i18n: hide non-active language by default */
+  [data-lang="en"] { display: none; }
+  body.lang-en [data-lang="zh"] { display: none; }
+  body.lang-en [data-lang="en"] { display: inline; }
+  body.lang-en [data-lang="en"][style*="block"] { display: block; }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .container { padding: 12px; }
+    .topbar { padding: 12px; }
+    .topbar-logo { font-size: 18px; }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .stat-card .stat-value { font-size: 22px; }
+    .flow-nodes { flex-direction: column; }
+    .flow-arrow { transform: rotate(90deg); justify-content: center; }
+    .event-card, .chain-card, .verify-card { padding: 14px; }
+    .section-title { font-size: 17px; }
+  }
+</style>
+</head>
+<body data-theme="dark" class="lang-zh">
+
+<div class="topbar">
+  <div class="topbar-left">
+    <div class="topbar-logo">📊 Macro Market Map</div>
+    <div class="topbar-date">2026-11-19 <span data-lang="zh">星期四</span><span data-lang="en">Thursday</span></div>
+  </div>
+  <div class="topbar-nav">
+    <a href="../index.html"><span data-lang="zh">今日</span><span data-lang="en">Today</span></a>
+    <a href="../history.html"><span data-lang="zh">历史归档</span><span data-lang="en">Archive</span></a>
+    <a href="../rss.xml">RSS</a>
+    <a href="../api/latest.json">JSON API</a>
+    <button class="lang-toggle" onclick="toggleLang()">EN</button>
+    <button class="icon-btn" onclick="toggleTheme()">🌙/☀️</button>
+  </div>
+</div>
+
+<div class="container">
+
+  <div class="share-bar">
+    <a class="share-btn" href="https://twitter.com/intent/tweet?text=Daily%20Market%20Map%202026-11-19" target="_blank">🐦 Twitter</a>
+    <a class="share-btn" href="https://service.weibo.com/share/share.php?title=每日市场地图 2026-11-19" target="_blank"><span data-lang="zh">📷 微博</span><span data-lang="en">📷 Weibo</span></a>
+    <button class="share-btn" onclick="copyLink()"><span data-lang="zh">🔗 复制链接</span><span data-lang="en">🔗 Copy Link</span></button>
+  </div>
+
+  <!-- Stats -->
+  <div class="stats-grid">
+    <div class="stat-card">
+      <div class="stat-label"><span data-lang="zh">截止收盘沪指</span><span data-lang="en">截止收盘沪指</span></div>
+      <div class="stat-value stat-up">0.28%</div>
+      <div class="stat-change"><span data-lang="zh">1、市场全天震荡调整，三大指数小幅下跌。光刻机、光刻胶概念逆势活跃，盛剑科技3连板，兴业股份、格林达、江化微等涨停。先进</span><span data-lang="en">1、市场全天震荡调整，三大指数小幅下跌。光刻机、光刻胶概念逆势活跃，盛剑科技3连板，兴业股份、格林达、江化微等涨停。先进</span></div>
+    </div>
+<div class="stat-card">
+      <div class="stat-label"><span data-lang="zh">韩国政府发布声明</span><span data-lang="en">韩国政府发布声明</span></div>
+      <div class="stat-value stat-up">新高</div>
+      <div class="stat-change"><span data-lang="zh">韩国政府发布声明，韩国年度出口额于当地时间11月19日下午2:09首次突破1万亿美元。继德国、美国和中国之后，韩国成为全</span><span data-lang="en">韩国政府发布声明，韩国年度出口额于当地时间11月19日下午2:09首次突破1万亿美元。继德国、美国和中国之后，韩国成为全</span></div>
+    </div>
+<div class="stat-card">
+      <div class="stat-label"><span data-lang="zh">62点</span><span data-lang="en">62点</span></div>
+      <div class="stat-value stat-up">0.28%</div>
+      <div class="stat-change"><span data-lang="zh">上证指数收报3577.62点，跌0.28%。
+
+深证成指收报10583.20点，跌0.71%。
+
+创业板指收报2293.</span><span data-lang="en">上证指数收报3577.62点，跌0.28%。
+
+深证成指收报10583.20点，跌0.71%。
+
+ChiNext指收报2293.</span></div>
+    </div>
+<div class="stat-card">
+      <div class="stat-label"><span data-lang="zh">斯达克100指数期货</span><span data-lang="en">斯达克100指数期货</span></div>
+      <div class="stat-value stat-up">2%</div>
+      <div class="stat-change"><span data-lang="zh">美股期货涨幅扩大，纳斯达克100指数期货涨2%，标普500指数期货涨1.1%，道指期货涨0.7%。Anthropic即将</span><span data-lang="en">美股期货涨幅扩大，纳斯达克100指数期货涨2%，S&P500指数期货涨1.1%，道指期货涨0.7%。Anthropic即将</span></div>
+    </div>
+<div class="stat-card">
+      <div class="stat-label"><span data-lang="zh">日经225指数收盘上</span><span data-lang="en">日经225指数收盘上</span></div>
+      <div class="stat-value stat-up">0.7%</div>
+      <div class="stat-change"><span data-lang="zh">日经225指数收盘上涨0.7%，报59,444.21点。日本东证指数收盘下跌0.04%，报3,822.47点。</span><span data-lang="en">日经225指数收盘上涨0.7%，报59,444.21点。日本东证指数收盘下跌0.04%，报3,822.47点。</span></div>
+    </div>
+<div class="stat-card">
+      <div class="stat-label"><span data-lang="zh">料较发行价83美元上</span><span data-lang="en">料较发行价83美元上</span></div>
+      <div class="stat-value stat-up">20%</div>
+      <div class="stat-change"><span data-lang="zh">暗盘交易显示，Anthropic PBC股票开盘料较发行价83美元上涨20%至26%。之前这家AI实验室通过扩大了规模的</span><span data-lang="en">暗盘交易显示，Anthropic PBC股票开盘料较发行价83美元上涨20%至26%。之前这家AI实验室通过扩大了规模的</span></div>
+    </div>
+<div class="stat-card">
+      <div class="stat-label"><span data-lang="zh">11月19日晚间</span><span data-lang="en">11月19日晚间</span></div>
+      <div class="stat-value stat-up">新高</div>
+      <div class="stat-change"><span data-lang="zh">11月19日晚间，阿里巴巴集团发布最新季度业绩，阿里云外部客户收入同比增长64%，较上一季度的45%显著加快，刷新近六年</span><span data-lang="en">11月19日晚间，阿里巴巴集团发布最新季度业绩，阿里云外部客户收入同比增长64%，较上一季度的45%显著加快，刷新近六年</span></div>
+    </div>
+<div class="stat-card">
+      <div class="stat-label"><span data-lang="zh">恒生指数收盘</span><span data-lang="en">恒生指数收盘</span></div>
+      <div class="stat-value stat-down">1.95%</div>
+      <div class="stat-change"><span data-lang="zh">恒生指数收盘跌1.95%，报22841.62点；恒生科技指数收跌2.33%，报3649.14点，创2024年9月17日以</span><span data-lang="en">恒生指数收盘跌1.95%，报22841.62点；恒生科技指数收跌2.33%，报3649.14点，创2024年9月17日以</span></div>
+    </div>
+<div class="stat-card">
+      <div class="stat-label"><span data-lang="zh">同比下</span><span data-lang="en">同比下</span></div>
+      <div class="stat-value stat-down">19.0%</div>
+      <div class="stat-change"><span data-lang="zh">快手在港交所公告，2026年第三季度，直播业务收入为人民币78亿元，同比下降19.0%。其他服务收入由2025年同期的人</span><span data-lang="en">快手在港交所公告，2026年第三季度，直播业务收入为CNY78亿元，同比下降19.0%。其他服务收入由2025年同期的人</span></div>
+    </div>
+<div class="stat-card">
+      <div class="stat-label"><span data-lang="zh">洲斯托克50指数开盘</span><span data-lang="en">洲斯托克50指数开盘</span></div>
+      <div class="stat-value stat-up">0.65%</div>
+      <div class="stat-change"><span data-lang="zh">欧洲斯托克50指数开盘涨0.65%，德国DAX指数涨0.3%，英国富时100指数平开，法国CAC 40指数涨0.6%。</span><span data-lang="en">欧洲斯托克50指数开盘涨0.65%，德国DAX指数涨0.3%，英国富时100指数平开，法国CAC 40指数涨0.6%。</span></div>
+    </div>
+
+  </div>
+
+  <!-- Events -->
+  <div class="section">
+    <div class="section-title"><span data-lang="zh">📌 核心要闻（42条）</span><span data-lang="en">📌 Key Headlines (42)</span></div>
+    <div class="event-card">
+      <div class="event-tags"><span class="tag tag-ai"><span data-lang="zh">AI</span><span data-lang="en">AI</span></span><span class="tag tag-china"><span data-lang="zh">中国</span><span data-lang="en">China</span></span></div>
+      <div class="event-text"><span class="dir-arrow dir-split">⚖️</span> <span data-lang="zh">1、市场全天震荡调整，三大指数小幅下跌。光刻机、光刻胶概念逆势活跃，盛剑科技3连板，兴业股份、格林达、江化微等涨停。先进封装、存储芯片板块盘中拉升，蓝箭电子、时空科技、大港股份等涨停。下跌方面，AI漫剧概念下挫，慈文传媒、横店影视、文投控股3连跌停；算力芯片股下挫，燧原科技20cm跌停，沐曦股份跌超10%。个股呈现普跌态势，沪深京三市超4800股飘绿，今日成交1.31万亿。截止收盘沪指跌0.28%...</span><span data-lang="en">1、市场全天震荡调整，三大指数小幅下跌。光刻机、光刻胶概念逆势活跃，盛剑科技3连板，兴业股份、格林达、江化微等涨停。先进封装、存储chips板块盘中拉升，蓝箭电子、时空科技、大HK stocks份等涨停。下跌方面，AI漫剧概念下挫，慈文传媒、横店影视、文投控股3连跌停；算力chips股下挫，燧原科技20cm跌停，沐曦股份跌超10%。个股呈现普跌态势，沪深京三市超4800股飘绿，今日成交1.31万亿。截止收盘沪指跌0.28%...</span></div>
+      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
+      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
+    </div>
+<div class="event-card">
+      <div class="event-tags"><span class="tag tag-ai"><span data-lang="zh">AI</span><span data-lang="en">AI</span></span><span class="tag tag-china"><span data-lang="zh">中国</span><span data-lang="en">China</span></span></div>
+      <div class="event-text"><span class="dir-arrow dir-up">📈</span> <span data-lang="zh">韩国政府发布声明，韩国年度出口额于当地时间11月19日下午2:09首次突破1万亿美元。继德国、美国和中国之后，韩国成为全球第四个年出口额达到1万亿美元的国家。随着全球科技公司加大人工智能投资，半导体和计算机出口引领了增长。在9个主要地区中，有7个地区的出口额增长，中小企业的出口额也创下历史新高。（彭博）</span><span data-lang="en">韩国政府发布声明，韩国年度出口额于当地时间11月19日下午2:09首次突破1万亿美元。继德国、美国和中国之后，韩国成为全球第四个年出口额达到1万亿美元的国家。随着全球科技公司加大人工智能投资，semiconductors和计算机出口引领了增长。在9个主要地区中，有7个地区的出口额增长，中小企业的出口额也创下历史new high。（彭博）</span></div>
+      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
+      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
+    </div>
+<div class="event-card">
+      <div class="event-tags"><span class="tag tag-ai"><span data-lang="zh">AI</span><span data-lang="en">AI</span></span></div>
+      <div class="event-text"><span class="dir-arrow dir-up">📈</span> <span data-lang="zh">阿里巴巴：截至2026年9月30日止季度，资本性支出为人民币504.77亿元（75.29 亿美元），较2025年同期的人民币315.01亿元增长60%，由于我们持续投入 AI 基础设施，以满足强劲且不断加速的客户需求。同比显著增长主要由于加速扩大算力规模、各类芯片组件价格上涨、预期客户持续采用 AI 智能体带动的 CPU 算力增加，以及采购周期波动。同期自由现金流净流出344.72亿元，上年同期净...</span><span data-lang="en">阿里巴巴：截至2026年9月30日止季度，资本性支出为CNY504.77亿元（75.29 亿美元），较2025年同期的CNY315.01亿元增长60%，由于我们持续投入 AI 基础设施，以满足强劲且不断加速的客户需求。同比显著增长主要由于加速扩大算力规模、各类chips组件价格上涨、预期客户持续采用 AI 智能体带动的 CPU 算力增加，以及采购周期波动。同期自由现金流净流出344.72亿元，上年同期净...</span></div>
+      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
+      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
+    </div>
+<div class="event-card">
+      <div class="event-tags"><span class="tag tag-ai"><span data-lang="zh">AI</span><span data-lang="en">AI</span></span></div>
+      <div class="event-text"><span class="dir-arrow dir-up">📈</span> <span data-lang="zh">阿里巴巴第二财季营收2,715.2亿元人民币，预估2,705.3亿元人民币。
+
+第二财季调整后每ADS收益8.10元人民币，预估10.75元人民币。
+
+第二财季调整后息税折旧及摊销前利润460.6亿元人民币，预估399亿元人民币。
+
+第二财季调整后净利润199.1亿元人民币，预估266.1亿元人民币。
+
+第二财季AI云与算力服务收入609.7亿元人民币，同比增长53%，预估597.7亿元人民币。
+...</span><span data-lang="en">阿里巴巴第二财季营收2,715.2亿元CNY，预估2,705.3亿元CNY。
+
+第二财季调整后每ADS收益8.10元CNY，预估10.75元CNY。
+
+第二财季调整后息税折旧及摊销前利润460.6亿元CNY，预估399亿元CNY。
+
+第二财季调整后净利润199.1亿元CNY，预估266.1亿元CNY。
+
+第二财季AI云与算力服务收入609.7亿元CNY，同比增长53%，预估597.7亿元CNY。
+...</span></div>
+      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
+      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
+    </div>
+<div class="event-card">
+      <div class="event-tags"><span class="tag tag-macro"><span data-lang="zh">宏观</span><span data-lang="en">Macro</span></span></div>
+      <div class="event-text"><span class="dir-arrow dir-split">⚖️</span> <span data-lang="zh">商品期货收盘，苹果主力合约跌超7%，沪铜跌超5%，沪锡、国际铜跌超4%，沪银、沪镍、丙烯、乙二醇、液化气跌超3%。集运欧线涨超4%。</span><span data-lang="en">商品期货收盘，Apple主力合约跌超7%，沪铜跌超5%，沪锡、国际铜跌超4%，沪银、沪镍、丙烯、乙二醇、液化气跌超3%。集运欧线涨超4%。</span></div>
+      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
+      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
+    </div>
+<div class="event-card">
+      <div class="event-tags"><span class="tag tag-ai"><span data-lang="zh">AI</span><span data-lang="en">AI</span></span></div>
+      <div class="event-text"><span class="dir-arrow dir-down">📉</span> <span data-lang="zh">燧原科技11月19日公告，公司股票交易连续三个交易日内（2026年11月17日、11月18日、11月19日）收盘价格跌幅偏离值累计达到30%以上，根据《上海证券交易所交易规则》的有关规定，属于股票交易异常波动情形。公司注意到近期相关产业新闻引发了大量关注和讨论。公司在手订单充沛，并正在与多家国内半导体产业伙伴进行合作，打造基于国产供应链的云端AI芯片产品，构建稳定的供应链体系，支撑公司业务发展。公...</span><span data-lang="en">燧原科技11月19日公告，公司股票交易连续三个交易日内（2026年11月17日、11月18日、11月19日）收盘价格跌幅偏离值累计达到30%以上，根据《上海证券交易所交易规则》的有关规定，属于股票交易异常波动情形。公司注意到近期相关产业新闻引发了大量关注和讨论。公司在手订单充沛，并正在与多家国内semiconductors产业伙伴进行合作，打造基于国产供应链的云端AIchips产品，构建稳定的供应链体系，支撑公司业务发展。公...</span></div>
+      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
+      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
+    </div>
+<div class="event-card">
+      <div class="event-tags"><span class="tag tag-china"><span data-lang="zh">中国</span><span data-lang="en">China</span></span></div>
+      <div class="event-text"><span class="dir-arrow dir-split">⚖️</span> <span data-lang="zh">上证指数收报3577.62点，跌0.28%。
+
+深证成指收报10583.20点，跌0.71%。
+
+创业板指收报2293.34点，跌0.79%。
+
+沪深300收报3984.84点，涨0.03%。
+
+科创50收报1270.78点，涨1.83%。
+
+中证500收报6251.96点，跌0.48%。
+
+中证1000收报5938.90点，跌1.88%。</span><span data-lang="en">上证指数收报3577.62点，跌0.28%。
+
+深证成指收报10583.20点，跌0.71%。
+
+ChiNext指收报2293.34点，跌0.79%。
+
+沪深300收报3984.84点，涨0.03%。
+
+科创50收报1270.78点，涨1.83%。
+
+中证500收报6251.96点，跌0.48%。
+
+中证1000收报5938.90点，跌1.88%。</span></div>
+      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
+      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
+    </div>
+<div class="event-card">
+      <div class="event-tags"><span class="tag tag-ai"><span data-lang="zh">AI</span><span data-lang="en">AI</span></span></div>
+      <div class="event-text"><span class="dir-arrow dir-up">📈</span> <span data-lang="zh">美股期货涨幅扩大，纳斯达克100指数期货涨2%，标普500指数期货涨1.1%，道指期货涨0.7%。Anthropic即将挂牌上市，该公司扩大IPO和私募配售规模，融资1073亿美元。</span><span data-lang="en">美股期货涨幅扩大，纳斯达克100指数期货涨2%，S&P500指数期货涨1.1%，道指期货涨0.7%。Anthropic即将挂牌上市，该公司扩大IPO和私募配售规模，融资1073亿美元。</span></div>
+      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
+      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
+    </div>
+<div class="event-card">
+      <div class="event-tags"><span class="tag tag-macro"><span data-lang="zh">宏观</span><span data-lang="en">Macro</span></span></div>
+      <div class="event-text"><span class="dir-arrow dir-split">⚖️</span> <span data-lang="zh">日经225指数收盘上涨0.7%，报59,444.21点。日本东证指数收盘下跌0.04%，报3,822.47点。</span><span data-lang="en">日经225指数收盘上涨0.7%，报59,444.21点。日本东证指数收盘下跌0.04%，报3,822.47点。</span></div>
+      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
+      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
+    </div>
+<div class="event-card">
+      <div class="event-tags"><span class="tag tag-macro"><span data-lang="zh">宏观</span><span data-lang="en">Macro</span></span></div>
+      <div class="event-text"><span class="dir-arrow dir-split">⚖️</span> <span data-lang="zh">阿里巴巴美股盘前走低，现跌超2%，此前一度涨超4%。</span><span data-lang="en">阿里巴巴美股盘前走低，现跌超2%，此前一度涨超4%。</span></div>
+      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
+      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
+    </div>
+<div class="event-card">
+      <div class="event-tags"><span class="tag tag-ai"><span data-lang="zh">AI</span><span data-lang="en">AI</span></span></div>
+      <div class="event-text"><span class="dir-arrow dir-up">📈</span> <span data-lang="zh">暗盘交易显示，Anthropic PBC股票开盘料较发行价83美元上涨20%至26%。之前这家AI实验室通过扩大了规模的IPO及私募配售，筹资1,073亿美元，打破了SpaceX创造的纪录。</span><span data-lang="en">暗盘交易显示，Anthropic PBC股票开盘料较发行价83美元上涨20%至26%。之前这家AI实验室通过扩大了规模的IPO及私募配售，筹资1,073亿美元，打破了SpaceX创造的纪录。</span></div>
+      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
+      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
+    </div>
+<div class="event-card">
+      <div class="event-tags"><span class="tag tag-macro"><span data-lang="zh">宏观</span><span data-lang="en">Macro</span></span></div>
+      <div class="event-text"><span class="dir-arrow dir-neutral">➡️</span> <span data-lang="zh">据新华社，11月19日下午，国家主席习近平在深圳同俄罗斯总统普京、美国总统特朗普举行中俄美元首会晤，总结此次会晤达成的主要共识。</span><span data-lang="en">据新华社，11月19日下午，国家主席习近平在深圳同俄罗斯总统普京、美国总统特朗普举行中俄美元首会晤，总结此次会晤达成的主要共识。</span></div>
+      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
+      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
+    </div>
+<div class="event-card">
+      <div class="event-tags"><span class="tag tag-macro"><span data-lang="zh">宏观</span><span data-lang="en">Macro</span></span></div>
+      <div class="event-text"><span class="dir-arrow dir-neutral">➡️</span> <span data-lang="zh">11月19日下午，国家主席习近平在深圳同俄罗斯总统普京、美国总统特朗普举行中俄美元首会晤。目前，会晤已结束。（央视新闻）</span><span data-lang="en">11月19日下午，国家主席习近平在深圳同俄罗斯总统普京、美国总统特朗普举行中俄美元首会晤。目前，会晤已结束。（央视新闻）</span></div>
+      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
+      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
+    </div>
+<div class="event-card">
+      <div class="event-tags"><span class="tag tag-macro"><span data-lang="zh">宏观</span><span data-lang="en">Macro</span></span></div>
+      <div class="event-text"><span class="dir-arrow dir-neutral">➡️</span> <span data-lang="zh">11月19日下午，国家主席习近平将在深圳同俄罗斯总统普京、美国总统特朗普举行中俄美元首会晤。 (央视新闻)</span><span data-lang="en">11月19日下午，国家主席习近平将在深圳同俄罗斯总统普京、美国总统特朗普举行中俄美元首会晤。 (央视新闻)</span></div>
+      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
+      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
+    </div>
+<div class="event-card">
+      <div class="event-tags"><span class="tag tag-ai"><span data-lang="zh">AI</span><span data-lang="en">AI</span></span></div>
+      <div class="event-text"><span class="dir-arrow dir-up">📈</span> <span data-lang="zh">美股盘前，存储芯片股普涨，SK海力士涨约5%，闪迪涨约4%，美光科技涨约4%，希捷科技涨约4%。
+
+光通信股普涨，Coherent涨约4%，Credo涨约5%，Lumentum涨约4%，迈威尔科技涨约4%，康宁涨约3%。</span><span data-lang="en">美股盘前，存储chips股普涨，SK海力士涨约5%，闪迪涨约4%，美光科技涨约4%，希捷科技涨约4%。
+
+光通信股普涨，Coherent涨约4%，Credo涨约5%，Lumentum涨约4%，迈威尔科技涨约4%，康宁涨约3%。</span></div>
+      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
+      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
+    </div>
+<div class="event-card">
+      <div class="event-tags"><span class="tag tag-ai"><span data-lang="zh">AI</span><span data-lang="en">AI</span></span></div>
+      <div class="event-text"><span class="dir-arrow dir-up">📈</span> <span data-lang="zh">11月19日晚间，阿里巴巴集团发布最新季度业绩，阿里云外部客户收入同比增长64%，较上一季度的45%显著加快，刷新近六年来的增速高点。季度内，AI相关产品收入连续第13个季度实现三位数增长，驱动阿里云收入增长再创新高。</span><span data-lang="en">11月19日晚间，阿里巴巴集团发布最新季度业绩，阿里云外部客户收入同比增长64%，较上一季度的45%显著加快，刷新近六年来的增速高点。季度内，AI相关产品收入连续第13个季度实现三位数增长，驱动阿里云收入增长再创new high。</span></div>
+      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
+      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
+    </div>
+<div class="event-card">
+      <div class="event-tags"><span class="tag tag-macro"><span data-lang="zh">宏观</span><span data-lang="en">Macro</span></span></div>
+      <div class="event-text"><span class="dir-arrow dir-down">📉</span> <span data-lang="zh">恒生指数收盘跌1.95%，报22841.62点；恒生科技指数收跌2.33%，报3649.14点，创2024年9月17日以来的最低。万国数据跌7.41%，小马智行跌7.93%，京东健康跌7%，联想集团跌5.52%，微博跌5.77%，阿里巴巴跌5.51%。</span><span data-lang="en">恒生指数收盘跌1.95%，报22841.62点；恒生科技指数收跌2.33%，报3649.14点，创2024年9月17日以来的最低。万国数据跌7.41%，小马智行跌7.93%，京东健康跌7%，联想集团跌5.52%，微博跌5.77%，阿里巴巴跌5.51%。</span></div>
+      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
+      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
+    </div>
+<div class="event-card">
+      <div class="event-tags"><span class="tag tag-macro"><span data-lang="zh">宏观</span><span data-lang="en">Macro</span></span></div>
+      <div class="event-text"><span class="dir-arrow dir-up">📈</span> <span data-lang="zh">阿里巴巴美股盘前拉升，一度涨超4%，公司第二财季营收和调整后每ADS收益均高于预期。</span><span data-lang="en">阿里巴巴美股盘前拉升，一度涨超4%，公司第二财季营收和调整后每ADS收益均高于预期。</span></div>
+      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
+      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
+    </div>
+<div class="event-card">
+      <div class="event-tags"><span class="tag tag-ai"><span data-lang="zh">AI</span><span data-lang="en">AI</span></span><span class="tag tag-fed"><span data-lang="zh">央行</span><span data-lang="en">Central Bank</span></span></div>
+      <div class="event-text"><span class="dir-arrow dir-up">📈</span> <span data-lang="zh">11月19日，网易有道公布了2026年第三季度未经审计的财务业绩。报告期内，有道持续推进AI原生战略，聚焦高质量、高毛利率业务，AI应用在学习、办公、营销等场景纵深落地，盈利能力与经营质量保持稳健提升。</span><span data-lang="en">11月19日，网易有道公布了2026年第三季度未经审计的财务业绩。报告期内，有道持续推进AI原生战略，聚焦高质量、高毛利率业务，AI应用在学习、办公、营销等场景纵深落地，盈利能力与经营质量保持稳健提升。</span></div>
+      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
+      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
+    </div>
+<div class="event-card">
+      <div class="event-tags"><span class="tag tag-fed"><span data-lang="zh">央行</span><span data-lang="en">Central Bank</span></span></div>
+      <div class="event-text"><span class="dir-arrow dir-neutral">➡️</span> <span data-lang="zh">欧洲央行管委Kocher：可能需要进一步加息。</span><span data-lang="en">欧洲央行管委Kocher：可能需要进一步rate hike。</span></div>
+      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
+      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
+    </div>
+<div class="event-card">
+      <div class="event-tags"><span class="tag tag-ai"><span data-lang="zh">AI</span><span data-lang="en">AI</span></span></div>
+      <div class="event-text"><span class="dir-arrow dir-split">⚖️</span> <span data-lang="zh">快手在港交所公告，2026年第三季度，直播业务收入为人民币78亿元，同比下降19.0%。其他服务收入由2025年同期的人民币59亿元增加1.5%至2026年第三季度的人民币60亿元，主要是由于游戏及可灵AI业务收入增加，部分被电商收入减少所抵销。</span><span data-lang="en">快手在港交所公告，2026年第三季度，直播业务收入为CNY78亿元，同比下降19.0%。其他服务收入由2025年同期的CNY59亿元增加1.5%至2026年第三季度的CNY60亿元，主要是由于游戏及可灵AI业务收入增加，部分被电商收入减少所抵销。</span></div>
+      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
+      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
+    </div>
+<div class="event-card">
+      <div class="event-tags"><span class="tag tag-china"><span data-lang="zh">中国</span><span data-lang="en">China</span></span></div>
+      <div class="event-text"><span class="dir-arrow dir-neutral">➡️</span> <span data-lang="zh">部分宽基ETF持续放量，中证500ETF南方(510500)成交超100亿元，已超昨日4倍，科创50ETF易方达（588080）成交超66亿元，超昨日1.5倍，创业板ETF易方达（159915）、沪深300ETF华泰柏瑞(510300)、中证1000ETF南方(512100)等均明显放量。</span><span data-lang="en">部分宽基ETF持续放量，中证500ETF南方(510500)成交超100亿元，已超昨日4倍，科创50ETF易方达（588080）成交超66亿元，超昨日1.5倍，ChiNextETF易方达（159915）、沪深300ETF华泰柏瑞(510300)、中证1000ETF南方(512100)等均明显放量。</span></div>
+      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
+      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
+    </div>
+<div class="event-card">
+      <div class="event-tags"><span class="tag tag-macro"><span data-lang="zh">宏观</span><span data-lang="en">Macro</span></span></div>
+      <div class="event-text"><span class="dir-arrow dir-split">⚖️</span> <span data-lang="zh">【长鑫科技：调整回购方案，回购金额上调至25亿元至50亿元】长鑫科技公告，公司于2026年10月30日召开第二届董事会第八次会议审议通过回购方案，2026年11月3日收到董事长朱一明提议将回购金额增加至不低于人民币25亿元（含），不超过人民币50亿元（含）。2026年11月19日，公司召开第二届董事会第九次会议审议通过调整回购方案。回购价格不超过人民币63.78元/股（含），回购股份用途为股权激励...</span><span data-lang="en">【长鑫科技：调整回购方案，回购金额上调至25亿元至50亿元】长鑫科技公告，公司于2026年10月30日召开第二届董事会第八次会议审议通过回购方案，2026年11月3日收到董事长朱一明提议将回购金额增加至不低于CNY25亿元（含），不超过CNY50亿元（含）。2026年11月19日，公司召开第二届董事会第九次会议审议通过调整回购方案。回购价格不超过CNY63.78元/股（含），回购股份用途为股权激励...</span></div>
+      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
+      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
+    </div>
+<div class="event-card">
+      <div class="event-tags"><span class="tag tag-china"><span data-lang="zh">中国</span><span data-lang="en">China</span></span></div>
+      <div class="event-text"><span class="dir-arrow dir-neutral">➡️</span> <span data-lang="zh">中国国际贸易促进委员会会长任鸿斌11月19日在深圳与美国特斯拉公司首席执行官埃隆·马斯克会面。2027年是中国国际供应链促进博览会（链博会）五周年，中国贸促会会长任鸿斌表示，特斯拉展台每次都能吸引很多中国客户，大家对特斯拉的产品、技术，尤其是前沿技术非常感兴趣。任鸿斌邀请马斯克前往参加开幕式，欢迎特斯拉明年能带来最新技术参展，不仅展示给中国，也展示给全世界。对此，马斯克回应：“当然，听起来非常好。...</span><span data-lang="en">中国国际贸易促进委员会会长任鸿斌11月19日在深圳与美国Tesla公司首席执行官埃隆·马斯克会面。2027年是中国国际供应链促进博览会（链博会）五周年，中国贸促会会长任鸿斌表示，Tesla展台每次都能吸引很多中国客户，大家对Tesla的产品、技术，尤其是前沿技术非常感兴趣。任鸿斌邀请马斯克前往参加开幕式，欢迎Tesla明年能带来最新技术参展，不仅展示给中国，也展示给全世界。对此，马斯克回应：“当然，听起来非常好。...</span></div>
+      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
+      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
+    </div>
+<div class="event-card">
+      <div class="event-tags"><span class="tag tag-macro"><span data-lang="zh">宏观</span><span data-lang="en">Macro</span></span></div>
+      <div class="event-text"><span class="dir-arrow dir-split">⚖️</span> <span data-lang="zh">快手科技第三季度营收316亿元人民币，预估329亿元人民币。
+
+第三季度调整后净利润7.90亿元人民币，预估7.088亿元人民币。
+
+第三季度净亏损9.510亿元人民币，预估亏损1.637亿元人民币。
+
+第三季度调整后息税折旧及摊销前利润38.9亿元人民币，同比下降49%，预估35.8亿元人民币。
+
+第三季度研发支出51.8亿元人民币，同比增长42%，预估51.7亿元人民币。
+
+第三季度平均月活跃...</span><span data-lang="en">快手科技第三季度营收316亿元CNY，预估329亿元CNY。
+
+第三季度调整后净利润7.90亿元CNY，预估7.088亿元CNY。
+
+第三季度净亏损9.510亿元CNY，预估亏损1.637亿元CNY。
+
+第三季度调整后息税折旧及摊销前利润38.9亿元CNY，同比下降49%，预估35.8亿元CNY。
+
+第三季度研发支出51.8亿元CNY，同比增长42%，预估51.7亿元CNY。
+
+第三季度平均月活跃...</span></div>
+      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
+      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
+    </div>
+<div class="event-card">
+      <div class="event-tags"><span class="tag tag-macro"><span data-lang="zh">宏观</span><span data-lang="en">Macro</span></span></div>
+      <div class="event-text"><span class="dir-arrow dir-split">⚖️</span> <span data-lang="zh">网易第三季度营收279亿元人民币，预估303.8亿元人民币。
+
+第三季度经调整每股ADS持续经营净收益14.21元人民币，预估16.36元人民币。
+
+第三季度在线游戏服务净收入229.4亿元人民币，同比下降1.7%，预估253.4亿元人民币。
+
+第三季度创新及其他业务净收入15.4亿元人民币，同比增长7.1%，预估14.1亿元人民币。
+
+第三季度毛利190.5亿元人民币，同比增长4.8%，预估21...</span><span data-lang="en">网易第三季度营收279亿元CNY，预估303.8亿元CNY。
+
+第三季度经调整每股ADS持续经营净收益14.21元CNY，预估16.36元CNY。
+
+第三季度在线游戏服务净收入229.4亿元CNY，同比下降1.7%，预估253.4亿元CNY。
+
+第三季度创新及其他业务净收入15.4亿元CNY，同比增长7.1%，预估14.1亿元CNY。
+
+第三季度毛利190.5亿元CNY，同比增长4.8%，预估21...</span></div>
+      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
+      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
+    </div>
+<div class="event-card">
+      <div class="event-tags"><span class="tag tag-macro"><span data-lang="zh">宏观</span><span data-lang="en">Macro</span></span></div>
+      <div class="event-text"><span class="dir-arrow dir-up">📈</span> <span data-lang="zh">欧洲斯托克50指数开盘涨0.65%，德国DAX指数涨0.3%，英国富时100指数平开，法国CAC 40指数涨0.6%。</span><span data-lang="en">欧洲斯托克50指数开盘涨0.65%，德国DAX指数涨0.3%，英国富时100指数平开，法国CAC 40指数涨0.6%。</span></div>
+      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
+      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
+    </div>
+<div class="event-card">
+      <div class="event-tags"><span class="tag tag-ai"><span data-lang="zh">AI</span><span data-lang="en">AI</span></span></div>
+      <div class="event-text"><span class="dir-arrow dir-neutral">➡️</span> <span data-lang="zh">11月19日，针对投资者关于“你们是否有接到台积电的通知，不给你们供应12nm以下流片了？”的提问，翱捷科技在互动平台回应称，该言论并不属实。凡是取得BIS的ECCN分类编码，确认不属于限制范围的合规芯片可以正常流片。此机制在本次新规出来之前就存在，现在也没有变。无论公司自身产品还是客户项目产品，均沿合规流片和封测路径进行项目推进和管控，这也是公司一直以来坚持的原则。不存在BIS新规出来后台积电不...</span><span data-lang="en">11月19日，针对投资者关于“你们是否有接到台积电的通知，不给你们供应12nm以下流片了？”的提问，翱捷科技在互动平台回应称，该言论并不属实。凡是取得BIS的ECCN分类编码，确认不属于限制范围的合规chips可以正常流片。此机制在本次新规出来之前就存在，现在也没有变。无论公司自身产品还是客户项目产品，均沿合规流片和封测路径进行项目推进和管控，这也是公司一直以来坚持的原则。不存在BIS新规出来后台积电不...</span></div>
+      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
+      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
+    </div>
+<div class="event-card">
+      <div class="event-tags"><span class="tag tag-ai"><span data-lang="zh">AI</span><span data-lang="en">AI</span></span></div>
+      <div class="event-text"><span class="dir-arrow dir-neutral">➡️</span> <span data-lang="zh">我国自主研发的合成生物领域人工智能基础大模型——“天华开物”酶设计大模型19日在天津大学发布。该大模型与天津大学合成生物自动化设备结合，形成工业酶闭环迭代优化系统，一周内可以给出酶设计方案，让三个月内完成菌种定制化构建和目标产品制备工艺开发成为可能。</span><span data-lang="en">我国自主研发的合成生物领域人工智能基础大模型——“天华开物”酶设计大模型19日在天津大学发布。该大模型与天津大学合成生物自动化设备结合，形成工业酶闭环迭代优化系统，一周内可以给出酶设计方案，让三个月内完成菌种定制化构建和目标产品制备工艺开发成为可能。</span></div>
+      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
+      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
+    </div>
+<div class="event-card">
+      <div class="event-tags"><span class="tag tag-energy"><span data-lang="zh">能源</span><span data-lang="en">Energy</span></span></div>
+      <div class="event-text"><span class="dir-arrow dir-neutral">➡️</span> <span data-lang="zh">当地时间11月19日，伊朗伊斯兰革命卫队海军表示，两艘超级油轮在霍尔木兹海峡沿未经伊朗授权的航线航行时触雷爆炸。这两艘油轮载有超过400万桶原油，这些船只在美军战斗机和无人机的护航下，试图秘密通过霍尔木兹海峡内的一条禁航路线。伊朗伊斯兰革命卫队海军警告称，任何在美军指挥下或与其合作、试图通过霍尔木兹海峡内未经授权航线的油轮，都将遭到伊朗的坚决回击。（央视新闻）</span><span data-lang="en">当地时间11月19日，伊朗伊斯兰革命卫队海军表示，两艘超级油轮在霍尔木兹海峡沿未经伊朗授权的航线航行时触雷爆炸。这两艘油轮载有超过400万桶crude oil，这些船只在美军战斗机和无人机的护航下，试图秘密通过霍尔木兹海峡内的一条禁航路线。伊朗伊斯兰革命卫队海军警告称，任何在美军指挥下或与其合作、试图通过霍尔木兹海峡内未经授权航线的油轮，都将遭到伊朗的坚决回击。（央视新闻）</span></div>
+      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
+      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
+    </div>
+<div class="event-card">
+      <div class="event-tags"><span class="tag tag-ai"><span data-lang="zh">AI</span><span data-lang="en">AI</span></span></div>
+      <div class="event-text"><span class="dir-arrow dir-neutral">➡️</span> <span data-lang="zh">快手在港交所公告，展望2026年第四季度，短期经营环境依然充满挑战，消费者和营销客户的支出意愿相对保守，市场竞争激烈。此外，公司的流量趋势已出现疲软，将进一步对商业化能力造成压力。公司在可灵AI及整体AI战略上的持续投入，也将继续带来成本影响，并在短期内对盈利能力形成压力。因此，2026年第四季度，收入和盈利能力可能持续承压。</span><span data-lang="en">快手在港交所公告，展望2026年第四季度，短期经营环境依然充满挑战，消费者和营销客户的支出意愿相对保守，市场竞争激烈。此外，公司的流量趋势已出现疲软，将进一步对商业化能力造成压力。公司在可灵AI及整体AI战略上的持续投入，也将继续带来成本影响，并在短期内对盈利能力形成压力。因此，2026年第四季度，收入和盈利能力可能持续承压。</span></div>
+      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
+      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
+    </div>
+<div class="event-card">
+      <div class="event-tags"><span class="tag tag-macro"><span data-lang="zh">宏观</span><span data-lang="en">Macro</span></span></div>
+      <div class="event-text"><span class="dir-arrow dir-up">📈</span> <span data-lang="zh">在19日下午举办的业绩会上，联想集团董事长兼CEO杨元庆表示，基于今年前两个季度的增长势头，联想集团此前提出的“两年内推动集团年营收突破1000亿美元”的目标，有信心提前到今年，提前一年实现。（证券时报）</span><span data-lang="en">在19日下午举办的业绩会上，联想集团董事长兼CEO杨元庆表示，基于今年前两个季度的增长势头，联想集团此前提出的“两年内推动集团年营收突破1000亿美元”的目标，有信心提前到今年，提前一年实现。（证券时报）</span></div>
+      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
+      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
+    </div>
+<div class="event-card">
+      <div class="event-tags"><span class="tag tag-macro"><span data-lang="zh">宏观</span><span data-lang="en">Macro</span></span></div>
+      <div class="event-text"><span class="dir-arrow dir-neutral">➡️</span> <span data-lang="zh">韩国大法院全员合议庭19日对前总统尹锡悦夫人金建希涉嫌股价操纵、违法接受民调以及与宗教团体有资金往来等“三大争议案”作出终审判决，维持二审判决，判处金建希有期徒刑4年、罚款5000万韩元（约合人民币25万元）。其中，德国汽车公司股价操纵案部分指控成立，与宗教团体有资金往来的指控成立，而违法接受民调则维持二审的无罪判决。 (央视新闻)</span><span data-lang="en">韩国大法院全员合议庭19日对前总统尹锡悦夫人金建希涉嫌股价操纵、违法接受民调以及与宗教团体有资金往来等“三大争议案”作出终审判决，维持二审判决，判处金建希有期徒刑4年、罚款5000万韩元（约合CNY25万元）。其中，德国汽车公司股价操纵案部分指控成立，与宗教团体有资金往来的指控成立，而违法接受民调则维持二审的无罪判决。 (央视新闻)</span></div>
+      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
+      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
+    </div>
+<div class="event-card">
+      <div class="event-tags"><span class="tag tag-ai"><span data-lang="zh">AI</span><span data-lang="en">AI</span></span></div>
+      <div class="event-text"><span class="dir-arrow dir-neutral">➡️</span> <span data-lang="zh">11月19日，商务部新闻发言人何亚东在例行新闻发布会上表示，今年“双十一”整体平稳。在服务方面，线上下单、线下体验新模式广受欢迎，到店餐饮消费需求加速释放；在场景方面，“词元+终端”创新消费体验，人工智能与消费深度融合，主要电商平台上线词元专区，让买算力像充话费一样简单。总的来看，“双十一”购物车扩容向新，消费边界不断拓展，勾勒出消费多元图景。（证券时报）</span><span data-lang="en">11月19日，商务部新闻发言人何亚东在例行新闻发布会上表示，今年“双十一”整体平稳。在服务方面，线上下单、线下体验新模式广受欢迎，到店餐饮消费需求加速释放；在场景方面，“词元+终端”创新消费体验，人工智能与消费深度融合，主要电商平台上线词元专区，让买算力像充话费一样简单。总的来看，“双十一”购物车扩容向新，消费边界不断拓展，勾勒出消费多元图景。（证券时报）</span></div>
+      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
+      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
+    </div>
+<div class="event-card">
+      <div class="event-tags"><span class="tag tag-macro"><span data-lang="zh">宏观</span><span data-lang="en">Macro</span></span></div>
+      <div class="event-text"><span class="dir-arrow dir-neutral">➡️</span> <span data-lang="zh">联想集团最新财报附注披露，已于2026年4月27日耗资约5000万美元现金，全资收购老牌BIOS厂商Phoenix Technologies EMEA Limited的全部权益及相关业务。该交易确认了2700万美元无形资产及约2595万美元商誉。上半财年，该标的无外部营收，并录得900万美元税前亏损。</span><span data-lang="en">联想集团最新财报附注披露，已于2026年4月27日耗资约5000万美元现金，全资收购老牌BIOS厂商Phoenix Technologies EMEA Limited的全部权益及相关业务。该交易确认了2700万美元无形资产及约2595万美元商誉。上半财年，该标的无外部营收，并录得900万美元税前亏损。</span></div>
+      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
+      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
+    </div>
+<div class="event-card">
+      <div class="event-tags"><span class="tag tag-ai"><span data-lang="zh">AI</span><span data-lang="en">AI</span></span></div>
+      <div class="event-text"><span class="dir-arrow dir-up">📈</span> <span data-lang="zh">天眼查App显示，DeepSeek工商主体杭州深度求索人工智能基础技术研究有限公司近日完成工商变更，新增股东杭州程砚企业管理咨询合伙企业（有限合伙）、公司注册资本变更为1991.8707万元，增幅约21.1%。</span><span data-lang="en">天眼查App显示，DeepSeek工商主体杭州深度求索人工智能基础技术研究有限公司近日完成工商变更，新增股东杭州程砚企业管理咨询合伙企业（有限合伙）、公司注册资本变更为1991.8707万元，增幅约21.1%。</span></div>
+      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
+      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
+    </div>
+<div class="event-card">
+      <div class="event-tags"><span class="tag tag-macro"><span data-lang="zh">宏观</span><span data-lang="en">Macro</span></span></div>
+      <div class="event-text"><span class="dir-arrow dir-split">⚖️</span> <span data-lang="zh">伦敦金属交易所(LME)：铝库存减少1725吨，铜库存增加125吨，锌库存减少575吨，锡库存减少45吨，铅库存减少2675吨，镍库存增加1002吨。</span><span data-lang="en">伦敦金属交易所(LME)：铝库存减少1725吨，铜库存增加125吨，锌库存减少575吨，锡库存减少45吨，铅库存减少2675吨，镍库存增加1002吨。</span></div>
+      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
+      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
+    </div>
+<div class="event-card">
+      <div class="event-tags"><span class="tag tag-macro"><span data-lang="zh">宏观</span><span data-lang="en">Macro</span></span></div>
+      <div class="event-text"><span class="dir-arrow dir-up">📈</span> <span data-lang="zh">从2027届全国普通高校毕业生就业创业工作会议上获悉，2027届全国普通高校毕业生规模预计1299万人，各地各部门将强化协同、央地联动，全力确保2027届高校毕业生就业总体稳定。 (央视新闻)</span><span data-lang="en">从2027届全国普通高校毕业生就业创业工作会议上获悉，2027届全国普通高校毕业生规模预计1299万人，各地各部门将强化协同、央地联动，全力确保2027届高校毕业生就业总体稳定。 (央视新闻)</span></div>
+      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
+      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
+    </div>
+<div class="event-card">
+      <div class="event-tags"><span class="tag tag-fed"><span data-lang="zh">央行</span><span data-lang="en">Central Bank</span></span></div>
+      <div class="event-text"><span class="dir-arrow dir-neutral">➡️</span> <span data-lang="zh">国开行发行1年期债券，规模10亿元，发行利率1.3200%，预期1.2900%，投标倍数12.56倍，边际倍数8.41倍。</span><span data-lang="en">国开行发行1年期债券，规模10亿元，发行利率1.3200%，预期1.2900%，投标倍数12.56倍，边际倍数8.41倍。</span></div>
+      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
+      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
+    </div>
+<div class="event-card">
+      <div class="event-tags"><span class="tag tag-china"><span data-lang="zh">中国</span><span data-lang="en">China</span></span></div>
+      <div class="event-text"><span class="dir-arrow dir-neutral">➡️</span> <span data-lang="zh">11月19日，沪深两市全天成交额合计13051.47亿元。其中，沪市成交额为6369.09亿元；深市成交额为6682.38亿元；创业板成交额为3143.80亿元。</span><span data-lang="en">11月19日，沪深两市全天成交额合计13051.47亿元。其中，沪市成交额为6369.09亿元；深市成交额为6682.38亿元；ChiNext成交额为3143.80亿元。</span></div>
+      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
+      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
+    </div>
+<div class="event-card">
+      <div class="event-tags"><span class="tag tag-ai"><span data-lang="zh">AI</span><span data-lang="en">AI</span></span></div>
+      <div class="event-text"><span class="dir-arrow dir-neutral">➡️</span> <span data-lang="zh">据Politico援引欧盟官员报道，欧盟委员会遭遇网络攻击，个人数据可能受到影响，部分员工无法录入薪资信息。欧盟机构网络安全应急响应机构CERT-EU本月早些时候发现，黑客使用了ARTEX。这是一款公开可用、利用人工智能(AI)技术识别IT系统漏洞的工具。欧盟委员会认为已遏制大部分攻击，但具体损害程度仍不清楚。该官员表示，部分系统可能正在恢复运行，调查仍在继续。作为预防措施，部分应用程序曾被暂时停...</span><span data-lang="en">据Politico援引欧盟官员报道，欧盟委员会遭遇网络攻击，个人数据可能受到影响，部分员工无法录入薪资信息。欧盟机构网络安全应急响应机构CERT-EU本月早些时候发现，黑客使用了ARTEX。这是一款公开可用、利用人工智能(AI)技术识别IT系统漏洞的工具。欧盟委员会认为已遏制大部分攻击，但具体损害程度仍不清楚。该官员表示，部分系统可能正在恢复运行，调查仍在继续。作为预防措施，部分应用程序曾被暂时停...</span></div>
+      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
+      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
+    </div>
+<div class="event-card">
+      <div class="event-tags"><span class="tag tag-macro"><span data-lang="zh">宏观</span><span data-lang="en">Macro</span></span></div>
+      <div class="event-text"><span class="dir-arrow dir-neutral">➡️</span> <span data-lang="zh">韩国总统李在明：韩国今年以来出口额已超过1万亿美元。</span><span data-lang="en">韩国总统李在明：韩国今年以来出口额已超过1万亿美元。</span></div>
+      <div class="event-assets"><strong><span data-lang="zh">影响资产：</span><span data-lang="en">Affected Assets: </span></strong><span data-lang="zh"></span><span data-lang="en"></span></div>
+      <div class="event-logic"><span data-lang="zh"></span><span data-lang="en"></span></div>
+    </div>
+
+  </div>
+
+  <!-- Chains -->
+  <div class="section">
+    <div class="section-title"><span data-lang="zh">🔗 因果链逐条拆解（0条）</span><span data-lang="en">🔗 Causal Chain Breakdown (0)</span></div>
+    
+  </div>
+
+  <!-- Verifications -->
+  <div class="section">
+    <div class="section-title"><span data-lang="zh">🔍 待验证清单（0条）</span><span data-lang="en">🔍 Watchlist (0)</span></div>
+    
+  </div>
+
+  <footer>
+    <p><span data-lang="zh">📊 本市场地图基于华尔街见闻快讯（华尔街见闻）2026-11-19 约19:17（北京时间）抓取内容生成</span><span data-lang="en">📊 Based on WallstreetCN flash news (华尔街见闻), 2026-11-19 约19:17（北京时间）</span></p>
+    <p><span data-lang="zh">三层漏斗：① 价格变动/新信息/宏观/资产相关 → ② 去重去噪 → ③ 保留42条核心，0条因果链，0条待验证</span><span data-lang="en">3-layer funnel: ① Price/Info/Macro filter → ② Dedup → ③ Top 42 events, 0 chains, 0 watchlist items</span></p>
+    <p style="margin-top:8px; color: var(--text-dim);"><span data-lang="zh">⚠️ 仅供研究参考，不构成投资建议</span><span data-lang="en">⚠️ For research reference only, not investment advice</span></p>
+    <p style="margin-top:8px;"><span data-lang="zh">🤖 自动更新：GitHub Actions 每半小时自动抓取 → 构建 → 部署</span><span data-lang="en">🤖 Auto-updated: GitHub Actions every 30min → Build → Deploy</span></p>
+  </footer>
+</div>
+
+<script>
+// Theme toggle
+function toggleTheme() {
+  var body = document.body;
+  var current = body.getAttribute('data-theme');
+  var next = current === 'dark' ? 'light' : 'dark';
+  body.setAttribute('data-theme', next);
+  localStorage.setItem('theme', next);
+}
+(function() {
+  var saved = localStorage.getItem('theme');
+  if (saved) document.body.setAttribute('data-theme', saved);
+})();
+
+// Language toggle
+function toggleLang() {
+  var body = document.body;
+  var current = body.className.indexOf('lang-en') >= 0 ? 'en' : 'zh';
+  if (current === 'zh') {
+    body.className = body.className.replace('lang-zh', 'lang-en');
+    document.querySelector('.lang-toggle').textContent = '中';
+    document.documentElement.lang = 'en';
+    localStorage.setItem('lang', 'en');
+  } else {
+    body.className = body.className.replace('lang-en', 'lang-zh');
+    document.querySelector('.lang-toggle').textContent = 'EN';
+    document.documentElement.lang = 'zh-CN';
+    localStorage.setItem('lang', 'zh');
+  }
+}
+(function() {
+  var saved = localStorage.getItem('lang');
+  if (saved === 'en') {
+    document.body.className = document.body.className.replace('lang-zh', 'lang-en');
+    var btn = document.querySelector('.lang-toggle');
+    if (btn) btn.textContent = '中';
+    document.documentElement.lang = 'en';
+  }
+})();
+
+// Copy link
+function copyLink() {
+  navigator.clipboard.writeText(window.location.href).then(function() {
+    var msg = document.body.className.indexOf('lang-en') >= 0 ? 'Link copied!' : '链接已复制！';
+    alert(msg);
+  });
+}
+
+// Auto refresh every 5 minutes
+setTimeout(function() { location.reload(); }, 5 * 60 * 1000);
+</script>
+</body>
+</html>
