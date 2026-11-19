@@ -2,16 +2,16 @@
   "date": "2026-11-19",
   "weekday": "星期四",
   "weekday_en": "Thursday",
-  "crawl_time": "约05:30（北京时间）",
-  "source": "MarketWatch Top Stories / CNBC Economy / Investing.com News / CNBC World News / CNBC Top News",
+  "crawl_time": "约06:54（北京时间）",
+  "source": "Investing.com News / MarketWatch Top Stories / CNBC World News / CNBC Economy / CNBC Top News",
   "sources_detail": [
-    "MarketWatch Top Stories",
-    "CNBC Economy",
     "Investing.com News",
+    "MarketWatch Top Stories",
     "CNBC World News",
+    "CNBC Economy",
     "CNBC Top News"
   ],
-  "filter_result": "44条核心要闻 / 0条因果链 / 89条原始抓取",
+  "filter_result": "42条核心要闻 / 0条因果链 / 89条原始抓取",
   "stats": [],
   "events": [
     {
@@ -725,38 +725,6 @@
       ],
       "event": "Dollar hits fresh 19-mth peak on hawkish Fed; Aussie slides after weak jobs data",
       "event_en": "Dollar hits fresh 19-mth peak on hawkish Fed; Aussie slides after weak jobs data",
-      "assets": "",
-      "assets_en": "",
-      "dir": "down",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        }
-      ],
-      "event": "With Jensen Huang gone, Colette Kress shows Nvidia is still at the center of AI | In her first earnings report as interim CEO, Nvidia's Colette Kress calmed investors' nerves, at least for the moment.",
-      "event_en": "With Jensen Huang gone, Colette Kress shows Nvidia is still at the center of AI | In her first earnings report as interim CEO, Nvidia's Colette Kress calmed investors' nerves, at least for the moment.",
-      "assets": "",
-      "assets_en": "",
-      "dir": "neutral",
-      "logic": "",
-      "logic_en": ""
-    },
-    {
-      "tags": [
-        {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        }
-      ],
-      "event": "Nvidia sinks after earnings, dragging down neoclouds CoreWeave, Iren | Nvidia's earnings come at a tumultuous time for the company.",
-      "event_en": "Nvidia sinks after earnings, dragging down neoclouds CoreWeave, Iren | Nvidia's earnings come at a tumultuous time for the company.",
       "assets": "",
       "assets_en": "",
       "dir": "down",
