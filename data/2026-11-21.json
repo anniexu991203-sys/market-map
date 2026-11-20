@@ -2,7 +2,7 @@
   "date": "2026-11-21",
   "weekday": "星期六",
   "weekday_en": "Saturday",
-  "crawl_time": "约19:50（北京时间）",
+  "crawl_time": "约20:39（北京时间）",
   "source": "华尔街见闻",
   "sources_detail": [
     "华尔街见闻"
@@ -50,11 +50,27 @@
       "dir": "split"
     },
     {
-      "label": "成分股闪迪",
-      "label_en": "成分股闪迪",
-      "value": "11.6%",
-      "change": "纳斯达克100指数跌幅扩大至超过2%，成分股闪迪跌11.6%，西部数据、美光、希捷、CoreWeave跌超8%。\n\n新股",
-      "change_en": "纳斯达克100indexlossexpanded至超过2%，成分股闪迪跌11.6%，西部数据、美光、希捷、CoreWeavedrop below8%。\n\n新股",
+      "label": "纳斯达克100指数",
+      "label_en": "纳斯达克100index",
+      "value": "5.5%",
+      "change": "美股尾盘跌势不止，纳斯达克100指数跌5.5%，纳指跌幅扩大至5%。\n\nVIX波动率日内涨幅达31.0%，报37.27，",
+      "change_en": "美股尾盘跌势不止，纳斯达克100index跌5.5%，Nasdaqlossexpanded至5%。\n\nVIXvolatility率day内gain达31.0%，reported37.27，",
+      "dir": "split"
+    },
+    {
+      "label": "VIX波动率日内涨幅",
+      "label_en": "VIXvolatility率day内gain",
+      "value": "new low",
+      "change": "美股尾盘跌势不止，纳斯达克100指数跌5.5%，纳指跌幅扩大至5%。\n\nVIX波动率日内涨幅达31.0%，报37.27，",
+      "change_en": "美股尾盘跌势不止，纳斯达克100index跌5.5%，Nasdaqlossexpanded至5%。\n\nVIXvolatility率day内gain达31.0%，reported37.27，",
+      "dir": "split"
+    },
+    {
+      "label": "美元兑日元",
+      "label_en": "USD兑JPY",
+      "value": "0.77%",
+      "change": "周五（11月20日）纽约尾盘，美元兑日元跌0.77%，报158.47日元，本周累计下跌0.77%，整体交投区间为159.",
+      "change_en": "周五（11month20day）纽约尾盘，USD兑JPY跌0.77%，reported158.47JPY，本周累计fall0.77%，整体交投区间为159.",
       "dir": "split"
     },
     {
@@ -64,14 +80,6 @@
       "change": "道琼斯指数跌0.87%，标普500指数跌2.52%，纳斯达克综合指数跌4.00%。\n\n纳斯达克100指数跌4.3%，半导",
       "change_en": "道琼斯index跌0.87%，S&P 500index跌2.52%，纳斯达克综合index跌4.00%。\n\n纳斯达克100index跌4.3%，半导",
       "dir": "down"
-    },
-    {
-      "label": "半导体指数",
-      "label_en": "semiconductorsindex",
-      "value": "6.9%",
-      "change": "纳斯达克100指数跌幅扩大至2.5%，半导体指数跌6.9%。\n\n德国国债价格上涨，10年期德债收益率跌10个基点至3.3",
-      "change_en": "纳斯达克100indexlossexpanded至2.5%，semiconductorsindex跌6.9%。\n\n德国government bonds价格rise，10year期德债yield跌10个基点至3.3",
-      "dir": "split"
     }
   ],
   "events": [
@@ -160,22 +168,6 @@
           "type": "ai",
           "text": "AI",
           "text_en": "AI"
-        }
-      ],
-      "event": "纳斯达克100指数跌幅扩大至超过2%，成分股闪迪跌11.6%，西部数据、美光、希捷、CoreWeave跌超8%。",
-      "event_en": "纳斯达克100indexlossexpanded至超过2%，成分股闪迪跌11.6%，西部数据、美光、希捷、CoreWeavedrop below8%。",
-      "assets": "标普500 / 道指 / 半导体板块 / Anthropic",
-      "assets_en": "S&P 500 / Dow Jones / Semiconductors / Anthropic",
-      "dir": "split",
-      "logic": "AI产业事件 → 算力/芯片需求预期变化 → 相关板块联动",
-      "logic_en": "AI industry event → compute/chip demand expectations shift → related sectors correlate"
-    },
-    {
-      "tags": [
-        {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
         },
         {
           "type": "central-bank",
@@ -210,6 +202,38 @@
     {
       "tags": [
         {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "美股尾盘跌势不止，纳斯达克100指数跌5.5%，纳指跌幅扩大至5%。 VIX波动率日内涨幅达31.0%，报37.27，至少创2025年4月份以来新高。 纽元兑美元跌至2009年以来的最低水平。",
+      "event_en": "美股尾盘跌势不止，纳斯达克100index跌5.5%，Nasdaqlossexpanded至5%。 VIXvolatility率day内gain达31.0%，reported37.27，至少hit2025year4month份以来new high。 纽yuan兑USD跌至2009year以来的最低水平。",
+      "assets": "纳指 / 美元指数",
+      "assets_en": "Nasdaq / USD Index",
+      "dir": "split",
+      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
+      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst"
+    },
+    {
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "周五（11月20日）纽约尾盘，美元兑日元跌0.77%，报158.47日元，本周累计下跌0.77%，整体交投区间为159.97-158.42日元。",
+      "event_en": "周五（11month20day）纽约尾盘，USD兑JPY跌0.77%，reported158.47JPY，本周累计fall0.77%，整体交投区间为159.97-158.42JPY。",
+      "assets": "美元指数 / 日元 / 人民币 / 欧元 / 英镑",
+      "assets_en": "USD Index / JPY / CNY / EUR / GBP",
+      "dir": "split",
+      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
+      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst"
+    },
+    {
+      "tags": [
+        {
           "type": "ai",
           "text": "AI",
           "text_en": "AI"
@@ -236,27 +260,6 @@
       "assets": "详见原文",
       "assets_en": "See source",
       "dir": "down",
-      "logic": "债务风险信号 → 国债利差走阔 → 相关国家资产承压",
-      "logic_en": "Debt risk signal → bond spread widens → related country assets under pressure"
-    },
-    {
-      "tags": [
-        {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        },
-        {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
-        }
-      ],
-      "event": "纳斯达克100指数跌幅扩大至2.5%，半导体指数跌6.9%。 德国国债价格上涨，10年期德债收益率跌10个基点至3.3%。",
-      "event_en": "纳斯达克100indexlossexpanded至2.5%，semiconductorsindex跌6.9%。 德国government bonds价格rise，10year期德债yield跌10个基点至3.3%。",
-      "assets": "半导体板块",
-      "assets_en": "Semiconductors",
-      "dir": "split",
       "logic": "债务风险信号 → 国债利差走阔 → 相关国家资产承压",
       "logic_en": "Debt risk signal → bond spread widens → related country assets under pressure"
     }
@@ -342,22 +345,6 @@
       ]
     },
     {
-      "event": "纳斯达克100指数跌幅扩大至超过2%，成分股闪迪跌11.6%，西部数据、美光、希捷、CoreWeave跌超8%。",
-      "event_en": "纳斯达克100indexlossexpanded至超过2%，成分股闪迪跌11.6%，西部数据、美光、希捷、CoreWeavedrop below8%。",
-      "assets": "标普500 / 道指 / 半导体板块 / Anthropic",
-      "assets_en": "S&P 500 / Dow Jones / Semiconductors / Anthropic",
-      "dir": "split",
-      "logic": "AI产业事件 → 算力/芯片需求预期变化 → 相关板块联动",
-      "logic_en": "AI industry event → compute/chip demand expectations shift → related sectors correlate",
-      "tags": [
-        {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        }
-      ]
-    },
-    {
       "event": "加拿大丰业银行首席外汇策略师Shaun Osborne：AI叙事与美国“例外论”联系如此紧密，因此如果AI板块大幅回撤，从基本面来看将对美元不利，因为这可能意味着经济增长放缓、通胀压力减弱...",
       "event_en": "加拿大丰业silver行首席外汇策略师Shaun Osborne：AInarrative与美国“例外论”联系如此紧密，因此如果AIsector大幅回撤，从基本面来看将对USD不利，因为这可能意味着经济growth放缓、inflation压力减弱...",
       "assets": "美元指数",
@@ -386,6 +373,38 @@
       "dir": "split",
       "logic": "债务风险信号 → 国债利差走阔 → 相关国家资产承压",
       "logic_en": "Debt risk signal → bond spread widens → related country assets under pressure",
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ]
+    },
+    {
+      "event": "美股尾盘跌势不止，纳斯达克100指数跌5.5%，纳指跌幅扩大至5%。 VIX波动率日内涨幅达31.0%，报37.27，至少创2025年4月份以来新高。 纽元兑美元跌至2009年以来的最低水平。",
+      "event_en": "美股尾盘跌势不止，纳斯达克100index跌5.5%，Nasdaqlossexpanded至5%。 VIXvolatility率day内gain达31.0%，reported37.27，至少hit2025year4month份以来new high。 纽yuan兑USD跌至2009year以来的最低水平。",
+      "assets": "纳指 / 美元指数",
+      "assets_en": "Nasdaq / USD Index",
+      "dir": "split",
+      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
+      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst",
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ]
+    },
+    {
+      "event": "周五（11月20日）纽约尾盘，美元兑日元跌0.77%，报158.47日元，本周累计下跌0.77%，整体交投区间为159.97-158.42日元。",
+      "event_en": "周五（11month20day）纽约尾盘，USD兑JPY跌0.77%，reported158.47JPY，本周累计fall0.77%，整体交投区间为159.97-158.42JPY。",
+      "assets": "美元指数 / 日元 / 人民币 / 欧元 / 英镑",
+      "assets_en": "USD Index / JPY / CNY / EUR / GBP",
+      "dir": "split",
+      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
+      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst",
       "tags": [
         {
           "type": "macro",
@@ -425,44 +444,18 @@
           "text_en": "Macro"
         }
       ]
-    },
-    {
-      "event": "纳斯达克100指数跌幅扩大至2.5%，半导体指数跌6.9%。 德国国债价格上涨，10年期德债收益率跌10个基点至3.3%。",
-      "event_en": "纳斯达克100indexlossexpanded至2.5%，semiconductorsindex跌6.9%。 德国government bonds价格rise，10year期德债yield跌10个基点至3.3%。",
-      "assets": "半导体板块",
-      "assets_en": "Semiconductors",
-      "dir": "split",
-      "logic": "债务风险信号 → 国债利差走阔 → 相关国家资产承压",
-      "logic_en": "Debt risk signal → bond spread widens → related country assets under pressure",
-      "tags": [
-        {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        },
-        {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
-        }
-      ]
     }
   ],
   "chains": [
     {
-      "title": "AI Capex链：纳斯达克100指数跌幅扩大至超过2%，成分股... → 加拿大丰业银行首席外汇策略师Shaun Os...",
-      "title_en": "AI Capex Chain: 纳斯达克100indexlossexpanded至超过2%，成分股... → 加拿大丰业silver行首席外汇策略师Shaun Os...",
+      "title": "AI Capex链：随着市场对人工智能（AI）热潮能否持续的疑虑... → 标普500指数跌3.1%，纳斯达克100指数...",
+      "title_en": "AI Capex Chain: 随着市场对人工智能（AI）热潮能否持续的疑虑... → S&P 500index跌3.1%，纳斯达克100index...",
       "status": "unverified",
       "nodes": [
         {
-          "text": "纳斯达克100指数跌幅扩大至超过2%，成分股闪迪跌11.6%，西部数据、美光、希捷、CoreWeave跌超8%",
-          "text_en": "纳斯达克100indexlossexpanded至超过2%，成分股闪迪跌11.6%，西部数据、美光、希捷、CoreWeavedrop below8%",
-          "type": "cause"
-        },
-        {
           "text": "随着市场对人工智能（AI）热潮能否持续的疑虑再度升温，从股票到铜等全球资产均受到冲击，欧洲股市录得2025年4月以来最大单周跌幅",
           "text_en": "随着市场对人工智能（AI）热潮能否持续的疑虑再度升温，从股票到copper等全球资产均受到冲击，欧洲股市录得2025year4month以来最大单周loss",
-          "type": "intermediate"
+          "type": "cause"
         },
         {
           "text": "受人工智能（AI）领域投资热情持续减弱影响，周五铜价暴跌至3月以来最低点，并有望创下逾19个月来最大单周跌幅",
@@ -477,6 +470,11 @@
         {
           "text": "加拿大丰业银行首席外汇策略师Shaun Osborne：AI叙事与美国“例外论”联系如此紧密",
           "text_en": "加拿大丰业silver行首席外汇策略师Shaun Osborne：AInarrative与美国“例外论”联系如此紧密",
+          "type": "intermediate"
+        },
+        {
+          "text": "标普500指数跌3.1%，纳斯达克100指数跌4.9%，纳指跌4.6%，半导体指数跌10%，Anthropic维持大约10%的跌幅",
+          "text_en": "S&P 500index跌3.1%，纳斯达克100index跌4.9%，Nasdaq跌4.6%，semiconductorsindex跌10%，Anthropic维持大约10%的loss",
           "type": "effect"
         }
       ],
@@ -502,19 +500,14 @@
       ]
     },
     {
-      "title": "宏观链：纳斯达克100指数跌幅扩大至2.5%，半导体指数跌6.9% → 道琼斯指数跌0.87%，标普500指数跌2.52%，纳斯达克综合指数跌4.00%",
-      "title_en": "Macro Chain: 纳斯达克100indexlossexpanded至2.5%，semiconductorsindex跌6.9% → 道琼斯index跌0.87%，S&P 500index跌2.52%，纳斯达克综合index跌4.00%",
+      "title": "宏观链：周五（11月20日）欧市尾盘，英国10年期国... → 美股尾盘跌势不止，纳斯达克100指数跌5.5%，纳指跌幅扩大至5%",
+      "title_en": "Macro Chain: 周五（11month20day）欧市尾盘，英国10year期国... → 美股尾盘跌势不止，纳斯达克100index跌5.5%，Nasdaqlossexpanded至5%",
       "status": "consensus",
       "nodes": [
         {
-          "text": "纳斯达克100指数跌幅扩大至2.5%，半导体指数跌6.9%",
-          "text_en": "纳斯达克100indexlossexpanded至2.5%，semiconductorsindex跌6.9%",
-          "type": "cause"
-        },
-        {
           "text": "周五（11月20日）欧市尾盘，英国10年期国债收益率跌7.9个基点，报5.234%",
           "text_en": "周五（11month20day）欧市尾盘，英国10year期government bondsyield跌7.9个基点，reported5.234%",
-          "type": "intermediate"
+          "type": "cause"
         },
         {
           "text": "周五（11月20日）欧市尾盘，德国10年期国债收益率跌9.9个基点，报3.304%",
@@ -524,6 +517,16 @@
         {
           "text": "道琼斯指数跌0.87%，标普500指数跌2.52%，纳斯达克综合指数跌4.00%",
           "text_en": "道琼斯index跌0.87%，S&P 500index跌2.52%，纳斯达克综合index跌4.00%",
+          "type": "intermediate"
+        },
+        {
+          "text": "周五（11月20日）纽约尾盘，美元兑日元跌0.77%，报158.47日元，本周累计下跌0.77%",
+          "text_en": "周五（11month20day）纽约尾盘，USD兑JPY跌0.77%，reported158.47JPY，本周累计fall0.77%",
+          "type": "intermediate"
+        },
+        {
+          "text": "美股尾盘跌势不止，纳斯达克100指数跌5.5%，纳指跌幅扩大至5%",
+          "text_en": "美股尾盘跌势不止，纳斯达克100index跌5.5%，Nasdaqlossexpanded至5%",
           "type": "effect"
         }
       ],
@@ -551,8 +554,8 @@
   ],
   "verifications": [
     {
-      "title": "AI Capex链：纳斯达克100指数跌幅扩大至超过2%，成分股... → 加拿大丰业银行首席外汇策略师Shaun Os...能否持续？",
-      "title_en": "Can 'AI Capex Chain: 纳斯达克100indexlossexpanded至超过2%，成分股... → 加拿大丰业silver行首席外汇策略师Shaun Os...' sustain?",
+      "title": "AI Capex链：随着市场对人工智能（AI）热潮能否持续的疑虑... → 标普500指数跌3.1%，纳斯达克100指数...能否持续？",
+      "title_en": "Can 'AI Capex Chain: 随着市场对人工智能（AI）热潮能否持续的疑虑... → S&P 500index跌3.1%，纳斯达克100index...' sustain?",
       "layer1": "AI capex叙事能否从'融资验证'切换到'盈利验证'？巨量融资证明了吸金能力，但何时能证明赚钱能力？",
       "layer1_en": "Can the AI capex narrative shift from 'funding validation' to 'profit validation'? Massive funding proves capital attraction, but when profitability?",
       "vars": [
@@ -569,8 +572,8 @@
       ]
     },
     {
-      "title": "宏观链：纳斯达克100指数跌幅扩大至2.5%，半导体指数跌6.9% → 道琼斯指数跌0.87%，标普500指数跌2.52%，纳斯达克综合指数跌4.00%能否持续？",
-      "title_en": "Can 'Macro Chain: 纳斯达克100indexlossexpanded至2.5%，semiconductorsindex跌6.9% → 道琼斯index跌0.87%，S&P 500index跌2.52%，纳斯达克综合index跌4.00%' sustain?",
+      "title": "宏观链：周五（11月20日）欧市尾盘，英国10年期国... → 美股尾盘跌势不止，纳斯达克100指数跌5.5%，纳指跌幅扩大至5%能否持续？",
+      "title_en": "Can 'Macro Chain: 周五（11month20day）欧市尾盘，英国10year期国... → 美股尾盘跌势不止，纳斯达克100index跌5.5%，Nasdaqlossexpanded至5%' sustain?",
       "layer1": "该宏观事件后续发展如何？市场当前定价是否充分？",
       "layer1_en": "How will this macro event develop? Is current market pricing adequate?",
       "vars": [
