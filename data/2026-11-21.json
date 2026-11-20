@@ -2,21 +2,13 @@
   "date": "2026-11-21",
   "weekday": "星期六",
   "weekday_en": "Saturday",
-  "crawl_time": "约21:37（北京时间）",
+  "crawl_time": "约22:35（北京时间）",
   "source": "华尔街见闻",
   "sources_detail": [
     "华尔街见闻"
   ],
   "filter_result": "10条核心要闻 / 2条因果链 / 100条原始抓取",
   "stats": [
-    {
-      "label": "欧洲600指数收盘下",
-      "label_en": "欧洲600indexclose下",
-      "value": "2%",
-      "change": "随着市场对人工智能（AI）热潮能否持续的疑虑再度升温，从股票到铜等全球资产均受到冲击，欧洲股市录得2025年4月以来最大",
-      "change_en": "随着市场对人工智能（AI）热潮能否持续的疑虑再度升温，从股票到copper等全球资产均受到冲击，欧洲股市录得2025year4month以来最大",
-      "dir": "split"
-    },
     {
       "label": "标普500指数",
       "label_en": "S&P 500index",
@@ -82,36 +74,23 @@
       "dir": "split"
     },
     {
-      "label": "交所KBW银行指数收",
-      "label_en": "交所KBWsilver行index收",
-      "value": "3.12%",
-      "change": "标普500指数收跌265.44点，跌幅3.70%，报6910.39点。\n\n道琼斯工业平均指数收跌949.73点，跌幅1.",
-      "change_en": "S&P 500indexclose down265.44点，loss3.70%，reported6910.39点。\n\n道琼斯工业平均indexclose down949.73点，loss1.",
+      "label": "指数",
+      "label_en": "index",
+      "value": "5.01%",
+      "change": "美股七巨头收盘播报｜周五（11月20日），美国科技股七巨头（Magnificent 7）指数跌5.01%，报194.71",
+      "change_en": "美股七巨头close播reported｜周五（11month20day），美国科技股七巨头（Magnificent 7）index跌5.01%，reported194.71",
+      "dir": "down"
+    },
+    {
+      "label": "本周累计下",
+      "label_en": "本周累计下",
+      "value": "8.61%",
+      "change": "标普500指数收跌265.44点，跌幅3.70%，连续第七个交易日下跌——创2020年以来最长连跌天数，报6910.39",
+      "change_en": "S&P 500indexclose down265.44点，loss3.70%，连续第七个交易dayfall——hit2020year以来最长连跌天数，reported6910.39",
       "dir": "split"
     }
   ],
   "events": [
-    {
-      "tags": [
-        {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        },
-        {
-          "type": "central-bank",
-          "text": "央行",
-          "text_en": "Central Bank"
-        }
-      ],
-      "event": "随着市场对人工智能（AI）热潮能否持续的疑虑再度升温，从股票到铜等全球资产均受到冲击，欧洲股市录得2025年4月以来最大单周跌幅。",
-      "event_en": "随着市场对人工智能（AI）热潮能否持续的疑虑再度升温，从股票到copper等全球资产均受到冲击，欧洲股市录得2025year4month以来最大单周loss。",
-      "assets": "黄金 / 铜 / 半导体板块 / 芯片板块",
-      "assets_en": "Gold / Copper / Semiconductors / Chips",
-      "dir": "split",
-      "logic": "央行鹰派信号 → 加息预期升温 → 利率上行 → 风险资产承压",
-      "logic_en": "Central bank hawkish signal → rate hike expectations rise → yields rise → risk assets under pressure"
-    },
     {
       "tags": [
         {
@@ -181,6 +160,27 @@
           "type": "ai",
           "text": "AI",
           "text_en": "AI"
+        },
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "周五（11月20日）纽约尾盘，美国10年期基准国债收益率下跌10.24个基点，报4.9438%，连续五个交易日回撤，本周累计下跌19.14个基点，交投于5.1494%-4.9039%区间...",
+      "event_en": "周五（11month20day）纽约尾盘，美国10year期基准government bondsyieldfall10.24个基点，reported4.9438%，连续五个交易day回撤，本周累计fall19.14个基点，交投于5.1494%-4.9039%区间...",
+      "assets": "美债 / Anthropic",
+      "assets_en": "US Treasuries / Anthropic",
+      "dir": "split",
+      "logic": "AI公司IPO/融资 → AI capex叙事验证 → 半导体/算力需求预期上修 → 相关板块大涨",
+      "logic_en": "AI company IPO/funding → AI capex narrative validated → semiconductor/compute demand expectations revised up → related sectors surge"
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
         }
       ],
       "event": "日元和瑞郎的表现优于其他主要货币，市场对人工智能(AI)热潮可持续性的疑虑日益加深，提振了避险需求并对美元构成压力。",
@@ -211,22 +211,6 @@
       "dir": "split",
       "logic": "央行鹰派信号 → 加息预期升温 → 利率上行 → 风险资产承压",
       "logic_en": "Central bank hawkish signal → rate hike expectations rise → yields rise → risk assets under pressure"
-    },
-    {
-      "tags": [
-        {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
-        }
-      ],
-      "event": "周五（11月20日）欧市尾盘，英国10年期国债收益率跌7.9个基点，报5.234%，本周累计下跌10.1个基点，11月16-17日维持微幅上涨状态形成期内顶部——最高达到5.387%，20日跌幅突出。",
-      "event_en": "周五（11month20day）欧市尾盘，英国10year期government bondsyield跌7.9个基点，reported5.234%，本周累计fall10.1个基点，11month16-17day维持微幅rise状态形成期内顶部——最高达到5.387%，20dayloss突出。",
-      "assets": "详见原文",
-      "assets_en": "See source",
-      "dir": "split",
-      "logic": "债务风险信号 → 国债利差走阔 → 相关国家资产承压",
-      "logic_en": "Debt risk signal → bond spread widens → related country assets under pressure"
     },
     {
       "tags": [
@@ -268,37 +252,32 @@
           "text_en": "AI"
         }
       ],
-      "event": "标普500指数收跌265.44点，跌幅3.70%，报6910.39点。",
-      "event_en": "S&P 500indexclose down265.44点，loss3.70%，reported6910.39点。",
-      "assets": "纳指 / 标普500 / 美元指数 / 半导体板块",
-      "assets_en": "Nasdaq / S&P 500 / USD Index / Semiconductors",
+      "event": "美股七巨头收盘播报｜周五（11月20日），美国科技股七巨头（Magnificent 7）指数跌5.01%，报194.71点，本周累计下跌10.28%，11月16-18日维持小幅下跌昨天...",
+      "event_en": "美股七巨头close播reported｜周五（11month20day），美国科技股七巨头（Magnificent 7）index跌5.01%，reported194.71点，本周累计fall10.28%，11month16-18day维持slightlyfall昨天...",
+      "assets": "英伟达 / Anthropic",
+      "assets_en": "Nvidia / Anthropic",
+      "dir": "down",
+      "logic": "AI公司IPO/融资 → AI capex叙事验证 → 半导体/算力需求预期上修 → 相关板块大涨",
+      "logic_en": "AI company IPO/funding → AI capex narrative validated → semiconductor/compute demand expectations revised up → related sectors surge"
+    },
+    {
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "标普500指数收跌265.44点，跌幅3.70%，连续第七个交易日下跌——创2020年以来最长连跌天数，报6910.39点，本周累计下跌8.61%。",
+      "event_en": "S&P 500indexclose down265.44点，loss3.70%，连续第七个交易dayfall——hit2020year以来最长连跌天数，reported6910.39点，本周累计fall8.61%。",
+      "assets": "纳指 / 标普500 / 美元指数",
+      "assets_en": "Nasdaq / S&P 500 / USD Index",
       "dir": "split",
       "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
       "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst"
     }
   ],
   "four_column_table": [
-    {
-      "event": "随着市场对人工智能（AI）热潮能否持续的疑虑再度升温，从股票到铜等全球资产均受到冲击，欧洲股市录得2025年4月以来最大单周跌幅。",
-      "event_en": "随着市场对人工智能（AI）热潮能否持续的疑虑再度升温，从股票到copper等全球资产均受到冲击，欧洲股市录得2025year4month以来最大单周loss。",
-      "assets": "黄金 / 铜 / 半导体板块 / 芯片板块",
-      "assets_en": "Gold / Copper / Semiconductors / Chips",
-      "dir": "split",
-      "logic": "央行鹰派信号 → 加息预期升温 → 利率上行 → 风险资产承压",
-      "logic_en": "Central bank hawkish signal → rate hike expectations rise → yields rise → risk assets under pressure",
-      "tags": [
-        {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        },
-        {
-          "type": "central-bank",
-          "text": "央行",
-          "text_en": "Central Bank"
-        }
-      ]
-    },
     {
       "event": "标普500指数跌3.1%，纳斯达克100指数跌4.9%，纳指跌4.6%，半导体指数跌10%，Anthropic维持大约10%的跌幅。",
       "event_en": "S&P 500index跌3.1%，纳斯达克100index跌4.9%，Nasdaq跌4.6%，semiconductorsindex跌10%，Anthropic维持大约10%的loss。",
@@ -363,6 +342,27 @@
       ]
     },
     {
+      "event": "周五（11月20日）纽约尾盘，美国10年期基准国债收益率下跌10.24个基点，报4.9438%，连续五个交易日回撤，本周累计下跌19.14个基点，交投于5.1494%-4.9039%区间...",
+      "event_en": "周五（11month20day）纽约尾盘，美国10year期基准government bondsyieldfall10.24个基点，reported4.9438%，连续五个交易day回撤，本周累计fall19.14个基点，交投于5.1494%-4.9039%区间...",
+      "assets": "美债 / Anthropic",
+      "assets_en": "US Treasuries / Anthropic",
+      "dir": "split",
+      "logic": "AI公司IPO/融资 → AI capex叙事验证 → 半导体/算力需求预期上修 → 相关板块大涨",
+      "logic_en": "AI company IPO/funding → AI capex narrative validated → semiconductor/compute demand expectations revised up → related sectors surge",
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        },
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ]
+    },
+    {
       "event": "日元和瑞郎的表现优于其他主要货币，市场对人工智能(AI)热潮可持续性的疑虑日益加深，提振了避险需求并对美元构成压力。",
       "event_en": "JPY和瑞郎的表现优于其他主要货币，市场对人工智能(AI)热潮sustainability的疑虑day益加深，提振了避险需求并对USD构成压力。",
       "assets": "美元指数 / 日元 / Anthropic",
@@ -400,22 +400,6 @@
       ]
     },
     {
-      "event": "周五（11月20日）欧市尾盘，英国10年期国债收益率跌7.9个基点，报5.234%，本周累计下跌10.1个基点，11月16-17日维持微幅上涨状态形成期内顶部——最高达到5.387%，20日跌幅突出。",
-      "event_en": "周五（11month20day）欧市尾盘，英国10year期government bondsyield跌7.9个基点，reported5.234%，本周累计fall10.1个基点，11month16-17day维持微幅rise状态形成期内顶部——最高达到5.387%，20dayloss突出。",
-      "assets": "详见原文",
-      "assets_en": "See source",
-      "dir": "split",
-      "logic": "债务风险信号 → 国债利差走阔 → 相关国家资产承压",
-      "logic_en": "Debt risk signal → bond spread widens → related country assets under pressure",
-      "tags": [
-        {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
-        }
-      ]
-    },
-    {
       "event": "美股尾盘跌势不止，纳斯达克100指数跌5.5%，纳指跌幅扩大至5%。 VIX波动率日内涨幅达31.0%，报37.27，至少创2025年4月份以来新高。 纽元兑美元跌至2009年以来的最低水平。",
       "event_en": "美股尾盘跌势不止，纳斯达克100index跌5.5%，Nasdaqlossexpanded至5%。 VIXvolatility率day内gain达31.0%，reported37.27，至少hit2025year4month份以来new high。 纽yuan兑USD跌至2009year以来的最低水平。",
       "assets": "纳指 / 美元指数",
@@ -448,13 +432,13 @@
       ]
     },
     {
-      "event": "标普500指数收跌265.44点，跌幅3.70%，报6910.39点。",
-      "event_en": "S&P 500indexclose down265.44点，loss3.70%，reported6910.39点。",
-      "assets": "纳指 / 标普500 / 美元指数 / 半导体板块",
-      "assets_en": "Nasdaq / S&P 500 / USD Index / Semiconductors",
-      "dir": "split",
-      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
-      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst",
+      "event": "美股七巨头收盘播报｜周五（11月20日），美国科技股七巨头（Magnificent 7）指数跌5.01%，报194.71点，本周累计下跌10.28%，11月16-18日维持小幅下跌昨天...",
+      "event_en": "美股七巨头close播reported｜周五（11month20day），美国科技股七巨头（Magnificent 7）index跌5.01%，reported194.71点，本周累计fall10.28%，11month16-18day维持slightlyfall昨天...",
+      "assets": "英伟达 / Anthropic",
+      "assets_en": "Nvidia / Anthropic",
+      "dir": "down",
+      "logic": "AI公司IPO/融资 → AI capex叙事验证 → 半导体/算力需求预期上修 → 相关板块大涨",
+      "logic_en": "AI company IPO/funding → AI capex narrative validated → semiconductor/compute demand expectations revised up → related sectors surge",
       "tags": [
         {
           "type": "ai",
@@ -462,23 +446,34 @@
           "text_en": "AI"
         }
       ]
+    },
+    {
+      "event": "标普500指数收跌265.44点，跌幅3.70%，连续第七个交易日下跌——创2020年以来最长连跌天数，报6910.39点，本周累计下跌8.61%。",
+      "event_en": "S&P 500indexclose down265.44点，loss3.70%，连续第七个交易dayfall——hit2020year以来最长连跌天数，reported6910.39点，本周累计fall8.61%。",
+      "assets": "纳指 / 标普500 / 美元指数",
+      "assets_en": "Nasdaq / S&P 500 / USD Index",
+      "dir": "split",
+      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
+      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst",
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ]
     }
   ],
   "chains": [
     {
-      "title": "AI Capex链：随着市场对人工智能（AI）热潮能否持续的疑虑... → 标普500指数跌3.1%，纳斯达克100指数...",
-      "title_en": "AI Capex Chain: 随着市场对人工智能（AI）热潮能否持续的疑虑... → S&P 500index跌3.1%，纳斯达克100index...",
+      "title": "AI Capex链：受人工智能（AI）领域投资热情持续减弱影响 → 拉美股市跌至一年多来的低点",
+      "title_en": "AI Capex Chain: 受人工智能（AI）领域投资热情持续减弱影响 → 拉美股市跌至一year多来的低点",
       "status": "unverified",
       "nodes": [
         {
-          "text": "随着市场对人工智能（AI）热潮能否持续的疑虑再度升温，从股票到铜等全球资产均受到冲击，欧洲股市录得2025年4月以来最大单周跌幅",
-          "text_en": "随着市场对人工智能（AI）热潮能否持续的疑虑再度升温，从股票到copper等全球资产均受到冲击，欧洲股市录得2025year4month以来最大单周loss",
-          "type": "cause"
-        },
-        {
           "text": "受人工智能（AI）领域投资热情持续减弱影响，周五铜价暴跌至3月以来最低点，并有望创下逾19个月来最大单周跌幅",
           "text_en": "受人工智能（AI）领域投资热情持续减弱影响，周五copper价plunge至3month以来最低点，并有望hit下逾19个month来最大单周loss",
-          "type": "intermediate"
+          "type": "cause"
         },
         {
           "text": "日元和瑞郎的表现优于其他主要货币，市场对人工智能(AI)热潮可持续性的疑虑日益加深，提振了避险需求并对美元构成压力",
@@ -493,6 +488,11 @@
         {
           "text": "标普500指数跌3.1%，纳斯达克100指数跌4.9%，纳指跌4.6%，半导体指数跌10%，Anthropic维持大约10%的跌幅",
           "text_en": "S&P 500index跌3.1%，纳斯达克100index跌4.9%，Nasdaq跌4.6%，semiconductorsindex跌10%，Anthropic维持大约10%的loss",
+          "type": "intermediate"
+        },
+        {
+          "text": "拉美股市跌至一年多来的低点",
+          "text_en": "拉美股市跌至一year多来的低点",
           "type": "effect"
         }
       ],
@@ -518,19 +518,14 @@
       ]
     },
     {
-      "title": "宏观链：周五（11月20日）欧市尾盘，英国10年期国... → 标普500指数收跌265.44点，跌幅3.70%，报6910.39点",
-      "title_en": "Macro Chain: 周五（11month20day）欧市尾盘，英国10year期国... → S&P 500indexclose down265.44点，loss3.70%，reported6910.39点",
+      "title": "宏观链：周五（11月20日）纽约尾盘，美元兑日元跌0... → 标普500指数收跌265.44点，跌幅3.70%",
+      "title_en": "Macro Chain: 周五（11month20day）纽约尾盘，USD兑JPY跌0... → S&P 500indexclose down265.44点，loss3.70%",
       "status": "consensus",
       "nodes": [
         {
-          "text": "周五（11月20日）欧市尾盘，英国10年期国债收益率跌7.9个基点，报5.234%",
-          "text_en": "周五（11month20day）欧市尾盘，英国10year期government bondsyield跌7.9个基点，reported5.234%",
-          "type": "cause"
-        },
-        {
           "text": "周五（11月20日）纽约尾盘，美元兑日元跌0.77%，报158.47日元，本周累计下跌0.77%",
           "text_en": "周五（11month20day）纽约尾盘，USD兑JPY跌0.77%，reported158.47JPY，本周累计fall0.77%",
-          "type": "intermediate"
+          "type": "cause"
         },
         {
           "text": "美股尾盘跌势不止，纳斯达克100指数跌5.5%，纳指跌幅扩大至5%",
@@ -538,8 +533,8 @@
           "type": "intermediate"
         },
         {
-          "text": "标普500指数收跌265.44点，跌幅3.70%，报6910.39点",
-          "text_en": "S&P 500indexclose down265.44点，loss3.70%，reported6910.39点",
+          "text": "标普500指数收跌265.44点，跌幅3.70%",
+          "text_en": "S&P 500indexclose down265.44点，loss3.70%",
           "type": "effect"
         }
       ],
@@ -567,8 +562,8 @@
   ],
   "verifications": [
     {
-      "title": "AI Capex链：随着市场对人工智能（AI）热潮能否持续的疑虑... → 标普500指数跌3.1%，纳斯达克100指数...能否持续？",
-      "title_en": "Can 'AI Capex Chain: 随着市场对人工智能（AI）热潮能否持续的疑虑... → S&P 500index跌3.1%，纳斯达克100index...' sustain?",
+      "title": "AI Capex链：受人工智能（AI）领域投资热情持续减弱影响 → 拉美股市跌至一年多来的低点能否持续？",
+      "title_en": "Can 'AI Capex Chain: 受人工智能（AI）领域投资热情持续减弱影响 → 拉美股市跌至一year多来的低点' sustain?",
       "layer1": "AI capex叙事能否从'融资验证'切换到'盈利验证'？巨量融资证明了吸金能力，但何时能证明赚钱能力？",
       "layer1_en": "Can the AI capex narrative shift from 'funding validation' to 'profit validation'? Massive funding proves capital attraction, but when profitability?",
       "vars": [
@@ -585,8 +580,8 @@
       ]
     },
     {
-      "title": "宏观链：周五（11月20日）欧市尾盘，英国10年期国... → 标普500指数收跌265.44点，跌幅3.70%，报6910.39点能否持续？",
-      "title_en": "Can 'Macro Chain: 周五（11month20day）欧市尾盘，英国10year期国... → S&P 500indexclose down265.44点，loss3.70%，reported6910.39点' sustain?",
+      "title": "宏观链：周五（11月20日）纽约尾盘，美元兑日元跌0... → 标普500指数收跌265.44点，跌幅3.70%能否持续？",
+      "title_en": "Can 'Macro Chain: 周五（11month20day）纽约尾盘，USD兑JPY跌0... → S&P 500indexclose down265.44点，loss3.70%' sustain?",
       "layer1": "该宏观事件后续发展如何？市场当前定价是否充分？",
       "layer1_en": "How will this macro event develop? Is current market pricing adequate?",
       "vars": [
