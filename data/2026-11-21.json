@@ -2,7 +2,7 @@
   "date": "2026-11-21",
   "weekday": "星期六",
   "weekday_en": "Saturday",
-  "crawl_time": "约20:39（北京时间）",
+  "crawl_time": "约21:37（北京时间）",
   "source": "华尔街见闻",
   "sources_detail": [
     "华尔街见闻"
@@ -23,6 +23,14 @@
       "value": "3.1%",
       "change": "标普500指数跌3.1%，纳斯达克100指数跌4.9%，纳指跌4.6%，半导体指数跌10%，Anthropic维持大约1",
       "change_en": "S&P 500index跌3.1%，纳斯达克100index跌4.9%，Nasdaq跌4.6%，semiconductorsindex跌10%，Anthropic维持大约1",
+      "dir": "split"
+    },
+    {
+      "label": "I拉丁美洲股票指数下",
+      "label_en": "I拉丁美洲股票index下",
+      "value": "0.86%",
+      "change": "拉美股市跌至一年多来的低点。此前，Anthropic公司IPO未能提振市场对人工智能行业的信心，导致全球股市抛售加剧；同",
+      "change_en": "拉美股市跌至一year多来的低点。此前，Anthropic公司IPO未能提振市场对人工智能行业的confidence，导致全球股市抛售加剧；同",
       "dir": "split"
     },
     {
@@ -74,12 +82,12 @@
       "dir": "split"
     },
     {
-      "label": "道琼斯指数",
-      "label_en": "道琼斯index",
-      "value": "0.87%",
-      "change": "道琼斯指数跌0.87%，标普500指数跌2.52%，纳斯达克综合指数跌4.00%。\n\n纳斯达克100指数跌4.3%，半导",
-      "change_en": "道琼斯index跌0.87%，S&P 500index跌2.52%，纳斯达克综合index跌4.00%。\n\n纳斯达克100index跌4.3%，半导",
-      "dir": "down"
+      "label": "交所KBW银行指数收",
+      "label_en": "交所KBWsilver行index收",
+      "value": "3.12%",
+      "change": "标普500指数收跌265.44点，跌幅3.70%，报6910.39点。\n\n道琼斯工业平均指数收跌949.73点，跌幅1.",
+      "change_en": "S&P 500indexclose down265.44点，loss3.70%，reported6910.39点。\n\n道琼斯工业平均indexclose down949.73点，loss1.",
+      "dir": "split"
     }
   ],
   "events": [
@@ -129,6 +137,27 @@
       "dir": "split",
       "logic": "央行鸽派信号 → 降息预期升温 → 流动性预期改善 → 风险资产受益",
       "logic_en": "Central bank dovish signal → rate cut expectations rise → liquidity expectations improve → risk assets benefit"
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        },
+        {
+          "type": "central-bank",
+          "text": "央行",
+          "text_en": "Central Bank"
+        }
+      ],
+      "event": "拉美股市跌至一年多来的低点。此前，Anthropic公司IPO未能提振市场对人工智能行业的信心，导致全球股市抛售加剧；",
+      "event_en": "拉美股市跌至一year多来的低点。此前，Anthropic公司IPO未能提振市场对人工智能行业的confidence，导致全球股市抛售加剧；",
+      "assets": "美元指数 / Anthropic",
+      "assets_en": "USD Index / Anthropic",
+      "dir": "split",
+      "logic": "央行鹰派信号 → 加息预期升温 → 利率上行 → 风险资产承压",
+      "logic_en": "Central bank hawkish signal → rate hike expectations rise → yields rise → risk assets under pressure"
     },
     {
       "tags": [
@@ -239,29 +268,13 @@
           "text_en": "AI"
         }
       ],
-      "event": "道琼斯指数跌0.87%，标普500指数跌2.52%，纳斯达克综合指数跌4.00%。",
-      "event_en": "道琼斯index跌0.87%，S&P 500index跌2.52%，纳斯达克综合index跌4.00%。",
-      "assets": "标普500 / 美元指数 / 比特币 / 英伟达 / 半导体板块",
-      "assets_en": "S&P 500 / USD Index / Bitcoin / Nvidia / Semiconductors",
-      "dir": "down",
-      "logic": "利空事件 → 市场预期恶化 → 资产价格下跌",
-      "logic_en": "Negative event → market expectations worsen → asset prices fall"
-    },
-    {
-      "tags": [
-        {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
-        }
-      ],
-      "event": "周五（11月20日）欧市尾盘，德国10年期国债收益率跌9.9个基点，报3.304%，本周累计下跌7.3个基点，整体交投于3.422%-3.293%区间...",
-      "event_en": "周五（11month20day）欧市尾盘，德国10year期government bondsyield跌9.9个基点，reported3.304%，本周累计fall7.3个基点，整体交投于3.422%-3.293%区间...",
-      "assets": "详见原文",
-      "assets_en": "See source",
-      "dir": "down",
-      "logic": "债务风险信号 → 国债利差走阔 → 相关国家资产承压",
-      "logic_en": "Debt risk signal → bond spread widens → related country assets under pressure"
+      "event": "标普500指数收跌265.44点，跌幅3.70%，报6910.39点。",
+      "event_en": "S&P 500indexclose down265.44点，loss3.70%，reported6910.39点。",
+      "assets": "纳指 / 标普500 / 美元指数 / 半导体板块",
+      "assets_en": "Nasdaq / S&P 500 / USD Index / Semiconductors",
+      "dir": "split",
+      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
+      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst"
     }
   ],
   "four_column_table": [
@@ -309,6 +322,27 @@
           "type": "macro",
           "text": "宏观",
           "text_en": "Macro"
+        }
+      ]
+    },
+    {
+      "event": "拉美股市跌至一年多来的低点。此前，Anthropic公司IPO未能提振市场对人工智能行业的信心，导致全球股市抛售加剧；",
+      "event_en": "拉美股市跌至一year多来的低点。此前，Anthropic公司IPO未能提振市场对人工智能行业的confidence，导致全球股市抛售加剧；",
+      "assets": "美元指数 / Anthropic",
+      "assets_en": "USD Index / Anthropic",
+      "dir": "split",
+      "logic": "央行鹰派信号 → 加息预期升温 → 利率上行 → 风险资产承压",
+      "logic_en": "Central bank hawkish signal → rate hike expectations rise → yields rise → risk assets under pressure",
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        },
+        {
+          "type": "central-bank",
+          "text": "央行",
+          "text_en": "Central Bank"
         }
       ]
     },
@@ -414,34 +448,18 @@
       ]
     },
     {
-      "event": "道琼斯指数跌0.87%，标普500指数跌2.52%，纳斯达克综合指数跌4.00%。",
-      "event_en": "道琼斯index跌0.87%，S&P 500index跌2.52%，纳斯达克综合index跌4.00%。",
-      "assets": "标普500 / 美元指数 / 比特币 / 英伟达 / 半导体板块",
-      "assets_en": "S&P 500 / USD Index / Bitcoin / Nvidia / Semiconductors",
-      "dir": "down",
-      "logic": "利空事件 → 市场预期恶化 → 资产价格下跌",
-      "logic_en": "Negative event → market expectations worsen → asset prices fall",
+      "event": "标普500指数收跌265.44点，跌幅3.70%，报6910.39点。",
+      "event_en": "S&P 500indexclose down265.44点，loss3.70%，reported6910.39点。",
+      "assets": "纳指 / 标普500 / 美元指数 / 半导体板块",
+      "assets_en": "Nasdaq / S&P 500 / USD Index / Semiconductors",
+      "dir": "split",
+      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
+      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst",
       "tags": [
         {
           "type": "ai",
           "text": "AI",
           "text_en": "AI"
-        }
-      ]
-    },
-    {
-      "event": "周五（11月20日）欧市尾盘，德国10年期国债收益率跌9.9个基点，报3.304%，本周累计下跌7.3个基点，整体交投于3.422%-3.293%区间...",
-      "event_en": "周五（11month20day）欧市尾盘，德国10year期government bondsyield跌9.9个基点，reported3.304%，本周累计fall7.3个基点，整体交投于3.422%-3.293%区间...",
-      "assets": "详见原文",
-      "assets_en": "See source",
-      "dir": "down",
-      "logic": "债务风险信号 → 国债利差走阔 → 相关国家资产承压",
-      "logic_en": "Debt risk signal → bond spread widens → related country assets under pressure",
-      "tags": [
-        {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
         }
       ]
     }
@@ -500,24 +518,14 @@
       ]
     },
     {
-      "title": "宏观链：周五（11月20日）欧市尾盘，英国10年期国... → 美股尾盘跌势不止，纳斯达克100指数跌5.5%，纳指跌幅扩大至5%",
-      "title_en": "Macro Chain: 周五（11month20day）欧市尾盘，英国10year期国... → 美股尾盘跌势不止，纳斯达克100index跌5.5%，Nasdaqlossexpanded至5%",
+      "title": "宏观链：周五（11月20日）欧市尾盘，英国10年期国... → 标普500指数收跌265.44点，跌幅3.70%，报6910.39点",
+      "title_en": "Macro Chain: 周五（11month20day）欧市尾盘，英国10year期国... → S&P 500indexclose down265.44点，loss3.70%，reported6910.39点",
       "status": "consensus",
       "nodes": [
         {
           "text": "周五（11月20日）欧市尾盘，英国10年期国债收益率跌7.9个基点，报5.234%",
           "text_en": "周五（11month20day）欧市尾盘，英国10year期government bondsyield跌7.9个基点，reported5.234%",
           "type": "cause"
-        },
-        {
-          "text": "周五（11月20日）欧市尾盘，德国10年期国债收益率跌9.9个基点，报3.304%",
-          "text_en": "周五（11month20day）欧市尾盘，德国10year期government bondsyield跌9.9个基点，reported3.304%",
-          "type": "intermediate"
-        },
-        {
-          "text": "道琼斯指数跌0.87%，标普500指数跌2.52%，纳斯达克综合指数跌4.00%",
-          "text_en": "道琼斯index跌0.87%，S&P 500index跌2.52%，纳斯达克综合index跌4.00%",
-          "type": "intermediate"
         },
         {
           "text": "周五（11月20日）纽约尾盘，美元兑日元跌0.77%，报158.47日元，本周累计下跌0.77%",
@@ -527,6 +535,11 @@
         {
           "text": "美股尾盘跌势不止，纳斯达克100指数跌5.5%，纳指跌幅扩大至5%",
           "text_en": "美股尾盘跌势不止，纳斯达克100index跌5.5%，Nasdaqlossexpanded至5%",
+          "type": "intermediate"
+        },
+        {
+          "text": "标普500指数收跌265.44点，跌幅3.70%，报6910.39点",
+          "text_en": "S&P 500indexclose down265.44点，loss3.70%，reported6910.39点",
           "type": "effect"
         }
       ],
@@ -572,8 +585,8 @@
       ]
     },
     {
-      "title": "宏观链：周五（11月20日）欧市尾盘，英国10年期国... → 美股尾盘跌势不止，纳斯达克100指数跌5.5%，纳指跌幅扩大至5%能否持续？",
-      "title_en": "Can 'Macro Chain: 周五（11month20day）欧市尾盘，英国10year期国... → 美股尾盘跌势不止，纳斯达克100index跌5.5%，Nasdaqlossexpanded至5%' sustain?",
+      "title": "宏观链：周五（11月20日）欧市尾盘，英国10年期国... → 标普500指数收跌265.44点，跌幅3.70%，报6910.39点能否持续？",
+      "title_en": "Can 'Macro Chain: 周五（11month20day）欧市尾盘，英国10year期国... → S&P 500indexclose down265.44点，loss3.70%，reported6910.39点' sustain?",
       "layer1": "该宏观事件后续发展如何？市场当前定价是否充分？",
       "layer1_en": "How will this macro event develop? Is current market pricing adequate?",
       "vars": [
