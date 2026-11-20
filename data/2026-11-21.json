@@ -2,7 +2,7 @@
   "date": "2026-11-21",
   "weekday": "星期六",
   "weekday_en": "Saturday",
-  "crawl_time": "约22:35（北京时间）",
+  "crawl_time": "约23:36（北京时间）",
   "source": "华尔街见闻",
   "sources_detail": [
     "华尔街见闻"
@@ -24,22 +24,6 @@
       "change": "拉美股市跌至一年多来的低点。此前，Anthropic公司IPO未能提振市场对人工智能行业的信心，导致全球股市抛售加剧；同",
       "change_en": "拉美股市跌至一year多来的低点。此前，Anthropic公司IPO未能提振市场对人工智能行业的confidence，导致全球股市抛售加剧；同",
       "dir": "split"
-    },
-    {
-      "label": "基准三个月期铜价格下",
-      "label_en": "基准三个month期copper价格下",
-      "value": "3%",
-      "change": "受人工智能（AI）领域投资热情持续减弱影响，周五铜价暴跌至3月以来最低点，并有望创下逾19个月来最大单周跌幅。截至17:",
-      "change_en": "受人工智能（AI）领域投资热情持续减弱影响，周五copper价plunge至3month以来最低点，并有望hit下逾19个month来最大单周loss。截至17:",
-      "dir": "down"
-    },
-    {
-      "label": "受人工智能",
-      "label_en": "受人工智能",
-      "value": "new low",
-      "change": "受人工智能（AI）领域投资热情持续减弱影响，周五铜价暴跌至3月以来最低点，并有望创下逾19个月来最大单周跌幅。截至17:",
-      "change_en": "受人工智能（AI）领域投资热情持续减弱影响，周五copper价plunge至3month以来最低点，并有望hit下逾19个month来最大单周loss。截至17:",
-      "dir": "down"
     },
     {
       "label": "日元和瑞郎兑美元均上",
@@ -82,11 +66,11 @@
       "dir": "down"
     },
     {
-      "label": "本周累计下",
-      "label_en": "本周累计下",
-      "value": "8.61%",
-      "change": "标普500指数收跌265.44点，跌幅3.70%，连续第七个交易日下跌——创2020年以来最长连跌天数，报6910.39",
-      "change_en": "S&P 500indexclose down265.44点，loss3.70%，连续第七个交易dayfall——hit2020year以来最长连跌天数，reported6910.39",
+      "label": "Anthropic收",
+      "label_en": "Anthropic收",
+      "value": "8.5%",
+      "change": "Anthropic收跌8.5%，报88.91美元，北京时间01:49曾跌至83.05美元，距离83美元的IPO发行价仅仅",
+      "change_en": "Anthropicclose down8.5%，reported88.91USD，北京时间01:49曾跌至83.05USD，距离83USD的IPOissue price仅仅",
       "dir": "split"
     }
   ],
@@ -144,22 +128,11 @@
           "type": "ai",
           "text": "AI",
           "text_en": "AI"
-        }
-      ],
-      "event": "受人工智能（AI）领域投资热情持续减弱影响，周五铜价暴跌至3月以来最低点，并有望创下逾19个月来最大单周跌幅。",
-      "event_en": "受人工智能（AI）领域投资热情持续减弱影响，周五copper价plunge至3month以来最低点，并有望hit下逾19个month来最大单周loss。",
-      "assets": "美元指数 / 铜",
-      "assets_en": "USD Index / Copper",
-      "dir": "down",
-      "logic": "AI产业事件 → 算力/芯片需求预期变化 → 相关板块联动",
-      "logic_en": "AI industry event → compute/chip demand expectations shift → related sectors correlate"
-    },
-    {
-      "tags": [
+        },
         {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
+          "type": "central-bank",
+          "text": "央行",
+          "text_en": "Central Bank"
         },
         {
           "type": "macro",
@@ -220,6 +193,22 @@
           "text_en": "Macro"
         }
       ],
+      "event": "高盛集团的交易员表示，美国股市周五暴跌，“恐慌指数”升至最大值附近，这预示着未来一周还将出现一波大规模抛售。",
+      "event_en": "高盛集团的交易员表示，美国股市周五plunge，“panicindex”升至最大值附近，这预示着未来一周还将出现一波大scale抛售。",
+      "assets": "美元指数",
+      "assets_en": "USD Index",
+      "dir": "split",
+      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
+      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst"
+    },
+    {
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
       "event": "美股尾盘跌势不止，纳斯达克100指数跌5.5%，纳指跌幅扩大至5%。 VIX波动率日内涨幅达31.0%，报37.27，至少创2025年4月份以来新高。 纽元兑美元跌至2009年以来的最低水平。",
       "event_en": "美股尾盘跌势不止，纳斯达克100index跌5.5%，Nasdaqlossexpanded至5%。 VIXvolatility率day内gain达31.0%，reported37.27，至少hit2025year4month份以来new high。 纽yuan兑USD跌至2009year以来的最低水平。",
       "assets": "纳指 / 美元指数",
@@ -263,18 +252,18 @@
     {
       "tags": [
         {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
         }
       ],
-      "event": "标普500指数收跌265.44点，跌幅3.70%，连续第七个交易日下跌——创2020年以来最长连跌天数，报6910.39点，本周累计下跌8.61%。",
-      "event_en": "S&P 500indexclose down265.44点，loss3.70%，连续第七个交易dayfall——hit2020year以来最长连跌天数，reported6910.39点，本周累计fall8.61%。",
-      "assets": "纳指 / 标普500 / 美元指数",
-      "assets_en": "Nasdaq / S&P 500 / USD Index",
+      "event": "Anthropic收跌8.5%，报88.91美元，北京时间01:49曾跌至83.05美元，距离83美元的IPO发行价仅仅一步之遥。",
+      "event_en": "Anthropicclose down8.5%，reported88.91USD，北京时间01:49曾跌至83.05USD，距离83USD的IPOissue price仅仅一步之遥。",
+      "assets": "美元指数 / Anthropic",
+      "assets_en": "USD Index / Anthropic",
       "dir": "split",
-      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
-      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst"
+      "logic": "AI公司IPO/融资 → AI capex叙事验证 → 半导体/算力需求预期上修 → 相关板块大涨",
+      "logic_en": "AI company IPO/funding → AI capex narrative validated → semiconductor/compute demand expectations revised up → related sectors surge"
     }
   ],
   "four_column_table": [
@@ -326,22 +315,6 @@
       ]
     },
     {
-      "event": "受人工智能（AI）领域投资热情持续减弱影响，周五铜价暴跌至3月以来最低点，并有望创下逾19个月来最大单周跌幅。",
-      "event_en": "受人工智能（AI）领域投资热情持续减弱影响，周五copper价plunge至3month以来最低点，并有望hit下逾19个month来最大单周loss。",
-      "assets": "美元指数 / 铜",
-      "assets_en": "USD Index / Copper",
-      "dir": "down",
-      "logic": "AI产业事件 → 算力/芯片需求预期变化 → 相关板块联动",
-      "logic_en": "AI industry event → compute/chip demand expectations shift → related sectors correlate",
-      "tags": [
-        {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        }
-      ]
-    },
-    {
       "event": "周五（11月20日）纽约尾盘，美国10年期基准国债收益率下跌10.24个基点，报4.9438%，连续五个交易日回撤，本周累计下跌19.14个基点，交投于5.1494%-4.9039%区间...",
       "event_en": "周五（11month20day）纽约尾盘，美国10year期基准government bondsyieldfall10.24个基点，reported4.9438%，连续五个交易day回撤，本周累计fall19.14个基点，交投于5.1494%-4.9039%区间...",
       "assets": "美债 / Anthropic",
@@ -354,6 +327,11 @@
           "type": "ai",
           "text": "AI",
           "text_en": "AI"
+        },
+        {
+          "type": "central-bank",
+          "text": "央行",
+          "text_en": "Central Bank"
         },
         {
           "type": "macro",
@@ -396,6 +374,22 @@
           "type": "central-bank",
           "text": "央行",
           "text_en": "Central Bank"
+        }
+      ]
+    },
+    {
+      "event": "高盛集团的交易员表示，美国股市周五暴跌，“恐慌指数”升至最大值附近，这预示着未来一周还将出现一波大规模抛售。",
+      "event_en": "高盛集团的交易员表示，美国股市周五plunge，“panicindex”升至最大值附近，这预示着未来一周还将出现一波大scale抛售。",
+      "assets": "美元指数",
+      "assets_en": "USD Index",
+      "dir": "split",
+      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
+      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst",
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
         }
       ]
     },
@@ -448,37 +442,32 @@
       ]
     },
     {
-      "event": "标普500指数收跌265.44点，跌幅3.70%，连续第七个交易日下跌——创2020年以来最长连跌天数，报6910.39点，本周累计下跌8.61%。",
-      "event_en": "S&P 500indexclose down265.44点，loss3.70%，连续第七个交易dayfall——hit2020year以来最长连跌天数，reported6910.39点，本周累计fall8.61%。",
-      "assets": "纳指 / 标普500 / 美元指数",
-      "assets_en": "Nasdaq / S&P 500 / USD Index",
+      "event": "Anthropic收跌8.5%，报88.91美元，北京时间01:49曾跌至83.05美元，距离83美元的IPO发行价仅仅一步之遥。",
+      "event_en": "Anthropicclose down8.5%，reported88.91USD，北京时间01:49曾跌至83.05USD，距离83USD的IPOissue price仅仅一步之遥。",
+      "assets": "美元指数 / Anthropic",
+      "assets_en": "USD Index / Anthropic",
       "dir": "split",
-      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
-      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst",
+      "logic": "AI公司IPO/融资 → AI capex叙事验证 → 半导体/算力需求预期上修 → 相关板块大涨",
+      "logic_en": "AI company IPO/funding → AI capex narrative validated → semiconductor/compute demand expectations revised up → related sectors surge",
       "tags": [
         {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
         }
       ]
     }
   ],
   "chains": [
     {
-      "title": "AI Capex链：受人工智能（AI）领域投资热情持续减弱影响 → 拉美股市跌至一年多来的低点",
-      "title_en": "AI Capex Chain: 受人工智能（AI）领域投资热情持续减弱影响 → 拉美股市跌至一year多来的低点",
+      "title": "AI Capex链：日元和瑞郎的表现优于其他主要货币，市场对人工... → Anthropic收跌8.5%，报88.91美元",
+      "title_en": "AI Capex Chain: JPY和瑞郎的表现优于其他主要货币，市场对人工... → Anthropicclose down8.5%，reported88.91USD",
       "status": "unverified",
       "nodes": [
         {
-          "text": "受人工智能（AI）领域投资热情持续减弱影响，周五铜价暴跌至3月以来最低点，并有望创下逾19个月来最大单周跌幅",
-          "text_en": "受人工智能（AI）领域投资热情持续减弱影响，周五copper价plunge至3month以来最低点，并有望hit下逾19个month来最大单周loss",
-          "type": "cause"
-        },
-        {
           "text": "日元和瑞郎的表现优于其他主要货币，市场对人工智能(AI)热潮可持续性的疑虑日益加深，提振了避险需求并对美元构成压力",
           "text_en": "JPY和瑞郎的表现优于其他主要货币，市场对人工智能(AI)热潮sustainability的疑虑day益加深，提振了避险需求并对USD构成压力",
-          "type": "intermediate"
+          "type": "cause"
         },
         {
           "text": "加拿大丰业银行首席外汇策略师Shaun Osborne：AI叙事与美国“例外论”联系如此紧密",
@@ -493,6 +482,11 @@
         {
           "text": "拉美股市跌至一年多来的低点",
           "text_en": "拉美股市跌至一year多来的低点",
+          "type": "intermediate"
+        },
+        {
+          "text": "Anthropic收跌8.5%，报88.91美元，北京时间01:49曾跌至83.05美元，距离83美元的IPO发行价仅仅一步之遥",
+          "text_en": "Anthropicclose down8.5%，reported88.91USD，北京时间01:49曾跌至83.05USD，距离83USD的IPOissue price仅仅一步之遥",
           "type": "effect"
         }
       ],
@@ -518,9 +512,9 @@
       ]
     },
     {
-      "title": "宏观链：周五（11月20日）纽约尾盘，美元兑日元跌0... → 标普500指数收跌265.44点，跌幅3.70%",
-      "title_en": "Macro Chain: 周五（11month20day）纽约尾盘，USD兑JPY跌0... → S&P 500indexclose down265.44点，loss3.70%",
-      "status": "consensus",
+      "title": "宏观链：周五（11月20日）纽约尾盘，美元兑日元跌0... → 高盛集团的交易员表示，美国股市周五暴跌，“恐...",
+      "title_en": "Macro Chain: 周五（11month20day）纽约尾盘，USD兑JPY跌0... → 高盛集团的交易员表示，美国股市周五plunge，“恐...",
+      "status": "unverified",
       "nodes": [
         {
           "text": "周五（11月20日）纽约尾盘，美元兑日元跌0.77%，报158.47日元，本周累计下跌0.77%",
@@ -533,8 +527,8 @@
           "type": "intermediate"
         },
         {
-          "text": "标普500指数收跌265.44点，跌幅3.70%",
-          "text_en": "S&P 500indexclose down265.44点，loss3.70%",
+          "text": "高盛集团的交易员表示，美国股市周五暴跌，“恐慌指数”升至最大值附近，这预示着未来一周还将出现一波大规模抛售",
+          "text_en": "高盛集团的交易员表示，美国股市周五plunge，“panicindex”升至最大值附近，这预示着未来一周还将出现一波大scale抛售",
           "type": "effect"
         }
       ],
@@ -562,8 +556,8 @@
   ],
   "verifications": [
     {
-      "title": "AI Capex链：受人工智能（AI）领域投资热情持续减弱影响 → 拉美股市跌至一年多来的低点能否持续？",
-      "title_en": "Can 'AI Capex Chain: 受人工智能（AI）领域投资热情持续减弱影响 → 拉美股市跌至一year多来的低点' sustain?",
+      "title": "AI Capex链：日元和瑞郎的表现优于其他主要货币，市场对人工... → Anthropic收跌8.5%，报88.91美元能否持续？",
+      "title_en": "Can 'AI Capex Chain: JPY和瑞郎的表现优于其他主要货币，市场对人工... → Anthropicclose down8.5%，reported88.91USD' sustain?",
       "layer1": "AI capex叙事能否从'融资验证'切换到'盈利验证'？巨量融资证明了吸金能力，但何时能证明赚钱能力？",
       "layer1_en": "Can the AI capex narrative shift from 'funding validation' to 'profit validation'? Massive funding proves capital attraction, but when profitability?",
       "vars": [
@@ -580,8 +574,8 @@
       ]
     },
     {
-      "title": "宏观链：周五（11月20日）纽约尾盘，美元兑日元跌0... → 标普500指数收跌265.44点，跌幅3.70%能否持续？",
-      "title_en": "Can 'Macro Chain: 周五（11month20day）纽约尾盘，USD兑JPY跌0... → S&P 500indexclose down265.44点，loss3.70%' sustain?",
+      "title": "宏观链：周五（11月20日）纽约尾盘，美元兑日元跌0... → 高盛集团的交易员表示，美国股市周五暴跌，“恐...能否持续？",
+      "title_en": "Can 'Macro Chain: 周五（11month20day）纽约尾盘，USD兑JPY跌0... → 高盛集团的交易员表示，美国股市周五plunge，“恐...' sustain?",
       "layer1": "该宏观事件后续发展如何？市场当前定价是否充分？",
       "layer1_en": "How will this macro event develop? Is current market pricing adequate?",
       "vars": [
