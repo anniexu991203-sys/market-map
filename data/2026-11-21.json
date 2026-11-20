@@ -1,0 +1,661 @@
+{
+  "date": "2026-11-21",
+  "weekday": "星期六",
+  "weekday_en": "Saturday",
+  "crawl_time": "约16:49（北京时间）",
+  "source": "华尔街见闻",
+  "sources_detail": [
+    "华尔街见闻"
+  ],
+  "filter_result": "10条核心要闻 / 3条因果链 / 100条原始抓取",
+  "stats": [
+    {
+      "label": "斯达克100指数期货",
+      "label_en": "斯达克100indexfutures",
+      "value": "1.8%",
+      "change": "财政部：加强离岸信托个税征管等因素带动，10月个税同比增长89.6%。\n\n欧洲债券发行首破2万亿欧元！AI巨头融资成重要",
+      "change_en": "fiscal部：加强离岸信托个税征管等因素带动，10month个税同比growth89.6%。\n\n欧洲债券发行首破2trillionEUR！AI巨头funding成重要",
+      "dir": "split"
+    },
+    {
+      "label": "Anthropic",
+      "label_en": "Anthropic",
+      "value": "9.5%",
+      "change": "美股盘初，Anthropic跌9.5%，美股盘前一度跌至83.67美元——逼近IPO发行价83美元，美国IPO首日收涨1",
+      "change_en": "美股盘初，Anthropic跌9.5%，美股pre-market一度跌至83.67USD——逼近IPOissue price83USD，美国IPO首dayclose up1",
+      "dir": "split"
+    },
+    {
+      "label": "成分股闪迪",
+      "label_en": "成分股闪迪",
+      "value": "11.6%",
+      "change": "纳斯达克100指数跌幅扩大至超过2%，成分股闪迪跌11.6%，西部数据、美光、希捷、CoreWeave跌超8%。\n\n新股",
+      "change_en": "纳斯达克100indexlossexpanded至超过2%，成分股闪迪跌11.6%，西部数据、美光、希捷、CoreWeavedrop below8%。\n\n新股",
+      "dir": "split"
+    },
+    {
+      "label": "变成了收",
+      "label_en": "变成了收",
+      "value": "2%",
+      "change": "纳斯达克100指数的大跌引发了剧烈盘中波动，幅度之大在非极端市场压力下极为少见。该指数自10月触及纪录高点以来已回落逾1",
+      "change_en": "纳斯达克100index的selloff引发了剧烈盘中volatility，幅度之大在非极端市场压力下极为少见。该index自10month触及纪录高点以来已回落逾1",
+      "dir": "split"
+    },
+    {
+      "label": "AMD",
+      "label_en": "AMD",
+      "value": "5%",
+      "change": "美股AI硬件股开盘全线下挫，费城半导体指数跌幅扩大至4%，英伟达股价跌幅扩大至4.7%——创6月份以来盘中新低、盘中市值",
+      "change_en": "美股AI硬件股open全线下挫，费城semiconductorsindexlossexpanded至4%，Nvidia股价lossexpanded至4.7%——hit6month份以来盘中new low、盘中市值",
+      "dir": "down"
+    },
+    {
+      "label": "美股AI硬件股开盘全",
+      "label_en": "美股AI硬件股open全",
+      "value": "new low",
+      "change": "美股AI硬件股开盘全线下挫，费城半导体指数跌幅扩大至4%，英伟达股价跌幅扩大至4.7%——创6月份以来盘中新低、盘中市值",
+      "change_en": "美股AI硬件股open全线下挫，费城semiconductorsindexlossexpanded至4%，Nvidia股价lossexpanded至4.7%——hit6month份以来盘中new low、盘中市值",
+      "dir": "down"
+    },
+    {
+      "label": "半导体指数",
+      "label_en": "semiconductorsindex",
+      "value": "6.9%",
+      "change": "纳斯达克100指数跌幅扩大至2.5%，半导体指数跌6.9%。\n\n德国国债价格上涨，10年期德债收益率跌10个基点至3.3",
+      "change_en": "纳斯达克100indexlossexpanded至2.5%，semiconductorsindex跌6.9%。\n\n德国government bonds价格rise，10year期德债yield跌10个基点至3.3",
+      "dir": "split"
+    }
+  ],
+  "events": [
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        },
+        {
+          "type": "energy",
+          "text": "能源",
+          "text_en": "Energy"
+        },
+        {
+          "type": "china",
+          "text": "中国",
+          "text_en": "China"
+        },
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "财政部：加强离岸信托个税征管等因素带动，10月个税同比增长89.6%。",
+      "event_en": "fiscal部：加强离岸信托个税征管等因素带动，10month个税同比growth89.6%。",
+      "assets": "A股/沪指 / 港股/恒生科技 / 美元指数 / 美债 / 黄金",
+      "assets_en": "A-shares/Shanghai Composite / HK stocks/Hang Seng Tech / USD Index / US Treasuries / Gold",
+      "dir": "split",
+      "logic": "AI公司IPO/融资 → AI capex叙事验证 → 半导体/算力需求预期上修 → 相关板块大涨",
+      "logic_en": "AI company IPO/funding → AI capex narrative validated → semiconductor/compute demand expectations revised up → related sectors surge"
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ],
+      "event": "美股盘初，Anthropic跌9.5%，美股盘前一度跌至83.67美元——逼近IPO发行价83美元，美国IPO首日收涨17.07%。",
+      "event_en": "美股盘初，Anthropic跌9.5%，美股pre-market一度跌至83.67USD——逼近IPOissue price83USD，美国IPO首dayclose up17.07%。",
+      "assets": "美元指数 / 英伟达 / Anthropic",
+      "assets_en": "USD Index / Nvidia / Anthropic",
+      "dir": "split",
+      "logic": "AI公司IPO/融资 → AI capex叙事验证 → 半导体/算力需求预期上修 → 相关板块大涨",
+      "logic_en": "AI company IPO/funding → AI capex narrative validated → semiconductor/compute demand expectations revised up → related sectors surge"
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ],
+      "event": "纳斯达克100指数跌幅扩大至超过2%，成分股闪迪跌11.6%，西部数据、美光、希捷、CoreWeave跌超8%。",
+      "event_en": "纳斯达克100indexlossexpanded至超过2%，成分股闪迪跌11.6%，西部数据、美光、希捷、CoreWeavedrop below8%。",
+      "assets": "标普500 / 道指 / 半导体板块 / Anthropic",
+      "assets_en": "S&P 500 / Dow Jones / Semiconductors / Anthropic",
+      "dir": "split",
+      "logic": "AI产业事件 → 算力/芯片需求预期变化 → 相关板块联动",
+      "logic_en": "AI industry event → compute/chip demand expectations shift → related sectors correlate"
+    },
+    {
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "纳斯达克100指数的大跌引发了剧烈盘中波动，幅度之大在非极端市场压力下极为少见。",
+      "event_en": "纳斯达克100index的selloff引发了剧烈盘中volatility，幅度之大在非极端市场压力下极为少见。",
+      "assets": "详见原文",
+      "assets_en": "See source",
+      "dir": "split",
+      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
+      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst"
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ],
+      "event": "美股AI硬件股开盘全线下挫，费城半导体指数跌幅扩大至4%，英伟达股价跌幅扩大至4.7%——创6月份以来盘中新低、盘中市值不足3.4万亿美元（落后于谷歌），AMD跌5%。",
+      "event_en": "美股AI硬件股open全线下挫，费城semiconductorsindexlossexpanded至4%，Nvidia股价lossexpanded至4.7%——hit6month份以来盘中new low、盘中市值不足3.4trillionUSD（落后于Google），AMD跌5%。",
+      "assets": "美元指数 / 英伟达 / 半导体板块",
+      "assets_en": "USD Index / Nvidia / Semiconductors",
+      "dir": "down",
+      "logic": "AI产业事件 → 算力/芯片需求预期变化 → 相关板块联动",
+      "logic_en": "AI industry event → compute/chip demand expectations shift → related sectors correlate"
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ],
+      "event": "美股盘前，美股期货走低，纳斯达克100指数期货跌1.8%，标普500指数期货跌近1%，道指期货跌0.1%。",
+      "event_en": "美股pre-market，美股futures走低，纳斯达克100indexfutures跌1.8%，S&P 500indexfutures跌近1%，Dow Jonesfutures跌0.1%。",
+      "assets": "标普500 / 道指 / Anthropic",
+      "assets_en": "S&P 500 / Dow Jones / Anthropic",
+      "dir": "down",
+      "logic": "AI产业事件 → 算力/芯片需求预期变化 → 相关板块联动",
+      "logic_en": "AI industry event → compute/chip demand expectations shift → related sectors correlate"
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        },
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "纳斯达克100指数跌幅扩大至2.5%，半导体指数跌6.9%。 德国国债价格上涨，10年期德债收益率跌10个基点至3.3%。",
+      "event_en": "纳斯达克100indexlossexpanded至2.5%，semiconductorsindex跌6.9%。 德国government bonds价格rise，10year期德债yield跌10个基点至3.3%。",
+      "assets": "半导体板块",
+      "assets_en": "Semiconductors",
+      "dir": "split",
+      "logic": "债务风险信号 → 国债利差走阔 → 相关国家资产承压",
+      "logic_en": "Debt risk signal → bond spread widens → related country assets under pressure"
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ],
+      "event": "Anthropic跌超12%，刷新日低，逼近85美元。",
+      "event_en": "Anthropicdrop below12%，刷新day低，逼近85USD。",
+      "assets": "美元指数 / 英伟达 / 半导体板块 / Anthropic",
+      "assets_en": "USD Index / Nvidia / Semiconductors / Anthropic",
+      "dir": "down",
+      "logic": "AI产业事件 → 算力/芯片需求预期变化 → 相关板块联动",
+      "logic_en": "AI industry event → compute/chip demand expectations shift → related sectors correlate"
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ],
+      "event": "由于人工智能（AI）交易的动摇引发全球市场波动，周五，部分最大规模超大规模云厂商（hyperscalers）和芯片制造商的信用风险指标攀升，同时其债券价格走弱。",
+      "event_en": "由于人工智能（AI）交易的动摇引发全球市场volatility，周五，部分最大scale超大scale云厂商（hyperscalers）和chips制造商的信用risk指标攀升，同时其债券价格走弱。",
+      "assets": "芯片板块",
+      "assets_en": "Chips",
+      "dir": "up",
+      "logic": "AI产业事件 → 算力/芯片需求预期变化 → 相关板块联动",
+      "logic_en": "AI industry event → compute/chip demand expectations shift → related sectors correlate"
+    },
+    {
+      "tags": [
+        {
+          "type": "central-bank",
+          "text": "央行",
+          "text_en": "Central Bank"
+        },
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "欧洲央行管委兼德国央行行长Nagel：德国今年GDP将增长1.3%，2027年增速预计大致相同。 我认为欧洲央行在12月会议上必须采取行动。 届时我们将处于略偏限制性的区间。 通胀预期仍牢牢锚定。",
+      "event_en": "欧洲central bank管委兼德国central bank行长Nagel：德国今yearGDP将growth1.3%，2027year增速预计大致相同。 我认为欧洲central bank在12month会议上必须采取行动。 届时我们将处于略偏限制性的区间。 inflationexpectation仍牢牢锚定。",
+      "assets": "详见原文",
+      "assets_en": "See source",
+      "dir": "up",
+      "logic": "利好事件 → 市场预期改善 → 资产价格上涨",
+      "logic_en": "Positive event → market expectations improve → asset prices rise"
+    }
+  ],
+  "four_column_table": [
+    {
+      "event": "财政部：加强离岸信托个税征管等因素带动，10月个税同比增长89.6%。",
+      "event_en": "fiscal部：加强离岸信托个税征管等因素带动，10month个税同比growth89.6%。",
+      "assets": "A股/沪指 / 港股/恒生科技 / 美元指数 / 美债 / 黄金",
+      "assets_en": "A-shares/Shanghai Composite / HK stocks/Hang Seng Tech / USD Index / US Treasuries / Gold",
+      "dir": "split",
+      "logic": "AI公司IPO/融资 → AI capex叙事验证 → 半导体/算力需求预期上修 → 相关板块大涨",
+      "logic_en": "AI company IPO/funding → AI capex narrative validated → semiconductor/compute demand expectations revised up → related sectors surge",
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        },
+        {
+          "type": "energy",
+          "text": "能源",
+          "text_en": "Energy"
+        },
+        {
+          "type": "china",
+          "text": "中国",
+          "text_en": "China"
+        },
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ]
+    },
+    {
+      "event": "美股盘初，Anthropic跌9.5%，美股盘前一度跌至83.67美元——逼近IPO发行价83美元，美国IPO首日收涨17.07%。",
+      "event_en": "美股盘初，Anthropic跌9.5%，美股pre-market一度跌至83.67USD——逼近IPOissue price83USD，美国IPO首dayclose up17.07%。",
+      "assets": "美元指数 / 英伟达 / Anthropic",
+      "assets_en": "USD Index / Nvidia / Anthropic",
+      "dir": "split",
+      "logic": "AI公司IPO/融资 → AI capex叙事验证 → 半导体/算力需求预期上修 → 相关板块大涨",
+      "logic_en": "AI company IPO/funding → AI capex narrative validated → semiconductor/compute demand expectations revised up → related sectors surge",
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ]
+    },
+    {
+      "event": "纳斯达克100指数跌幅扩大至超过2%，成分股闪迪跌11.6%，西部数据、美光、希捷、CoreWeave跌超8%。",
+      "event_en": "纳斯达克100indexlossexpanded至超过2%，成分股闪迪跌11.6%，西部数据、美光、希捷、CoreWeavedrop below8%。",
+      "assets": "标普500 / 道指 / 半导体板块 / Anthropic",
+      "assets_en": "S&P 500 / Dow Jones / Semiconductors / Anthropic",
+      "dir": "split",
+      "logic": "AI产业事件 → 算力/芯片需求预期变化 → 相关板块联动",
+      "logic_en": "AI industry event → compute/chip demand expectations shift → related sectors correlate",
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ]
+    },
+    {
+      "event": "纳斯达克100指数的大跌引发了剧烈盘中波动，幅度之大在非极端市场压力下极为少见。",
+      "event_en": "纳斯达克100index的selloff引发了剧烈盘中volatility，幅度之大在非极端市场压力下极为少见。",
+      "assets": "详见原文",
+      "assets_en": "See source",
+      "dir": "split",
+      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
+      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst",
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ]
+    },
+    {
+      "event": "美股AI硬件股开盘全线下挫，费城半导体指数跌幅扩大至4%，英伟达股价跌幅扩大至4.7%——创6月份以来盘中新低、盘中市值不足3.4万亿美元（落后于谷歌），AMD跌5%。",
+      "event_en": "美股AI硬件股open全线下挫，费城semiconductorsindexlossexpanded至4%，Nvidia股价lossexpanded至4.7%——hit6month份以来盘中new low、盘中市值不足3.4trillionUSD（落后于Google），AMD跌5%。",
+      "assets": "美元指数 / 英伟达 / 半导体板块",
+      "assets_en": "USD Index / Nvidia / Semiconductors",
+      "dir": "down",
+      "logic": "AI产业事件 → 算力/芯片需求预期变化 → 相关板块联动",
+      "logic_en": "AI industry event → compute/chip demand expectations shift → related sectors correlate",
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ]
+    },
+    {
+      "event": "美股盘前，美股期货走低，纳斯达克100指数期货跌1.8%，标普500指数期货跌近1%，道指期货跌0.1%。",
+      "event_en": "美股pre-market，美股futures走低，纳斯达克100indexfutures跌1.8%，S&P 500indexfutures跌近1%，Dow Jonesfutures跌0.1%。",
+      "assets": "标普500 / 道指 / Anthropic",
+      "assets_en": "S&P 500 / Dow Jones / Anthropic",
+      "dir": "down",
+      "logic": "AI产业事件 → 算力/芯片需求预期变化 → 相关板块联动",
+      "logic_en": "AI industry event → compute/chip demand expectations shift → related sectors correlate",
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ]
+    },
+    {
+      "event": "纳斯达克100指数跌幅扩大至2.5%，半导体指数跌6.9%。 德国国债价格上涨，10年期德债收益率跌10个基点至3.3%。",
+      "event_en": "纳斯达克100indexlossexpanded至2.5%，semiconductorsindex跌6.9%。 德国government bonds价格rise，10year期德债yield跌10个基点至3.3%。",
+      "assets": "半导体板块",
+      "assets_en": "Semiconductors",
+      "dir": "split",
+      "logic": "债务风险信号 → 国债利差走阔 → 相关国家资产承压",
+      "logic_en": "Debt risk signal → bond spread widens → related country assets under pressure",
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        },
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ]
+    },
+    {
+      "event": "Anthropic跌超12%，刷新日低，逼近85美元。",
+      "event_en": "Anthropicdrop below12%，刷新day低，逼近85USD。",
+      "assets": "美元指数 / 英伟达 / 半导体板块 / Anthropic",
+      "assets_en": "USD Index / Nvidia / Semiconductors / Anthropic",
+      "dir": "down",
+      "logic": "AI产业事件 → 算力/芯片需求预期变化 → 相关板块联动",
+      "logic_en": "AI industry event → compute/chip demand expectations shift → related sectors correlate",
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ]
+    },
+    {
+      "event": "由于人工智能（AI）交易的动摇引发全球市场波动，周五，部分最大规模超大规模云厂商（hyperscalers）和芯片制造商的信用风险指标攀升，同时其债券价格走弱。",
+      "event_en": "由于人工智能（AI）交易的动摇引发全球市场volatility，周五，部分最大scale超大scale云厂商（hyperscalers）和chips制造商的信用risk指标攀升，同时其债券价格走弱。",
+      "assets": "芯片板块",
+      "assets_en": "Chips",
+      "dir": "up",
+      "logic": "AI产业事件 → 算力/芯片需求预期变化 → 相关板块联动",
+      "logic_en": "AI industry event → compute/chip demand expectations shift → related sectors correlate",
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ]
+    },
+    {
+      "event": "欧洲央行管委兼德国央行行长Nagel：德国今年GDP将增长1.3%，2027年增速预计大致相同。 我认为欧洲央行在12月会议上必须采取行动。 届时我们将处于略偏限制性的区间。 通胀预期仍牢牢锚定。",
+      "event_en": "欧洲central bank管委兼德国central bank行长Nagel：德国今yearGDP将growth1.3%，2027year增速预计大致相同。 我认为欧洲central bank在12month会议上必须采取行动。 届时我们将处于略偏限制性的区间。 inflationexpectation仍牢牢锚定。",
+      "assets": "详见原文",
+      "assets_en": "See source",
+      "dir": "up",
+      "logic": "利好事件 → 市场预期改善 → 资产价格上涨",
+      "logic_en": "Positive event → market expectations improve → asset prices rise",
+      "tags": [
+        {
+          "type": "central-bank",
+          "text": "央行",
+          "text_en": "Central Bank"
+        },
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ]
+    }
+  ],
+  "chains": [
+    {
+      "title": "AI Capex链：美股盘前，美股期货走低，纳斯达克100指数期... → 纳斯达克100指数跌幅扩大至超过2%，成分股...",
+      "title_en": "AI Capex Chain: 美股pre-market，美股futures走低，纳斯达克100index期... → 纳斯达克100indexlossexpanded至超过2%，成分股...",
+      "status": "consensus",
+      "nodes": [
+        {
+          "text": "美股盘前，美股期货走低，纳斯达克100指数期货跌1.8%，标普500指数期货跌近1%，道指期货跌0.1%",
+          "text_en": "美股pre-market，美股futures走低，纳斯达克100indexfutures跌1.8%，S&P 500indexfutures跌近1%，Dow Jonesfutures跌0.1%",
+          "type": "cause"
+        },
+        {
+          "text": "财政部：加强离岸信托个税征管等因素带动，10月个税同比增长89.6%",
+          "text_en": "fiscal部：加强离岸信托个税征管等因素带动，10month个税同比growth89.6%",
+          "type": "intermediate"
+        },
+        {
+          "text": "美股盘初，Anthropic跌9.5%，美股盘前一度跌至83.67美元——逼近IPO发行价83美元，美国IPO首日收涨17.07%",
+          "text_en": "美股盘初，Anthropic跌9.5%，美股pre-market一度跌至83.67USD——逼近IPOissue price83USD，美国IPO首dayclose up17.07%",
+          "type": "intermediate"
+        },
+        {
+          "text": "美股AI硬件股开盘全线下挫，费城半导体指数跌幅扩大至4%",
+          "text_en": "美股AI硬件股open全线下挫，费城semiconductorsindexlossexpanded至4%",
+          "type": "intermediate"
+        },
+        {
+          "text": "纳斯达克100指数跌幅扩大至超过2%，成分股闪迪跌11.6%，西部数据、美光、希捷、CoreWeave跌超8%",
+          "text_en": "纳斯达克100indexlossexpanded至超过2%，成分股闪迪跌11.6%，西部数据、美光、希捷、CoreWeavedrop below8%",
+          "type": "effect"
+        }
+      ],
+      "jargon": [
+        {
+          "term": "AI Capex",
+          "term_en": "AI Capex (Capital Expenditure)",
+          "explain": "AI公司花在买芯片、建数据中心、租GPU上的钱。这笔钱最终变成半导体公司的订单。",
+          "explain_en": "Money AI companies spend on chips, data centers, and GPUs. Ultimately becomes semiconductor company orders."
+        },
+        {
+          "term": "光通信",
+          "term_en": "Optical Communications",
+          "explain": "数据中心里用光传输数据的技术。AI集群越大，需要的光模块越多。",
+          "explain_en": "Technology using light to transmit data in data centers. Bigger AI clusters need more optical modules."
+        },
+        {
+          "term": "暗盘交易",
+          "term_en": "Grey Market Trading",
+          "explain": "IPO正式挂牌前的场外交易。暗盘涨跌反映机构对IPO的预期。",
+          "explain_en": "Off-exchange trading before official IPO listing. Grey market moves reflect institutional expectations."
+        }
+      ]
+    },
+    {
+      "title": "央行政策链：欧洲央行管委兼德国央行行长Nagel：德国今... → 相关资产变动",
+      "title_en": "Central Bank Policy Chain: 欧洲central bank管委兼德国central bank行长Nagel：德国今... → Asset price change",
+      "status": "unverified",
+      "nodes": [
+        {
+          "text": "欧洲央行管委兼德国央行行长Nagel：德国今年GDP将增长1.3%，2027年增速预计大致相同",
+          "text_en": "欧洲central bank管委兼德国central bank行长Nagel：德国今yearGDP将growth1.3%，2027year增速预计大致相同",
+          "type": "cause"
+        },
+        {
+          "text": "相关资产上涨",
+          "text_en": "Related assets rise",
+          "type": "effect"
+        }
+      ],
+      "jargon": [
+        {
+          "term": "鹰派",
+          "term_en": "Hawkish",
+          "explain": "央行官员倾向于加息、收紧货币政策来压制通胀的态度。",
+          "explain_en": "Central bank officials' tendency to raise rates and tighten policy to suppress inflation."
+        },
+        {
+          "term": "终点利率",
+          "term_en": "Terminal Rate",
+          "explain": "市场预期央行加息到哪个水平就会停。终点利率上移=还要加，下移=快停了。",
+          "explain_en": "The rate level at which the market expects the central bank to stop hiking."
+        },
+        {
+          "term": "国债利差",
+          "term_en": "Bond Spread",
+          "explain": "两个国家国债收益率的差额。利差走阔=市场认为某国债务风险上升。",
+          "explain_en": "Yield difference between two countries' government bonds. Widening spread = market sees rising debt risk."
+        }
+      ]
+    },
+    {
+      "title": "宏观链：纳斯达克100指数的大跌引发了剧烈盘中波动，幅度之大在非极端市场压力下极为少见 → 纳斯达克100指数跌幅扩大至2.5%，半导体指数跌6.9%",
+      "title_en": "Macro Chain: 纳斯达克100index的selloff引发了剧烈盘中volatility，幅度之大在非极端市场压力下极为少见 → 纳斯达克100indexlossexpanded至2.5%，semiconductorsindex跌6.9%",
+      "status": "consensus",
+      "nodes": [
+        {
+          "text": "纳斯达克100指数的大跌引发了剧烈盘中波动，幅度之大在非极端市场压力下极为少见",
+          "text_en": "纳斯达克100index的selloff引发了剧烈盘中volatility，幅度之大在非极端市场压力下极为少见",
+          "type": "cause"
+        },
+        {
+          "text": "纳斯达克100指数跌幅扩大至2.5%，半导体指数跌6.9%",
+          "text_en": "纳斯达克100indexlossexpanded至2.5%，semiconductorsindex跌6.9%",
+          "type": "effect"
+        }
+      ],
+      "jargon": [
+        {
+          "term": "美元走强→商品下跌",
+          "term_en": "Strong USD → Commodity Down",
+          "explain": "国际大宗商品以美元计价。美元贵了，同样一桶油用美元买就贵了，需求减少，价格就跌。",
+          "explain_en": "Commodities priced in USD. Stronger dollar = more expensive commodities = lower demand."
+        },
+        {
+          "term": "避险情绪",
+          "term_en": "Risk-Off Sentiment",
+          "explain": "市场害怕风险时，资金从股票等高风险资产流向黄金/美债等安全资产。",
+          "explain_en": "When markets fear risk, capital flows from stocks to safe havens like gold/Treasuries."
+        },
+        {
+          "term": "PMI（采购经理人指数）",
+          "term_en": "PMI (Purchasing Managers' Index)",
+          "explain": "衡量制造业/服务业景气度的指标。50以上=扩张，50以下=收缩。",
+          "explain_en": "Index measuring manufacturing/services activity. Above 50 = expansion, below 50 = contraction."
+        }
+      ]
+    }
+  ],
+  "verifications": [
+    {
+      "title": "AI Capex链：美股盘前，美股期货走低，纳斯达克100指数期... → 纳斯达克100指数跌幅扩大至超过2%，成分股...能否持续？",
+      "title_en": "Can 'AI Capex Chain: 美股pre-market，美股futures走低，纳斯达克100index期... → 纳斯达克100indexlossexpanded至超过2%，成分股...' sustain?",
+      "layer1": "AI capex叙事能否从'融资验证'切换到'盈利验证'？巨量融资证明了吸金能力，但何时能证明赚钱能力？",
+      "layer1_en": "Can the AI capex narrative shift from 'funding validation' to 'profit validation'? Massive funding proves capital attraction, but when profitability?",
+      "vars": [
+        "AI公司上市后5日股价：暗盘涨幅是初始热情，挂牌后是否破发或涨幅收窄",
+        "云厂商Capex/收入比：若比率持续上升，AI投入回报周期将被质疑",
+        "SK海力士/美光股价持续性：盘前大涨是情绪驱动，需确认HBM订单是否真正追加",
+        "A股算力芯片分化：国产AI芯片是否出现信任危机？"
+      ],
+      "vars_en": [
+        "AI company 5-day post-IPO stock: grey market gains are initial enthusiasm, watch for narrowing or break issue price",
+        "Cloud vendor Capex/revenue ratio: if rising, AI ROI cycle questioned",
+        "SK Hynix/Micron sustainability: pre-market rally is sentiment-driven, confirm HBM order additions",
+        "A-share compute chip divergence: domestic AI chip trust crisis?"
+      ]
+    },
+    {
+      "title": "央行政策链：欧洲央行管委兼德国央行行长Nagel：德国今... → 相关资产变动能否持续？",
+      "title_en": "Can 'Central Bank Policy Chain: 欧洲central bank管委兼德国central bank行长Nagel：德国今... → Asset price change' sustain?",
+      "layer1": "央行鹰派信号与债务风险的博弈，会否触发利差危机？加息+高债务=火药桶。",
+      "layer1_en": "Will the central bank hawkish signal vs debt risk game trigger a spread crisis? Rate hikes + high debt = powder keg.",
+      "vars": [
+        "10年期国债利差：若走阔至85bp+，市场开始定价财政失控风险",
+        "劳动力成本：工资上涨是核心通胀的最后一英里，若继续走高央行确实会加息",
+        "财政预算案进展：若无法通过可信的财政方案，利差危机风险上升",
+        "传导保护工具使用条件：若被触发，等同于危机信号"
+      ],
+      "vars_en": [
+        "10Y bond spread: widening to 85bp+ = market prices fiscal loss of control",
+        "Labor costs: rising wages are core inflation's last mile, if continues CB will hike",
+        "Fiscal budget progress: if no credible fiscal plan, spread crisis risk rises",
+        "Transmission protection tool conditions: if triggered, equals crisis signal"
+      ]
+    },
+    {
+      "title": "宏观链：纳斯达克100指数的大跌引发了剧烈盘中波动，幅度之大在非极端市场压力下极为少见 → 纳斯达克100指数跌幅扩大至2.5%，半导体指数跌6.9%能否持续？",
+      "title_en": "Can 'Macro Chain: 纳斯达克100index的selloff引发了剧烈盘中volatility，幅度之大在非极端市场压力下极为少见 → 纳斯达克100indexlossexpanded至2.5%，semiconductorsindex跌6.9%' sustain?",
+      "layer1": "该宏观事件后续发展如何？市场当前定价是否充分？",
+      "layer1_en": "How will this macro event develop? Is current market pricing adequate?",
+      "vars": [
+        "相关资产价格次日开盘方向",
+        "成交量是否异常放大（恐慌or追涨）",
+        "官方/央行是否有后续声明或澄清",
+        "关联资产是否同步反应（验证逻辑链）"
+      ],
+      "vars_en": [
+        "Related asset price direction at next open",
+        "Volume anomaly (panic or chasing)",
+        "Official/central bank follow-up statement",
+        "Correlated assets confirmation"
+      ]
+    }
+  ],
+  "historical_analogies": [
+    {
+      "event": "2000年互联网泡沫：Capex暴增先于盈利崩塌（1999-2001年）",
+      "event_en": "Dot-com bubble: Capex surge preceded profit collapse (1999-2001)",
+      "lesson": "当市场为单一公司IPO狂欢时，不要忘记2000年电信公司疯狂铺设光缆、随后盈利无法覆盖投入的教训。巨量融资不等于盈利验证，系统脆弱性往往在最乐观时暴露。",
+      "lesson_en": "When markets celebrate a single company's IPO, remember the 2000 telecom companies frantically laying fiber, then profits failing to cover investment. Massive funding does not equal profitability validation.",
+      "diff": "2000年铺设的光缆后来确实被用了，只是用了5-10年才回本。AI基础设施的变现周期可能更短，且这次有真实的B端付费需求在支撑，不像当年很多流量是免费的。",
+      "diff_en": "The fiber laid in 2000 was eventually used, just took 5-10 years to break even. AI infrastructure monetization may be faster, with real B-side paid demand unlike free dot-com traffic."
+    },
+    {
+      "event": "欧债危机：希腊-意大利-西班牙利差螺旋（2011-2012年）",
+      "event_en": "European Debt Crisis: Greece-Italy-Spain spread spiral (2011-2012)",
+      "lesson": "央行在通胀压力下过早加息、随后引爆债务螺旋的剧本高度相似。加息加上高债务等于火药桶。2011年欧央行加息后，意大利债务利差飙升，最终靠Draghi的whatever it takes才稳住。",
+      "lesson_en": "The script of a central bank raising rates prematurely under inflation pressure then triggering a debt spiral is highly similar. Rate hikes plus high debt equals powder keg. In 2011, the ECB hiked, Italian spreads surged, only stabilized by Draghi's whatever it takes.",
+      "diff": "2012年Draghi的承诺和OMT/PEPP/TPI等工具箱今天已存在。央行自己也在监控这条线。但工具存在不等于能无成本使用，政治博弈才是关键。",
+      "diff_en": "Draghi's 2012 pledge and tools like OMT/PEPP/TPI now exist. The central bank is monitoring this line. But tool existence does not equal cost-free usage; political gaming is the key."
+    },
+    {
+      "event": "2008年雷曼兄弟破产 + AIG救助（2008年9月）",
+      "event_en": "Lehman Brothers collapse + AIG bailout (Sep 2008)",
+      "lesson": "当市场为金融创新或科技突破狂欢时，不要忘记2008年雷曼破产前市场也在为金融创新永动机定价。巨量融资不等于盈利验证，系统脆弱性往往在最乐观时暴露。",
+      "lesson_en": "When markets celebrate financial innovation or tech breakthroughs, remember that before Lehman's collapse in 2008, markets were also pricing in a financial innovation perpetual motion machine. Massive funding does not equal profitability validation.",
+      "diff": "2008年的风险藏在衍生品不透明链条里；今天AI公司的资产负债表相对透明。且AI基础设施投入有明确的终端需求，不像CDO的底层资产是次贷。",
+      "diff_en": "2008's risk was hidden in opaque derivative chains; today's AI companies have relatively transparent balance sheets. AI infrastructure investment has clear end-user demand, unlike CDOs backed by subprime mortgages."
+    },
+    {
+      "event": "2018年中美贸易战芯片股恐慌（2018年Q4）",
+      "event_en": "2018 US-China trade war chip panic (Q4 2018)",
+      "lesson": "2018年中美贸易战期间，芯片股集体暴跌后迎来2019-2021年超级周期。恐慌往往是长期机会的起点，但需区分恐慌性杀跌和基本面恶化。",
+      "lesson_en": "During the 2018 US-China trade war, chip stocks collectively plunged then entered the 2019-2021 super cycle. Panic often marks long-term opportunity, but distinguish panic selling from fundamental deterioration.",
+      "diff": "2018年的恐慌由关税驱动，今天如果是AI芯片分化，则需关注国产替代的真实进展和盈利能力，不仅仅是情绪。",
+      "diff_en": "2018's panic was tariff-driven; if today's AI chip divergence, watch domestic substitution progress and profitability, not just sentiment."
+    }
+  ]
+}
