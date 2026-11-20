@@ -2,12 +2,12 @@
   "date": "2026-11-21",
   "weekday": "星期六",
   "weekday_en": "Saturday",
-  "crawl_time": "约16:49（北京时间）",
+  "crawl_time": "约17:47（北京时间）",
   "source": "华尔街见闻",
   "sources_detail": [
     "华尔街见闻"
   ],
-  "filter_result": "10条核心要闻 / 3条因果链 / 100条原始抓取",
+  "filter_result": "10条核心要闻 / 2条因果链 / 100条原始抓取",
   "stats": [
     {
       "label": "斯达克100指数期货",
@@ -16,6 +16,30 @@
       "change": "财政部：加强离岸信托个税征管等因素带动，10月个税同比增长89.6%。\n\n欧洲债券发行首破2万亿欧元！AI巨头融资成重要",
       "change_en": "fiscal部：加强离岸信托个税征管等因素带动，10month个税同比growth89.6%。\n\n欧洲债券发行首破2trillionEUR！AI巨头funding成重要",
       "dir": "split"
+    },
+    {
+      "label": "欧洲600指数收盘下",
+      "label_en": "欧洲600indexclose下",
+      "value": "2%",
+      "change": "随着市场对人工智能（AI）热潮能否持续的疑虑再度升温，从股票到铜等全球资产均受到冲击，欧洲股市录得2025年4月以来最大",
+      "change_en": "随着市场对人工智能（AI）热潮能否持续的疑虑再度升温，从股票到copper等全球资产均受到冲击，欧洲股市录得2025year4month以来最大",
+      "dir": "split"
+    },
+    {
+      "label": "基准三个月期铜价格下",
+      "label_en": "基准三个month期copper价格下",
+      "value": "3%",
+      "change": "受人工智能（AI）领域投资热情持续减弱影响，周五铜价暴跌至3月以来最低点，并有望创下逾19个月来最大单周跌幅。截至17:",
+      "change_en": "受人工智能（AI）领域投资热情持续减弱影响，周五copper价plunge至3month以来最低点，并有望hit下逾19个month来最大单周loss。截至17:",
+      "dir": "down"
+    },
+    {
+      "label": "受人工智能",
+      "label_en": "受人工智能",
+      "value": "new low",
+      "change": "受人工智能（AI）领域投资热情持续减弱影响，周五铜价暴跌至3月以来最低点，并有望创下逾19个月来最大单周跌幅。截至17:",
+      "change_en": "受人工智能（AI）领域投资热情持续减弱影响，周五copper价plunge至3month以来最低点，并有望hit下逾19个month来最大单周loss。截至17:",
+      "dir": "down"
     },
     {
       "label": "Anthropic",
@@ -104,6 +128,43 @@
           "type": "ai",
           "text": "AI",
           "text_en": "AI"
+        },
+        {
+          "type": "central-bank",
+          "text": "央行",
+          "text_en": "Central Bank"
+        }
+      ],
+      "event": "随着市场对人工智能（AI）热潮能否持续的疑虑再度升温，从股票到铜等全球资产均受到冲击，欧洲股市录得2025年4月以来最大单周跌幅。",
+      "event_en": "随着市场对人工智能（AI）热潮能否持续的疑虑再度升温，从股票到copper等全球资产均受到冲击，欧洲股市录得2025year4month以来最大单周loss。",
+      "assets": "黄金 / 铜 / 半导体板块 / 芯片板块",
+      "assets_en": "Gold / Copper / Semiconductors / Chips",
+      "dir": "split",
+      "logic": "央行鹰派信号 → 加息预期升温 → 利率上行 → 风险资产承压",
+      "logic_en": "Central bank hawkish signal → rate hike expectations rise → yields rise → risk assets under pressure"
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ],
+      "event": "受人工智能（AI）领域投资热情持续减弱影响，周五铜价暴跌至3月以来最低点，并有望创下逾19个月来最大单周跌幅。",
+      "event_en": "受人工智能（AI）领域投资热情持续减弱影响，周五copper价plunge至3month以来最低点，并有望hit下逾19个month来最大单周loss。",
+      "assets": "美元指数 / 铜",
+      "assets_en": "USD Index / Copper",
+      "dir": "down",
+      "logic": "AI产业事件 → 算力/芯片需求预期变化 → 相关板块联动",
+      "logic_en": "AI industry event → compute/chip demand expectations shift → related sectors correlate"
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
         }
       ],
       "event": "美股盘初，Anthropic跌9.5%，美股盘前一度跌至83.67美元——逼近IPO发行价83美元，美国IPO首日收涨17.07%。",
@@ -129,6 +190,22 @@
       "dir": "split",
       "logic": "AI产业事件 → 算力/芯片需求预期变化 → 相关板块联动",
       "logic_en": "AI industry event → compute/chip demand expectations shift → related sectors correlate"
+    },
+    {
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "周五（11月20日）欧市尾盘，英国10年期国债收益率跌7.9个基点，报5.234%，本周累计下跌10.1个基点，11月16-17日维持微幅上涨状态形成期内顶部——最高达到5.387%，20日跌幅突出。",
+      "event_en": "周五（11month20day）欧市尾盘，英国10year期government bondsyield跌7.9个基点，reported5.234%，本周累计fall10.1个基点，11month16-17day维持微幅rise状态形成期内顶部——最高达到5.387%，20dayloss突出。",
+      "assets": "详见原文",
+      "assets_en": "See source",
+      "dir": "split",
+      "logic": "债务风险信号 → 国债利差走阔 → 相关国家资产承压",
+      "logic_en": "Debt risk signal → bond spread widens → related country assets under pressure"
     },
     {
       "tags": [
@@ -165,18 +242,18 @@
     {
       "tags": [
         {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
         }
       ],
-      "event": "美股盘前，美股期货走低，纳斯达克100指数期货跌1.8%，标普500指数期货跌近1%，道指期货跌0.1%。",
-      "event_en": "美股pre-market，美股futures走低，纳斯达克100indexfutures跌1.8%，S&P 500indexfutures跌近1%，Dow Jonesfutures跌0.1%。",
-      "assets": "标普500 / 道指 / Anthropic",
-      "assets_en": "S&P 500 / Dow Jones / Anthropic",
+      "event": "周五（11月20日）欧市尾盘，德国10年期国债收益率跌9.9个基点，报3.304%，本周累计下跌7.3个基点，整体交投于3.422%-3.293%区间...",
+      "event_en": "周五（11month20day）欧市尾盘，德国10year期government bondsyield跌9.9个基点，reported3.304%，本周累计fall7.3个基点，整体交投于3.422%-3.293%区间...",
+      "assets": "详见原文",
+      "assets_en": "See source",
       "dir": "down",
-      "logic": "AI产业事件 → 算力/芯片需求预期变化 → 相关板块联动",
-      "logic_en": "AI industry event → compute/chip demand expectations shift → related sectors correlate"
+      "logic": "债务风险信号 → 国债利差走阔 → 相关国家资产承压",
+      "logic_en": "Debt risk signal → bond spread widens → related country assets under pressure"
     },
     {
       "tags": [
@@ -198,59 +275,6 @@
       "dir": "split",
       "logic": "债务风险信号 → 国债利差走阔 → 相关国家资产承压",
       "logic_en": "Debt risk signal → bond spread widens → related country assets under pressure"
-    },
-    {
-      "tags": [
-        {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        }
-      ],
-      "event": "Anthropic跌超12%，刷新日低，逼近85美元。",
-      "event_en": "Anthropicdrop below12%，刷新day低，逼近85USD。",
-      "assets": "美元指数 / 英伟达 / 半导体板块 / Anthropic",
-      "assets_en": "USD Index / Nvidia / Semiconductors / Anthropic",
-      "dir": "down",
-      "logic": "AI产业事件 → 算力/芯片需求预期变化 → 相关板块联动",
-      "logic_en": "AI industry event → compute/chip demand expectations shift → related sectors correlate"
-    },
-    {
-      "tags": [
-        {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        }
-      ],
-      "event": "由于人工智能（AI）交易的动摇引发全球市场波动，周五，部分最大规模超大规模云厂商（hyperscalers）和芯片制造商的信用风险指标攀升，同时其债券价格走弱。",
-      "event_en": "由于人工智能（AI）交易的动摇引发全球市场volatility，周五，部分最大scale超大scale云厂商（hyperscalers）和chips制造商的信用risk指标攀升，同时其债券价格走弱。",
-      "assets": "芯片板块",
-      "assets_en": "Chips",
-      "dir": "up",
-      "logic": "AI产业事件 → 算力/芯片需求预期变化 → 相关板块联动",
-      "logic_en": "AI industry event → compute/chip demand expectations shift → related sectors correlate"
-    },
-    {
-      "tags": [
-        {
-          "type": "central-bank",
-          "text": "央行",
-          "text_en": "Central Bank"
-        },
-        {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
-        }
-      ],
-      "event": "欧洲央行管委兼德国央行行长Nagel：德国今年GDP将增长1.3%，2027年增速预计大致相同。 我认为欧洲央行在12月会议上必须采取行动。 届时我们将处于略偏限制性的区间。 通胀预期仍牢牢锚定。",
-      "event_en": "欧洲central bank管委兼德国central bank行长Nagel：德国今yearGDP将growth1.3%，2027year增速预计大致相同。 我认为欧洲central bank在12month会议上必须采取行动。 届时我们将处于略偏限制性的区间。 inflationexpectation仍牢牢锚定。",
-      "assets": "详见原文",
-      "assets_en": "See source",
-      "dir": "up",
-      "logic": "利好事件 → 市场预期改善 → 资产价格上涨",
-      "logic_en": "Positive event → market expectations improve → asset prices rise"
     }
   ],
   "four_column_table": [
@@ -282,6 +306,43 @@
           "type": "macro",
           "text": "宏观",
           "text_en": "Macro"
+        }
+      ]
+    },
+    {
+      "event": "随着市场对人工智能（AI）热潮能否持续的疑虑再度升温，从股票到铜等全球资产均受到冲击，欧洲股市录得2025年4月以来最大单周跌幅。",
+      "event_en": "随着市场对人工智能（AI）热潮能否持续的疑虑再度升温，从股票到copper等全球资产均受到冲击，欧洲股市录得2025year4month以来最大单周loss。",
+      "assets": "黄金 / 铜 / 半导体板块 / 芯片板块",
+      "assets_en": "Gold / Copper / Semiconductors / Chips",
+      "dir": "split",
+      "logic": "央行鹰派信号 → 加息预期升温 → 利率上行 → 风险资产承压",
+      "logic_en": "Central bank hawkish signal → rate hike expectations rise → yields rise → risk assets under pressure",
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        },
+        {
+          "type": "central-bank",
+          "text": "央行",
+          "text_en": "Central Bank"
+        }
+      ]
+    },
+    {
+      "event": "受人工智能（AI）领域投资热情持续减弱影响，周五铜价暴跌至3月以来最低点，并有望创下逾19个月来最大单周跌幅。",
+      "event_en": "受人工智能（AI）领域投资热情持续减弱影响，周五copper价plunge至3month以来最低点，并有望hit下逾19个month来最大单周loss。",
+      "assets": "美元指数 / 铜",
+      "assets_en": "USD Index / Copper",
+      "dir": "down",
+      "logic": "AI产业事件 → 算力/芯片需求预期变化 → 相关板块联动",
+      "logic_en": "AI industry event → compute/chip demand expectations shift → related sectors correlate",
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
         }
       ]
     },
@@ -318,6 +379,22 @@
       ]
     },
     {
+      "event": "周五（11月20日）欧市尾盘，英国10年期国债收益率跌7.9个基点，报5.234%，本周累计下跌10.1个基点，11月16-17日维持微幅上涨状态形成期内顶部——最高达到5.387%，20日跌幅突出。",
+      "event_en": "周五（11month20day）欧市尾盘，英国10year期government bondsyield跌7.9个基点，reported5.234%，本周累计fall10.1个基点，11month16-17day维持微幅rise状态形成期内顶部——最高达到5.387%，20dayloss突出。",
+      "assets": "详见原文",
+      "assets_en": "See source",
+      "dir": "split",
+      "logic": "债务风险信号 → 国债利差走阔 → 相关国家资产承压",
+      "logic_en": "Debt risk signal → bond spread widens → related country assets under pressure",
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ]
+    },
+    {
       "event": "纳斯达克100指数的大跌引发了剧烈盘中波动，幅度之大在非极端市场压力下极为少见。",
       "event_en": "纳斯达克100index的selloff引发了剧烈盘中volatility，幅度之大在非极端市场压力下极为少见。",
       "assets": "详见原文",
@@ -350,18 +427,18 @@
       ]
     },
     {
-      "event": "美股盘前，美股期货走低，纳斯达克100指数期货跌1.8%，标普500指数期货跌近1%，道指期货跌0.1%。",
-      "event_en": "美股pre-market，美股futures走低，纳斯达克100indexfutures跌1.8%，S&P 500indexfutures跌近1%，Dow Jonesfutures跌0.1%。",
-      "assets": "标普500 / 道指 / Anthropic",
-      "assets_en": "S&P 500 / Dow Jones / Anthropic",
+      "event": "周五（11月20日）欧市尾盘，德国10年期国债收益率跌9.9个基点，报3.304%，本周累计下跌7.3个基点，整体交投于3.422%-3.293%区间...",
+      "event_en": "周五（11month20day）欧市尾盘，德国10year期government bondsyield跌9.9个基点，reported3.304%，本周累计fall7.3个基点，整体交投于3.422%-3.293%区间...",
+      "assets": "详见原文",
+      "assets_en": "See source",
       "dir": "down",
-      "logic": "AI产业事件 → 算力/芯片需求预期变化 → 相关板块联动",
-      "logic_en": "AI industry event → compute/chip demand expectations shift → related sectors correlate",
+      "logic": "债务风险信号 → 国债利差走阔 → 相关国家资产承压",
+      "logic_en": "Debt risk signal → bond spread widens → related country assets under pressure",
       "tags": [
         {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
         }
       ]
     },
@@ -385,76 +462,18 @@
           "text_en": "Macro"
         }
       ]
-    },
-    {
-      "event": "Anthropic跌超12%，刷新日低，逼近85美元。",
-      "event_en": "Anthropicdrop below12%，刷新day低，逼近85USD。",
-      "assets": "美元指数 / 英伟达 / 半导体板块 / Anthropic",
-      "assets_en": "USD Index / Nvidia / Semiconductors / Anthropic",
-      "dir": "down",
-      "logic": "AI产业事件 → 算力/芯片需求预期变化 → 相关板块联动",
-      "logic_en": "AI industry event → compute/chip demand expectations shift → related sectors correlate",
-      "tags": [
-        {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        }
-      ]
-    },
-    {
-      "event": "由于人工智能（AI）交易的动摇引发全球市场波动，周五，部分最大规模超大规模云厂商（hyperscalers）和芯片制造商的信用风险指标攀升，同时其债券价格走弱。",
-      "event_en": "由于人工智能（AI）交易的动摇引发全球市场volatility，周五，部分最大scale超大scale云厂商（hyperscalers）和chips制造商的信用risk指标攀升，同时其债券价格走弱。",
-      "assets": "芯片板块",
-      "assets_en": "Chips",
-      "dir": "up",
-      "logic": "AI产业事件 → 算力/芯片需求预期变化 → 相关板块联动",
-      "logic_en": "AI industry event → compute/chip demand expectations shift → related sectors correlate",
-      "tags": [
-        {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        }
-      ]
-    },
-    {
-      "event": "欧洲央行管委兼德国央行行长Nagel：德国今年GDP将增长1.3%，2027年增速预计大致相同。 我认为欧洲央行在12月会议上必须采取行动。 届时我们将处于略偏限制性的区间。 通胀预期仍牢牢锚定。",
-      "event_en": "欧洲central bank管委兼德国central bank行长Nagel：德国今yearGDP将growth1.3%，2027year增速预计大致相同。 我认为欧洲central bank在12month会议上必须采取行动。 届时我们将处于略偏限制性的区间。 inflationexpectation仍牢牢锚定。",
-      "assets": "详见原文",
-      "assets_en": "See source",
-      "dir": "up",
-      "logic": "利好事件 → 市场预期改善 → 资产价格上涨",
-      "logic_en": "Positive event → market expectations improve → asset prices rise",
-      "tags": [
-        {
-          "type": "central-bank",
-          "text": "央行",
-          "text_en": "Central Bank"
-        },
-        {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
-        }
-      ]
     }
   ],
   "chains": [
     {
-      "title": "AI Capex链：美股盘前，美股期货走低，纳斯达克100指数期... → 纳斯达克100指数跌幅扩大至超过2%，成分股...",
-      "title_en": "AI Capex Chain: 美股pre-market，美股futures走低，纳斯达克100index期... → 纳斯达克100indexlossexpanded至超过2%，成分股...",
-      "status": "consensus",
+      "title": "AI Capex链：财政部：加强离岸信托个税征管等因素带动，10月个税同比增长89.6% → 随着市场对人工智能（AI）热潮能否持续的疑虑...",
+      "title_en": "AI Capex Chain: fiscal部：加强离岸信托个税征管等因素带动，10month个税同比growth89.6% → 随着市场对人工智能（AI）热潮能否持续的疑虑...",
+      "status": "unverified",
       "nodes": [
-        {
-          "text": "美股盘前，美股期货走低，纳斯达克100指数期货跌1.8%，标普500指数期货跌近1%，道指期货跌0.1%",
-          "text_en": "美股pre-market，美股futures走低，纳斯达克100indexfutures跌1.8%，S&P 500indexfutures跌近1%，Dow Jonesfutures跌0.1%",
-          "type": "cause"
-        },
         {
           "text": "财政部：加强离岸信托个税征管等因素带动，10月个税同比增长89.6%",
           "text_en": "fiscal部：加强离岸信托个税征管等因素带动，10month个税同比growth89.6%",
-          "type": "intermediate"
+          "type": "cause"
         },
         {
           "text": "美股盘初，Anthropic跌9.5%，美股盘前一度跌至83.67美元——逼近IPO发行价83美元，美国IPO首日收涨17.07%",
@@ -469,6 +488,11 @@
         {
           "text": "纳斯达克100指数跌幅扩大至超过2%，成分股闪迪跌11.6%，西部数据、美光、希捷、CoreWeave跌超8%",
           "text_en": "纳斯达克100indexlossexpanded至超过2%，成分股闪迪跌11.6%，西部数据、美光、希捷、CoreWeavedrop below8%",
+          "type": "intermediate"
+        },
+        {
+          "text": "随着市场对人工智能（AI）热潮能否持续的疑虑再度升温，从股票到铜等全球资产均受到冲击，欧洲股市录得2025年4月以来最大单周跌幅",
+          "text_en": "随着市场对人工智能（AI）热潮能否持续的疑虑再度升温，从股票到copper等全球资产均受到冲击，欧洲股市录得2025year4month以来最大单周loss",
           "type": "effect"
         }
       ],
@@ -494,45 +518,8 @@
       ]
     },
     {
-      "title": "央行政策链：欧洲央行管委兼德国央行行长Nagel：德国今... → 相关资产变动",
-      "title_en": "Central Bank Policy Chain: 欧洲central bank管委兼德国central bank行长Nagel：德国今... → Asset price change",
-      "status": "unverified",
-      "nodes": [
-        {
-          "text": "欧洲央行管委兼德国央行行长Nagel：德国今年GDP将增长1.3%，2027年增速预计大致相同",
-          "text_en": "欧洲central bank管委兼德国central bank行长Nagel：德国今yearGDP将growth1.3%，2027year增速预计大致相同",
-          "type": "cause"
-        },
-        {
-          "text": "相关资产上涨",
-          "text_en": "Related assets rise",
-          "type": "effect"
-        }
-      ],
-      "jargon": [
-        {
-          "term": "鹰派",
-          "term_en": "Hawkish",
-          "explain": "央行官员倾向于加息、收紧货币政策来压制通胀的态度。",
-          "explain_en": "Central bank officials' tendency to raise rates and tighten policy to suppress inflation."
-        },
-        {
-          "term": "终点利率",
-          "term_en": "Terminal Rate",
-          "explain": "市场预期央行加息到哪个水平就会停。终点利率上移=还要加，下移=快停了。",
-          "explain_en": "The rate level at which the market expects the central bank to stop hiking."
-        },
-        {
-          "term": "国债利差",
-          "term_en": "Bond Spread",
-          "explain": "两个国家国债收益率的差额。利差走阔=市场认为某国债务风险上升。",
-          "explain_en": "Yield difference between two countries' government bonds. Widening spread = market sees rising debt risk."
-        }
-      ]
-    },
-    {
-      "title": "宏观链：纳斯达克100指数的大跌引发了剧烈盘中波动，幅度之大在非极端市场压力下极为少见 → 纳斯达克100指数跌幅扩大至2.5%，半导体指数跌6.9%",
-      "title_en": "Macro Chain: 纳斯达克100index的selloff引发了剧烈盘中volatility，幅度之大在非极端市场压力下极为少见 → 纳斯达克100indexlossexpanded至2.5%，semiconductorsindex跌6.9%",
+      "title": "宏观链：纳斯达克100指数的大跌引发了剧烈盘中波动，幅度之大在非极端市场压力下极为少见 → 周五（11月20日）欧市尾盘，德国10年期国...",
+      "title_en": "Macro Chain: 纳斯达克100index的selloff引发了剧烈盘中volatility，幅度之大在非极端市场压力下极为少见 → 周五（11month20day）欧市尾盘，德国10year期国...",
       "status": "consensus",
       "nodes": [
         {
@@ -543,6 +530,16 @@
         {
           "text": "纳斯达克100指数跌幅扩大至2.5%，半导体指数跌6.9%",
           "text_en": "纳斯达克100indexlossexpanded至2.5%，semiconductorsindex跌6.9%",
+          "type": "intermediate"
+        },
+        {
+          "text": "周五（11月20日）欧市尾盘，英国10年期国债收益率跌7.9个基点，报5.234%",
+          "text_en": "周五（11month20day）欧市尾盘，英国10year期government bondsyield跌7.9个基点，reported5.234%",
+          "type": "intermediate"
+        },
+        {
+          "text": "周五（11月20日）欧市尾盘，德国10年期国债收益率跌9.9个基点，报3.304%",
+          "text_en": "周五（11month20day）欧市尾盘，德国10year期government bondsyield跌9.9个基点，reported3.304%",
           "type": "effect"
         }
       ],
@@ -570,8 +567,8 @@
   ],
   "verifications": [
     {
-      "title": "AI Capex链：美股盘前，美股期货走低，纳斯达克100指数期... → 纳斯达克100指数跌幅扩大至超过2%，成分股...能否持续？",
-      "title_en": "Can 'AI Capex Chain: 美股pre-market，美股futures走低，纳斯达克100index期... → 纳斯达克100indexlossexpanded至超过2%，成分股...' sustain?",
+      "title": "AI Capex链：财政部：加强离岸信托个税征管等因素带动，10月个税同比增长89.6% → 随着市场对人工智能（AI）热潮能否持续的疑虑...能否持续？",
+      "title_en": "Can 'AI Capex Chain: fiscal部：加强离岸信托个税征管等因素带动，10month个税同比growth89.6% → 随着市场对人工智能（AI）热潮能否持续的疑虑...' sustain?",
       "layer1": "AI capex叙事能否从'融资验证'切换到'盈利验证'？巨量融资证明了吸金能力，但何时能证明赚钱能力？",
       "layer1_en": "Can the AI capex narrative shift from 'funding validation' to 'profit validation'? Massive funding proves capital attraction, but when profitability?",
       "vars": [
@@ -588,26 +585,8 @@
       ]
     },
     {
-      "title": "央行政策链：欧洲央行管委兼德国央行行长Nagel：德国今... → 相关资产变动能否持续？",
-      "title_en": "Can 'Central Bank Policy Chain: 欧洲central bank管委兼德国central bank行长Nagel：德国今... → Asset price change' sustain?",
-      "layer1": "央行鹰派信号与债务风险的博弈，会否触发利差危机？加息+高债务=火药桶。",
-      "layer1_en": "Will the central bank hawkish signal vs debt risk game trigger a spread crisis? Rate hikes + high debt = powder keg.",
-      "vars": [
-        "10年期国债利差：若走阔至85bp+，市场开始定价财政失控风险",
-        "劳动力成本：工资上涨是核心通胀的最后一英里，若继续走高央行确实会加息",
-        "财政预算案进展：若无法通过可信的财政方案，利差危机风险上升",
-        "传导保护工具使用条件：若被触发，等同于危机信号"
-      ],
-      "vars_en": [
-        "10Y bond spread: widening to 85bp+ = market prices fiscal loss of control",
-        "Labor costs: rising wages are core inflation's last mile, if continues CB will hike",
-        "Fiscal budget progress: if no credible fiscal plan, spread crisis risk rises",
-        "Transmission protection tool conditions: if triggered, equals crisis signal"
-      ]
-    },
-    {
-      "title": "宏观链：纳斯达克100指数的大跌引发了剧烈盘中波动，幅度之大在非极端市场压力下极为少见 → 纳斯达克100指数跌幅扩大至2.5%，半导体指数跌6.9%能否持续？",
-      "title_en": "Can 'Macro Chain: 纳斯达克100index的selloff引发了剧烈盘中volatility，幅度之大在非极端市场压力下极为少见 → 纳斯达克100indexlossexpanded至2.5%，semiconductorsindex跌6.9%' sustain?",
+      "title": "宏观链：纳斯达克100指数的大跌引发了剧烈盘中波动，幅度之大在非极端市场压力下极为少见 → 周五（11月20日）欧市尾盘，德国10年期国...能否持续？",
+      "title_en": "Can 'Macro Chain: 纳斯达克100index的selloff引发了剧烈盘中volatility，幅度之大在非极端市场压力下极为少见 → 周五（11month20day）欧市尾盘，德国10year期国...' sustain?",
       "layer1": "该宏观事件后续发展如何？市场当前定价是否充分？",
       "layer1_en": "How will this macro event develop? Is current market pricing adequate?",
       "vars": [
