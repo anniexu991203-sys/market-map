@@ -2,7 +2,7 @@
   "date": "2026-11-21",
   "weekday": "星期六",
   "weekday_en": "Saturday",
-  "crawl_time": "约23:36（北京时间）",
+  "crawl_time": "约00:42（北京时间）",
   "source": "华尔街见闻",
   "sources_detail": [
     "华尔街见闻"
@@ -15,6 +15,14 @@
       "value": "3.1%",
       "change": "标普500指数跌3.1%，纳斯达克100指数跌4.9%，纳指跌4.6%，半导体指数跌10%，Anthropic维持大约1",
       "change_en": "S&P 500index跌3.1%，纳斯达克100index跌4.9%，Nasdaq跌4.6%，semiconductorsindex跌10%，Anthropic维持大约1",
+      "dir": "split"
+    },
+    {
+      "label": "本周累计下",
+      "label_en": "本周累计下",
+      "value": "29.83%",
+      "change": "新云厂商（Neocloud）暴跌： 算力租赁与数据中心概念股本周遭血洗，Nebius (NBIS) 收跌16.11%、本",
+      "change_en": "新云厂商（Neocloud）plunge： 算力租赁与数据中心concept股本周遭血洗，Nebius (NBIS) close down16.11%、本",
       "dir": "split"
     },
     {
@@ -64,14 +72,6 @@
       "change": "美股七巨头收盘播报｜周五（11月20日），美国科技股七巨头（Magnificent 7）指数跌5.01%，报194.71",
       "change_en": "美股七巨头close播reported｜周五（11month20day），美国科技股七巨头（Magnificent 7）index跌5.01%，reported194.71",
       "dir": "down"
-    },
-    {
-      "label": "Anthropic收",
-      "label_en": "Anthropic收",
-      "value": "8.5%",
-      "change": "Anthropic收跌8.5%，报88.91美元，北京时间01:49曾跌至83.05美元，距离83美元的IPO发行价仅仅",
-      "change_en": "Anthropicclose down8.5%，reported88.91USD，北京时间01:49曾跌至83.05USD，距离83USD的IPOissue price仅仅",
-      "dir": "split"
     }
   ],
   "events": [
@@ -109,6 +109,27 @@
           "text_en": "AI"
         },
         {
+          "type": "energy",
+          "text": "能源",
+          "text_en": "Energy"
+        }
+      ],
+      "event": "新云厂商（Neocloud）暴跌： 算力租赁与数据中心概念股本周遭血洗，Nebius (NBIS) 收跌16.11%、本周累计下跌29.83%——连续第七周下跌...",
+      "event_en": "新云厂商（Neocloud）plunge： 算力租赁与数据中心concept股本周遭血洗，Nebius (NBIS) close down16.11%、本周累计fall29.83%——连续第七周fall...",
+      "assets": "详见原文",
+      "assets_en": "See source",
+      "dir": "split",
+      "logic": "AI公司财报 → Capex/收入验证 → 盈利可持续性评估 → 股价分化",
+      "logic_en": "AI company earnings → Capex/revenue validation → profitability sustainability assessment → stock price diverges"
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        },
+        {
           "type": "central-bank",
           "text": "央行",
           "text_en": "Central Bank"
@@ -246,22 +267,6 @@
       "assets": "英伟达 / Anthropic",
       "assets_en": "Nvidia / Anthropic",
       "dir": "down",
-      "logic": "AI公司IPO/融资 → AI capex叙事验证 → 半导体/算力需求预期上修 → 相关板块大涨",
-      "logic_en": "AI company IPO/funding → AI capex narrative validated → semiconductor/compute demand expectations revised up → related sectors surge"
-    },
-    {
-      "tags": [
-        {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        }
-      ],
-      "event": "Anthropic收跌8.5%，报88.91美元，北京时间01:49曾跌至83.05美元，距离83美元的IPO发行价仅仅一步之遥。",
-      "event_en": "Anthropicclose down8.5%，reported88.91USD，北京时间01:49曾跌至83.05USD，距离83USD的IPOissue price仅仅一步之遥。",
-      "assets": "美元指数 / Anthropic",
-      "assets_en": "USD Index / Anthropic",
-      "dir": "split",
       "logic": "AI公司IPO/融资 → AI capex叙事验证 → 半导体/算力需求预期上修 → 相关板块大涨",
       "logic_en": "AI company IPO/funding → AI capex narrative validated → semiconductor/compute demand expectations revised up → related sectors surge"
     }
@@ -294,6 +299,27 @@
       ]
     },
     {
+      "event": "新云厂商（Neocloud）暴跌： 算力租赁与数据中心概念股本周遭血洗，Nebius (NBIS) 收跌16.11%、本周累计下跌29.83%——连续第七周下跌...",
+      "event_en": "新云厂商（Neocloud）plunge： 算力租赁与数据中心concept股本周遭血洗，Nebius (NBIS) close down16.11%、本周累计fall29.83%——连续第七周fall...",
+      "assets": "详见原文",
+      "assets_en": "See source",
+      "dir": "split",
+      "logic": "AI公司财报 → Capex/收入验证 → 盈利可持续性评估 → 股价分化",
+      "logic_en": "AI company earnings → Capex/revenue validation → profitability sustainability assessment → stock price diverges",
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        },
+        {
+          "type": "energy",
+          "text": "能源",
+          "text_en": "Energy"
+        }
+      ]
+    },
+    {
       "event": "拉美股市跌至一年多来的低点。此前，Anthropic公司IPO未能提振市场对人工智能行业的信心，导致全球股市抛售加剧；",
       "event_en": "拉美股市跌至一year多来的低点。此前，Anthropic公司IPO未能提振市场对人工智能行业的confidence，导致全球股市抛售加剧；",
       "assets": "美元指数 / Anthropic",
@@ -440,28 +466,12 @@
           "text_en": "AI"
         }
       ]
-    },
-    {
-      "event": "Anthropic收跌8.5%，报88.91美元，北京时间01:49曾跌至83.05美元，距离83美元的IPO发行价仅仅一步之遥。",
-      "event_en": "Anthropicclose down8.5%，reported88.91USD，北京时间01:49曾跌至83.05USD，距离83USD的IPOissue price仅仅一步之遥。",
-      "assets": "美元指数 / Anthropic",
-      "assets_en": "USD Index / Anthropic",
-      "dir": "split",
-      "logic": "AI公司IPO/融资 → AI capex叙事验证 → 半导体/算力需求预期上修 → 相关板块大涨",
-      "logic_en": "AI company IPO/funding → AI capex narrative validated → semiconductor/compute demand expectations revised up → related sectors surge",
-      "tags": [
-        {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        }
-      ]
     }
   ],
   "chains": [
     {
-      "title": "AI Capex链：日元和瑞郎的表现优于其他主要货币，市场对人工... → Anthropic收跌8.5%，报88.91美元",
-      "title_en": "AI Capex Chain: JPY和瑞郎的表现优于其他主要货币，市场对人工... → Anthropicclose down8.5%，reported88.91USD",
+      "title": "AI Capex链：日元和瑞郎的表现优于其他主要货币，市场对人工... → 美股七巨头收盘播报｜周五（11月20日）",
+      "title_en": "AI Capex Chain: JPY和瑞郎的表现优于其他主要货币，市场对人工... → 美股七巨头close播reported｜周五（11month20day）",
       "status": "unverified",
       "nodes": [
         {
@@ -485,8 +495,8 @@
           "type": "intermediate"
         },
         {
-          "text": "Anthropic收跌8.5%，报88.91美元，北京时间01:49曾跌至83.05美元，距离83美元的IPO发行价仅仅一步之遥",
-          "text_en": "Anthropicclose down8.5%，reported88.91USD，北京时间01:49曾跌至83.05USD，距离83USD的IPOissue price仅仅一步之遥",
+          "text": "美股七巨头收盘播报｜周五（11月20日）",
+          "text_en": "美股七巨头close播reported｜周五（11month20day）",
           "type": "effect"
         }
       ],
@@ -556,8 +566,8 @@
   ],
   "verifications": [
     {
-      "title": "AI Capex链：日元和瑞郎的表现优于其他主要货币，市场对人工... → Anthropic收跌8.5%，报88.91美元能否持续？",
-      "title_en": "Can 'AI Capex Chain: JPY和瑞郎的表现优于其他主要货币，市场对人工... → Anthropicclose down8.5%，reported88.91USD' sustain?",
+      "title": "AI Capex链：日元和瑞郎的表现优于其他主要货币，市场对人工... → 美股七巨头收盘播报｜周五（11月20日）能否持续？",
+      "title_en": "Can 'AI Capex Chain: JPY和瑞郎的表现优于其他主要货币，市场对人工... → 美股七巨头close播reported｜周五（11month20day）' sustain?",
       "layer1": "AI capex叙事能否从'融资验证'切换到'盈利验证'？巨量融资证明了吸金能力，但何时能证明赚钱能力？",
       "layer1_en": "Can the AI capex narrative shift from 'funding validation' to 'profit validation'? Massive funding proves capital attraction, but when profitability?",
       "vars": [
