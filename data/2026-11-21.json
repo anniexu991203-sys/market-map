@@ -2,21 +2,13 @@
   "date": "2026-11-21",
   "weekday": "星期六",
   "weekday_en": "Saturday",
-  "crawl_time": "约10:13（北京时间）",
+  "crawl_time": "约11:11（北京时间）",
   "source": "华尔街见闻",
   "sources_detail": [
     "华尔街见闻"
   ],
   "filter_result": "10条核心要闻 / 3条因果链 / 100条原始抓取",
   "stats": [
-    {
-      "label": "标普500指数",
-      "label_en": "S&P 500index",
-      "value": "3.1%",
-      "change": "标普500指数跌3.1%，纳斯达克100指数跌4.9%，纳指跌4.6%，半导体指数跌10%，Anthropic维持大约1",
-      "change_en": "S&P 500index跌3.1%，纳斯达克100index跌4.9%，Nasdaq跌4.6%，semiconductorsindex跌10%，Anthropic维持大约1",
-      "dir": "split"
-    },
     {
       "label": "本周累计下",
       "label_en": "本周累计下",
@@ -75,32 +67,6 @@
     }
   ],
   "events": [
-    {
-      "tags": [
-        {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        },
-        {
-          "type": "central-bank",
-          "text": "央行",
-          "text_en": "Central Bank"
-        },
-        {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
-        }
-      ],
-      "event": "标普500指数跌3.1%，纳斯达克100指数跌4.9%，纳指跌4.6%，半导体指数跌10%，Anthropic维持大约10%的跌幅。",
-      "event_en": "S&P 500index跌3.1%，纳斯达克100index跌4.9%，Nasdaq跌4.6%，semiconductorsindex跌10%，Anthropic维持大约10%的loss。",
-      "assets": "纳指 / 标普500 / 英伟达 / 半导体板块 / Anthropic",
-      "assets_en": "Nasdaq / S&P 500 / Nvidia / Semiconductors / Anthropic",
-      "dir": "split",
-      "logic": "央行鸽派信号 → 降息预期升温 → 流动性预期改善 → 风险资产受益",
-      "logic_en": "Central bank dovish signal → rate cut expectations rise → liquidity expectations improve → risk assets benefit"
-    },
     {
       "tags": [
         {
@@ -264,35 +230,25 @@
       "dir": "split",
       "logic": "AI公司IPO/融资 → AI capex叙事验证 → 半导体/算力需求预期上修 → 相关板块大涨",
       "logic_en": "AI company IPO/funding → AI capex narrative validated → semiconductor/compute demand expectations revised up → related sectors surge"
-    }
-  ],
-  "four_column_table": [
+    },
     {
-      "event": "标普500指数跌3.1%，纳斯达克100指数跌4.9%，纳指跌4.6%，半导体指数跌10%，Anthropic维持大约10%的跌幅。",
-      "event_en": "S&P 500index跌3.1%，纳斯达克100index跌4.9%，Nasdaq跌4.6%，semiconductorsindex跌10%，Anthropic维持大约10%的loss。",
-      "assets": "纳指 / 标普500 / 英伟达 / 半导体板块 / Anthropic",
-      "assets_en": "Nasdaq / S&P 500 / Nvidia / Semiconductors / Anthropic",
-      "dir": "split",
-      "logic": "央行鸽派信号 → 降息预期升温 → 流动性预期改善 → 风险资产受益",
-      "logic_en": "Central bank dovish signal → rate cut expectations rise → liquidity expectations improve → risk assets benefit",
       "tags": [
-        {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        },
-        {
-          "type": "central-bank",
-          "text": "央行",
-          "text_en": "Central Bank"
-        },
         {
           "type": "macro",
           "text": "宏观",
           "text_en": "Macro"
         }
-      ]
-    },
+      ],
+      "event": "标普500指数收跌265.44点，跌幅3.70%，连续第七个交易日下跌——创2020年以来最长连跌天数，报6910.39点，本周累计下跌8.61%。",
+      "event_en": "S&P 500indexclose down265.44点，loss3.70%，连续第七个交易dayfall——hit2020year以来最长连跌天数，reported6910.39点，本周累计fall8.61%。",
+      "assets": "纳指 / 标普500 / 美元指数",
+      "assets_en": "Nasdaq / S&P 500 / USD Index",
+      "dir": "split",
+      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
+      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst"
+    }
+  ],
+  "four_column_table": [
     {
       "event": "比特币自2025年10月升至超过126,000美元的峰值以来，已下跌超过一半，目前价格甚至低于支持加密货币的特朗普重返白宫时的水平。",
       "event_en": "Bitcoin自2025year10month升至超过126,000USD的峰值以来，已fall超过一半，目前价格甚至低于支持加密货币的特朗普重返白宫时的水平。",
@@ -456,23 +412,34 @@
           "text_en": "AI"
         }
       ]
+    },
+    {
+      "event": "标普500指数收跌265.44点，跌幅3.70%，连续第七个交易日下跌——创2020年以来最长连跌天数，报6910.39点，本周累计下跌8.61%。",
+      "event_en": "S&P 500indexclose down265.44点，loss3.70%，连续第七个交易dayfall——hit2020year以来最长连跌天数，reported6910.39点，本周累计fall8.61%。",
+      "assets": "纳指 / 标普500 / 美元指数",
+      "assets_en": "Nasdaq / S&P 500 / USD Index",
+      "dir": "split",
+      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
+      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst",
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ]
     }
   ],
   "chains": [
     {
-      "title": "AI Capex链：标普500指数跌3.1%，纳斯达克100指数... → 新云厂商（Neocloud）暴跌： 算力租赁...",
-      "title_en": "AI Capex Chain: S&P 500index跌3.1%，纳斯达克100index... → 新云厂商（Neocloud）plunge： 算力租赁...",
+      "title": "AI Capex链：拉美股市跌至一年多来的低点 → 周五（11月20日）纽约尾盘，美国10年期基...",
+      "title_en": "AI Capex Chain: 拉美股市跌至一year多来的低点 → 周五（11month20day）纽约尾盘，美国10year期基...",
       "status": "unverified",
       "nodes": [
         {
-          "text": "标普500指数跌3.1%，纳斯达克100指数跌4.9%，纳指跌4.6%，半导体指数跌10%，Anthropic维持大约10%的跌幅",
-          "text_en": "S&P 500index跌3.1%，纳斯达克100index跌4.9%，Nasdaq跌4.6%，semiconductorsindex跌10%，Anthropic维持大约10%的loss",
-          "type": "cause"
-        },
-        {
           "text": "拉美股市跌至一年多来的低点",
           "text_en": "拉美股市跌至一year多来的低点",
-          "type": "intermediate"
+          "type": "cause"
         },
         {
           "text": "Anthropic收跌8.5%，报88.91美元，北京时间01:49曾跌至83.05美元，距离83美元的IPO发行价仅仅一步之遥",
@@ -487,6 +454,11 @@
         {
           "text": "新云厂商（Neocloud）暴跌： 算力租赁与数据中心概念股本周遭血洗",
           "text_en": "新云厂商（Neocloud）plunge： 算力租赁与数据中心concept股本周遭血洗",
+          "type": "intermediate"
+        },
+        {
+          "text": "周五（11月20日）纽约尾盘，美国10年期基准国债收益率下跌10.24个基点，报4.9438%",
+          "text_en": "周五（11month20day）纽约尾盘，美国10year期基准government bondsyieldfall10.24个基点，reported4.9438%",
           "type": "effect"
         }
       ],
@@ -564,6 +536,11 @@
           "type": "intermediate"
         },
         {
+          "text": "标普500指数收跌265.44点，跌幅3.70%",
+          "text_en": "S&P 500indexclose down265.44点，loss3.70%",
+          "type": "intermediate"
+        },
+        {
           "text": "高盛集团的交易员表示，美国股市周五暴跌，“恐慌指数”升至最大值附近，这预示着未来一周还将出现一波大规模抛售",
           "text_en": "高盛集团的交易员表示，美国股市周五plunge，“panicindex”升至最大值附近，这预示着未来一周还将出现一波大scale抛售",
           "type": "effect"
@@ -593,8 +570,8 @@
   ],
   "verifications": [
     {
-      "title": "AI Capex链：标普500指数跌3.1%，纳斯达克100指数... → 新云厂商（Neocloud）暴跌： 算力租赁...能否持续？",
-      "title_en": "Can 'AI Capex Chain: S&P 500index跌3.1%，纳斯达克100index... → 新云厂商（Neocloud）plunge： 算力租赁...' sustain?",
+      "title": "AI Capex链：拉美股市跌至一年多来的低点 → 周五（11月20日）纽约尾盘，美国10年期基...能否持续？",
+      "title_en": "Can 'AI Capex Chain: 拉美股市跌至一year多来的低点 → 周五（11month20day）纽约尾盘，美国10year期基...' sustain?",
       "layer1": "AI capex叙事能否从'融资验证'切换到'盈利验证'？巨量融资证明了吸金能力，但何时能证明赚钱能力？",
       "layer1_en": "Can the AI capex narrative shift from 'funding validation' to 'profit validation'? Massive funding proves capital attraction, but when profitability?",
       "vars": [
@@ -671,14 +648,6 @@
       "lesson_en": "When markets celebrate financial innovation or tech breakthroughs, remember that before Lehman's collapse in 2008, markets were also pricing in a financial innovation perpetual motion machine. Massive funding does not equal profitability validation.",
       "diff": "2008年的风险藏在衍生品不透明链条里；今天AI公司的资产负债表相对透明。且AI基础设施投入有明确的终端需求，不像CDO的底层资产是次贷。",
       "diff_en": "2008's risk was hidden in opaque derivative chains; today's AI companies have relatively transparent balance sheets. AI infrastructure investment has clear end-user demand, unlike CDOs backed by subprime mortgages."
-    },
-    {
-      "event": "2018年中美贸易战芯片股恐慌（2018年Q4）",
-      "event_en": "2018 US-China trade war chip panic (Q4 2018)",
-      "lesson": "2018年中美贸易战期间，芯片股集体暴跌后迎来2019-2021年超级周期。恐慌往往是长期机会的起点，但需区分恐慌性杀跌和基本面恶化。",
-      "lesson_en": "During the 2018 US-China trade war, chip stocks collectively plunged then entered the 2019-2021 super cycle. Panic often marks long-term opportunity, but distinguish panic selling from fundamental deterioration.",
-      "diff": "2018年的恐慌由关税驱动，今天如果是AI芯片分化，则需关注国产替代的真实进展和盈利能力，不仅仅是情绪。",
-      "diff_en": "2018's panic was tariff-driven; if today's AI chip divergence, watch domestic substitution progress and profitability, not just sentiment."
     }
   ]
 }
