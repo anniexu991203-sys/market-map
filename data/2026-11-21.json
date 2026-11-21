@@ -2,12 +2,12 @@
   "date": "2026-11-21",
   "weekday": "星期六",
   "weekday_en": "Saturday",
-  "crawl_time": "约11:11（北京时间）",
+  "crawl_time": "约12:08（北京时间）",
   "source": "华尔街见闻",
   "sources_detail": [
     "华尔街见闻"
   ],
-  "filter_result": "10条核心要闻 / 3条因果链 / 100条原始抓取",
+  "filter_result": "10条核心要闻 / 4条因果链 / 100条原始抓取",
   "stats": [
     {
       "label": "本周累计下",
@@ -39,14 +39,6 @@
       "value": "new low",
       "change": "美股尾盘跌势不止，纳斯达克100指数跌5.5%，纳指跌幅扩大至5%。\n\nVIX波动率日内涨幅达31.0%，报37.27，",
       "change_en": "美股尾盘跌势不止，纳斯达克100index跌5.5%，Nasdaqlossexpanded至5%。\n\nVIXvolatility率day内gain达31.0%，reported37.27，",
-      "dir": "split"
-    },
-    {
-      "label": "美元兑日元",
-      "label_en": "USD兑JPY",
-      "value": "0.77%",
-      "change": "周五（11月20日）纽约尾盘，美元兑日元跌0.77%，报158.47日元，本周累计下跌0.77%，整体交投区间为159.",
-      "change_en": "周五（11month20day）纽约尾盘，USD兑JPY跌0.77%，reported158.47JPY，本周累计fall0.77%，整体交投区间为159.",
       "dir": "split"
     },
     {
@@ -186,22 +178,6 @@
     {
       "tags": [
         {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
-        }
-      ],
-      "event": "周五（11月20日）纽约尾盘，美元兑日元跌0.77%，报158.47日元，本周累计下跌0.77%，整体交投区间为159.97-158.42日元。",
-      "event_en": "周五（11month20day）纽约尾盘，USD兑JPY跌0.77%，reported158.47JPY，本周累计fall0.77%，整体交投区间为159.97-158.42JPY。",
-      "assets": "美元指数 / 日元 / 人民币 / 欧元 / 英镑",
-      "assets_en": "USD Index / JPY / CNY / EUR / GBP",
-      "dir": "split",
-      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
-      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst"
-    },
-    {
-      "tags": [
-        {
           "type": "ai",
           "text": "AI",
           "text_en": "AI"
@@ -246,6 +222,27 @@
       "dir": "split",
       "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
       "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst"
+    },
+    {
+      "tags": [
+        {
+          "type": "china",
+          "text": "中国",
+          "text_en": "China"
+        },
+        {
+          "type": "geopolitics",
+          "text": "地缘",
+          "text_en": "Geopolitics"
+        }
+      ],
+      "event": "美国总统特朗普20日在白宫举行的新闻发布会上表示，日前在中国深圳举行的亚太经合组织领导人非正式会议是一场非常成功的经济会议，美国、中国和俄罗斯三国领导人还举行了首次三方会晤...",
+      "event_en": "US President Trump20day在白宫held的新闻发布会上表示，day前在中国Shenzhenheld的亚太经合组织领导人非正式会议是一场非常成功的经济会议，美国、中国和俄罗斯三国领导人还held了first time三方summit...",
+      "assets": "美元指数",
+      "assets_en": "USD Index",
+      "dir": "neutral",
+      "logic": "地缘风险缓和 → 风险溢价压缩 → 避险资产回落 / 风险资产上涨",
+      "logic_en": "Geopolitical risk easing → risk premium compression → safe-haven assets retreat / risk assets rally"
     }
   ],
   "four_column_table": [
@@ -366,22 +363,6 @@
       ]
     },
     {
-      "event": "周五（11月20日）纽约尾盘，美元兑日元跌0.77%，报158.47日元，本周累计下跌0.77%，整体交投区间为159.97-158.42日元。",
-      "event_en": "周五（11month20day）纽约尾盘，USD兑JPY跌0.77%，reported158.47JPY，本周累计fall0.77%，整体交投区间为159.97-158.42JPY。",
-      "assets": "美元指数 / 日元 / 人民币 / 欧元 / 英镑",
-      "assets_en": "USD Index / JPY / CNY / EUR / GBP",
-      "dir": "split",
-      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
-      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst",
-      "tags": [
-        {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
-        }
-      ]
-    },
-    {
       "event": "美股七巨头收盘播报｜周五（11月20日），美国科技股七巨头（Magnificent 7）指数跌5.01%，报194.71点，本周累计下跌10.28%，11月16-18日维持小幅下跌...",
       "event_en": "美股七巨头close播reported｜周五（11month20day），美国科技股七巨头（Magnificent 7）index跌5.01%，reported194.71点，本周累计fall10.28%，11month16-18day维持slightlyfall...",
       "assets": "英伟达 / Anthropic",
@@ -428,9 +409,67 @@
           "text_en": "Macro"
         }
       ]
+    },
+    {
+      "event": "美国总统特朗普20日在白宫举行的新闻发布会上表示，日前在中国深圳举行的亚太经合组织领导人非正式会议是一场非常成功的经济会议，美国、中国和俄罗斯三国领导人还举行了首次三方会晤...",
+      "event_en": "US President Trump20day在白宫held的新闻发布会上表示，day前在中国Shenzhenheld的亚太经合组织领导人非正式会议是一场非常成功的经济会议，美国、中国和俄罗斯三国领导人还held了first time三方summit...",
+      "assets": "美元指数",
+      "assets_en": "USD Index",
+      "dir": "neutral",
+      "logic": "地缘风险缓和 → 风险溢价压缩 → 避险资产回落 / 风险资产上涨",
+      "logic_en": "Geopolitical risk easing → risk premium compression → safe-haven assets retreat / risk assets rally",
+      "tags": [
+        {
+          "type": "china",
+          "text": "中国",
+          "text_en": "China"
+        },
+        {
+          "type": "geopolitics",
+          "text": "地缘",
+          "text_en": "Geopolitics"
+        }
+      ]
     }
   ],
   "chains": [
+    {
+      "title": "地缘链：美国总统特朗普20日在白宫举行的新闻发布会上表示 → 相关资产变动",
+      "title_en": "Geopolitical Chain: US President Trump20day在白宫held的新闻发布会上表示 → Asset price change",
+      "status": "unverified",
+      "nodes": [
+        {
+          "text": "美国总统特朗普20日在白宫举行的新闻发布会上表示",
+          "text_en": "US President Trump20day在白宫held的新闻发布会上表示",
+          "type": "cause"
+        },
+        {
+          "text": "市场消化信息",
+          "text_en": "Market digests info",
+          "type": "effect"
+        }
+      ],
+      "jargon": [
+        {
+          "term": "地缘风险溢价",
+          "term_en": "Geopolitical Risk Premium",
+          "explain": "因为担心打仗，投资者要求额外回报才肯持有资产。一旦风险下降，这部分'恐惧折扣'被去掉，资产价格就跳涨。",
+          "explain_en": "Extra return investors demand for holding assets when they fear conflict. Once risk falls, this 'fear discount' is removed and prices jump."
+        },
+        {
+          "term": "避险资产",
+          "term_en": "Safe-Haven Assets",
+          "explain": "市场恐慌时资金流入的资产，如黄金、美债、日元。地缘紧张时涨，缓和时跌。",
+          "explain_en": "Assets that capital flows into during panic: gold, US Treasuries, JPY. Rise when geopolitics tense, fall when easing."
+        },
+        {
+          "term": "风险偏好",
+          "term_en": "Risk Appetite",
+          "explain": "投资者更愿意买股票（风险资产）还是买国债（避险资产）的倾向。",
+          "explain_en": "Whether investors prefer stocks (risk assets) or bonds (safe havens)."
+        }
+      ]
+    },
     {
       "title": "AI Capex链：拉美股市跌至一年多来的低点 → 周五（11月20日）纽约尾盘，美国10年期基...",
       "title_en": "AI Capex Chain: 拉美股市跌至一year多来的低点 → 周五（11month20day）纽约尾盘，美国10year期基...",
@@ -521,19 +560,14 @@
       ]
     },
     {
-      "title": "宏观链：周五（11月20日）纽约尾盘，美元兑日元跌0... → 高盛集团的交易员表示，美国股市周五暴跌，“恐...",
-      "title_en": "Macro Chain: 周五（11month20day）纽约尾盘，USD兑JPY跌0... → 高盛集团的交易员表示，美国股市周五plunge，“恐...",
+      "title": "宏观链：美股尾盘跌势不止，纳斯达克100指数跌5.5%，纳指跌幅扩大至5% → 高盛集团的交易员表示，美国股市周五暴跌，“恐...",
+      "title_en": "Macro Chain: 美股尾盘跌势不止，纳斯达克100index跌5.5%，Nasdaqlossexpanded至5% → 高盛集团的交易员表示，美国股市周五plunge，“恐...",
       "status": "unverified",
       "nodes": [
         {
-          "text": "周五（11月20日）纽约尾盘，美元兑日元跌0.77%，报158.47日元，本周累计下跌0.77%",
-          "text_en": "周五（11month20day）纽约尾盘，USD兑JPY跌0.77%，reported158.47JPY，本周累计fall0.77%",
-          "type": "cause"
-        },
-        {
           "text": "美股尾盘跌势不止，纳斯达克100指数跌5.5%，纳指跌幅扩大至5%",
           "text_en": "美股尾盘跌势不止，纳斯达克100index跌5.5%，Nasdaqlossexpanded至5%",
-          "type": "intermediate"
+          "type": "cause"
         },
         {
           "text": "标普500指数收跌265.44点，跌幅3.70%",
@@ -569,6 +603,24 @@
     }
   ],
   "verifications": [
+    {
+      "title": "地缘链：美国总统特朗普20日在白宫举行的新闻发布会上表示 → 相关资产变动能否持续？",
+      "title_en": "Can 'Geopolitical Chain: US President Trump20day在白宫held的新闻发布会上表示 → Asset price change' sustain?",
+      "layer1": "地缘缓和信号能否真正转化为风险溢价的持久压缩？宣言是政治表态，能否转化为可执行方案？",
+      "layer1_en": "Can geopolitical easing truly translate into lasting risk premium compression? Can a declaration become actionable?",
+      "vars": [
+        "VIX恐慌指数：持续低于15=市场已price in和平；反弹至18+=市场持保留态度",
+        "布伦特原油价格：跌破70美元=市场认可增产；反弹至78+=供应担忧未消",
+        "黄金走势：央行持续购金=央行层面仍在对冲地缘风险",
+        "后续军事动态：是否有和平宣言与战场现实的落差？"
+      ],
+      "vars_en": [
+        "VIX: sustained below 15 = peace priced in; rebound to 18+ = market skeptical",
+        "Brent crude: below $70 = market believes production; above $78 = supply fears persist",
+        "Gold trend: continued CB purchases = CBs still hedging geopolitical risk",
+        "Follow-up military actions: gap between declaration and battlefield reality?"
+      ]
+    },
     {
       "title": "AI Capex链：拉美股市跌至一年多来的低点 → 周五（11月20日）纽约尾盘，美国10年期基...能否持续？",
       "title_en": "Can 'AI Capex Chain: 拉美股市跌至一year多来的低点 → 周五（11month20day）纽约尾盘，美国10year期基...' sustain?",
@@ -606,8 +658,8 @@
       ]
     },
     {
-      "title": "宏观链：周五（11月20日）纽约尾盘，美元兑日元跌0... → 高盛集团的交易员表示，美国股市周五暴跌，“恐...能否持续？",
-      "title_en": "Can 'Macro Chain: 周五（11month20day）纽约尾盘，USD兑JPY跌0... → 高盛集团的交易员表示，美国股市周五plunge，“恐...' sustain?",
+      "title": "宏观链：美股尾盘跌势不止，纳斯达克100指数跌5.5%，纳指跌幅扩大至5% → 高盛集团的交易员表示，美国股市周五暴跌，“恐...能否持续？",
+      "title_en": "Can 'Macro Chain: 美股尾盘跌势不止，纳斯达克100index跌5.5%，Nasdaqlossexpanded至5% → 高盛集团的交易员表示，美国股市周五plunge，“恐...' sustain?",
       "layer1": "该宏观事件后续发展如何？市场当前定价是否充分？",
       "layer1_en": "How will this macro event develop? Is current market pricing adequate?",
       "vars": [
@@ -632,6 +684,14 @@
       "lesson_en": "When markets celebrate a single company's IPO, remember the 2000 telecom companies frantically laying fiber, then profits failing to cover investment. Massive funding does not equal profitability validation.",
       "diff": "2000年铺设的光缆后来确实被用了，只是用了5-10年才回本。AI基础设施的变现周期可能更短，且这次有真实的B端付费需求在支撑，不像当年很多流量是免费的。",
       "diff_en": "The fiber laid in 2000 was eventually used, just took 5-10 years to break even. AI infrastructure monetization may be faster, with real B-side paid demand unlike free dot-com traffic."
+    },
+    {
+      "event": "两伊战争期间的油轮战（1984-1988年）",
+      "event_en": "Tanker War during Iran-Iraq War (1984-1988)",
+      "lesson": "霍尔木兹海峡油轮遭袭并非首次。1980年代两伊战争期间，双方互相袭击油轮，导致油价短期飙升后又被全球协调护航机制压制。今天的局势可能在复制有限升级到国际协调再到风险消退的剧本。",
+      "lesson_en": "Hormuz tanker attacks aren't unprecedented. During the 1980s Iran-Iraq War, both sides attacked tankers, causing oil to spike then subside through globally coordinated escorts. Today may replicate the limited escalation to coordination to risk subsiding script.",
+      "diff": "1980年代没有中俄美联合宣言这种三方协调机制。如果三方增产共识真正落地，即使海峡发生局部冲突，全球能源供应的兜底能力比当年强得多。但伊朗的无人机和水雷技术也远超当年。",
+      "diff_en": "The 1980s lacked a China-Russia-US coordination mechanism. If three-nation production consensus materializes, global energy resilience is far stronger. But Iran's drone and mine technology is also far superior."
     },
     {
       "event": "欧债危机：希腊-意大利-西班牙利差螺旋（2011-2012年）",
