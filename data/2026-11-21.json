@@ -2,7 +2,7 @@
   "date": "2026-11-21",
   "weekday": "星期六",
   "weekday_en": "Saturday",
-  "crawl_time": "约02:46（北京时间）",
+  "crawl_time": "约03:41（北京时间）",
   "source": "华尔街见闻",
   "sources_detail": [
     "华尔街见闻"
@@ -225,8 +225,8 @@
           "text_en": "AI"
         }
       ],
-      "event": "美股七巨头收盘播报｜周五（11月20日），美国科技股七巨头（Magnificent 7）指数跌5.01%，报194.71点，本周累计下跌10.28%，11月16-18日维持小幅下跌昨天...",
-      "event_en": "美股七巨头close播reported｜周五（11month20day），美国科技股七巨头（Magnificent 7）index跌5.01%，reported194.71点，本周累计fall10.28%，11month16-18day维持slightlyfall昨天...",
+      "event": "美股七巨头收盘播报｜周五（11月20日），美国科技股七巨头（Magnificent 7）指数跌5.01%，报194.71点，本周累计下跌10.28%，11月16-18日维持小幅下跌...",
+      "event_en": "美股七巨头close播reported｜周五（11month20day），美国科技股七巨头（Magnificent 7）index跌5.01%，reported194.71点，本周累计fall10.28%，11month16-18day维持slightlyfall...",
       "assets": "英伟达 / Anthropic",
       "assets_en": "Nvidia / Anthropic",
       "dir": "down",
@@ -410,8 +410,8 @@
       ]
     },
     {
-      "event": "美股七巨头收盘播报｜周五（11月20日），美国科技股七巨头（Magnificent 7）指数跌5.01%，报194.71点，本周累计下跌10.28%，11月16-18日维持小幅下跌昨天...",
-      "event_en": "美股七巨头close播reported｜周五（11month20day），美国科技股七巨头（Magnificent 7）index跌5.01%，reported194.71点，本周累计fall10.28%，11month16-18day维持slightlyfall昨天...",
+      "event": "美股七巨头收盘播报｜周五（11月20日），美国科技股七巨头（Magnificent 7）指数跌5.01%，报194.71点，本周累计下跌10.28%，11月16-18日维持小幅下跌...",
+      "event_en": "美股七巨头close播reported｜周五（11month20day），美国科技股七巨头（Magnificent 7）index跌5.01%，reported194.71点，本周累计fall10.28%，11month16-18day维持slightlyfall...",
       "assets": "英伟达 / Anthropic",
       "assets_en": "Nvidia / Anthropic",
       "dir": "down",
