@@ -2,12 +2,12 @@
   "date": "2026-11-21",
   "weekday": "星期六",
   "weekday_en": "Saturday",
-  "crawl_time": "约04:45（北京时间）",
+  "crawl_time": "约05:46（北京时间）",
   "source": "华尔街见闻",
   "sources_detail": [
     "华尔街见闻"
   ],
-  "filter_result": "10条核心要闻 / 2条因果链 / 100条原始抓取",
+  "filter_result": "10条核心要闻 / 3条因果链 / 100条原始抓取",
   "stats": [
     {
       "label": "标普500指数",
@@ -100,6 +100,22 @@
       "dir": "split",
       "logic": "央行鸽派信号 → 降息预期升温 → 流动性预期改善 → 风险资产受益",
       "logic_en": "Central bank dovish signal → rate cut expectations rise → liquidity expectations improve → risk assets benefit"
+    },
+    {
+      "tags": [
+        {
+          "type": "central-bank",
+          "text": "央行",
+          "text_en": "Central Bank"
+        }
+      ],
+      "event": "比特币自2025年10月升至超过126,000美元的峰值以来，已下跌超过一半，目前价格甚至低于支持加密货币的特朗普重返白宫时的水平。",
+      "event_en": "Bitcoin自2025year10month升至超过126,000USD的峰值以来，已fall超过一半，目前价格甚至低于支持加密货币的特朗普重返白宫时的水平。",
+      "assets": "美元指数 / 比特币",
+      "assets_en": "USD Index / Bitcoin",
+      "dir": "split",
+      "logic": "央行鹰派信号 → 加息预期升温 → 利率上行 → 风险资产承压",
+      "logic_en": "Central bank hawkish signal → rate hike expectations rise → yields rise → risk assets under pressure"
     },
     {
       "tags": [
@@ -248,22 +264,6 @@
       "dir": "split",
       "logic": "AI公司IPO/融资 → AI capex叙事验证 → 半导体/算力需求预期上修 → 相关板块大涨",
       "logic_en": "AI company IPO/funding → AI capex narrative validated → semiconductor/compute demand expectations revised up → related sectors surge"
-    },
-    {
-      "tags": [
-        {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
-        }
-      ],
-      "event": "标普500指数收跌265.44点，跌幅3.70%，连续第七个交易日下跌——创2020年以来最长连跌天数，报6910.39点，本周累计下跌8.61%。",
-      "event_en": "S&P 500indexclose down265.44点，loss3.70%，连续第七个交易dayfall——hit2020year以来最长连跌天数，reported6910.39点，本周累计fall8.61%。",
-      "assets": "纳指 / 标普500 / 美元指数",
-      "assets_en": "Nasdaq / S&P 500 / USD Index",
-      "dir": "split",
-      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
-      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst"
     }
   ],
   "four_column_table": [
@@ -290,6 +290,22 @@
           "type": "macro",
           "text": "宏观",
           "text_en": "Macro"
+        }
+      ]
+    },
+    {
+      "event": "比特币自2025年10月升至超过126,000美元的峰值以来，已下跌超过一半，目前价格甚至低于支持加密货币的特朗普重返白宫时的水平。",
+      "event_en": "Bitcoin自2025year10month升至超过126,000USD的峰值以来，已fall超过一半，目前价格甚至低于支持加密货币的特朗普重返白宫时的水平。",
+      "assets": "美元指数 / 比特币",
+      "assets_en": "USD Index / Bitcoin",
+      "dir": "split",
+      "logic": "央行鹰派信号 → 加息预期升温 → 利率上行 → 风险资产承压",
+      "logic_en": "Central bank hawkish signal → rate hike expectations rise → yields rise → risk assets under pressure",
+      "tags": [
+        {
+          "type": "central-bank",
+          "text": "央行",
+          "text_en": "Central Bank"
         }
       ]
     },
@@ -440,22 +456,6 @@
           "text_en": "AI"
         }
       ]
-    },
-    {
-      "event": "标普500指数收跌265.44点，跌幅3.70%，连续第七个交易日下跌——创2020年以来最长连跌天数，报6910.39点，本周累计下跌8.61%。",
-      "event_en": "S&P 500indexclose down265.44点，loss3.70%，连续第七个交易dayfall——hit2020year以来最长连跌天数，reported6910.39点，本周累计fall8.61%。",
-      "assets": "纳指 / 标普500 / 美元指数",
-      "assets_en": "Nasdaq / S&P 500 / USD Index",
-      "dir": "split",
-      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
-      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst",
-      "tags": [
-        {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
-        }
-      ]
     }
   ],
   "chains": [
@@ -512,6 +512,43 @@
       ]
     },
     {
+      "title": "央行政策链：比特币自2025年10月升至超过126,00... → 相关资产变动",
+      "title_en": "Central Bank Policy Chain: Bitcoin自2025year10month升至超过126,00... → Asset price change",
+      "status": "unverified",
+      "nodes": [
+        {
+          "text": "比特币自2025年10月升至超过126,000美元的峰值以来，已下跌超过一半，目前价格甚至低于支持加密货币的特朗普重返白宫时的水平",
+          "text_en": "Bitcoin自2025year10month升至超过126,000USD的峰值以来，已fall超过一半，目前价格甚至低于支持加密货币的特朗普重返白宫时的水平",
+          "type": "cause"
+        },
+        {
+          "text": "资产价格分化",
+          "text_en": "Asset prices diverge",
+          "type": "effect"
+        }
+      ],
+      "jargon": [
+        {
+          "term": "鹰派",
+          "term_en": "Hawkish",
+          "explain": "央行官员倾向于加息、收紧货币政策来压制通胀的态度。",
+          "explain_en": "Central bank officials' tendency to raise rates and tighten policy to suppress inflation."
+        },
+        {
+          "term": "终点利率",
+          "term_en": "Terminal Rate",
+          "explain": "市场预期央行加息到哪个水平就会停。终点利率上移=还要加，下移=快停了。",
+          "explain_en": "The rate level at which the market expects the central bank to stop hiking."
+        },
+        {
+          "term": "国债利差",
+          "term_en": "Bond Spread",
+          "explain": "两个国家国债收益率的差额。利差走阔=市场认为某国债务风险上升。",
+          "explain_en": "Yield difference between two countries' government bonds. Widening spread = market sees rising debt risk."
+        }
+      ]
+    },
+    {
       "title": "宏观链：周五（11月20日）纽约尾盘，美元兑日元跌0... → 高盛集团的交易员表示，美国股市周五暴跌，“恐...",
       "title_en": "Macro Chain: 周五（11month20day）纽约尾盘，USD兑JPY跌0... → 高盛集团的交易员表示，美国股市周五plunge，“恐...",
       "status": "unverified",
@@ -524,11 +561,6 @@
         {
           "text": "美股尾盘跌势不止，纳斯达克100指数跌5.5%，纳指跌幅扩大至5%",
           "text_en": "美股尾盘跌势不止，纳斯达克100index跌5.5%，Nasdaqlossexpanded至5%",
-          "type": "intermediate"
-        },
-        {
-          "text": "标普500指数收跌265.44点，跌幅3.70%",
-          "text_en": "S&P 500indexclose down265.44点，loss3.70%",
           "type": "intermediate"
         },
         {
@@ -576,6 +608,24 @@
         "Cloud vendor Capex/revenue ratio: if rising, AI ROI cycle questioned",
         "SK Hynix/Micron sustainability: pre-market rally is sentiment-driven, confirm HBM order additions",
         "A-share compute chip divergence: domestic AI chip trust crisis?"
+      ]
+    },
+    {
+      "title": "央行政策链：比特币自2025年10月升至超过126,00... → 相关资产变动能否持续？",
+      "title_en": "Can 'Central Bank Policy Chain: Bitcoin自2025year10month升至超过126,00... → Asset price change' sustain?",
+      "layer1": "央行鹰派信号与债务风险的博弈，会否触发利差危机？加息+高债务=火药桶。",
+      "layer1_en": "Will the central bank hawkish signal vs debt risk game trigger a spread crisis? Rate hikes + high debt = powder keg.",
+      "vars": [
+        "10年期国债利差：若走阔至85bp+，市场开始定价财政失控风险",
+        "劳动力成本：工资上涨是核心通胀的最后一英里，若继续走高央行确实会加息",
+        "财政预算案进展：若无法通过可信的财政方案，利差危机风险上升",
+        "传导保护工具使用条件：若被触发，等同于危机信号"
+      ],
+      "vars_en": [
+        "10Y bond spread: widening to 85bp+ = market prices fiscal loss of control",
+        "Labor costs: rising wages are core inflation's last mile, if continues CB will hike",
+        "Fiscal budget progress: if no credible fiscal plan, spread crisis risk rises",
+        "Transmission protection tool conditions: if triggered, equals crisis signal"
       ]
     },
     {
