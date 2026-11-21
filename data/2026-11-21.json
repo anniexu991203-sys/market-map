@@ -2,7 +2,7 @@
   "date": "2026-11-21",
   "weekday": "星期六",
   "weekday_en": "Saturday",
-  "crawl_time": "约00:42（北京时间）",
+  "crawl_time": "约01:59（北京时间）",
   "source": "华尔街见闻",
   "sources_detail": [
     "华尔街见闻"
@@ -31,14 +31,6 @@
       "value": "0.86%",
       "change": "拉美股市跌至一年多来的低点。此前，Anthropic公司IPO未能提振市场对人工智能行业的信心，导致全球股市抛售加剧；同",
       "change_en": "拉美股市跌至一year多来的低点。此前，Anthropic公司IPO未能提振市场对人工智能行业的confidence，导致全球股市抛售加剧；同",
-      "dir": "split"
-    },
-    {
-      "label": "日元和瑞郎兑美元均上",
-      "label_en": "JPY和瑞郎兑USD均上",
-      "value": "0.6%",
-      "change": "日元和瑞郎的表现优于其他主要货币，市场对人工智能(AI)热潮可持续性的疑虑日益加深，提振了避险需求并对美元构成压力。日元",
-      "change_en": "JPY和瑞郎的表现优于其他主要货币，市场对人工智能(AI)热潮sustainability的疑虑day益加深，提振了避险需求并对USD构成压力。JPY",
       "dir": "split"
     },
     {
@@ -72,6 +64,14 @@
       "change": "美股七巨头收盘播报｜周五（11月20日），美国科技股七巨头（Magnificent 7）指数跌5.01%，报194.71",
       "change_en": "美股七巨头close播reported｜周五（11month20day），美国科技股七巨头（Magnificent 7）index跌5.01%，reported194.71",
       "dir": "down"
+    },
+    {
+      "label": "Anthropic收",
+      "label_en": "Anthropic收",
+      "value": "8.5%",
+      "change": "Anthropic收跌8.5%，报88.91美元，北京时间01:49曾跌至83.05美元，距离83美元的IPO发行价仅仅",
+      "change_en": "Anthropicclose down8.5%，reported88.91USD，北京时间01:49曾跌至83.05USD，距离83USD的IPOissue price仅仅",
+      "dir": "split"
     }
   ],
   "events": [
@@ -175,22 +175,6 @@
           "type": "ai",
           "text": "AI",
           "text_en": "AI"
-        }
-      ],
-      "event": "日元和瑞郎的表现优于其他主要货币，市场对人工智能(AI)热潮可持续性的疑虑日益加深，提振了避险需求并对美元构成压力。",
-      "event_en": "JPY和瑞郎的表现优于其他主要货币，市场对人工智能(AI)热潮sustainability的疑虑day益加深，提振了避险需求并对USD构成压力。",
-      "assets": "美元指数 / 日元 / Anthropic",
-      "assets_en": "USD Index / JPY / Anthropic",
-      "dir": "split",
-      "logic": "AI公司IPO/融资 → AI capex叙事验证 → 半导体/算力需求预期上修 → 相关板块大涨",
-      "logic_en": "AI company IPO/funding → AI capex narrative validated → semiconductor/compute demand expectations revised up → related sectors surge"
-    },
-    {
-      "tags": [
-        {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
         },
         {
           "type": "central-bank",
@@ -267,6 +251,22 @@
       "assets": "英伟达 / Anthropic",
       "assets_en": "Nvidia / Anthropic",
       "dir": "down",
+      "logic": "AI公司IPO/融资 → AI capex叙事验证 → 半导体/算力需求预期上修 → 相关板块大涨",
+      "logic_en": "AI company IPO/funding → AI capex narrative validated → semiconductor/compute demand expectations revised up → related sectors surge"
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ],
+      "event": "Anthropic收跌8.5%，报88.91美元，北京时间01:49曾跌至83.05美元，距离83美元的IPO发行价仅仅一步之遥。",
+      "event_en": "Anthropicclose down8.5%，reported88.91USD，北京时间01:49曾跌至83.05USD，距离83USD的IPOissue price仅仅一步之遥。",
+      "assets": "美元指数 / Anthropic",
+      "assets_en": "USD Index / Anthropic",
+      "dir": "split",
       "logic": "AI公司IPO/融资 → AI capex叙事验证 → 半导体/算力需求预期上修 → 相关板块大涨",
       "logic_en": "AI company IPO/funding → AI capex narrative validated → semiconductor/compute demand expectations revised up → related sectors surge"
     }
@@ -367,22 +367,6 @@
       ]
     },
     {
-      "event": "日元和瑞郎的表现优于其他主要货币，市场对人工智能(AI)热潮可持续性的疑虑日益加深，提振了避险需求并对美元构成压力。",
-      "event_en": "JPY和瑞郎的表现优于其他主要货币，市场对人工智能(AI)热潮sustainability的疑虑day益加深，提振了避险需求并对USD构成压力。",
-      "assets": "美元指数 / 日元 / Anthropic",
-      "assets_en": "USD Index / JPY / Anthropic",
-      "dir": "split",
-      "logic": "AI公司IPO/融资 → AI capex叙事验证 → 半导体/算力需求预期上修 → 相关板块大涨",
-      "logic_en": "AI company IPO/funding → AI capex narrative validated → semiconductor/compute demand expectations revised up → related sectors surge",
-      "tags": [
-        {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        }
-      ]
-    },
-    {
       "event": "加拿大丰业银行首席外汇策略师Shaun Osborne：AI叙事与美国“例外论”联系如此紧密，因此如果AI板块大幅回撤，从基本面来看将对美元不利，因为这可能意味着经济增长放缓、通胀压力减弱...",
       "event_en": "加拿大丰业silver行首席外汇策略师Shaun Osborne：AInarrative与美国“例外论”联系如此紧密，因此如果AIsector大幅回撤，从基本面来看将对USD不利，因为这可能意味着经济growth放缓、inflation压力减弱...",
       "assets": "美元指数",
@@ -466,23 +450,34 @@
           "text_en": "AI"
         }
       ]
+    },
+    {
+      "event": "Anthropic收跌8.5%，报88.91美元，北京时间01:49曾跌至83.05美元，距离83美元的IPO发行价仅仅一步之遥。",
+      "event_en": "Anthropicclose down8.5%，reported88.91USD，北京时间01:49曾跌至83.05USD，距离83USD的IPOissue price仅仅一步之遥。",
+      "assets": "美元指数 / Anthropic",
+      "assets_en": "USD Index / Anthropic",
+      "dir": "split",
+      "logic": "AI公司IPO/融资 → AI capex叙事验证 → 半导体/算力需求预期上修 → 相关板块大涨",
+      "logic_en": "AI company IPO/funding → AI capex narrative validated → semiconductor/compute demand expectations revised up → related sectors surge",
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ]
     }
   ],
   "chains": [
     {
-      "title": "AI Capex链：日元和瑞郎的表现优于其他主要货币，市场对人工... → 美股七巨头收盘播报｜周五（11月20日）",
-      "title_en": "AI Capex Chain: JPY和瑞郎的表现优于其他主要货币，市场对人工... → 美股七巨头close播reported｜周五（11month20day）",
+      "title": "AI Capex链：加拿大丰业银行首席外汇策略师Shaun Os... → 美股七巨头收盘播报｜周五（11月20日）",
+      "title_en": "AI Capex Chain: 加拿大丰业silver行首席外汇策略师Shaun Os... → 美股七巨头close播reported｜周五（11month20day）",
       "status": "unverified",
       "nodes": [
         {
-          "text": "日元和瑞郎的表现优于其他主要货币，市场对人工智能(AI)热潮可持续性的疑虑日益加深，提振了避险需求并对美元构成压力",
-          "text_en": "JPY和瑞郎的表现优于其他主要货币，市场对人工智能(AI)热潮sustainability的疑虑day益加深，提振了避险需求并对USD构成压力",
-          "type": "cause"
-        },
-        {
           "text": "加拿大丰业银行首席外汇策略师Shaun Osborne：AI叙事与美国“例外论”联系如此紧密",
           "text_en": "加拿大丰业silver行首席外汇策略师Shaun Osborne：AInarrative与美国“例外论”联系如此紧密",
-          "type": "intermediate"
+          "type": "cause"
         },
         {
           "text": "标普500指数跌3.1%，纳斯达克100指数跌4.9%，纳指跌4.6%，半导体指数跌10%，Anthropic维持大约10%的跌幅",
@@ -492,6 +487,11 @@
         {
           "text": "拉美股市跌至一年多来的低点",
           "text_en": "拉美股市跌至一year多来的低点",
+          "type": "intermediate"
+        },
+        {
+          "text": "Anthropic收跌8.5%，报88.91美元，北京时间01:49曾跌至83.05美元，距离83美元的IPO发行价仅仅一步之遥",
+          "text_en": "Anthropicclose down8.5%，reported88.91USD，北京时间01:49曾跌至83.05USD，距离83USD的IPOissue price仅仅一步之遥",
           "type": "intermediate"
         },
         {
@@ -566,8 +566,8 @@
   ],
   "verifications": [
     {
-      "title": "AI Capex链：日元和瑞郎的表现优于其他主要货币，市场对人工... → 美股七巨头收盘播报｜周五（11月20日）能否持续？",
-      "title_en": "Can 'AI Capex Chain: JPY和瑞郎的表现优于其他主要货币，市场对人工... → 美股七巨头close播reported｜周五（11month20day）' sustain?",
+      "title": "AI Capex链：加拿大丰业银行首席外汇策略师Shaun Os... → 美股七巨头收盘播报｜周五（11月20日）能否持续？",
+      "title_en": "Can 'AI Capex Chain: 加拿大丰业silver行首席外汇策略师Shaun Os... → 美股七巨头close播reported｜周五（11month20day）' sustain?",
       "layer1": "AI capex叙事能否从'融资验证'切换到'盈利验证'？巨量融资证明了吸金能力，但何时能证明赚钱能力？",
       "layer1_en": "Can the AI capex narrative shift from 'funding validation' to 'profit validation'? Massive funding proves capital attraction, but when profitability?",
       "vars": [
