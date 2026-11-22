@@ -1,0 +1,655 @@
+{
+  "date": "2026-11-23",
+  "weekday": "星期一",
+  "weekday_en": "Monday",
+  "crawl_time": "约16:08（北京时间）",
+  "source": "华尔街见闻",
+  "sources_detail": [
+    "华尔街见闻"
+  ],
+  "filter_result": "10条核心要闻 / 5条因果链 / 100条原始抓取",
+  "stats": [
+    {
+      "label": "银行子指数下",
+      "label_en": "silver行子index下",
+      "value": "2.5%",
+      "change": "沙特全指在周日收盘时下跌约2%，创10月25日以来最大跌幅，因沙特领导的部队与伊朗支持的胡塞武装在也门的冲突升级。银行子",
+      "change_en": "沙特全指在周dayclose时fall约2%，hit10month25day以来最selloff幅，因沙特领导的部队与伊朗支持的胡塞武装在也门的冲突升级。silver行子",
+      "dir": "split"
+    }
+  ],
+  "events": [
+    {
+      "tags": [
+        {
+          "type": "central-bank",
+          "text": "央行",
+          "text_en": "Central Bank"
+        }
+      ],
+      "event": "比特币自2025年10月升至超过126,000美元的峰值以来，已下跌超过一半，目前价格甚至低于支持加密货币的特朗普重返白宫时的水平。",
+      "event_en": "Bitcoin自2025year10month升至超过126,000USD的峰值以来，已fall超过一半，目前价格甚至低于支持加密货币的特朗普重返白宫时的水平。",
+      "assets": "美元指数 / 比特币",
+      "assets_en": "USD Index / Bitcoin",
+      "dir": "split",
+      "logic": "央行鹰派信号 → 加息预期升温 → 利率上行 → 风险资产承压",
+      "logic_en": "Central bank hawkish signal → rate hike expectations rise → yields rise → risk assets under pressure"
+    },
+    {
+      "tags": [
+        {
+          "type": "energy",
+          "text": "能源",
+          "text_en": "Energy"
+        }
+      ],
+      "event": "当地时间21日，伊朗伊斯兰革命卫队海军发表声明称，自20日晚，多艘油轮在霍尔木兹海峡南部海域发生事故。",
+      "event_en": "当地时间21day，伊朗伊斯兰革命卫队海军发表statement称，自20day晚，多艘油轮在Strait of Hormuz南部海域发生事故。",
+      "assets": "详见原文",
+      "assets_en": "See source",
+      "dir": "up",
+      "logic": "地缘风险事件 → 避险情绪升温 → 避险资产上涨 / 风险资产下跌",
+      "logic_en": "Geopolitical risk event → safe-haven sentiment rises → safe-haven assets rise / risk assets fall"
+    },
+    {
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "欧盟委员会主席冯德莱恩称，欧盟与印度尼西亚（印尼）签署了综合性经济合作伙伴协议与投资保护协议，以期促进贸易与投资。",
+      "event_en": "欧盟委员会主席冯德莱恩称，欧盟与印度尼西亚（印尼）签署了综合性经济合作伙伴协议与投资保护协议，以期促进trade与投资。",
+      "assets": "详见原文",
+      "assets_en": "See source",
+      "dir": "neutral",
+      "logic": "贸易数据变化 → 全球需求/供应链预期调整 → 相关货币/股市影响",
+      "logic_en": "Trade data shift → global demand / supply chain expectations adjust → related currencies / stocks impacted"
+    },
+    {
+      "tags": [
+        {
+          "type": "geopolitics",
+          "text": "地缘",
+          "text_en": "Geopolitics"
+        }
+      ],
+      "event": "沙特全指在周日收盘时下跌约2%，创10月25日以来最大跌幅，因沙特领导的部队与伊朗支持的胡塞武装在也门的冲突升级。",
+      "event_en": "沙特全指在周dayclose时fall约2%，hit10month25day以来最selloff幅，因沙特领导的部队与伊朗支持的胡塞武装在也门的冲突升级。",
+      "assets": "详见原文",
+      "assets_en": "See source",
+      "dir": "split",
+      "logic": "地缘风险事件 → 避险情绪升温 → 避险资产上涨 / 风险资产下跌",
+      "logic_en": "Geopolitical risk event → safe-haven sentiment rises → safe-haven assets rise / risk assets fall"
+    },
+    {
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "欧盟领导人峰会主席周六提议进一步削减欧盟委员会提出的2028-2034年欧盟预算草案，并建议开辟新的收入来源，包括征收数字税，以帮助为欧盟政策提供资金。",
+      "event_en": "欧盟领导人峰会主席周六提议进一步削减欧盟委员会提出的2028-2034year欧盟预算草案，并建议开辟新的收入来源，包括征收数字税，以帮助为欧盟政策提供capital。",
+      "assets": "欧元",
+      "assets_en": "EUR",
+      "dir": "down",
+      "logic": "利空事件 → 市场预期恶化 → 资产价格下跌",
+      "logic_en": "Negative event → market expectations worsen → asset prices fall"
+    },
+    {
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "11月21日上午，国务院总理李强在北京钓鱼台国宾馆同新加坡总理黄循财举行会谈。",
+      "event_en": "11month21day上午，国务院总理李强在北京钓鱼台国宾馆同新加坡总理黄循财held会谈。",
+      "assets": "详见原文",
+      "assets_en": "See source",
+      "dir": "up",
+      "logic": "利好事件 → 市场预期改善 → 资产价格上涨",
+      "logic_en": "Positive event → market expectations improve → asset prices rise"
+    },
+    {
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "在11月20日的交易中，国际黄金期货和现货价格盘中均跌破每盎司3550美元，其中黄金期货价格一度下跌近5%。",
+      "event_en": "在11month20day的交易中，internationalgoldfutures和现货价格盘中均跌破每盎司3550USD，其中goldfutures价格一度fall近5%。",
+      "assets": "美元指数 / 黄金",
+      "assets_en": "USD Index / Gold",
+      "dir": "down",
+      "logic": "利空事件 → 市场预期恶化 → 资产价格下跌",
+      "logic_en": "Negative event → market expectations worsen → asset prices fall"
+    },
+    {
+      "tags": [
+        {
+          "type": "energy",
+          "text": "能源",
+          "text_en": "Energy"
+        }
+      ],
+      "event": "伊朗外长阿拉格齐：美伊之间的现有调解方正频繁往返，并在会晤中传递想法与建议。",
+      "event_en": "伊朗外长阿拉格齐：美伊之间的现有调解方正频繁往返，并在summit中传递想法与建议。",
+      "assets": "详见原文",
+      "assets_en": "See source",
+      "dir": "neutral",
+      "logic": "地缘风险事件 → 避险情绪升温 → 避险资产上涨 / 风险资产下跌",
+      "logic_en": "Geopolitical risk event → safe-haven sentiment rises → safe-haven assets rise / risk assets fall"
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ],
+      "event": "据知情人士透露，Anthropic告知其22家IPO承销商中的部分机构，将交易团队限制在四名银行家以内。",
+      "event_en": "据知情人士透露，Anthropic告知其22家IPO承销商中的部分机构，将交易团队限制在四名silver行家以内。",
+      "assets": "Anthropic / OpenAI",
+      "assets_en": "Anthropic / OpenAI",
+      "dir": "up",
+      "logic": "AI公司IPO/融资 → AI capex叙事验证 → 半导体/算力需求预期上修 → 相关板块大涨",
+      "logic_en": "AI company IPO/funding → AI capex narrative validated → semiconductor/compute demand expectations revised up → related sectors surge"
+    },
+    {
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "《侠盗猎车手6》（GTA 6）带动PS5价格持续上涨。",
+      "event_en": "《侠盗猎车手6》（GTA 6）带动PS5价格持续rise。",
+      "assets": "详见原文",
+      "assets_en": "See source",
+      "dir": "up",
+      "logic": "利好事件 → 市场预期改善 → 资产价格上涨",
+      "logic_en": "Positive event → market expectations improve → asset prices rise"
+    }
+  ],
+  "four_column_table": [
+    {
+      "event": "比特币自2025年10月升至超过126,000美元的峰值以来，已下跌超过一半，目前价格甚至低于支持加密货币的特朗普重返白宫时的水平。",
+      "event_en": "Bitcoin自2025year10month升至超过126,000USD的峰值以来，已fall超过一半，目前价格甚至低于支持加密货币的特朗普重返白宫时的水平。",
+      "assets": "美元指数 / 比特币",
+      "assets_en": "USD Index / Bitcoin",
+      "dir": "split",
+      "logic": "央行鹰派信号 → 加息预期升温 → 利率上行 → 风险资产承压",
+      "logic_en": "Central bank hawkish signal → rate hike expectations rise → yields rise → risk assets under pressure",
+      "tags": [
+        {
+          "type": "central-bank",
+          "text": "央行",
+          "text_en": "Central Bank"
+        }
+      ]
+    },
+    {
+      "event": "当地时间21日，伊朗伊斯兰革命卫队海军发表声明称，自20日晚，多艘油轮在霍尔木兹海峡南部海域发生事故。",
+      "event_en": "当地时间21day，伊朗伊斯兰革命卫队海军发表statement称，自20day晚，多艘油轮在Strait of Hormuz南部海域发生事故。",
+      "assets": "详见原文",
+      "assets_en": "See source",
+      "dir": "up",
+      "logic": "地缘风险事件 → 避险情绪升温 → 避险资产上涨 / 风险资产下跌",
+      "logic_en": "Geopolitical risk event → safe-haven sentiment rises → safe-haven assets rise / risk assets fall",
+      "tags": [
+        {
+          "type": "energy",
+          "text": "能源",
+          "text_en": "Energy"
+        }
+      ]
+    },
+    {
+      "event": "欧盟委员会主席冯德莱恩称，欧盟与印度尼西亚（印尼）签署了综合性经济合作伙伴协议与投资保护协议，以期促进贸易与投资。",
+      "event_en": "欧盟委员会主席冯德莱恩称，欧盟与印度尼西亚（印尼）签署了综合性经济合作伙伴协议与投资保护协议，以期促进trade与投资。",
+      "assets": "详见原文",
+      "assets_en": "See source",
+      "dir": "neutral",
+      "logic": "贸易数据变化 → 全球需求/供应链预期调整 → 相关货币/股市影响",
+      "logic_en": "Trade data shift → global demand / supply chain expectations adjust → related currencies / stocks impacted",
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ]
+    },
+    {
+      "event": "沙特全指在周日收盘时下跌约2%，创10月25日以来最大跌幅，因沙特领导的部队与伊朗支持的胡塞武装在也门的冲突升级。",
+      "event_en": "沙特全指在周dayclose时fall约2%，hit10month25day以来最selloff幅，因沙特领导的部队与伊朗支持的胡塞武装在也门的冲突升级。",
+      "assets": "详见原文",
+      "assets_en": "See source",
+      "dir": "split",
+      "logic": "地缘风险事件 → 避险情绪升温 → 避险资产上涨 / 风险资产下跌",
+      "logic_en": "Geopolitical risk event → safe-haven sentiment rises → safe-haven assets rise / risk assets fall",
+      "tags": [
+        {
+          "type": "geopolitics",
+          "text": "地缘",
+          "text_en": "Geopolitics"
+        }
+      ]
+    },
+    {
+      "event": "欧盟领导人峰会主席周六提议进一步削减欧盟委员会提出的2028-2034年欧盟预算草案，并建议开辟新的收入来源，包括征收数字税，以帮助为欧盟政策提供资金。",
+      "event_en": "欧盟领导人峰会主席周六提议进一步削减欧盟委员会提出的2028-2034year欧盟预算草案，并建议开辟新的收入来源，包括征收数字税，以帮助为欧盟政策提供capital。",
+      "assets": "欧元",
+      "assets_en": "EUR",
+      "dir": "down",
+      "logic": "利空事件 → 市场预期恶化 → 资产价格下跌",
+      "logic_en": "Negative event → market expectations worsen → asset prices fall",
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ]
+    },
+    {
+      "event": "11月21日上午，国务院总理李强在北京钓鱼台国宾馆同新加坡总理黄循财举行会谈。",
+      "event_en": "11month21day上午，国务院总理李强在北京钓鱼台国宾馆同新加坡总理黄循财held会谈。",
+      "assets": "详见原文",
+      "assets_en": "See source",
+      "dir": "up",
+      "logic": "利好事件 → 市场预期改善 → 资产价格上涨",
+      "logic_en": "Positive event → market expectations improve → asset prices rise",
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ]
+    },
+    {
+      "event": "在11月20日的交易中，国际黄金期货和现货价格盘中均跌破每盎司3550美元，其中黄金期货价格一度下跌近5%。",
+      "event_en": "在11month20day的交易中，internationalgoldfutures和现货价格盘中均跌破每盎司3550USD，其中goldfutures价格一度fall近5%。",
+      "assets": "美元指数 / 黄金",
+      "assets_en": "USD Index / Gold",
+      "dir": "down",
+      "logic": "利空事件 → 市场预期恶化 → 资产价格下跌",
+      "logic_en": "Negative event → market expectations worsen → asset prices fall",
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ]
+    },
+    {
+      "event": "伊朗外长阿拉格齐：美伊之间的现有调解方正频繁往返，并在会晤中传递想法与建议。",
+      "event_en": "伊朗外长阿拉格齐：美伊之间的现有调解方正频繁往返，并在summit中传递想法与建议。",
+      "assets": "详见原文",
+      "assets_en": "See source",
+      "dir": "neutral",
+      "logic": "地缘风险事件 → 避险情绪升温 → 避险资产上涨 / 风险资产下跌",
+      "logic_en": "Geopolitical risk event → safe-haven sentiment rises → safe-haven assets rise / risk assets fall",
+      "tags": [
+        {
+          "type": "energy",
+          "text": "能源",
+          "text_en": "Energy"
+        }
+      ]
+    },
+    {
+      "event": "据知情人士透露，Anthropic告知其22家IPO承销商中的部分机构，将交易团队限制在四名银行家以内。",
+      "event_en": "据知情人士透露，Anthropic告知其22家IPO承销商中的部分机构，将交易团队限制在四名silver行家以内。",
+      "assets": "Anthropic / OpenAI",
+      "assets_en": "Anthropic / OpenAI",
+      "dir": "up",
+      "logic": "AI公司IPO/融资 → AI capex叙事验证 → 半导体/算力需求预期上修 → 相关板块大涨",
+      "logic_en": "AI company IPO/funding → AI capex narrative validated → semiconductor/compute demand expectations revised up → related sectors surge",
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ]
+    },
+    {
+      "event": "《侠盗猎车手6》（GTA 6）带动PS5价格持续上涨。",
+      "event_en": "《侠盗猎车手6》（GTA 6）带动PS5价格持续rise。",
+      "assets": "详见原文",
+      "assets_en": "See source",
+      "dir": "up",
+      "logic": "利好事件 → 市场预期改善 → 资产价格上涨",
+      "logic_en": "Positive event → market expectations improve → asset prices rise",
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ]
+    }
+  ],
+  "chains": [
+    {
+      "title": "地缘链：11月21日上午，国务院总理李强在北京钓鱼台国宾馆同新加坡总理黄循财举行会谈 → 伊朗外长阿拉格齐：美伊之间的现有调解方正频繁往返，并在会晤中传递想法与建议",
+      "title_en": "Geopolitical Chain: 11month21day上午，国务院总理李强在北京钓鱼台国宾馆同新加坡总理黄循财held会谈 → 伊朗外长阿拉格齐：美伊之间的现有调解方正频繁往返，并在summit中传递想法与建议",
+      "status": "unverified",
+      "nodes": [
+        {
+          "text": "11月21日上午，国务院总理李强在北京钓鱼台国宾馆同新加坡总理黄循财举行会谈",
+          "text_en": "11month21day上午，国务院总理李强在北京钓鱼台国宾馆同新加坡总理黄循财held会谈",
+          "type": "cause"
+        },
+        {
+          "text": "沙特全指在周日收盘时下跌约2%，创10月25日以来最大跌幅，因沙特领导的部队与伊朗支持的胡塞武装在也门的冲突升级",
+          "text_en": "沙特全指在周dayclose时fall约2%，hit10month25day以来最selloff幅，因沙特领导的部队与伊朗支持的胡塞武装在也门的冲突升级",
+          "type": "intermediate"
+        },
+        {
+          "text": "伊朗外长阿拉格齐：美伊之间的现有调解方正频繁往返，并在会晤中传递想法与建议",
+          "text_en": "伊朗外长阿拉格齐：美伊之间的现有调解方正频繁往返，并在summit中传递想法与建议",
+          "type": "effect"
+        }
+      ],
+      "jargon": [
+        {
+          "term": "地缘风险溢价",
+          "term_en": "Geopolitical Risk Premium",
+          "explain": "因为担心打仗，投资者要求额外回报才肯持有资产。一旦风险下降，这部分'恐惧折扣'被去掉，资产价格就跳涨。",
+          "explain_en": "Extra return investors demand for holding assets when they fear conflict. Once risk falls, this 'fear discount' is removed and prices jump."
+        },
+        {
+          "term": "避险资产",
+          "term_en": "Safe-Haven Assets",
+          "explain": "市场恐慌时资金流入的资产，如黄金、美债、日元。地缘紧张时涨，缓和时跌。",
+          "explain_en": "Assets that capital flows into during panic: gold, US Treasuries, JPY. Rise when geopolitics tense, fall when easing."
+        },
+        {
+          "term": "风险偏好",
+          "term_en": "Risk Appetite",
+          "explain": "投资者更愿意买股票（风险资产）还是买国债（避险资产）的倾向。",
+          "explain_en": "Whether investors prefer stocks (risk assets) or bonds (safe havens)."
+        }
+      ]
+    },
+    {
+      "title": "AI Capex链：据知情人士透露，Anthropic告知其22... → 相关资产变动",
+      "title_en": "AI Capex Chain: 据知情人士透露，Anthropic告知其22... → Asset price change",
+      "status": "consensus",
+      "nodes": [
+        {
+          "text": "据知情人士透露，Anthropic告知其22家IPO承销商中的部分机构，将交易团队限制在四名银行家以内",
+          "text_en": "据知情人士透露，Anthropic告知其22家IPO承销商中的部分机构，将交易团队限制在四名silver行家以内",
+          "type": "cause"
+        },
+        {
+          "text": "相关资产上涨",
+          "text_en": "Related assets rise",
+          "type": "effect"
+        }
+      ],
+      "jargon": [
+        {
+          "term": "AI Capex",
+          "term_en": "AI Capex (Capital Expenditure)",
+          "explain": "AI公司花在买芯片、建数据中心、租GPU上的钱。这笔钱最终变成半导体公司的订单。",
+          "explain_en": "Money AI companies spend on chips, data centers, and GPUs. Ultimately becomes semiconductor company orders."
+        },
+        {
+          "term": "光通信",
+          "term_en": "Optical Communications",
+          "explain": "数据中心里用光传输数据的技术。AI集群越大，需要的光模块越多。",
+          "explain_en": "Technology using light to transmit data in data centers. Bigger AI clusters need more optical modules."
+        },
+        {
+          "term": "暗盘交易",
+          "term_en": "Grey Market Trading",
+          "explain": "IPO正式挂牌前的场外交易。暗盘涨跌反映机构对IPO的预期。",
+          "explain_en": "Off-exchange trading before official IPO listing. Grey market moves reflect institutional expectations."
+        }
+      ]
+    },
+    {
+      "title": "央行政策链：比特币自2025年10月升至超过126,00... → 相关资产变动",
+      "title_en": "Central Bank Policy Chain: Bitcoin自2025year10month升至超过126,00... → Asset price change",
+      "status": "unverified",
+      "nodes": [
+        {
+          "text": "比特币自2025年10月升至超过126,000美元的峰值以来，已下跌超过一半，目前价格甚至低于支持加密货币的特朗普重返白宫时的水平",
+          "text_en": "Bitcoin自2025year10month升至超过126,000USD的峰值以来，已fall超过一半，目前价格甚至低于支持加密货币的特朗普重返白宫时的水平",
+          "type": "cause"
+        },
+        {
+          "text": "资产价格分化",
+          "text_en": "Asset prices diverge",
+          "type": "effect"
+        }
+      ],
+      "jargon": [
+        {
+          "term": "鹰派",
+          "term_en": "Hawkish",
+          "explain": "央行官员倾向于加息、收紧货币政策来压制通胀的态度。",
+          "explain_en": "Central bank officials' tendency to raise rates and tighten policy to suppress inflation."
+        },
+        {
+          "term": "终点利率",
+          "term_en": "Terminal Rate",
+          "explain": "市场预期央行加息到哪个水平就会停。终点利率上移=还要加，下移=快停了。",
+          "explain_en": "The rate level at which the market expects the central bank to stop hiking."
+        },
+        {
+          "term": "国债利差",
+          "term_en": "Bond Spread",
+          "explain": "两个国家国债收益率的差额。利差走阔=市场认为某国债务风险上升。",
+          "explain_en": "Yield difference between two countries' government bonds. Widening spread = market sees rising debt risk."
+        }
+      ]
+    },
+    {
+      "title": "能源链：当地时间21日，伊朗伊斯兰革命卫队海军发表声明称 → 相关资产变动",
+      "title_en": "Energy Chain: 当地时间21day，伊朗伊斯兰革命卫队海军发表statement称 → Asset price change",
+      "status": "unverified",
+      "nodes": [
+        {
+          "text": "当地时间21日，伊朗伊斯兰革命卫队海军发表声明称，自20日晚，多艘油轮在霍尔木兹海峡南部海域发生事故",
+          "text_en": "当地时间21day，伊朗伊斯兰革命卫队海军发表statement称，自20day晚，多艘油轮在Strait of Hormuz南部海域发生事故",
+          "type": "cause"
+        },
+        {
+          "text": "相关资产上涨",
+          "text_en": "Related assets rise",
+          "type": "effect"
+        }
+      ],
+      "jargon": [
+        {
+          "term": "霍尔木兹海峡",
+          "term_en": "Strait of Hormuz",
+          "explain": "全球约20%的石油运输必经之路。谁控制了这里，就掐住了全球能源的咽喉。",
+          "explain_en": "About 20% of global oil transport passes through here. Whoever controls it holds the world's energy throat."
+        },
+        {
+          "term": "超级油轮（VLCC）",
+          "term_en": "VLCC (Very Large Crude Carrier)",
+          "explain": "能装200万桶原油的巨型油轮。VLCC运费飙升=供应受阻的先行指标。",
+          "explain_en": "Giant tanker carrying 2M barrels. VLCC freight surge = leading indicator of supply disruption."
+        },
+        {
+          "term": "OPEC+",
+          "term_en": "OPEC+",
+          "explain": "石油输出国组织及其盟友，控制全球约40%原油产量。减产=涨价，增产=跌价。",
+          "explain_en": "Oil producers' alliance controlling ~40% of global supply. Cut = price up, increase = price down."
+        }
+      ]
+    },
+    {
+      "title": "宏观链：《侠盗猎车手6》（GTA 6）带动PS5价格持续上涨 → 欧盟领导人峰会主席周六提议进一步削减欧盟委员...",
+      "title_en": "Macro Chain: 《侠盗猎车手6》（GTA 6）带动PS5价格持续rise → 欧盟领导人峰会主席周六提议进一步削减欧盟委员...",
+      "status": "unverified",
+      "nodes": [
+        {
+          "text": "《侠盗猎车手6》（GTA 6）带动PS5价格持续上涨",
+          "text_en": "《侠盗猎车手6》（GTA 6）带动PS5价格持续rise",
+          "type": "cause"
+        },
+        {
+          "text": "在11月20日的交易中，国际黄金期货和现货价格盘中均跌破每盎司3550美元，其中黄金期货价格一度下跌近5%",
+          "text_en": "在11month20day的交易中，internationalgoldfutures和现货价格盘中均跌破每盎司3550USD，其中goldfutures价格一度fall近5%",
+          "type": "intermediate"
+        },
+        {
+          "text": "欧盟委员会主席冯德莱恩称，欧盟与印度尼西亚（印尼）签署了综合性经济合作伙伴协议与投资保护协议，以期促进贸易与投资",
+          "text_en": "欧盟委员会主席冯德莱恩称，欧盟与印度尼西亚（印尼）签署了综合性经济合作伙伴协议与投资保护协议，以期促进trade与投资",
+          "type": "intermediate"
+        },
+        {
+          "text": "欧盟领导人峰会主席周六提议进一步削减欧盟委员会提出的2028-2034年欧盟预算草案",
+          "text_en": "欧盟领导人峰会主席周六提议进一步削减欧盟委员会提出的2028-2034year欧盟预算草案",
+          "type": "effect"
+        }
+      ],
+      "jargon": [
+        {
+          "term": "美元走强→商品下跌",
+          "term_en": "Strong USD → Commodity Down",
+          "explain": "国际大宗商品以美元计价。美元贵了，同样一桶油用美元买就贵了，需求减少，价格就跌。",
+          "explain_en": "Commodities priced in USD. Stronger dollar = more expensive commodities = lower demand."
+        },
+        {
+          "term": "避险情绪",
+          "term_en": "Risk-Off Sentiment",
+          "explain": "市场害怕风险时，资金从股票等高风险资产流向黄金/美债等安全资产。",
+          "explain_en": "When markets fear risk, capital flows from stocks to safe havens like gold/Treasuries."
+        },
+        {
+          "term": "PMI（采购经理人指数）",
+          "term_en": "PMI (Purchasing Managers' Index)",
+          "explain": "衡量制造业/服务业景气度的指标。50以上=扩张，50以下=收缩。",
+          "explain_en": "Index measuring manufacturing/services activity. Above 50 = expansion, below 50 = contraction."
+        }
+      ]
+    }
+  ],
+  "verifications": [
+    {
+      "title": "地缘链：11月21日上午，国务院总理李强在北京钓鱼台国宾馆同新加坡总理黄循财举行会谈 → 伊朗外长阿拉格齐：美伊之间的现有调解方正频繁往返，并在会晤中传递想法与建议能否持续？",
+      "title_en": "Can 'Geopolitical Chain: 11month21day上午，国务院总理李强在北京钓鱼台国宾馆同新加坡总理黄循财held会谈 → 伊朗外长阿拉格齐：美伊之间的现有调解方正频繁往返，并在summit中传递想法与建议' sustain?",
+      "layer1": "地缘缓和信号能否真正转化为风险溢价的持久压缩？宣言是政治表态，能否转化为可执行方案？",
+      "layer1_en": "Can geopolitical easing truly translate into lasting risk premium compression? Can a declaration become actionable?",
+      "vars": [
+        "VIX恐慌指数：持续低于15=市场已price in和平；反弹至18+=市场持保留态度",
+        "布伦特原油价格：跌破70美元=市场认可增产；反弹至78+=供应担忧未消",
+        "黄金走势：央行持续购金=央行层面仍在对冲地缘风险",
+        "后续军事动态：是否有和平宣言与战场现实的落差？"
+      ],
+      "vars_en": [
+        "VIX: sustained below 15 = peace priced in; rebound to 18+ = market skeptical",
+        "Brent crude: below $70 = market believes production; above $78 = supply fears persist",
+        "Gold trend: continued CB purchases = CBs still hedging geopolitical risk",
+        "Follow-up military actions: gap between declaration and battlefield reality?"
+      ]
+    },
+    {
+      "title": "AI Capex链：据知情人士透露，Anthropic告知其22... → 相关资产变动能否持续？",
+      "title_en": "Can 'AI Capex Chain: 据知情人士透露，Anthropic告知其22... → Asset price change' sustain?",
+      "layer1": "AI capex叙事能否从'融资验证'切换到'盈利验证'？巨量融资证明了吸金能力，但何时能证明赚钱能力？",
+      "layer1_en": "Can the AI capex narrative shift from 'funding validation' to 'profit validation'? Massive funding proves capital attraction, but when profitability?",
+      "vars": [
+        "AI公司上市后5日股价：暗盘涨幅是初始热情，挂牌后是否破发或涨幅收窄",
+        "云厂商Capex/收入比：若比率持续上升，AI投入回报周期将被质疑",
+        "SK海力士/美光股价持续性：盘前大涨是情绪驱动，需确认HBM订单是否真正追加",
+        "A股算力芯片分化：国产AI芯片是否出现信任危机？"
+      ],
+      "vars_en": [
+        "AI company 5-day post-IPO stock: grey market gains are initial enthusiasm, watch for narrowing or break issue price",
+        "Cloud vendor Capex/revenue ratio: if rising, AI ROI cycle questioned",
+        "SK Hynix/Micron sustainability: pre-market rally is sentiment-driven, confirm HBM order additions",
+        "A-share compute chip divergence: domestic AI chip trust crisis?"
+      ]
+    },
+    {
+      "title": "央行政策链：比特币自2025年10月升至超过126,00... → 相关资产变动能否持续？",
+      "title_en": "Can 'Central Bank Policy Chain: Bitcoin自2025year10month升至超过126,00... → Asset price change' sustain?",
+      "layer1": "央行鹰派信号与债务风险的博弈，会否触发利差危机？加息+高债务=火药桶。",
+      "layer1_en": "Will the central bank hawkish signal vs debt risk game trigger a spread crisis? Rate hikes + high debt = powder keg.",
+      "vars": [
+        "10年期国债利差：若走阔至85bp+，市场开始定价财政失控风险",
+        "劳动力成本：工资上涨是核心通胀的最后一英里，若继续走高央行确实会加息",
+        "财政预算案进展：若无法通过可信的财政方案，利差危机风险上升",
+        "传导保护工具使用条件：若被触发，等同于危机信号"
+      ],
+      "vars_en": [
+        "10Y bond spread: widening to 85bp+ = market prices fiscal loss of control",
+        "Labor costs: rising wages are core inflation's last mile, if continues CB will hike",
+        "Fiscal budget progress: if no credible fiscal plan, spread crisis risk rises",
+        "Transmission protection tool conditions: if triggered, equals crisis signal"
+      ]
+    },
+    {
+      "title": "能源链：当地时间21日，伊朗伊斯兰革命卫队海军发表声明称 → 相关资产变动能否持续？",
+      "title_en": "Can 'Energy Chain: 当地时间21day，伊朗伊斯兰革命卫队海军发表statement称 → Asset price change' sustain?",
+      "layer1": "能源供应冲击是否会升级为系统性中断？这是局部冲突还是系统性封锁的开始？",
+      "layer1_en": "Will energy supply shock escalate into systemic disruption? Is this localized or the start of systemic blockade?",
+      "vars": [
+        "布伦特原油日内波动：单日涨幅超3%=市场开始定价封锁风险",
+        "VLCC运费指数（BDTI）：超级油轮运费飙升=船东要求额外风险补偿",
+        "后续军事行动：若出现第二次袭击，局势将质变",
+        "战略石油储备动向：若启动储备释放，说明官方认为风险可控度下降"
+      ],
+      "vars_en": [
+        "Brent intraday volatility: single-day move >3% = market pricing blockade risk",
+        "BDTI (VLCC freight index): surging rates = owners demanding risk premium",
+        "Follow-up military actions: second incident = qualitative escalation",
+        "SPR movements: if reserve release activated, officials see risk declining"
+      ]
+    }
+  ],
+  "historical_analogies": [
+    {
+      "event": "2000年互联网泡沫：Capex暴增先于盈利崩塌（1999-2001年）",
+      "event_en": "Dot-com bubble: Capex surge preceded profit collapse (1999-2001)",
+      "lesson": "当市场为单一公司IPO狂欢时，不要忘记2000年电信公司疯狂铺设光缆、随后盈利无法覆盖投入的教训。巨量融资不等于盈利验证，系统脆弱性往往在最乐观时暴露。",
+      "lesson_en": "When markets celebrate a single company's IPO, remember the 2000 telecom companies frantically laying fiber, then profits failing to cover investment. Massive funding does not equal profitability validation.",
+      "diff": "2000年铺设的光缆后来确实被用了，只是用了5-10年才回本。AI基础设施的变现周期可能更短，且这次有真实的B端付费需求在支撑，不像当年很多流量是免费的。",
+      "diff_en": "The fiber laid in 2000 was eventually used, just took 5-10 years to break even. AI infrastructure monetization may be faster, with real B-side paid demand unlike free dot-com traffic."
+    },
+    {
+      "event": "两伊战争期间的油轮战（1984-1988年）",
+      "event_en": "Tanker War during Iran-Iraq War (1984-1988)",
+      "lesson": "霍尔木兹海峡油轮遭袭并非首次。1980年代两伊战争期间，双方互相袭击油轮，导致油价短期飙升后又被全球协调护航机制压制。今天的局势可能在复制有限升级到国际协调再到风险消退的剧本。",
+      "lesson_en": "Hormuz tanker attacks aren't unprecedented. During the 1980s Iran-Iraq War, both sides attacked tankers, causing oil to spike then subside through globally coordinated escorts. Today may replicate the limited escalation to coordination to risk subsiding script.",
+      "diff": "1980年代没有中俄美联合宣言这种三方协调机制。如果三方增产共识真正落地，即使海峡发生局部冲突，全球能源供应的兜底能力比当年强得多。但伊朗的无人机和水雷技术也远超当年。",
+      "diff_en": "The 1980s lacked a China-Russia-US coordination mechanism. If three-nation production consensus materializes, global energy resilience is far stronger. But Iran's drone and mine technology is also far superior."
+    },
+    {
+      "event": "欧债危机：希腊-意大利-西班牙利差螺旋（2011-2012年）",
+      "event_en": "European Debt Crisis: Greece-Italy-Spain spread spiral (2011-2012)",
+      "lesson": "央行在通胀压力下过早加息、随后引爆债务螺旋的剧本高度相似。加息加上高债务等于火药桶。2011年欧央行加息后，意大利债务利差飙升，最终靠Draghi的whatever it takes才稳住。",
+      "lesson_en": "The script of a central bank raising rates prematurely under inflation pressure then triggering a debt spiral is highly similar. Rate hikes plus high debt equals powder keg. In 2011, the ECB hiked, Italian spreads surged, only stabilized by Draghi's whatever it takes.",
+      "diff": "2012年Draghi的承诺和OMT/PEPP/TPI等工具箱今天已存在。央行自己也在监控这条线。但工具存在不等于能无成本使用，政治博弈才是关键。",
+      "diff_en": "Draghi's 2012 pledge and tools like OMT/PEPP/TPI now exist. The central bank is monitoring this line. But tool existence does not equal cost-free usage; political gaming is the key."
+    },
+    {
+      "event": "2008年雷曼兄弟破产 + AIG救助（2008年9月）",
+      "event_en": "Lehman Brothers collapse + AIG bailout (Sep 2008)",
+      "lesson": "当市场为金融创新或科技突破狂欢时，不要忘记2008年雷曼破产前市场也在为金融创新永动机定价。巨量融资不等于盈利验证，系统脆弱性往往在最乐观时暴露。",
+      "lesson_en": "When markets celebrate financial innovation or tech breakthroughs, remember that before Lehman's collapse in 2008, markets were also pricing in a financial innovation perpetual motion machine. Massive funding does not equal profitability validation.",
+      "diff": "2008年的风险藏在衍生品不透明链条里；今天AI公司的资产负债表相对透明。且AI基础设施投入有明确的终端需求，不像CDO的底层资产是次贷。",
+      "diff_en": "2008's risk was hidden in opaque derivative chains; today's AI companies have relatively transparent balance sheets. AI infrastructure investment has clear end-user demand, unlike CDOs backed by subprime mortgages."
+    }
+  ]
+}
