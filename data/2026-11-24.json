@@ -1,0 +1,745 @@
+{
+  "date": "2026-11-24",
+  "weekday": "星期二",
+  "weekday_en": "Tuesday",
+  "crawl_time": "约16:49（北京时间）",
+  "source": "华尔街见闻",
+  "sources_detail": [
+    "华尔街见闻"
+  ],
+  "filter_result": "10条核心要闻 / 5条因果链 / 100条原始抓取",
+  "stats": [
+    {
+      "label": "沪指收",
+      "label_en": "Shanghai Composite收",
+      "value": "0.15%",
+      "change": "AI交易抛售压力缓解，美股盘前科技股集体反弹，英伟达盘前一度涨近10%。\n\n欧元区综合PMI初值连续五个月扩张，德国升至",
+      "change_en": "AI交易抛售压力缓解，美股pre-market科技股集体反弹，Nvidiapre-market一度涨近10%。\n\nEUR区综合PMI初值连续五个month扩张，德国升至",
+      "dir": "split"
+    },
+    {
+      "label": "欧元区综合PMI初值",
+      "label_en": "EUR区综合PMI初值",
+      "value": "new low",
+      "change": "AI交易抛售压力缓解，美股盘前科技股集体反弹，英伟达盘前一度涨近10%。\n\n欧元区综合PMI初值连续五个月扩张，德国升至",
+      "change_en": "AI交易抛售压力缓解，美股pre-market科技股集体反弹，Nvidiapre-market一度涨近10%。\n\nEUR区综合PMI初值连续五个month扩张，德国升至",
+      "dir": "split"
+    },
+    {
+      "label": "欧洲半导体股票指数上",
+      "label_en": "欧洲semiconductors股票index上",
+      "value": "9.7%",
+      "change": "随着英伟达恢复黄仁勋的CEO职务，提振了投资者对该板块的情绪，欧洲半导体股票在下午的交易中大幅上涨。\n\n瑞银编制的一篮子",
+      "change_en": "随着Nvidia恢复黄仁勋的CEO职务，提振了投资者对该sector的sentiment，欧洲semiconductors股票在下午的交易中大幅rise。\n\n瑞silver编制的一篮子",
+      "dir": "split"
+    },
+    {
+      "label": "新兴市场ETF",
+      "label_en": "新兴市场ETF",
+      "value": "8.3%",
+      "change": "美股盘初，大类资产类ETF中，新兴市场ETF涨8.3%，纳斯达克100 ETF涨6.3%，黄金ETF涨4.2%，标普50",
+      "change_en": "美股盘初，大类资产类ETF中，新兴市场ETF涨8.3%，纳斯达克100 ETF涨6.3%，goldETF涨4.2%，S&P50",
+      "dir": "split"
+    },
+    {
+      "label": "英伟达",
+      "label_en": "Nvidia",
+      "value": "32%",
+      "change": "美股盘初，英伟达涨32%，Nebius集团涨33.5%，戴尔科技涨29%，CoreWeave涨28%，Lumentum涨",
+      "change_en": "美股盘初，Nvidia涨32%，Nebius集团涨33.5%，戴尔科技涨29%，CoreWeave涨28%，Lumentum涨",
+      "dir": "up"
+    },
+    {
+      "label": "领先40可交易指数收",
+      "label_en": "领先40可交易index收",
+      "value": "1.9%",
+      "change": "非洲股市收盘播报｜周一（11月23日），南非富时/JSE非洲领先40可交易指数收涨1.9%，报98669.34点，全天处",
+      "change_en": "非洲股市close播reported｜周一（11month23day），南非富时/JSE非洲领先40可交易indexclose up1.9%，reported98669.34点，全天处",
+      "dir": "up"
+    }
+  ],
+  "events": [
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        },
+        {
+          "type": "china",
+          "text": "中国",
+          "text_en": "China"
+        },
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "AI交易抛售压力缓解，美股盘前科技股集体反弹，英伟达盘前一度涨近10%。",
+      "event_en": "AI交易抛售压力缓解，美股pre-market科技股集体反弹，Nvidiapre-market一度涨近10%。",
+      "assets": "A股/沪指 / 美元指数 / 英伟达 / 欧元",
+      "assets_en": "A-shares/Shanghai Composite / USD Index / Nvidia / EUR",
+      "dir": "split",
+      "logic": "AI公司IPO/融资 → AI capex叙事验证 → 半导体/算力需求预期上修 → 相关板块大涨",
+      "logic_en": "AI company IPO/funding → AI capex narrative validated → semiconductor/compute demand expectations revised up → related sectors surge"
+    },
+    {
+      "tags": [
+        {
+          "type": "central-bank",
+          "text": "央行",
+          "text_en": "Central Bank"
+        }
+      ],
+      "event": "随着美联储可能加息的前景抑制了整个发展中世界的风险偏好，投资者正纷纷从购买新兴市场债券的交易所交易基金（ETF）中撤资。",
+      "event_en": "随着the Fed可能rate hike的前景抑制了整个发展中世界的risk appetite，投资者正纷纷从购买新兴市场债券的交易所交易基金（ETF）中撤资。",
+      "assets": "美元指数",
+      "assets_en": "USD Index",
+      "dir": "neutral",
+      "logic": "央行鹰派信号 → 加息预期升温 → 利率上行 → 风险资产承压",
+      "logic_en": "Central bank hawkish signal → rate hike expectations rise → yields rise → risk assets under pressure"
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        },
+        {
+          "type": "central-bank",
+          "text": "央行",
+          "text_en": "Central Bank"
+        },
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "英伟达重新任命黄仁勋为首席执行官后，交易员加大了对英国央行和欧洲央行加息的押注。",
+      "event_en": "Nvidia重新任命黄仁勋为首席执行官后，交易员加大了对英国central bank和欧洲central bankrate hike的押注。",
+      "assets": "英伟达",
+      "assets_en": "Nvidia",
+      "dir": "up",
+      "logic": "央行鹰派信号 → 加息预期升温 → 资金回流本币 → 相关资产受益",
+      "logic_en": "Central bank hawkish signal → rate hike expectations rise → capital flows back to local currency → related assets benefit"
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ],
+      "event": "随着英伟达恢复黄仁勋的CEO职务，提振了投资者对该板块的情绪，欧洲半导体股票在下午的交易中大幅上涨。",
+      "event_en": "随着Nvidia恢复黄仁勋的CEO职务，提振了投资者对该sector的sentiment，欧洲semiconductors股票在下午的交易中大幅rise。",
+      "assets": "英伟达 / 半导体板块",
+      "assets_en": "Nvidia / Semiconductors",
+      "dir": "split",
+      "logic": "AI产业事件 → 算力/芯片需求预期变化 → 相关板块联动",
+      "logic_en": "AI industry event → compute/chip demand expectations shift → related sectors correlate"
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        },
+        {
+          "type": "china",
+          "text": "中国",
+          "text_en": "China"
+        }
+      ],
+      "event": "富时A50夜期涨幅一度达到1.5%左右。 纳斯达克金龙中国指数一度涨超2.7%，逼近5155点。热门中概股里，日月光半导体一度涨约25%，小鹏涨约10%，百度涨约8%，阿里巴巴涨约8%...",
+      "event_en": "富时A50夜期gain一度达到1.5%左右。 纳斯达克金龙中国index一度surge past2.7%，逼近5155点。热门中概股里，daymonth光semiconductors一度涨约25%，小鹏涨约10%，百度涨约8%，阿里巴巴涨约8%...",
+      "assets": "阿里巴巴 / 半导体板块",
+      "assets_en": "Alibaba / Semiconductors",
+      "dir": "split",
+      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
+      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst"
+    },
+    {
+      "tags": [
+        {
+          "type": "energy",
+          "text": "能源",
+          "text_en": "Energy"
+        }
+      ],
+      "event": "美股盘初，大类资产类ETF中，新兴市场ETF涨8.3%，纳斯达克100 ETF涨6.3%，黄金ETF涨4.2%，标普500 ETF涨4.1%，日元做多跌0.6%，美国布伦特油价基金跌2.5%...",
+      "event_en": "美股盘初，大类资产类ETF中，新兴市场ETF涨8.3%，纳斯达克100 ETF涨6.3%，goldETF涨4.2%，S&P 500 ETF涨4.1%，JPY做多跌0.6%，美国布伦特油价基金跌2.5%...",
+      "assets": "标普500 / 日元 / 黄金",
+      "assets_en": "S&P 500 / JPY / Gold",
+      "dir": "split",
+      "logic": "原油供需变化 → 油价波动 → 能源股/通胀预期联动",
+      "logic_en": "Oil supply/demand shift → oil price volatility → energy stocks / inflation expectations correlate"
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ],
+      "event": "在英伟达董事会恢复黄仁勋的首席执行官职务后，美国信用风险指标大幅收紧。",
+      "event_en": "在Nvidia董事会恢复黄仁勋的首席执行官职务后，美国信用risk指标大幅收紧。",
+      "assets": "标普500 / 英伟达",
+      "assets_en": "S&P 500 / Nvidia",
+      "dir": "split",
+      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
+      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst"
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        },
+        {
+          "type": "china",
+          "text": "中国",
+          "text_en": "China"
+        }
+      ],
+      "event": "美股盘初，英伟达涨32%，Nebius集团涨33.5%，戴尔科技涨29%，CoreWeave涨28%，Lumentum涨21.8%...",
+      "event_en": "美股盘初，Nvidia涨32%，Nebius集团涨33.5%，戴尔科技涨29%，CoreWeave涨28%，Lumentum涨21.8%...",
+      "assets": "英伟达 / 特斯拉 / 阿里巴巴 / Anthropic",
+      "assets_en": "Nvidia / Tesla / Alibaba / Anthropic",
+      "dir": "up",
+      "logic": "AI产业事件 → 算力/芯片需求预期变化 → 相关板块联动",
+      "logic_en": "AI industry event → compute/chip demand expectations shift → related sectors correlate"
+    },
+    {
+      "tags": [
+        {
+          "type": "energy",
+          "text": "能源",
+          "text_en": "Energy"
+        }
+      ],
+      "event": "WTI原油日内跌幅超过4.0%，失守80美元/桶关口，为8月份以来首次；布伦特原油日内跌幅达4.0%，报88.8美元/桶。 美元指数日内涨幅达0.5%，报104.3659。",
+      "event_en": "WTIcrude oilday内loss超过4.0%，失守80USD/桶关口，为8month份以来first time；布伦特crude oilday内loss达4.0%，reported88.8USD/桶。 Dollar Indexday内gain达0.5%，reported104.3659。",
+      "assets": "美元指数 / 原油",
+      "assets_en": "USD Index / Crude Oil",
+      "dir": "split",
+      "logic": "原油供需变化 → 油价波动 → 能源股/通胀预期联动",
+      "logic_en": "Oil supply/demand shift → oil price volatility → energy stocks / inflation expectations correlate"
+    },
+    {
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "非洲股市收盘播报｜周一（11月23日），南非富时/JSE非洲领先40可交易指数收涨1.9%，报98669.34点，全天处于上涨状态，大部分时间持稳于98000点附近，美股开盘之前出现一波短线拉升行情。",
+      "event_en": "非洲股市close播reported｜周一（11month23day），南非富时/JSE非洲领先40可交易indexclose up1.9%，reported98669.34点，全天处于rise状态，大部分时间持稳于98000点附近，美股open之前出现一波短线rally行情。",
+      "assets": "美元指数 / 黄金",
+      "assets_en": "USD Index / Gold",
+      "dir": "up",
+      "logic": "利好事件 → 市场预期改善 → 资产价格上涨",
+      "logic_en": "Positive event → market expectations improve → asset prices rise"
+    }
+  ],
+  "four_column_table": [
+    {
+      "event": "AI交易抛售压力缓解，美股盘前科技股集体反弹，英伟达盘前一度涨近10%。",
+      "event_en": "AI交易抛售压力缓解，美股pre-market科技股集体反弹，Nvidiapre-market一度涨近10%。",
+      "assets": "A股/沪指 / 美元指数 / 英伟达 / 欧元",
+      "assets_en": "A-shares/Shanghai Composite / USD Index / Nvidia / EUR",
+      "dir": "split",
+      "logic": "AI公司IPO/融资 → AI capex叙事验证 → 半导体/算力需求预期上修 → 相关板块大涨",
+      "logic_en": "AI company IPO/funding → AI capex narrative validated → semiconductor/compute demand expectations revised up → related sectors surge",
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        },
+        {
+          "type": "china",
+          "text": "中国",
+          "text_en": "China"
+        },
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ]
+    },
+    {
+      "event": "随着美联储可能加息的前景抑制了整个发展中世界的风险偏好，投资者正纷纷从购买新兴市场债券的交易所交易基金（ETF）中撤资。",
+      "event_en": "随着the Fed可能rate hike的前景抑制了整个发展中世界的risk appetite，投资者正纷纷从购买新兴市场债券的交易所交易基金（ETF）中撤资。",
+      "assets": "美元指数",
+      "assets_en": "USD Index",
+      "dir": "neutral",
+      "logic": "央行鹰派信号 → 加息预期升温 → 利率上行 → 风险资产承压",
+      "logic_en": "Central bank hawkish signal → rate hike expectations rise → yields rise → risk assets under pressure",
+      "tags": [
+        {
+          "type": "central-bank",
+          "text": "央行",
+          "text_en": "Central Bank"
+        }
+      ]
+    },
+    {
+      "event": "英伟达重新任命黄仁勋为首席执行官后，交易员加大了对英国央行和欧洲央行加息的押注。",
+      "event_en": "Nvidia重新任命黄仁勋为首席执行官后，交易员加大了对英国central bank和欧洲central bankrate hike的押注。",
+      "assets": "英伟达",
+      "assets_en": "Nvidia",
+      "dir": "up",
+      "logic": "央行鹰派信号 → 加息预期升温 → 资金回流本币 → 相关资产受益",
+      "logic_en": "Central bank hawkish signal → rate hike expectations rise → capital flows back to local currency → related assets benefit",
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        },
+        {
+          "type": "central-bank",
+          "text": "央行",
+          "text_en": "Central Bank"
+        },
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ]
+    },
+    {
+      "event": "随着英伟达恢复黄仁勋的CEO职务，提振了投资者对该板块的情绪，欧洲半导体股票在下午的交易中大幅上涨。",
+      "event_en": "随着Nvidia恢复黄仁勋的CEO职务，提振了投资者对该sector的sentiment，欧洲semiconductors股票在下午的交易中大幅rise。",
+      "assets": "英伟达 / 半导体板块",
+      "assets_en": "Nvidia / Semiconductors",
+      "dir": "split",
+      "logic": "AI产业事件 → 算力/芯片需求预期变化 → 相关板块联动",
+      "logic_en": "AI industry event → compute/chip demand expectations shift → related sectors correlate",
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ]
+    },
+    {
+      "event": "富时A50夜期涨幅一度达到1.5%左右。 纳斯达克金龙中国指数一度涨超2.7%，逼近5155点。热门中概股里，日月光半导体一度涨约25%，小鹏涨约10%，百度涨约8%，阿里巴巴涨约8%...",
+      "event_en": "富时A50夜期gain一度达到1.5%左右。 纳斯达克金龙中国index一度surge past2.7%，逼近5155点。热门中概股里，daymonth光semiconductors一度涨约25%，小鹏涨约10%，百度涨约8%，阿里巴巴涨约8%...",
+      "assets": "阿里巴巴 / 半导体板块",
+      "assets_en": "Alibaba / Semiconductors",
+      "dir": "split",
+      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
+      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst",
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        },
+        {
+          "type": "china",
+          "text": "中国",
+          "text_en": "China"
+        }
+      ]
+    },
+    {
+      "event": "美股盘初，大类资产类ETF中，新兴市场ETF涨8.3%，纳斯达克100 ETF涨6.3%，黄金ETF涨4.2%，标普500 ETF涨4.1%，日元做多跌0.6%，美国布伦特油价基金跌2.5%...",
+      "event_en": "美股盘初，大类资产类ETF中，新兴市场ETF涨8.3%，纳斯达克100 ETF涨6.3%，goldETF涨4.2%，S&P 500 ETF涨4.1%，JPY做多跌0.6%，美国布伦特油价基金跌2.5%...",
+      "assets": "标普500 / 日元 / 黄金",
+      "assets_en": "S&P 500 / JPY / Gold",
+      "dir": "split",
+      "logic": "原油供需变化 → 油价波动 → 能源股/通胀预期联动",
+      "logic_en": "Oil supply/demand shift → oil price volatility → energy stocks / inflation expectations correlate",
+      "tags": [
+        {
+          "type": "energy",
+          "text": "能源",
+          "text_en": "Energy"
+        }
+      ]
+    },
+    {
+      "event": "在英伟达董事会恢复黄仁勋的首席执行官职务后，美国信用风险指标大幅收紧。",
+      "event_en": "在Nvidia董事会恢复黄仁勋的首席执行官职务后，美国信用risk指标大幅收紧。",
+      "assets": "标普500 / 英伟达",
+      "assets_en": "S&P 500 / Nvidia",
+      "dir": "split",
+      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
+      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst",
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ]
+    },
+    {
+      "event": "美股盘初，英伟达涨32%，Nebius集团涨33.5%，戴尔科技涨29%，CoreWeave涨28%，Lumentum涨21.8%...",
+      "event_en": "美股盘初，Nvidia涨32%，Nebius集团涨33.5%，戴尔科技涨29%，CoreWeave涨28%，Lumentum涨21.8%...",
+      "assets": "英伟达 / 特斯拉 / 阿里巴巴 / Anthropic",
+      "assets_en": "Nvidia / Tesla / Alibaba / Anthropic",
+      "dir": "up",
+      "logic": "AI产业事件 → 算力/芯片需求预期变化 → 相关板块联动",
+      "logic_en": "AI industry event → compute/chip demand expectations shift → related sectors correlate",
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        },
+        {
+          "type": "china",
+          "text": "中国",
+          "text_en": "China"
+        }
+      ]
+    },
+    {
+      "event": "WTI原油日内跌幅超过4.0%，失守80美元/桶关口，为8月份以来首次；布伦特原油日内跌幅达4.0%，报88.8美元/桶。 美元指数日内涨幅达0.5%，报104.3659。",
+      "event_en": "WTIcrude oilday内loss超过4.0%，失守80USD/桶关口，为8month份以来first time；布伦特crude oilday内loss达4.0%，reported88.8USD/桶。 Dollar Indexday内gain达0.5%，reported104.3659。",
+      "assets": "美元指数 / 原油",
+      "assets_en": "USD Index / Crude Oil",
+      "dir": "split",
+      "logic": "原油供需变化 → 油价波动 → 能源股/通胀预期联动",
+      "logic_en": "Oil supply/demand shift → oil price volatility → energy stocks / inflation expectations correlate",
+      "tags": [
+        {
+          "type": "energy",
+          "text": "能源",
+          "text_en": "Energy"
+        }
+      ]
+    },
+    {
+      "event": "非洲股市收盘播报｜周一（11月23日），南非富时/JSE非洲领先40可交易指数收涨1.9%，报98669.34点，全天处于上涨状态，大部分时间持稳于98000点附近，美股开盘之前出现一波短线拉升行情。",
+      "event_en": "非洲股市close播reported｜周一（11month23day），南非富时/JSE非洲领先40可交易indexclose up1.9%，reported98669.34点，全天处于rise状态，大部分时间持稳于98000点附近，美股open之前出现一波短线rally行情。",
+      "assets": "美元指数 / 黄金",
+      "assets_en": "USD Index / Gold",
+      "dir": "up",
+      "logic": "利好事件 → 市场预期改善 → 资产价格上涨",
+      "logic_en": "Positive event → market expectations improve → asset prices rise",
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ]
+    }
+  ],
+  "chains": [
+    {
+      "title": "AI Capex链：AI交易抛售压力缓解，美股盘前科技股集体反弹，英伟达盘前一度涨近10% → 美股盘初，英伟达涨32%，Nebius集团涨...",
+      "title_en": "AI Capex Chain: AI交易抛售压力缓解，美股pre-market科技股集体反弹，Nvidiapre-market一度涨近10% → 美股盘初，Nvidia涨32%，Nebius集团涨...",
+      "status": "consensus",
+      "nodes": [
+        {
+          "text": "AI交易抛售压力缓解，美股盘前科技股集体反弹，英伟达盘前一度涨近10%",
+          "text_en": "AI交易抛售压力缓解，美股pre-market科技股集体反弹，Nvidiapre-market一度涨近10%",
+          "type": "cause"
+        },
+        {
+          "text": "随着英伟达恢复黄仁勋的CEO职务，提振了投资者对该板块的情绪，欧洲半导体股票在下午的交易中大幅上涨",
+          "text_en": "随着Nvidia恢复黄仁勋的CEO职务，提振了投资者对该sector的sentiment，欧洲semiconductors股票在下午的交易中大幅rise",
+          "type": "intermediate"
+        },
+        {
+          "text": "美股盘初，英伟达涨32%，Nebius集团涨33.5%，戴尔科技涨29%",
+          "text_en": "美股盘初，Nvidia涨32%，Nebius集团涨33.5%，戴尔科技涨29%",
+          "type": "effect"
+        }
+      ],
+      "jargon": [
+        {
+          "term": "AI Capex",
+          "term_en": "AI Capex (Capital Expenditure)",
+          "explain": "AI公司花在买芯片、建数据中心、租GPU上的钱。这笔钱最终变成半导体公司的订单。",
+          "explain_en": "Money AI companies spend on chips, data centers, and GPUs. Ultimately becomes semiconductor company orders."
+        },
+        {
+          "term": "光通信",
+          "term_en": "Optical Communications",
+          "explain": "数据中心里用光传输数据的技术。AI集群越大，需要的光模块越多。",
+          "explain_en": "Technology using light to transmit data in data centers. Bigger AI clusters need more optical modules."
+        },
+        {
+          "term": "暗盘交易",
+          "term_en": "Grey Market Trading",
+          "explain": "IPO正式挂牌前的场外交易。暗盘涨跌反映机构对IPO的预期。",
+          "explain_en": "Off-exchange trading before official IPO listing. Grey market moves reflect institutional expectations."
+        }
+      ]
+    },
+    {
+      "title": "央行政策链：英伟达重新任命黄仁勋为首席执行官后，交易员加大了对英国央行和欧洲央行加息的押注 → 随着美联储可能加息的前景抑制了整个发展中世界...",
+      "title_en": "Central Bank Policy Chain: Nvidia重新任命黄仁勋为首席执行官后，交易员加大了对英国central bank和欧洲central bankrate hike的押注 → 随着the Fed可能rate hike的前景抑制了整个发展中世界...",
+      "status": "unverified",
+      "nodes": [
+        {
+          "text": "英伟达重新任命黄仁勋为首席执行官后，交易员加大了对英国央行和欧洲央行加息的押注",
+          "text_en": "Nvidia重新任命黄仁勋为首席执行官后，交易员加大了对英国central bank和欧洲central bankrate hike的押注",
+          "type": "cause"
+        },
+        {
+          "text": "随着美联储可能加息的前景抑制了整个发展中世界的风险偏好，投资者正纷纷从购买新兴市场债券的交易所交易基金（ETF）中撤资",
+          "text_en": "随着the Fed可能rate hike的前景抑制了整个发展中世界的risk appetite，投资者正纷纷从购买新兴市场债券的交易所交易基金（ETF）中撤资",
+          "type": "effect"
+        }
+      ],
+      "jargon": [
+        {
+          "term": "鹰派",
+          "term_en": "Hawkish",
+          "explain": "央行官员倾向于加息、收紧货币政策来压制通胀的态度。",
+          "explain_en": "Central bank officials' tendency to raise rates and tighten policy to suppress inflation."
+        },
+        {
+          "term": "终点利率",
+          "term_en": "Terminal Rate",
+          "explain": "市场预期央行加息到哪个水平就会停。终点利率上移=还要加，下移=快停了。",
+          "explain_en": "The rate level at which the market expects the central bank to stop hiking."
+        },
+        {
+          "term": "国债利差",
+          "term_en": "Bond Spread",
+          "explain": "两个国家国债收益率的差额。利差走阔=市场认为某国债务风险上升。",
+          "explain_en": "Yield difference between two countries' government bonds. Widening spread = market sees rising debt risk."
+        }
+      ]
+    },
+    {
+      "title": "能源链：美股盘初，大类资产类ETF中，新兴市场ETF... → WTI原油日内跌幅超过4.0%，失守80美元/桶关口，为8月份以来首次",
+      "title_en": "Energy Chain: 美股盘初，大类资产类ETF中，新兴市场ETF... → WTIcrude oilday内loss超过4.0%，失守80USD/桶关口，为8month份以来first time",
+      "status": "consensus",
+      "nodes": [
+        {
+          "text": "美股盘初，大类资产类ETF中，新兴市场ETF涨8.3%，纳斯达克100 ETF涨6.3%",
+          "text_en": "美股盘初，大类资产类ETF中，新兴市场ETF涨8.3%，纳斯达克100 ETF涨6.3%",
+          "type": "cause"
+        },
+        {
+          "text": "WTI原油日内跌幅超过4.0%，失守80美元/桶关口，为8月份以来首次；布伦特原油日内跌幅达4.0%，报88.8美元/桶",
+          "text_en": "WTIcrude oilday内loss超过4.0%，失守80USD/桶关口，为8month份以来first time；布伦特crude oilday内loss达4.0%，reported88.8USD/桶",
+          "type": "effect"
+        }
+      ],
+      "jargon": [
+        {
+          "term": "霍尔木兹海峡",
+          "term_en": "Strait of Hormuz",
+          "explain": "全球约20%的石油运输必经之路。谁控制了这里，就掐住了全球能源的咽喉。",
+          "explain_en": "About 20% of global oil transport passes through here. Whoever controls it holds the world's energy throat."
+        },
+        {
+          "term": "超级油轮（VLCC）",
+          "term_en": "VLCC (Very Large Crude Carrier)",
+          "explain": "能装200万桶原油的巨型油轮。VLCC运费飙升=供应受阻的先行指标。",
+          "explain_en": "Giant tanker carrying 2M barrels. VLCC freight surge = leading indicator of supply disruption."
+        },
+        {
+          "term": "OPEC+",
+          "term_en": "OPEC+",
+          "explain": "石油输出国组织及其盟友，控制全球约40%原油产量。减产=涨价，增产=跌价。",
+          "explain_en": "Oil producers' alliance controlling ~40% of global supply. Cut = price up, increase = price down."
+        }
+      ]
+    },
+    {
+      "title": "中国市场链：富时A50夜期涨幅一度达到1.5%左右 → 相关资产变动",
+      "title_en": "China Market Chain: 富时A50夜期gain一度达到1.5%左右 → Asset price change",
+      "status": "consensus",
+      "nodes": [
+        {
+          "text": "富时A50夜期涨幅一度达到1.5%左右",
+          "text_en": "富时A50夜期gain一度达到1.5%左右",
+          "type": "cause"
+        },
+        {
+          "text": "资产价格分化",
+          "text_en": "Asset prices diverge",
+          "type": "effect"
+        }
+      ],
+      "jargon": [
+        {
+          "term": "自由现金流（FCF）",
+          "term_en": "Free Cash Flow (FCF)",
+          "explain": "赚的钱减去必须花的钱后，真正落袋的现金。FCF为负=花得比赚得多。",
+          "explain_en": "Earnings minus mandatory spending, actual pocketed cash. Negative FCF = spending exceeds earnings."
+        },
+        {
+          "term": "社零（社会消费品零售总额）",
+          "term_en": "Retail Sales",
+          "explain": "老百姓花钱消费的总量，反映内需强弱。升=消费旺，降=消费弱。",
+          "explain_en": "Total consumer spending, reflecting domestic demand strength."
+        },
+        {
+          "term": "北向资金",
+          "term_en": "Northbound Capital",
+          "explain": "通过沪港通/深港通从香港流入A股的资金，被视为外资风向标。",
+          "explain_en": "Capital flowing from HK into A-shares via Stock Connect, seen as foreign capital barometer."
+        }
+      ]
+    },
+    {
+      "title": "宏观链：在英伟达董事会恢复黄仁勋的首席执行官职务后，美国信用风险指标大幅收紧 → 非洲股市收盘播报｜周一（11月23日），南非...",
+      "title_en": "Macro Chain: 在Nvidia董事会恢复黄仁勋的首席执行官职务后，美国信用risk指标大幅收紧 → 非洲股市close播reported｜周一（11month23day），南非...",
+      "status": "consensus",
+      "nodes": [
+        {
+          "text": "在英伟达董事会恢复黄仁勋的首席执行官职务后，美国信用风险指标大幅收紧",
+          "text_en": "在Nvidia董事会恢复黄仁勋的首席执行官职务后，美国信用risk指标大幅收紧",
+          "type": "cause"
+        },
+        {
+          "text": "非洲股市收盘播报｜周一（11月23日），南非富时/JSE非洲领先40可交易指数收涨1.9%",
+          "text_en": "非洲股市close播reported｜周一（11month23day），南非富时/JSE非洲领先40可交易indexclose up1.9%",
+          "type": "effect"
+        }
+      ],
+      "jargon": [
+        {
+          "term": "美元走强→商品下跌",
+          "term_en": "Strong USD → Commodity Down",
+          "explain": "国际大宗商品以美元计价。美元贵了，同样一桶油用美元买就贵了，需求减少，价格就跌。",
+          "explain_en": "Commodities priced in USD. Stronger dollar = more expensive commodities = lower demand."
+        },
+        {
+          "term": "避险情绪",
+          "term_en": "Risk-Off Sentiment",
+          "explain": "市场害怕风险时，资金从股票等高风险资产流向黄金/美债等安全资产。",
+          "explain_en": "When markets fear risk, capital flows from stocks to safe havens like gold/Treasuries."
+        },
+        {
+          "term": "PMI（采购经理人指数）",
+          "term_en": "PMI (Purchasing Managers' Index)",
+          "explain": "衡量制造业/服务业景气度的指标。50以上=扩张，50以下=收缩。",
+          "explain_en": "Index measuring manufacturing/services activity. Above 50 = expansion, below 50 = contraction."
+        }
+      ]
+    }
+  ],
+  "verifications": [
+    {
+      "title": "AI Capex链：AI交易抛售压力缓解，美股盘前科技股集体反弹，英伟达盘前一度涨近10% → 美股盘初，英伟达涨32%，Nebius集团涨...能否持续？",
+      "title_en": "Can 'AI Capex Chain: AI交易抛售压力缓解，美股pre-market科技股集体反弹，Nvidiapre-market一度涨近10% → 美股盘初，Nvidia涨32%，Nebius集团涨...' sustain?",
+      "layer1": "AI capex叙事能否从'融资验证'切换到'盈利验证'？巨量融资证明了吸金能力，但何时能证明赚钱能力？",
+      "layer1_en": "Can the AI capex narrative shift from 'funding validation' to 'profit validation'? Massive funding proves capital attraction, but when profitability?",
+      "vars": [
+        "AI公司上市后5日股价：暗盘涨幅是初始热情，挂牌后是否破发或涨幅收窄",
+        "云厂商Capex/收入比：若比率持续上升，AI投入回报周期将被质疑",
+        "SK海力士/美光股价持续性：盘前大涨是情绪驱动，需确认HBM订单是否真正追加",
+        "A股算力芯片分化：国产AI芯片是否出现信任危机？"
+      ],
+      "vars_en": [
+        "AI company 5-day post-IPO stock: grey market gains are initial enthusiasm, watch for narrowing or break issue price",
+        "Cloud vendor Capex/revenue ratio: if rising, AI ROI cycle questioned",
+        "SK Hynix/Micron sustainability: pre-market rally is sentiment-driven, confirm HBM order additions",
+        "A-share compute chip divergence: domestic AI chip trust crisis?"
+      ]
+    },
+    {
+      "title": "央行政策链：英伟达重新任命黄仁勋为首席执行官后，交易员加大了对英国央行和欧洲央行加息的押注 → 随着美联储可能加息的前景抑制了整个发展中世界...能否持续？",
+      "title_en": "Can 'Central Bank Policy Chain: Nvidia重新任命黄仁勋为首席执行官后，交易员加大了对英国central bank和欧洲central bankrate hike的押注 → 随着the Fed可能rate hike的前景抑制了整个发展中世界...' sustain?",
+      "layer1": "央行鹰派信号与债务风险的博弈，会否触发利差危机？加息+高债务=火药桶。",
+      "layer1_en": "Will the central bank hawkish signal vs debt risk game trigger a spread crisis? Rate hikes + high debt = powder keg.",
+      "vars": [
+        "10年期国债利差：若走阔至85bp+，市场开始定价财政失控风险",
+        "劳动力成本：工资上涨是核心通胀的最后一英里，若继续走高央行确实会加息",
+        "财政预算案进展：若无法通过可信的财政方案，利差危机风险上升",
+        "传导保护工具使用条件：若被触发，等同于危机信号"
+      ],
+      "vars_en": [
+        "10Y bond spread: widening to 85bp+ = market prices fiscal loss of control",
+        "Labor costs: rising wages are core inflation's last mile, if continues CB will hike",
+        "Fiscal budget progress: if no credible fiscal plan, spread crisis risk rises",
+        "Transmission protection tool conditions: if triggered, equals crisis signal"
+      ]
+    },
+    {
+      "title": "能源链：美股盘初，大类资产类ETF中，新兴市场ETF... → WTI原油日内跌幅超过4.0%，失守80美元/桶关口，为8月份以来首次能否持续？",
+      "title_en": "Can 'Energy Chain: 美股盘初，大类资产类ETF中，新兴市场ETF... → WTIcrude oilday内loss超过4.0%，失守80USD/桶关口，为8month份以来first time' sustain?",
+      "layer1": "能源供应冲击是否会升级为系统性中断？这是局部冲突还是系统性封锁的开始？",
+      "layer1_en": "Will energy supply shock escalate into systemic disruption? Is this localized or the start of systemic blockade?",
+      "vars": [
+        "布伦特原油日内波动：单日涨幅超3%=市场开始定价封锁风险",
+        "VLCC运费指数（BDTI）：超级油轮运费飙升=船东要求额外风险补偿",
+        "后续军事行动：若出现第二次袭击，局势将质变",
+        "战略石油储备动向：若启动储备释放，说明官方认为风险可控度下降"
+      ],
+      "vars_en": [
+        "Brent intraday volatility: single-day move >3% = market pricing blockade risk",
+        "BDTI (VLCC freight index): surging rates = owners demanding risk premium",
+        "Follow-up military actions: second incident = qualitative escalation",
+        "SPR movements: if reserve release activated, officials see risk declining"
+      ]
+    },
+    {
+      "title": "中国市场链：富时A50夜期涨幅一度达到1.5%左右 → 相关资产变动能否持续？",
+      "title_en": "Can 'China Market Chain: 富时A50夜期gain一度达到1.5%左右 → Asset price change' sustain?",
+      "layer1": "中国市场多空因素交织：财报分化、政策预期、资金流向如何演变？",
+      "layer1_en": "China market mixed signals: how will earnings divergence, policy expectations, and capital flows evolve?",
+      "vars": [
+        "北向资金流向：净流入=外资看好，净流出=外资谨慎",
+        "社零/工业增加值数据：若超预期=内需回暖，低于预期=经济承压",
+        "A股成交量：放量上涨=信心恢复，缩量=观望情绪浓",
+        "中概股盘前/盘后走势：财报后市场如何评价盈利质量"
+      ],
+      "vars_en": [
+        "Northbound capital: net inflow = foreign bullish, net outflow = cautious",
+        "Retail sales / industrial output: beat = domestic demand recovering, miss = economy pressured",
+        "A-share volume: high volume + up = confidence recovery, low volume = wait-and-see",
+        "China ADR pre/post-market: how market assesses earnings quality post-report"
+      ]
+    }
+  ],
+  "historical_analogies": [
+    {
+      "event": "2000年互联网泡沫：Capex暴增先于盈利崩塌（1999-2001年）",
+      "event_en": "Dot-com bubble: Capex surge preceded profit collapse (1999-2001)",
+      "lesson": "当市场为单一公司IPO狂欢时，不要忘记2000年电信公司疯狂铺设光缆、随后盈利无法覆盖投入的教训。巨量融资不等于盈利验证，系统脆弱性往往在最乐观时暴露。",
+      "lesson_en": "When markets celebrate a single company's IPO, remember the 2000 telecom companies frantically laying fiber, then profits failing to cover investment. Massive funding does not equal profitability validation.",
+      "diff": "2000年铺设的光缆后来确实被用了，只是用了5-10年才回本。AI基础设施的变现周期可能更短，且这次有真实的B端付费需求在支撑，不像当年很多流量是免费的。",
+      "diff_en": "The fiber laid in 2000 was eventually used, just took 5-10 years to break even. AI infrastructure monetization may be faster, with real B-side paid demand unlike free dot-com traffic."
+    },
+    {
+      "event": "欧债危机：希腊-意大利-西班牙利差螺旋（2011-2012年）",
+      "event_en": "European Debt Crisis: Greece-Italy-Spain spread spiral (2011-2012)",
+      "lesson": "央行在通胀压力下过早加息、随后引爆债务螺旋的剧本高度相似。加息加上高债务等于火药桶。2011年欧央行加息后，意大利债务利差飙升，最终靠Draghi的whatever it takes才稳住。",
+      "lesson_en": "The script of a central bank raising rates prematurely under inflation pressure then triggering a debt spiral is highly similar. Rate hikes plus high debt equals powder keg. In 2011, the ECB hiked, Italian spreads surged, only stabilized by Draghi's whatever it takes.",
+      "diff": "2012年Draghi的承诺和OMT/PEPP/TPI等工具箱今天已存在。央行自己也在监控这条线。但工具存在不等于能无成本使用，政治博弈才是关键。",
+      "diff_en": "Draghi's 2012 pledge and tools like OMT/PEPP/TPI now exist. The central bank is monitoring this line. But tool existence does not equal cost-free usage; political gaming is the key."
+    },
+    {
+      "event": "2008年雷曼兄弟破产 + AIG救助（2008年9月）",
+      "event_en": "Lehman Brothers collapse + AIG bailout (Sep 2008)",
+      "lesson": "当市场为金融创新或科技突破狂欢时，不要忘记2008年雷曼破产前市场也在为金融创新永动机定价。巨量融资不等于盈利验证，系统脆弱性往往在最乐观时暴露。",
+      "lesson_en": "When markets celebrate financial innovation or tech breakthroughs, remember that before Lehman's collapse in 2008, markets were also pricing in a financial innovation perpetual motion machine. Massive funding does not equal profitability validation.",
+      "diff": "2008年的风险藏在衍生品不透明链条里；今天AI公司的资产负债表相对透明。且AI基础设施投入有明确的终端需求，不像CDO的底层资产是次贷。",
+      "diff_en": "2008's risk was hidden in opaque derivative chains; today's AI companies have relatively transparent balance sheets. AI infrastructure investment has clear end-user demand, unlike CDOs backed by subprime mortgages."
+    },
+    {
+      "event": "2018年中美贸易战芯片股恐慌（2018年Q4）",
+      "event_en": "2018 US-China trade war chip panic (Q4 2018)",
+      "lesson": "2018年中美贸易战期间，芯片股集体暴跌后迎来2019-2021年超级周期。恐慌往往是长期机会的起点，但需区分恐慌性杀跌和基本面恶化。",
+      "lesson_en": "During the 2018 US-China trade war, chip stocks collectively plunged then entered the 2019-2021 super cycle. Panic often marks long-term opportunity, but distinguish panic selling from fundamental deterioration.",
+      "diff": "2018年的恐慌由关税驱动，今天如果是AI芯片分化，则需关注国产替代的真实进展和盈利能力，不仅仅是情绪。",
+      "diff_en": "2018's panic was tariff-driven; if today's AI chip divergence, watch domestic substitution progress and profitability, not just sentiment."
+    }
+  ]
+}
