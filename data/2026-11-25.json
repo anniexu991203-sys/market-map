@@ -1,0 +1,714 @@
+{
+  "date": "2026-11-25",
+  "weekday": "星期三",
+  "weekday_en": "Wednesday",
+  "crawl_time": "约16:37（北京时间）",
+  "source": "华尔街见闻",
+  "sources_detail": [
+    "华尔街见闻"
+  ],
+  "filter_result": "10条核心要闻 / 4条因果链 / 100条原始抓取",
+  "stats": [
+    {
+      "label": "英伟达盘前",
+      "label_en": "Nvidiapre-market",
+      "value": "6%",
+      "change": "美股股指期货持续走低，纳指100期货跌超2%，英伟达盘前跌6%，Anthropic跌破发行价。\n\n英伟达股价飙升重创空头",
+      "change_en": "美股股指futures持续走低，Nasdaq100futuresdrop below2%，Nvidiapre-market跌6%，Anthropic跌破issue price。\n\nNvidia股价surge重hit空头",
+      "dir": "split"
+    },
+    {
+      "label": "标普",
+      "label_en": "S&P",
+      "value": "0.5%",
+      "change": "纳斯达克100指数跌幅扩大至2%，标普跌0.5%，道指涨0.5%，纳指跌1.5%，半导体指数跌7.2%，生物科技指数涨3",
+      "change_en": "纳斯达克100indexlossexpanded至2%，S&P跌0.5%，Dow Jones涨0.5%，Nasdaq跌1.5%，semiconductorsindex跌7.2%，biotechindex涨3",
+      "dir": "split"
+    },
+    {
+      "label": "英伟达",
+      "label_en": "Nvidia",
+      "value": "5.4%",
+      "change": "美股盘初，英伟达跌5.4%，Anthropic跌5.9%、最低至80.64美元——跌破上周美国IPO发行价83美元，美光",
+      "change_en": "美股盘初，Nvidia跌5.4%，Anthropic跌5.9%、最低至80.64USD——跌破上周美国IPOissue price83USD，美光",
+      "dir": "split"
+    },
+    {
+      "label": "Insmed涨14",
+      "label_en": "Insmed涨14",
+      "value": "new low",
+      "change": "美股盘初，英伟达跌5.4%，Anthropic跌5.9%、最低至80.64美元——跌破上周美国IPO发行价83美元，美光",
+      "change_en": "美股盘初，Nvidia跌5.4%，Anthropic跌5.9%、最低至80.64USD——跌破上周美国IPOissue price83USD，美光",
+      "dir": "split"
+    },
+    {
+      "label": "而该凭证在本季度已暴",
+      "label_en": "而该凭证在本quarter已暴",
+      "value": "56%",
+      "change": "随着债务不断攀升并挤压其商业帝国，卡尔·伊坎（Carl Icahn）的财富已缩水至约13亿美元。\n\n伊坎企业有限合伙企业",
+      "change_en": "随着debt不断攀升并挤压其商业帝国，卡尔·伊坎（Carl Icahn）的财富已缩水至约13亿USD。\n\n伊坎企业有限合伙企业",
+      "dir": "split"
+    },
+    {
+      "label": "沥青夜盘收",
+      "label_en": "沥青夜盘收",
+      "value": "3.03%",
+      "change": "沥青夜盘收涨3.03%，纯苯涨2.82%，棕榈油涨2.78%，甲醇涨2.6%，PTA涨2.52%，对二甲苯涨2.44%，",
+      "change_en": "沥青夜盘close up3.03%，纯苯涨2.82%，棕榈油涨2.78%，甲醇涨2.6%，PTA涨2.52%，对二甲苯涨2.44%，",
+      "dir": "split"
+    },
+    {
+      "label": "克金龙中国指数转而上",
+      "label_en": "克金龙中国index转而上",
+      "value": "0.25%",
+      "change": "纳斯达克金龙中国指数转而上涨0.25%，刷新日高至5154.31点，美股开盘时跌至5064.18点。\n\n热门中概股里，金",
+      "change_en": "纳斯达克金龙中国index转而rise0.25%，刷新day高至5154.31点，美股open时跌至5064.18点。\n\n热门中概股里，金",
+      "dir": "split"
+    },
+    {
+      "label": "Microsoft",
+      "label_en": "Microsoft",
+      "value": "365",
+      "change": "路透查阅的内部备忘录显示，在一次长达24小时的服务中断暴露了微软工程系统及危机响应机制的缺陷后，微软公司已发起一项“红色",
+      "change_en": "路透查阅的内部备忘录显示，在一次长达24小时的服务中断暴露了Microsoft工程系统及危机响应机制的缺陷后，Microsoft公司已发起一项“红色",
+      "dir": "neutral"
+    }
+  ],
+  "events": [
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        },
+        {
+          "type": "china",
+          "text": "中国",
+          "text_en": "China"
+        }
+      ],
+      "event": "美股股指期货持续走低，纳指100期货跌超2%，英伟达盘前跌6%，Anthropic跌破发行价。",
+      "event_en": "美股股指futures持续走低，Nasdaq100futuresdrop below2%，Nvidiapre-market跌6%，Anthropic跌破issue price。",
+      "assets": "A股/沪指 / 纳指 / 美元指数 / 英伟达 / 苹果",
+      "assets_en": "A-shares/Shanghai Composite / Nasdaq / USD Index / Nvidia / Apple",
+      "dir": "split",
+      "logic": "AI公司财报 → Capex/收入验证 → 盈利可持续性评估 → 股价分化",
+      "logic_en": "AI company earnings → Capex/revenue validation → profitability sustainability assessment → stock price diverges"
+    },
+    {
+      "tags": [
+        {
+          "type": "central-bank",
+          "text": "央行",
+          "text_en": "Central Bank"
+        },
+        {
+          "type": "energy",
+          "text": "能源",
+          "text_en": "Energy"
+        }
+      ],
+      "event": "摩根大通最新大宗商品展望预计，受原油价格走低及美联储自2027年第一季度起暂停加息的宏观环境推动，黄金价格将在2027年第四季度回升至每盎司4500美元，白银则回升至50美元中段；",
+      "event_en": "摩根大通最新大宗商品展望预计，受crude oil价格走低及the Fed自2027year第一quarter起暂停rate hike的宏观环境推动，gold价格将在2027year第四quarter回升至每盎司4500USD，白silver则回升至50USD中段；",
+      "assets": "美元指数 / 原油 / 黄金 / 白银 / 铜",
+      "assets_en": "USD Index / Crude Oil / Gold / Silver / Copper",
+      "dir": "split",
+      "logic": "央行鹰派信号 → 加息预期升温 → 利率上行 → 风险资产承压",
+      "logic_en": "Central bank hawkish signal → rate hike expectations rise → yields rise → risk assets under pressure"
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ],
+      "event": "纳斯达克100指数跌幅扩大至2%，标普跌0.5%，道指涨0.5%，纳指跌1.5%，半导体指数跌7.2%，生物科技指数涨3.3%。",
+      "event_en": "纳斯达克100indexlossexpanded至2%，S&P跌0.5%，Dow Jones涨0.5%，Nasdaq跌1.5%，semiconductorsindex跌7.2%，biotechindex涨3.3%。",
+      "assets": "纳指 / 标普500 / 道指 / 英伟达 / 半导体板块",
+      "assets_en": "Nasdaq / S&P 500 / Dow Jones / Nvidia / Semiconductors",
+      "dir": "split",
+      "logic": "AI产业事件 → 算力/芯片需求预期变化 → 相关板块联动",
+      "logic_en": "AI industry event → compute/chip demand expectations shift → related sectors correlate"
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ],
+      "event": "美股盘初，英伟达跌5.4%，Anthropic跌5.9%、最低至80.64美元——跌破上周美国IPO发行价83美元，美光、闪迪、AMD、SK海力士ADR、英特尔、希捷科技、Lumentum、Co...",
+      "event_en": "美股盘初，Nvidia跌5.4%，Anthropic跌5.9%、最低至80.64USD——跌破上周美国IPOissue price83USD，美光、闪迪、AMD、SK海力士ADR、英特尔、希捷科技、Lumentum、Co...",
+      "assets": "美元指数 / 英伟达 / Anthropic",
+      "assets_en": "USD Index / Nvidia / Anthropic",
+      "dir": "split",
+      "logic": "AI公司IPO/融资 → AI capex叙事验证 → 半导体/算力需求预期上修 → 相关板块大涨",
+      "logic_en": "AI company IPO/funding → AI capex narrative validated → semiconductor/compute demand expectations revised up → related sectors surge"
+    },
+    {
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "随着债务不断攀升并挤压其商业帝国，卡尔·伊坎（Carl Icahn）的财富已缩水至约13亿美元。",
+      "event_en": "随着debt不断攀升并挤压其商业帝国，卡尔·伊坎（Carl Icahn）的财富已缩水至约13亿USD。",
+      "assets": "美元指数",
+      "assets_en": "USD Index",
+      "dir": "split",
+      "logic": "债务风险信号 → 国债利差走阔 → 相关国家资产承压",
+      "logic_en": "Debt risk signal → bond spread widens → related country assets under pressure"
+    },
+    {
+      "tags": [
+        {
+          "type": "central-bank",
+          "text": "央行",
+          "text_en": "Central Bank"
+        },
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "欧洲央行管委兼荷兰央行行长Sleijpen：利率的（短期）方向是“清晰的”。",
+      "event_en": "欧洲central bank管委兼荷兰central bank行长Sleijpen：interest rate的（短期）方向是“清晰的”。",
+      "assets": "详见原文",
+      "assets_en": "See source",
+      "dir": "up",
+      "logic": "央行鹰派信号 → 加息预期升温 → 资金回流本币 → 相关资产受益",
+      "logic_en": "Central bank hawkish signal → rate hike expectations rise → capital flows back to local currency → related assets benefit"
+    },
+    {
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "美国消费者信心飙升至近两年来的最高水平，美国民众对经济和就业市场更加乐观。",
+      "event_en": "美国消费者confidencesurge至近两year来的最高水平，美国民众对经济和就业市场更加乐观。",
+      "assets": "详见原文",
+      "assets_en": "See source",
+      "dir": "up",
+      "logic": "利好事件 → 市场预期改善 → 资产价格上涨",
+      "logic_en": "Positive event → market expectations improve → asset prices rise"
+    },
+    {
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "沥青夜盘收涨3.03%，纯苯涨2.82%，棕榈油涨2.78%，甲醇涨2.6%，PTA涨2.52%，对二甲苯涨2.44%，瓶片涨2.37%，焦煤涨1.95%，燃油涨1.76%，焦炭涨1.68%。",
+      "event_en": "沥青夜盘close up3.03%，纯苯涨2.82%，棕榈油涨2.78%，甲醇涨2.6%，PTA涨2.52%，对二甲苯涨2.44%，瓶片涨2.37%，焦煤涨1.95%，燃油涨1.76%，焦炭涨1.68%。",
+      "assets": "铁矿石",
+      "assets_en": "Iron Ore",
+      "dir": "split",
+      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
+      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst"
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        },
+        {
+          "type": "china",
+          "text": "中国",
+          "text_en": "China"
+        }
+      ],
+      "event": "纳斯达克金龙中国指数转而上涨0.25%，刷新日高至5154.31点，美股开盘时跌至5064.18点。",
+      "event_en": "纳斯达克金龙中国index转而rise0.25%，刷新day高至5154.31点，美股open时跌至5064.18点。",
+      "assets": "半导体板块",
+      "assets_en": "Semiconductors",
+      "dir": "split",
+      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
+      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst"
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ],
+      "event": "路透查阅的内部备忘录显示，在一次长达24小时的服务中断暴露了微软工程系统及危机响应机制的缺陷后，微软公司已发起一项“红色警报”（Code Red）行动，以彻底改革其预防和应对重大服务故障的方式。",
+      "event_en": "路透查阅的内部备忘录显示，在一次长达24小时的服务中断暴露了Microsoft工程系统及危机响应机制的缺陷后，Microsoft公司已发起一项“红色警reported”（Code Red）行动，以彻底改革其预防和应对重大服务故障的方式。",
+      "assets": "详见原文",
+      "assets_en": "See source",
+      "dir": "neutral",
+      "logic": "AI产业事件 → 算力/芯片需求预期变化 → 相关板块联动",
+      "logic_en": "AI industry event → compute/chip demand expectations shift → related sectors correlate"
+    }
+  ],
+  "four_column_table": [
+    {
+      "event": "美股股指期货持续走低，纳指100期货跌超2%，英伟达盘前跌6%，Anthropic跌破发行价。",
+      "event_en": "美股股指futures持续走低，Nasdaq100futuresdrop below2%，Nvidiapre-market跌6%，Anthropic跌破issue price。",
+      "assets": "A股/沪指 / 纳指 / 美元指数 / 英伟达 / 苹果",
+      "assets_en": "A-shares/Shanghai Composite / Nasdaq / USD Index / Nvidia / Apple",
+      "dir": "split",
+      "logic": "AI公司财报 → Capex/收入验证 → 盈利可持续性评估 → 股价分化",
+      "logic_en": "AI company earnings → Capex/revenue validation → profitability sustainability assessment → stock price diverges",
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        },
+        {
+          "type": "china",
+          "text": "中国",
+          "text_en": "China"
+        }
+      ]
+    },
+    {
+      "event": "摩根大通最新大宗商品展望预计，受原油价格走低及美联储自2027年第一季度起暂停加息的宏观环境推动，黄金价格将在2027年第四季度回升至每盎司4500美元，白银则回升至50美元中段；",
+      "event_en": "摩根大通最新大宗商品展望预计，受crude oil价格走低及the Fed自2027year第一quarter起暂停rate hike的宏观环境推动，gold价格将在2027year第四quarter回升至每盎司4500USD，白silver则回升至50USD中段；",
+      "assets": "美元指数 / 原油 / 黄金 / 白银 / 铜",
+      "assets_en": "USD Index / Crude Oil / Gold / Silver / Copper",
+      "dir": "split",
+      "logic": "央行鹰派信号 → 加息预期升温 → 利率上行 → 风险资产承压",
+      "logic_en": "Central bank hawkish signal → rate hike expectations rise → yields rise → risk assets under pressure",
+      "tags": [
+        {
+          "type": "central-bank",
+          "text": "央行",
+          "text_en": "Central Bank"
+        },
+        {
+          "type": "energy",
+          "text": "能源",
+          "text_en": "Energy"
+        }
+      ]
+    },
+    {
+      "event": "纳斯达克100指数跌幅扩大至2%，标普跌0.5%，道指涨0.5%，纳指跌1.5%，半导体指数跌7.2%，生物科技指数涨3.3%。",
+      "event_en": "纳斯达克100indexlossexpanded至2%，S&P跌0.5%，Dow Jones涨0.5%，Nasdaq跌1.5%，semiconductorsindex跌7.2%，biotechindex涨3.3%。",
+      "assets": "纳指 / 标普500 / 道指 / 英伟达 / 半导体板块",
+      "assets_en": "Nasdaq / S&P 500 / Dow Jones / Nvidia / Semiconductors",
+      "dir": "split",
+      "logic": "AI产业事件 → 算力/芯片需求预期变化 → 相关板块联动",
+      "logic_en": "AI industry event → compute/chip demand expectations shift → related sectors correlate",
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ]
+    },
+    {
+      "event": "美股盘初，英伟达跌5.4%，Anthropic跌5.9%、最低至80.64美元——跌破上周美国IPO发行价83美元，美光、闪迪、AMD、SK海力士ADR、英特尔、希捷科技、Lumentum、Co...",
+      "event_en": "美股盘初，Nvidia跌5.4%，Anthropic跌5.9%、最低至80.64USD——跌破上周美国IPOissue price83USD，美光、闪迪、AMD、SK海力士ADR、英特尔、希捷科技、Lumentum、Co...",
+      "assets": "美元指数 / 英伟达 / Anthropic",
+      "assets_en": "USD Index / Nvidia / Anthropic",
+      "dir": "split",
+      "logic": "AI公司IPO/融资 → AI capex叙事验证 → 半导体/算力需求预期上修 → 相关板块大涨",
+      "logic_en": "AI company IPO/funding → AI capex narrative validated → semiconductor/compute demand expectations revised up → related sectors surge",
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ]
+    },
+    {
+      "event": "随着债务不断攀升并挤压其商业帝国，卡尔·伊坎（Carl Icahn）的财富已缩水至约13亿美元。",
+      "event_en": "随着debt不断攀升并挤压其商业帝国，卡尔·伊坎（Carl Icahn）的财富已缩水至约13亿USD。",
+      "assets": "美元指数",
+      "assets_en": "USD Index",
+      "dir": "split",
+      "logic": "债务风险信号 → 国债利差走阔 → 相关国家资产承压",
+      "logic_en": "Debt risk signal → bond spread widens → related country assets under pressure",
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ]
+    },
+    {
+      "event": "欧洲央行管委兼荷兰央行行长Sleijpen：利率的（短期）方向是“清晰的”。",
+      "event_en": "欧洲central bank管委兼荷兰central bank行长Sleijpen：interest rate的（短期）方向是“清晰的”。",
+      "assets": "详见原文",
+      "assets_en": "See source",
+      "dir": "up",
+      "logic": "央行鹰派信号 → 加息预期升温 → 资金回流本币 → 相关资产受益",
+      "logic_en": "Central bank hawkish signal → rate hike expectations rise → capital flows back to local currency → related assets benefit",
+      "tags": [
+        {
+          "type": "central-bank",
+          "text": "央行",
+          "text_en": "Central Bank"
+        },
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ]
+    },
+    {
+      "event": "美国消费者信心飙升至近两年来的最高水平，美国民众对经济和就业市场更加乐观。",
+      "event_en": "美国消费者confidencesurge至近两year来的最高水平，美国民众对经济和就业市场更加乐观。",
+      "assets": "详见原文",
+      "assets_en": "See source",
+      "dir": "up",
+      "logic": "利好事件 → 市场预期改善 → 资产价格上涨",
+      "logic_en": "Positive event → market expectations improve → asset prices rise",
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ]
+    },
+    {
+      "event": "沥青夜盘收涨3.03%，纯苯涨2.82%，棕榈油涨2.78%，甲醇涨2.6%，PTA涨2.52%，对二甲苯涨2.44%，瓶片涨2.37%，焦煤涨1.95%，燃油涨1.76%，焦炭涨1.68%。",
+      "event_en": "沥青夜盘close up3.03%，纯苯涨2.82%，棕榈油涨2.78%，甲醇涨2.6%，PTA涨2.52%，对二甲苯涨2.44%，瓶片涨2.37%，焦煤涨1.95%，燃油涨1.76%，焦炭涨1.68%。",
+      "assets": "铁矿石",
+      "assets_en": "Iron Ore",
+      "dir": "split",
+      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
+      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst",
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ]
+    },
+    {
+      "event": "纳斯达克金龙中国指数转而上涨0.25%，刷新日高至5154.31点，美股开盘时跌至5064.18点。",
+      "event_en": "纳斯达克金龙中国index转而rise0.25%，刷新day高至5154.31点，美股open时跌至5064.18点。",
+      "assets": "半导体板块",
+      "assets_en": "Semiconductors",
+      "dir": "split",
+      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
+      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst",
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        },
+        {
+          "type": "china",
+          "text": "中国",
+          "text_en": "China"
+        }
+      ]
+    },
+    {
+      "event": "路透查阅的内部备忘录显示，在一次长达24小时的服务中断暴露了微软工程系统及危机响应机制的缺陷后，微软公司已发起一项“红色警报”（Code Red）行动，以彻底改革其预防和应对重大服务故障的方式。",
+      "event_en": "路透查阅的内部备忘录显示，在一次长达24小时的服务中断暴露了Microsoft工程系统及危机响应机制的缺陷后，Microsoft公司已发起一项“红色警reported”（Code Red）行动，以彻底改革其预防和应对重大服务故障的方式。",
+      "assets": "详见原文",
+      "assets_en": "See source",
+      "dir": "neutral",
+      "logic": "AI产业事件 → 算力/芯片需求预期变化 → 相关板块联动",
+      "logic_en": "AI industry event → compute/chip demand expectations shift → related sectors correlate",
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ]
+    }
+  ],
+  "chains": [
+    {
+      "title": "AI Capex链：美股股指期货持续走低，纳指100期货跌超2% → 路透查阅的内部备忘录显示，在一次长达24小时...",
+      "title_en": "AI Capex Chain: 美股股指futures持续走低，Nasdaq100futuresdrop below2% → 路透查阅的内部备忘录显示，在一次长达24小时...",
+      "status": "unverified",
+      "nodes": [
+        {
+          "text": "美股股指期货持续走低，纳指100期货跌超2%，英伟达盘前跌6%，Anthropic跌破发行价",
+          "text_en": "美股股指futures持续走低，Nasdaq100futuresdrop below2%，Nvidiapre-market跌6%，Anthropic跌破issue price",
+          "type": "cause"
+        },
+        {
+          "text": "美股盘初，英伟达跌5.4%，Anthropic跌5.9%、最低至80.64美元——跌破上周美国...",
+          "text_en": "美股盘初，Nvidia跌5.4%，Anthropic跌5.9%、最低至80.64USD——跌破上周美国...",
+          "type": "intermediate"
+        },
+        {
+          "text": "纳斯达克100指数跌幅扩大至2%，标普跌0.5%，道指涨0.5%，纳指跌1.5%，半导体指数跌7.2%，生物科技指数涨3.3%",
+          "text_en": "纳斯达克100indexlossexpanded至2%，S&P跌0.5%，Dow Jones涨0.5%，Nasdaq跌1.5%，semiconductorsindex跌7.2%，biotechindex涨3.3%",
+          "type": "intermediate"
+        },
+        {
+          "text": "路透查阅的内部备忘录显示，在一次长达24小时的服务中断暴露了微软工程系统及危机响应机制的缺陷后",
+          "text_en": "路透查阅的内部备忘录显示，在一次长达24小时的服务中断暴露了Microsoft工程系统及危机响应机制的缺陷后",
+          "type": "effect"
+        }
+      ],
+      "jargon": [
+        {
+          "term": "AI Capex",
+          "term_en": "AI Capex (Capital Expenditure)",
+          "explain": "AI公司花在买芯片、建数据中心、租GPU上的钱。这笔钱最终变成半导体公司的订单。",
+          "explain_en": "Money AI companies spend on chips, data centers, and GPUs. Ultimately becomes semiconductor company orders."
+        },
+        {
+          "term": "光通信",
+          "term_en": "Optical Communications",
+          "explain": "数据中心里用光传输数据的技术。AI集群越大，需要的光模块越多。",
+          "explain_en": "Technology using light to transmit data in data centers. Bigger AI clusters need more optical modules."
+        },
+        {
+          "term": "暗盘交易",
+          "term_en": "Grey Market Trading",
+          "explain": "IPO正式挂牌前的场外交易。暗盘涨跌反映机构对IPO的预期。",
+          "explain_en": "Off-exchange trading before official IPO listing. Grey market moves reflect institutional expectations."
+        }
+      ]
+    },
+    {
+      "title": "央行政策链：摩根大通最新大宗商品展望预计，受原油价格走低... → 欧洲央行管委兼荷兰央行行长Sleijpen：利率的（短期）方向是“清晰的”",
+      "title_en": "Central Bank Policy Chain: 摩根大通最新大宗商品展望预计，受crude oil价格走低... → 欧洲central bank管委兼荷兰central bank行长Sleijpen：interest rate的（短期）方向是“清晰的”",
+      "status": "unverified",
+      "nodes": [
+        {
+          "text": "摩根大通最新大宗商品展望预计，受原油价格走低及美联储自2027年第一季度起暂停加息的宏观环境推动",
+          "text_en": "摩根大通最新大宗商品展望预计，受crude oil价格走低及the Fed自2027year第一quarter起暂停rate hike的宏观环境推动",
+          "type": "cause"
+        },
+        {
+          "text": "欧洲央行管委兼荷兰央行行长Sleijpen：利率的（短期）方向是“清晰的”",
+          "text_en": "欧洲central bank管委兼荷兰central bank行长Sleijpen：interest rate的（短期）方向是“清晰的”",
+          "type": "effect"
+        }
+      ],
+      "jargon": [
+        {
+          "term": "鹰派",
+          "term_en": "Hawkish",
+          "explain": "央行官员倾向于加息、收紧货币政策来压制通胀的态度。",
+          "explain_en": "Central bank officials' tendency to raise rates and tighten policy to suppress inflation."
+        },
+        {
+          "term": "终点利率",
+          "term_en": "Terminal Rate",
+          "explain": "市场预期央行加息到哪个水平就会停。终点利率上移=还要加，下移=快停了。",
+          "explain_en": "The rate level at which the market expects the central bank to stop hiking."
+        },
+        {
+          "term": "国债利差",
+          "term_en": "Bond Spread",
+          "explain": "两个国家国债收益率的差额。利差走阔=市场认为某国债务风险上升。",
+          "explain_en": "Yield difference between two countries' government bonds. Widening spread = market sees rising debt risk."
+        }
+      ]
+    },
+    {
+      "title": "中国市场链：纳斯达克金龙中国指数转而上涨0.25%，刷新... → 相关资产变动",
+      "title_en": "China Market Chain: 纳斯达克金龙中国index转而rise0.25%，刷新... → Asset price change",
+      "status": "consensus",
+      "nodes": [
+        {
+          "text": "纳斯达克金龙中国指数转而上涨0.25%，刷新日高至5154.31点，美股开盘时跌至5064.18点",
+          "text_en": "纳斯达克金龙中国index转而rise0.25%，刷新day高至5154.31点，美股open时跌至5064.18点",
+          "type": "cause"
+        },
+        {
+          "text": "资产价格分化",
+          "text_en": "Asset prices diverge",
+          "type": "effect"
+        }
+      ],
+      "jargon": [
+        {
+          "term": "自由现金流（FCF）",
+          "term_en": "Free Cash Flow (FCF)",
+          "explain": "赚的钱减去必须花的钱后，真正落袋的现金。FCF为负=花得比赚得多。",
+          "explain_en": "Earnings minus mandatory spending, actual pocketed cash. Negative FCF = spending exceeds earnings."
+        },
+        {
+          "term": "社零（社会消费品零售总额）",
+          "term_en": "Retail Sales",
+          "explain": "老百姓花钱消费的总量，反映内需强弱。升=消费旺，降=消费弱。",
+          "explain_en": "Total consumer spending, reflecting domestic demand strength."
+        },
+        {
+          "term": "北向资金",
+          "term_en": "Northbound Capital",
+          "explain": "通过沪港通/深港通从香港流入A股的资金，被视为外资风向标。",
+          "explain_en": "Capital flowing from HK into A-shares via Stock Connect, seen as foreign capital barometer."
+        }
+      ]
+    },
+    {
+      "title": "宏观链：随着债务不断攀升并挤压其商业帝国，卡尔·伊坎... → 沥青夜盘收涨3.03%，纯苯涨2.82%",
+      "title_en": "Macro Chain: 随着debt不断攀升并挤压其商业帝国，卡尔·伊坎... → 沥青夜盘close up3.03%，纯苯涨2.82%",
+      "status": "unverified",
+      "nodes": [
+        {
+          "text": "随着债务不断攀升并挤压其商业帝国，卡尔·伊坎（Carl Icahn）的财富已缩水至约13亿美元",
+          "text_en": "随着debt不断攀升并挤压其商业帝国，卡尔·伊坎（Carl Icahn）的财富已缩水至约13亿USD",
+          "type": "cause"
+        },
+        {
+          "text": "美国消费者信心飙升至近两年来的最高水平，美国民众对经济和就业市场更加乐观",
+          "text_en": "美国消费者confidencesurge至近两year来的最高水平，美国民众对经济和就业市场更加乐观",
+          "type": "intermediate"
+        },
+        {
+          "text": "沥青夜盘收涨3.03%，纯苯涨2.82%，棕榈油涨2.78%，甲醇涨2.6%，PTA涨2.52%",
+          "text_en": "沥青夜盘close up3.03%，纯苯涨2.82%，棕榈油涨2.78%，甲醇涨2.6%，PTA涨2.52%",
+          "type": "effect"
+        }
+      ],
+      "jargon": [
+        {
+          "term": "美元走强→商品下跌",
+          "term_en": "Strong USD → Commodity Down",
+          "explain": "国际大宗商品以美元计价。美元贵了，同样一桶油用美元买就贵了，需求减少，价格就跌。",
+          "explain_en": "Commodities priced in USD. Stronger dollar = more expensive commodities = lower demand."
+        },
+        {
+          "term": "避险情绪",
+          "term_en": "Risk-Off Sentiment",
+          "explain": "市场害怕风险时，资金从股票等高风险资产流向黄金/美债等安全资产。",
+          "explain_en": "When markets fear risk, capital flows from stocks to safe havens like gold/Treasuries."
+        },
+        {
+          "term": "PMI（采购经理人指数）",
+          "term_en": "PMI (Purchasing Managers' Index)",
+          "explain": "衡量制造业/服务业景气度的指标。50以上=扩张，50以下=收缩。",
+          "explain_en": "Index measuring manufacturing/services activity. Above 50 = expansion, below 50 = contraction."
+        }
+      ]
+    }
+  ],
+  "verifications": [
+    {
+      "title": "AI Capex链：美股股指期货持续走低，纳指100期货跌超2% → 路透查阅的内部备忘录显示，在一次长达24小时...能否持续？",
+      "title_en": "Can 'AI Capex Chain: 美股股指futures持续走低，Nasdaq100futuresdrop below2% → 路透查阅的内部备忘录显示，在一次长达24小时...' sustain?",
+      "layer1": "AI capex叙事能否从'融资验证'切换到'盈利验证'？巨量融资证明了吸金能力，但何时能证明赚钱能力？",
+      "layer1_en": "Can the AI capex narrative shift from 'funding validation' to 'profit validation'? Massive funding proves capital attraction, but when profitability?",
+      "vars": [
+        "AI公司上市后5日股价：暗盘涨幅是初始热情，挂牌后是否破发或涨幅收窄",
+        "云厂商Capex/收入比：若比率持续上升，AI投入回报周期将被质疑",
+        "SK海力士/美光股价持续性：盘前大涨是情绪驱动，需确认HBM订单是否真正追加",
+        "A股算力芯片分化：国产AI芯片是否出现信任危机？"
+      ],
+      "vars_en": [
+        "AI company 5-day post-IPO stock: grey market gains are initial enthusiasm, watch for narrowing or break issue price",
+        "Cloud vendor Capex/revenue ratio: if rising, AI ROI cycle questioned",
+        "SK Hynix/Micron sustainability: pre-market rally is sentiment-driven, confirm HBM order additions",
+        "A-share compute chip divergence: domestic AI chip trust crisis?"
+      ]
+    },
+    {
+      "title": "央行政策链：摩根大通最新大宗商品展望预计，受原油价格走低... → 欧洲央行管委兼荷兰央行行长Sleijpen：利率的（短期）方向是“清晰的”能否持续？",
+      "title_en": "Can 'Central Bank Policy Chain: 摩根大通最新大宗商品展望预计，受crude oil价格走低... → 欧洲central bank管委兼荷兰central bank行长Sleijpen：interest rate的（短期）方向是“清晰的”' sustain?",
+      "layer1": "央行鹰派信号与债务风险的博弈，会否触发利差危机？加息+高债务=火药桶。",
+      "layer1_en": "Will the central bank hawkish signal vs debt risk game trigger a spread crisis? Rate hikes + high debt = powder keg.",
+      "vars": [
+        "10年期国债利差：若走阔至85bp+，市场开始定价财政失控风险",
+        "劳动力成本：工资上涨是核心通胀的最后一英里，若继续走高央行确实会加息",
+        "财政预算案进展：若无法通过可信的财政方案，利差危机风险上升",
+        "传导保护工具使用条件：若被触发，等同于危机信号"
+      ],
+      "vars_en": [
+        "10Y bond spread: widening to 85bp+ = market prices fiscal loss of control",
+        "Labor costs: rising wages are core inflation's last mile, if continues CB will hike",
+        "Fiscal budget progress: if no credible fiscal plan, spread crisis risk rises",
+        "Transmission protection tool conditions: if triggered, equals crisis signal"
+      ]
+    },
+    {
+      "title": "中国市场链：纳斯达克金龙中国指数转而上涨0.25%，刷新... → 相关资产变动能否持续？",
+      "title_en": "Can 'China Market Chain: 纳斯达克金龙中国index转而rise0.25%，刷新... → Asset price change' sustain?",
+      "layer1": "中国市场多空因素交织：财报分化、政策预期、资金流向如何演变？",
+      "layer1_en": "China market mixed signals: how will earnings divergence, policy expectations, and capital flows evolve?",
+      "vars": [
+        "北向资金流向：净流入=外资看好，净流出=外资谨慎",
+        "社零/工业增加值数据：若超预期=内需回暖，低于预期=经济承压",
+        "A股成交量：放量上涨=信心恢复，缩量=观望情绪浓",
+        "中概股盘前/盘后走势：财报后市场如何评价盈利质量"
+      ],
+      "vars_en": [
+        "Northbound capital: net inflow = foreign bullish, net outflow = cautious",
+        "Retail sales / industrial output: beat = domestic demand recovering, miss = economy pressured",
+        "A-share volume: high volume + up = confidence recovery, low volume = wait-and-see",
+        "China ADR pre/post-market: how market assesses earnings quality post-report"
+      ]
+    },
+    {
+      "title": "宏观链：随着债务不断攀升并挤压其商业帝国，卡尔·伊坎... → 沥青夜盘收涨3.03%，纯苯涨2.82%能否持续？",
+      "title_en": "Can 'Macro Chain: 随着debt不断攀升并挤压其商业帝国，卡尔·伊坎... → 沥青夜盘close up3.03%，纯苯涨2.82%' sustain?",
+      "layer1": "该宏观事件后续发展如何？市场当前定价是否充分？",
+      "layer1_en": "How will this macro event develop? Is current market pricing adequate?",
+      "vars": [
+        "相关资产价格次日开盘方向",
+        "成交量是否异常放大（恐慌or追涨）",
+        "官方/央行是否有后续声明或澄清",
+        "关联资产是否同步反应（验证逻辑链）"
+      ],
+      "vars_en": [
+        "Related asset price direction at next open",
+        "Volume anomaly (panic or chasing)",
+        "Official/central bank follow-up statement",
+        "Correlated assets confirmation"
+      ]
+    }
+  ],
+  "historical_analogies": [
+    {
+      "event": "2000年互联网泡沫：Capex暴增先于盈利崩塌（1999-2001年）",
+      "event_en": "Dot-com bubble: Capex surge preceded profit collapse (1999-2001)",
+      "lesson": "当市场为单一公司IPO狂欢时，不要忘记2000年电信公司疯狂铺设光缆、随后盈利无法覆盖投入的教训。巨量融资不等于盈利验证，系统脆弱性往往在最乐观时暴露。",
+      "lesson_en": "When markets celebrate a single company's IPO, remember the 2000 telecom companies frantically laying fiber, then profits failing to cover investment. Massive funding does not equal profitability validation.",
+      "diff": "2000年铺设的光缆后来确实被用了，只是用了5-10年才回本。AI基础设施的变现周期可能更短，且这次有真实的B端付费需求在支撑，不像当年很多流量是免费的。",
+      "diff_en": "The fiber laid in 2000 was eventually used, just took 5-10 years to break even. AI infrastructure monetization may be faster, with real B-side paid demand unlike free dot-com traffic."
+    },
+    {
+      "event": "欧债危机：希腊-意大利-西班牙利差螺旋（2011-2012年）",
+      "event_en": "European Debt Crisis: Greece-Italy-Spain spread spiral (2011-2012)",
+      "lesson": "央行在通胀压力下过早加息、随后引爆债务螺旋的剧本高度相似。加息加上高债务等于火药桶。2011年欧央行加息后，意大利债务利差飙升，最终靠Draghi的whatever it takes才稳住。",
+      "lesson_en": "The script of a central bank raising rates prematurely under inflation pressure then triggering a debt spiral is highly similar. Rate hikes plus high debt equals powder keg. In 2011, the ECB hiked, Italian spreads surged, only stabilized by Draghi's whatever it takes.",
+      "diff": "2012年Draghi的承诺和OMT/PEPP/TPI等工具箱今天已存在。央行自己也在监控这条线。但工具存在不等于能无成本使用，政治博弈才是关键。",
+      "diff_en": "Draghi's 2012 pledge and tools like OMT/PEPP/TPI now exist. The central bank is monitoring this line. But tool existence does not equal cost-free usage; political gaming is the key."
+    },
+    {
+      "event": "2008年雷曼兄弟破产 + AIG救助（2008年9月）",
+      "event_en": "Lehman Brothers collapse + AIG bailout (Sep 2008)",
+      "lesson": "当市场为金融创新或科技突破狂欢时，不要忘记2008年雷曼破产前市场也在为金融创新永动机定价。巨量融资不等于盈利验证，系统脆弱性往往在最乐观时暴露。",
+      "lesson_en": "When markets celebrate financial innovation or tech breakthroughs, remember that before Lehman's collapse in 2008, markets were also pricing in a financial innovation perpetual motion machine. Massive funding does not equal profitability validation.",
+      "diff": "2008年的风险藏在衍生品不透明链条里；今天AI公司的资产负债表相对透明。且AI基础设施投入有明确的终端需求，不像CDO的底层资产是次贷。",
+      "diff_en": "2008's risk was hidden in opaque derivative chains; today's AI companies have relatively transparent balance sheets. AI infrastructure investment has clear end-user demand, unlike CDOs backed by subprime mortgages."
+    },
+    {
+      "event": "2018年中美贸易战芯片股恐慌（2018年Q4）",
+      "event_en": "2018 US-China trade war chip panic (Q4 2018)",
+      "lesson": "2018年中美贸易战期间，芯片股集体暴跌后迎来2019-2021年超级周期。恐慌往往是长期机会的起点，但需区分恐慌性杀跌和基本面恶化。",
+      "lesson_en": "During the 2018 US-China trade war, chip stocks collectively plunged then entered the 2019-2021 super cycle. Panic often marks long-term opportunity, but distinguish panic selling from fundamental deterioration.",
+      "diff": "2018年的恐慌由关税驱动，今天如果是AI芯片分化，则需关注国产替代的真实进展和盈利能力，不仅仅是情绪。",
+      "diff_en": "2018's panic was tariff-driven; if today's AI chip divergence, watch domestic substitution progress and profitability, not just sentiment."
+    }
+  ]
+}
