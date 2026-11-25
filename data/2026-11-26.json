@@ -2,7 +2,7 @@
   "date": "2026-11-26",
   "weekday": "星期四",
   "weekday_en": "Thursday",
-  "crawl_time": "约16:38（北京时间）",
+  "crawl_time": "约17:41（北京时间）",
   "source": "华尔街见闻",
   "sources_detail": [
     "华尔街见闻"
@@ -18,20 +18,20 @@
       "dir": "split"
     },
     {
+      "label": "随着华尔街对科技行业",
+      "label_en": "随着华尔街对科技行业",
+      "value": "new high",
+      "change": "随着华尔街对科技行业为人工智能融资而进行的创纪录举债感到日益恐慌，CoreWeave Inc.和英伟达的信用风险指标周三",
+      "change_en": "随着华尔街对科技行业为人工智能funding而进行的hit纪录举债感到day益panic，CoreWeave Inc.和Nvidia的信用risk指标周三",
+      "dir": "up"
+    },
+    {
       "label": "2月中旬高点以来已暴",
       "label_en": "2month中旬高点以来已暴",
       "value": "16%",
       "change": "美股住宅建筑商正逼近一个不祥的市场里程碑：该板块股票即将迎来连续第三年下跌，为次贷危机引发全球金融危机以来的最长连跌纪录",
       "change_en": "美股住宅建筑商正逼近一个不祥的市场里程碑：该sector股票即将迎来连续第三yearfall，为次贷危机引发全球金融危机以来的最长连跌纪录",
       "dir": "split"
-    },
-    {
-      "label": "费支出价格指数环比上",
-      "label_en": "费expenditure价格index环比上",
-      "value": "0.3%",
-      "change": "由于通胀持续挤压家庭预算，美国10月消费者支出陷入停滞。数据显示，经通胀调整后的个人支出较上月基本持平。美联储青睐的潜在",
-      "change_en": "由于inflation持续挤压家庭预算，美国10month消费者expenditure陷入停滞。数据显示，经inflationadjustment后的个人expenditure较上month基本持平。the Fed青睐的潜在",
-      "dir": "up"
     },
     {
       "label": "到明年底上",
@@ -114,6 +114,22 @@
     {
       "tags": [
         {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ],
+      "event": "随着华尔街对科技行业为人工智能融资而进行的创纪录举债感到日益恐慌，CoreWeave Inc.和英伟达的信用风险指标周三双双创下历史新高，同时衡量市场恐慌情绪的指标也再次达到3月份以来的最高水平。",
+      "event_en": "随着华尔街对科技行业为人工智能funding而进行的hit纪录举债感到day益panic，CoreWeave Inc.和Nvidia的信用risk指标周三双双hit下历史new high，同时衡量市场panicsentiment的指标也再次达到3month份以来的最高水平。",
+      "assets": "英伟达",
+      "assets_en": "Nvidia",
+      "dir": "up",
+      "logic": "债务风险信号 → 国债利差走阔 → 相关国家资产承压",
+      "logic_en": "Debt risk signal → bond spread widens → related country assets under pressure"
+    },
+    {
+      "tags": [
+        {
           "type": "central-bank",
           "text": "央行",
           "text_en": "Central Bank"
@@ -126,27 +142,6 @@
       "dir": "split",
       "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
       "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst"
-    },
-    {
-      "tags": [
-        {
-          "type": "central-bank",
-          "text": "央行",
-          "text_en": "Central Bank"
-        },
-        {
-          "type": "energy",
-          "text": "能源",
-          "text_en": "Energy"
-        }
-      ],
-      "event": "由于通胀持续挤压家庭预算，美国10月消费者支出陷入停滞。",
-      "event_en": "由于inflation持续挤压家庭预算，美国10month消费者expenditure陷入停滞。",
-      "assets": "详见原文",
-      "assets_en": "See source",
-      "dir": "up",
-      "logic": "央行鹰派信号 → 加息预期升温 → 资金回流本币 → 相关资产受益",
-      "logic_en": "Central bank hawkish signal → rate hike expectations rise → capital flows back to local currency → related assets benefit"
     },
     {
       "tags": [
@@ -299,6 +294,22 @@
       ]
     },
     {
+      "event": "随着华尔街对科技行业为人工智能融资而进行的创纪录举债感到日益恐慌，CoreWeave Inc.和英伟达的信用风险指标周三双双创下历史新高，同时衡量市场恐慌情绪的指标也再次达到3月份以来的最高水平。",
+      "event_en": "随着华尔街对科技行业为人工智能funding而进行的hit纪录举债感到day益panic，CoreWeave Inc.和Nvidia的信用risk指标周三双双hit下历史new high，同时衡量市场panicsentiment的指标也再次达到3month份以来的最高水平。",
+      "assets": "英伟达",
+      "assets_en": "Nvidia",
+      "dir": "up",
+      "logic": "债务风险信号 → 国债利差走阔 → 相关国家资产承压",
+      "logic_en": "Debt risk signal → bond spread widens → related country assets under pressure",
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ]
+    },
+    {
       "event": "美股住宅建筑商正逼近一个不祥的市场里程碑：该板块股票即将迎来连续第三年下跌，为次贷危机引发全球金融危机以来的最长连跌纪录。",
       "event_en": "美股住宅建筑商正逼近一个不祥的市场里程碑：该sector股票即将迎来连续第三yearfall，为次贷危机引发全球金融危机以来的最长连跌纪录。",
       "assets": "标普500 / S&P 500",
@@ -311,27 +322,6 @@
           "type": "central-bank",
           "text": "央行",
           "text_en": "Central Bank"
-        }
-      ]
-    },
-    {
-      "event": "由于通胀持续挤压家庭预算，美国10月消费者支出陷入停滞。",
-      "event_en": "由于inflation持续挤压家庭预算，美国10month消费者expenditure陷入停滞。",
-      "assets": "详见原文",
-      "assets_en": "See source",
-      "dir": "up",
-      "logic": "央行鹰派信号 → 加息预期升温 → 资金回流本币 → 相关资产受益",
-      "logic_en": "Central bank hawkish signal → rate hike expectations rise → capital flows back to local currency → related assets benefit",
-      "tags": [
-        {
-          "type": "central-bank",
-          "text": "央行",
-          "text_en": "Central Bank"
-        },
-        {
-          "type": "energy",
-          "text": "能源",
-          "text_en": "Energy"
         }
       ]
     },
@@ -476,19 +466,14 @@
       ]
     },
     {
-      "title": "央行政策链：由于通胀持续挤压家庭预算，美国10月消费者支出陷入停滞 → 美股住宅建筑商正逼近一个不祥的市场里程碑：该...",
-      "title_en": "Central Bank Policy Chain: 由于inflation持续挤压家庭预算，美国10month消费者expenditure陷入停滞 → 美股住宅建筑商正逼近一个不祥的市场里程碑：该...",
+      "title": "央行政策链：白宫国家经济委员会主任哈塞特接受采访时表示 → 美股住宅建筑商正逼近一个不祥的市场里程碑：该...",
+      "title_en": "Central Bank Policy Chain: 白宫国家经济委员会主任哈塞特接受采访时表示 → 美股住宅建筑商正逼近一个不祥的市场里程碑：该...",
       "status": "unverified",
       "nodes": [
         {
-          "text": "由于通胀持续挤压家庭预算，美国10月消费者支出陷入停滞",
-          "text_en": "由于inflation持续挤压家庭预算，美国10month消费者expenditure陷入停滞",
-          "type": "cause"
-        },
-        {
           "text": "白宫国家经济委员会主任哈塞特接受采访时表示，在美联储主席沃什推动重新评估央行经济模型之际，“人们会希望美联储开始考虑供给和需求之间的区别”",
           "text_en": "白宫国家经济委员会主任哈塞特接受采访时表示，在the Fed主席沃什推动重新评估central bank经济模型之际，“人们会希望the Fed开始考虑供给和需求之间的区别”",
-          "type": "intermediate"
+          "type": "cause"
         },
         {
           "text": "美股住宅建筑商正逼近一个不祥的市场里程碑：该板块股票即将迎来连续第三年下跌，为次贷危机引发全球金融危机以来的最长连跌纪录",
@@ -518,8 +503,8 @@
       ]
     },
     {
-      "title": "宏观链：两年期美债收益率短线走低，日内整体跌超9个基点 → 英伟达公司同意支付2.9亿美元，以和解一宗关...",
-      "title_en": "Macro Chain: 两year期US Treasuriesyield短线走低，day内整体drop below9个基点 → Nvidia公司同意支付2.9亿USD，以和解一宗关...",
+      "title": "宏观链：两年期美债收益率短线走低，日内整体跌超9个基点 → 随着华尔街对科技行业为人工智能融资而进行的创...",
+      "title_en": "Macro Chain: 两year期US Treasuriesyield短线走低，day内整体drop below9个基点 → 随着华尔街对科技行业为人工智能funding而进行的hit...",
       "status": "unverified",
       "nodes": [
         {
@@ -540,6 +525,11 @@
         {
           "text": "英伟达公司同意支付2.9亿美元，以和解一宗关于硅芯片销售随2018年加密货币市场低迷而暴跌的集体证券欺诈诉讼",
           "text_en": "Nvidia公司同意支付2.9亿USD，以和解一宗关于硅chips销售随2018year加密货币市场低迷而plunge的集体证券欺诈诉讼",
+          "type": "intermediate"
+        },
+        {
+          "text": "随着华尔街对科技行业为人工智能融资而进行的创纪录举债感到日益恐慌",
+          "text_en": "随着华尔街对科技行业为人工智能funding而进行的hit纪录举债感到day益panic",
           "type": "effect"
         }
       ],
@@ -585,8 +575,8 @@
       ]
     },
     {
-      "title": "央行政策链：由于通胀持续挤压家庭预算，美国10月消费者支出陷入停滞 → 美股住宅建筑商正逼近一个不祥的市场里程碑：该...能否持续？",
-      "title_en": "Can 'Central Bank Policy Chain: 由于inflation持续挤压家庭预算，美国10month消费者expenditure陷入停滞 → 美股住宅建筑商正逼近一个不祥的市场里程碑：该...' sustain?",
+      "title": "央行政策链：白宫国家经济委员会主任哈塞特接受采访时表示 → 美股住宅建筑商正逼近一个不祥的市场里程碑：该...能否持续？",
+      "title_en": "Can 'Central Bank Policy Chain: 白宫国家经济委员会主任哈塞特接受采访时表示 → 美股住宅建筑商正逼近一个不祥的市场里程碑：该...' sustain?",
       "layer1": "央行鹰派信号与债务风险的博弈，会否触发利差危机？加息+高债务=火药桶。",
       "layer1_en": "Will the central bank hawkish signal vs debt risk game trigger a spread crisis? Rate hikes + high debt = powder keg.",
       "vars": [
@@ -603,8 +593,8 @@
       ]
     },
     {
-      "title": "宏观链：两年期美债收益率短线走低，日内整体跌超9个基点 → 英伟达公司同意支付2.9亿美元，以和解一宗关...能否持续？",
-      "title_en": "Can 'Macro Chain: 两year期US Treasuriesyield短线走低，day内整体drop below9个基点 → Nvidia公司同意支付2.9亿USD，以和解一宗关...' sustain?",
+      "title": "宏观链：两年期美债收益率短线走低，日内整体跌超9个基点 → 随着华尔街对科技行业为人工智能融资而进行的创...能否持续？",
+      "title_en": "Can 'Macro Chain: 两year期US Treasuriesyield短线走低，day内整体drop below9个基点 → 随着华尔街对科技行业为人工智能funding而进行的hit...' sustain?",
       "layer1": "该宏观事件后续发展如何？市场当前定价是否充分？",
       "layer1_en": "How will this macro event develop? Is current market pricing adequate?",
       "vars": [
