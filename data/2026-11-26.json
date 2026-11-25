@@ -2,21 +2,13 @@
   "date": "2026-11-26",
   "weekday": "星期四",
   "weekday_en": "Thursday",
-  "crawl_time": "约17:41（北京时间）",
+  "crawl_time": "约18:39（北京时间）",
   "source": "华尔街见闻",
   "sources_detail": [
     "华尔街见闻"
   ],
-  "filter_result": "10条核心要闻 / 3条因果链 / 100条原始抓取",
+  "filter_result": "10条核心要闻 / 5条因果链 / 100条原始抓取",
   "stats": [
-    {
-      "label": "日经225指数收",
-      "label_en": "day经225index收",
-      "value": "2.8%",
-      "change": "AI交易信仰动摇，纳指期货跌超3%，黄金跌破3500美元，白银跌破40美元，避险资金涌入美债。\n\n美国10月PCE物价指",
-      "change_en": "AI交易信仰动摇，Nasdaqfuturesdrop below3%，gold跌破3500USD，白silver跌破40USD，避险capital涌入US Treasuries。\n\n美国10monthPCE物价指",
-      "dir": "split"
-    },
     {
       "label": "随着华尔街对科技行业",
       "label_en": "随着华尔街对科技行业",
@@ -56,6 +48,22 @@
       "change": "美股盘初，英伟达跌7.2%，CoreWeave跌8.2%，闪迪跌7.8%，美光科技、Nebius集团、SpaceX、Lu",
       "change_en": "美股盘初，Nvidia跌7.2%，CoreWeave跌8.2%，闪迪跌7.8%，美光科技、Nebius集团、SpaceX、Lu",
       "dir": "split"
+    },
+    {
+      "label": "此前一度",
+      "label_en": "此前一度",
+      "value": "2.2%",
+      "change": "道指转涨，此前一度跌2.2%。成分股IBM目前涨 3.3%，Sherwin-Williams涨2.7%，家得宝、Sale",
+      "change_en": "Dow Jones转涨，此前一度跌2.2%。成分股IBM目前涨 3.3%，Sherwin-Williams涨2.7%，家得宝、Sale",
+      "dir": "split"
+    },
+    {
+      "label": "30指数收",
+      "label_en": "30index收",
+      "value": "1.26%",
+      "change": "德国DAX 30指数收跌1.26%，报24702.13点。\n\n法国CAC 40指数收跌0.75%，报7980.57点。\n",
+      "change_en": "德国DAX 30indexclose down1.26%，reported24702.13点。\n\n法国CAC 40indexclose down0.75%，reported7980.57点。\n",
+      "dir": "split"
     }
   ],
   "events": [
@@ -76,37 +84,6 @@
       "event_en": "由于对人工智能过度投资的担忧day益加剧，重hit大型科技股，纳斯达克100index连续第二天plunge，并一度急剧下挫跌入熊市区间。",
       "assets": "英伟达",
       "assets_en": "Nvidia",
-      "dir": "split",
-      "logic": "央行鹰派信号 → 加息预期升温 → 利率上行 → 风险资产承压",
-      "logic_en": "Central bank hawkish signal → rate hike expectations rise → yields rise → risk assets under pressure"
-    },
-    {
-      "tags": [
-        {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        },
-        {
-          "type": "central-bank",
-          "text": "央行",
-          "text_en": "Central Bank"
-        },
-        {
-          "type": "china",
-          "text": "中国",
-          "text_en": "China"
-        },
-        {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
-        }
-      ],
-      "event": "AI交易信仰动摇，纳指期货跌超3%，黄金跌破3500美元，白银跌破40美元，避险资金涌入美债。",
-      "event_en": "AI交易信仰动摇，Nasdaqfuturesdrop below3%，gold跌破3500USD，白silver跌破40USD，避险capital涌入US Treasuries。",
-      "assets": "A股/沪指 / 纳指 / 美元指数 / 美债 / 黄金",
-      "assets_en": "A-shares/Shanghai Composite / Nasdaq / USD Index / US Treasuries / Gold",
       "dir": "split",
       "logic": "央行鹰派信号 → 加息预期升温 → 利率上行 → 风险资产承压",
       "logic_en": "Central bank hawkish signal → rate hike expectations rise → yields rise → risk assets under pressure"
@@ -194,18 +171,55 @@
     {
       "tags": [
         {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        },
+        {
+          "type": "china",
+          "text": "中国",
+          "text_en": "China"
         }
       ],
-      "event": "两年期美债收益率短线走低，日内整体跌超9个基点，在美国GDP和PCE数据发布后刷新日低至4.5857%。",
-      "event_en": "两year期US Treasuriesyield短线走低，day内整体drop below9个基点，在美国GDP和PCE数据发布后刷新day低至4.5857%。",
-      "assets": "美债",
-      "assets_en": "US Treasuries",
-      "dir": "down",
-      "logic": "利空事件 → 市场预期恶化 → 资产价格下跌",
-      "logic_en": "Negative event → market expectations worsen → asset prices fall"
+      "event": "道指转涨，此前一度跌2.2%。成分股IBM目前涨 3.3%，Sherwin-Williams涨2.7%，家得宝、Salesforce、耐克涨超2%...",
+      "event_en": "Dow Jones转涨，此前一度跌2.2%。成分股IBM目前涨 3.3%，Sherwin-Williams涨2.7%，家得宝、Salesforce、耐克surge past2%...",
+      "assets": "道指 / 英伟达",
+      "assets_en": "Dow Jones / Nvidia",
+      "dir": "split",
+      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
+      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst"
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ],
+      "event": "根据美国纽约联储一项指数，11月份美国高收益债务市场的压力飙升至一年多来的最高水平。",
+      "event_en": "根据美国纽约联储一项index，11month份美国高收益debt市场的压力surge至一year多来的最高水平。",
+      "assets": "详见原文",
+      "assets_en": "See source",
+      "dir": "up",
+      "logic": "AI产业事件 → 算力/芯片需求预期变化 → 相关板块联动",
+      "logic_en": "AI industry event → compute/chip demand expectations shift → related sectors correlate"
+    },
+    {
+      "tags": [
+        {
+          "type": "energy",
+          "text": "能源",
+          "text_en": "Energy"
+        }
+      ],
+      "event": "德国DAX 30指数收跌1.26%，报24702.13点。",
+      "event_en": "德国DAX 30indexclose down1.26%，reported24702.13点。",
+      "assets": "原油 / 铜",
+      "assets_en": "Crude Oil / Copper",
+      "dir": "split",
+      "logic": "原油供需变化 → 油价波动 → 能源股/通胀预期联动",
+      "logic_en": "Oil supply/demand shift → oil price volatility → energy stocks / inflation expectations correlate"
     },
     {
       "tags": [
@@ -222,22 +236,6 @@
       "dir": "up",
       "logic": "利好事件 → 市场预期改善 → 资产价格上涨",
       "logic_en": "Positive event → market expectations improve → asset prices rise"
-    },
-    {
-      "tags": [
-        {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
-        }
-      ],
-      "event": "尽管石油相关收入带动财政收入预测上调，但巴西政府仍扩大了今年基本预算赤字的预测值，反映出支出压力不断加剧。",
-      "event_en": "尽管石油相关收入带动fiscal revenue预测上调，但巴西政府仍expanded了今year基本预算deficit的预测值，反映出expenditure压力不断加剧。",
-      "assets": "美元指数",
-      "assets_en": "USD Index",
-      "dir": "up",
-      "logic": "债务风险信号 → 国债利差走阔 → 相关国家资产承压",
-      "logic_en": "Debt risk signal → bond spread widens → related country assets under pressure"
     }
   ],
   "four_column_table": [
@@ -259,37 +257,6 @@
           "type": "central-bank",
           "text": "央行",
           "text_en": "Central Bank"
-        }
-      ]
-    },
-    {
-      "event": "AI交易信仰动摇，纳指期货跌超3%，黄金跌破3500美元，白银跌破40美元，避险资金涌入美债。",
-      "event_en": "AI交易信仰动摇，Nasdaqfuturesdrop below3%，gold跌破3500USD，白silver跌破40USD，避险capital涌入US Treasuries。",
-      "assets": "A股/沪指 / 纳指 / 美元指数 / 美债 / 黄金",
-      "assets_en": "A-shares/Shanghai Composite / Nasdaq / USD Index / US Treasuries / Gold",
-      "dir": "split",
-      "logic": "央行鹰派信号 → 加息预期升温 → 利率上行 → 风险资产承压",
-      "logic_en": "Central bank hawkish signal → rate hike expectations rise → yields rise → risk assets under pressure",
-      "tags": [
-        {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        },
-        {
-          "type": "central-bank",
-          "text": "央行",
-          "text_en": "Central Bank"
-        },
-        {
-          "type": "china",
-          "text": "中国",
-          "text_en": "China"
-        },
-        {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
         }
       ]
     },
@@ -374,18 +341,55 @@
       ]
     },
     {
-      "event": "两年期美债收益率短线走低，日内整体跌超9个基点，在美国GDP和PCE数据发布后刷新日低至4.5857%。",
-      "event_en": "两year期US Treasuriesyield短线走低，day内整体drop below9个基点，在美国GDP和PCE数据发布后刷新day低至4.5857%。",
-      "assets": "美债",
-      "assets_en": "US Treasuries",
-      "dir": "down",
-      "logic": "利空事件 → 市场预期恶化 → 资产价格下跌",
-      "logic_en": "Negative event → market expectations worsen → asset prices fall",
+      "event": "道指转涨，此前一度跌2.2%。成分股IBM目前涨 3.3%，Sherwin-Williams涨2.7%，家得宝、Salesforce、耐克涨超2%...",
+      "event_en": "Dow Jones转涨，此前一度跌2.2%。成分股IBM目前涨 3.3%，Sherwin-Williams涨2.7%，家得宝、Salesforce、耐克surge past2%...",
+      "assets": "道指 / 英伟达",
+      "assets_en": "Dow Jones / Nvidia",
+      "dir": "split",
+      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
+      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst",
       "tags": [
         {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        },
+        {
+          "type": "china",
+          "text": "中国",
+          "text_en": "China"
+        }
+      ]
+    },
+    {
+      "event": "根据美国纽约联储一项指数，11月份美国高收益债务市场的压力飙升至一年多来的最高水平。",
+      "event_en": "根据美国纽约联储一项index，11month份美国高收益debt市场的压力surge至一year多来的最高水平。",
+      "assets": "详见原文",
+      "assets_en": "See source",
+      "dir": "up",
+      "logic": "AI产业事件 → 算力/芯片需求预期变化 → 相关板块联动",
+      "logic_en": "AI industry event → compute/chip demand expectations shift → related sectors correlate",
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ]
+    },
+    {
+      "event": "德国DAX 30指数收跌1.26%，报24702.13点。",
+      "event_en": "德国DAX 30indexclose down1.26%，reported24702.13点。",
+      "assets": "原油 / 铜",
+      "assets_en": "Crude Oil / Copper",
+      "dir": "split",
+      "logic": "原油供需变化 → 油价波动 → 能源股/通胀预期联动",
+      "logic_en": "Oil supply/demand shift → oil price volatility → energy stocks / inflation expectations correlate",
+      "tags": [
+        {
+          "type": "energy",
+          "text": "能源",
+          "text_en": "Energy"
         }
       ]
     },
@@ -404,43 +408,27 @@
           "text_en": "Central Bank"
         }
       ]
-    },
-    {
-      "event": "尽管石油相关收入带动财政收入预测上调，但巴西政府仍扩大了今年基本预算赤字的预测值，反映出支出压力不断加剧。",
-      "event_en": "尽管石油相关收入带动fiscal revenue预测上调，但巴西政府仍expanded了今year基本预算deficit的预测值，反映出expenditure压力不断加剧。",
-      "assets": "美元指数",
-      "assets_en": "USD Index",
-      "dir": "up",
-      "logic": "债务风险信号 → 国债利差走阔 → 相关国家资产承压",
-      "logic_en": "Debt risk signal → bond spread widens → related country assets under pressure",
-      "tags": [
-        {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
-        }
-      ]
     }
   ],
   "chains": [
     {
-      "title": "AI Capex链：AI交易信仰动摇，纳指期货跌超3%，黄金跌破... → 由于对人工智能过度投资的担忧日益加剧，重创大...",
-      "title_en": "AI Capex Chain: AI交易信仰动摇，Nasdaqfuturesdrop below3%，gold跌破... → 由于对人工智能过度投资的担忧day益加剧，重hit大...",
+      "title": "AI Capex链：美股盘初，英伟达跌7.2%，CoreWeav... → 根据美国纽约联储一项指数，11月份美国高收益债务市场的压力飙升至一年多来的最高水平",
+      "title_en": "AI Capex Chain: 美股盘初，Nvidia跌7.2%，CoreWeav... → 根据美国纽约联储一项index，11month份美国高收益debt市场的压力surge至一year多来的最高水平",
       "status": "unverified",
       "nodes": [
         {
-          "text": "AI交易信仰动摇，纳指期货跌超3%，黄金跌破3500美元，白银跌破40美元，避险资金涌入美债",
-          "text_en": "AI交易信仰动摇，Nasdaqfuturesdrop below3%，gold跌破3500USD，白silver跌破40USD，避险capital涌入US Treasuries",
-          "type": "cause"
-        },
-        {
           "text": "美股盘初，英伟达跌7.2%，CoreWeave跌8.2%，闪迪跌7.8%",
           "text_en": "美股盘初，Nvidia跌7.2%，CoreWeave跌8.2%，闪迪跌7.8%",
-          "type": "intermediate"
+          "type": "cause"
         },
         {
           "text": "由于对人工智能过度投资的担忧日益加剧，重创大型科技股，纳斯达克100指数连续第二天暴跌，并一度急剧下挫跌入熊市区间",
           "text_en": "由于对人工智能过度投资的担忧day益加剧，重hit大型科技股，纳斯达克100index连续第二天plunge，并一度急剧下挫跌入熊市区间",
+          "type": "intermediate"
+        },
+        {
+          "text": "根据美国纽约联储一项指数，11月份美国高收益债务市场的压力飙升至一年多来的最高水平",
+          "text_en": "根据美国纽约联储一项index，11month份美国高收益debt市场的压力surge至一year多来的最高水平",
           "type": "effect"
         }
       ],
@@ -503,24 +491,88 @@
       ]
     },
     {
-      "title": "宏观链：两年期美债收益率短线走低，日内整体跌超9个基点 → 随着华尔街对科技行业为人工智能融资而进行的创...",
-      "title_en": "Macro Chain: 两year期US Treasuriesyield短线走低，day内整体drop below9个基点 → 随着华尔街对科技行业为人工智能funding而进行的hit...",
-      "status": "unverified",
+      "title": "能源链：德国DAX 30指数收跌1.26%，报24702.13点 → 相关资产变动",
+      "title_en": "Energy Chain: 德国DAX 30indexclose down1.26%，reported24702.13点 → Asset price change",
+      "status": "consensus",
       "nodes": [
         {
-          "text": "两年期美债收益率短线走低，日内整体跌超9个基点，在美国GDP和PCE数据发布后刷新日低至4.5857%",
-          "text_en": "两year期US Treasuriesyield短线走低，day内整体drop below9个基点，在美国GDP和PCE数据发布后刷新day低至4.5857%",
+          "text": "德国DAX 30指数收跌1.26%，报24702.13点",
+          "text_en": "德国DAX 30indexclose down1.26%，reported24702.13点",
           "type": "cause"
         },
         {
-          "text": "德意志银行的Binky Chadha是华尔街对美股最看涨的预测人士之一，他预计标普500指数将自暴跌中反弹，到明年底上涨25%",
-          "text_en": "德意志silver行的Binky Chadha是华尔街对美股最看涨的预测人士之一，他预计S&P 500index将自plunge中反弹，到明year底rise25%",
-          "type": "intermediate"
+          "text": "资产价格分化",
+          "text_en": "Asset prices diverge",
+          "type": "effect"
+        }
+      ],
+      "jargon": [
+        {
+          "term": "霍尔木兹海峡",
+          "term_en": "Strait of Hormuz",
+          "explain": "全球约20%的石油运输必经之路。谁控制了这里，就掐住了全球能源的咽喉。",
+          "explain_en": "About 20% of global oil transport passes through here. Whoever controls it holds the world's energy throat."
         },
         {
-          "text": "尽管石油相关收入带动财政收入预测上调，但巴西政府仍扩大了今年基本预算赤字的预测值，反映出支出压力不断加剧",
-          "text_en": "尽管石油相关收入带动fiscal revenue预测上调，但巴西政府仍expanded了今year基本预算deficit的预测值，反映出expenditure压力不断加剧",
-          "type": "intermediate"
+          "term": "超级油轮（VLCC）",
+          "term_en": "VLCC (Very Large Crude Carrier)",
+          "explain": "能装200万桶原油的巨型油轮。VLCC运费飙升=供应受阻的先行指标。",
+          "explain_en": "Giant tanker carrying 2M barrels. VLCC freight surge = leading indicator of supply disruption."
+        },
+        {
+          "term": "OPEC+",
+          "term_en": "OPEC+",
+          "explain": "石油输出国组织及其盟友，控制全球约40%原油产量。减产=涨价，增产=跌价。",
+          "explain_en": "Oil producers' alliance controlling ~40% of global supply. Cut = price up, increase = price down."
+        }
+      ]
+    },
+    {
+      "title": "中国市场链：道指转涨，此前一度跌2.2% → 相关资产变动",
+      "title_en": "China Market Chain: Dow Jones转涨，此前一度跌2.2% → Asset price change",
+      "status": "consensus",
+      "nodes": [
+        {
+          "text": "道指转涨，此前一度跌2.2%",
+          "text_en": "Dow Jones转涨，此前一度跌2.2%",
+          "type": "cause"
+        },
+        {
+          "text": "资产价格分化",
+          "text_en": "Asset prices diverge",
+          "type": "effect"
+        }
+      ],
+      "jargon": [
+        {
+          "term": "自由现金流（FCF）",
+          "term_en": "Free Cash Flow (FCF)",
+          "explain": "赚的钱减去必须花的钱后，真正落袋的现金。FCF为负=花得比赚得多。",
+          "explain_en": "Earnings minus mandatory spending, actual pocketed cash. Negative FCF = spending exceeds earnings."
+        },
+        {
+          "term": "社零（社会消费品零售总额）",
+          "term_en": "Retail Sales",
+          "explain": "老百姓花钱消费的总量，反映内需强弱。升=消费旺，降=消费弱。",
+          "explain_en": "Total consumer spending, reflecting domestic demand strength."
+        },
+        {
+          "term": "北向资金",
+          "term_en": "Northbound Capital",
+          "explain": "通过沪港通/深港通从香港流入A股的资金，被视为外资风向标。",
+          "explain_en": "Capital flowing from HK into A-shares via Stock Connect, seen as foreign capital barometer."
+        }
+      ]
+    },
+    {
+      "title": "宏观链：德意志银行的Binky Chadha是华尔街... → 随着华尔街对科技行业为人工智能融资而进行的创...",
+      "title_en": "Macro Chain: 德意志silver行的Binky Chadha是华尔街... → 随着华尔街对科技行业为人工智能funding而进行的hit...",
+      "status": "unverified",
+      "nodes": [
+        {
+          "text": "德意志银行的Binky Chadha是华尔街对美股最看涨的预测人士之一，他预计标普500指数将自暴跌中反弹，到明年底上涨25%",
+          "text_en": "德意志silver行的Binky Chadha是华尔街对美股最看涨的预测人士之一，他预计S&P 500index将自plunge中反弹，到明year底rise25%",
+          "type": "cause"
         },
         {
           "text": "英伟达公司同意支付2.9亿美元，以和解一宗关于硅芯片销售随2018年加密货币市场低迷而暴跌的集体证券欺诈诉讼",
@@ -557,8 +609,8 @@
   ],
   "verifications": [
     {
-      "title": "AI Capex链：AI交易信仰动摇，纳指期货跌超3%，黄金跌破... → 由于对人工智能过度投资的担忧日益加剧，重创大...能否持续？",
-      "title_en": "Can 'AI Capex Chain: AI交易信仰动摇，Nasdaqfuturesdrop below3%，gold跌破... → 由于对人工智能过度投资的担忧day益加剧，重hit大...' sustain?",
+      "title": "AI Capex链：美股盘初，英伟达跌7.2%，CoreWeav... → 根据美国纽约联储一项指数，11月份美国高收益债务市场的压力飙升至一年多来的最高水平能否持续？",
+      "title_en": "Can 'AI Capex Chain: 美股盘初，Nvidia跌7.2%，CoreWeav... → 根据美国纽约联储一项index，11month份美国高收益debt市场的压力surge至一year多来的最高水平' sustain?",
       "layer1": "AI capex叙事能否从'融资验证'切换到'盈利验证'？巨量融资证明了吸金能力，但何时能证明赚钱能力？",
       "layer1_en": "Can the AI capex narrative shift from 'funding validation' to 'profit validation'? Massive funding proves capital attraction, but when profitability?",
       "vars": [
@@ -593,21 +645,39 @@
       ]
     },
     {
-      "title": "宏观链：两年期美债收益率短线走低，日内整体跌超9个基点 → 随着华尔街对科技行业为人工智能融资而进行的创...能否持续？",
-      "title_en": "Can 'Macro Chain: 两year期US Treasuriesyield短线走低，day内整体drop below9个基点 → 随着华尔街对科技行业为人工智能funding而进行的hit...' sustain?",
-      "layer1": "该宏观事件后续发展如何？市场当前定价是否充分？",
-      "layer1_en": "How will this macro event develop? Is current market pricing adequate?",
+      "title": "能源链：德国DAX 30指数收跌1.26%，报24702.13点 → 相关资产变动能否持续？",
+      "title_en": "Can 'Energy Chain: 德国DAX 30indexclose down1.26%，reported24702.13点 → Asset price change' sustain?",
+      "layer1": "能源供应冲击是否会升级为系统性中断？这是局部冲突还是系统性封锁的开始？",
+      "layer1_en": "Will energy supply shock escalate into systemic disruption? Is this localized or the start of systemic blockade?",
       "vars": [
-        "相关资产价格次日开盘方向",
-        "成交量是否异常放大（恐慌or追涨）",
-        "官方/央行是否有后续声明或澄清",
-        "关联资产是否同步反应（验证逻辑链）"
+        "布伦特原油日内波动：单日涨幅超3%=市场开始定价封锁风险",
+        "VLCC运费指数（BDTI）：超级油轮运费飙升=船东要求额外风险补偿",
+        "后续军事行动：若出现第二次袭击，局势将质变",
+        "战略石油储备动向：若启动储备释放，说明官方认为风险可控度下降"
       ],
       "vars_en": [
-        "Related asset price direction at next open",
-        "Volume anomaly (panic or chasing)",
-        "Official/central bank follow-up statement",
-        "Correlated assets confirmation"
+        "Brent intraday volatility: single-day move >3% = market pricing blockade risk",
+        "BDTI (VLCC freight index): surging rates = owners demanding risk premium",
+        "Follow-up military actions: second incident = qualitative escalation",
+        "SPR movements: if reserve release activated, officials see risk declining"
+      ]
+    },
+    {
+      "title": "中国市场链：道指转涨，此前一度跌2.2% → 相关资产变动能否持续？",
+      "title_en": "Can 'China Market Chain: Dow Jones转涨，此前一度跌2.2% → Asset price change' sustain?",
+      "layer1": "中国市场多空因素交织：财报分化、政策预期、资金流向如何演变？",
+      "layer1_en": "China market mixed signals: how will earnings divergence, policy expectations, and capital flows evolve?",
+      "vars": [
+        "北向资金流向：净流入=外资看好，净流出=外资谨慎",
+        "社零/工业增加值数据：若超预期=内需回暖，低于预期=经济承压",
+        "A股成交量：放量上涨=信心恢复，缩量=观望情绪浓",
+        "中概股盘前/盘后走势：财报后市场如何评价盈利质量"
+      ],
+      "vars_en": [
+        "Northbound capital: net inflow = foreign bullish, net outflow = cautious",
+        "Retail sales / industrial output: beat = domestic demand recovering, miss = economy pressured",
+        "A-share volume: high volume + up = confidence recovery, low volume = wait-and-see",
+        "China ADR pre/post-market: how market assesses earnings quality post-report"
       ]
     }
   ],
