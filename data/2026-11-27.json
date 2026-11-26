@@ -2,12 +2,12 @@
   "date": "2026-11-27",
   "weekday": "星期五",
   "weekday_en": "Friday",
-  "crawl_time": "约17:46（北京时间）",
+  "crawl_time": "约18:43（北京时间）",
   "source": "华尔街见闻",
   "sources_detail": [
     "华尔街见闻"
   ],
-  "filter_result": "10条核心要闻 / 3条因果链 / 100条原始抓取",
+  "filter_result": "10条核心要闻 / 4条因果链 / 100条原始抓取",
   "stats": [
     {
       "label": "在亚洲交易时段一度上",
@@ -26,11 +26,19 @@
       "dir": "up"
     },
     {
-      "label": "乙二醇夜盘收",
-      "label_en": "EG夜盘收",
-      "value": "2.67%",
-      "change": "乙二醇夜盘收涨2.67%，菜粕涨2.01%，短纤、菜油、棕榈油、低硫燃油至少涨0.84%，豆二、焦煤至少涨0.8%，豆油",
-      "change_en": "EG夜盘close up2.67%，菜粕涨2.01%，短纤、菜油、棕榈油、低硫燃油至少涨0.84%，豆二、焦煤至少涨0.8%，豆油",
+      "label": "约WTI原油期货目前",
+      "label_en": "约WTIcrude oilfutures目前",
+      "value": "1.25%",
+      "change": "布伦特1月原油期货收涨1.96美元，涨幅2.07%，报96.57美元/桶。\n\n纽约WTI原油期货目前涨1.25%，报84",
+      "change_en": "布伦特1monthcrude oilfuturesclose up1.96USD，gain2.07%，reported96.57USD/桶。\n\n纽约WTIcrude oilfutures目前涨1.25%，reported84",
+      "dir": "split"
+    },
+    {
+      "label": "国际铜夜盘收",
+      "label_en": "internationalcopper夜盘收",
+      "value": "0.19%",
+      "change": "国际铜夜盘收跌0.19%，沪铜收涨0.56%，沪铝收涨0.43%，沪锌收涨1.59%，沪铅收涨1.51%，沪镍收涨2.3",
+      "change_en": "internationalcopper夜盘close down0.19%，SHFE Copperclose up0.56%，沪铝close up0.43%，沪锌close up1.59%，沪铅close up1.51%，SHFE Nickelclose up2.3",
       "dir": "split"
     }
   ],
@@ -133,6 +141,38 @@
           "text_en": "Macro"
         }
       ],
+      "event": "周四（11月26日）欧市尾盘，英国10年期国债收益率涨1.5个基点，报5.147%，全天处于上涨状态，北京时间21:43涨至5.167%刷新日高。",
+      "event_en": "周四（11month26day）欧市尾盘，英国10year期government bondsyield涨1.5个基点，reported5.147%，全天处于rise状态，北京时间21:43涨至5.167%刷新day高。",
+      "assets": "详见原文",
+      "assets_en": "See source",
+      "dir": "split",
+      "logic": "债务风险信号 → 国债利差走阔 → 相关国家资产承压",
+      "logic_en": "Debt risk signal → bond spread widens → related country assets under pressure"
+    },
+    {
+      "tags": [
+        {
+          "type": "energy",
+          "text": "能源",
+          "text_en": "Energy"
+        }
+      ],
+      "event": "布伦特1月原油期货收涨1.96美元，涨幅2.07%，报96.57美元/桶。",
+      "event_en": "布伦特1monthcrude oilfuturesclose up1.96USD，gain2.07%，reported96.57USD/桶。",
+      "assets": "美元指数 / 原油",
+      "assets_en": "USD Index / Crude Oil",
+      "dir": "split",
+      "logic": "原油供需变化 → 油价波动 → 能源股/通胀预期联动",
+      "logic_en": "Oil supply/demand shift → oil price volatility → energy stocks / inflation expectations correlate"
+    },
+    {
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
       "event": "周四（11月26日）欧市尾盘，法国10年期国债收益率跌1个基点，刷新日低至4.729%，北京时间21:44曾涨至4.763%刷新日高。",
       "event_en": "周四（11month26day）欧市尾盘，法国10year期government bondsyield跌1个基点，刷新day低至4.729%，北京时间21:44曾涨至4.763%刷新day高。",
       "assets": "详见原文",
@@ -144,34 +184,23 @@
     {
       "tags": [
         {
+          "type": "central-bank",
+          "text": "央行",
+          "text_en": "Central Bank"
+        },
+        {
           "type": "macro",
           "text": "宏观",
           "text_en": "Macro"
         }
       ],
-      "event": "乙二醇夜盘收涨2.67%，菜粕涨2.01%，短纤、菜油、棕榈油、低硫燃油至少涨0.84%，豆二、焦煤至少涨0.8%，豆油、豆粕、焦炭至少涨0.71%，螺纹钢涨0.23%，燃油涨0.08%。",
-      "event_en": "EG夜盘close up2.67%，菜粕涨2.01%，短纤、菜油、棕榈油、低硫燃油至少涨0.84%，豆二、焦煤至少涨0.8%，豆油、豆粕、焦炭至少涨0.71%，螺纹钢涨0.23%，燃油涨0.08%。",
-      "assets": "铁矿石",
-      "assets_en": "Iron Ore",
-      "dir": "split",
-      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
-      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst"
-    },
-    {
-      "tags": [
-        {
-          "type": "central-bank",
-          "text": "央行",
-          "text_en": "Central Bank"
-        }
-      ],
-      "event": "伦敦Saltmarsh Economics欧洲经济学家Marchel Alexandrovich：欧洲领导人确认，巴勃罗·埃尔南德斯·德科斯（Pablo Hernández de Cos）将接替...",
-      "event_en": "伦敦Saltmarsh Economics欧洲经济学家Marchel Alexandrovich：欧洲领导人确认，巴勃罗·埃尔南德斯·德科斯（Pablo Hernández de Cos）将接替...",
+      "event": "墨西哥央行递交季度通胀报告。 预计2026年GDP将增长1.9%（之前料增1.5%），维持2027年增速预期在2.0%不变。 预计通胀率将于2027年第四季度回落至3%的目标水平。 预计2026...",
+      "event_en": "墨西哥central bank递交quarterinflationreported告。 预计2026yearGDP将growth1.9%（之前料增1.5%），维持2027year增速expectation在2.0%不变。 预计inflation率将于2027year第四quarter回落至3%的目标水平。 预计2026...",
       "assets": "详见原文",
       "assets_en": "See source",
-      "dir": "neutral",
-      "logic": "央行鹰派信号 → 加息预期升温 → 利率上行 → 风险资产承压",
-      "logic_en": "Central bank hawkish signal → rate hike expectations rise → yields rise → risk assets under pressure"
+      "dir": "up",
+      "logic": "利好事件 → 市场预期改善 → 资产价格上涨",
+      "logic_en": "Positive event → market expectations improve → asset prices rise"
     },
     {
       "tags": [
@@ -181,29 +210,13 @@
           "text_en": "Macro"
         }
       ],
-      "event": "英债扩大跌幅，两年期收益率上涨8个基点至4.86%。",
-      "event_en": "英债扩selloff幅，两year期yieldrise8个基点至4.86%。",
-      "assets": "详见原文",
-      "assets_en": "See source",
+      "event": "国际铜夜盘收跌0.19%，沪铜收涨0.56%，沪铝收涨0.43%，沪锌收涨1.59%，沪铅收涨1.51%，沪镍收涨2.32%，沪锡收涨0.52%。",
+      "event_en": "internationalcopper夜盘close down0.19%，SHFE Copperclose up0.56%，沪铝close up0.43%，沪锌close up1.59%，沪铅close up1.51%，SHFE Nickelclose up2.32%，SHFE Tinclose up0.52%。",
+      "assets": "铜",
+      "assets_en": "Copper",
       "dir": "split",
       "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
       "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst"
-    },
-    {
-      "tags": [
-        {
-          "type": "central-bank",
-          "text": "央行",
-          "text_en": "Central Bank"
-        }
-      ],
-      "event": "欧洲理事会主席Costa：欧元区成员国同意由推荐的原西班牙央行行长de Cos出任下一届欧洲央行行长。",
-      "event_en": "欧洲理事会主席Costa：EUR区成员国同意由推荐的原西班牙central bank行长de Cos出任下一届欧洲central bank行长。",
-      "assets": "欧元",
-      "assets_en": "EUR",
-      "dir": "neutral",
-      "logic": "事件发生 → 市场消化信息 → 资产价格调整",
-      "logic_en": "Event occurs → market digests info → asset prices adjust"
     }
   ],
   "four_column_table": [
@@ -298,6 +311,38 @@
       ]
     },
     {
+      "event": "周四（11月26日）欧市尾盘，英国10年期国债收益率涨1.5个基点，报5.147%，全天处于上涨状态，北京时间21:43涨至5.167%刷新日高。",
+      "event_en": "周四（11month26day）欧市尾盘，英国10year期government bondsyield涨1.5个基点，reported5.147%，全天处于rise状态，北京时间21:43涨至5.167%刷新day高。",
+      "assets": "详见原文",
+      "assets_en": "See source",
+      "dir": "split",
+      "logic": "债务风险信号 → 国债利差走阔 → 相关国家资产承压",
+      "logic_en": "Debt risk signal → bond spread widens → related country assets under pressure",
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ]
+    },
+    {
+      "event": "布伦特1月原油期货收涨1.96美元，涨幅2.07%，报96.57美元/桶。",
+      "event_en": "布伦特1monthcrude oilfuturesclose up1.96USD，gain2.07%，reported96.57USD/桶。",
+      "assets": "美元指数 / 原油",
+      "assets_en": "USD Index / Crude Oil",
+      "dir": "split",
+      "logic": "原油供需变化 → 油价波动 → 能源股/通胀预期联动",
+      "logic_en": "Oil supply/demand shift → oil price volatility → energy stocks / inflation expectations correlate",
+      "tags": [
+        {
+          "type": "energy",
+          "text": "能源",
+          "text_en": "Energy"
+        }
+      ]
+    },
+    {
       "event": "周四（11月26日）欧市尾盘，法国10年期国债收益率跌1个基点，刷新日低至4.729%，北京时间21:44曾涨至4.763%刷新日高。",
       "event_en": "周四（11month26day）欧市尾盘，法国10year期government bondsyield跌1个基点，刷新day低至4.729%，北京时间21:44曾涨至4.763%刷新day高。",
       "assets": "详见原文",
@@ -314,14 +359,19 @@
       ]
     },
     {
-      "event": "乙二醇夜盘收涨2.67%，菜粕涨2.01%，短纤、菜油、棕榈油、低硫燃油至少涨0.84%，豆二、焦煤至少涨0.8%，豆油、豆粕、焦炭至少涨0.71%，螺纹钢涨0.23%，燃油涨0.08%。",
-      "event_en": "EG夜盘close up2.67%，菜粕涨2.01%，短纤、菜油、棕榈油、低硫燃油至少涨0.84%，豆二、焦煤至少涨0.8%，豆油、豆粕、焦炭至少涨0.71%，螺纹钢涨0.23%，燃油涨0.08%。",
-      "assets": "铁矿石",
-      "assets_en": "Iron Ore",
-      "dir": "split",
-      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
-      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst",
+      "event": "墨西哥央行递交季度通胀报告。 预计2026年GDP将增长1.9%（之前料增1.5%），维持2027年增速预期在2.0%不变。 预计通胀率将于2027年第四季度回落至3%的目标水平。 预计2026...",
+      "event_en": "墨西哥central bank递交quarterinflationreported告。 预计2026yearGDP将growth1.9%（之前料增1.5%），维持2027year增速expectation在2.0%不变。 预计inflation率将于2027year第四quarter回落至3%的目标水平。 预计2026...",
+      "assets": "详见原文",
+      "assets_en": "See source",
+      "dir": "up",
+      "logic": "利好事件 → 市场预期改善 → 资产价格上涨",
+      "logic_en": "Positive event → market expectations improve → asset prices rise",
       "tags": [
+        {
+          "type": "central-bank",
+          "text": "央行",
+          "text_en": "Central Bank"
+        },
         {
           "type": "macro",
           "text": "宏观",
@@ -330,26 +380,10 @@
       ]
     },
     {
-      "event": "伦敦Saltmarsh Economics欧洲经济学家Marchel Alexandrovich：欧洲领导人确认，巴勃罗·埃尔南德斯·德科斯（Pablo Hernández de Cos）将接替...",
-      "event_en": "伦敦Saltmarsh Economics欧洲经济学家Marchel Alexandrovich：欧洲领导人确认，巴勃罗·埃尔南德斯·德科斯（Pablo Hernández de Cos）将接替...",
-      "assets": "详见原文",
-      "assets_en": "See source",
-      "dir": "neutral",
-      "logic": "央行鹰派信号 → 加息预期升温 → 利率上行 → 风险资产承压",
-      "logic_en": "Central bank hawkish signal → rate hike expectations rise → yields rise → risk assets under pressure",
-      "tags": [
-        {
-          "type": "central-bank",
-          "text": "央行",
-          "text_en": "Central Bank"
-        }
-      ]
-    },
-    {
-      "event": "英债扩大跌幅，两年期收益率上涨8个基点至4.86%。",
-      "event_en": "英债扩selloff幅，两year期yieldrise8个基点至4.86%。",
-      "assets": "详见原文",
-      "assets_en": "See source",
+      "event": "国际铜夜盘收跌0.19%，沪铜收涨0.56%，沪铝收涨0.43%，沪锌收涨1.59%，沪铅收涨1.51%，沪镍收涨2.32%，沪锡收涨0.52%。",
+      "event_en": "internationalcopper夜盘close down0.19%，SHFE Copperclose up0.56%，沪铝close up0.43%，沪锌close up1.59%，沪铅close up1.51%，SHFE Nickelclose up2.32%，SHFE Tinclose up0.52%。",
+      "assets": "铜",
+      "assets_en": "Copper",
       "dir": "split",
       "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
       "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst",
@@ -358,22 +392,6 @@
           "type": "macro",
           "text": "宏观",
           "text_en": "Macro"
-        }
-      ]
-    },
-    {
-      "event": "欧洲理事会主席Costa：欧元区成员国同意由推荐的原西班牙央行行长de Cos出任下一届欧洲央行行长。",
-      "event_en": "欧洲理事会主席Costa：EUR区成员国同意由推荐的原西班牙central bank行长de Cos出任下一届欧洲central bank行长。",
-      "assets": "欧元",
-      "assets_en": "EUR",
-      "dir": "neutral",
-      "logic": "事件发生 → 市场消化信息 → 资产价格调整",
-      "logic_en": "Event occurs → market digests info → asset prices adjust",
-      "tags": [
-        {
-          "type": "central-bank",
-          "text": "央行",
-          "text_en": "Central Bank"
         }
       ]
     }
@@ -417,8 +435,8 @@
       ]
     },
     {
-      "title": "央行政策链：欧洲央行官员在上月会议上认为，随着通胀前景恶化，未来可能需要进一步收紧货币政策 → 欧洲理事会主席Costa：欧元区成员国同意由...",
-      "title_en": "Central Bank Policy Chain: 欧洲central bank官员在上month会议上认为，随着inflation前景恶化，未来可能需要进一步收紧货币政策 → 欧洲理事会主席Costa：EUR区成员国同意由...",
+      "title": "央行政策链：欧洲央行官员在上月会议上认为，随着通胀前景恶化，未来可能需要进一步收紧货币政策 → 墨西哥央行递交季度通胀报告",
+      "title_en": "Central Bank Policy Chain: 欧洲central bank官员在上month会议上认为，随着inflation前景恶化，未来可能需要进一步收紧货币政策 → 墨西哥central bank递交quarterinflationreported告",
       "status": "unverified",
       "nodes": [
         {
@@ -427,18 +445,13 @@
           "type": "cause"
         },
         {
-          "text": "伦敦Saltmarsh Economics欧洲经济学家Marchel Alexandrovic...",
-          "text_en": "伦敦Saltmarsh Economics欧洲经济学家Marchel Alexandrovic...",
-          "type": "intermediate"
-        },
-        {
           "text": "阿姆斯特丹AFS Group研究主管Arne Petimezas）：随着立场偏鹰派的克诺特（K...",
           "text_en": "阿姆斯特丹AFS Group研究主管Arne Petimezas）：随着立场偏hawkish的克诺特（K...",
           "type": "intermediate"
         },
         {
-          "text": "欧洲理事会主席Costa：欧元区成员国同意由推荐的原西班牙央行行长de Cos出任下一届欧洲央行行长",
-          "text_en": "欧洲理事会主席Costa：EUR区成员国同意由推荐的原西班牙central bank行长de Cos出任下一届欧洲central bank行长",
+          "text": "墨西哥央行递交季度通胀报告",
+          "text_en": "墨西哥central bank递交quarterinflationreported告",
           "type": "effect"
         }
       ],
@@ -464,24 +477,51 @@
       ]
     },
     {
-      "title": "宏观链：英债扩大跌幅，两年期收益率上涨8个基点至4.86% → 周四（11月26日）欧市尾盘，法国10年期国...",
-      "title_en": "Macro Chain: 英债扩selloff幅，两year期yieldrise8个基点至4.86% → 周四（11month26day）欧市尾盘，法国10year期国...",
-      "status": "unverified",
+      "title": "能源链：布伦特1月原油期货收涨1.96美元，涨幅2.07%，报96.57美元/桶 → 相关资产变动",
+      "title_en": "Energy Chain: 布伦特1monthcrude oilfuturesclose up1.96USD，gain2.07%，reported96.57USD/桶 → Asset price change",
+      "status": "consensus",
       "nodes": [
         {
-          "text": "英债扩大跌幅，两年期收益率上涨8个基点至4.86%",
-          "text_en": "英债扩selloff幅，两year期yieldrise8个基点至4.86%",
+          "text": "布伦特1月原油期货收涨1.96美元，涨幅2.07%，报96.57美元/桶",
+          "text_en": "布伦特1monthcrude oilfuturesclose up1.96USD，gain2.07%，reported96.57USD/桶",
           "type": "cause"
         },
         {
-          "text": "乙二醇夜盘收涨2.67%，菜粕涨2.01%，短纤、菜油、棕榈油、低硫燃油至少涨0.84%",
-          "text_en": "EG夜盘close up2.67%，菜粕涨2.01%，短纤、菜油、棕榈油、低硫燃油至少涨0.84%",
-          "type": "intermediate"
+          "text": "资产价格分化",
+          "text_en": "Asset prices diverge",
+          "type": "effect"
+        }
+      ],
+      "jargon": [
+        {
+          "term": "霍尔木兹海峡",
+          "term_en": "Strait of Hormuz",
+          "explain": "全球约20%的石油运输必经之路。谁控制了这里，就掐住了全球能源的咽喉。",
+          "explain_en": "About 20% of global oil transport passes through here. Whoever controls it holds the world's energy throat."
         },
+        {
+          "term": "超级油轮（VLCC）",
+          "term_en": "VLCC (Very Large Crude Carrier)",
+          "explain": "能装200万桶原油的巨型油轮。VLCC运费飙升=供应受阻的先行指标。",
+          "explain_en": "Giant tanker carrying 2M barrels. VLCC freight surge = leading indicator of supply disruption."
+        },
+        {
+          "term": "OPEC+",
+          "term_en": "OPEC+",
+          "explain": "石油输出国组织及其盟友，控制全球约40%原油产量。减产=涨价，增产=跌价。",
+          "explain_en": "Oil producers' alliance controlling ~40% of global supply. Cut = price up, increase = price down."
+        }
+      ]
+    },
+    {
+      "title": "宏观链：受寒冷天气和风力发电疲软导致电力供应收紧的影响 → 周四（11月26日）欧市尾盘，英国10年期国...",
+      "title_en": "Macro Chain: 受寒冷天气和风力发电疲软导致电力supply收紧的影响 → 周四（11month26day）欧市尾盘，英国10year期国...",
+      "status": "unverified",
+      "nodes": [
         {
           "text": "受寒冷天气和风力发电疲软导致电力供应收紧的影响，周四欧洲各地的电力价格飙升，促使英国电网运营商连续第三天呼吁增加电力供应",
           "text_en": "受寒冷天气和风力发电疲软导致电力supply收紧的影响，周四欧洲各地的电力价格surge，促使英国电网运营商连续第三天呼吁增加电力supply",
-          "type": "intermediate"
+          "type": "cause"
         },
         {
           "text": "比特币升破6万美元关口，随着风险资产跟随科技股反弹，加密货币市场走高，而市场即将进入交投清淡的假日交易期",
@@ -489,8 +529,18 @@
           "type": "intermediate"
         },
         {
+          "text": "国际铜夜盘收跌0.19%，沪铜收涨0.56%，沪铝收涨0.43%，沪锌收涨1.59%",
+          "text_en": "internationalcopper夜盘close down0.19%，SHFE Copperclose up0.56%，沪铝close up0.43%，沪锌close up1.59%",
+          "type": "intermediate"
+        },
+        {
           "text": "周四（11月26日）欧市尾盘，法国10年期国债收益率跌1个基点，刷新日低至4.729%，北京时间21:44曾涨至4.763%刷新日高",
           "text_en": "周四（11month26day）欧市尾盘，法国10year期government bondsyield跌1个基点，刷新day低至4.729%，北京时间21:44曾涨至4.763%刷新day高",
+          "type": "intermediate"
+        },
+        {
+          "text": "周四（11月26日）欧市尾盘，英国10年期国债收益率涨1.5个基点，报5.147%",
+          "text_en": "周四（11month26day）欧市尾盘，英国10year期government bondsyield涨1.5个基点，reported5.147%",
           "type": "effect"
         }
       ],
@@ -536,8 +586,8 @@
       ]
     },
     {
-      "title": "央行政策链：欧洲央行官员在上月会议上认为，随着通胀前景恶化，未来可能需要进一步收紧货币政策 → 欧洲理事会主席Costa：欧元区成员国同意由...能否持续？",
-      "title_en": "Can 'Central Bank Policy Chain: 欧洲central bank官员在上month会议上认为，随着inflation前景恶化，未来可能需要进一步收紧货币政策 → 欧洲理事会主席Costa：EUR区成员国同意由...' sustain?",
+      "title": "央行政策链：欧洲央行官员在上月会议上认为，随着通胀前景恶化，未来可能需要进一步收紧货币政策 → 墨西哥央行递交季度通胀报告能否持续？",
+      "title_en": "Can 'Central Bank Policy Chain: 欧洲central bank官员在上month会议上认为，随着inflation前景恶化，未来可能需要进一步收紧货币政策 → 墨西哥central bank递交quarterinflationreported告' sustain?",
       "layer1": "央行鹰派信号与债务风险的博弈，会否触发利差危机？加息+高债务=火药桶。",
       "layer1_en": "Will the central bank hawkish signal vs debt risk game trigger a spread crisis? Rate hikes + high debt = powder keg.",
       "vars": [
@@ -554,8 +604,26 @@
       ]
     },
     {
-      "title": "宏观链：英债扩大跌幅，两年期收益率上涨8个基点至4.86% → 周四（11月26日）欧市尾盘，法国10年期国...能否持续？",
-      "title_en": "Can 'Macro Chain: 英债扩selloff幅，两year期yieldrise8个基点至4.86% → 周四（11month26day）欧市尾盘，法国10year期国...' sustain?",
+      "title": "能源链：布伦特1月原油期货收涨1.96美元，涨幅2.07%，报96.57美元/桶 → 相关资产变动能否持续？",
+      "title_en": "Can 'Energy Chain: 布伦特1monthcrude oilfuturesclose up1.96USD，gain2.07%，reported96.57USD/桶 → Asset price change' sustain?",
+      "layer1": "能源供应冲击是否会升级为系统性中断？这是局部冲突还是系统性封锁的开始？",
+      "layer1_en": "Will energy supply shock escalate into systemic disruption? Is this localized or the start of systemic blockade?",
+      "vars": [
+        "布伦特原油日内波动：单日涨幅超3%=市场开始定价封锁风险",
+        "VLCC运费指数（BDTI）：超级油轮运费飙升=船东要求额外风险补偿",
+        "后续军事行动：若出现第二次袭击，局势将质变",
+        "战略石油储备动向：若启动储备释放，说明官方认为风险可控度下降"
+      ],
+      "vars_en": [
+        "Brent intraday volatility: single-day move >3% = market pricing blockade risk",
+        "BDTI (VLCC freight index): surging rates = owners demanding risk premium",
+        "Follow-up military actions: second incident = qualitative escalation",
+        "SPR movements: if reserve release activated, officials see risk declining"
+      ]
+    },
+    {
+      "title": "宏观链：受寒冷天气和风力发电疲软导致电力供应收紧的影响 → 周四（11月26日）欧市尾盘，英国10年期国...能否持续？",
+      "title_en": "Can 'Macro Chain: 受寒冷天气和风力发电疲软导致电力supply收紧的影响 → 周四（11month26day）欧市尾盘，英国10year期国...' sustain?",
       "layer1": "该宏观事件后续发展如何？市场当前定价是否充分？",
       "layer1_en": "How will this macro event develop? Is current market pricing adequate?",
       "vars": [
