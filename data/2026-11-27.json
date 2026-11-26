@@ -1,0 +1,552 @@
+{
+  "date": "2026-11-27",
+  "weekday": "星期五",
+  "weekday_en": "Friday",
+  "crawl_time": "约16:32（北京时间）",
+  "source": "华尔街见闻",
+  "sources_detail": [
+    "华尔街见闻"
+  ],
+  "filter_result": "10条核心要闻 / 2条因果链 / 100条原始抓取",
+  "stats": [
+    {
+      "label": "英国电价跳",
+      "label_en": "英国电价跳",
+      "value": "12%",
+      "change": "受寒冷天气和风力发电疲软导致电力供应收紧的影响，周四欧洲各地的电力价格飙升，促使英国电网运营商连续第三天呼吁增加电力供应",
+      "change_en": "受寒冷天气和风力发电疲软导致电力supply收紧的影响，周四欧洲各地的电力价格surge，促使英国电网运营商连续第三天呼吁增加电力supply",
+      "dir": "up"
+    },
+    {
+      "label": "乙二醇夜盘收",
+      "label_en": "EG夜盘收",
+      "value": "2.67%",
+      "change": "乙二醇夜盘收涨2.67%，菜粕涨2.01%，短纤、菜油、棕榈油、低硫燃油至少涨0.84%，豆二、焦煤至少涨0.8%，豆油",
+      "change_en": "EG夜盘close up2.67%，菜粕涨2.01%，短纤、菜油、棕榈油、低硫燃油至少涨0.84%，豆二、焦煤至少涨0.8%，豆油",
+      "dir": "split"
+    }
+  ],
+  "events": [
+    {
+      "tags": [
+        {
+          "type": "central-bank",
+          "text": "央行",
+          "text_en": "Central Bank"
+        },
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "阿姆斯特丹AFS Group研究主管Arne Petimezas）：随着立场偏鹰派的克诺特（Knot）退出竞选，立场偏鸽派的德科斯（Pablo Hernández de Cos）成了欧洲央行行长...",
+      "event_en": "阿姆斯特丹AFS Group研究主管Arne Petimezas）：随着立场偏hawkish的克诺特（Knot）退出竞选，立场偏dovish的德科斯（Pablo Hernández de Cos）成了欧洲central bank行长...",
+      "assets": "欧元",
+      "assets_en": "EUR",
+      "dir": "down",
+      "logic": "央行鹰派信号 → 加息预期升温 → 利率上行 → 风险资产承压",
+      "logic_en": "Central bank hawkish signal → rate hike expectations rise → yields rise → risk assets under pressure"
+    },
+    {
+      "tags": [
+        {
+          "type": "central-bank",
+          "text": "央行",
+          "text_en": "Central Bank"
+        }
+      ],
+      "event": "欧洲央行官员在上月会议上认为，随着通胀前景恶化，未来可能需要进一步收紧货币政策。",
+      "event_en": "欧洲central bank官员在上month会议上认为，随着inflation前景恶化，未来可能需要进一步收紧货币政策。",
+      "assets": "详见原文",
+      "assets_en": "See source",
+      "dir": "up",
+      "logic": "央行鹰派信号 → 加息预期升温 → 资金回流本币 → 相关资产受益",
+      "logic_en": "Central bank hawkish signal → rate hike expectations rise → capital flows back to local currency → related assets benefit"
+    },
+    {
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "受寒冷天气和风力发电疲软导致电力供应收紧的影响，周四欧洲各地的电力价格飙升，促使英国电网运营商连续第三天呼吁增加电力供应。",
+      "event_en": "受寒冷天气和风力发电疲软导致电力supply收紧的影响，周四欧洲各地的电力价格surge，促使英国电网运营商连续第三天呼吁增加电力supply。",
+      "assets": "欧元 / 英镑",
+      "assets_en": "EUR / GBP",
+      "dir": "up",
+      "logic": "利好事件 → 市场预期改善 → 资产价格上涨",
+      "logic_en": "Positive event → market expectations improve → asset prices rise"
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        },
+        {
+          "type": "central-bank",
+          "text": "央行",
+          "text_en": "Central Bank"
+        },
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "欧洲央行会议纪要：官员一致认为，不存在实质性的第二轮效应。",
+      "event_en": "欧洲central bank会议纪要：官员一致认为，不存在实质性的第二轮效应。",
+      "assets": "欧元",
+      "assets_en": "EUR",
+      "dir": "up",
+      "logic": "央行鹰派信号 → 加息预期升温 → 资金回流本币 → 相关资产受益",
+      "logic_en": "Central bank hawkish signal → rate hike expectations rise → capital flows back to local currency → related assets benefit"
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        },
+        {
+          "type": "central-bank",
+          "text": "央行",
+          "text_en": "Central Bank"
+        },
+        {
+          "type": "energy",
+          "text": "能源",
+          "text_en": "Energy"
+        }
+      ],
+      "event": "欧洲央行会议纪要：欧洲央行官员在10月一致认为，物价前景已经恶化。",
+      "event_en": "欧洲central bank会议纪要：欧洲central bank官员在10month一致认为，物价前景已经恶化。",
+      "assets": "详见原文",
+      "assets_en": "See source",
+      "dir": "up",
+      "logic": "央行鹰派信号 → 加息预期升温 → 资金回流本币 → 相关资产受益",
+      "logic_en": "Central bank hawkish signal → rate hike expectations rise → capital flows back to local currency → related assets benefit"
+    },
+    {
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "乙二醇夜盘收涨2.67%，菜粕涨2.01%，短纤、菜油、棕榈油、低硫燃油至少涨0.84%，豆二、焦煤至少涨0.8%，豆油、豆粕、焦炭至少涨0.71%，螺纹钢涨0.23%，燃油涨0.08%。",
+      "event_en": "EG夜盘close up2.67%，菜粕涨2.01%，短纤、菜油、棕榈油、低硫燃油至少涨0.84%，豆二、焦煤至少涨0.8%，豆油、豆粕、焦炭至少涨0.71%，螺纹钢涨0.23%，燃油涨0.08%。",
+      "assets": "铁矿石",
+      "assets_en": "Iron Ore",
+      "dir": "split",
+      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
+      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst"
+    },
+    {
+      "tags": [
+        {
+          "type": "central-bank",
+          "text": "央行",
+          "text_en": "Central Bank"
+        }
+      ],
+      "event": "伦敦Saltmarsh Economics欧洲经济学家Marchel Alexandrovich：欧洲领导人确认，巴勃罗·埃尔南德斯·德科斯（Pablo Hernández de Cos）将接替...",
+      "event_en": "伦敦Saltmarsh Economics欧洲经济学家Marchel Alexandrovich：欧洲领导人确认，巴勃罗·埃尔南德斯·德科斯（Pablo Hernández de Cos）将接替...",
+      "assets": "详见原文",
+      "assets_en": "See source",
+      "dir": "neutral",
+      "logic": "央行鹰派信号 → 加息预期升温 → 利率上行 → 风险资产承压",
+      "logic_en": "Central bank hawkish signal → rate hike expectations rise → yields rise → risk assets under pressure"
+    },
+    {
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "英债扩大跌幅，两年期收益率上涨8个基点至4.86%。",
+      "event_en": "英债扩selloff幅，两year期yieldrise8个基点至4.86%。",
+      "assets": "详见原文",
+      "assets_en": "See source",
+      "dir": "split",
+      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
+      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst"
+    },
+    {
+      "tags": [
+        {
+          "type": "central-bank",
+          "text": "央行",
+          "text_en": "Central Bank"
+        }
+      ],
+      "event": "保加利亚央行将系统性风险缓冲资本率从先前的3%下调，其在一份声明中表示，此举是因为“自保加利亚加入欧元区以来，系统性风险已出现明显且持续的缓解”。",
+      "event_en": "保加利亚central bank将系统性risk缓冲资本率从先前的3%下调，其在一份statement中表示，此举是因为“自保加利亚加入EUR区以来，系统性risk已出现明显且持续的缓解”。",
+      "assets": "欧元",
+      "assets_en": "EUR",
+      "dir": "neutral",
+      "logic": "事件发生 → 市场消化信息 → 资产价格调整",
+      "logic_en": "Event occurs → market digests info → asset prices adjust"
+    },
+    {
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "美国总统特朗普指责其自己的政府“蓄意”压低美国经济增长数据，他利用一次常规的数据修订，在毫无证据的情况下提出了干预选举的指控。",
+      "event_en": "US President Trump指责其自己的政府“蓄意”压低美国经济growth数据，他利用一次常规的数据修订，在毫无证据的情况下提出了干预选举的指控。",
+      "assets": "详见原文",
+      "assets_en": "See source",
+      "dir": "split",
+      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
+      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst"
+    }
+  ],
+  "four_column_table": [
+    {
+      "event": "阿姆斯特丹AFS Group研究主管Arne Petimezas）：随着立场偏鹰派的克诺特（Knot）退出竞选，立场偏鸽派的德科斯（Pablo Hernández de Cos）成了欧洲央行行长...",
+      "event_en": "阿姆斯特丹AFS Group研究主管Arne Petimezas）：随着立场偏hawkish的克诺特（Knot）退出竞选，立场偏dovish的德科斯（Pablo Hernández de Cos）成了欧洲central bank行长...",
+      "assets": "欧元",
+      "assets_en": "EUR",
+      "dir": "down",
+      "logic": "央行鹰派信号 → 加息预期升温 → 利率上行 → 风险资产承压",
+      "logic_en": "Central bank hawkish signal → rate hike expectations rise → yields rise → risk assets under pressure",
+      "tags": [
+        {
+          "type": "central-bank",
+          "text": "央行",
+          "text_en": "Central Bank"
+        },
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ]
+    },
+    {
+      "event": "欧洲央行官员在上月会议上认为，随着通胀前景恶化，未来可能需要进一步收紧货币政策。",
+      "event_en": "欧洲central bank官员在上month会议上认为，随着inflation前景恶化，未来可能需要进一步收紧货币政策。",
+      "assets": "详见原文",
+      "assets_en": "See source",
+      "dir": "up",
+      "logic": "央行鹰派信号 → 加息预期升温 → 资金回流本币 → 相关资产受益",
+      "logic_en": "Central bank hawkish signal → rate hike expectations rise → capital flows back to local currency → related assets benefit",
+      "tags": [
+        {
+          "type": "central-bank",
+          "text": "央行",
+          "text_en": "Central Bank"
+        }
+      ]
+    },
+    {
+      "event": "受寒冷天气和风力发电疲软导致电力供应收紧的影响，周四欧洲各地的电力价格飙升，促使英国电网运营商连续第三天呼吁增加电力供应。",
+      "event_en": "受寒冷天气和风力发电疲软导致电力supply收紧的影响，周四欧洲各地的电力价格surge，促使英国电网运营商连续第三天呼吁增加电力supply。",
+      "assets": "欧元 / 英镑",
+      "assets_en": "EUR / GBP",
+      "dir": "up",
+      "logic": "利好事件 → 市场预期改善 → 资产价格上涨",
+      "logic_en": "Positive event → market expectations improve → asset prices rise",
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ]
+    },
+    {
+      "event": "欧洲央行会议纪要：官员一致认为，不存在实质性的第二轮效应。",
+      "event_en": "欧洲central bank会议纪要：官员一致认为，不存在实质性的第二轮效应。",
+      "assets": "欧元",
+      "assets_en": "EUR",
+      "dir": "up",
+      "logic": "央行鹰派信号 → 加息预期升温 → 资金回流本币 → 相关资产受益",
+      "logic_en": "Central bank hawkish signal → rate hike expectations rise → capital flows back to local currency → related assets benefit",
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        },
+        {
+          "type": "central-bank",
+          "text": "央行",
+          "text_en": "Central Bank"
+        },
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ]
+    },
+    {
+      "event": "欧洲央行会议纪要：欧洲央行官员在10月一致认为，物价前景已经恶化。",
+      "event_en": "欧洲central bank会议纪要：欧洲central bank官员在10month一致认为，物价前景已经恶化。",
+      "assets": "详见原文",
+      "assets_en": "See source",
+      "dir": "up",
+      "logic": "央行鹰派信号 → 加息预期升温 → 资金回流本币 → 相关资产受益",
+      "logic_en": "Central bank hawkish signal → rate hike expectations rise → capital flows back to local currency → related assets benefit",
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        },
+        {
+          "type": "central-bank",
+          "text": "央行",
+          "text_en": "Central Bank"
+        },
+        {
+          "type": "energy",
+          "text": "能源",
+          "text_en": "Energy"
+        }
+      ]
+    },
+    {
+      "event": "乙二醇夜盘收涨2.67%，菜粕涨2.01%，短纤、菜油、棕榈油、低硫燃油至少涨0.84%，豆二、焦煤至少涨0.8%，豆油、豆粕、焦炭至少涨0.71%，螺纹钢涨0.23%，燃油涨0.08%。",
+      "event_en": "EG夜盘close up2.67%，菜粕涨2.01%，短纤、菜油、棕榈油、低硫燃油至少涨0.84%，豆二、焦煤至少涨0.8%，豆油、豆粕、焦炭至少涨0.71%，螺纹钢涨0.23%，燃油涨0.08%。",
+      "assets": "铁矿石",
+      "assets_en": "Iron Ore",
+      "dir": "split",
+      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
+      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst",
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ]
+    },
+    {
+      "event": "伦敦Saltmarsh Economics欧洲经济学家Marchel Alexandrovich：欧洲领导人确认，巴勃罗·埃尔南德斯·德科斯（Pablo Hernández de Cos）将接替...",
+      "event_en": "伦敦Saltmarsh Economics欧洲经济学家Marchel Alexandrovich：欧洲领导人确认，巴勃罗·埃尔南德斯·德科斯（Pablo Hernández de Cos）将接替...",
+      "assets": "详见原文",
+      "assets_en": "See source",
+      "dir": "neutral",
+      "logic": "央行鹰派信号 → 加息预期升温 → 利率上行 → 风险资产承压",
+      "logic_en": "Central bank hawkish signal → rate hike expectations rise → yields rise → risk assets under pressure",
+      "tags": [
+        {
+          "type": "central-bank",
+          "text": "央行",
+          "text_en": "Central Bank"
+        }
+      ]
+    },
+    {
+      "event": "英债扩大跌幅，两年期收益率上涨8个基点至4.86%。",
+      "event_en": "英债扩selloff幅，两year期yieldrise8个基点至4.86%。",
+      "assets": "详见原文",
+      "assets_en": "See source",
+      "dir": "split",
+      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
+      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst",
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ]
+    },
+    {
+      "event": "保加利亚央行将系统性风险缓冲资本率从先前的3%下调，其在一份声明中表示，此举是因为“自保加利亚加入欧元区以来，系统性风险已出现明显且持续的缓解”。",
+      "event_en": "保加利亚central bank将系统性risk缓冲资本率从先前的3%下调，其在一份statement中表示，此举是因为“自保加利亚加入EUR区以来，系统性risk已出现明显且持续的缓解”。",
+      "assets": "欧元",
+      "assets_en": "EUR",
+      "dir": "neutral",
+      "logic": "事件发生 → 市场消化信息 → 资产价格调整",
+      "logic_en": "Event occurs → market digests info → asset prices adjust",
+      "tags": [
+        {
+          "type": "central-bank",
+          "text": "央行",
+          "text_en": "Central Bank"
+        }
+      ]
+    },
+    {
+      "event": "美国总统特朗普指责其自己的政府“蓄意”压低美国经济增长数据，他利用一次常规的数据修订，在毫无证据的情况下提出了干预选举的指控。",
+      "event_en": "US President Trump指责其自己的政府“蓄意”压低美国经济growth数据，他利用一次常规的数据修订，在毫无证据的情况下提出了干预选举的指控。",
+      "assets": "详见原文",
+      "assets_en": "See source",
+      "dir": "split",
+      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
+      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst",
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ]
+    }
+  ],
+  "chains": [
+    {
+      "title": "央行政策链：欧洲央行会议纪要：欧洲央行官员在10月一致认为，物价前景已经恶化 → 阿姆斯特丹AFS Group研究主管Arne...",
+      "title_en": "Central Bank Policy Chain: 欧洲central bank会议纪要：欧洲central bank官员在10month一致认为，物价前景已经恶化 → 阿姆斯特丹AFS Group研究主管Arne...",
+      "status": "unverified",
+      "nodes": [
+        {
+          "text": "欧洲央行会议纪要：欧洲央行官员在10月一致认为，物价前景已经恶化",
+          "text_en": "欧洲central bank会议纪要：欧洲central bank官员在10month一致认为，物价前景已经恶化",
+          "type": "cause"
+        },
+        {
+          "text": "欧洲央行会议纪要：官员一致认为，不存在实质性的第二轮效应",
+          "text_en": "欧洲central bank会议纪要：官员一致认为，不存在实质性的第二轮效应",
+          "type": "intermediate"
+        },
+        {
+          "text": "欧洲央行官员在上月会议上认为，随着通胀前景恶化，未来可能需要进一步收紧货币政策",
+          "text_en": "欧洲central bank官员在上month会议上认为，随着inflation前景恶化，未来可能需要进一步收紧货币政策",
+          "type": "intermediate"
+        },
+        {
+          "text": "伦敦Saltmarsh Economics欧洲经济学家Marchel Alexandrovic...",
+          "text_en": "伦敦Saltmarsh Economics欧洲经济学家Marchel Alexandrovic...",
+          "type": "intermediate"
+        },
+        {
+          "text": "阿姆斯特丹AFS Group研究主管Arne Petimezas）：随着立场偏鹰派的克诺特（K...",
+          "text_en": "阿姆斯特丹AFS Group研究主管Arne Petimezas）：随着立场偏hawkish的克诺特（K...",
+          "type": "effect"
+        }
+      ],
+      "jargon": [
+        {
+          "term": "鹰派",
+          "term_en": "Hawkish",
+          "explain": "央行官员倾向于加息、收紧货币政策来压制通胀的态度。",
+          "explain_en": "Central bank officials' tendency to raise rates and tighten policy to suppress inflation."
+        },
+        {
+          "term": "终点利率",
+          "term_en": "Terminal Rate",
+          "explain": "市场预期央行加息到哪个水平就会停。终点利率上移=还要加，下移=快停了。",
+          "explain_en": "The rate level at which the market expects the central bank to stop hiking."
+        },
+        {
+          "term": "国债利差",
+          "term_en": "Bond Spread",
+          "explain": "两个国家国债收益率的差额。利差走阔=市场认为某国债务风险上升。",
+          "explain_en": "Yield difference between two countries' government bonds. Widening spread = market sees rising debt risk."
+        }
+      ]
+    },
+    {
+      "title": "宏观链：英债扩大跌幅，两年期收益率上涨8个基点至4.86% → 受寒冷天气和风力发电疲软导致电力供应收紧的影响",
+      "title_en": "Macro Chain: 英债扩selloff幅，两year期yieldrise8个基点至4.86% → 受寒冷天气和风力发电疲软导致电力supply收紧的影响",
+      "status": "unverified",
+      "nodes": [
+        {
+          "text": "英债扩大跌幅，两年期收益率上涨8个基点至4.86%",
+          "text_en": "英债扩selloff幅，两year期yieldrise8个基点至4.86%",
+          "type": "cause"
+        },
+        {
+          "text": "乙二醇夜盘收涨2.67%，菜粕涨2.01%，短纤、菜油、棕榈油、低硫燃油至少涨0.84%",
+          "text_en": "EG夜盘close up2.67%，菜粕涨2.01%，短纤、菜油、棕榈油、低硫燃油至少涨0.84%",
+          "type": "intermediate"
+        },
+        {
+          "text": "美国总统特朗普指责其自己的政府“蓄意”压低美国经济增长数据，他利用一次常规的数据修订，在毫无证据的情况下提出了干预选举的指控",
+          "text_en": "US President Trump指责其自己的政府“蓄意”压低美国经济growth数据，他利用一次常规的数据修订，在毫无证据的情况下提出了干预选举的指控",
+          "type": "intermediate"
+        },
+        {
+          "text": "受寒冷天气和风力发电疲软导致电力供应收紧的影响，周四欧洲各地的电力价格飙升，促使英国电网运营商连续第三天呼吁增加电力供应",
+          "text_en": "受寒冷天气和风力发电疲软导致电力supply收紧的影响，周四欧洲各地的电力价格surge，促使英国电网运营商连续第三天呼吁增加电力supply",
+          "type": "effect"
+        }
+      ],
+      "jargon": [
+        {
+          "term": "美元走强→商品下跌",
+          "term_en": "Strong USD → Commodity Down",
+          "explain": "国际大宗商品以美元计价。美元贵了，同样一桶油用美元买就贵了，需求减少，价格就跌。",
+          "explain_en": "Commodities priced in USD. Stronger dollar = more expensive commodities = lower demand."
+        },
+        {
+          "term": "避险情绪",
+          "term_en": "Risk-Off Sentiment",
+          "explain": "市场害怕风险时，资金从股票等高风险资产流向黄金/美债等安全资产。",
+          "explain_en": "When markets fear risk, capital flows from stocks to safe havens like gold/Treasuries."
+        },
+        {
+          "term": "PMI（采购经理人指数）",
+          "term_en": "PMI (Purchasing Managers' Index)",
+          "explain": "衡量制造业/服务业景气度的指标。50以上=扩张，50以下=收缩。",
+          "explain_en": "Index measuring manufacturing/services activity. Above 50 = expansion, below 50 = contraction."
+        }
+      ]
+    }
+  ],
+  "verifications": [
+    {
+      "title": "央行政策链：欧洲央行会议纪要：欧洲央行官员在10月一致认为，物价前景已经恶化 → 阿姆斯特丹AFS Group研究主管Arne...能否持续？",
+      "title_en": "Can 'Central Bank Policy Chain: 欧洲central bank会议纪要：欧洲central bank官员在10month一致认为，物价前景已经恶化 → 阿姆斯特丹AFS Group研究主管Arne...' sustain?",
+      "layer1": "央行鹰派信号与债务风险的博弈，会否触发利差危机？加息+高债务=火药桶。",
+      "layer1_en": "Will the central bank hawkish signal vs debt risk game trigger a spread crisis? Rate hikes + high debt = powder keg.",
+      "vars": [
+        "10年期国债利差：若走阔至85bp+，市场开始定价财政失控风险",
+        "劳动力成本：工资上涨是核心通胀的最后一英里，若继续走高央行确实会加息",
+        "财政预算案进展：若无法通过可信的财政方案，利差危机风险上升",
+        "传导保护工具使用条件：若被触发，等同于危机信号"
+      ],
+      "vars_en": [
+        "10Y bond spread: widening to 85bp+ = market prices fiscal loss of control",
+        "Labor costs: rising wages are core inflation's last mile, if continues CB will hike",
+        "Fiscal budget progress: if no credible fiscal plan, spread crisis risk rises",
+        "Transmission protection tool conditions: if triggered, equals crisis signal"
+      ]
+    },
+    {
+      "title": "宏观链：英债扩大跌幅，两年期收益率上涨8个基点至4.86% → 受寒冷天气和风力发电疲软导致电力供应收紧的影响能否持续？",
+      "title_en": "Can 'Macro Chain: 英债扩selloff幅，两year期yieldrise8个基点至4.86% → 受寒冷天气和风力发电疲软导致电力supply收紧的影响' sustain?",
+      "layer1": "该宏观事件后续发展如何？市场当前定价是否充分？",
+      "layer1_en": "How will this macro event develop? Is current market pricing adequate?",
+      "vars": [
+        "相关资产价格次日开盘方向",
+        "成交量是否异常放大（恐慌or追涨）",
+        "官方/央行是否有后续声明或澄清",
+        "关联资产是否同步反应（验证逻辑链）"
+      ],
+      "vars_en": [
+        "Related asset price direction at next open",
+        "Volume anomaly (panic or chasing)",
+        "Official/central bank follow-up statement",
+        "Correlated assets confirmation"
+      ]
+    }
+  ],
+  "historical_analogies": [
+    {
+      "event": "欧债危机：希腊-意大利-西班牙利差螺旋（2011-2012年）",
+      "event_en": "European Debt Crisis: Greece-Italy-Spain spread spiral (2011-2012)",
+      "lesson": "央行在通胀压力下过早加息、随后引爆债务螺旋的剧本高度相似。加息加上高债务等于火药桶。2011年欧央行加息后，意大利债务利差飙升，最终靠Draghi的whatever it takes才稳住。",
+      "lesson_en": "The script of a central bank raising rates prematurely under inflation pressure then triggering a debt spiral is highly similar. Rate hikes plus high debt equals powder keg. In 2011, the ECB hiked, Italian spreads surged, only stabilized by Draghi's whatever it takes.",
+      "diff": "2012年Draghi的承诺和OMT/PEPP/TPI等工具箱今天已存在。央行自己也在监控这条线。但工具存在不等于能无成本使用，政治博弈才是关键。",
+      "diff_en": "Draghi's 2012 pledge and tools like OMT/PEPP/TPI now exist. The central bank is monitoring this line. But tool existence does not equal cost-free usage; political gaming is the key."
+    }
+  ]
+}
