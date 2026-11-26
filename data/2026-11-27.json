@@ -2,13 +2,21 @@
   "date": "2026-11-27",
   "weekday": "星期五",
   "weekday_en": "Friday",
-  "crawl_time": "约16:32（北京时间）",
+  "crawl_time": "约17:46（北京时间）",
   "source": "华尔街见闻",
   "sources_detail": [
     "华尔街见闻"
   ],
-  "filter_result": "10条核心要闻 / 2条因果链 / 100条原始抓取",
+  "filter_result": "10条核心要闻 / 3条因果链 / 100条原始抓取",
   "stats": [
+    {
+      "label": "在亚洲交易时段一度上",
+      "label_en": "在亚洲交易时段一度上",
+      "value": "2.2%",
+      "change": "比特币升破6万美元关口，随着风险资产跟随科技股反弹，加密货币市场走高，而市场即将进入交投清淡的假日交易期。这一最大加密货",
+      "change_en": "Bitcoin升破6万USD关口，随着risk资产跟随科技股反弹，加密货币市场走高，而市场即将进入交投清淡的假day交易期。这一最大加密货",
+      "dir": "split"
+    },
     {
       "label": "英国电价跳",
       "label_en": "英国电价跳",
@@ -27,6 +35,43 @@
     }
   ],
   "events": [
+    {
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "比特币升破6万美元关口，随着风险资产跟随科技股反弹，加密货币市场走高，而市场即将进入交投清淡的假日交易期。",
+      "event_en": "Bitcoin升破6万USD关口，随着risk资产跟随科技股反弹，加密货币市场走高，而市场即将进入交投清淡的假day交易期。",
+      "assets": "美元指数 / 比特币",
+      "assets_en": "USD Index / Bitcoin",
+      "dir": "split",
+      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
+      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst"
+    },
+    {
+      "tags": [
+        {
+          "type": "energy",
+          "text": "能源",
+          "text_en": "Energy"
+        },
+        {
+          "type": "geopolitics",
+          "text": "地缘",
+          "text_en": "Geopolitics"
+        }
+      ],
+      "event": "随着供应恢复和需求疲软缓解了伊朗战争带来的冲击，炼油商将原油转化为燃料所获得的利润已暴跌至数月来的最低水平。",
+      "event_en": "随着supply恢复和需求疲软缓解了伊朗战争带来的冲击，炼油商将crude oil转化为燃料所获得的profit已plunge至数month来的最低水平。",
+      "assets": "原油",
+      "assets_en": "Crude Oil",
+      "dir": "split",
+      "logic": "地缘风险事件 → 避险情绪升温 → 避险资产上涨 / 风险资产下跌",
+      "logic_en": "Geopolitical risk event → safe-haven sentiment rises → safe-haven assets rise / risk assets fall"
+    },
     {
       "tags": [
         {
@@ -83,54 +128,18 @@
     {
       "tags": [
         {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        },
-        {
-          "type": "central-bank",
-          "text": "央行",
-          "text_en": "Central Bank"
-        },
-        {
           "type": "macro",
           "text": "宏观",
           "text_en": "Macro"
         }
       ],
-      "event": "欧洲央行会议纪要：官员一致认为，不存在实质性的第二轮效应。",
-      "event_en": "欧洲central bank会议纪要：官员一致认为，不存在实质性的第二轮效应。",
-      "assets": "欧元",
-      "assets_en": "EUR",
-      "dir": "up",
-      "logic": "央行鹰派信号 → 加息预期升温 → 资金回流本币 → 相关资产受益",
-      "logic_en": "Central bank hawkish signal → rate hike expectations rise → capital flows back to local currency → related assets benefit"
-    },
-    {
-      "tags": [
-        {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        },
-        {
-          "type": "central-bank",
-          "text": "央行",
-          "text_en": "Central Bank"
-        },
-        {
-          "type": "energy",
-          "text": "能源",
-          "text_en": "Energy"
-        }
-      ],
-      "event": "欧洲央行会议纪要：欧洲央行官员在10月一致认为，物价前景已经恶化。",
-      "event_en": "欧洲central bank会议纪要：欧洲central bank官员在10month一致认为，物价前景已经恶化。",
+      "event": "周四（11月26日）欧市尾盘，法国10年期国债收益率跌1个基点，刷新日低至4.729%，北京时间21:44曾涨至4.763%刷新日高。",
+      "event_en": "周四（11month26day）欧市尾盘，法国10year期government bondsyield跌1个基点，刷新day低至4.729%，北京时间21:44曾涨至4.763%刷新day高。",
       "assets": "详见原文",
       "assets_en": "See source",
-      "dir": "up",
-      "logic": "央行鹰派信号 → 加息预期升温 → 资金回流本币 → 相关资产受益",
-      "logic_en": "Central bank hawkish signal → rate hike expectations rise → capital flows back to local currency → related assets benefit"
+      "dir": "split",
+      "logic": "债务风险信号 → 国债利差走阔 → 相关国家资产承压",
+      "logic_en": "Debt risk signal → bond spread widens → related country assets under pressure"
     },
     {
       "tags": [
@@ -188,32 +197,53 @@
           "text_en": "Central Bank"
         }
       ],
-      "event": "保加利亚央行将系统性风险缓冲资本率从先前的3%下调，其在一份声明中表示，此举是因为“自保加利亚加入欧元区以来，系统性风险已出现明显且持续的缓解”。",
-      "event_en": "保加利亚central bank将系统性risk缓冲资本率从先前的3%下调，其在一份statement中表示，此举是因为“自保加利亚加入EUR区以来，系统性risk已出现明显且持续的缓解”。",
+      "event": "欧洲理事会主席Costa：欧元区成员国同意由推荐的原西班牙央行行长de Cos出任下一届欧洲央行行长。",
+      "event_en": "欧洲理事会主席Costa：EUR区成员国同意由推荐的原西班牙central bank行长de Cos出任下一届欧洲central bank行长。",
       "assets": "欧元",
       "assets_en": "EUR",
       "dir": "neutral",
       "logic": "事件发生 → 市场消化信息 → 资产价格调整",
       "logic_en": "Event occurs → market digests info → asset prices adjust"
-    },
+    }
+  ],
+  "four_column_table": [
     {
+      "event": "比特币升破6万美元关口，随着风险资产跟随科技股反弹，加密货币市场走高，而市场即将进入交投清淡的假日交易期。",
+      "event_en": "Bitcoin升破6万USD关口，随着risk资产跟随科技股反弹，加密货币市场走高，而市场即将进入交投清淡的假day交易期。",
+      "assets": "美元指数 / 比特币",
+      "assets_en": "USD Index / Bitcoin",
+      "dir": "split",
+      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
+      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst",
       "tags": [
         {
           "type": "macro",
           "text": "宏观",
           "text_en": "Macro"
         }
-      ],
-      "event": "美国总统特朗普指责其自己的政府“蓄意”压低美国经济增长数据，他利用一次常规的数据修订，在毫无证据的情况下提出了干预选举的指控。",
-      "event_en": "US President Trump指责其自己的政府“蓄意”压低美国经济growth数据，他利用一次常规的数据修订，在毫无证据的情况下提出了干预选举的指控。",
-      "assets": "详见原文",
-      "assets_en": "See source",
+      ]
+    },
+    {
+      "event": "随着供应恢复和需求疲软缓解了伊朗战争带来的冲击，炼油商将原油转化为燃料所获得的利润已暴跌至数月来的最低水平。",
+      "event_en": "随着supply恢复和需求疲软缓解了伊朗战争带来的冲击，炼油商将crude oil转化为燃料所获得的profit已plunge至数month来的最低水平。",
+      "assets": "原油",
+      "assets_en": "Crude Oil",
       "dir": "split",
-      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
-      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst"
-    }
-  ],
-  "four_column_table": [
+      "logic": "地缘风险事件 → 避险情绪升温 → 避险资产上涨 / 风险资产下跌",
+      "logic_en": "Geopolitical risk event → safe-haven sentiment rises → safe-haven assets rise / risk assets fall",
+      "tags": [
+        {
+          "type": "energy",
+          "text": "能源",
+          "text_en": "Energy"
+        },
+        {
+          "type": "geopolitics",
+          "text": "地缘",
+          "text_en": "Geopolitics"
+        }
+      ]
+    },
     {
       "event": "阿姆斯特丹AFS Group研究主管Arne Petimezas）：随着立场偏鹰派的克诺特（Knot）退出竞选，立场偏鸽派的德科斯（Pablo Hernández de Cos）成了欧洲央行行长...",
       "event_en": "阿姆斯特丹AFS Group研究主管Arne Petimezas）：随着立场偏hawkish的克诺特（Knot）退出竞选，立场偏dovish的德科斯（Pablo Hernández de Cos）成了欧洲central bank行长...",
@@ -268,54 +298,18 @@
       ]
     },
     {
-      "event": "欧洲央行会议纪要：官员一致认为，不存在实质性的第二轮效应。",
-      "event_en": "欧洲central bank会议纪要：官员一致认为，不存在实质性的第二轮效应。",
-      "assets": "欧元",
-      "assets_en": "EUR",
-      "dir": "up",
-      "logic": "央行鹰派信号 → 加息预期升温 → 资金回流本币 → 相关资产受益",
-      "logic_en": "Central bank hawkish signal → rate hike expectations rise → capital flows back to local currency → related assets benefit",
+      "event": "周四（11月26日）欧市尾盘，法国10年期国债收益率跌1个基点，刷新日低至4.729%，北京时间21:44曾涨至4.763%刷新日高。",
+      "event_en": "周四（11month26day）欧市尾盘，法国10year期government bondsyield跌1个基点，刷新day低至4.729%，北京时间21:44曾涨至4.763%刷新day高。",
+      "assets": "详见原文",
+      "assets_en": "See source",
+      "dir": "split",
+      "logic": "债务风险信号 → 国债利差走阔 → 相关国家资产承压",
+      "logic_en": "Debt risk signal → bond spread widens → related country assets under pressure",
       "tags": [
-        {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        },
-        {
-          "type": "central-bank",
-          "text": "央行",
-          "text_en": "Central Bank"
-        },
         {
           "type": "macro",
           "text": "宏观",
           "text_en": "Macro"
-        }
-      ]
-    },
-    {
-      "event": "欧洲央行会议纪要：欧洲央行官员在10月一致认为，物价前景已经恶化。",
-      "event_en": "欧洲central bank会议纪要：欧洲central bank官员在10month一致认为，物价前景已经恶化。",
-      "assets": "详见原文",
-      "assets_en": "See source",
-      "dir": "up",
-      "logic": "央行鹰派信号 → 加息预期升温 → 资金回流本币 → 相关资产受益",
-      "logic_en": "Central bank hawkish signal → rate hike expectations rise → capital flows back to local currency → related assets benefit",
-      "tags": [
-        {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        },
-        {
-          "type": "central-bank",
-          "text": "央行",
-          "text_en": "Central Bank"
-        },
-        {
-          "type": "energy",
-          "text": "能源",
-          "text_en": "Energy"
         }
       ]
     },
@@ -368,8 +362,8 @@
       ]
     },
     {
-      "event": "保加利亚央行将系统性风险缓冲资本率从先前的3%下调，其在一份声明中表示，此举是因为“自保加利亚加入欧元区以来，系统性风险已出现明显且持续的缓解”。",
-      "event_en": "保加利亚central bank将系统性risk缓冲资本率从先前的3%下调，其在一份statement中表示，此举是因为“自保加利亚加入EUR区以来，系统性risk已出现明显且持续的缓解”。",
+      "event": "欧洲理事会主席Costa：欧元区成员国同意由推荐的原西班牙央行行长de Cos出任下一届欧洲央行行长。",
+      "event_en": "欧洲理事会主席Costa：EUR区成员国同意由推荐的原西班牙central bank行长de Cos出任下一届欧洲central bank行长。",
       "assets": "欧元",
       "assets_en": "EUR",
       "dir": "neutral",
@@ -382,44 +376,55 @@
           "text_en": "Central Bank"
         }
       ]
-    },
-    {
-      "event": "美国总统特朗普指责其自己的政府“蓄意”压低美国经济增长数据，他利用一次常规的数据修订，在毫无证据的情况下提出了干预选举的指控。",
-      "event_en": "US President Trump指责其自己的政府“蓄意”压低美国经济growth数据，他利用一次常规的数据修订，在毫无证据的情况下提出了干预选举的指控。",
-      "assets": "详见原文",
-      "assets_en": "See source",
-      "dir": "split",
-      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
-      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst",
-      "tags": [
-        {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
-        }
-      ]
     }
   ],
   "chains": [
     {
-      "title": "央行政策链：欧洲央行会议纪要：欧洲央行官员在10月一致认为，物价前景已经恶化 → 阿姆斯特丹AFS Group研究主管Arne...",
-      "title_en": "Central Bank Policy Chain: 欧洲central bank会议纪要：欧洲central bank官员在10month一致认为，物价前景已经恶化 → 阿姆斯特丹AFS Group研究主管Arne...",
+      "title": "地缘链：随着供应恢复和需求疲软缓解了伊朗战争带来的冲击 → 相关资产变动",
+      "title_en": "Geopolitical Chain: 随着supply恢复和需求疲软缓解了伊朗战争带来的冲击 → Asset price change",
       "status": "unverified",
       "nodes": [
         {
-          "text": "欧洲央行会议纪要：欧洲央行官员在10月一致认为，物价前景已经恶化",
-          "text_en": "欧洲central bank会议纪要：欧洲central bank官员在10month一致认为，物价前景已经恶化",
+          "text": "随着供应恢复和需求疲软缓解了伊朗战争带来的冲击，炼油商将原油转化为燃料所获得的利润已暴跌至数月来的最低水平",
+          "text_en": "随着supply恢复和需求疲软缓解了伊朗战争带来的冲击，炼油商将crude oil转化为燃料所获得的profit已plunge至数month来的最低水平",
           "type": "cause"
         },
         {
-          "text": "欧洲央行会议纪要：官员一致认为，不存在实质性的第二轮效应",
-          "text_en": "欧洲central bank会议纪要：官员一致认为，不存在实质性的第二轮效应",
-          "type": "intermediate"
+          "text": "资产价格分化",
+          "text_en": "Asset prices diverge",
+          "type": "effect"
+        }
+      ],
+      "jargon": [
+        {
+          "term": "地缘风险溢价",
+          "term_en": "Geopolitical Risk Premium",
+          "explain": "因为担心打仗，投资者要求额外回报才肯持有资产。一旦风险下降，这部分'恐惧折扣'被去掉，资产价格就跳涨。",
+          "explain_en": "Extra return investors demand for holding assets when they fear conflict. Once risk falls, this 'fear discount' is removed and prices jump."
         },
+        {
+          "term": "避险资产",
+          "term_en": "Safe-Haven Assets",
+          "explain": "市场恐慌时资金流入的资产，如黄金、美债、日元。地缘紧张时涨，缓和时跌。",
+          "explain_en": "Assets that capital flows into during panic: gold, US Treasuries, JPY. Rise when geopolitics tense, fall when easing."
+        },
+        {
+          "term": "风险偏好",
+          "term_en": "Risk Appetite",
+          "explain": "投资者更愿意买股票（风险资产）还是买国债（避险资产）的倾向。",
+          "explain_en": "Whether investors prefer stocks (risk assets) or bonds (safe havens)."
+        }
+      ]
+    },
+    {
+      "title": "央行政策链：欧洲央行官员在上月会议上认为，随着通胀前景恶化，未来可能需要进一步收紧货币政策 → 欧洲理事会主席Costa：欧元区成员国同意由...",
+      "title_en": "Central Bank Policy Chain: 欧洲central bank官员在上month会议上认为，随着inflation前景恶化，未来可能需要进一步收紧货币政策 → 欧洲理事会主席Costa：EUR区成员国同意由...",
+      "status": "unverified",
+      "nodes": [
         {
           "text": "欧洲央行官员在上月会议上认为，随着通胀前景恶化，未来可能需要进一步收紧货币政策",
           "text_en": "欧洲central bank官员在上month会议上认为，随着inflation前景恶化，未来可能需要进一步收紧货币政策",
-          "type": "intermediate"
+          "type": "cause"
         },
         {
           "text": "伦敦Saltmarsh Economics欧洲经济学家Marchel Alexandrovic...",
@@ -429,6 +434,11 @@
         {
           "text": "阿姆斯特丹AFS Group研究主管Arne Petimezas）：随着立场偏鹰派的克诺特（K...",
           "text_en": "阿姆斯特丹AFS Group研究主管Arne Petimezas）：随着立场偏hawkish的克诺特（K...",
+          "type": "intermediate"
+        },
+        {
+          "text": "欧洲理事会主席Costa：欧元区成员国同意由推荐的原西班牙央行行长de Cos出任下一届欧洲央行行长",
+          "text_en": "欧洲理事会主席Costa：EUR区成员国同意由推荐的原西班牙central bank行长de Cos出任下一届欧洲central bank行长",
           "type": "effect"
         }
       ],
@@ -454,8 +464,8 @@
       ]
     },
     {
-      "title": "宏观链：英债扩大跌幅，两年期收益率上涨8个基点至4.86% → 受寒冷天气和风力发电疲软导致电力供应收紧的影响",
-      "title_en": "Macro Chain: 英债扩selloff幅，两year期yieldrise8个基点至4.86% → 受寒冷天气和风力发电疲软导致电力supply收紧的影响",
+      "title": "宏观链：英债扩大跌幅，两年期收益率上涨8个基点至4.86% → 周四（11月26日）欧市尾盘，法国10年期国...",
+      "title_en": "Macro Chain: 英债扩selloff幅，两year期yieldrise8个基点至4.86% → 周四（11month26day）欧市尾盘，法国10year期国...",
       "status": "unverified",
       "nodes": [
         {
@@ -469,13 +479,18 @@
           "type": "intermediate"
         },
         {
-          "text": "美国总统特朗普指责其自己的政府“蓄意”压低美国经济增长数据，他利用一次常规的数据修订，在毫无证据的情况下提出了干预选举的指控",
-          "text_en": "US President Trump指责其自己的政府“蓄意”压低美国经济growth数据，他利用一次常规的数据修订，在毫无证据的情况下提出了干预选举的指控",
+          "text": "受寒冷天气和风力发电疲软导致电力供应收紧的影响，周四欧洲各地的电力价格飙升，促使英国电网运营商连续第三天呼吁增加电力供应",
+          "text_en": "受寒冷天气和风力发电疲软导致电力supply收紧的影响，周四欧洲各地的电力价格surge，促使英国电网运营商连续第三天呼吁增加电力supply",
           "type": "intermediate"
         },
         {
-          "text": "受寒冷天气和风力发电疲软导致电力供应收紧的影响，周四欧洲各地的电力价格飙升，促使英国电网运营商连续第三天呼吁增加电力供应",
-          "text_en": "受寒冷天气和风力发电疲软导致电力supply收紧的影响，周四欧洲各地的电力价格surge，促使英国电网运营商连续第三天呼吁增加电力supply",
+          "text": "比特币升破6万美元关口，随着风险资产跟随科技股反弹，加密货币市场走高，而市场即将进入交投清淡的假日交易期",
+          "text_en": "Bitcoin升破6万USD关口，随着risk资产跟随科技股反弹，加密货币市场走高，而市场即将进入交投清淡的假day交易期",
+          "type": "intermediate"
+        },
+        {
+          "text": "周四（11月26日）欧市尾盘，法国10年期国债收益率跌1个基点，刷新日低至4.729%，北京时间21:44曾涨至4.763%刷新日高",
+          "text_en": "周四（11month26day）欧市尾盘，法国10year期government bondsyield跌1个基点，刷新day低至4.729%，北京时间21:44曾涨至4.763%刷新day高",
           "type": "effect"
         }
       ],
@@ -503,8 +518,26 @@
   ],
   "verifications": [
     {
-      "title": "央行政策链：欧洲央行会议纪要：欧洲央行官员在10月一致认为，物价前景已经恶化 → 阿姆斯特丹AFS Group研究主管Arne...能否持续？",
-      "title_en": "Can 'Central Bank Policy Chain: 欧洲central bank会议纪要：欧洲central bank官员在10month一致认为，物价前景已经恶化 → 阿姆斯特丹AFS Group研究主管Arne...' sustain?",
+      "title": "地缘链：随着供应恢复和需求疲软缓解了伊朗战争带来的冲击 → 相关资产变动能否持续？",
+      "title_en": "Can 'Geopolitical Chain: 随着supply恢复和需求疲软缓解了伊朗战争带来的冲击 → Asset price change' sustain?",
+      "layer1": "地缘缓和信号能否真正转化为风险溢价的持久压缩？宣言是政治表态，能否转化为可执行方案？",
+      "layer1_en": "Can geopolitical easing truly translate into lasting risk premium compression? Can a declaration become actionable?",
+      "vars": [
+        "VIX恐慌指数：持续低于15=市场已price in和平；反弹至18+=市场持保留态度",
+        "布伦特原油价格：跌破70美元=市场认可增产；反弹至78+=供应担忧未消",
+        "黄金走势：央行持续购金=央行层面仍在对冲地缘风险",
+        "后续军事动态：是否有和平宣言与战场现实的落差？"
+      ],
+      "vars_en": [
+        "VIX: sustained below 15 = peace priced in; rebound to 18+ = market skeptical",
+        "Brent crude: below $70 = market believes production; above $78 = supply fears persist",
+        "Gold trend: continued CB purchases = CBs still hedging geopolitical risk",
+        "Follow-up military actions: gap between declaration and battlefield reality?"
+      ]
+    },
+    {
+      "title": "央行政策链：欧洲央行官员在上月会议上认为，随着通胀前景恶化，未来可能需要进一步收紧货币政策 → 欧洲理事会主席Costa：欧元区成员国同意由...能否持续？",
+      "title_en": "Can 'Central Bank Policy Chain: 欧洲central bank官员在上month会议上认为，随着inflation前景恶化，未来可能需要进一步收紧货币政策 → 欧洲理事会主席Costa：EUR区成员国同意由...' sustain?",
       "layer1": "央行鹰派信号与债务风险的博弈，会否触发利差危机？加息+高债务=火药桶。",
       "layer1_en": "Will the central bank hawkish signal vs debt risk game trigger a spread crisis? Rate hikes + high debt = powder keg.",
       "vars": [
@@ -521,8 +554,8 @@
       ]
     },
     {
-      "title": "宏观链：英债扩大跌幅，两年期收益率上涨8个基点至4.86% → 受寒冷天气和风力发电疲软导致电力供应收紧的影响能否持续？",
-      "title_en": "Can 'Macro Chain: 英债扩selloff幅，两year期yieldrise8个基点至4.86% → 受寒冷天气和风力发电疲软导致电力supply收紧的影响' sustain?",
+      "title": "宏观链：英债扩大跌幅，两年期收益率上涨8个基点至4.86% → 周四（11月26日）欧市尾盘，法国10年期国...能否持续？",
+      "title_en": "Can 'Macro Chain: 英债扩selloff幅，两year期yieldrise8个基点至4.86% → 周四（11month26day）欧市尾盘，法国10year期国...' sustain?",
       "layer1": "该宏观事件后续发展如何？市场当前定价是否充分？",
       "layer1_en": "How will this macro event develop? Is current market pricing adequate?",
       "vars": [
@@ -541,12 +574,28 @@
   ],
   "historical_analogies": [
     {
+      "event": "两伊战争期间的油轮战（1984-1988年）",
+      "event_en": "Tanker War during Iran-Iraq War (1984-1988)",
+      "lesson": "霍尔木兹海峡油轮遭袭并非首次。1980年代两伊战争期间，双方互相袭击油轮，导致油价短期飙升后又被全球协调护航机制压制。今天的局势可能在复制有限升级到国际协调再到风险消退的剧本。",
+      "lesson_en": "Hormuz tanker attacks aren't unprecedented. During the 1980s Iran-Iraq War, both sides attacked tankers, causing oil to spike then subside through globally coordinated escorts. Today may replicate the limited escalation to coordination to risk subsiding script.",
+      "diff": "1980年代没有中俄美联合宣言这种三方协调机制。如果三方增产共识真正落地，即使海峡发生局部冲突，全球能源供应的兜底能力比当年强得多。但伊朗的无人机和水雷技术也远超当年。",
+      "diff_en": "The 1980s lacked a China-Russia-US coordination mechanism. If three-nation production consensus materializes, global energy resilience is far stronger. But Iran's drone and mine technology is also far superior."
+    },
+    {
       "event": "欧债危机：希腊-意大利-西班牙利差螺旋（2011-2012年）",
       "event_en": "European Debt Crisis: Greece-Italy-Spain spread spiral (2011-2012)",
       "lesson": "央行在通胀压力下过早加息、随后引爆债务螺旋的剧本高度相似。加息加上高债务等于火药桶。2011年欧央行加息后，意大利债务利差飙升，最终靠Draghi的whatever it takes才稳住。",
       "lesson_en": "The script of a central bank raising rates prematurely under inflation pressure then triggering a debt spiral is highly similar. Rate hikes plus high debt equals powder keg. In 2011, the ECB hiked, Italian spreads surged, only stabilized by Draghi's whatever it takes.",
       "diff": "2012年Draghi的承诺和OMT/PEPP/TPI等工具箱今天已存在。央行自己也在监控这条线。但工具存在不等于能无成本使用，政治博弈才是关键。",
       "diff_en": "Draghi's 2012 pledge and tools like OMT/PEPP/TPI now exist. The central bank is monitoring this line. But tool existence does not equal cost-free usage; political gaming is the key."
+    },
+    {
+      "event": "2014-2015年美元走强周期：大宗商品全面崩塌",
+      "event_en": "2014-2015 Strong Dollar Cycle: Broad commodity collapse",
+      "lesson": "2014-2015年美元指数从80涨至100，黄金从1300跌至1050，原油从100跌至30。美元走强周期中大宗商品无一幸免。",
+      "lesson_en": "2014-2015: DXY 80 to 100, gold $1300 to $1050, oil $100 to $30. Strong dollar cycle spares no commodity.",
+      "diff": "需关注美联储实际加息路径是否如预期，以及通胀是否支撑继续加息。当前美元周期位置与2014年不同。",
+      "diff_en": "Watch whether the Fed actually hikes as expected and whether inflation supports further hikes. Current dollar cycle position differs from 2014."
     }
   ]
 }
