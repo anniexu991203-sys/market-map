@@ -2,7 +2,7 @@
   "date": "2026-11-28",
   "weekday": "星期六",
   "weekday_en": "Saturday",
-  "crawl_time": "约17:29（北京时间）",
+  "crawl_time": "约18:17（北京时间）",
   "source": "华尔街见闻",
   "sources_detail": [
     "华尔街见闻"
@@ -18,6 +18,14 @@
       "dir": "split"
     },
     {
+      "label": "道指",
+      "label_en": "Dow Jones",
+      "value": "5.3%",
+      "change": "本周，标普累涨约5.3%，道指涨5.3%，纳指涨6.2%，纳斯达克100指数涨6.2%，半导体指数涨约8%。\n\n标普50",
+      "change_en": "本周，S&P累涨约5.3%，Dow Jones涨5.3%，Nasdaq涨6.2%，纳斯达克100index涨6.2%，semiconductorsindex涨约8%。\n\nS&P50",
+      "dir": "split"
+    },
+    {
       "label": "闪迪大",
       "label_en": "闪迪大",
       "value": "10%",
@@ -26,28 +34,12 @@
       "dir": "split"
     },
     {
-      "label": "网络股指数ETF",
-      "label_en": "网络股indexETF",
-      "value": "2%",
-      "change": "网络股指数ETF涨2%，在美股盘初领跑行业ETF，半导体ETF涨约1.9%，全球科技股指数ETF涨1.8%，科技行业ET",
-      "change_en": "网络股indexETF涨2%，在美股盘初领跑行业ETF，semiconductorsETF涨约1.9%，全球科技股indexETF涨1.8%，科技行业ET",
+      "label": "半导体ETF收",
+      "label_en": "semiconductorsETF收",
+      "value": "4.17%",
+      "change": "周五（11月27日），美股行业ETF全线上涨，半导体ETF收涨4.17%，全球科技股指数ETF涨2.88%，科技行业ET",
+      "change_en": "周五（11month27day），美股行业ETF全线rise，semiconductorsETFclose up4.17%，全球科技股indexETF涨2.88%，科技行业ET",
       "dir": "split"
-    },
-    {
-      "label": "烧碱夜盘收",
-      "label_en": "烧碱夜盘收",
-      "value": "3.84%",
-      "change": "烧碱夜盘收涨3.84%，纯碱、铁矿石至少涨1.45%，燃油涨1.35%，豆二、菜粕、豆粕、热卷至少涨0.95%，聚丙烯、",
-      "change_en": "烧碱夜盘close up3.84%，纯碱、铁矿石至少涨1.45%，燃油涨1.35%，豆二、菜粕、豆粕、热卷至少涨0.95%，聚propylene、",
-      "dir": "split"
-    },
-    {
-      "label": "bovespa指数上",
-      "label_en": "bovespaindex上",
-      "value": "3.6%",
-      "change": "巴西Ibovespa指数上涨3.6%，巴西小盘股指数飙升6%。",
-      "change_en": "巴西Ibovespaindexrise3.6%，巴西小盘股indexsurge6%。",
-      "dir": "up"
     }
   ],
   "events": [
@@ -71,6 +63,22 @@
       "dir": "split",
       "logic": "AI产业事件 → 算力/芯片需求预期变化 → 相关板块联动",
       "logic_en": "AI industry event → compute/chip demand expectations shift → related sectors correlate"
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ],
+      "event": "本周，标普累涨约5.3%，道指涨5.3%，纳指涨6.2%，纳斯达克100指数涨6.2%，半导体指数涨约8%。",
+      "event_en": "本周，S&P累涨约5.3%，Dow Jones涨5.3%，Nasdaq涨6.2%，纳斯达克100index涨6.2%，semiconductorsindex涨约8%。",
+      "assets": "纳指 / 标普500 / 道指 / 特斯拉 / 半导体板块",
+      "assets_en": "Nasdaq / S&P 500 / Dow Jones / Tesla / Semiconductors",
+      "dir": "split",
+      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
+      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst"
     },
     {
       "tags": [
@@ -165,6 +173,27 @@
     {
       "tags": [
         {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        },
+        {
+          "type": "energy",
+          "text": "能源",
+          "text_en": "Energy"
+        }
+      ],
+      "event": "周五（11月27日），美股行业ETF全线上涨，半导体ETF收涨4.17%，全球科技股指数ETF涨2.88%，科技行业ETF涨2.8%，网络股指数ETF涨2.51%。",
+      "event_en": "周五（11month27day），美股行业ETF全线rise，semiconductorsETFclose up4.17%，全球科技股indexETF涨2.88%，科技行业ETF涨2.8%，网络股indexETF涨2.51%。",
+      "assets": "半导体板块",
+      "assets_en": "Semiconductors",
+      "dir": "split",
+      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
+      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst"
+    },
+    {
+      "tags": [
+        {
           "type": "central-bank",
           "text": "央行",
           "text_en": "Central Bank"
@@ -186,55 +215,18 @@
     {
       "tags": [
         {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        },
-        {
-          "type": "energy",
-          "text": "能源",
-          "text_en": "Energy"
-        }
-      ],
-      "event": "网络股指数ETF涨2%，在美股盘初领跑行业ETF，半导体ETF涨约1.9%，全球科技股指数ETF涨1.8%，科技行业ETF、能源业ETF涨超1.5%，生物科技指数ETF跌超0.2%。",
-      "event_en": "网络股indexETF涨2%，在美股盘初领跑行业ETF，semiconductorsETF涨约1.9%，全球科技股indexETF涨1.8%，科技行业ETF、energy业ETFsurge past1.5%，biotechindexETFdrop below0.2%。",
-      "assets": "半导体板块",
-      "assets_en": "Semiconductors",
-      "dir": "split",
-      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
-      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst"
-    },
-    {
-      "tags": [
-        {
           "type": "macro",
           "text": "宏观",
           "text_en": "Macro"
         }
       ],
-      "event": "烧碱夜盘收涨3.84%，纯碱、铁矿石至少涨1.45%，燃油涨1.35%，豆二、菜粕、豆粕、热卷至少涨0.95%，聚丙烯、纸浆、玻璃、豆油、焦炭至少涨0.65%...",
-      "event_en": "烧碱夜盘close up3.84%，纯碱、铁矿石至少涨1.45%，燃油涨1.35%，豆二、菜粕、豆粕、热卷至少涨0.95%，聚propylene、纸浆、玻璃、豆油、焦炭至少涨0.65%...",
-      "assets": "铁矿石",
-      "assets_en": "Iron Ore",
+      "event": "LME期铜收涨379美元，报12251美元/吨。",
+      "event_en": "LME期copperclose up379USD，reported12251USD/吨。",
+      "assets": "美元指数 / 铜",
+      "assets_en": "USD Index / Copper",
       "dir": "split",
       "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
       "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst"
-    },
-    {
-      "tags": [
-        {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
-        }
-      ],
-      "event": "巴西Ibovespa指数上涨3.6%，巴西小盘股指数飙升6%。",
-      "event_en": "巴西Ibovespaindexrise3.6%，巴西小盘股indexsurge6%。",
-      "assets": "详见原文",
-      "assets_en": "See source",
-      "dir": "up",
-      "logic": "利好事件 → 市场预期改善 → 资产价格上涨",
-      "logic_en": "Positive event → market expectations improve → asset prices rise"
     }
   ],
   "four_column_table": [
@@ -256,6 +248,22 @@
           "type": "china",
           "text": "中国",
           "text_en": "China"
+        }
+      ]
+    },
+    {
+      "event": "本周，标普累涨约5.3%，道指涨5.3%，纳指涨6.2%，纳斯达克100指数涨6.2%，半导体指数涨约8%。",
+      "event_en": "本周，S&P累涨约5.3%，Dow Jones涨5.3%，Nasdaq涨6.2%，纳斯达克100index涨6.2%，semiconductorsindex涨约8%。",
+      "assets": "纳指 / 标普500 / 道指 / 特斯拉 / 半导体板块",
+      "assets_en": "Nasdaq / S&P 500 / Dow Jones / Tesla / Semiconductors",
+      "dir": "split",
+      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
+      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst",
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
         }
       ]
     },
@@ -350,6 +358,27 @@
       ]
     },
     {
+      "event": "周五（11月27日），美股行业ETF全线上涨，半导体ETF收涨4.17%，全球科技股指数ETF涨2.88%，科技行业ETF涨2.8%，网络股指数ETF涨2.51%。",
+      "event_en": "周五（11month27day），美股行业ETF全线rise，semiconductorsETFclose up4.17%，全球科技股indexETF涨2.88%，科技行业ETF涨2.8%，网络股indexETF涨2.51%。",
+      "assets": "半导体板块",
+      "assets_en": "Semiconductors",
+      "dir": "split",
+      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
+      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst",
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        },
+        {
+          "type": "energy",
+          "text": "能源",
+          "text_en": "Energy"
+        }
+      ]
+    },
+    {
       "event": "由于额外拍卖结算与临近月末报表日期的叠加效应推高了无担保通用抵押回购（GC Repo）利率，美联储常备回购便利（SRP）的余额攀升至2月以来的最高水平。",
       "event_en": "由于额外拍卖结算与临近month末reported表day期的叠加效应推高了无担保通用抵押回购（GC Repo）interest rate，the Fed常备回购便利（SRP）的余额攀升至2month以来的最高水平。",
       "assets": "美元指数",
@@ -371,50 +400,13 @@
       ]
     },
     {
-      "event": "网络股指数ETF涨2%，在美股盘初领跑行业ETF，半导体ETF涨约1.9%，全球科技股指数ETF涨1.8%，科技行业ETF、能源业ETF涨超1.5%，生物科技指数ETF跌超0.2%。",
-      "event_en": "网络股indexETF涨2%，在美股盘初领跑行业ETF，semiconductorsETF涨约1.9%，全球科技股indexETF涨1.8%，科技行业ETF、energy业ETFsurge past1.5%，biotechindexETFdrop below0.2%。",
-      "assets": "半导体板块",
-      "assets_en": "Semiconductors",
+      "event": "LME期铜收涨379美元，报12251美元/吨。",
+      "event_en": "LME期copperclose up379USD，reported12251USD/吨。",
+      "assets": "美元指数 / 铜",
+      "assets_en": "USD Index / Copper",
       "dir": "split",
       "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
       "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst",
-      "tags": [
-        {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        },
-        {
-          "type": "energy",
-          "text": "能源",
-          "text_en": "Energy"
-        }
-      ]
-    },
-    {
-      "event": "烧碱夜盘收涨3.84%，纯碱、铁矿石至少涨1.45%，燃油涨1.35%，豆二、菜粕、豆粕、热卷至少涨0.95%，聚丙烯、纸浆、玻璃、豆油、焦炭至少涨0.65%...",
-      "event_en": "烧碱夜盘close up3.84%，纯碱、铁矿石至少涨1.45%，燃油涨1.35%，豆二、菜粕、豆粕、热卷至少涨0.95%，聚propylene、纸浆、玻璃、豆油、焦炭至少涨0.65%...",
-      "assets": "铁矿石",
-      "assets_en": "Iron Ore",
-      "dir": "split",
-      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
-      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst",
-      "tags": [
-        {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
-        }
-      ]
-    },
-    {
-      "event": "巴西Ibovespa指数上涨3.6%，巴西小盘股指数飙升6%。",
-      "event_en": "巴西Ibovespaindexrise3.6%，巴西小盘股indexsurge6%。",
-      "assets": "详见原文",
-      "assets_en": "See source",
-      "dir": "up",
-      "logic": "利好事件 → 市场预期改善 → 资产价格上涨",
-      "logic_en": "Positive event → market expectations improve → asset prices rise",
       "tags": [
         {
           "type": "macro",
@@ -500,33 +492,33 @@
       ]
     },
     {
-      "title": "宏观链：巴西Ibovespa指数上涨3.6%，巴西小盘股指数飙升6% → 周五（11月27日）欧市尾盘，英国10年期国...",
-      "title_en": "Macro Chain: 巴西Ibovespaindexrise3.6%，巴西小盘股indexsurge6% → 周五（11month27day）欧市尾盘，英国10year期国...",
+      "title": "宏观链：廉价航司挪威大西洋航空周五申请破产，并表示在燃油成本飙升全年拖累公司运营后，未能获得融资 → 本周，标普累涨约5.3%，道指涨5.3%",
+      "title_en": "Macro Chain: 廉价航司挪威大西洋航空周五申请破产，并表示在燃油成本surge全year拖累公司运营后，未能获得funding → 本周，S&P累涨约5.3%，Dow Jones涨5.3%",
       "status": "unverified",
       "nodes": [
         {
-          "text": "巴西Ibovespa指数上涨3.6%，巴西小盘股指数飙升6%",
-          "text_en": "巴西Ibovespaindexrise3.6%，巴西小盘股indexsurge6%",
-          "type": "cause"
-        },
-        {
           "text": "廉价航司挪威大西洋航空周五申请破产，并表示在燃油成本飙升全年拖累公司运营后，未能获得融资",
           "text_en": "廉价航司挪威大西洋航空周五申请破产，并表示在燃油成本surge全year拖累公司运营后，未能获得funding",
-          "type": "intermediate"
-        },
-        {
-          "text": "网络股指数ETF涨2%，在美股盘初领跑行业ETF，半导体ETF涨约1.9%",
-          "text_en": "网络股indexETF涨2%，在美股盘初领跑行业ETF，semiconductorsETF涨约1.9%",
-          "type": "intermediate"
-        },
-        {
-          "text": "烧碱夜盘收涨3.84%，纯碱、铁矿石至少涨1.45%，燃油涨1.35%",
-          "text_en": "烧碱夜盘close up3.84%，纯碱、铁矿石至少涨1.45%，燃油涨1.35%",
-          "type": "intermediate"
+          "type": "cause"
         },
         {
           "text": "周五（11月27日）欧市尾盘，英国10年期国债收益率涨4.4个基点，报5.190%",
           "text_en": "周五（11month27day）欧市尾盘，英国10year期government bondsyield涨4.4个基点，reported5.190%",
+          "type": "intermediate"
+        },
+        {
+          "text": "周五（11月27日）欧市尾盘，德国10年期国债收益率涨1.9个基点，报3.269%",
+          "text_en": "周五（11month27day）欧市尾盘，德国10year期government bondsyield涨1.9个基点，reported3.269%",
+          "type": "intermediate"
+        },
+        {
+          "text": "LME期铜收涨379美元，报12251美元/吨",
+          "text_en": "LME期copperclose up379USD，reported12251USD/吨",
+          "type": "intermediate"
+        },
+        {
+          "text": "本周，标普累涨约5.3%，道指涨5.3%，纳指涨6.2%，纳斯达克100指数涨6.2%，半导体指数涨约8%",
+          "text_en": "本周，S&P累涨约5.3%，Dow Jones涨5.3%，Nasdaq涨6.2%，纳斯达克100index涨6.2%，semiconductorsindex涨约8%",
           "type": "effect"
         }
       ],
@@ -590,8 +582,8 @@
       ]
     },
     {
-      "title": "宏观链：巴西Ibovespa指数上涨3.6%，巴西小盘股指数飙升6% → 周五（11月27日）欧市尾盘，英国10年期国...能否持续？",
-      "title_en": "Can 'Macro Chain: 巴西Ibovespaindexrise3.6%，巴西小盘股indexsurge6% → 周五（11month27day）欧市尾盘，英国10year期国...' sustain?",
+      "title": "宏观链：廉价航司挪威大西洋航空周五申请破产，并表示在燃油成本飙升全年拖累公司运营后，未能获得融资 → 本周，标普累涨约5.3%，道指涨5.3%能否持续？",
+      "title_en": "Can 'Macro Chain: 廉价航司挪威大西洋航空周五申请破产，并表示在燃油成本surge全year拖累公司运营后，未能获得funding → 本周，S&P累涨约5.3%，Dow Jones涨5.3%' sustain?",
       "layer1": "该宏观事件后续发展如何？市场当前定价是否充分？",
       "layer1_en": "How will this macro event develop? Is current market pricing adequate?",
       "vars": [
