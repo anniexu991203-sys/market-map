@@ -2,27 +2,27 @@
   "date": "2026-11-28",
   "weekday": "星期六",
   "weekday_en": "Saturday",
-  "crawl_time": "约18:17（北京时间）",
+  "crawl_time": "约19:27（北京时间）",
   "source": "华尔街见闻",
   "sources_detail": [
     "华尔街见闻"
   ],
-  "filter_result": "10条核心要闻 / 3条因果链 / 100条原始抓取",
+  "filter_result": "10条核心要闻 / 5条因果链 / 100条原始抓取",
   "stats": [
+    {
+      "label": "新兴市场ETF收",
+      "label_en": "新兴市场ETF收",
+      "value": "3.01%",
+      "change": "周五（11月27日），新兴市场ETF收涨3.01%，纳斯达克100 ETF涨2.69%，黄金ETF涨2.12%，大豆基金",
+      "change_en": "周五（11month27day），新兴市场ETFclose up3.01%，纳斯达克100 ETF涨2.69%，goldETF涨2.12%，大豆基金",
+      "dir": "split"
+    },
     {
       "label": "闪迪",
       "label_en": "闪迪",
       "value": "8.1%",
       "change": "美股盘初，闪迪涨8.1%，Nebius集团涨5.1%，希捷科技、SK海力士ADR、西部数据、Cerebras系统、美光、",
       "change_en": "美股盘初，闪迪涨8.1%，Nebius集团涨5.1%，希捷科技、SK海力士ADR、西部数据、Cerebras系统、美光、",
-      "dir": "split"
-    },
-    {
-      "label": "道指",
-      "label_en": "Dow Jones",
-      "value": "5.3%",
-      "change": "本周，标普累涨约5.3%，道指涨5.3%，纳指涨6.2%，纳斯达克100指数涨6.2%，半导体指数涨约8%。\n\n标普50",
-      "change_en": "本周，S&P累涨约5.3%，Dow Jones涨5.3%，Nasdaq涨6.2%，纳斯达克100index涨6.2%，semiconductorsindex涨约8%。\n\nS&P50",
       "dir": "split"
     },
     {
@@ -40,9 +40,43 @@
       "change": "周五（11月27日），美股行业ETF全线上涨，半导体ETF收涨4.17%，全球科技股指数ETF涨2.88%，科技行业ET",
       "change_en": "周五（11month27day），美股行业ETF全线rise，semiconductorsETFclose up4.17%，全球科技股indexETF涨2.88%，科技行业ET",
       "dir": "split"
+    },
+    {
+      "label": "斯达克金龙中国指数收",
+      "label_en": "斯达克金龙中国index收",
+      "value": "3.02%",
+      "change": "纳斯达克金龙中国指数收涨3.02%，报5401.53点，本周累计上涨7.64%，11月23-24日大致持稳于5150点附",
+      "change_en": "纳斯达克金龙中国indexclose up3.02%，reported5401.53点，本周累计rise7.64%，11month23-24day大致持稳于5150点附",
+      "dir": "up"
     }
   ],
   "events": [
+    {
+      "tags": [
+        {
+          "type": "energy",
+          "text": "能源",
+          "text_en": "Energy"
+        },
+        {
+          "type": "china",
+          "text": "中国",
+          "text_en": "China"
+        },
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "周五（11月27日），新兴市场ETF收涨3.01%，纳斯达克100 ETF涨2.69%，黄金ETF涨2.12%，大豆基金涨2.08%，罗素2000指数ETF涨1.83%...",
+      "event_en": "周五（11month27day），新兴市场ETFclose up3.01%，纳斯达克100 ETF涨2.69%，goldETF涨2.12%，大豆基金涨2.08%，罗素2000indexETF涨1.83%...",
+      "assets": "标普500 / 道指 / 美元指数 / 日元 / 布伦特原油",
+      "assets_en": "S&P 500 / Dow Jones / USD Index / JPY / Brent",
+      "dir": "split",
+      "logic": "原油供需变化 → 油价波动 → 能源股/通胀预期联动",
+      "logic_en": "Oil supply/demand shift → oil price volatility → energy stocks / inflation expectations correlate"
+    },
     {
       "tags": [
         {
@@ -63,22 +97,6 @@
       "dir": "split",
       "logic": "AI产业事件 → 算力/芯片需求预期变化 → 相关板块联动",
       "logic_en": "AI industry event → compute/chip demand expectations shift → related sectors correlate"
-    },
-    {
-      "tags": [
-        {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
-        }
-      ],
-      "event": "本周，标普累涨约5.3%，道指涨5.3%，纳指涨6.2%，纳斯达克100指数涨6.2%，半导体指数涨约8%。",
-      "event_en": "本周，S&P累涨约5.3%，Dow Jones涨5.3%，Nasdaq涨6.2%，纳斯达克100index涨6.2%，semiconductorsindex涨约8%。",
-      "assets": "纳指 / 标普500 / 道指 / 特斯拉 / 半导体板块",
-      "assets_en": "Nasdaq / S&P 500 / Dow Jones / Tesla / Semiconductors",
-      "dir": "split",
-      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
-      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst"
     },
     {
       "tags": [
@@ -215,21 +233,52 @@
     {
       "tags": [
         {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        },
+        {
+          "type": "china",
+          "text": "中国",
+          "text_en": "China"
+        }
+      ],
+      "event": "纳斯达克金龙中国指数收涨3.02%，报5401.53点，本周累计上涨7.64%，11月23-24日大致持稳于5150点附近，25日和27日持续扩大涨幅。",
+      "event_en": "纳斯达克金龙中国indexclose up3.02%，reported5401.53点，本周累计rise7.64%，11month23-24day大致持稳于5150点附近，25day和27day持续扩rally幅。",
+      "assets": "阿里巴巴 / 半导体板块",
+      "assets_en": "Alibaba / Semiconductors",
+      "dir": "up",
+      "logic": "利好事件 → 市场预期改善 → 资产价格上涨",
+      "logic_en": "Positive event → market expectations improve → asset prices rise"
+    }
+  ],
+  "four_column_table": [
+    {
+      "event": "周五（11月27日），新兴市场ETF收涨3.01%，纳斯达克100 ETF涨2.69%，黄金ETF涨2.12%，大豆基金涨2.08%，罗素2000指数ETF涨1.83%...",
+      "event_en": "周五（11month27day），新兴市场ETFclose up3.01%，纳斯达克100 ETF涨2.69%，goldETF涨2.12%，大豆基金涨2.08%，罗素2000indexETF涨1.83%...",
+      "assets": "标普500 / 道指 / 美元指数 / 日元 / 布伦特原油",
+      "assets_en": "S&P 500 / Dow Jones / USD Index / JPY / Brent",
+      "dir": "split",
+      "logic": "原油供需变化 → 油价波动 → 能源股/通胀预期联动",
+      "logic_en": "Oil supply/demand shift → oil price volatility → energy stocks / inflation expectations correlate",
+      "tags": [
+        {
+          "type": "energy",
+          "text": "能源",
+          "text_en": "Energy"
+        },
+        {
+          "type": "china",
+          "text": "中国",
+          "text_en": "China"
+        },
+        {
           "type": "macro",
           "text": "宏观",
           "text_en": "Macro"
         }
-      ],
-      "event": "LME期铜收涨379美元，报12251美元/吨。",
-      "event_en": "LME期copperclose up379USD，reported12251USD/吨。",
-      "assets": "美元指数 / 铜",
-      "assets_en": "USD Index / Copper",
-      "dir": "split",
-      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
-      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst"
-    }
-  ],
-  "four_column_table": [
+      ]
+    },
     {
       "event": "美股盘初，闪迪涨8.1%，Nebius集团涨5.1%，希捷科技、SK海力士ADR、西部数据、Cerebras系统、美光、CoreWeave、英特尔、AMD、台积电至多涨超4%，英伟达涨1.2%。",
       "event_en": "美股盘初，闪迪涨8.1%，Nebius集团涨5.1%，希捷科技、SK海力士ADR、西部数据、Cerebras系统、美光、CoreWeave、英特尔、AMD、台积电至多surge past4%，Nvidia涨1.2%。",
@@ -248,22 +297,6 @@
           "type": "china",
           "text": "中国",
           "text_en": "China"
-        }
-      ]
-    },
-    {
-      "event": "本周，标普累涨约5.3%，道指涨5.3%，纳指涨6.2%，纳斯达克100指数涨6.2%，半导体指数涨约8%。",
-      "event_en": "本周，S&P累涨约5.3%，Dow Jones涨5.3%，Nasdaq涨6.2%，纳斯达克100index涨6.2%，semiconductorsindex涨约8%。",
-      "assets": "纳指 / 标普500 / 道指 / 特斯拉 / 半导体板块",
-      "assets_en": "Nasdaq / S&P 500 / Dow Jones / Tesla / Semiconductors",
-      "dir": "split",
-      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
-      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst",
-      "tags": [
-        {
-          "type": "ai",
-          "text": "AI",
-          "text_en": "AI"
         }
       ]
     },
@@ -400,18 +433,23 @@
       ]
     },
     {
-      "event": "LME期铜收涨379美元，报12251美元/吨。",
-      "event_en": "LME期copperclose up379USD，reported12251USD/吨。",
-      "assets": "美元指数 / 铜",
-      "assets_en": "USD Index / Copper",
-      "dir": "split",
-      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
-      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst",
+      "event": "纳斯达克金龙中国指数收涨3.02%，报5401.53点，本周累计上涨7.64%，11月23-24日大致持稳于5150点附近，25日和27日持续扩大涨幅。",
+      "event_en": "纳斯达克金龙中国indexclose up3.02%，reported5401.53点，本周累计rise7.64%，11month23-24day大致持稳于5150点附近，25day和27day持续扩rally幅。",
+      "assets": "阿里巴巴 / 半导体板块",
+      "assets_en": "Alibaba / Semiconductors",
+      "dir": "up",
+      "logic": "利好事件 → 市场预期改善 → 资产价格上涨",
+      "logic_en": "Positive event → market expectations improve → asset prices rise",
       "tags": [
         {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        },
+        {
+          "type": "china",
+          "text": "中国",
+          "text_en": "China"
         }
       ]
     }
@@ -492,8 +530,82 @@
       ]
     },
     {
-      "title": "宏观链：廉价航司挪威大西洋航空周五申请破产，并表示在燃油成本飙升全年拖累公司运营后，未能获得融资 → 本周，标普累涨约5.3%，道指涨5.3%",
-      "title_en": "Macro Chain: 廉价航司挪威大西洋航空周五申请破产，并表示在燃油成本surge全year拖累公司运营后，未能获得funding → 本周，S&P累涨约5.3%，Dow Jones涨5.3%",
+      "title": "能源链：周五（11月27日），新兴市场ETF收涨3.... → 相关资产变动",
+      "title_en": "Energy Chain: 周五（11month27day），新兴市场ETFclose up3.... → Asset price change",
+      "status": "consensus",
+      "nodes": [
+        {
+          "text": "周五（11月27日），新兴市场ETF收涨3.01%，纳斯达克100 ETF涨2.69%",
+          "text_en": "周五（11month27day），新兴市场ETFclose up3.01%，纳斯达克100 ETF涨2.69%",
+          "type": "cause"
+        },
+        {
+          "text": "资产价格分化",
+          "text_en": "Asset prices diverge",
+          "type": "effect"
+        }
+      ],
+      "jargon": [
+        {
+          "term": "霍尔木兹海峡",
+          "term_en": "Strait of Hormuz",
+          "explain": "全球约20%的石油运输必经之路。谁控制了这里，就掐住了全球能源的咽喉。",
+          "explain_en": "About 20% of global oil transport passes through here. Whoever controls it holds the world's energy throat."
+        },
+        {
+          "term": "超级油轮（VLCC）",
+          "term_en": "VLCC (Very Large Crude Carrier)",
+          "explain": "能装200万桶原油的巨型油轮。VLCC运费飙升=供应受阻的先行指标。",
+          "explain_en": "Giant tanker carrying 2M barrels. VLCC freight surge = leading indicator of supply disruption."
+        },
+        {
+          "term": "OPEC+",
+          "term_en": "OPEC+",
+          "explain": "石油输出国组织及其盟友，控制全球约40%原油产量。减产=涨价，增产=跌价。",
+          "explain_en": "Oil producers' alliance controlling ~40% of global supply. Cut = price up, increase = price down."
+        }
+      ]
+    },
+    {
+      "title": "中国市场链：纳斯达克金龙中国指数收涨3.02%，报540... → 相关资产变动",
+      "title_en": "China Market Chain: 纳斯达克金龙中国indexclose up3.02%，reported540... → Asset price change",
+      "status": "consensus",
+      "nodes": [
+        {
+          "text": "纳斯达克金龙中国指数收涨3.02%，报5401.53点，本周累计上涨7.64%",
+          "text_en": "纳斯达克金龙中国indexclose up3.02%，reported5401.53点，本周累计rise7.64%",
+          "type": "cause"
+        },
+        {
+          "text": "相关资产上涨",
+          "text_en": "Related assets rise",
+          "type": "effect"
+        }
+      ],
+      "jargon": [
+        {
+          "term": "自由现金流（FCF）",
+          "term_en": "Free Cash Flow (FCF)",
+          "explain": "赚的钱减去必须花的钱后，真正落袋的现金。FCF为负=花得比赚得多。",
+          "explain_en": "Earnings minus mandatory spending, actual pocketed cash. Negative FCF = spending exceeds earnings."
+        },
+        {
+          "term": "社零（社会消费品零售总额）",
+          "term_en": "Retail Sales",
+          "explain": "老百姓花钱消费的总量，反映内需强弱。升=消费旺，降=消费弱。",
+          "explain_en": "Total consumer spending, reflecting domestic demand strength."
+        },
+        {
+          "term": "北向资金",
+          "term_en": "Northbound Capital",
+          "explain": "通过沪港通/深港通从香港流入A股的资金，被视为外资风向标。",
+          "explain_en": "Capital flowing from HK into A-shares via Stock Connect, seen as foreign capital barometer."
+        }
+      ]
+    },
+    {
+      "title": "宏观链：廉价航司挪威大西洋航空周五申请破产，并表示在燃油成本飙升全年拖累公司运营后，未能获得融资 → 周五（11月27日），美股行业ETF全线上涨",
+      "title_en": "Macro Chain: 廉价航司挪威大西洋航空周五申请破产，并表示在燃油成本surge全year拖累公司运营后，未能获得funding → 周五（11month27day），美股行业ETF全线rise",
       "status": "unverified",
       "nodes": [
         {
@@ -512,13 +624,8 @@
           "type": "intermediate"
         },
         {
-          "text": "LME期铜收涨379美元，报12251美元/吨",
-          "text_en": "LME期copperclose up379USD，reported12251USD/吨",
-          "type": "intermediate"
-        },
-        {
-          "text": "本周，标普累涨约5.3%，道指涨5.3%，纳指涨6.2%，纳斯达克100指数涨6.2%，半导体指数涨约8%",
-          "text_en": "本周，S&P累涨约5.3%，Dow Jones涨5.3%，Nasdaq涨6.2%，纳斯达克100index涨6.2%，semiconductorsindex涨约8%",
+          "text": "周五（11月27日），美股行业ETF全线上涨，半导体ETF收涨4.17%",
+          "text_en": "周五（11month27day），美股行业ETF全线rise，semiconductorsETFclose up4.17%",
           "type": "effect"
         }
       ],
@@ -582,21 +689,39 @@
       ]
     },
     {
-      "title": "宏观链：廉价航司挪威大西洋航空周五申请破产，并表示在燃油成本飙升全年拖累公司运营后，未能获得融资 → 本周，标普累涨约5.3%，道指涨5.3%能否持续？",
-      "title_en": "Can 'Macro Chain: 廉价航司挪威大西洋航空周五申请破产，并表示在燃油成本surge全year拖累公司运营后，未能获得funding → 本周，S&P累涨约5.3%，Dow Jones涨5.3%' sustain?",
-      "layer1": "该宏观事件后续发展如何？市场当前定价是否充分？",
-      "layer1_en": "How will this macro event develop? Is current market pricing adequate?",
+      "title": "能源链：周五（11月27日），新兴市场ETF收涨3.... → 相关资产变动能否持续？",
+      "title_en": "Can 'Energy Chain: 周五（11month27day），新兴市场ETFclose up3.... → Asset price change' sustain?",
+      "layer1": "能源供应冲击是否会升级为系统性中断？这是局部冲突还是系统性封锁的开始？",
+      "layer1_en": "Will energy supply shock escalate into systemic disruption? Is this localized or the start of systemic blockade?",
       "vars": [
-        "相关资产价格次日开盘方向",
-        "成交量是否异常放大（恐慌or追涨）",
-        "官方/央行是否有后续声明或澄清",
-        "关联资产是否同步反应（验证逻辑链）"
+        "布伦特原油日内波动：单日涨幅超3%=市场开始定价封锁风险",
+        "VLCC运费指数（BDTI）：超级油轮运费飙升=船东要求额外风险补偿",
+        "后续军事行动：若出现第二次袭击，局势将质变",
+        "战略石油储备动向：若启动储备释放，说明官方认为风险可控度下降"
       ],
       "vars_en": [
-        "Related asset price direction at next open",
-        "Volume anomaly (panic or chasing)",
-        "Official/central bank follow-up statement",
-        "Correlated assets confirmation"
+        "Brent intraday volatility: single-day move >3% = market pricing blockade risk",
+        "BDTI (VLCC freight index): surging rates = owners demanding risk premium",
+        "Follow-up military actions: second incident = qualitative escalation",
+        "SPR movements: if reserve release activated, officials see risk declining"
+      ]
+    },
+    {
+      "title": "中国市场链：纳斯达克金龙中国指数收涨3.02%，报540... → 相关资产变动能否持续？",
+      "title_en": "Can 'China Market Chain: 纳斯达克金龙中国indexclose up3.02%，reported540... → Asset price change' sustain?",
+      "layer1": "中国市场多空因素交织：财报分化、政策预期、资金流向如何演变？",
+      "layer1_en": "China market mixed signals: how will earnings divergence, policy expectations, and capital flows evolve?",
+      "vars": [
+        "北向资金流向：净流入=外资看好，净流出=外资谨慎",
+        "社零/工业增加值数据：若超预期=内需回暖，低于预期=经济承压",
+        "A股成交量：放量上涨=信心恢复，缩量=观望情绪浓",
+        "中概股盘前/盘后走势：财报后市场如何评价盈利质量"
+      ],
+      "vars_en": [
+        "Northbound capital: net inflow = foreign bullish, net outflow = cautious",
+        "Retail sales / industrial output: beat = domestic demand recovering, miss = economy pressured",
+        "A-share volume: high volume + up = confidence recovery, low volume = wait-and-see",
+        "China ADR pre/post-market: how market assesses earnings quality post-report"
       ]
     }
   ],
