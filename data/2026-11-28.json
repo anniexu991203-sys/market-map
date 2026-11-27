@@ -2,7 +2,7 @@
   "date": "2026-11-28",
   "weekday": "星期六",
   "weekday_en": "Saturday",
-  "crawl_time": "约16:30（北京时间）",
+  "crawl_time": "约17:29（北京时间）",
   "source": "华尔街见闻",
   "sources_detail": [
     "华尔街见闻"
@@ -104,27 +104,6 @@
           "type": "central-bank",
           "text": "央行",
           "text_en": "Central Bank"
-        },
-        {
-          "type": "energy",
-          "text": "能源",
-          "text_en": "Energy"
-        }
-      ],
-      "event": "欧洲央行管理委员会成员Primoz Dolenc表示，欧洲央行今年以来的加息可能不足以让通胀率回到2%的目标。",
-      "event_en": "欧洲central bank管理委员会成员Primoz Dolenc表示，欧洲central bank今year以来的rate hike可能不足以让inflation率回到2%的目标。",
-      "assets": "欧元",
-      "assets_en": "EUR",
-      "dir": "up",
-      "logic": "央行鹰派信号 → 加息预期升温 → 资金回流本币 → 相关资产受益",
-      "logic_en": "Central bank hawkish signal → rate hike expectations rise → capital flows back to local currency → related assets benefit"
-    },
-    {
-      "tags": [
-        {
-          "type": "central-bank",
-          "text": "央行",
-          "text_en": "Central Bank"
         }
       ],
       "event": "欧元区通胀有望五个月来首次放缓，但回落幅度不足以阻止央行再度加息。对34位经济学家的预测进行统计，预期中值显示，11月消费者物价同比涨幅或为3.8%，低于10月的4%。这份通胀数据将于下周二公布。",
@@ -134,6 +113,38 @@
       "dir": "split",
       "logic": "央行鹰派信号 → 加息预期升温 → 利率上行 → 风险资产承压",
       "logic_en": "Central bank hawkish signal → rate hike expectations rise → yields rise → risk assets under pressure"
+    },
+    {
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "周五（11月27日）欧市尾盘，德国10年期国债收益率涨1.9个基点，报3.269%，本周累计下跌3.5个基点，交投于3.326%-3.207%区间，整体呈现出平坦的V形走势。",
+      "event_en": "周五（11month27day）欧市尾盘，德国10year期government bondsyield涨1.9个基点，reported3.269%，本周累计fall3.5个基点，交投于3.326%-3.207%区间，整体呈现出平坦的V形走势。",
+      "assets": "详见原文",
+      "assets_en": "See source",
+      "dir": "split",
+      "logic": "债务风险信号 → 国债利差走阔 → 相关国家资产承压",
+      "logic_en": "Debt risk signal → bond spread widens → related country assets under pressure"
+    },
+    {
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "周五（11月27日）欧市尾盘，英国10年期国债收益率涨4.4个基点，报5.190%，本周累计下跌4.8个基点，整体呈现出V形走势，11月23-25日持续下挫。",
+      "event_en": "周五（11month27day）欧市尾盘，英国10year期government bondsyield涨4.4个基点，reported5.190%，本周累计fall4.8个基点，整体呈现出V形走势，11month23-25day持续下挫。",
+      "assets": "详见原文",
+      "assets_en": "See source",
+      "dir": "split",
+      "logic": "债务风险信号 → 国债利差走阔 → 相关国家资产承压",
+      "logic_en": "Debt risk signal → bond spread widens → related country assets under pressure"
     },
     {
       "tags": [
@@ -224,22 +235,6 @@
       "dir": "up",
       "logic": "利好事件 → 市场预期改善 → 资产价格上涨",
       "logic_en": "Positive event → market expectations improve → asset prices rise"
-    },
-    {
-      "tags": [
-        {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
-        }
-      ],
-      "event": "报告认为，2025年，面对复杂严峻的国内外形势，我国完整准确全面贯彻新发展理念，加快构建新发展格局，着力推动高质量发展，坚持稳中求进工作总基调，统筹国内国际两个大局，统筹发展和安全...",
-      "event_en": "reported告认为，2025year，面对复杂严峻的国内外形势，我国完整准确全面贯彻新发展理念，加快构建新发展格局，着力推动高质量发展，坚持稳中求进工作总基调，统筹国内international两个大局，统筹发展和安全...",
-      "assets": "美元指数",
-      "assets_en": "USD Index",
-      "dir": "up",
-      "logic": "贸易数据变化 → 全球需求/供应链预期调整 → 相关货币/股市影响",
-      "logic_en": "Trade data shift → global demand / supply chain expectations adjust → related currencies / stocks impacted"
     }
   ],
   "four_column_table": [
@@ -291,27 +286,6 @@
       ]
     },
     {
-      "event": "欧洲央行管理委员会成员Primoz Dolenc表示，欧洲央行今年以来的加息可能不足以让通胀率回到2%的目标。",
-      "event_en": "欧洲central bank管理委员会成员Primoz Dolenc表示，欧洲central bank今year以来的rate hike可能不足以让inflation率回到2%的目标。",
-      "assets": "欧元",
-      "assets_en": "EUR",
-      "dir": "up",
-      "logic": "央行鹰派信号 → 加息预期升温 → 资金回流本币 → 相关资产受益",
-      "logic_en": "Central bank hawkish signal → rate hike expectations rise → capital flows back to local currency → related assets benefit",
-      "tags": [
-        {
-          "type": "central-bank",
-          "text": "央行",
-          "text_en": "Central Bank"
-        },
-        {
-          "type": "energy",
-          "text": "能源",
-          "text_en": "Energy"
-        }
-      ]
-    },
-    {
       "event": "欧元区通胀有望五个月来首次放缓，但回落幅度不足以阻止央行再度加息。对34位经济学家的预测进行统计，预期中值显示，11月消费者物价同比涨幅或为3.8%，低于10月的4%。这份通胀数据将于下周二公布。",
       "event_en": "EUR区inflation有望五个month来first time放缓，但回落幅度不足以阻止central bank再度rate hike。对34位经济学家的预测进行统计，expectation中值显示，11month消费者物价同比gain或为3.8%，低于10month的4%。这份inflation数据将于下周二公布。",
       "assets": "欧元",
@@ -324,6 +298,38 @@
           "type": "central-bank",
           "text": "央行",
           "text_en": "Central Bank"
+        }
+      ]
+    },
+    {
+      "event": "周五（11月27日）欧市尾盘，德国10年期国债收益率涨1.9个基点，报3.269%，本周累计下跌3.5个基点，交投于3.326%-3.207%区间，整体呈现出平坦的V形走势。",
+      "event_en": "周五（11month27day）欧市尾盘，德国10year期government bondsyield涨1.9个基点，reported3.269%，本周累计fall3.5个基点，交投于3.326%-3.207%区间，整体呈现出平坦的V形走势。",
+      "assets": "详见原文",
+      "assets_en": "See source",
+      "dir": "split",
+      "logic": "债务风险信号 → 国债利差走阔 → 相关国家资产承压",
+      "logic_en": "Debt risk signal → bond spread widens → related country assets under pressure",
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ]
+    },
+    {
+      "event": "周五（11月27日）欧市尾盘，英国10年期国债收益率涨4.4个基点，报5.190%，本周累计下跌4.8个基点，整体呈现出V形走势，11月23-25日持续下挫。",
+      "event_en": "周五（11month27day）欧市尾盘，英国10year期government bondsyield涨4.4个基点，reported5.190%，本周累计fall4.8个基点，整体呈现出V形走势，11month23-25day持续下挫。",
+      "assets": "详见原文",
+      "assets_en": "See source",
+      "dir": "split",
+      "logic": "债务风险信号 → 国债利差走阔 → 相关国家资产承压",
+      "logic_en": "Debt risk signal → bond spread widens → related country assets under pressure",
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
         }
       ]
     },
@@ -416,22 +422,6 @@
           "text_en": "Macro"
         }
       ]
-    },
-    {
-      "event": "报告认为，2025年，面对复杂严峻的国内外形势，我国完整准确全面贯彻新发展理念，加快构建新发展格局，着力推动高质量发展，坚持稳中求进工作总基调，统筹国内国际两个大局，统筹发展和安全...",
-      "event_en": "reported告认为，2025year，面对复杂严峻的国内外形势，我国完整准确全面贯彻新发展理念，加快构建新发展格局，着力推动高质量发展，坚持稳中求进工作总基调，统筹国内international两个大局，统筹发展和安全...",
-      "assets": "美元指数",
-      "assets_en": "USD Index",
-      "dir": "up",
-      "logic": "贸易数据变化 → 全球需求/供应链预期调整 → 相关货币/股市影响",
-      "logic_en": "Trade data shift → global demand / supply chain expectations adjust → related currencies / stocks impacted",
-      "tags": [
-        {
-          "type": "macro",
-          "text": "宏观",
-          "text_en": "Macro"
-        }
-      ]
     }
   ],
   "chains": [
@@ -473,19 +463,14 @@
       ]
     },
     {
-      "title": "央行政策链：欧洲央行管理委员会成员Primoz Dole... → 欧元区通胀有望五个月来首次放缓，但回落幅度不足以阻止央行再度加息",
-      "title_en": "Central Bank Policy Chain: 欧洲central bank管理委员会成员Primoz Dole... → EUR区inflation有望五个month来first time放缓，但回落幅度不足以阻止central bank再度rate hike",
+      "title": "央行政策链：由于额外拍卖结算与临近月末报表日期的叠加效应... → 欧元区通胀有望五个月来首次放缓，但回落幅度不足以阻止央行再度加息",
+      "title_en": "Central Bank Policy Chain: 由于额外拍卖结算与临近month末reported表day期的叠加效应... → EUR区inflation有望五个month来first time放缓，但回落幅度不足以阻止central bank再度rate hike",
       "status": "unverified",
       "nodes": [
         {
-          "text": "欧洲央行管理委员会成员Primoz Dolenc表示，欧洲央行今年以来的加息可能不足以让通胀率回到2%的目标",
-          "text_en": "欧洲central bank管理委员会成员Primoz Dolenc表示，欧洲central bank今year以来的rate hike可能不足以让inflation率回到2%的目标",
-          "type": "cause"
-        },
-        {
           "text": "由于额外拍卖结算与临近月末报表日期的叠加效应推高了无担保通用抵押回购（GC Repo）利率",
           "text_en": "由于额外拍卖结算与临近month末reported表day期的叠加效应推高了无担保通用抵押回购（GC Repo）interest rate",
-          "type": "intermediate"
+          "type": "cause"
         },
         {
           "text": "欧元区通胀有望五个月来首次放缓，但回落幅度不足以阻止央行再度加息",
@@ -515,19 +500,14 @@
       ]
     },
     {
-      "title": "宏观链：报告认为，2025年，面对复杂严峻的国内外形势 → 烧碱夜盘收涨3.84%，纯碱、铁矿石至少涨1...",
-      "title_en": "Macro Chain: reported告认为，2025year，面对复杂严峻的国内外形势 → 烧碱夜盘close up3.84%，纯碱、铁矿石至少涨1...",
+      "title": "宏观链：巴西Ibovespa指数上涨3.6%，巴西小盘股指数飙升6% → 周五（11月27日）欧市尾盘，英国10年期国...",
+      "title_en": "Macro Chain: 巴西Ibovespaindexrise3.6%，巴西小盘股indexsurge6% → 周五（11month27day）欧市尾盘，英国10year期国...",
       "status": "unverified",
       "nodes": [
         {
-          "text": "报告认为，2025年，面对复杂严峻的国内外形势，我国完整准确全面贯彻新发展理念，加快构建新发展格局",
-          "text_en": "reported告认为，2025year，面对复杂严峻的国内外形势，我国完整准确全面贯彻新发展理念，加快构建新发展格局",
-          "type": "cause"
-        },
-        {
           "text": "巴西Ibovespa指数上涨3.6%，巴西小盘股指数飙升6%",
           "text_en": "巴西Ibovespaindexrise3.6%，巴西小盘股indexsurge6%",
-          "type": "intermediate"
+          "type": "cause"
         },
         {
           "text": "廉价航司挪威大西洋航空周五申请破产，并表示在燃油成本飙升全年拖累公司运营后，未能获得融资",
@@ -542,6 +522,11 @@
         {
           "text": "烧碱夜盘收涨3.84%，纯碱、铁矿石至少涨1.45%，燃油涨1.35%",
           "text_en": "烧碱夜盘close up3.84%，纯碱、铁矿石至少涨1.45%，燃油涨1.35%",
+          "type": "intermediate"
+        },
+        {
+          "text": "周五（11月27日）欧市尾盘，英国10年期国债收益率涨4.4个基点，报5.190%",
+          "text_en": "周五（11month27day）欧市尾盘，英国10year期government bondsyield涨4.4个基点，reported5.190%",
           "type": "effect"
         }
       ],
@@ -587,8 +572,8 @@
       ]
     },
     {
-      "title": "央行政策链：欧洲央行管理委员会成员Primoz Dole... → 欧元区通胀有望五个月来首次放缓，但回落幅度不足以阻止央行再度加息能否持续？",
-      "title_en": "Can 'Central Bank Policy Chain: 欧洲central bank管理委员会成员Primoz Dole... → EUR区inflation有望五个month来first time放缓，但回落幅度不足以阻止central bank再度rate hike' sustain?",
+      "title": "央行政策链：由于额外拍卖结算与临近月末报表日期的叠加效应... → 欧元区通胀有望五个月来首次放缓，但回落幅度不足以阻止央行再度加息能否持续？",
+      "title_en": "Can 'Central Bank Policy Chain: 由于额外拍卖结算与临近month末reported表day期的叠加效应... → EUR区inflation有望五个month来first time放缓，但回落幅度不足以阻止central bank再度rate hike' sustain?",
       "layer1": "央行鹰派信号与债务风险的博弈，会否触发利差危机？加息+高债务=火药桶。",
       "layer1_en": "Will the central bank hawkish signal vs debt risk game trigger a spread crisis? Rate hikes + high debt = powder keg.",
       "vars": [
@@ -605,8 +590,8 @@
       ]
     },
     {
-      "title": "宏观链：报告认为，2025年，面对复杂严峻的国内外形势 → 烧碱夜盘收涨3.84%，纯碱、铁矿石至少涨1...能否持续？",
-      "title_en": "Can 'Macro Chain: reported告认为，2025year，面对复杂严峻的国内外形势 → 烧碱夜盘close up3.84%，纯碱、铁矿石至少涨1...' sustain?",
+      "title": "宏观链：巴西Ibovespa指数上涨3.6%，巴西小盘股指数飙升6% → 周五（11月27日）欧市尾盘，英国10年期国...能否持续？",
+      "title_en": "Can 'Macro Chain: 巴西Ibovespaindexrise3.6%，巴西小盘股indexsurge6% → 周五（11month27day）欧市尾盘，英国10year期国...' sustain?",
       "layer1": "该宏观事件后续发展如何？市场当前定价是否充分？",
       "layer1_en": "How will this macro event develop? Is current market pricing adequate?",
       "vars": [
