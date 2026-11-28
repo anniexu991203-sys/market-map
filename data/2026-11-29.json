@@ -1,0 +1,508 @@
+{
+  "date": "2026-11-29",
+  "weekday": "星期日",
+  "weekday_en": "Sunday",
+  "crawl_time": "约16:36（北京时间）",
+  "source": "华尔街见闻",
+  "sources_detail": [
+    "华尔街见闻"
+  ],
+  "filter_result": "10条核心要闻 / 2条因果链 / 100条原始抓取",
+  "stats": [
+    {
+      "label": "自今年9月以来",
+      "label_en": "自今year9month以来",
+      "value": "new low",
+      "change": "自今年9月以来，国际黄金价格已经连续3个月下跌。25日，现货黄金价格一度跌破每盎司3500美元的整数关口，创下自2025",
+      "change_en": "自今year9month以来，internationalgold价格已经连续3个monthfall。25day，现货gold价格一度跌破每盎司3500USD的整数关口，hit下自2025",
+      "dir": "split"
+    },
+    {
+      "label": "现货黄金",
+      "label_en": "现货gold",
+      "value": "2.43%",
+      "change": "周五（11月27日）纽约尾盘，现货黄金涨2.43%，报3653.53美元/盎司，本周累计上涨3.25%，整体呈现出V形反",
+      "change_en": "周五（11month27day）纽约尾盘，现货gold涨2.43%，reported3653.53USD/盎司，本周累计rise3.25%，整体呈现出V形反",
+      "dir": "split"
+    },
+    {
+      "label": "南非兰特兑美元",
+      "label_en": "南非兰特兑USD",
+      "value": "0.88%",
+      "change": "周五（11月27日）纽约尾盘，南非兰特兑美元涨0.88%，报17.3686兰特，本周累计上涨1.19%，11月份迄今累计",
+      "change_en": "周五（11month27day）纽约尾盘，南非兰特兑USD涨0.88%，reported17.3686兰特，本周累计rise1.19%，11month份迄今累计",
+      "dir": "split"
+    },
+    {
+      "label": "巴西雷亚尔兑美元",
+      "label_en": "巴西雷亚尔兑USD",
+      "value": "1.96%",
+      "change": "周五（11月27日）纽约尾盘，巴西雷亚尔兑美元涨1.96%，报5.5499雷亚尔，本周持续上扬、累计涨幅6.57%；日线",
+      "change_en": "周五（11month27day）纽约尾盘，巴西雷亚尔兑USD涨1.96%，reported5.5499雷亚尔，本周持续上扬、累计gain6.57%；day线",
+      "dir": "split"
+    }
+  ],
+  "events": [
+    {
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "自今年9月以来，国际黄金价格已经连续3个月下跌。",
+      "event_en": "自今year9month以来，internationalgold价格已经连续3个monthfall。",
+      "assets": "美元指数 / 黄金",
+      "assets_en": "USD Index / Gold",
+      "dir": "split",
+      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
+      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst"
+    },
+    {
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "周五（11月27日）纽约尾盘，现货黄金涨2.43%，报3653.53美元/盎司，本周累计上涨3.25%，整体呈现出V形反转行情，11月25日美股早盘曾跌至3426.77美元。",
+      "event_en": "周五（11month27day）纽约尾盘，现货gold涨2.43%，reported3653.53USD/盎司，本周累计rise3.25%，整体呈现出V形反转行情，11month25day美股早盘曾跌至3426.77USD。",
+      "assets": "美元指数 / 黄金 / 白银 / 铜",
+      "assets_en": "USD Index / Gold / Silver / Copper",
+      "dir": "split",
+      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
+      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst"
+    },
+    {
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ],
+      "event": "Adobe Analytics：美国消费者在“黑色星期五”当天的线上消费达到创纪录的131亿美元，同比增长11.1%，高于Adobe最初预测的129亿美元（同比增长9.2%）。",
+      "event_en": "Adobe Analytics：美国消费者在“黑色星期五”当天的线上消费达到hit纪录的131亿USD，同比growth11.1%，高于Adobe最初预测的129亿USD（同比growth9.2%）。",
+      "assets": "美元指数",
+      "assets_en": "USD Index",
+      "dir": "up",
+      "logic": "利好事件 → 市场预期改善 → 资产价格上涨",
+      "logic_en": "Positive event → market expectations improve → asset prices rise"
+    },
+    {
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "周五（11月27日）纽约尾盘，南非兰特兑美元涨0.88%，报17.3686兰特，本周累计上涨1.19%，11月份迄今累计下跌3.95%...",
+      "event_en": "周五（11month27day）纽约尾盘，南非兰特兑USD涨0.88%，reported17.3686兰特，本周累计rise1.19%，11month份迄今累计fall3.95%...",
+      "assets": "美元指数",
+      "assets_en": "USD Index",
+      "dir": "split",
+      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
+      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst"
+    },
+    {
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "南非财政部27日发布声明，对国际信用评级机构标准普尔上调南非信用评级表示欢迎，认为此举反映南非财政状况持续改善及结构性改革取得进展。",
+      "event_en": "南非fiscal部27day发布statement，对international信用评级机构标准普尔上调南非信用评级表示欢迎，认为此举反映南非fiscal状况持续改善及结构性改革取得进展。",
+      "assets": "标普500",
+      "assets_en": "S&P 500",
+      "dir": "up",
+      "logic": "利好事件 → 市场预期改善 → 资产价格上涨",
+      "logic_en": "Positive event → market expectations improve → asset prices rise"
+    },
+    {
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "周五（11月27日）纽约尾盘，巴西雷亚尔兑美元涨1.96%，报5.5499雷亚尔，本周持续上扬、累计涨幅6.57%；",
+      "event_en": "周五（11month27day）纽约尾盘，巴西雷亚尔兑USD涨1.96%，reported5.5499雷亚尔，本周持续上扬、累计gain6.57%；",
+      "assets": "美元指数",
+      "assets_en": "USD Index",
+      "dir": "split",
+      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
+      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst"
+    },
+    {
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "依托珠澳两地政策协同，越来越多澳门人选择北上到珠海养老。",
+      "event_en": "依托珠澳两地政策协同，越来越多澳门人选择北上到珠海养老。",
+      "assets": "人民币",
+      "assets_en": "CNY",
+      "dir": "neutral",
+      "logic": "事件发生 → 市场消化信息 → 资产价格调整",
+      "logic_en": "Event occurs → market digests info → asset prices adjust"
+    },
+    {
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "日本多家食品企业计划明年第一季度上调产品价格，最大涨幅达到20%。",
+      "event_en": "day本多家食品企业计划明year第一quarter上调产品价格，最rally幅达到20%。",
+      "assets": "详见原文",
+      "assets_en": "See source",
+      "dir": "up",
+      "logic": "利好事件 → 市场预期改善 → 资产价格上涨",
+      "logic_en": "Positive event → market expectations improve → asset prices rise"
+    },
+    {
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ],
+      "event": "周五（11月27日）纽约尾盘（周六北京时间05:59），离岸人民币（CNH）兑美元报6.6553元，较周四纽约尾盘涨46点，日内整体交投于6.6669-6.6537元区间，亚太午盘短线显著走高。",
+      "event_en": "周五（11month27day）纽约尾盘（周六北京时间05:59），离岸CNY（CNH）兑USDreported6.6553yuan，较周四纽约尾盘涨46点，day内整体交投于6.6669-6.6537yuan区间，亚太午盘短线显著走高。",
+      "assets": "美元指数 / 人民币",
+      "assets_en": "USD Index / CNY",
+      "dir": "up",
+      "logic": "利好事件 → 市场预期改善 → 资产价格上涨",
+      "logic_en": "Positive event → market expectations improve → asset prices rise"
+    },
+    {
+      "tags": [
+        {
+          "type": "china",
+          "text": "中国",
+          "text_en": "China"
+        }
+      ],
+      "event": "本周国内生猪价格呈先涨后降走势，周均价环比上涨。",
+      "event_en": "本周国内生猪价格呈先涨后降走势，周均价环比rise。",
+      "assets": "详见原文",
+      "assets_en": "See source",
+      "dir": "split",
+      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
+      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst"
+    }
+  ],
+  "four_column_table": [
+    {
+      "event": "自今年9月以来，国际黄金价格已经连续3个月下跌。",
+      "event_en": "自今year9month以来，internationalgold价格已经连续3个monthfall。",
+      "assets": "美元指数 / 黄金",
+      "assets_en": "USD Index / Gold",
+      "dir": "split",
+      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
+      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst",
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ]
+    },
+    {
+      "event": "周五（11月27日）纽约尾盘，现货黄金涨2.43%，报3653.53美元/盎司，本周累计上涨3.25%，整体呈现出V形反转行情，11月25日美股早盘曾跌至3426.77美元。",
+      "event_en": "周五（11month27day）纽约尾盘，现货gold涨2.43%，reported3653.53USD/盎司，本周累计rise3.25%，整体呈现出V形反转行情，11month25day美股早盘曾跌至3426.77USD。",
+      "assets": "美元指数 / 黄金 / 白银 / 铜",
+      "assets_en": "USD Index / Gold / Silver / Copper",
+      "dir": "split",
+      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
+      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst",
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ]
+    },
+    {
+      "event": "Adobe Analytics：美国消费者在“黑色星期五”当天的线上消费达到创纪录的131亿美元，同比增长11.1%，高于Adobe最初预测的129亿美元（同比增长9.2%）。",
+      "event_en": "Adobe Analytics：美国消费者在“黑色星期五”当天的线上消费达到hit纪录的131亿USD，同比growth11.1%，高于Adobe最初预测的129亿USD（同比growth9.2%）。",
+      "assets": "美元指数",
+      "assets_en": "USD Index",
+      "dir": "up",
+      "logic": "利好事件 → 市场预期改善 → 资产价格上涨",
+      "logic_en": "Positive event → market expectations improve → asset prices rise",
+      "tags": [
+        {
+          "type": "ai",
+          "text": "AI",
+          "text_en": "AI"
+        }
+      ]
+    },
+    {
+      "event": "周五（11月27日）纽约尾盘，南非兰特兑美元涨0.88%，报17.3686兰特，本周累计上涨1.19%，11月份迄今累计下跌3.95%...",
+      "event_en": "周五（11month27day）纽约尾盘，南非兰特兑USD涨0.88%，reported17.3686兰特，本周累计rise1.19%，11month份迄今累计fall3.95%...",
+      "assets": "美元指数",
+      "assets_en": "USD Index",
+      "dir": "split",
+      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
+      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst",
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ]
+    },
+    {
+      "event": "南非财政部27日发布声明，对国际信用评级机构标准普尔上调南非信用评级表示欢迎，认为此举反映南非财政状况持续改善及结构性改革取得进展。",
+      "event_en": "南非fiscal部27day发布statement，对international信用评级机构标准普尔上调南非信用评级表示欢迎，认为此举反映南非fiscal状况持续改善及结构性改革取得进展。",
+      "assets": "标普500",
+      "assets_en": "S&P 500",
+      "dir": "up",
+      "logic": "利好事件 → 市场预期改善 → 资产价格上涨",
+      "logic_en": "Positive event → market expectations improve → asset prices rise",
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ]
+    },
+    {
+      "event": "周五（11月27日）纽约尾盘，巴西雷亚尔兑美元涨1.96%，报5.5499雷亚尔，本周持续上扬、累计涨幅6.57%；",
+      "event_en": "周五（11month27day）纽约尾盘，巴西雷亚尔兑USD涨1.96%，reported5.5499雷亚尔，本周持续上扬、累计gain6.57%；",
+      "assets": "美元指数",
+      "assets_en": "USD Index",
+      "dir": "split",
+      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
+      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst",
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ]
+    },
+    {
+      "event": "依托珠澳两地政策协同，越来越多澳门人选择北上到珠海养老。",
+      "event_en": "依托珠澳两地政策协同，越来越多澳门人选择北上到珠海养老。",
+      "assets": "人民币",
+      "assets_en": "CNY",
+      "dir": "neutral",
+      "logic": "事件发生 → 市场消化信息 → 资产价格调整",
+      "logic_en": "Event occurs → market digests info → asset prices adjust",
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ]
+    },
+    {
+      "event": "日本多家食品企业计划明年第一季度上调产品价格，最大涨幅达到20%。",
+      "event_en": "day本多家食品企业计划明year第一quarter上调产品价格，最rally幅达到20%。",
+      "assets": "详见原文",
+      "assets_en": "See source",
+      "dir": "up",
+      "logic": "利好事件 → 市场预期改善 → 资产价格上涨",
+      "logic_en": "Positive event → market expectations improve → asset prices rise",
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ]
+    },
+    {
+      "event": "周五（11月27日）纽约尾盘（周六北京时间05:59），离岸人民币（CNH）兑美元报6.6553元，较周四纽约尾盘涨46点，日内整体交投于6.6669-6.6537元区间，亚太午盘短线显著走高。",
+      "event_en": "周五（11month27day）纽约尾盘（周六北京时间05:59），离岸CNY（CNH）兑USDreported6.6553yuan，较周四纽约尾盘涨46点，day内整体交投于6.6669-6.6537yuan区间，亚太午盘短线显著走高。",
+      "assets": "美元指数 / 人民币",
+      "assets_en": "USD Index / CNY",
+      "dir": "up",
+      "logic": "利好事件 → 市场预期改善 → 资产价格上涨",
+      "logic_en": "Positive event → market expectations improve → asset prices rise",
+      "tags": [
+        {
+          "type": "macro",
+          "text": "宏观",
+          "text_en": "Macro"
+        }
+      ]
+    },
+    {
+      "event": "本周国内生猪价格呈先涨后降走势，周均价环比上涨。",
+      "event_en": "本周国内生猪价格呈先涨后降走势，周均价环比rise。",
+      "assets": "详见原文",
+      "assets_en": "See source",
+      "dir": "split",
+      "logic": "多空因素交织 → 板块/资产分化 → 需关注后续催化",
+      "logic_en": "Mixed bullish/bearish factors → sector / asset divergence → watch for next catalyst",
+      "tags": [
+        {
+          "type": "china",
+          "text": "中国",
+          "text_en": "China"
+        }
+      ]
+    }
+  ],
+  "chains": [
+    {
+      "title": "中国市场链：本周国内生猪价格呈先涨后降走势，周均价环比上涨 → 相关资产变动",
+      "title_en": "China Market Chain: 本周国内生猪价格呈先涨后降走势，周均价环比rise → Asset price change",
+      "status": "consensus",
+      "nodes": [
+        {
+          "text": "本周国内生猪价格呈先涨后降走势，周均价环比上涨",
+          "text_en": "本周国内生猪价格呈先涨后降走势，周均价环比rise",
+          "type": "cause"
+        },
+        {
+          "text": "资产价格分化",
+          "text_en": "Asset prices diverge",
+          "type": "effect"
+        }
+      ],
+      "jargon": [
+        {
+          "term": "自由现金流（FCF）",
+          "term_en": "Free Cash Flow (FCF)",
+          "explain": "赚的钱减去必须花的钱后，真正落袋的现金。FCF为负=花得比赚得多。",
+          "explain_en": "Earnings minus mandatory spending, actual pocketed cash. Negative FCF = spending exceeds earnings."
+        },
+        {
+          "term": "社零（社会消费品零售总额）",
+          "term_en": "Retail Sales",
+          "explain": "老百姓花钱消费的总量，反映内需强弱。升=消费旺，降=消费弱。",
+          "explain_en": "Total consumer spending, reflecting domestic demand strength."
+        },
+        {
+          "term": "北向资金",
+          "term_en": "Northbound Capital",
+          "explain": "通过沪港通/深港通从香港流入A股的资金，被视为外资风向标。",
+          "explain_en": "Capital flowing from HK into A-shares via Stock Connect, seen as foreign capital barometer."
+        }
+      ]
+    },
+    {
+      "title": "宏观链：周五（11月27日）纽约尾盘，现货黄金涨2.... → 依托珠澳两地政策协同，越来越多澳门人选择北上到珠海养老",
+      "title_en": "Macro Chain: 周五（11month27day）纽约尾盘，现货gold涨2.... → 依托珠澳两地政策协同，越来越多澳门人选择北上到珠海养老",
+      "status": "unverified",
+      "nodes": [
+        {
+          "text": "周五（11月27日）纽约尾盘，现货黄金涨2.43%，报3653.53美元/盎司",
+          "text_en": "周五（11month27day）纽约尾盘，现货gold涨2.43%，reported3653.53USD/盎司",
+          "type": "cause"
+        },
+        {
+          "text": "周五（11月27日）纽约尾盘，巴西雷亚尔兑美元涨1.96%，报5.5499雷亚尔，本周持续上扬、累计涨幅6.57%",
+          "text_en": "周五（11month27day）纽约尾盘，巴西雷亚尔兑USD涨1.96%，reported5.5499雷亚尔，本周持续上扬、累计gain6.57%",
+          "type": "intermediate"
+        },
+        {
+          "text": "周五（11月27日）纽约尾盘，南非兰特兑美元涨0.88%，报17.3686兰特",
+          "text_en": "周五（11month27day）纽约尾盘，南非兰特兑USD涨0.88%，reported17.3686兰特",
+          "type": "intermediate"
+        },
+        {
+          "text": "周五（11月27日）纽约尾盘（周六北京时间05:59），离岸人民币（CNH）兑美元报6.6553元",
+          "text_en": "周五（11month27day）纽约尾盘（周六北京时间05:59），离岸CNY（CNH）兑USDreported6.6553yuan",
+          "type": "intermediate"
+        },
+        {
+          "text": "依托珠澳两地政策协同，越来越多澳门人选择北上到珠海养老",
+          "text_en": "依托珠澳两地政策协同，越来越多澳门人选择北上到珠海养老",
+          "type": "effect"
+        }
+      ],
+      "jargon": [
+        {
+          "term": "美元走强→商品下跌",
+          "term_en": "Strong USD → Commodity Down",
+          "explain": "国际大宗商品以美元计价。美元贵了，同样一桶油用美元买就贵了，需求减少，价格就跌。",
+          "explain_en": "Commodities priced in USD. Stronger dollar = more expensive commodities = lower demand."
+        },
+        {
+          "term": "避险情绪",
+          "term_en": "Risk-Off Sentiment",
+          "explain": "市场害怕风险时，资金从股票等高风险资产流向黄金/美债等安全资产。",
+          "explain_en": "When markets fear risk, capital flows from stocks to safe havens like gold/Treasuries."
+        },
+        {
+          "term": "PMI（采购经理人指数）",
+          "term_en": "PMI (Purchasing Managers' Index)",
+          "explain": "衡量制造业/服务业景气度的指标。50以上=扩张，50以下=收缩。",
+          "explain_en": "Index measuring manufacturing/services activity. Above 50 = expansion, below 50 = contraction."
+        }
+      ]
+    }
+  ],
+  "verifications": [
+    {
+      "title": "中国市场链：本周国内生猪价格呈先涨后降走势，周均价环比上涨 → 相关资产变动能否持续？",
+      "title_en": "Can 'China Market Chain: 本周国内生猪价格呈先涨后降走势，周均价环比rise → Asset price change' sustain?",
+      "layer1": "中国市场多空因素交织：财报分化、政策预期、资金流向如何演变？",
+      "layer1_en": "China market mixed signals: how will earnings divergence, policy expectations, and capital flows evolve?",
+      "vars": [
+        "北向资金流向：净流入=外资看好，净流出=外资谨慎",
+        "社零/工业增加值数据：若超预期=内需回暖，低于预期=经济承压",
+        "A股成交量：放量上涨=信心恢复，缩量=观望情绪浓",
+        "中概股盘前/盘后走势：财报后市场如何评价盈利质量"
+      ],
+      "vars_en": [
+        "Northbound capital: net inflow = foreign bullish, net outflow = cautious",
+        "Retail sales / industrial output: beat = domestic demand recovering, miss = economy pressured",
+        "A-share volume: high volume + up = confidence recovery, low volume = wait-and-see",
+        "China ADR pre/post-market: how market assesses earnings quality post-report"
+      ]
+    },
+    {
+      "title": "宏观链：周五（11月27日）纽约尾盘，现货黄金涨2.... → 依托珠澳两地政策协同，越来越多澳门人选择北上到珠海养老能否持续？",
+      "title_en": "Can 'Macro Chain: 周五（11month27day）纽约尾盘，现货gold涨2.... → 依托珠澳两地政策协同，越来越多澳门人选择北上到珠海养老' sustain?",
+      "layer1": "该宏观事件后续发展如何？市场当前定价是否充分？",
+      "layer1_en": "How will this macro event develop? Is current market pricing adequate?",
+      "vars": [
+        "相关资产价格次日开盘方向",
+        "成交量是否异常放大（恐慌or追涨）",
+        "官方/央行是否有后续声明或澄清",
+        "关联资产是否同步反应（验证逻辑链）"
+      ],
+      "vars_en": [
+        "Related asset price direction at next open",
+        "Volume anomaly (panic or chasing)",
+        "Official/central bank follow-up statement",
+        "Correlated assets confirmation"
+      ]
+    }
+  ],
+  "historical_analogies": [
+    {
+      "event": "2014-2015年美元走强周期：大宗商品全面崩塌",
+      "event_en": "2014-2015 Strong Dollar Cycle: Broad commodity collapse",
+      "lesson": "2014-2015年美元指数从80涨至100，黄金从1300跌至1050，原油从100跌至30。美元走强周期中大宗商品无一幸免。",
+      "lesson_en": "2014-2015: DXY 80 to 100, gold $1300 to $1050, oil $100 to $30. Strong dollar cycle spares no commodity.",
+      "diff": "需关注美联储实际加息路径是否如预期，以及通胀是否支撑继续加息。当前美元周期位置与2014年不同。",
+      "diff_en": "Watch whether the Fed actually hikes as expected and whether inflation supports further hikes. Current dollar cycle position differs from 2014."
+    }
+  ]
+}
